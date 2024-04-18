@@ -6,8 +6,8 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 import { Link } from "react-router-dom";
-import { CircularProgress } from "@material-ui/core";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width

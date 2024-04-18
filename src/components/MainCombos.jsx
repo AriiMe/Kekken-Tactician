@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import renderInputImage from "../utils/renderInputImage";
-import { CircularProgress } from "@material-ui/core";
+
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";

@@ -9,6 +9,7 @@ import MainCombos from "../components/MainCombos";
 import WallCombos from "../components/WallCombos";
 import Punishers from "../components/Punishers";
 import { Grid, Paper, Typography, Box } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import { Helmet } from "react-helmet";
 
 import styles from "./CharacterDetails.module.css";
