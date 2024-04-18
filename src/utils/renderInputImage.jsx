@@ -56,9 +56,8 @@ const renderInputImage = (input) => {
         }
         // Handle holds (case-sensitive)
         Object.entries(holds).forEach(([key, value]) => {
-          if (part.includes(key)) {
-            part = value; // Assign the correct hold identifier
-          }
+          const regex = new RegExp(key, "g");
+          part = part.replace(regex, value);
         });
 
         // Handle sequences
