@@ -100,6 +100,10 @@ const CharacterDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
+  if (loading) {
+    return <CircularProgress />;
+  }
+
   return (
     <Box sx={{ pt: 9, pb: 0 }}>
       <Helmet>

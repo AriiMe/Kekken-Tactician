@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import { CircularProgress } from "@material-ui/core";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -39,16 +40,22 @@ const StyledImage = styled("img")({
 
 const CharacterSelect = () => {
   const [characters, setCharacters] = useState([]);
+  const [loading, setLoading] = useState(true);
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`${apiUrl}/characters`)
       .then((response) => response.json())
-      .then((data) => setCharacters(data))
+      .then((data) => {
+        setCharacters(data);
+        setLoading(false);
+      })
       .catch((error) => console.error("Error fetching characters:", error));
   }, [apiUrl]);
-
+  if (loading) {
+    return <CircularProgress />;
+  }
   const handleCharacterSelect = (characterId) => {
     navigate(`/character/${characterId}`);
   };
