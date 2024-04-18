@@ -6,7 +6,6 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
-import CircularProgress from "@mui/material/CircularProgress";
 import { Link } from "react-router-dom";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
@@ -53,12 +52,27 @@ const CharacterSelect = () => {
       })
       .catch((error) => console.error("Error fetching characters:", error));
   }, [apiUrl]);
-  if (loading) {
-    return <CircularProgress />;
-  }
+
   const handleCharacterSelect = (characterId) => {
     navigate(`/character/${characterId}`);
   };
+  if (loading) {
+    return (
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          color: "red",
+          fontSize: "24px",
+        }}
+      >
+        Loading please wait...
+      </Container>
+    );
+  }
 
   return (
     <Container
@@ -77,12 +91,14 @@ const CharacterSelect = () => {
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         {characters.map((character) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={character._id}>
-            <ImagePaper
-              elevation={3}
-              onClick={() => handleCharacterSelect(character._id)}
-            >
-              <StyledImage src={character.image} alt={character.name} />
-            </ImagePaper>
+            <Tooltip title={character.name} placement="top">
+              <ImagePaper
+                elevation={3}
+                onClick={() => handleCharacterSelect(character._id)}
+              >
+                <StyledImage src={character.image} alt={character.name} />
+              </ImagePaper>
+            </Tooltip>
           </Grid>
         ))}
       </Grid>
@@ -90,6 +106,7 @@ const CharacterSelect = () => {
       <Button
         color="inherit"
         component={Link}
+        to="/update-request"
         sx={{ mt: 2, display: "block", mx: "auto" }}
       >
         Your Character not here?

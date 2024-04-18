@@ -8,8 +8,7 @@ import HeatEngagers from "../components/HeatEngagers";
 import MainCombos from "../components/MainCombos";
 import WallCombos from "../components/WallCombos";
 import Punishers from "../components/Punishers";
-import { Grid, Paper, Typography, Box } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
+import { Grid, Paper, Typography, Box, Container } from "@mui/material";
 import { Helmet } from "react-helmet";
 
 import styles from "./CharacterDetails.module.css";
@@ -26,7 +25,11 @@ const CharacterDetails = () => {
       try {
         setLoading(true);
         const response = await fetch(`${apiUrl}/characters/${characterId}`);
+        if (!response.ok) {
+          throw new Error("Character not found");
+        }
         const data = await response.json();
+
         setCharacter(data);
         setLoading(false);
       } catch (error) {
@@ -38,24 +41,30 @@ const CharacterDetails = () => {
     fetchCharacter();
   }, [characterId, apiUrl]);
 
+  if (loading) {
+    return (
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          color: "red",
+          fontSize: "24px",
+        }}
+      >
+        Loading please wait...
+      </Container>
+    );
+  }
+
   if (error) {
     return <Box>Error: {error.message}</Box>;
   }
 
   if (!character) {
     return <Box>Character not found...</Box>;
-  }
-  if (loading) {
-    return (
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        height="100vh"
-      >
-        <CircularProgress />
-      </Box>
-    );
   }
 
   const characterName = character.name;
@@ -100,10 +109,6 @@ const CharacterDetails = () => {
     `Tekken-8-${characterName}-frame-traps`,
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
-
-  if (loading) {
-    return <CircularProgress />;
-  }
 
   return (
     <Box sx={{ pt: 9, pb: 0 }}>
