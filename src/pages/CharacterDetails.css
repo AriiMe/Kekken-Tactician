@@ -1,0 +1,104 @@
+.character-sheet-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* Creates a 12-column layout */
+    grid-gap: 16px;
+    /* Adjust the gap size as needed */
+    grid-template-areas:
+        "heat heat heat heat key-moves key-moves key-moves key-moves important-moves important-moves important-moves important-moves"
+        "guaranteed guaranteed guaranteed guaranteed startup startup punishes punishes wall wall wall wall";
+}
+
+.heat-system {
+    grid-area: heat;
+    /* Additional styles... */
+}
+
+.most-important-grabs {
+    grid-area: key-moves;
+    /* Additional styles... */
+}
+
+.important-moves {
+    grid-area: important-moves;
+    /* Additional styles... */
+}
+
+.guaranteed-follow-ups {
+    grid-area: guaranteed;
+    /* Additional styles... */
+}
+
+.startup {
+    grid-area: startup;
+    /* Additional styles... */
+}
+
+.punishes {
+    grid-area: punishes;
+    /* Additional styles... */
+}
+
+.wall-combos {
+    grid-area: wall;
+    /* Additional styles... */
+}
+
+.input-icons {
+    height: 25px;
+    width: 25px;
+}
+
+.my-li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Shared styles for all components */
+.combo-section {
+    background-color: #333;
+    /* Dark background */
+    padding: 16px;
+    border-radius: 8px;
+    /* Rounded corners */
+    margin-bottom: 20px;
+    /* Space between each section */
+}
+
+.combo-section h2 {
+    color: #fff;
+    /* White color for headings */
+    margin-bottom: 16px;
+}
+
+.combo-section ul {
+    list-style: none;
+    /* No bullets */
+    padding: 0;
+    /* Reset padding */
+}
+
+.combo-section li {
+    background-color: #444;
+    /* Slightly lighter than the section background for contrast */
+    color: #ddd;
+    /* Grayish text color for better readability */
+    padding: 8px;
+    margin-bottom: 12px;
+    /* Space between list items */
+    border-radius: 4px;
+    /* Rounded corners for list items */
+}
+
+.combo-section li:last-child {
+    margin-bottom: 0;
+    /* No bottom margin for the last item */
+}
+
+.combo-section img {
+    vertical-align: middle;
+    /* Align images with the text */
+    margin-right: 4px;
+    /* Space between images and text */
+}

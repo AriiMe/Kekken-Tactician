@@ -1,0 +1,11 @@
+.bit-of-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.bit-of-space-around {
+    display: flex;
+    justify-content: space-evenly;
+}

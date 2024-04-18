@@ -1,0 +1,20 @@
+.wall-combos {
+    border: 2px solid #333;
+    margin-bottom: 10px;
+}
+
+.combo-section {
+    margin-bottom: 10px;
+}
+
+.combo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.combo>div {
+    flex-basis: 50%;
+    text-align: left;
+}

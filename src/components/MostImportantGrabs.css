@@ -1,0 +1,47 @@
+.most-important-grabs {
+    padding: 3px;
+}
+
+.most-important-grabs h2 {
+    color: #d42f2f;
+    margin-bottom: 3px;
+}
+
+.most-important-grabs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.most-important-grabs li {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #333;
+    /* Light grey background for each list item */
+    border-radius: 8px;
+    /* Rounded corners for the list items */
+}
+
+.grab-move,
+.escape-move {
+    display: inline-block;
+    margin-right: 8px;
+    /* Provide some space between images */
+}
+
+.escape-label {
+    margin-right: 8px;
+    /* Space before the escape move image */
+    font-weight: bold;
+    /* Make the label bold */
+    color: #bcbcbc;
+    /* Dark grey color for text to distinguish it from images */
+}
+
+
+.grab-move img,
+.escape-move img {
+    vertical-align: middle;
+    /* Align images vertically */
+    margin-right: 4px;
+    /* Space between the images */
+}

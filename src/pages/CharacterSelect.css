@@ -1,0 +1,41 @@
+.character-select-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.character-image-container {
+    width: 100px;
+    /* set a fixed width */
+    height: 100px;
+    /* set a fixed height */
+    overflow: hidden;
+    border-radius: 10px;
+    /* rounded corners */
+    box-shadow: 0 0 8px blue;
+    /* subtle glow */
+    transition: box-shadow 0.3s ease;
+    /* smooth transition for glow effect */
+}
+
+.character-image-container:hover {
+    box-shadow: 0 0 15px blue;
+    /* larger glow on hover */
+}
+
+.select-char {
+    width: 100%;
+    /* make the image fill the container */
+    height: 100%;
+    object-fit: cover;
+    /* this will ensure the image covers the area, cropping as necessary */
+    transition: transform 0.3s ease;
+    /* for a smooth scale transition */
+}
+
+.select-char:hover {
+    transform: scale(1.1);
+    /* scale up image on hover, which gives the crop effect */
+}

@@ -1,0 +1,48 @@
+.main-combos {
+
+
+    padding: 8px;
+}
+
+.main-combos h2 {
+    color: #d42f2f;
+    /* Color for the section title */
+    margin-bottom: 8px;
+}
+
+.main-combos table {
+    width: 100%;
+    /* Full width table */
+    border-collapse: collapse;
+}
+
+.main-combos th,
+.main-combos td {
+    border: 1px solid #fff;
+    /* Dark border for table cells */
+    padding: 4px;
+    text-align: center;
+}
+
+.main-combos th {
+    background-color: #d42f2f;
+    /* Red background for headers */
+    color: white;
+}
+
+
+/* Underline for every Launcher */
+.main-combos td .launcher-item {
+
+    border-bottom: 1px solid #5a5a5a;
+
+}
+
+/* Remove the underline from the last launcher item in each row */
+.main-combos td .launcher-item:last-of-type {
+    border-bottom: none;
+
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+}
