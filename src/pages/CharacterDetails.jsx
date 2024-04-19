@@ -110,11 +110,28 @@ const CharacterDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: "Tekken 8",
+    character: {
+      "@type": "GameCharacter",
+      name: `${character.name}`,
+      alternateName: "風間 仁",
+      description: `${character.name} is a key character in the Tekken series, known for his powerful combos and complex storyline.`,
+      gameTip: `Utilize ${character.name}'s key moves to maximize frame advantage against opponents.`,
+      associatedMoves:
+        "Electric Wind Hook Fist, Devil's Beam, Rage Art,Electric Wind God Fist, Heat Smash",
+      isPlayableCharacter: true,
+    },
+  };
+
   return (
     <Box sx={{ pt: 9, pb: 0 }}>
       <Helmet>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Grid container spacing={1}>
         {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
