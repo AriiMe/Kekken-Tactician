@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -87,7 +88,25 @@ const CharacterSelect = () => {
         padding: "0 !important",
       }}
     >
-      <h1 style={{ textAlign: "center", width: "100%" }}>Pick your idiot</h1>
+      <Helmet>
+        <title>Tekken 8 Character Guide</title>
+        <meta
+          name="description"
+          content="Explore and learn about all Tekken 8 characters, their combos, cheat sheets,strategies, and tips to improve your gameplay."
+        />
+        <meta
+          name="keywords"
+          content={characters
+            .map(
+              (character) =>
+                `${character.name},Tekken 8 ${character.name}, ${character.name} combos, ${character.name} strategy,${character.name} guide,${character.name} cheat sheet, ${character.name} punishers, ${character.name} combos, ${character.name} wall combos, ${character.name} frame data, ${character.name} tier list, Tekken 8 combos, Tekken 8 DLC, How to play Tekken 8`
+            )
+            .join(", ")}
+        />
+      </Helmet>
+      <h1 style={{ textAlign: "center", width: "100%" }}>
+        Pick your Character
+      </h1>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         {characters.map((character) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={character._id}>
