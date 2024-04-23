@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import inputToIconMap from "./inputToIconMap";
 import { v4 as uuidv4 } from "uuid";
+import { useDisplayMode } from "../context/DisplayModeContext";
 
 const renderInputImage = (input) => {
+  const { displayMode } = useDisplayMode();
+
+  if (displayMode === "notations") {
+    return <span>{input}</span>;
+  }
+
   // Normalize input to handle sequences and split correctly
   const normalizeInput = (inputString) => {
     return inputString.split(/,\s*/); // Split by commas and remove any trailing spaces

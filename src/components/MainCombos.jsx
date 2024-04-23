@@ -5,8 +5,10 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
+import { useDisplayMode } from "../context/DisplayModeContext";
 
 const MainCombos = ({ combos, name }) => {
+  const { displayMode } = useDisplayMode();
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {

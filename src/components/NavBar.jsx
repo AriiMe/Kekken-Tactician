@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -11,11 +11,20 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useNavigate, Link } from "react-router-dom";
+import { DisplayModeContext } from "../context/DisplayModeContext";
 
 function Navbar() {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { displayMode, setDisplayMode } = useContext(DisplayModeContext);
+
+  // Update displayMode when the toggle button is clicked
+  const handleDisplayModeChange = (event, newDisplayMode) => {
+    setDisplayMode(newDisplayMode);
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -72,6 +81,27 @@ function Navbar() {
         >
           Tekken Tactician
         </Typography>
+
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "flex", sm: "flex" },
+            justifyContent: "flex-end",
+          }}
+        >
+          <ToggleButtonGroup
+            value={displayMode}
+            exclusive
+            onChange={(event, newDisplayMode) => {
+              if (newDisplayMode !== null) {
+                setDisplayMode(newDisplayMode);
+              }
+            }}
+          >
+            <ToggleButton value="icons">Icons</ToggleButton>
+            <ToggleButton value="notations">Notations</ToggleButton>
+          </ToggleButtonGroup>
+        </Box>
         <Box
           sx={{
             flexGrow: 1,
