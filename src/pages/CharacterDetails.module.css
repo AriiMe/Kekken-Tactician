@@ -137,3 +137,19 @@
         display: block;
     }
 }
+
+@media (max-device-width: 768px) {
+
+    .leftColumn,
+    .rightColumn {
+        overflow-y: visible;
+        max-height: none;
+        padding-bottom: 1rem;
+    }
+
+    .character-sheet-container,
+    .leftColumn,
+    .rightColumn {
+        display: block;
+    }
+}

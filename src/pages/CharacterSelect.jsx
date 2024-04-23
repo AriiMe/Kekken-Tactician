@@ -41,6 +41,9 @@ const StyledImage = styled("img")({
 const CharacterSelect = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMessage, setLoadingMessage] = useState(
+    "Loading please wait..."
+  );
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
@@ -53,6 +56,16 @@ const CharacterSelect = () => {
       })
       .catch((error) => console.error("Error fetching characters:", error));
   }, [apiUrl]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingMessage(
+        "Sorry, free tier servers are sleeping. Try to reload."
+      );
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCharacterSelect = (characterId) => {
     navigate(`/character/${characterId}`);
@@ -70,7 +83,7 @@ const CharacterSelect = () => {
           fontSize: "24px",
         }}
       >
-        Loading please wait...
+        {loadingMessage}
       </Container>
     );
   }
@@ -86,6 +99,7 @@ const CharacterSelect = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
+        marginTop: "100px",
       }}
     >
       <Helmet>
@@ -107,6 +121,7 @@ const CharacterSelect = () => {
       <h1 style={{ textAlign: "center", width: "100%" }}>
         Pick your Character
       </h1>
+
       <Grid
         container
         spacing={2}
