@@ -1,8 +1,10 @@
 import React from "react";
 import renderInputImage from "../utils/renderInputImage";
+import { useDisplayMode } from "../context/DisplayModeContext";
 import { Helmet } from "react-helmet";
 
 const MiniCombo = ({ miniCombo, name }) => {
+  const { displayMode } = useDisplayMode();
   const description = `Mini Combos for ${name} in Tekken 8. These are quick follow-ups to certain moves that guarantee a hit.`;
   const keywords = [
     "Tekken 8",

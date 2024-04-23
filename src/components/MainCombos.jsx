@@ -1,7 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import renderInputImage from "../utils/renderInputImage";
-
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -21,6 +20,9 @@ const MainCombos = ({ combos, name }) => {
       const separator =
         index < combo.followUpSimple.length - 1 ? (
           <>
+            {displayMode === "notations" && (
+              <span className="notation-separator">, </span>
+            )}
             <span className="arrow-separator">{" >"}</span>
             <span className="arrow-separator-mobile">{""}</span>
           </>

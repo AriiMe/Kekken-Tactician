@@ -1,0 +1,23 @@
+.sequence-part,
+.xbox-input {
+    font-size: large;
+    font-weight: 800;
+}
+
+.xbox-input-1 {
+    color: #40ccd0;
+
+}
+
+.xbox-input-2 {
+    color: #ecdb33;
+
+}
+
+.xbox-input-3 {
+    color: #3cdb4e;
+}
+
+.xbox-input-4 {
+    color: #d04242;
+}

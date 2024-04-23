@@ -39,6 +39,11 @@ function Navbar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom">
+            <ListItemText primary="Create Custom Combos" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
           <ListItemButton component={Link} to="/update-request">
             <ListItemText primary="Request an Update" />
           </ListItemButton>
@@ -111,6 +116,9 @@ function Navbar() {
         >
           {" "}
           {/* Aligns items to the right */}
+          <Button color="inherit" component={Link} to="/custom">
+            Create Combos
+          </Button>
           <Button color="inherit" component={Link} to="/update-request">
             Request an Update
           </Button>

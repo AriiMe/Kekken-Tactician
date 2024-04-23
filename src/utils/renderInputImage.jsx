@@ -6,8 +6,61 @@ import { useDisplayMode } from "../context/DisplayModeContext";
 const renderInputImage = (input) => {
   const { displayMode } = useDisplayMode();
 
+  const applyNumericStyling = (part) => {
+    const numericRegex = /^\d+(\+\d+)*$/; // Matches single digits and combinations like 1+2
+    const trimmedPart = part.trim();
+    if (numericRegex.test(trimmedPart)) {
+      // Split the part by '+'
+      const numbers = trimmedPart.split("+");
+      // Render each number with unique styling, and keep '+' outside
+      return (
+        <span key={uuidv4()}>
+          {numbers.map((num, index) => (
+            <>
+              <span
+                key={uuidv4()}
+                className={`xbox-input xbox-input-${num} ${
+                  index === 0 ? "first-number" : "last-number"
+                }`}
+              >
+                {num}
+              </span>
+              {index < numbers.length - 1 && (
+                <span key={uuidv4()} className="plus-sign">
+                  +
+                </span>
+              )}{" "}
+              {/* Plus sign as a separate span */}
+            </>
+          ))}
+        </span>
+      );
+    }
+    return <span key={uuidv4()}>{trimmedPart}</span>;
+  };
+
   if (displayMode === "notations") {
-    return <span>{input}</span>;
+    return (
+      <>
+        {input.split(">").map((sequence, index) => (
+          <span key={uuidv4()}>
+            {index !== 0 && <span className="input-gap">{">"}</span>}
+            {/* Split the sequence by comma and map each subPart */}
+            {sequence.split(",").map((subPart, subPartIndex, subPartArray) => (
+              <React.Fragment key={uuidv4()}>
+                <span className="sequence-part">
+                  {applyNumericStyling(subPart)}
+                </span>
+                {/* Add a comma after each subPart except for the last one */}
+                {subPartIndex < subPartArray.length - 1 && (
+                  <span className="subpart-comma">, </span>
+                )}
+              </React.Fragment>
+            ))}
+          </span>
+        ))}
+      </>
+    );
   }
 
   // Normalize input to handle sequences and split correctly
