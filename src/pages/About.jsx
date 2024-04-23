@@ -49,7 +49,8 @@ const About = () => {
             rel="noopener noreferrer"
           >
             Support on Ko-fi
-          </Link>
+          </Link>{" "}
+          or not I'm not your mom.
         </Typography>
       </Box>
     </Container>

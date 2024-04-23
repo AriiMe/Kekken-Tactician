@@ -21,29 +21,30 @@ const UpdateRequest = () => {
           Request Character Updates
         </Typography>
         <Typography variant="body1" paragraph>
-          Is your main character missing the latest combos? Do you feel like
-          your favorite character needs more spotlight? We've got you covered!
+          If you see a scrub wrote combos for your main, let me know! I'll
+          gladly update the combos. Reach out to @ariime on Discord and tell me
+          what you need. Your feedback and contributions help Tekken Tactician
+          stay fresh and valuable for the entire community.
         </Typography>
         <Typography variant="body1" paragraph>
-          If you’d like to request an update or prioritize a character, you can
-          reach out directly via Discord. Contact @ariime and let us know what
-          you need. Your feedback and contributions help Tekken Tactician stay
-          up-to-date and valuable for the entire community.
+          Alternatively, if you want to show some love and help me work faster,
+          consider donating to my Ko-fi page. Your support is greatly
+          appreciated and helps me dedicate more resources to improve and expand
+          the content. As a bonus the performance of the site will be
+          drastically improved.
         </Typography>
         <Typography variant="body1" paragraph>
-          Alternatively, you can show your support and help expedite character
-          updates by donating to our Ko-fi page. Your support is greatly
-          appreciated and helps us dedicate more resources to improve and expand
-          our content faster.
-        </Typography>
-        <Typography variant="body1" paragraph>
+          Boost my caffeine levels with your support on
           <Link
             href="https://ko-fi.com/ariime"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Support on Ko-fi
-          </Link>
+            {" "}
+            Ko-fi!
+          </Link>{" "}
+          Supercharge the updates and turbocharge the server performance. Your
+          contribution is the secret sauce to coding marathons!
         </Typography>
       </Box>
     </Container>

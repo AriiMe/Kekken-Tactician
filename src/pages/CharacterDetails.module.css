@@ -44,10 +44,7 @@
     /* Additional styles... */
 }
 
-.input-icons {
-    height: 25px;
-    width: 25px;
-}
+
 
 .my-li {
     list-style-type: none;
@@ -101,4 +98,42 @@
     /* Align images with the text */
     margin-right: 4px;
     /* Space between images and text */
+}
+
+/* Default styles for larger screens */
+.leftColumn,
+.rightColumn {
+    overflow-y: auto;
+    /* Independent scrolling */
+    max-height: 90vh;
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers like Chrome and Safari */
+.leftColumn::-webkit-scrollbar,
+.rightColumn::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+
+    .leftColumn,
+    .rightColumn {
+        /* Remove independent scrolling for mobile */
+        overflow-y: visible;
+        max-height: none;
+        padding-bottom: 1rem;
+        /* Add some space at the bottom */
+    }
+
+    .character-sheet-container,
+    .leftColumn,
+    .rightColumn {
+        /* Adjust grid layout to a single column for mobile */
+        display: block;
+    }
 }

@@ -8,9 +8,30 @@ import "./MainCombos.css";
 
 const MainCombos = ({ combos, name }) => {
   const displaySimpleCombo = (combo) => {
-    return combo.followUpSimple && combo.followUpSimple.length > 0
-      ? combo.followUpSimple.join(" > ")
-      : "N/A";
+    // If there is no simple combo, just return "N/A"
+    if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
+      return "N/A";
+    }
+
+    // Generate elements with separators for non-empty simple combos
+    return combo.followUpSimple.map((item, index) => {
+      // For the last element, don't add a separator
+      const separator =
+        index < combo.followUpSimple.length - 1 ? (
+          <>
+            <span className="arrow-separator">{" >"}</span>
+            <span className="arrow-separator-mobile">{""}</span>
+          </>
+        ) : null;
+
+      // Return the image followed by a possible separator
+      return (
+        <React.Fragment key={index}>
+          {renderInputImage(item)}
+          {separator}
+        </React.Fragment>
+      );
+    });
   };
   const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
   const keywords = [
@@ -57,11 +78,17 @@ const MainCombos = ({ combos, name }) => {
                 {combo.followUps.map((followUp, index) => (
                   <React.Fragment key={index}>
                     {renderInputImage(followUp)}
-                    {index < combo.followUps.length - 1 ? " > " : ""}
+                    {index < combo.followUps.length - 1 && (
+                      <>
+                        <span className="arrow-separator">{" >"} </span>
+                        <span className="arrow-separator-mobile">{""}</span>
+                      </>
+                    )}
                   </React.Fragment>
                 ))}
               </td>
-              <td>{renderInputImage(displaySimpleCombo(combo))}</td>
+
+              <td>{displaySimpleCombo(combo)}</td>
             </tr>
           ))}
         </tbody>

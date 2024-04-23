@@ -12,6 +12,7 @@ import { Grid, Paper, Typography, Box, Container } from "@mui/material";
 import { Helmet } from "react-helmet";
 
 import styles from "./CharacterDetails.module.css";
+import ComboEnders from "../components/ComboEnders";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -133,6 +134,7 @@ const CharacterDetails = () => {
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+
       <Grid container spacing={1}>
         {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
         <Grid item xs={12} md={3} className={styles.leftColumn}>
@@ -222,6 +224,11 @@ const CharacterDetails = () => {
                     wallCombos={character.wallCombos}
                     name={characterName}
                   />
+                </Paper>
+              </Grid>
+              <Grid item xs={12}>
+                <Paper>
+                  <ComboEnders enders={character.comboEnders} />
                 </Paper>
               </Grid>
             </Grid>

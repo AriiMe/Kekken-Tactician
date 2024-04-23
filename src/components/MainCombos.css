@@ -1,6 +1,4 @@
 .main-combos {
-
-
     padding: 8px;
 }
 
@@ -14,6 +12,8 @@
     width: 100%;
     /* Full width table */
     border-collapse: collapse;
+    table-layout: fixed;
+
 }
 
 .main-combos th,
@@ -31,6 +31,7 @@
 }
 
 
+
 /* Underline for every Launcher */
 .main-combos td .launcher-item {
 
@@ -45,4 +46,49 @@
     padding-bottom: 0;
 
     margin-bottom: 0;
+}
+
+.input-icons {
+    height: 32px;
+
+    width: 32px;
+}
+
+
+.arrow-separator-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .main-combos th,
+    .main-combos td {
+        padding: 2px;
+        border-bottom: 1px solid #4f4f4e;
+    }
+
+
+
+
+    .main-combos th,
+    .main-combos td {
+        padding: 2px;
+        border: 1px solid #fff;
+    }
+
+    .input-icons {
+        height: 22px;
+
+        width: 22px;
+    }
+
+    .arrow-separator {
+        display: none;
+
+    }
+
+    .arrow-separator-mobile {
+        display: block;
+        margin-left: -4px;
+    }
 }
