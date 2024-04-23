@@ -427,6 +427,93 @@ const CustomCombos = () => {
               <ListItemText primary="1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick" />
             </ListItem>
           </Grid>
+          
+
+{/* Holding Directions */}
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~D: Hold Down" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~DF: Hold Down-Forward" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~DB: Hold Down-Back" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~B: Hold Back" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~F: Hold Forward" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~UF: Hold Up-Forward" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~UB: Hold Up-Back" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="~U: Hold Up" />
+  </ListItem>
+</Grid>
+
+{/* Circular Motions */}
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="hcf: Half Circle Forward" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="hcb: Half Circle Back" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="qcf: Quarter Circle Forward" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="qcb: Quarter Circle Back" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="360: Full Circle" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="720: Full Circle Twice" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="dp: Dragon Punch Motion (f, d, df)" />
+  </ListItem>
+</Grid>
+<Grid item xs={12} sm={6} md={4}>
+  <ListItem>
+    <ListItemText primary="rdp: Reverse Dragon Punch Motion (b, d, db)" />
+  </ListItem>
+</Grid>
+
+
         </Grid>
       </div>
     </div>
