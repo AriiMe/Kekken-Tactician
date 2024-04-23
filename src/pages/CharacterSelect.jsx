@@ -107,9 +107,14 @@ const CharacterSelect = () => {
       <h1 style={{ textAlign: "center", width: "100%" }}>
         Pick your Character
       </h1>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="flex-start"
+        alignItems="center"
+      >
         {characters.map((character) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={character._id}>
+          <Grid item xs={6} sm={6} md={4} lg={3} key={character._id}>
             <Tooltip title={character.name} placement="top">
               <ImagePaper
                 elevation={3}
