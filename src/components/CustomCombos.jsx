@@ -492,26 +492,8 @@ const CustomCombos = () => {
     <ListItemText primary="qcb: Quarter Circle Back" />
   </ListItem>
 </Grid>
-<Grid item xs={12} sm={6} md={4}>
-  <ListItem>
-    <ListItemText primary="360: Full Circle" />
-  </ListItem>
-</Grid>
-<Grid item xs={12} sm={6} md={4}>
-  <ListItem>
-    <ListItemText primary="720: Full Circle Twice" />
-  </ListItem>
-</Grid>
-<Grid item xs={12} sm={6} md={4}>
-  <ListItem>
-    <ListItemText primary="dp: Dragon Punch Motion (f, d, df)" />
-  </ListItem>
-</Grid>
-<Grid item xs={12} sm={6} md={4}>
-  <ListItem>
-    <ListItemText primary="rdp: Reverse Dragon Punch Motion (b, d, db)" />
-  </ListItem>
-</Grid>
+
+
 
 
         </Grid>
