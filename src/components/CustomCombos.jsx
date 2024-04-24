@@ -176,9 +176,9 @@ const CustomCombos = () => {
       <Table className="custom-combos-table">
         <TableHead>
           <TableRow>
-            <TableCell>Launcher(s)</TableCell>
-            <TableCell>Follow-Ups</TableCell>
-            <TableCell>Delet</TableCell>
+            <TableCell style={{ color: "#d42f2f" }}>Launcher(s)</TableCell>
+            <TableCell style={{ color: "#d42f2f" }}>Follow-Ups</TableCell>
+            <TableCell style={{ color: "#d42f2f" }}>Delet</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -187,98 +187,119 @@ const CustomCombos = () => {
               <TableCell
                 onDoubleClick={() => handleDoubleClick(comboIndex, "launchers")}
               >
-                {combo.editing.launchers
-                  ? combo.launchers.map((launcher, index) => (
-                      <div key={index}>
-                        <TextField
-                          value={launcher}
-                          onChange={(e) =>
+                {combo.editing.launchers ? (
+                  combo.launchers.map((launcher, index) => (
+                    <div key={index}>
+                      <TextField
+                        value={launcher}
+                        onChange={(e) =>
+                          handleLauncherChange(
+                            comboIndex,
+                            index,
+                            e.target.value
+                          )
+                        }
+                        onBlur={() => handleBlur(comboIndex, "launchers")}
+                      />
+                      {index === combo.launchers.length - 1 && (
+                        <IconButton
+                          onClick={() =>
                             handleLauncherChange(
                               comboIndex,
-                              index,
-                              e.target.value
+                              combo.launchers.length,
+                              ""
                             )
                           }
-                          onBlur={() => handleBlur(comboIndex, "launchers")}
-                        />
-                        {index === combo.launchers.length - 1 && (
-                          <IconButton
-                            onClick={() =>
-                              handleLauncherChange(
-                                comboIndex,
-                                combo.launchers.length,
-                                ""
-                              )
-                            }
-                          >
-                            <AddCircleIcon />
-                          </IconButton>
-                        )}
-                      </div>
-                    ))
-                  : combo.launchers.map((launcher, index) => (
-                      <div key={index}>{renderInputImage(launcher)}</div>
-                    ))}
+                        >
+                          <AddCircleIcon style={{ color: "#d42f2f" }} />
+                        </IconButton>
+                      )}
+                    </div>
+                  ))
+                ) : combo.launchers.length === 0 ||
+                  combo.launchers.every((launcher) => launcher === "") ? (
+                  <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
+                    Double click here to add a new combo
+                  </Typography>
+                ) : (
+                  combo.launchers.map((launcher, index) => (
+                    <div key={index}>{renderInputImage(launcher)}</div>
+                  ))
+                )}
               </TableCell>
               <TableCell
                 onDoubleClick={() => handleDoubleClick(comboIndex, "followUps")}
               >
-                {combo.editing.followUps
-                  ? combo.followUps.map((followUp, index) => (
-                      <div
-                        key={index}
-                        style={{ display: "flex", flexWrap: "wrap" }}
-                      >
-                        {followUp.map((item, subIndex) => (
-                          <div key={subIndex}>
-                            <TextField
-                              value={item}
-                              onChange={(e) =>
+                {combo.editing.followUps ? (
+                  combo.followUps.map((followUp, index) => (
+                    <div
+                      key={index}
+                      style={{ display: "flex", flexWrap: "wrap" }}
+                    >
+                      {followUp.map((item, subIndex) => (
+                        <div key={subIndex}>
+                          <TextField
+                            value={item}
+                            onChange={(e) =>
+                              handleFollowUpChange(
+                                comboIndex,
+                                index,
+                                subIndex,
+                                e.target.value
+                              )
+                            }
+                            onBlur={() => handleBlur(comboIndex, "followUps")}
+                          />
+                          {subIndex === followUp.length - 1 && (
+                            <IconButton
+                              onClick={() =>
                                 handleFollowUpChange(
                                   comboIndex,
                                   index,
-                                  subIndex,
-                                  e.target.value
+                                  followUp.length,
+                                  ""
                                 )
                               }
-                              onBlur={() => handleBlur(comboIndex, "followUps")}
-                            />
-                            {subIndex === followUp.length - 1 && (
-                              <IconButton
-                                onClick={() =>
-                                  handleFollowUpChange(
-                                    comboIndex,
-                                    index,
-                                    followUp.length,
-                                    undefined,
-                                    ""
-                                  )
-                                }
-                              >
-                                <AddCircleIcon />
-                              </IconButton>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    ))
-                  : combo.followUps.map((followUp, index) => (
-                      <div
-                        key={index}
-                        style={{ display: "flex", flexWrap: "wrap" }}
-                      >
-                        {followUp.map((item, subIndex) => (
-                          <div key={subIndex}>
-                            {renderInputImage(item)}
-                            {subIndex < followUp.length - 1 && " > "}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
+                            >
+                              <AddCircleIcon style={{ color: "#d42f2f" }} />
+                            </IconButton>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                ) : combo.followUps.length === 0 ||
+                  combo.followUps.every((followUpArray) =>
+                    followUpArray.every((followUp) => followUp === "")
+                  ) ? (
+                  <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
+                    Double click here to add a new combo
+                  </Typography>
+                ) : (
+                  combo.followUps.map((followUp, index) => (
+                    <div
+                      key={index}
+                      style={{ display: "flex", flexWrap: "wrap" }}
+                    >
+                      {followUp.map((item, subIndex) => (
+                        <div
+                          key={subIndex}
+                          style={{ display: "flex", alignItems: "center" }}
+                        >
+                          {renderInputImage(item)}
+                          {subIndex < followUp.length - 1 && (
+                            <span className="input-gap">{">"}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                )}
               </TableCell>
+
               <TableCell>
                 <IconButton onClick={() => removeRow(comboIndex)}>
-                  <DeleteIcon />
+                  <DeleteIcon style={{ color: "#d42f2f" }} />
                 </IconButton>
               </TableCell>
             </TableRow>
