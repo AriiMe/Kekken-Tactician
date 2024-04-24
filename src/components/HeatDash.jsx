@@ -1,6 +1,7 @@
 import React from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
+import "./HeatDash.css";
 
 // heat dash explanation box
 

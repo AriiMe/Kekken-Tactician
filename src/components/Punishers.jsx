@@ -25,7 +25,7 @@ const Punishers = ({ punishers, name }) => {
     `Tekken8 ${name} Frame Data`,
   ].join(", ");
   return (
-    <div className="combo-section">
+    <div className="combo-section punishers">
       <Helmet>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />

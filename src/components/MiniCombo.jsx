@@ -2,6 +2,7 @@ import React from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { useDisplayMode } from "../context/DisplayModeContext";
 import { Helmet } from "react-helmet";
+import "./MiniCombo.css";
 
 const MiniCombo = ({ miniCombo, name }) => {
   const { displayMode } = useDisplayMode();
@@ -33,7 +34,7 @@ const MiniCombo = ({ miniCombo, name }) => {
       <ul>
         {miniCombo.map((combo, index) => (
           <li key={index} className="my-li bit-of-space">
-            {renderInputImage(combo.move)} - {renderInputImage(combo.followUp)}
+            {renderInputImage(combo.move)} {renderInputImage(combo.followUp)}
           </li>
         ))}
       </ul>

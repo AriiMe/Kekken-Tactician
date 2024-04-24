@@ -1,6 +1,7 @@
 import React from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
+import "./HeatEngagers.css";
 
 const HeatEngagers = ({ heat, name }) => {
   const description = `Every Heat move available for ${name} in Tekken 8.`;
