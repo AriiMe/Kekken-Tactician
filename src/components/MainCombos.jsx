@@ -60,6 +60,7 @@ const MainCombos = ({ combos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Main Combos</h2>
+
       <table>
         <thead>
           <tr>

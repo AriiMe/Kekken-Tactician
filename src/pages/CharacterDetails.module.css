@@ -118,6 +118,8 @@
     display: none;
 }
 
+
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
 
@@ -151,5 +153,55 @@
     .leftColumn,
     .rightColumn {
         display: block;
+    }
+}
+
+/* Adjust the layout for screens wider than 1024px */
+@media (min-width: 1024px) {
+    .character-sheet-container {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        grid-template-areas:
+            "heat main"
+            "guaranteed main"
+            "punishes wall"
+            "comboEnders wall";
+    }
+
+    .heat-system {
+        grid-area: heat;
+        /* Additional styles... */
+    }
+
+    .guaranteed-follow-ups {
+        grid-area: guaranteed;
+        /* Additional styles... */
+    }
+
+    .punishes {
+        grid-area: punishes;
+        /* Additional styles... */
+    }
+
+    .main-combos {
+        grid-area: main;
+        /* Additional styles... */
+    }
+
+    .wall-combos {
+        grid-area: wall;
+        /* Additional styles... */
+    }
+
+    .combo-enders {
+        grid-area: comboEnders;
+        /* Additional styles... */
+    }
+
+    /* You may need to adjust the following to ensure scrollbar functionality */
+    .leftColumn::-webkit-scrollbar,
+    .rightColumn::-webkit-scrollbar {
+        display: block;
+        /* or other desired display property */
     }
 }

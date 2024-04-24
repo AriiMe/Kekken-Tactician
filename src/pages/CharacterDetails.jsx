@@ -128,7 +128,7 @@ const CharacterDetails = () => {
   };
 
   return (
-    <Box sx={{ pt: 9, pb: 0 }}>
+    <Box className="character-sheet-container" sx={{ pt: 9, pb: 0 }}>
       <Helmet>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -137,7 +137,7 @@ const CharacterDetails = () => {
 
       <Grid container spacing={1}>
         {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
-        <Grid item xs={12} md={3} className={styles.leftColumn}>
+        <Grid item xs={12} md={3} lg={2} className={styles.leftColumn}>
           <Paper
             sx={{
               overflowY: "auto",
@@ -187,7 +187,7 @@ const CharacterDetails = () => {
         </Grid>
 
         {/* Right column: Main Combos and Wall Combos */}
-        <Grid item xs={12} md={9} className={styles.rightColumn}>
+        <Grid item xs={12} md={9} lg={10} className={styles.rightColumn}>
           <Paper
             sx={{
               overflowY: "auto",
