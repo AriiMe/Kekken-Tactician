@@ -67,8 +67,8 @@ const CharacterSelect = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleCharacterSelect = (characterId) => {
-    navigate(`/character/${characterId}`);
+  const handleCharacterSelect = (characterName, characterId) => {
+    navigate(`/character/${characterName}/${characterId}`);
   };
   if (loading) {
     return (
@@ -133,13 +133,25 @@ const CharacterSelect = () => {
             <Tooltip title={character.name} placement="top">
               <ImagePaper
                 elevation={3}
-                onClick={() => handleCharacterSelect(character._id)}
+                onClick={() =>
+                  handleCharacterSelect(character.name, character._id)
+                }
               >
                 <StyledImage src={character.image} alt={character.name} />
               </ImagePaper>
             </Tooltip>
           </Grid>
         ))}
+        <Grid item xs={6} sm={6} md={4} lg={3}>
+          <Tooltip title="Yoshi" placement="top">
+            <ImagePaper elevation={3} onClick={() => navigate("/yoshi")}>
+              <StyledImage
+                src="https://media.discordapp.net/attachments/761706637223919659/1232697163344252999/Ebi4cTBWAAUHvZ9.jpg?ex=662a6632&is=662914b2&hm=880a46e5273f4d7338fd7e7a10aeb0a8d3faddab1313f6145bf52abf427cf54f&=&format=webp&width=1140&height=847"
+                alt="Yoshi"
+              />
+            </ImagePaper>
+          </Tooltip>
+        </Grid>
       </Grid>
 
       <Button
