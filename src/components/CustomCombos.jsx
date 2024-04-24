@@ -371,192 +371,306 @@ const CustomCombos = () => {
           For the launchers and follow-ups, input the commands separated by
           commas. Each command corresponds to an icon as follows:
         </Typography>
-        <Grid container spacing={3} style={{ justifyContent: "center" }}>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="f: Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="n: Neutral" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="df: Down-Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="d: Down" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="db: Down-Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="b: Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="ub: Up-Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="u: Up" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="uf: Up-Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1: Left Punch" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="2: Right Punch" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="3: Left Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="4: Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+2: Left Punch + Right Punch" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+3: Left Punch + Left Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+4: Left Punch + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="2+3: Right Punch + Left Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="2+4: Right Punch + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="3+4: Left Kick + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+2+3: Left Punch + Right Punch + Left Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+2+4: Left Punch + Right Punch + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+3+4: Left Punch + Left Kick + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="2+3+4: Right Punch + Left Kick + Right Kick" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick" />
-            </ListItem>
-          </Grid>
 
-          {/* Holding Directions */}
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~D: Hold Down" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~DF: Hold Down-Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~DB: Hold Down-Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~B: Hold Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~F: Hold Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~UF: Hold Up-Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~UB: Hold Up-Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="~U: Hold Up" />
-            </ListItem>
-          </Grid>
+        <div className="instructions">
+          <Typography variant="h4" gutterBottom align="center">
+            Input Legend
+          </Typography>
+          <Grid container spacing={3} style={{ justifyContent: "center" }}>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="f: Forward"
+                  secondary={renderInputImage("f")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="n: Neutral"
+                  secondary={renderInputImage("n")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="df: Down-Forward"
+                  secondary={renderInputImage("df")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="d: Down"
+                  secondary={renderInputImage("d")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="db: Down-Back"
+                  secondary={renderInputImage("db")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="b: Back"
+                  secondary={renderInputImage("b")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="ub: Up-Back"
+                  secondary={renderInputImage("ub")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="u: Up"
+                  secondary={renderInputImage("u")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="uf: Up-Forward"
+                  secondary={renderInputImage("uf")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1: Left Punch"
+                  secondary={renderInputImage("1")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="2: Right Punch"
+                  secondary={renderInputImage("2")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="3: Left Kick"
+                  secondary={renderInputImage("3")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="4: Right Kick"
+                  secondary={renderInputImage("4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+2: Left Punch + Right Punch"
+                  secondary={renderInputImage("1+2")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+3: Left Punch + Left Kick"
+                  secondary={renderInputImage("1+3")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+4: Left Punch + Right Kick"
+                  secondary={renderInputImage("1+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="2+3: Right Punch + Left Kick"
+                  secondary={renderInputImage("2+3")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="2+4: Right Punch + Right Kick"
+                  secondary={renderInputImage("2+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="3+4: Left Kick + Right Kick"
+                  secondary={renderInputImage("3+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+2+3: Left Punch + Right Punch + Left Kick"
+                  secondary={renderInputImage("1+2+3")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+2+4: Left Punch + Right Punch + Right Kick"
+                  secondary={renderInputImage("1+2+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+3+4: Left Punch + Left Kick + Right Kick"
+                  secondary={renderInputImage("1+3+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="2+3+4: Right Punch + Left Kick + Right Kick"
+                  secondary={renderInputImage("2+3+4")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick"
+                  secondary={renderInputImage("1+2+3+4")}
+                />
+              </ListItem>
+            </Grid>
 
-          {/* Circular Motions */}
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="hcf: Half Circle Forward" />
-            </ListItem>
+            {/* Holding Directions */}
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~D: Hold Down"
+                  secondary={renderInputImage("~D")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~DF: Hold Down-Forward"
+                  secondary={renderInputImage("~DF")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~DB: Hold Down-Back"
+                  secondary={renderInputImage("~DB")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~B: Hold Back"
+                  secondary={renderInputImage("~B")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~F: Hold Forward"
+                  secondary={renderInputImage("~F")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~UF: Hold Up-Forward"
+                  secondary={renderInputImage("~UF")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~UB: Hold Up-Back"
+                  secondary={renderInputImage("~UB")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="~U: Hold Up"
+                  secondary={renderInputImage("~U")}
+                />
+              </ListItem>
+            </Grid>
+
+            {/* Circular Motions */}
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="hcf: Half Circle Forward"
+                  secondary={renderInputImage("hcf")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="hcb: Half Circle Back"
+                  secondary={renderInputImage("hcb")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="qcf: Quarter Circle Forward"
+                  secondary={renderInputImage("qcf")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="qcb: Quarter Circle Back"
+                  secondary={renderInputImage("qcb")}
+                />
+              </ListItem>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="hcb: Half Circle Back" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="qcf: Quarter Circle Forward" />
-            </ListItem>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ListItem>
-              <ListItemText primary="qcb: Quarter Circle Back" />
-            </ListItem>
-          </Grid>
-        </Grid>
+        </div>
       </div>
     </div>
   );
