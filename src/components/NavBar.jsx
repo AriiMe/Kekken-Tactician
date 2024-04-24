@@ -23,7 +23,9 @@ function Navbar() {
 
   // Update displayMode when the toggle button is clicked
   const handleDisplayModeChange = (event, newDisplayMode) => {
-    setDisplayMode(newDisplayMode);
+    if (newDisplayMode !== null) {
+      setDisplayMode(newDisplayMode);
+    }
   };
 
   const handleDrawerToggle = () => {
@@ -97,11 +99,7 @@ function Navbar() {
           <ToggleButtonGroup
             value={displayMode}
             exclusive
-            onChange={(event, newDisplayMode) => {
-              if (newDisplayMode !== null) {
-                setDisplayMode(newDisplayMode);
-              }
-            }}
+            onChange={handleDisplayModeChange}
           >
             <ToggleButton value="icons">Icons</ToggleButton>
             <ToggleButton value="notations">Notations</ToggleButton>

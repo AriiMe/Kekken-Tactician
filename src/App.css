@@ -21,3 +21,39 @@
 .xbox-input-4 {
     color: #d04242;
 }
+
+.hold-input {
+
+    color: black;
+
+
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+
+
+    font-weight: 900;
+
+    font-size: 18px;
+
+    font-family: 'Arial Black', Gadget, sans-serif;
+
+}
+
+.normal-inputs {
+    color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px -1px 0 #000,
+        2px 2px 0 #fff,
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}

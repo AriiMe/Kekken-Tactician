@@ -8,8 +8,30 @@ const renderInputImage = (input) => {
 
   const applyNumericStyling = (part) => {
     const numericRegex = /^\d+(\+\d+)*$/; // Matches single digits and combinations like 1+2
+    const holdRegex = /^~[DFUBLRdfublr]$/; // Matches holds like ~F, ~B, etc.
+    const holdComboRegex = /^~[DFUBLRdfublr]{2}$/; // Matches combinations like ~DF, ~UB, etc.
     const trimmedPart = part.trim();
-    if (numericRegex.test(trimmedPart)) {
+
+    // Function to create a styled span for a hold
+    const styledHoldSpan = (text, className) => (
+      <span key={uuidv4()} className={className}>
+        {text}
+      </span>
+    );
+
+    if (holdComboRegex.test(trimmedPart)) {
+      // Special styling for combinations like ~DF
+      return styledHoldSpan(
+        trimmedPart,
+        `hold-input hold-combo-input-${trimmedPart.substring(1).toLowerCase()}`
+      );
+    } else if (holdRegex.test(trimmedPart)) {
+      // Special styling for single holds like ~F
+      return styledHoldSpan(
+        trimmedPart,
+        `hold-input hold-input-${trimmedPart.substring(1).toLowerCase()}`
+      );
+    } else if (numericRegex.test(trimmedPart)) {
       // Split the part by '+'
       const numbers = trimmedPart.split("+");
       // Render each number with unique styling, and keep '+' outside
@@ -36,7 +58,9 @@ const renderInputImage = (input) => {
         </span>
       );
     }
-    return <span key={uuidv4()}>{trimmedPart}</span>;
+
+    // Default text rendering
+    return styledHoldSpan(trimmedPart, "normal-inputs");
   };
 
   if (displayMode === "notations") {
