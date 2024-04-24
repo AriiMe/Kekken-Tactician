@@ -21,6 +21,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 
+import "./CustomCombos.css";
+
 const CustomCombos = () => {
   const [combos, setCombos] = useState(() => {
     const savedCombos = localStorage.getItem("customCombos");
@@ -176,8 +178,12 @@ const CustomCombos = () => {
       <Table className="custom-combos-table">
         <TableHead>
           <TableRow>
-            <TableCell style={{ color: "#d42f2f" }}>Launcher(s)</TableCell>
-            <TableCell style={{ color: "#d42f2f" }}>Follow-Ups</TableCell>
+            <TableCell className="launcher" style={{ color: "#d42f2f" }}>
+              Launcher(s)
+            </TableCell>
+            <TableCell className="follow-ups" style={{ color: "#d42f2f" }}>
+              Follow-Ups
+            </TableCell>
             <TableCell style={{ color: "#d42f2f" }}>Delet</TableCell>
           </TableRow>
         </TableHead>
@@ -185,6 +191,7 @@ const CustomCombos = () => {
           {combos.map((combo, comboIndex) => (
             <TableRow key={combo.id}>
               <TableCell
+                className="launcher"
                 onDoubleClick={() => handleDoubleClick(comboIndex, "launchers")}
               >
                 {combo.editing.launchers ? (
@@ -228,6 +235,7 @@ const CustomCombos = () => {
                 )}
               </TableCell>
               <TableCell
+                className="follow-ups"
                 onDoubleClick={() => handleDoubleClick(comboIndex, "followUps")}
               >
                 {combo.editing.followUps ? (

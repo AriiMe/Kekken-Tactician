@@ -1,0 +1,9 @@
+.custom-combos-table th.launcher,
+.custom-combos-table td.launcher {
+    width: 20%;
+}
+
+.custom-combos-table th.follow-ups,
+.custom-combos-table td.follow-ups {
+    width: 60%;
+}
