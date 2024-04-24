@@ -16,21 +16,38 @@
 
 }
 
+
 .main-combos th,
 .main-combos td {
     border: 1px solid #fff;
     /* Dark border for table cells */
-    padding: 4px;
+    padding: 5px;
     text-align: center;
+    vertical-align: middle;
+
 }
 
 .main-combos th {
     background-color: #d42f2f;
-    /* Red background for headers */
+
     color: white;
+    text-align: center;
 }
 
+/* width of the launcher header */
+.main-combos th.launcher-header {
+    width: 15%;
+}
 
+/* width of the follow-ups header */
+.main-combos th.follow-ups-header {
+    width: 60%;
+}
+
+/* width of the simple version header */
+.main-combos th.simple-version-header {
+    width: 25%;
+}
 
 /* Underline for every Launcher */
 .main-combos td .launcher-item {
@@ -47,6 +64,9 @@
 
     margin-bottom: 0;
 }
+
+
+
 
 .input-icons {
     height: 32px;
@@ -92,5 +112,21 @@
     .arrow-separator-mobile {
         display: block;
         margin-left: -4px;
+        border-bottom: 1px solid #4f4f4e;
+    }
+
+    .main-combos th.launcher-header {
+        width: 25%;
+        /* smaller width for larger screens */
+    }
+
+    .main-combos th.follow-ups-header {
+        width: 50%;
+        /* larger width for larger screens */
+    }
+
+    .main-combos th.simple-version-header {
+        width: 25%;
+        /* smaller width for larger screens */
     }
 }

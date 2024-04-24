@@ -64,9 +64,9 @@ const MainCombos = ({ combos, name }) => {
       <table>
         <thead>
           <tr>
-            <th>Launcher(s)</th>
-            <th>Follow-Ups</th>
-            <th>Simple Version</th>
+            <th className="launcher-header">Launcher(s)</th>
+            <th className="follow-ups-header">Follow-Ups</th>
+            <th className="simple-version-header">Simple Version</th>
           </tr>
         </thead>
         <tbody>
@@ -79,7 +79,7 @@ const MainCombos = ({ combos, name }) => {
                   </div>
                 ))}
               </td>
-              <td>
+              <td className="follow-ups-cell">
                 {combo.followUps.map((followUp, index) => (
                   <React.Fragment key={index}>
                     {renderInputImage(followUp)}
@@ -93,7 +93,9 @@ const MainCombos = ({ combos, name }) => {
                 ))}
               </td>
 
-              <td>{displaySimpleCombo(combo)}</td>
+              <td className="simple-version-cell">
+                {displaySimpleCombo(combo)}
+              </td>
             </tr>
           ))}
         </tbody>
