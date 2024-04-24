@@ -226,7 +226,7 @@ const CustomCombos = () => {
                 ) : combo.launchers.length === 0 ||
                   combo.launchers.every((launcher) => launcher === "") ? (
                   <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
-                    Double click here to add a new combo
+                    Double click here to add launcher
                   </Typography>
                 ) : (
                   combo.launchers.map((launcher, index) => (
@@ -281,7 +281,7 @@ const CustomCombos = () => {
                     followUpArray.every((followUp) => followUp === "")
                   ) ? (
                   <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
-                    Double click here to add a new combo
+                    Double click here to add follow up
                   </Typography>
                 ) : (
                   combo.followUps.map((followUp, index) => (
