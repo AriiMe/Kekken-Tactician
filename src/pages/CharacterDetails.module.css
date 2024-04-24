@@ -105,7 +105,7 @@
 .rightColumn {
     overflow-y: auto;
     /* Independent scrolling */
-    max-height: 90vh;
+    max-height: 100vh;
     -ms-overflow-style: none;
     /* Hide scrollbar in IE and Edge */
     scrollbar-width: none;

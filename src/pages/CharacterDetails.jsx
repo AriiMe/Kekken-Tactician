@@ -10,7 +10,6 @@ import WallCombos from "../components/WallCombos";
 import Punishers from "../components/Punishers";
 import { Grid, Paper, Typography, Box, Container } from "@mui/material";
 import { Helmet } from "react-helmet";
-
 import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
 
@@ -128,7 +127,10 @@ const CharacterDetails = () => {
   };
 
   return (
-    <Box className="character-sheet-container" sx={{ pt: 9, pb: 0 }}>
+    <Box
+      className="character-sheet-container"
+      sx={{ pt: 9, pb: 0, minHeight: "100vh" }}
+    >
       <Helmet>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -140,23 +142,9 @@ const CharacterDetails = () => {
         <Grid item xs={12} md={3} lg={2} className={styles.leftColumn}>
           <Paper
             sx={{
-              overflowY: "auto",
-              maxHeight: "90vh",
-              "&::-webkit-scrollbar": {
-                width: "10px",
-              },
-              "&::-webkit-scrollbar-track": {
-                backgroundColor: "transparent",
-              },
-              "&::-webkit-scrollbar-thumb": {
-                backgroundColor: "rgba(255, 255, 255, 0.2)",
-                borderRadius: "20px",
-                border: "3px solid transparent",
-                backgroundClip: "content-box",
-              },
-              "&::-webkit-scrollbar-thumb:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.4)",
-              },
+              overflowY: "scroll",
+              minHeight: "100vh",
+              scrollbarWidth: "none",
             }}
           >
             <Paper sx={{ marginBottom: 1 }}>
@@ -190,23 +178,9 @@ const CharacterDetails = () => {
         <Grid item xs={12} md={9} lg={10} className={styles.rightColumn}>
           <Paper
             sx={{
-              overflowY: "auto",
-              maxHeight: "90vh",
-              "&::-webkit-scrollbar": {
-                width: "10px",
-              },
-              "&::-webkit-scrollbar-track": {
-                backgroundColor: "transparent",
-              },
-              "&::-webkit-scrollbar-thumb": {
-                backgroundColor: "rgba(255, 255, 255, 0.2)",
-                borderRadius: "20px",
-                border: "3px solid transparent",
-                backgroundClip: "content-box",
-              },
-              "&::-webkit-scrollbar-thumb:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.4)",
-              },
+              overflowY: "scroll",
+              minHeight: "100vh",
+              scrollbarWidth: "none",
             }}
           >
             <Grid container spacing={0}>
