@@ -14,8 +14,8 @@ const About = () => {
           flexDirection: "column",
           alignItems: "center",
           width: "100%",
-          height: "100%",
           pt: 20,
+          textAlign: "center",
         }}
       >
         <Typography variant="h4" component="h1" gutterBottom align="center">
