@@ -7,3 +7,7 @@
 .custom-combos-table td.follow-ups {
     width: 60%;
 }
+
+.hide-for-screenshot {
+    display: none !important;
+}

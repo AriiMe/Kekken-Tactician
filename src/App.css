@@ -61,3 +61,8 @@
 img {
     vertical-align: middle;
 }
+
+.notation-span {
+
+    letter-spacing: 6px;
+}
