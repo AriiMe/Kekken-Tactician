@@ -75,8 +75,8 @@ const CharacterSelect = () => {
     navigate(
       `/character/combos/${characterName
         .split(" ")
-        .join("")
-        .toLowerCase()}/${characterId}`
+        .join("-")
+        .toLowerCase()}-combos/${characterId}`
     );
   };
   if (loading) {

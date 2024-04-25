@@ -133,6 +133,9 @@ const CharacterDetails = () => {
       sx={{ pt: 9, pb: 0, minHeight: "100vh" }}
     >
       <Helmet>
+        <title>
+          Tekken Tactitcian - {character.name} - Combos and Guide - Tekken 8
+        </title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
