@@ -160,7 +160,7 @@ const CharacterSelect = () => {
         to="/update-request"
         sx={{ mt: 2, display: "block", mx: "auto" }}
       >
-        Your Character not here?
+        Your Main Character is not here?
       </Button>
     </Container>
   );
