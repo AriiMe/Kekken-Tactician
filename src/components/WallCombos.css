@@ -3,6 +3,11 @@
     margin-bottom: 10px;
 }
 
+.wall-combos h2 {
+    color: #d42f2f;
+    margin-bottom: 3px;
+}
+
 .combo-section {
     margin-bottom: 10px;
 }
@@ -17,7 +22,7 @@
 
     padding: 5px;
     /* border-top: 1px solid #ccc; */
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #d42f2f;
 }
 
 .combo>div {
@@ -68,7 +73,7 @@
 @media (max-width: 769px) {
     .wall-move {
 
-        border-bottom: 1px solid #6b6a6a;
+        border-bottom: 1px solid #d42f2f;
 
     }
 }

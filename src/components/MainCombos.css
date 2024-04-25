@@ -8,18 +8,27 @@
     margin-bottom: 8px;
 }
 
+
+
 .main-combos table {
     width: 100%;
-    /* Full width table */
+    border-spacing: 0;
+    border: none;
     border-collapse: collapse;
     table-layout: fixed;
 
 }
 
+.main-combos th {
+    font-size: 20px;
+}
+
 
 .main-combos th,
 .main-combos td {
-    border: 1px solid #fff;
+    /* border: 1px solid #d42f2f; */
+    border-right: 1px solid #d42f2f;
+    border-bottom: 1px solid #d42f2f;
     /* Dark border for table cells */
     padding: 5px;
     text-align: center;
@@ -27,10 +36,22 @@
 
 }
 
-.main-combos th {
-    background-color: #d42f2f;
+.main-combos th:last-child,
+.main-combos td:last-child {
+    border-right: none;
+}
 
-    color: white;
+.main-combos tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+
+.main-combos th {
+    background-color: #333;
+
+    color: #d42f2f;
     text-align: center;
 }
 
@@ -83,6 +104,10 @@
 
 @media (max-width: 768px) {
 
+    .main-combos th {
+        font-size: 18px;
+    }
+
     .main-combos th,
     .main-combos td {
         padding: 2px;
@@ -95,7 +120,7 @@
     .main-combos th,
     .main-combos td {
         padding: 2px;
-        border: 1px solid #fff;
+        border: 1px solid #d42f2f;
     }
 
     .input-icons {
