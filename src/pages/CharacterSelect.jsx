@@ -127,7 +127,7 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "280px" : "0px",
+          marginTop: isTabletOrMobile ? "350px" : "0px",
         }}
       >
         Pick your Character
