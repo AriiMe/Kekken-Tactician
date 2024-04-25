@@ -22,8 +22,8 @@ const About = () => {
           About Tekken Tactician
         </Typography>
         <Typography variant="body1">
-          Welcome to Tekken Tactician, a hobby project created by enthusiasts
-          for enthusiasts. Our goal is to provide a comprehensive platform where
+          Welcome to Tekken Tactician, a hobby project created by enthusiast for
+          enthusiasts. My goal is to provide a comprehensive platform where
           players of all skill levels can come to learn and share different
           combos and strategies for their favorite characters in the Tekken
           series.
@@ -40,9 +40,9 @@ const About = () => {
           Dive into our extensive database of combos, explore character-specific
           tactics, and take your game to the next level. Tekken Tactician is
           more than just a guide – it's a gateway to mastering the art of
-          Tekken. We are still growing and have many plans to upgrade our page
-          so stay tuned! Every donation helps us to keep the page running and to
-          improve it.{" "}
+          Tekken. The Page is still growing and I have many plans to upgrade
+          this page so stay tuned! Every donation helps to keep the page
+          running.{" "}
           <Link
             href="https://ko-fi.com/ariime"
             target="_blank"

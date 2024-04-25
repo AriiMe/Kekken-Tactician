@@ -34,7 +34,7 @@ const UpdateRequest = () => {
           drastically improved.
         </Typography>
         <Typography variant="body1" paragraph>
-          Boost my caffeine levels with your support on
+          Only people with massive PP donate on
           <Link
             href="https://ko-fi.com/ariime"
             target="_blank"
@@ -44,7 +44,7 @@ const UpdateRequest = () => {
             Ko-fi!
           </Link>{" "}
           Supercharge the updates and turbocharge the server performance. Your
-          contribution is the secret sauce to coding marathons!
+          contribution is the secret sauce(268161)!
         </Typography>
       </Box>
     </Container>
