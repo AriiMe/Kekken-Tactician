@@ -21,12 +21,12 @@
     /* Rounded corners for the list items */
 }
 
-.grab-move,
+/* .grab-move,
 .escape-move {
     display: inline-block;
     margin-right: 8px;
-    /* Provide some space between images */
-}
+    
+} */
 
 .escape-label {
     margin-right: 8px;
@@ -44,4 +44,22 @@
     /* Align images vertically */
     margin-right: 4px;
     /* Space between the images */
+}
+
+.grab-move::after {
+    content: '';
+    /* Add content for the pseudo-element */
+    display: block;
+    /* Display the pseudo-element as a block */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Make the pseudo-element full width */
+    height: 1px;
+    /* Set the height of the pseudo-element */
+    background-image: linear-gradient(to right, transparent, #d42f2f, transparent);
+}
+
+#imp-grabs {
+    flex-direction: column;
 }

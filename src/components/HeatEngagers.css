@@ -20,3 +20,17 @@
     border-radius: 8px;
     /* Rounded corners for the list items */
 }
+
+.heat-engager-move::after {
+    content: '';
+    /* Add content for the pseudo-element */
+    display: block;
+    /* Display the pseudo-element as a block */
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    /* Make the pseudo-element full width */
+    height: 1px;
+    /* Set the height of the pseudo-element */
+    background-image: linear-gradient(to right, transparent, #d42f2f, transparent);
+}

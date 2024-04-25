@@ -30,7 +30,12 @@ const HeatEngagers = ({ heat, name }) => {
       <ul>
         {heat.map((het, index) => (
           <li key={index} className="my-li">
-            <div style={{ marginBottom: "15px" }}>
+            <div
+              className="heat-engager-move"
+              style={{
+                marginBottom: "18px",
+              }}
+            >
               {renderInputImage(het.move)}
             </div>
             <div>{het.description}</div>
