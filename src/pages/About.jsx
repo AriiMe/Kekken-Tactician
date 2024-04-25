@@ -34,7 +34,7 @@ const About = () => {
           combos and strategies for their favorite characters in the Tekken
           series.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }} sx={{ fontSize: "20px" }}>
+        <Typography variant="body1" sx={{ mt: 2, fontSize: "20px" }}>
           Whether you're a seasoned veteran looking to refine your playstyle or
           a new player trying to get the hang of the basics, Tekken Tactician is
           here to help. We believe in the spirit of community and the sharing of
@@ -42,7 +42,7 @@ const About = () => {
           to make this the ultimate resource for Tekken players around the
           globe.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }} sx={{ fontSize: "20px" }}>
+        <Typography variant="body1" sx={{ mt: 2, fontSize: "20px" }}>
           Dive into our extensive database of combos, explore character-specific
           tactics, and take your game to the next level. Tekken Tactician is
           more than just a guide – it's a gateway to mastering the art of
