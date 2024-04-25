@@ -12,6 +12,7 @@ import { Grid, Paper, Typography, Box, Container } from "@mui/material";
 import { Helmet } from "react-helmet";
 import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
+import CharProfile from "../components/CharProfile";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -147,6 +148,9 @@ const CharacterDetails = () => {
               scrollbarWidth: "none",
             }}
           >
+            <Paper sx={{ marginBottom: 1 }}>
+              <CharProfile pic={character.image} name={characterName} />
+            </Paper>
             <Paper sx={{ marginBottom: 1 }}>
               <HeatDash heat={character.heatSystem} name={characterName} />
             </Paper>

@@ -1,0 +1,19 @@
+.char-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#char-name {
+    font: 2em sans-serif;
+    color: #d42f2f;
+    text-align: center;
+}
+
+#char-pic {
+    height: 20em;
+    width: auto;
+    border-radius: 8px;
+}
