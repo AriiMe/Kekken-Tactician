@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<CharacterSelect />} />
         <Route
-          path="/character/:characterName/:characterId"
+          path="/character/combos/:characterName/:characterId"
           element={<CharacterDetails />}
         />
         <Route path="/custom" element={<CustomComboPage />} />

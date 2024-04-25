@@ -72,7 +72,12 @@ const CharacterSelect = () => {
   }, []);
 
   const handleCharacterSelect = (characterName, characterId) => {
-    navigate(`/character/${characterName}/${characterId}`);
+    navigate(
+      `/character/combos/${characterName
+        .split(" ")
+        .join("")
+        .toLowerCase()}/${characterId}`
+    );
   };
   if (loading) {
     return (
