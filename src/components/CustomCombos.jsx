@@ -170,12 +170,21 @@ const CustomCombos = () => {
           })}
         </script>
       </Helmet>
-      <Typography variant="h2" component="h1" gutterBottom align="center">
+      <Typography
+        variant="h2"
+        component="h1"
+        gutterBottom
+        align="center"
+        sx={{
+          fontWeight: "bold",
+          color: "rgba(212, 47, 47, 1)",
+        }}
+      >
         Customize and Create Main Combos
       </Typography>
 
       {/* ... */}
-      <Table className="custom-combos-table">
+      <Table className="custom-combos-table" sx={{ marginTop: "50px" }}>
         <TableHead>
           <TableRow>
             <TableCell className="launcher" style={{ color: "#d42f2f" }}>
@@ -328,7 +337,7 @@ const CustomCombos = () => {
           component="h1"
           gutterBottom
           align="center"
-          style={{ fontWeight: "bold" }}
+          style={{ fontWeight: "bold", margin: "50px 50px", color: "#d42f2f" }}
         >
           Instructions:
         </Typography>

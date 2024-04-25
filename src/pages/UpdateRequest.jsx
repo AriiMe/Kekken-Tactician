@@ -13,27 +13,34 @@ const UpdateRequest = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          textAlign: "center",
           width: "100%",
           pt: 20,
         }}
       >
-        <Typography variant="h4" component="h1" gutterBottom align="center">
+        <Typography
+          variant="h2"
+          component="h1"
+          gutterBottom
+          align="center"
+          sx={{ color: "rgba(212, 47, 47, 1)", marginBottom: "50px" }}
+        >
           Request Character Updates
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           If you see a scrub wrote combos for your main, let me know! I'll
           gladly update the combos. Reach out to @ariime on Discord and tell me
           what you need. Your feedback and contributions help Tekken Tactician
           stay fresh and valuable for the entire community.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           Alternatively, if you want to show some love and help me work faster,
           consider donating to my Ko-fi page. Your support is greatly
           appreciated and helps me dedicate more resources to improve and expand
           the content. As a bonus the performance of the site will be
           drastically improved.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           Only people with massive PP donate on
           <Link
             href="https://ko-fi.com/ariime"

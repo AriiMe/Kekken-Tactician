@@ -84,7 +84,13 @@ function Navbar() {
           variant="h6"
           component="div"
           onClick={() => navigate("/")}
-          sx={{ flexGrow: 1, cursor: "pointer" }} // Ensures it takes up space and aligns links to the right
+          sx={{
+            flexGrow: 1,
+            cursor: "pointer",
+            "&:hover": {
+              color: "rgba(212, 47, 47, 1)",
+            },
+          }} // Ensures it takes up space and aligns links to the right
         >
           Tekken Tactician
         </Typography>
@@ -101,8 +107,30 @@ function Navbar() {
             exclusive
             onChange={handleDisplayModeChange}
           >
-            <ToggleButton value="icons">Icons</ToggleButton>
-            <ToggleButton value="notations">Notations</ToggleButton>
+            <ToggleButton
+              value="icons"
+              sx={{
+                "&:hover": {
+                  boxShadow: "0 0 15px rgba(212, 47, 47, 0.7)",
+                  border: "1px solid rgba(212, 47, 47, 1)",
+                  cursor: "pointer",
+                },
+              }}
+            >
+              Icons
+            </ToggleButton>
+            <ToggleButton
+              value="notations"
+              sx={{
+                "&:hover": {
+                  boxShadow: "0 0 15px rgba(212, 47, 47, 0.7)",
+                  border: "1px solid rgba(212, 47, 47, 1)",
+                  cursor: "pointer",
+                },
+              }}
+            >
+              Notations
+            </ToggleButton>
           </ToggleButtonGroup>
         </Box>
         <Box
@@ -114,13 +142,40 @@ function Navbar() {
         >
           {" "}
           {/* Aligns items to the right */}
-          <Button color="inherit" component={Link} to="/custom">
+          <Button
+            color="inherit"
+            component={Link}
+            to="/custom"
+            sx={{
+              "&:hover": {
+                color: "rgba(212, 47, 47, 1)",
+              },
+            }}
+          >
             Create Combos
           </Button>
-          <Button color="inherit" component={Link} to="/update-request">
+          <Button
+            color="inherit"
+            component={Link}
+            to="/update-request"
+            sx={{
+              "&:hover": {
+                color: "rgba(212, 47, 47, 1)",
+              },
+            }}
+          >
             Request an Update
           </Button>
-          <Button color="inherit" component={Link} to="/about">
+          <Button
+            color="inherit"
+            component={Link}
+            to="/about"
+            sx={{
+              "&:hover": {
+                color: "rgba(212, 47, 47, 1)",
+              },
+            }}
+          >
             About
           </Button>
           <Button
@@ -128,6 +183,11 @@ function Navbar() {
             component="a"
             href="https://ko-fi.com/ariime"
             target="_blank"
+            sx={{
+              "&:hover": {
+                color: "rgba(212, 47, 47, 1)",
+              },
+            }}
           >
             Support on Ko-fi
           </Button>

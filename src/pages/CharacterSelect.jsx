@@ -16,9 +16,9 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
   background: theme.palette.background.paper,
-  boxShadow: "0 0 8px rgba(0, 0, 255, 0.5)",
+  boxShadow: "0 0 8px rgba(212, 47, 47, 0.5)",
   "&:hover": {
-    boxShadow: "0 0 15px rgba(0, 0, 255, 0.7)",
+    boxShadow: "0 0 15px rgba(212, 47, 47, 0.7)",
     cursor: "pointer",
   },
   borderRadius: theme.shape.borderRadius,
@@ -118,7 +118,7 @@ const CharacterSelect = () => {
             .join(", ")}
         />
       </Helmet>
-      <h1 style={{ textAlign: "center", width: "100%" }}>
+      <h1 style={{ textAlign: "center", width: "100%", color: "#d42f2f" }}>
         Pick your Character
       </h1>
 
@@ -158,7 +158,14 @@ const CharacterSelect = () => {
         color="inherit"
         component={Link}
         to="/update-request"
-        sx={{ mt: 2, display: "block", mx: "auto" }}
+        sx={{
+          mt: 2,
+          display: "block",
+          mx: "auto",
+          "&:hover": {
+            color: "rgba(212, 47, 47, 1)",
+          },
+        }}
       >
         Your Main Character is not here?
       </Button>

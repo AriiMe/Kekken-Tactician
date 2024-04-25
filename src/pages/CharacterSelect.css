@@ -14,14 +14,14 @@
     overflow: hidden;
     border-radius: 10px;
     /* rounded corners */
-    box-shadow: 0 0 8px blue;
+    box-shadow: 0 0 8px #d42f2f;
     /* subtle glow */
     transition: box-shadow 0.3s ease;
     /* smooth transition for glow effect */
 }
 
 .character-image-container:hover {
-    box-shadow: 0 0 15px blue;
+    box-shadow: 0 0 15px #d42f2f;
     /* larger glow on hover */
 }
 
