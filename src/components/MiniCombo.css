@@ -7,16 +7,52 @@
     margin-bottom: 3px;
 }
 
-.guaranteed-follow-ups ul {
-    list-style: none;
-    padding: 0;
+.combo-section {
+    margin-bottom: 20px;
 }
 
-.guaranteed-follow-ups li {
+.combo-group {
+    display: flex;
+    justify-content: space-between;
+
     margin-bottom: 12px;
     padding: 8px;
     background-color: #333;
     /* Light grey background for each list item */
     border-radius: 8px;
     /* Rounded corners for the list items */
+}
+
+
+
+
+.move-column,
+.followUp-column {
+    flex: 1;
+
+}
+
+.move::after {
+    width: 60%;
+}
+
+.move::after,
+.follow-up::after {
+    content: '';
+    /* Add content for the pseudo-element */
+    display: block;
+    /* Display the pseudo-element as a block */
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    /* Make the pseudo-element full width */
+    height: 1px;
+    /* Set the height of the pseudo-element */
+    background-image: linear-gradient(to right, transparent, #d42f2f, transparent);
+}
+
+.move:last-child::after,
+.follow-up:last-child::after {
+    display: none;
+
 }

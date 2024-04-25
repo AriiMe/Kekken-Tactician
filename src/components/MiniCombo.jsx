@@ -1,11 +1,10 @@
 import React from "react";
 import renderInputImage from "../utils/renderInputImage";
-import { useDisplayMode } from "../context/DisplayModeContext";
+
 import { Helmet } from "react-helmet";
 import "./MiniCombo.css";
 
 const MiniCombo = ({ miniCombo, name }) => {
-  const { displayMode } = useDisplayMode();
   const description = `Mini Combos for ${name} in Tekken 8. These are quick follow-ups to certain moves that guarantee a hit.`;
   const keywords = [
     "Tekken 8",
@@ -24,6 +23,12 @@ const MiniCombo = ({ miniCombo, name }) => {
     `Tekken8 ${name} Guaranteed follow-ups`,
     `Tekken8 ${name} Mini Combos`,
   ].join(", ");
+  // Group moves by their shared followUps
+  const groupedMoves = miniCombo.reduce((acc, combo) => {
+    acc[combo.followUp] = [...(acc[combo.followUp] || []), combo.move];
+    return acc;
+  }, {});
+
   return (
     <div className="combo-section guaranteed-follow-ups">
       <Helmet>
@@ -31,13 +36,28 @@ const MiniCombo = ({ miniCombo, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Mini Combos</h2>
-      <ul>
-        {miniCombo.map((combo, index) => (
-          <li key={index} className="my-li bit-of-space">
-            {renderInputImage(combo.move)} {renderInputImage(combo.followUp)}
-          </li>
+      <div className="combo-container">
+        {Object.entries(groupedMoves).map(([followUp, moves], index) => (
+          <div key={index} className="combo-group">
+            <div className="move-column">
+              <h3>Move(s)</h3>
+              {moves.map((move, moveIndex) => (
+                <div key={moveIndex} className="move">
+                  {renderInputImage(move)}
+                </div>
+              ))}
+            </div>
+            <div className="follow-up-column">
+              <h3>Follow-up</h3>
+              {followUp.split("-").map((followUp, idx) => (
+                <div className="follow-up" key={idx}>
+                  {renderInputImage(followUp)}
+                </div>
+              ))}
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
