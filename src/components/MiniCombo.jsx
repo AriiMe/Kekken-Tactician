@@ -48,7 +48,7 @@ const MiniCombo = ({ miniCombo, name }) => {
               ))}
             </div>
             <div className="follow-up-column">
-              <h3>Follow-up</h3>
+              <h3>Follow-up(s)</h3>
               {followUp.split("-").map((followUp, idx) => (
                 <div className="follow-up" key={idx}>
                   {renderInputImage(followUp)}
