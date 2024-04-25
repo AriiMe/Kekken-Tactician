@@ -32,7 +32,8 @@ export const HeatDash = ({ heat, name }) => {
       <ul>
         <li className="my-li bit-of-space-around">
           {renderInputImage(heat.engager)}
-          {renderInputImage("~F")} DASH {renderInputImage(heat.ender)}
+          {renderInputImage("~F")}
+          {renderInputImage(heat.ender)}
         </li>
       </ul>
     </div>
