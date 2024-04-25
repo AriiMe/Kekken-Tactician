@@ -8,6 +8,8 @@ import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -44,6 +46,8 @@ const CharacterSelect = () => {
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
   );
+  const theme = useTheme();
+  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("md"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
@@ -118,7 +122,14 @@ const CharacterSelect = () => {
             .join(", ")}
         />
       </Helmet>
-      <h1 style={{ textAlign: "center", width: "100%", color: "#d42f2f" }}>
+      <h1
+        style={{
+          textAlign: "center",
+          width: "100%",
+          color: "#d42f2f",
+          marginTop: isTabletOrMobile ? "280px" : "0px",
+        }}
+      >
         Pick your Character
       </h1>
 
