@@ -161,6 +161,13 @@ const CustomCombos = () => {
   const saveRowAsImage = (rowElement) => {
     // Create a new element
     const clone = rowElement.cloneNode(true);
+    // Create a container for the cloned element
+    const container = document.createElement("div");
+    container.appendChild(clone);
+
+    // Scale the content of the container
+    container.style.transform = "scale(1.5)";
+    container.style.transformOrigin = "top left";
 
     // Remove the delete and save buttons
     const deleteButton = clone.querySelector("#delete-button-for-image");
