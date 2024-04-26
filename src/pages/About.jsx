@@ -85,7 +85,7 @@ const About = () => {
           >
             Applay's Discord
           </Link>{" "}
-          and spam AriiMe brought me here in the chat.
+          and spam AriiMe brought me here in #general.
         </Typography>
       </Box>
     </Container>
