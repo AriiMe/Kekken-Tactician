@@ -68,7 +68,7 @@ const About = () => {
           >
             u/natayaway
           </Link>{" "}
-          and{" "}
+          ,{" "}
           <Link
             href="https://www.reddit.com/user/cantbelieveudonethi5/"
             target="_blank"
@@ -76,7 +76,16 @@ const About = () => {
           >
             u/cantbelieveudonethi5
           </Link>{" "}
-          for the Amazing Icons
+          for the Amazing Icons. And a big thanks to Applay for letting me Yoink
+          their spreadsheets. Join
+          <Link
+            href="https://discord.gg/3c786SX3rj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Applay's Discord
+          </Link>
+          and spam AriiMe brought me here in the chat.
         </Typography>
       </Box>
     </Container>
