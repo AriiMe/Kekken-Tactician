@@ -465,7 +465,30 @@ const CustomCombos = () => {
           Note: Combos are saved currently on the browser. Clearing the cache
           will remove all your custom combos.
         </Typography>
-
+        <Typography
+          variant="body2"
+          gutterBottom
+          align="center"
+          style={{ marginTop: "20px" }}
+        >
+          Again a big thanks to{" "}
+          <Link
+            href="https://www.reddit.com/user/natayaway/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            u/natayaway
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.reddit.com/user/cantbelieveudonethi5/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            u/cantbelieveudonethi5
+          </Link>{" "}
+          for the Amazing Icons.
+        </Typography>
         <Typography
           variant="h6"
           gutterBottom
