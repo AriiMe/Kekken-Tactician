@@ -20,7 +20,7 @@ const App = () => {
           path="/character/combos/:characterName/:characterId"
           element={<CharacterDetails />}
         />
-        <Route path="/custom" element={<CustomComboPage />} />
+        <Route path="/combo-generator" element={<CustomComboPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/update-request" element={<UpdateRequest />} />
         <Route path="/yoshi" element={<Yoshi />} />

@@ -41,8 +41,8 @@ function Navbar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/custom">
-            <ListItemText primary="Create Custom Combos" />
+          <ListItemButton component={Link} to="/combo-generator">
+            <ListItemText primary="Combo Generator" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -145,7 +145,7 @@ function Navbar() {
           <Button
             color="inherit"
             component={Link}
-            to="/custom"
+            to="/combo-generator"
             sx={{
               "&:hover": {
                 color: "rgba(212, 47, 47, 1)",

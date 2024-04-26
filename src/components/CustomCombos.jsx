@@ -136,9 +136,9 @@ const CustomCombos = () => {
     return Array.isArray(input) ? input.join(" ") : input;
   };
 
-  const pageTitle = "Customize Main Combos for Tekken 8";
+  const pageTitle = "Tekken 8 Combo Generator";
   const pageDescription =
-    "Create and customize your main combos for Tekken 8 characters. Learn and store your favorite launcher and follow-up sequences to improve your gameplay.";
+    "Create and customize your own custom combos for Tekken 8 characters. Learn and store your favorite launchers and follow ups to improve your gameplay. Export and save transparent images of your custom combos.";
   const keywords = [
     "Tekken 8 combos",
     "custom combos",
@@ -231,7 +231,7 @@ const CustomCombos = () => {
           color: "rgba(212, 47, 47, 1)",
         }}
       >
-        Customize and Create Main Combos
+        Tekken 8 Combo Generator
       </Typography>
 
       {/* ... */}
