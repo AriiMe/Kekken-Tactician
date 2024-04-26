@@ -45,7 +45,6 @@ const CharacterDetails = () => {
 
   if (loading) {
     if (characterId === "662bd3e3e1042bb628f57a67") {
-      console.log("triggered");
       return (
         <div
           id="meme-yoshi"

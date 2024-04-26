@@ -6,8 +6,6 @@ import t8InputToIconMap from "./t8InputToIconMap";
 const test = (input) => {
   const { displayMode } = useDisplayMode();
 
-  console.log(input);
-
   // Define the combinations
   const combinations = {
     hcf: ["b", "db", "d", "df", "f"],
@@ -28,14 +26,10 @@ const test = (input) => {
 
   // Helper function to generate image element for a single part
   const createImageElement = (subSeq) => {
-    console.log(subSeq);
-
     // Check if subSeq is defined
     if (subSeq) {
       // Convert subSeq to lowercase
       const lowerCaseSubSeq = subSeq.toLowerCase();
-
-      console.log(lowerCaseSubSeq);
 
       // Check if lowerCaseSubSeq matches any key in lowerCaseT8InputToIconMap
       if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseSubSeq)) {

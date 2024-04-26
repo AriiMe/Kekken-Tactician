@@ -515,6 +515,22 @@ const CustomCombos = () => {
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
+                  primary="CH: Counter Hit"
+                  secondary={test("ch")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="BT: Back Turned"
+                  secondary={test("bt")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
                   primary="T: Tornado(spin)"
                   secondary={test("t")}
                 />
@@ -586,6 +602,11 @@ const CustomCombos = () => {
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText primary="[: Bracket Left" secondary={test("[")} />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText primary="SS: Side Step" secondary={test("ss")} />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
