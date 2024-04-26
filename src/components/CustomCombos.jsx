@@ -374,7 +374,13 @@ const CustomCombos = () => {
                         >
                           {test(item)}
                           {subIndex < followUp.length - 1 && (
-                            <span className="input-gap">{">"}</span>
+                            <span className="input-gap">
+                              <img
+                                className="input-icons "
+                                src="/icons-t8/into.png"
+                                alt="into"
+                              />
+                            </span>
                           )}
                         </div>
                       ))}
@@ -442,30 +448,154 @@ const CustomCombos = () => {
           them in separate input fields.
         </Typography>
         <Typography
+          variant="body1"
+          gutterBottom
+          align="center"
+          style={{ fontWeight: "bold" }}
+        >
+          To Save the full row of your custom Combos as a transparent PNG file
+          click Save as image (duh).
+        </Typography>
+        <Typography
           variant="body2"
           gutterBottom
           align="center"
-          style={{ marginTop: "20px", color: "red" }}
+          style={{ marginTop: "20px", color: "#d42f2f" }}
         >
           Note: Combos are saved currently on the browser. Clearing the cache
           will remove all your custom combos.
         </Typography>
 
         <Typography
-          variant="body1"
+          variant="h6"
           gutterBottom
           align="center"
           style={{ fontWeight: "bold" }}
         >
-          For the launchers and follow-ups, input the commands separated by
-          commas. Each command corresponds to an icon as follows:
+          For the launchers and follow-ups, input the commands are separated by
+          a space.It isn't case sensetive so it doesn't matter if you upper- or
+          lower-case them . Each command corresponds to an icon as follows:
         </Typography>
 
         <div className="instructions">
-          <Typography variant="h4" gutterBottom align="center">
+          <Typography
+            variant="h4"
+            gutterBottom
+            align="center"
+            sx={{ color: "#d42f2f" }}
+          >
             Input Legend
           </Typography>
+
           <Grid container spacing={3} style={{ justifyContent: "center" }}>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="T: Tornado(spin)"
+                  secondary={test("t")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="chip: Chip Damage"
+                  secondary={test("chip")}
+                />
+              </ListItem>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText primary="heat: Heat" secondary={test("heat")} />
+              </ListItem>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="launch: Launched State"
+                  secondary={test("launch")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="PC: Power Crush"
+                  secondary={test("pc")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="FB: Floor Break"
+                  secondary={test("fb")}
+                />
+              </ListItem>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText primary="WB: Wall Break" secondary={test("wb")} />
+              </ListItem>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="homing: Homing"
+                  secondary={test("homing")}
+                />
+              </ListItem>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="]: Bracket Right"
+                  secondary={test("]")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText primary="[: Bracket Left" secondary={test("[")} />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="SSR: Side Step Right"
+                  secondary={test("ssr")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="SSL: Side Step Left"
+                  secondary={test("ssl")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="WR: While Running"
+                  secondary={test("wr")}
+                />
+              </ListItem>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <ListItem>
+                <ListItemText
+                  primary="WS: While Standing"
+                  secondary={test("ws")}
+                />
+              </ListItem>
+            </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText primary="f: Forward" secondary={test("f")} />
@@ -622,7 +752,6 @@ const CustomCombos = () => {
                 />
               </ListItem>
             </Grid>
-
             {/* Holding Directions */}
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
@@ -679,7 +808,6 @@ const CustomCombos = () => {
                 <ListItemText primary="~U: Hold Up" secondary={test("~U")} />
               </ListItem>
             </Grid>
-
             {/* Circular Motions */}
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>

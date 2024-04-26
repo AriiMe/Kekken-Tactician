@@ -1,10 +1,12 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useDisplayMode } from "../context/DisplayModeContext";
-import inputToIconMap from "./inputToIconMap";
+import t8InputToIconMap from "./t8InputToIconMap";
 
 const test = (input) => {
   const { displayMode } = useDisplayMode();
+
+  console.log(input);
 
   // Define the combinations
   const combinations = {
@@ -14,15 +16,44 @@ const test = (input) => {
     qcb: ["d", "db", "b"],
   };
 
-  // Helper function to generate image element for a single part
-  const createImageElement = (subSeq) => (
-    <img
-      key={uuidv4()}
-      src={inputToIconMap[subSeq] || ""}
-      alt={subSeq}
-      className="input-icons"
-    />
+  // Create a new object with all lowercase keys
+  const lowerCaseT8InputToIconMap = Object.keys(t8InputToIconMap).reduce(
+    (result, key) => {
+      result[key.toLowerCase()] = t8InputToIconMap[key];
+
+      return result;
+    },
+    {}
   );
+
+  // Helper function to generate image element for a single part
+  const createImageElement = (subSeq) => {
+    console.log(subSeq);
+
+    // Check if subSeq is defined
+    if (subSeq) {
+      // Convert subSeq to lowercase
+      const lowerCaseSubSeq = subSeq.toLowerCase();
+
+      console.log(lowerCaseSubSeq);
+
+      // Check if lowerCaseSubSeq matches any key in lowerCaseT8InputToIconMap
+      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseSubSeq)) {
+        // Create an image element with the corresponding value as the source
+        return (
+          <img
+            key={uuidv4()}
+            src={lowerCaseT8InputToIconMap[lowerCaseSubSeq]}
+            alt={subSeq}
+            className="input-icons"
+          />
+        );
+      }
+    }
+
+    // If subSeq is undefined or null, or if lowerCaseSubSeq doesn't match any key in lowerCaseT8InputToIconMap, return null
+    return null;
+  };
 
   const applyNumericStyling = (part) => {
     const numericRegex = /^\d+(\+\d+)*$/; // Matches single digits and combinations like 1+2
@@ -97,26 +128,28 @@ const test = (input) => {
     .filter((e) => e.trim().length > 0)
     .map((part) => {
       const trimmedPart = part.trim();
+      const lowerCaseTrimmedPart = trimmedPart.toLowerCase(); // Convert trimmedPart to lowercase
 
-      // Check if the part is a key in inputToIconMap
-      if (inputToIconMap.hasOwnProperty(trimmedPart)) {
+      // Check if the part is a key in lowerCaseT8InputToIconMap
+      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseTrimmedPart)) {
         return createImageElement(trimmedPart);
-      } else if (combinations.hasOwnProperty(trimmedPart)) {
+      } else if (combinations.hasOwnProperty(lowerCaseTrimmedPart)) {
         // If the part is a key in combinations, map each constituent part to its icon
-        return combinations[trimmedPart].map((subpart) =>
+        return combinations[lowerCaseTrimmedPart].map((subpart) =>
           createImageElement(subpart)
         );
       } else {
-        // If the part is not a key in inputToIconMap or combinations, split it by '+'
+        // If the part is not a key in lowerCaseT8InputToIconMap or combinations, split it by '+'
         const numbers = trimmedPart.split("+");
         return (
           <span key={uuidv4()}>
             {numbers.map((num, index) => {
               // Check if the number is a hold input
+              // Check if the number is a hold input
               if (num.startsWith("~")) {
                 // Remove the '~' from the hold input and prepend 'hold' to it
-                const holdKey = "hold" + num.slice(1);
-                if (inputToIconMap.hasOwnProperty(holdKey)) {
+                const holdKey = "hold" + num.slice(1).toLowerCase(); // Convert the hold input to lowercase
+                if (lowerCaseT8InputToIconMap.hasOwnProperty(holdKey)) {
                   return (
                     <React.Fragment key={uuidv4()}>
                       {createImageElement(holdKey)}
@@ -126,7 +159,10 @@ const test = (input) => {
                     </React.Fragment>
                   );
                 }
-              } else if (inputToIconMap.hasOwnProperty(num)) {
+              } else if (
+                lowerCaseT8InputToIconMap.hasOwnProperty(num.toLowerCase())
+              ) {
+                // Convert num to lowercase
                 return (
                   <React.Fragment key={uuidv4()}>
                     {createImageElement(num)}
