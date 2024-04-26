@@ -6,7 +6,6 @@ import Navbar from "./components/NavBar";
 import About from "./pages/About";
 import UpdateRequest from "./pages/UpdateRequest";
 import CustomComboPage from "./pages/CustomComboPage";
-import Yoshi from "./pages/Yoshi";
 
 import "./App.css";
 
@@ -23,7 +22,6 @@ const App = () => {
         <Route path="/combo-generator" element={<CustomComboPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/update-request" element={<UpdateRequest />} />
-        <Route path="/yoshi" element={<Yoshi />} />
       </Routes>
     </BrowserRouter>
   );

@@ -18,6 +18,7 @@ const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const { characterId } = useParams();
   const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -43,6 +44,35 @@ const CharacterDetails = () => {
   }, [characterId, apiUrl]);
 
   if (loading) {
+    if (characterId === "662bd3e3e1042bb628f57a67") {
+      console.log("triggered");
+      return (
+        <div
+          id="meme-yoshi"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <img
+            src="/icons/1+4.webp"
+            style={{ width: "200px", marginBottom: "30px" }}
+            alt="1+4"
+          />
+          <Typography
+            variant="h4"
+            gutterBottom
+            align="center"
+            sx={{ color: "#d42f2f" }}
+          >
+            JK, it's loading please wait...
+          </Typography>
+        </div>
+      );
+    }
     return (
       <Container
         maxWidth="xl"
