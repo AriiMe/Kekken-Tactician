@@ -98,7 +98,9 @@ const CharacterDetails = () => {
     return <Box>Character not found...</Box>;
   }
 
-  const characterName = character.name;
+  const characterName = character.name.split(" ").join("-").toLowerCase();
+
+  // SEO STUFF HERE
 
   const description = `Everything you need to know about ${characterName} in Tekken 8. Combos, Heat System, Grabs, Punishers, and more. Cheat Sheet for ${characterName} Tekken8.`;
   const keywords = [
@@ -141,6 +143,8 @@ const CharacterDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
+  const characterCombosURL = `https://www.tekkentactician.com/character/combos/${characterName}-combos/${characterId}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "VideoGame",
@@ -164,8 +168,24 @@ const CharacterDetails = () => {
     >
       <Helmet>
         <title>
-          Tekken Tactitcian - {character.name} - Combos and Guide - Tekken 8
+          Tekken {character.name} - Combos ,Guide and Cheat Sheet - Tekken 8
         </title>
+        <link rel="canonical" href={characterCombosURL} />
+        <meta property="og:url" content={characterCombosURL} />
+        <meta property="og:image" content={character.image} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Tekken 8 ${character.name} Guide and Cheat Sheet`}
+        />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`Tekken 8 ${character.name} Guide and Cheat Sheet`}
+        />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={character.image} />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -182,7 +202,7 @@ const CharacterDetails = () => {
             }}
           >
             <Paper sx={{ marginBottom: 1 }}>
-              <CharProfile pic={character.image} name={characterName} />
+              <CharProfile pic={character.image} name={character.name} />
             </Paper>
             <Paper sx={{ marginBottom: 1 }}>
               <HeatDash heat={character.heatSystem} name={characterName} />
