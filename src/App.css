@@ -64,5 +64,13 @@ img {
 
 .notation-span {
 
-    letter-spacing: 6px;
+    letter-spacing: 3px;
+}
+
+.everything-else {
+    letter-spacing: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Arial Black', Gadget, sans-serif;
 }

@@ -36,8 +36,8 @@ const CustomCombos = () => {
             launchers: [""],
             followUps: [[""]],
             editing: {
-              launchers: false,
-              followUps: false,
+              launchers: true,
+              followUps: true,
             },
           },
         ];
@@ -50,43 +50,55 @@ const CustomCombos = () => {
   }, [combos]);
 
   const handleDoubleClick = (comboIndex, part) => {
-    setCombos(
-      combos.map((combo, index) => {
-        if (index === comboIndex) {
-          return {
-            ...combo,
-            editing: { ...combo.editing, [part]: true },
-          };
-        }
-        return combo;
-      })
+    setCombos((prevCombos) =>
+      prevCombos.map((combo, index) =>
+        index === comboIndex
+          ? { ...combo, editing: { ...combo.editing, [part]: true } }
+          : combo
+      )
     );
   };
 
   const handleBlur = (comboIndex, part) => {
-    setCombos(
-      combos.map((combo, index) => {
-        if (index === comboIndex) {
-          return {
-            ...combo,
-            editing: { ...combo.editing, [part]: false },
-          };
-        }
-        return combo;
-      })
+    setCombos((prevCombos) =>
+      prevCombos.map((combo, index) =>
+        index === comboIndex
+          ? {
+              ...combo,
+              editing: {
+                ...combo.editing,
+                [part]:
+                  part === "followUps"
+                    ? combo[part].some((subArray) =>
+                        subArray.some((item) => item.trim() === "")
+                      )
+                    : combo[part].some((item) => item.trim() === ""),
+              },
+            }
+          : combo
+      )
     );
   };
 
   const handleLauncherChange = (comboIndex, index, value) => {
-    setCombos(
-      combos.map((combo, idx) => {
-        if (idx === comboIndex) {
-          const newLaunchers = [...combo.launchers];
-          newLaunchers[index] = value;
-          return { ...combo, launchers: newLaunchers };
-        }
-        return combo;
-      })
+    setCombos((prevCombos) =>
+      prevCombos.map((combo, comboIdx) =>
+        comboIdx === comboIndex
+          ? {
+              ...combo,
+              launchers:
+                index < combo.launchers.length
+                  ? combo.launchers.map((launcher, launcherIdx) =>
+                      launcherIdx === index ? value : launcher
+                    )
+                  : [...combo.launchers, ""],
+              editing: {
+                ...combo.editing,
+                launchers: true,
+              },
+            }
+          : combo
+      )
     );
   };
 
@@ -119,8 +131,8 @@ const CustomCombos = () => {
         launchers: [""],
         followUps: [[""]],
         editing: {
-          launchers: false,
-          followUps: false,
+          launchers: true,
+          followUps: true,
         },
       },
     ]);
@@ -129,6 +141,39 @@ const CustomCombos = () => {
   const removeRow = (comboIndex) => {
     const newCombos = [...combos].filter((_, index) => index !== comboIndex);
     setCombos(newCombos);
+  };
+
+  const deleteLauncher = (comboIndex, launcherIndex) => {
+    setCombos((prevCombos) =>
+      prevCombos.map((combo, comboIdx) =>
+        comboIdx === comboIndex
+          ? {
+              ...combo,
+              launchers:
+                combo.launchers.length > 1
+                  ? combo.launchers.filter(
+                      (_, index) => index !== launcherIndex
+                    )
+                  : combo.launchers,
+            }
+          : combo
+      )
+    );
+  };
+
+  const deleteFollowUp = (comboIndex, followUpIndex, itemIndex) => {
+    setCombos(
+      combos.map((combo, index) => {
+        if (index === comboIndex) {
+          const newFollowUps = [...combo.followUps];
+          const newFollowUp = [...newFollowUps[followUpIndex]];
+          newFollowUp.splice(itemIndex, 1);
+          newFollowUps[followUpIndex] = newFollowUp;
+          return { ...combo, followUps: newFollowUps };
+        }
+        return combo;
+      })
+    );
   };
 
   // Function to check the type of input and convert it into a string for test
@@ -263,8 +308,8 @@ const CustomCombos = () => {
                 className="launcher"
                 onDoubleClick={() => handleDoubleClick(comboIndex, "launchers")}
               >
-                {combo.editing.launchers ? (
-                  combo.launchers.map((launcher, index) => (
+                {combo.launchers.map((launcher, index) =>
+                  combo.editing.launchers ? (
                     <div key={index}>
                       <TextField
                         value={launcher}
@@ -277,126 +322,123 @@ const CustomCombos = () => {
                         }
                         onBlur={() => handleBlur(comboIndex, "launchers")}
                       />
-                      {index === combo.launchers.length - 1 && (
+                      {combo.launchers.length > 1 && (
                         <IconButton
-                          onClick={() =>
-                            handleLauncherChange(
-                              comboIndex,
-                              combo.launchers.length,
-                              ""
-                            )
-                          }
+                          onClick={() => deleteLauncher(comboIndex, index)}
                         >
-                          <AddCircleIcon style={{ color: "#d42f2f" }} />
+                          <DeleteIcon style={{ color: "#d42f2f" }} />
                         </IconButton>
                       )}
+                      <IconButton
+                        onClick={() =>
+                          handleLauncherChange(
+                            comboIndex,
+                            combo.launchers.length,
+                            ""
+                          )
+                        }
+                      >
+                        <AddCircleIcon style={{ color: "#d42f2f" }} />
+                      </IconButton>
                     </div>
-                  ))
-                ) : combo.launchers.length === 0 ||
-                  combo.launchers.every((launcher) => launcher === "") ? (
-                  <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
-                    Double click here to add launcher
-                  </Typography>
-                ) : (
-                  combo.launchers.map((launcher, index) => (
+                  ) : (
                     <div key={index}>{test(launcher)}</div>
-                  ))
+                  )
                 )}
               </TableCell>
               <TableCell
                 className="follow-ups"
                 onDoubleClick={() => handleDoubleClick(comboIndex, "followUps")}
               >
-                {combo.editing.followUps ? (
-                  combo.followUps.map((followUp, index) => (
-                    <div
-                      key={index}
-                      style={{ display: "flex", flexWrap: "wrap" }}
-                    >
-                      {followUp.map((item, subIndex) => (
-                        <div key={subIndex}>
-                          <TextField
-                            value={item}
-                            onChange={(e) =>
-                              handleFollowUpChange(
-                                comboIndex,
-                                index,
-                                subIndex,
-                                e.target.value
-                              )
-                            }
-                            onBlur={() => handleBlur(comboIndex, "followUps")}
-                          />
-                          {subIndex === followUp.length - 1 && (
-                            <IconButton
-                              onClick={() =>
+                {combo.editing.followUps
+                  ? combo.followUps.map((followUp, index) => (
+                      <div
+                        key={index}
+                        style={{ display: "flex", flexWrap: "wrap" }}
+                      >
+                        {followUp.map((item, subIndex) => (
+                          <div key={subIndex}>
+                            <TextField
+                              value={item}
+                              onChange={(e) =>
                                 handleFollowUpChange(
                                   comboIndex,
                                   index,
-                                  followUp.length,
-                                  ""
+                                  subIndex,
+                                  e.target.value
                                 )
                               }
-                            >
-                              <AddCircleIcon style={{ color: "#d42f2f" }} />
-                            </IconButton>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ))
-                ) : combo.followUps.length === 0 ||
-                  combo.followUps.every((followUpArray) =>
-                    followUpArray.every((followUp) => followUp === "")
-                  ) ? (
-                  <Typography style={{ color: "#d42f2f", fontWeight: "bold" }}>
-                    Double click here to add follow up
-                  </Typography>
-                ) : (
-                  combo.followUps.map((followUp, index) => (
-                    <div
-                      key={index}
-                      style={{ display: "flex", flexWrap: "wrap" }}
-                    >
-                      <div
-                        className="watermark"
-                        style={{
-                          position: "relative", // Use relative for in-flow positioning
-                          width: "100%", // Take full width of the container
-                          textAlign: "center", // Center the text
-                          color: "#d42f2f",
-                          right: "40%",
-                          top: "-17px",
-                          fontSize: "12px",
-                          fontWeight: "bold",
-                          opacity: "0.6",
-                          display: "none",
-                        }}
-                      >
-                        tekkentactician.com
+                              onBlur={() => handleBlur(comboIndex, "followUps")}
+                            />
+                            {followUp.length > 1 && (
+                              <IconButton
+                                onClick={() =>
+                                  deleteFollowUp(comboIndex, index, subIndex)
+                                }
+                              >
+                                <DeleteIcon style={{ color: "#d42f2f" }} />
+                              </IconButton>
+                            )}
+                            {subIndex === followUp.length - 1 && (
+                              <IconButton
+                                onClick={() =>
+                                  handleFollowUpChange(
+                                    comboIndex,
+                                    index,
+                                    followUp.length,
+                                    ""
+                                  )
+                                }
+                              >
+                                <AddCircleIcon style={{ color: "#d42f2f" }} />
+                              </IconButton>
+                            )}
+                          </div>
+                        ))}
                       </div>
-                      {followUp.map((item, subIndex) => (
+                    ))
+                  : combo.followUps.map((followUp, index) => (
+                      <div
+                        key={index}
+                        style={{ display: "flex", flexWrap: "wrap" }}
+                      >
                         <div
-                          key={subIndex}
-                          style={{ display: "flex", alignItems: "center" }}
+                          className="watermark"
+                          style={{
+                            position: "relative",
+                            width: "100%",
+                            textAlign: "center",
+                            color: "#d42f2f",
+                            right: "40%",
+                            top: "-17px",
+                            fontSize: "12px",
+                            fontWeight: "bold",
+                            opacity: "0.6",
+                            display: "none",
+                          }}
                         >
-                          {test(item)}
-                          {subIndex < followUp.length - 1 && (
-                            <span className="input-gap">
-                              <img
-                                className="input-icons "
-                                src="/icons-t8/into.png"
-                                alt="into"
-                              />
-                            </span>
-                          )}
+                          tekkentactician.com
                         </div>
-                      ))}
-                    </div>
-                  ))
-                )}
+                        {followUp.map((item, subIndex) => (
+                          <div
+                            key={subIndex}
+                            style={{ display: "flex", alignItems: "center" }}
+                          >
+                            {test(item)}
+                            {subIndex < followUp.length - 1 && (
+                              <span className="input-gap">
+                                <img
+                                  className="input-icons "
+                                  src="/icons-t8/into.png"
+                                  alt="into"
+                                />
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
               </TableCell>
-
               <TableCell>
                 <IconButton onClick={() => removeRow(comboIndex)}>
                   <DeleteIcon
