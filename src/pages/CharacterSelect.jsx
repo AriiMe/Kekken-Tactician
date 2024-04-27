@@ -149,7 +149,7 @@ const CharacterSelect = () => {
           marginBottom: "50px",
         }}
       >
-        We are currently overhauling some functions. Please be patient.Some
+        We are currently overhauling some functions please be patient.Some
         combos might look funky but we are working on it. Thank you for your
         understanding.
       </Typography>
