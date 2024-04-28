@@ -133,15 +133,15 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "350px" : "0px",
+          marginTop: isTabletOrMobile ? "550px" : "0px",
         }}
       >
         Pick your Character
       </h1>
 
       <Typography
-        variant="h4"
-        component="h4"
+        variant="h5"
+        component="h5"
         gutterBottom
         align="center"
         sx={{
@@ -149,9 +149,9 @@ const CharacterSelect = () => {
           marginBottom: "50px",
         }}
       >
-        We are currently overhauling some functions please be patient.Some
-        combos might look funky but we are working on it. Thank you for your
-        understanding.
+        We are currently overhauling some important functions please be patient,
+        some combos might look funky but we are working on it. Thank you for
+        your understanding.
       </Typography>
 
       <Grid
