@@ -44,7 +44,7 @@ const CharacterDetails = () => {
   }, [characterId, apiUrl]);
 
   if (loading) {
-    if (characterId === "662bd3e3e1042bb628f57a67") {
+    if (characterId === "662bd3e3f1042bb628f57a67") {
       return (
         <div
           id="meme-yoshi"

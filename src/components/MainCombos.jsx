@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import test from "../utils/test";
+import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -37,7 +37,7 @@ const MainCombos = ({ combos, name }) => {
       // Return the image followed by a possible separator
       return (
         <React.Fragment key={index}>
-          {test(item)}
+          {renderInputImage(item)}
           {separator}
         </React.Fragment>
       );
@@ -81,14 +81,14 @@ const MainCombos = ({ combos, name }) => {
               <td>
                 {combo.launchers.map((launcher, launcherIndex) => (
                   <div key={launcherIndex} className="launcher-item">
-                    {test(launcher)}
+                    {renderInputImage(launcher)}
                   </div>
                 ))}
               </td>
               <td className="follow-ups-cell">
                 {combo.followUps.map((followUp, index) => (
                   <React.Fragment key={index}>
-                    {test(followUp)}
+                    {renderInputImage(followUp)}
                     {index < combo.followUps.length - 1 && (
                       <>
                         <span className="arrow-separator">

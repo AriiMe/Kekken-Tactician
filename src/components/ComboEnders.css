@@ -67,3 +67,7 @@ div {
 .last-move {
     border-bottom: 1px solid #fd1313;
 }
+
+.combo-ender-move span {
+    display: inline-block;
+}

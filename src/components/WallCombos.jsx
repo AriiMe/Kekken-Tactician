@@ -43,14 +43,16 @@ const WallCombos = ({ wallCombos, name }) => {
             {wallCombos.general.map((combo) => (
               <div key={combo._id} className="combo">
                 <div className="wall-move">
-                  <span className="label">Move:</span>
-
-                  {renderInputImage(combo.move)}
+                  <div className="label">Move:</div>
+                  <div className="icons-row">
+                    {renderInputImage(combo.move)}
+                  </div>
                 </div>
                 <div className="wall-follow-up">
-                  <span className="label">Follow-Up:</span>
-
-                  {renderInputImage(combo.followUp)}
+                  <div className="label">Follow-Up:</div>
+                  <div className="icons-row">
+                    {renderInputImage(combo.followUp)}
+                  </div>
                 </div>
               </div>
             ))}
@@ -63,13 +65,15 @@ const WallCombos = ({ wallCombos, name }) => {
               <div key={combo._id} className="combo">
                 <div className="wall-move">
                   <span className="label">Move:</span>
-
-                  {renderInputImage(combo.move)}
+                  <div className="icons-row">
+                    {renderInputImage(combo.move)}
+                  </div>
                 </div>
                 <div className="wall-follow-up">
                   <span className="label">Follow-Up:</span>
-
-                  {renderInputImage(combo.followUp)}
+                  <div className="icons-row">
+                    {renderInputImage(combo.followUp)}
+                  </div>
                 </div>
               </div>
             ))}

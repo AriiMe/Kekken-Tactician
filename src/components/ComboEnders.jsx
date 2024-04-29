@@ -29,7 +29,9 @@ const ComboEnders = ({ enders }) => {
                         moveIndex === moves.length - 1 ? "last-move" : ""
                       }`}
                     >
-                      {renderInputImage(move.move)}
+                      <div className="combo-ender-move-content">
+                        {renderInputImage(move.move)}
+                      </div>
                     </div>
                   </td>
                 </tr>

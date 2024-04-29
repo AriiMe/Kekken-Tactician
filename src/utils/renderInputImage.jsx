@@ -1,47 +1,138 @@
-import React, { useContext } from "react";
-import inputToIconMap from "./inputToIconMap";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useDisplayMode } from "../context/DisplayModeContext";
+import t8InputToIconMap from "./t8InputToIconMap";
 
 const renderInputImage = (input) => {
   const { displayMode } = useDisplayMode();
+
+  // Define the combinations
+  const combinations = {
+    hcf: ["b", "db", "d", "df", "f"],
+    hcb: ["f", "df", "d", "db", "b"],
+    qcf: ["d", "df", "f"],
+    qcb: ["d", "db", "b"],
+  };
+
+  // Create a new object with all lowercase keys
+  const lowerCaseT8InputToIconMap = Object.keys(t8InputToIconMap).reduce(
+    (result, key) => {
+      result[key.toLowerCase()] = t8InputToIconMap[key];
+
+      return result;
+    },
+    {}
+  );
+
+  // Helper function to generate image element for a single part
+  const createImageElement = (subSeq, className = "") => {
+    // Check if subSeq is defined
+    if (subSeq) {
+      // Convert subSeq to lowercase
+      const lowerCaseSubSeq = subSeq.toLowerCase();
+
+      // Check if lowerCaseSubSeq matches any key in lowerCaseT8InputToIconMap
+      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseSubSeq)) {
+        // Create an image element with the corresponding value as the source
+        return (
+          <img
+            key={uuidv4()}
+            src={lowerCaseT8InputToIconMap[lowerCaseSubSeq]}
+            alt={subSeq}
+            className="input-icons"
+          />
+        );
+      }
+    }
+
+    // everything else
+    return <span className={className}>{subSeq}</span>;
+  };
 
   const applyNumericStyling = (part) => {
     const numericRegex = /^\d+(\+\d+)*$/; // Matches single digits and combinations like 1+2
     const holdRegex = /^~[DFUBLRdfublr]$/; // Matches holds like ~F, ~B, etc.
     const holdComboRegex = /^~[DFUBLRdfublr]{2}$/; // Matches combinations like ~DF, ~UB, etc.
     const trimmedPart = part.trim();
+    /**TODO: FIND A SIMPLER/ BETTER WAY  TO HANDLE THIS I AM WAY TOO FUCKING TIRED OF THIS STUPID FUNCTION*/
+    const normalInputsSet = new Set([
+      "n",
+      "f",
+      "df",
+      "d",
+      "db",
+      "b",
+      "ub",
+      "u",
+      "uf",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "1+2",
+      "1+3",
+      "1+4",
+      "2+3",
+      "2+4",
+      "3+4",
+      "1+2+3",
+      "1+2+4",
+      "1+3+4",
+      "2+3+4",
+      "1+2+3+4",
+    ]);
+    const iconInputsSet = new Set([
+      "homing",
+      "pc",
+      "t",
+      "[",
+      "]",
+      "chip",
+      "heat",
+      "fb",
+      "into",
+      "launch",
+      "ch",
+      "bt",
+      "ss",
+      "ssl",
+      "ssr",
+      "wb",
+      "wr",
+      "ws",
+    ]);
 
     // Function to create a styled span for a hold
     const styledHoldSpan = (text, className) => (
-      <span key={uuidv4()} className={className}>
+      <span key={uuidv4()} className={`${className} notation-span`}>
         {text}
       </span>
     );
 
-    if (holdComboRegex.test(trimmedPart)) {
+    if (holdComboRegex.renderInputImage(trimmedPart)) {
       // Special styling for combinations like ~DF
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-combo-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (holdRegex.test(trimmedPart)) {
+    } else if (holdRegex.renderInputImage(trimmedPart)) {
       // Special styling for single holds like ~F
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (numericRegex.test(trimmedPart)) {
+    } else if (numericRegex.renderInputImage(trimmedPart)) {
       // Split the part by '+'
       const numbers = trimmedPart.split("+");
       // Render each number with unique styling, and keep '+' outside
       return (
-        <span key={uuidv4()}>
+        <span key={uuidv4()} className="notation-span">
           {numbers.map((num, index) => (
-            <>
+            <React.Fragment key={uuidv4()}>
               <span
                 key={uuidv4()}
-                className={`xbox-input xbox-input-${num} ${
+                className={`xbox-input xbox-input-${num} notation-number ${
                   index === 0 ? "first-number" : "last-number"
                 }`}
               >
@@ -51,122 +142,92 @@ const renderInputImage = (input) => {
                 <span key={uuidv4()} className="plus-sign">
                   +
                 </span>
-              )}{" "}
-              {/* Plus sign as a separate span */}
-            </>
+              )}
+            </React.Fragment>
           ))}
         </span>
       );
+    } else {
+      const lowerCaseTrimmedPart = trimmedPart.toLowerCase();
+      if (normalInputsSet.has(lowerCaseTrimmedPart)) {
+        return <span className="normal-inputs">{trimmedPart}</span>;
+      } else if (iconInputsSet.has(lowerCaseTrimmedPart)) {
+        return createImageElement(trimmedPart);
+      }
     }
 
-    // Default text rendering
-    return styledHoldSpan(trimmedPart, "normal-inputs");
+    return <span className="notation-span everything-else">{trimmedPart}</span>;
   };
 
   if (displayMode === "notations") {
-    return (
-      <>
-        {input.split(">").map((sequence, index) => (
-          <span key={uuidv4()}>
-            {index !== 0 && <span className="input-gap">{">"}</span>}
-            {/* Split the sequence by comma and map each subPart */}
-            {sequence.split(",").map((subPart, subPartIndex, subPartArray) => (
-              <React.Fragment key={uuidv4()}>
-                <span className="sequence-part">
-                  {applyNumericStyling(subPart)}
-                </span>
-                {/* Add a comma after each subPart except for the last one */}
-                {subPartIndex < subPartArray.length - 1 && (
-                  <span className="subpart-comma">, </span>
-                )}
-              </React.Fragment>
-            ))}
-          </span>
-        ))}
-      </>
-    );
+    return input
+      .split(/(\s+)/)
+      .filter((e) => e.trim().length > 0)
+      .map((part) => {
+        const trimmedPart = part.trim();
+
+        // Apply numeric styling to all parts
+        return applyNumericStyling(trimmedPart);
+      });
   }
 
-  // Normalize input to handle sequences and split correctly
-  const normalizeInput = (inputString) => {
-    return inputString.split(/,\s*/); // Split by commas and remove any trailing spaces
-  };
+  return input
+    .split(/(\s+)/)
+    .filter((e) => e.trim().length > 0)
+    .map((part) => {
+      const trimmedPart = part.trim();
+      const lowerCaseTrimmedPart = trimmedPart.toLowerCase(); // Convert trimmedPart to lowercase
 
-  // Helper function to generate image element for a single part
-  const createImageElement = (subSeq) => (
-    <img
-      key={uuidv4()}
-      src={inputToIconMap[subSeq] || ""}
-      alt={subSeq}
-      className="input-icons"
-    />
-  );
-
-  // Replace known sequences with image elements
-  const replaceSequences = (inputParts) => {
-    // console.log("Normalized input parts:", inputParts);
-    const sequences = {
-      qcf: ["d", "df", "f"],
-      qcb: ["d", "db", "b"],
-      hcf: ["b", "db", "d", "df", "f"],
-      hcb: ["f", "df", "d", "db", "b"],
-    };
-
-    const holds = {
-      "~F": "holdF",
-      "~B": "holdB",
-      "~U": "holdU",
-      "~D": "holdD",
-      "~DF": "holdDF",
-      "~DB": "holdDB",
-      "~UF": "holdUF",
-      "~UB": "holdUB",
-    };
-
-    return inputParts
-      .map((part) => {
-        // console.log("Processing part:", part);
-        const subParts = part.split(" > ");
-        if (subParts.length > 1) {
-          return subParts.map((subPart, index) => {
-            // Insert '>' delimiter visual or spacing between the icons
-            return (
-              <>
-                {index > 0 && <span className="input-gap">{">"}</span>}
-                {createImageElement(subPart.trim())}
-              </>
-            );
-          });
-        }
-        // Handle holds (case-sensitive)
-        Object.entries(holds).forEach(([key, value]) => {
-          const regex = new RegExp(key, "g");
-          part = part.replace(regex, value);
-        });
-
-        // Handle sequences
-        const sequenceElements = sequences[part]?.map((subSeq) =>
-          createImageElement(subSeq)
+      // Check if the part is a key in lowerCaseT8InputToIconMap
+      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseTrimmedPart)) {
+        return createImageElement(trimmedPart);
+      } else if (combinations.hasOwnProperty(lowerCaseTrimmedPart)) {
+        // If the part is a key in combinations, map each constituent part to its icon
+        return combinations[lowerCaseTrimmedPart].map((subpart) =>
+          createImageElement(subpart)
         );
-        if (sequenceElements) {
-          return sequenceElements;
-        }
-
-        // Handle button combinations and normal inputs
-        if (inputToIconMap[part]) {
-          return createImageElement(part);
-        }
-
-        // Default case for unrecognized parts
-        return <span key={uuidv4()}>{part}</span>;
-      })
-      .flat(); // Flatten in case of nested arrays from sequences
-  };
-
-  const normalizedInput = normalizeInput(input);
-  const elements = replaceSequences(normalizedInput);
-
-  return <span>{elements}</span>;
+      } else {
+        // If the part is not a key in lowerCaseT8InputToIconMap or combinations, split it by '+'
+        const numbers = trimmedPart.split("+");
+        return (
+          <span key={uuidv4()}>
+            {numbers.map((num, index) => {
+              // Check if the number is a hold input
+              // Check if the number is a hold input
+              if (num.startsWith("~")) {
+                // Remove the '~' from the hold input and prepend 'hold' to it
+                const holdKey = "hold" + num.slice(1).toLowerCase(); // Convert the hold input to lowercase
+                if (lowerCaseT8InputToIconMap.hasOwnProperty(holdKey)) {
+                  return (
+                    <React.Fragment key={uuidv4()}>
+                      {createImageElement(holdKey)}
+                      {index < numbers.length - 1 && (
+                        <span className="plus">+</span>
+                      )}
+                    </React.Fragment>
+                  );
+                }
+              } else if (
+                lowerCaseT8InputToIconMap.hasOwnProperty(num.toLowerCase())
+              ) {
+                // Convert num to lowercase
+                return (
+                  <React.Fragment key={uuidv4()}>
+                    {createImageElement(num)}
+                    {index < numbers.length - 1 && (
+                      <span className="plus">+</span>
+                    )}
+                  </React.Fragment>
+                );
+              }
+              return (
+                <span className="notation-span everything-else">{num}</span>
+              );
+            })}
+          </span>
+        );
+      }
+    });
 };
 
 export default renderInputImage;

@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
-import test from "../utils/test";
+import renderInputImage from "../utils/renderInputImage";
 import domtoimage from "dom-to-image";
 import { Helmet } from "react-helmet";
 import Link from "@mui/material/Link";
@@ -176,7 +176,7 @@ const CustomCombos = () => {
     );
   };
 
-  // Function to check the type of input and convert it into a string for test
+  // Function to check the type of input and convert it into a string for renderInputImage
   const normalizeInputForImage = (input) => {
     // If input is an array, join it, otherwise return as is assuming it's a string
     return Array.isArray(input) ? input.join(" ") : input;
@@ -342,7 +342,7 @@ const CustomCombos = () => {
                       </IconButton>
                     </div>
                   ) : (
-                    <div key={index}>{test(launcher)}</div>
+                    <div key={index}>{renderInputImage(launcher)}</div>
                   )
                 )}
               </TableCell>
@@ -424,7 +424,7 @@ const CustomCombos = () => {
                             key={subIndex}
                             style={{ display: "flex", alignItems: "center" }}
                           >
-                            {test(item)}
+                            {renderInputImage(item)}
                             {subIndex < followUp.length - 1 && (
                               <span className="input-gap">
                                 <img
@@ -565,7 +565,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="CH: Counter Hit"
-                  secondary={test("ch")}
+                  secondary={renderInputImage("ch")}
                 />
               </ListItem>
             </Grid>
@@ -573,7 +573,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="BT: Back Turned"
-                  secondary={test("bt")}
+                  secondary={renderInputImage("bt")}
                 />
               </ListItem>
             </Grid>
@@ -581,7 +581,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="T: Tornado(spin)"
-                  secondary={test("t")}
+                  secondary={renderInputImage("t")}
                 />
               </ListItem>
             </Grid>
@@ -589,14 +589,17 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="chip: Chip Damage"
-                  secondary={test("chip")}
+                  secondary={renderInputImage("chip")}
                 />
               </ListItem>
             </Grid>
 
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="heat: Heat" secondary={test("heat")} />
+                <ListItemText
+                  primary="heat: Heat"
+                  secondary={renderInputImage("heat")}
+                />
               </ListItem>
             </Grid>
 
@@ -604,7 +607,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="launch: Launched State"
-                  secondary={test("launch")}
+                  secondary={renderInputImage("launch")}
                 />
               </ListItem>
             </Grid>
@@ -612,7 +615,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="PC: Power Crush"
-                  secondary={test("pc")}
+                  secondary={renderInputImage("pc")}
                 />
               </ListItem>
             </Grid>
@@ -620,14 +623,17 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="FB: Floor Break"
-                  secondary={test("fb")}
+                  secondary={renderInputImage("fb")}
                 />
               </ListItem>
             </Grid>
 
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="WB: Wall Break" secondary={test("wb")} />
+                <ListItemText
+                  primary="WB: Wall Break"
+                  secondary={renderInputImage("wb")}
+                />
               </ListItem>
             </Grid>
 
@@ -635,7 +641,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="homing: Homing"
-                  secondary={test("homing")}
+                  secondary={renderInputImage("homing")}
                 />
               </ListItem>
             </Grid>
@@ -644,25 +650,31 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="]: Bracket Right"
-                  secondary={test("]")}
+                  secondary={renderInputImage("]")}
                 />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="[: Bracket Left" secondary={test("[")} />
+                <ListItemText
+                  primary="[: Bracket Left"
+                  secondary={renderInputImage("[")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="SS: Side Step" secondary={test("ss")} />
+                <ListItemText
+                  primary="SS: Side Step"
+                  secondary={renderInputImage("ss")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
                   primary="SSR: Side Step Right"
-                  secondary={test("ssr")}
+                  secondary={renderInputImage("ssr")}
                 />
               </ListItem>
             </Grid>
@@ -670,7 +682,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="SSL: Side Step Left"
-                  secondary={test("ssl")}
+                  secondary={renderInputImage("ssl")}
                 />
               </ListItem>
             </Grid>
@@ -678,7 +690,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="WR: While Running"
-                  secondary={test("wr")}
+                  secondary={renderInputImage("wr")}
                 />
               </ListItem>
             </Grid>
@@ -686,83 +698,119 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="WS: While Standing"
-                  secondary={test("ws")}
+                  secondary={renderInputImage("ws")}
                 />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="f: Forward" secondary={test("f")} />
+                <ListItemText
+                  primary="f: Forward"
+                  secondary={renderInputImage("f")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="n: Neutral" secondary={test("n")} />
+                <ListItemText
+                  primary="n: Neutral"
+                  secondary={renderInputImage("n")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
                   primary="df: Down-Forward"
-                  secondary={test("df")}
+                  secondary={renderInputImage("df")}
                 />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="d: Down" secondary={test("d")} />
+                <ListItemText
+                  primary="d: Down"
+                  secondary={renderInputImage("d")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="db: Down-Back" secondary={test("db")} />
+                <ListItemText
+                  primary="db: Down-Back"
+                  secondary={renderInputImage("db")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="b: Back" secondary={test("b")} />
+                <ListItemText
+                  primary="b: Back"
+                  secondary={renderInputImage("b")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="ub: Up-Back" secondary={test("ub")} />
+                <ListItemText
+                  primary="ub: Up-Back"
+                  secondary={renderInputImage("ub")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="u: Up" secondary={test("u")} />
+                <ListItemText
+                  primary="u: Up"
+                  secondary={renderInputImage("u")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="uf: Up-Forward" secondary={test("uf")} />
+                <ListItemText
+                  primary="uf: Up-Forward"
+                  secondary={renderInputImage("uf")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="1: Left Punch" secondary={test("1")} />
+                <ListItemText
+                  primary="1: Left Punch"
+                  secondary={renderInputImage("1")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="2: Right Punch" secondary={test("2")} />
+                <ListItemText
+                  primary="2: Right Punch"
+                  secondary={renderInputImage("2")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="3: Left Kick" secondary={test("3")} />
+                <ListItemText
+                  primary="3: Left Kick"
+                  secondary={renderInputImage("3")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="4: Right Kick" secondary={test("4")} />
+                <ListItemText
+                  primary="4: Right Kick"
+                  secondary={renderInputImage("4")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
                   primary="1+2: Left Punch + Right Punch"
-                  secondary={test("1+2")}
+                  secondary={renderInputImage("1+2")}
                 />
               </ListItem>
             </Grid>
@@ -770,7 +818,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+3: Left Punch + Left Kick"
-                  secondary={test("1+3")}
+                  secondary={renderInputImage("1+3")}
                 />
               </ListItem>
             </Grid>
@@ -778,7 +826,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+4: Left Punch + Right Kick"
-                  secondary={test("1+4")}
+                  secondary={renderInputImage("1+4")}
                 />
               </ListItem>
             </Grid>
@@ -786,7 +834,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="2+3: Right Punch + Left Kick"
-                  secondary={test("2+3")}
+                  secondary={renderInputImage("2+3")}
                 />
               </ListItem>
             </Grid>
@@ -794,7 +842,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="2+4: Right Punch + Right Kick"
-                  secondary={test("2+4")}
+                  secondary={renderInputImage("2+4")}
                 />
               </ListItem>
             </Grid>
@@ -802,7 +850,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="3+4: Left Kick + Right Kick"
-                  secondary={test("3+4")}
+                  secondary={renderInputImage("3+4")}
                 />
               </ListItem>
             </Grid>
@@ -810,7 +858,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+2+3: Left Punch + Right Punch + Left Kick"
-                  secondary={test("1+2+3")}
+                  secondary={renderInputImage("1+2+3")}
                 />
               </ListItem>
             </Grid>
@@ -818,7 +866,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+2+4: Left Punch + Right Punch + Right Kick"
-                  secondary={test("1+2+4")}
+                  secondary={renderInputImage("1+2+4")}
                 />
               </ListItem>
             </Grid>
@@ -826,7 +874,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+3+4: Left Punch + Left Kick + Right Kick"
-                  secondary={test("1+3+4")}
+                  secondary={renderInputImage("1+3+4")}
                 />
               </ListItem>
             </Grid>
@@ -834,7 +882,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="2+3+4: Right Punch + Left Kick + Right Kick"
-                  secondary={test("2+3+4")}
+                  secondary={renderInputImage("2+3+4")}
                 />
               </ListItem>
             </Grid>
@@ -842,21 +890,24 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick"
-                  secondary={test("1+2+3+4")}
+                  secondary={renderInputImage("1+2+3+4")}
                 />
               </ListItem>
             </Grid>
             {/* Holding Directions */}
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="~D: Hold Down" secondary={test("~D")} />
+                <ListItemText
+                  primary="~D: Hold Down"
+                  secondary={renderInputImage("~D")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
                   primary="~DF: Hold Down-Forward"
-                  secondary={test("~DF")}
+                  secondary={renderInputImage("~DF")}
                 />
               </ListItem>
             </Grid>
@@ -864,20 +915,23 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="~DB: Hold Down-Back"
-                  secondary={test("~DB")}
+                  secondary={renderInputImage("~DB")}
                 />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="~B: Hold Back" secondary={test("~B")} />
+                <ListItemText
+                  primary="~B: Hold Back"
+                  secondary={renderInputImage("~B")}
+                />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
                 <ListItemText
                   primary="~F: Hold Forward"
-                  secondary={test("~F")}
+                  secondary={renderInputImage("~F")}
                 />
               </ListItem>
             </Grid>
@@ -885,7 +939,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="~UF: Hold Up-Forward"
-                  secondary={test("~UF")}
+                  secondary={renderInputImage("~UF")}
                 />
               </ListItem>
             </Grid>
@@ -893,13 +947,16 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="~UB: Hold Up-Back"
-                  secondary={test("~UB")}
+                  secondary={renderInputImage("~UB")}
                 />
               </ListItem>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <ListItem>
-                <ListItemText primary="~U: Hold Up" secondary={test("~U")} />
+                <ListItemText
+                  primary="~U: Hold Up"
+                  secondary={renderInputImage("~U")}
+                />
               </ListItem>
             </Grid>
             {/* Circular Motions */}
@@ -907,7 +964,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="hcf: Half Circle Forward"
-                  secondary={test("hcf")}
+                  secondary={renderInputImage("hcf")}
                 />
               </ListItem>
             </Grid>
@@ -915,7 +972,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="hcb: Half Circle Back"
-                  secondary={test("hcb")}
+                  secondary={renderInputImage("hcb")}
                 />
               </ListItem>
             </Grid>
@@ -923,7 +980,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="qcf: Quarter Circle Forward"
-                  secondary={test("qcf")}
+                  secondary={renderInputImage("qcf")}
                 />
               </ListItem>
             </Grid>
@@ -931,7 +988,7 @@ const CustomCombos = () => {
               <ListItem>
                 <ListItemText
                   primary="qcb: Quarter Circle Back"
-                  secondary={test("qcb")}
+                  secondary={renderInputImage("qcb")}
                 />
               </ListItem>
             </Grid>

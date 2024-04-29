@@ -33,11 +33,9 @@ const Punishers = ({ punishers, name }) => {
       <h2>Punishers</h2>
       <ul>
         {punishers.startup.map((punish, index) => (
-          <li key={uuidv4()} className="my-li">
-            <span className="bit-of-space">
-              {renderInputImage(punish.move)}{" "}
-              <span className="escape-label">Frames: {punish.frames}</span>
-            </span>
+          <li key={uuidv4()} className="my-li punisher-li">
+            <span>{renderInputImage(punish.move)} </span>
+            <span className="escape-label">Frames: {punish.frames}</span>
           </li>
         ))}
       </ul>
