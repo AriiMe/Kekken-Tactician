@@ -1,52 +1,38 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useDisplayMode } from "../context/DisplayModeContext";
+import { useColorMode } from "../context/ColorModeContext";
+import inputToIconMap from "./inputToIconMap";
 import t8InputToIconMap from "./t8InputToIconMap";
 
 const renderInputImage = (input) => {
   const { displayMode } = useDisplayMode();
+  const { colorMode } = useColorMode();
 
-  // Define the combinations
-  const combinations = {
-    hcf: ["b", "db", "d", "df", "f"],
-    hcb: ["f", "df", "d", "db", "b"],
-    qcf: ["d", "df", "f"],
-    qcb: ["d", "db", "b"],
-  };
+  const alwaysIcon = [
+    "homing",
+    "pc",
+    "t",
+    "T",
+    "[",
+    "]",
+    "chip",
+    "heat",
+    "fb",
+    "into",
+    "wb",
+    "launch",
+    "bt",
+    "ss",
+    "ssl",
+    "ssr",
+    "wr",
+    "ws",
+    "ch",
+  ];
 
-  // Create a new object with all lowercase keys
-  const lowerCaseT8InputToIconMap = Object.keys(t8InputToIconMap).reduce(
-    (result, key) => {
-      result[key.toLowerCase()] = t8InputToIconMap[key];
-
-      return result;
-    },
-    {}
-  );
-
-  // Helper function to generate image element for a single part
-  const createImageElement = (subSeq, className = "") => {
-    // Check if subSeq is defined
-    if (subSeq) {
-      // Convert subSeq to lowercase
-      const lowerCaseSubSeq = subSeq.toLowerCase();
-
-      // Check if lowerCaseSubSeq matches any key in lowerCaseT8InputToIconMap
-      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseSubSeq)) {
-        // Create an image element with the corresponding value as the source
-        return (
-          <img
-            key={uuidv4()}
-            src={lowerCaseT8InputToIconMap[lowerCaseSubSeq]}
-            alt={subSeq}
-            className="input-icons"
-          />
-        );
-      }
-    }
-
-    // everything else
-    return <span className={className}>{subSeq}</span>;
+  const normalizeInput = (inputString) => {
+    return inputString.split(/\s+/); // Split by spaces
   };
 
   const applyNumericStyling = (part) => {
@@ -54,86 +40,37 @@ const renderInputImage = (input) => {
     const holdRegex = /^~[DFUBLRdfublr]$/; // Matches holds like ~F, ~B, etc.
     const holdComboRegex = /^~[DFUBLRdfublr]{2}$/; // Matches combinations like ~DF, ~UB, etc.
     const trimmedPart = part.trim();
-    /**TODO: FIND A SIMPLER/ BETTER WAY  TO HANDLE THIS I AM WAY TOO FUCKING TIRED OF THIS STUPID FUNCTION*/
-    const normalInputsSet = new Set([
-      "n",
-      "f",
-      "df",
-      "d",
-      "db",
-      "b",
-      "ub",
-      "u",
-      "uf",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "1+2",
-      "1+3",
-      "1+4",
-      "2+3",
-      "2+4",
-      "3+4",
-      "1+2+3",
-      "1+2+4",
-      "1+3+4",
-      "2+3+4",
-      "1+2+3+4",
-    ]);
-    const iconInputsSet = new Set([
-      "homing",
-      "pc",
-      "t",
-      "[",
-      "]",
-      "chip",
-      "heat",
-      "fb",
-      "into",
-      "launch",
-      "ch",
-      "bt",
-      "ss",
-      "ssl",
-      "ssr",
-      "wb",
-      "wr",
-      "ws",
-    ]);
 
-    // Function to create a styled span for a hold
     const styledHoldSpan = (text, className) => (
-      <span key={uuidv4()} className={`${className} notation-span`}>
+      <span key={uuidv4()} className={className}>
         {text}
       </span>
     );
 
-    if (holdComboRegex.renderInputImage(trimmedPart)) {
-      // Special styling for combinations like ~DF
+    if (holdComboRegex.test(trimmedPart)) {
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-combo-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (holdRegex.renderInputImage(trimmedPart)) {
-      // Special styling for single holds like ~F
+    } else if (holdRegex.test(trimmedPart)) {
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (numericRegex.renderInputImage(trimmedPart)) {
-      // Split the part by '+'
+    } else if (numericRegex.test(trimmedPart)) {
       const numbers = trimmedPart.split("+");
-      // Render each number with unique styling, and keep '+' outside
       return (
-        <span key={uuidv4()} className="notation-span">
+        <span key={uuidv4()}>
           {numbers.map((num, index) => (
-            <React.Fragment key={uuidv4()}>
+            <>
               <span
                 key={uuidv4()}
-                className={`xbox-input xbox-input-${num} notation-number ${
-                  index === 0 ? "first-number" : "last-number"
+                className={`xbox-input ${
+                  colorMode
+                    ? `xbox-input-${num} ${
+                        index === 0 ? "first-number" : "last-number"
+                      }`
+                    : ""
                 }`}
               >
                 {num}
@@ -143,91 +80,148 @@ const renderInputImage = (input) => {
                   +
                 </span>
               )}
-            </React.Fragment>
+            </>
           ))}
         </span>
       );
-    } else {
-      const lowerCaseTrimmedPart = trimmedPart.toLowerCase();
-      if (normalInputsSet.has(lowerCaseTrimmedPart)) {
-        return <span className="normal-inputs">{trimmedPart}</span>;
-      } else if (iconInputsSet.has(lowerCaseTrimmedPart)) {
-        return createImageElement(trimmedPart);
-      }
     }
 
-    return <span className="notation-span everything-else">{trimmedPart}</span>;
+    return styledHoldSpan(trimmedPart, "normal-inputs");
   };
 
   if (displayMode === "notations") {
-    return input
-      .split(/(\s+)/)
-      .filter((e) => e.trim().length > 0)
-      .map((part) => {
-        const trimmedPart = part.trim();
-
-        // Apply numeric styling to all parts
-        return applyNumericStyling(trimmedPart);
-      });
+    return (
+      <>
+        {input.split(" ").map((sequence, index) => (
+          <span key={uuidv4()}>
+            {index !== 0 && <span className="input-gap"> </span>}
+            {alwaysIcon.includes(sequence)
+              ? createImageElement(sequence)
+              : applyNumericStyling(sequence)}
+          </span>
+        ))}
+      </>
+    );
   }
 
-  return input
-    .split(/(\s+)/)
-    .filter((e) => e.trim().length > 0)
-    .map((part) => {
-      const trimmedPart = part.trim();
-      const lowerCaseTrimmedPart = trimmedPart.toLowerCase(); // Convert trimmedPart to lowercase
+  // Replace known sequences with image elements
+  const replaceSequences = (inputParts) => {
+    const sequences = {
+      qcf: ["d", "df", "f"],
+      qcb: ["d", "db", "b"],
+      hcf: ["b", "db", "d", "df", "f"],
+      hcb: ["f", "df", "d", "db", "b"],
+    };
 
-      // Check if the part is a key in lowerCaseT8InputToIconMap
-      if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseTrimmedPart)) {
-        return createImageElement(trimmedPart);
-      } else if (combinations.hasOwnProperty(lowerCaseTrimmedPart)) {
-        // If the part is a key in combinations, map each constituent part to its icon
-        return combinations[lowerCaseTrimmedPart].map((subpart) =>
-          createImageElement(subpart)
+    const holds = {
+      "~F": "holdF",
+      "~f": "holdF",
+      "~B": "holdB",
+      "~b": "holdB",
+      "~U": "holdU",
+      "~u": "holdU",
+      "~D": "holdD",
+      "~d": "holdD",
+      "~DF": "holdDF",
+      "~df": "holdDF",
+      "~DB": "holdDB",
+      "~db": "holdDB",
+      "~UF": "holdUF",
+      "~uf": "holdUF",
+      "~UB": "holdUB",
+      "~ub": "holdUB",
+    };
+
+    return inputParts
+      .map((part) => {
+        const subParts = part.split(" ");
+        // Handle button combinations and normal inputs
+        if (alwaysIcon.includes(part) || inputToIconMap[part]) {
+          return createImageElement(part);
+        }
+
+        if (subParts.length > 1) {
+          return subParts.map((subPart, index) => {
+            return (
+              <React.Fragment key={uuidv4()}>
+                {index > 0 && <span className="input-gap"> </span>}
+                {createImageElement(subPart.trim())}
+              </React.Fragment>
+            );
+          });
+        }
+        // Handle holds (case-sensitive)
+        Object.entries(holds).forEach(([key, value]) => {
+          const regex = new RegExp(key, "g");
+          part = part.replace(regex, value);
+        });
+
+        // Handle sequences
+        const sequenceElements = sequences[part]?.map((subSeq) =>
+          createImageElement(subSeq)
         );
-      } else {
-        // If the part is not a key in lowerCaseT8InputToIconMap or combinations, split it by '+'
-        const numbers = trimmedPart.split("+");
-        return (
-          <span key={uuidv4()}>
-            {numbers.map((num, index) => {
-              // Check if the number is a hold input
-              // Check if the number is a hold input
-              if (num.startsWith("~")) {
-                // Remove the '~' from the hold input and prepend 'hold' to it
-                const holdKey = "hold" + num.slice(1).toLowerCase(); // Convert the hold input to lowercase
-                if (lowerCaseT8InputToIconMap.hasOwnProperty(holdKey)) {
-                  return (
-                    <React.Fragment key={uuidv4()}>
-                      {createImageElement(holdKey)}
-                      {index < numbers.length - 1 && (
-                        <span className="plus">+</span>
-                      )}
-                    </React.Fragment>
-                  );
-                }
-              } else if (
-                lowerCaseT8InputToIconMap.hasOwnProperty(num.toLowerCase())
-              ) {
-                // Convert num to lowercase
-                return (
-                  <React.Fragment key={uuidv4()}>
-                    {createImageElement(num)}
-                    {index < numbers.length - 1 && (
-                      <span className="plus">+</span>
-                    )}
-                  </React.Fragment>
-                );
-              }
-              return (
-                <span className="notation-span everything-else">{num}</span>
-              );
-            })}
-          </span>
-        );
+        if (sequenceElements) {
+          return sequenceElements;
+        }
+
+        // Handle button combinations and normal inputs
+        if (inputToIconMap[part]) {
+          return createImageElement(part);
+        }
+
+        // Default case for unrecognized parts
+        return createImageElement(part);
+      })
+      .flat(); // Flatten in case of nested arrays from sequences
+  };
+
+  function createImageElement(part) {
+    let src = "";
+    let style = {}; // Default style
+    let lowerCasePart = part.toLowerCase();
+
+    // Check if the window width is less than or equal to 768px
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (alwaysIcon.includes(lowerCasePart)) {
+      src = t8InputToIconMap[lowerCasePart] || "";
+
+      // Check if part is one of the last 6 elements in alwaysIcon
+      if (alwaysIcon.slice(-7).includes(lowerCasePart)) {
+        style = isMobile
+          ? { height: "25px", width: "25px" } // Set style for mobile
+          : { height: "45px", width: "45px" }; // Set style for desktop
+
+        // If part is the very last one in alwaysIcon, change the style
+        if (lowerCasePart === alwaysIcon[alwaysIcon.length - 1]) {
+          style = isMobile
+            ? { height: "25px", width: "25px" } // Set style for mobile
+            : { height: "50px", width: "50px" }; // Set style for desktop
+        }
       }
-    });
+    } else if (inputToIconMap[lowerCasePart]) {
+      src = colorMode
+        ? `/icons/${lowerCasePart}.webp`
+        : `/icons-t8/${lowerCasePart}.png`;
+    }
+
+    return src ? (
+      <img
+        key={uuidv4()}
+        src={src}
+        alt={part}
+        className="input-icons"
+        style={style}
+      />
+    ) : (
+      <span key={uuidv4()}>{part}</span>
+    );
+  }
+
+  const normalizedInput = normalizeInput(input);
+  const elements = replaceSequences(normalizedInput);
+
+  return <span>{elements}</span>;
 };
 
 export default renderInputImage;
