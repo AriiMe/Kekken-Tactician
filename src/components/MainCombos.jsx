@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import renderInputImage from "../utils/renderInputImage";
+import test from "../utils/test";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -23,7 +23,13 @@ const MainCombos = ({ combos, name }) => {
             {displayMode === "notations" && (
               <span className="notation-separator">, </span>
             )}
-            <span className="arrow-separator">{" >"}</span>
+            <span className="arrow-separator">
+              <img
+                className="input-icons "
+                src="/icons-t8/into.png"
+                alt="into"
+              />
+            </span>
             <span className="arrow-separator-mobile">{""}</span>
           </>
         ) : null;
@@ -31,7 +37,7 @@ const MainCombos = ({ combos, name }) => {
       // Return the image followed by a possible separator
       return (
         <React.Fragment key={index}>
-          {renderInputImage(item)}
+          {test(item)}
           {separator}
         </React.Fragment>
       );
@@ -75,17 +81,23 @@ const MainCombos = ({ combos, name }) => {
               <td>
                 {combo.launchers.map((launcher, launcherIndex) => (
                   <div key={launcherIndex} className="launcher-item">
-                    {renderInputImage(launcher)}
+                    {test(launcher)}
                   </div>
                 ))}
               </td>
               <td className="follow-ups-cell">
                 {combo.followUps.map((followUp, index) => (
                   <React.Fragment key={index}>
-                    {renderInputImage(followUp)}
+                    {test(followUp)}
                     {index < combo.followUps.length - 1 && (
                       <>
-                        <span className="arrow-separator">{" >"} </span>
+                        <span className="arrow-separator">
+                          <img
+                            className="input-icons "
+                            src="/icons-t8/into.png"
+                            alt="into"
+                          />
+                        </span>
                         <span className="arrow-separator-mobile">{""}</span>
                       </>
                     )}

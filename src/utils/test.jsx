@@ -6,8 +6,6 @@ import t8InputToIconMap from "./t8InputToIconMap";
 const test = (input) => {
   const { displayMode } = useDisplayMode();
 
-  console.log(input);
-
   // Define the combinations
   const combinations = {
     hcf: ["b", "db", "d", "df", "f"],
@@ -27,15 +25,11 @@ const test = (input) => {
   );
 
   // Helper function to generate image element for a single part
-  const createImageElement = (subSeq) => {
-    console.log(subSeq);
-
+  const createImageElement = (subSeq, className = "") => {
     // Check if subSeq is defined
     if (subSeq) {
       // Convert subSeq to lowercase
       const lowerCaseSubSeq = subSeq.toLowerCase();
-
-      console.log(lowerCaseSubSeq);
 
       // Check if lowerCaseSubSeq matches any key in lowerCaseT8InputToIconMap
       if (lowerCaseT8InputToIconMap.hasOwnProperty(lowerCaseSubSeq)) {
@@ -51,8 +45,8 @@ const test = (input) => {
       }
     }
 
-    // If subSeq is undefined or null, or if lowerCaseSubSeq doesn't match any key in lowerCaseT8InputToIconMap, return null
-    return null;
+    // everything else
+    return <span className={className}>{subSeq}</span>;
   };
 
   const applyNumericStyling = (part) => {
@@ -60,6 +54,54 @@ const test = (input) => {
     const holdRegex = /^~[DFUBLRdfublr]$/; // Matches holds like ~F, ~B, etc.
     const holdComboRegex = /^~[DFUBLRdfublr]{2}$/; // Matches combinations like ~DF, ~UB, etc.
     const trimmedPart = part.trim();
+    /**TODO: FIND A SIMPLER/ BETTER WAY  TO HANDLE THIS I AM WAY TOO FUCKING TIRED OF THIS STUPID FUNCTION*/
+    const normalInputsSet = new Set([
+      "n",
+      "f",
+      "df",
+      "d",
+      "db",
+      "b",
+      "ub",
+      "u",
+      "uf",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "1+2",
+      "1+3",
+      "1+4",
+      "2+3",
+      "2+4",
+      "3+4",
+      "1+2+3",
+      "1+2+4",
+      "1+3+4",
+      "2+3+4",
+      "1+2+3+4",
+    ]);
+    const iconInputsSet = new Set([
+      "homing",
+      "pc",
+      "t",
+      "[",
+      "]",
+      "chip",
+      "heat",
+      "fb",
+      "into",
+      "launch",
+      "ch",
+      "bt",
+      "ss",
+      "ssl",
+      "ssr",
+      "wb",
+      "wr",
+      "ws",
+    ]);
 
     // Function to create a styled span for a hold
     const styledHoldSpan = (text, className) => (
@@ -105,10 +147,16 @@ const test = (input) => {
           ))}
         </span>
       );
+    } else {
+      const lowerCaseTrimmedPart = trimmedPart.toLowerCase();
+      if (normalInputsSet.has(lowerCaseTrimmedPart)) {
+        return <span className="normal-inputs">{trimmedPart}</span>;
+      } else if (iconInputsSet.has(lowerCaseTrimmedPart)) {
+        return createImageElement(trimmedPart);
+      }
     }
 
-    // Default text rendering
-    return styledHoldSpan(trimmedPart, "normal-inputs");
+    return <span className="notation-span everything-else">{trimmedPart}</span>;
   };
 
   if (displayMode === "notations") {
@@ -172,7 +220,9 @@ const test = (input) => {
                   </React.Fragment>
                 );
               }
-              return null;
+              return (
+                <span className="notation-span everything-else">{num}</span>
+              );
             })}
           </span>
         );

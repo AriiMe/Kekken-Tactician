@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
@@ -132,11 +133,26 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "350px" : "0px",
+          marginTop: isTabletOrMobile ? "550px" : "0px",
         }}
       >
         Pick your Character
       </h1>
+
+      <Typography
+        variant="h5"
+        component="h5"
+        gutterBottom
+        align="center"
+        sx={{
+          color: "rgba(212, 47, 47, 1)",
+          marginBottom: "50px",
+        }}
+      >
+        We are currently overhauling some important functions please be patient,
+        some combos might look funky but we are working on it. Thank you for
+        your understanding.
+      </Typography>
 
       <Grid
         container
