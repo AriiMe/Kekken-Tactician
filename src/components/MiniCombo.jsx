@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import renderInputImage from "../utils/renderInputImage";
 
 import { Helmet } from "react-helmet";
 import "./MiniCombo.css";
 
 const MiniCombo = ({ miniCombo, name }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   const description = `Mini Combos for ${name} in Tekken 8. These are quick follow-ups to certain moves that guarantee a hit.`;
   const keywords = [
     "Tekken 8",
@@ -36,27 +45,41 @@ const MiniCombo = ({ miniCombo, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Mini Combos</h2>
-      <div className="combo-container">
-        {Object.entries(groupedMoves).map(([followUp, moves], index) => (
-          <div key={index} className="combo-group">
-            <div className="move-column">
-              <h3>Move(s)</h3>
-              {moves.map((move, moveIndex) => (
-                <div key={moveIndex} className="move">
-                  {renderInputImage(move)}
-                </div>
-              ))}
+      <div style={{ marginBottom: "10px" }}>
+        <IconButton onClick={toggleCollapse}>
+          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        </IconButton>
+      </div>
+
+      <div
+        style={{
+          transition: "width 0.3s",
+          overflowX: "auto",
+          display: isCollapsed ? "none" : "block",
+        }}
+      >
+        <div className="combo-container">
+          {Object.entries(groupedMoves).map(([followUp, moves], index) => (
+            <div key={index} className="combo-group">
+              <div className="move-column">
+                <h3>Move(s)</h3>
+                {moves.map((move, moveIndex) => (
+                  <div key={moveIndex} className="move">
+                    {renderInputImage(move)}
+                  </div>
+                ))}
+              </div>
+              <div className="follow-up-column">
+                <h3>Follow-up(s)</h3>
+                {followUp.split("-").map((followUp, idx) => (
+                  <div className="follow-up" key={idx}>
+                    {renderInputImage(followUp)}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="follow-up-column">
-              <h3>Follow-up(s)</h3>
-              {followUp.split("-").map((followUp, idx) => (
-                <div className="follow-up" key={idx}>
-                  {renderInputImage(followUp)}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

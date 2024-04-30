@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./MostImportantGrabs.css";
 
 const MostImportantGrabs = ({ grabs, name }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   const description = `All main grabs and throws for ${name} in Tekken 8. These are the most important grabs to learn for ${name} and their escape inputs.`;
   const keywords = [
     "Tekken 8",
@@ -32,16 +41,31 @@ const MostImportantGrabs = ({ grabs, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Important Grabs</h2>
-      <ul>
-        {grabs.map((grab, index) => (
-          <li key={index} id="imp-grabs" className="my-li bit-of-space">
-            <div className="grab-move">{renderInputImage(grab.move)}</div>
-            <div className="escape-label">
-              Escape: {renderInputImage(grab.escape)}
-            </div>
-          </li>
-        ))}
-      </ul>
+
+      <div style={{ marginBottom: "10px" }}>
+        <IconButton onClick={toggleCollapse}>
+          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        </IconButton>
+      </div>
+
+      <div
+        style={{
+          transition: "width 0.3s",
+          overflowX: "auto",
+          display: isCollapsed ? "none" : "block",
+        }}
+      >
+        <ul>
+          {grabs.map((grab, index) => (
+            <li key={index} id="imp-grabs" className="my-li bit-of-space">
+              <div className="grab-move">{renderInputImage(grab.move)}</div>
+              <div className="escape-label">
+                Escape: {renderInputImage(grab.escape)}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

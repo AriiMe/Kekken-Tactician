@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import renderInputImage from "../utils/renderInputImage";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -8,6 +11,7 @@ import { useDisplayMode } from "../context/DisplayModeContext";
 
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
@@ -43,6 +47,10 @@ const MainCombos = ({ combos, name }) => {
       );
     });
   };
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
   const keywords = [
     "Tekken 8",
@@ -66,52 +74,64 @@ const MainCombos = ({ combos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Main Combos</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th className="launcher-header">Launcher(s)</th>
-            <th className="follow-ups-header">Follow-Ups</th>
-            <th className="simple-version-header">Simple Version</th>
-          </tr>
-        </thead>
-        <tbody>
-          {combos.map((combo, comboIndex) => (
-            <tr key={comboIndex}>
-              <td>
-                {combo.launchers.map((launcher, launcherIndex) => (
-                  <div key={launcherIndex} className="launcher-item">
-                    {renderInputImage(launcher)}
-                  </div>
-                ))}
-              </td>
-              <td className="follow-ups-cell">
-                {combo.followUps.map((followUp, index) => (
-                  <React.Fragment key={index}>
-                    {renderInputImage(followUp)}
-                    {index < combo.followUps.length - 1 && (
-                      <>
-                        <span className="arrow-separator">
-                          <img
-                            className="input-icons "
-                            src="/icons-t8/into.png"
-                            alt="into"
-                          />
-                        </span>
-                        <span className="arrow-separator-mobile">{""}</span>
-                      </>
-                    )}
-                  </React.Fragment>
-                ))}
-              </td>
-
-              <td className="simple-version-cell">
-                {displaySimpleCombo(combo)}
-              </td>
+      <div style={{ marginBottom: "10px" }}>
+        <IconButton onClick={toggleCollapse}>
+          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        </IconButton>
+      </div>
+      <div
+        style={{
+          transition: "width 0.3s",
+          overflowX: "auto",
+          display: isCollapsed ? "none" : "block",
+        }}
+      >
+        <table>
+          <thead>
+            <tr>
+              <th className="launcher-header">Launcher(s)</th>
+              <th className="follow-ups-header">Follow-Ups</th>
+              <th className="simple-version-header">Simple Version</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {combos.map((combo, comboIndex) => (
+              <tr key={comboIndex}>
+                <td>
+                  {combo.launchers.map((launcher, launcherIndex) => (
+                    <div key={launcherIndex} className="launcher-item">
+                      {renderInputImage(launcher)}
+                    </div>
+                  ))}
+                </td>
+                <td className="follow-ups-cell">
+                  {combo.followUps.map((followUp, index) => (
+                    <React.Fragment key={index}>
+                      {renderInputImage(followUp)}
+                      {index < combo.followUps.length - 1 && (
+                        <>
+                          <span className="arrow-separator">
+                            <img
+                              className="input-icons "
+                              src="/icons-t8/into.png"
+                              alt="into"
+                            />
+                          </span>
+                          <span className="arrow-separator-mobile">{""}</span>
+                        </>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </td>
+
+                <td className="simple-version-cell">
+                  {displaySimpleCombo(combo)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
