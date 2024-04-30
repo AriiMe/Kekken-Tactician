@@ -101,6 +101,17 @@
     display: none;
 }
 
+.player-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.react-player {
+    width: 100% !important;
+    /* This is necessary if you want to control the width of the video */
+    height: auto;
+}
+
 
 
 @media (max-width: 768px) {

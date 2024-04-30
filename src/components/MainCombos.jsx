@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import ReactPlayer from "react-player";
 import renderInputImage from "../utils/renderInputImage";
@@ -15,7 +15,30 @@ const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
-  const [volume, setVolume] = useState(0.2);
+  const [playingStatus, setPlayingStatus] = useState({});
+  const [startTimes, setStartTimes] = useState({});
+  const playerRefs = useRef([]);
+  const handleProgress =
+    (index) =>
+    ({ playedSeconds }) => {
+      // If the video just started playing, store the start time
+      if (playingStatus[index] && !startTimes[index]) {
+        setStartTimes((prev) => ({ ...prev, [index]: playedSeconds }));
+      }
+
+      const targetTime = startTimes[index] + combos[index].endTime;
+      console.log(
+        `Played Seconds: ${playedSeconds}, Target Time: ${targetTime}`
+      );
+
+      if (playedSeconds >= targetTime) {
+        console.log("Pausing video...");
+        setPlayingStatus((prev) => ({ ...prev, [index]: false }));
+        // Reset the start time for this video
+        setStartTimes((prev) => ({ ...prev, [index]: null }));
+      }
+    };
+
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
@@ -51,15 +74,17 @@ const MainCombos = ({ combos, name }) => {
       );
     });
   };
-  console.log(combos);
+
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const toggleRow = (index, event) => {
-    event.stopPropagation(); // Ensure that the video icon click does not toggle the entire row
-    setExpandedRow(expandedRow === index ? null : index);
+  const toggleRow = (index) => {
+    const isExpanded = expandedRow === index;
+    setExpandedRow(isExpanded ? null : index);
+    setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
   };
+
   const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
   const keywords = [
     "Tekken 8",
@@ -145,11 +170,14 @@ const MainCombos = ({ combos, name }) => {
                   <tr>
                     <td colSpan="4">
                       <ReactPlayer
+                        className="react-player"
                         url={combo.vidUrl}
-                        playing
+                        ref={(player) => {
+                          playerRefs.current[index] = player;
+                        }}
+                        playing={playingStatus[index]}
                         controls
-                        width="100%"
-                        volume={volume}
+                        onProgress={handleProgress(index)}
                       />
                     </td>
                   </tr>
@@ -164,3 +192,63 @@ const MainCombos = ({ combos, name }) => {
 };
 
 export default MainCombos;
+
+// import React, { useState, useEffect, useRef } from "react";
+// import ReactPlayer from "react-player";
+// import IconButton from "@mui/material/IconButton";
+// import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+
+// const MainCombos = ({ combos }) => {
+//   const [expandedRow, setExpandedRow] = useState(null);
+//   const [playingStatus, setPlayingStatus] = useState({});
+//   const playerRefs = useRef([]);
+
+//   // Effect to pause the video when progress reaches 96 seconds
+//   useEffect(() => {
+//     const handleProgress = ({ playedSeconds }) => {
+//       if (playedSeconds >= 96) {
+//         setPlayingStatus((prev) => ({ ...prev, [expandedRow]: false }));
+//         console.log("Paused the video after 96 seconds.");
+//       }
+//     };
+//   }, [expandedRow, playingStatus]);
+
+//   const toggleRow = (index) => {
+//     const isExpanded = expandedRow === index;
+//     setExpandedRow(isExpanded ? null : index);
+//     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
+//   };
+
+//   return (
+//     <div>
+//       {combos.map((combo, index) => (
+//         <div key={index}>
+//           <IconButton onClick={() => toggleRow(index)}>
+//             <VideoLibraryIcon />
+//           </IconButton>
+//           {expandedRow === index && (
+//             <ReactPlayer
+//               url={combo.vidUrl}
+//               ref={(player) => {
+//                 playerRefs.current[index] = player;
+//               }}
+//               playing={playingStatus[index]}
+//               controls
+//               onProgress={({ playedSeconds }) => {
+//                 console.log(
+//                   `Progress: ${playedSeconds} seconds, Index: ${index}`
+//                 );
+//                 if (playedSeconds >= 96) {
+//                   setPlayingStatus((prev) => ({ ...prev, [index]: false }));
+//                   console.log("Paused the video after 96 seconds.");
+//                 }
+//               }}
+//             />
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default MainCombos;
