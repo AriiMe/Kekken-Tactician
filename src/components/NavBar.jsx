@@ -169,24 +169,52 @@ function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            onClick={() => navigate("/")}
-            sx={{
-              flexGrow: 1,
-              color: "#c82427",
-              cursor: "pointer",
-              fontSize: "1.6rem",
-              fontFamily: "Michroma",
-              "&:hover": {
-                color: "white",
-                // color: "rgba(212, 47, 47, 1)",
-              },
-            }} // Ensures it takes up space and aligns links to the right
-          >
-            Tekken Tactician
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "baseline", gap: ".78rem" }}>
+            <Typography
+              variant="h6"
+              component="div"
+              onClick={() => navigate("/")}
+              sx={{
+                color: "#c82427",
+                cursor: "pointer",
+                fontSize: "1.6rem",
+                marginRight: "3rem",
+                fontFamily: "Michroma",
+                "&:hover": {
+                  color: "white",
+                },
+              }} // Ensures it takes up space and aligns links to the right
+            >
+              Tekken Tactician
+            </Typography>
+            <Typography
+              variant="body1"
+              component="div"
+              onClick={() => navigate("/combo-generator")}
+              sx={{
+                color: "#a32a2d",
+                cursor: "pointer",
+                fontSize: ".75rem",
+                fontFamily: "Michroma",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              Combo Maker
+            </Typography>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{
+                color: "#a32a2d",
+                fontSize: ".75rem",
+                fontFamily: "Michroma",
+              }}
+            >
+              Current Char: (if any)
+            </Typography>
+          </Box>
 
           <Box
             sx={{
