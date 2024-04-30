@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet";
 import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
+import ChainThrows from "../components/ChainThrows";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -248,6 +249,16 @@ const CharacterDetails = () => {
                   />
                 </Paper>
               </Grid>
+              {character.chainThrows && (
+                <Grid item xs={12}>
+                  <Paper>
+                    <ChainThrows
+                      chainThrows={character.chainThrows}
+                      name={characterName}
+                    />
+                  </Paper>
+                </Grid>
+              )}
               <Grid item xs={12}>
                 <Paper>
                   <WallCombos
