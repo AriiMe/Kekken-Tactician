@@ -49,7 +49,7 @@ const CharacterSelect = () => {
     "Loading please wait..."
   );
   const theme = useTheme();
-  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
@@ -110,7 +110,7 @@ const CharacterSelect = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
-        marginTop: "100px",
+        marginTop: "120px",
       }}
     >
       <Helmet>
@@ -134,7 +134,7 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "550px" : "0px",
+          marginTop: isTabletOrMobile ? "400px" : "0px",
         }}
       >
         Pick your Character
