@@ -63,6 +63,7 @@ const tips = [
   "Stop it! Go practice your combos!",
   "Wearing a scented condom while playing is proven to increase your chances of winning.",
   "Tell your opponent that his combos are wack and show better combos to use with his character.",
+  "Instantly using heat smash after heat engaging is not a waste! It's a strategy!",
 ];
 
 export default tips;
