@@ -16,11 +16,68 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useNavigate, Link } from "react-router-dom";
 import { DisplayModeContext } from "../context/DisplayModeContext";
 import { ColorModeContext } from "../context/ColorModeContext";
-import { Container, Popover } from "@mui/material";
+import {
+  Container,
+  FormControlLabel,
+  Popover,
+  styled,
+  Switch,
+} from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 //----------------------------------------------------------
+
+const IOSSwitch = styled((props) => (
+  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+))(({ theme }) => ({
+  width: 42,
+  height: 26,
+  padding: 0,
+  "& .MuiSwitch-switchBase": {
+    padding: 0,
+    margin: 2,
+    transitionDuration: "300ms",
+    "&.Mui-checked": {
+      transform: "translateX(16px)",
+      color: "#fff",
+      "& + .MuiSwitch-track": {
+        backgroundColor: theme.palette.mode === "dark" ? "#2ECA45" : "#65C466",
+        opacity: 1,
+        border: 0,
+      },
+      "&.Mui-disabled + .MuiSwitch-track": {
+        opacity: 0.5,
+      },
+    },
+    "&.Mui-focusVisible .MuiSwitch-thumb": {
+      color: "#33cf4d",
+      border: "6px solid #fff",
+    },
+    "&.Mui-disabled .MuiSwitch-thumb": {
+      color:
+        theme.palette.mode === "light"
+          ? theme.palette.grey[100]
+          : theme.palette.grey[600],
+    },
+    "&.Mui-disabled + .MuiSwitch-track": {
+      opacity: theme.palette.mode === "light" ? 0.7 : 0.3,
+    },
+  },
+  "& .MuiSwitch-thumb": {
+    boxSizing: "border-box",
+    width: 22,
+    height: 22,
+  },
+  "& .MuiSwitch-track": {
+    borderRadius: 26 / 2,
+    backgroundColor: theme.palette.mode === "light" ? "#E9E9EA" : "#39393D",
+    opacity: 1,
+    transition: theme.transitions.create(["background-color"], {
+      duration: 500,
+    }),
+  },
+}));
 //----------------------------------------------------------
 
 function Navbar() {
@@ -134,87 +191,6 @@ function Navbar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", sm: "flex" },
-              justifyContent: "flex-end",
-            }}
-          >
-            {window.location.pathname.includes("/character/combos/") ||
-            window.location.pathname.includes("/combo-generator") ? (
-              <>
-                <ToggleButtonGroup
-                  value={displayMode === "icons" ? "icons" : null} // Ensures the toggle reflects the state
-                  exclusive
-                  onChange={handleDisplayModeChange}
-                  aria-label="display mode"
-                >
-                  <ToggleButton
-                    value="icons"
-                    sx={{
-                      "&.Mui-selected": {
-                        backgroundColor: "rgba(212, 47, 47, 1)", // Red when selected
-
-                        color: "white",
-                        "&:hover": {
-                          backgroundColor: "rgba(212, 47, 47, 0.8)", // Slightly lighter red on hover
-                        },
-                      },
-                      fontSize: isMobile ? "0.7rem" : "1rem",
-                      backgroundColor: displayMode !== "icons" ? "grey" : "", // Grey when not selected
-                      color:
-                        displayMode !== "icons"
-                          ? "rgba(255, 255, 255, 0.7)"
-                          : "", // Lower opacity white when not selected
-                      "&:hover": {
-                        boxShadow: "0 0 15px rgba(212, 47, 47, 1)", // Red shadow on hover
-                        border: "1px solid rgba(212, 47, 47, 1)",
-                        cursor: "pointer",
-                      },
-                    }}
-                  >
-                    {displayMode === "icons" ? "Icons: ON" : "Icons: OFF"}
-                  </ToggleButton>
-                </ToggleButtonGroup>
-                <ToggleButtonGroup
-                  value={selected}
-                  exclusive
-                  onChange={handleColorModeChange}
-                  aria-label="text color mode"
-                >
-                  <ToggleButton
-                    key={selected ? "selected" : "not-selected"} // Change key based on selected state
-                    value="colors"
-                    selected={selected}
-                    onChange={handleColorModeChange}
-                    sx={{
-                      fontSize: isMobile ? "0.7rem" : "1rem",
-                      backgroundColor: selected
-                        ? "gba(76, 175, 80, 1)"
-                        : "grey", // Use "transparent" instead of ""
-                      color: selected ? "" : "rgba(255, 255, 255, 0.7)",
-                      "&.Mui-selected": {
-                        backgroundColor: "rgba(76, 175, 80, 1)",
-                        color: "white",
-                        "&:hover": {
-                          backgroundColor: "rgba(76, 175, 80, 0.8)",
-                        },
-                      },
-                      "&:hover": {
-                        boxShadow: "0 0 15px rgba(212, 47, 47, 1)",
-                        border: "1px solid rgba(212, 47, 47, 1)",
-                        cursor: "pointer",
-                      },
-                    }}
-                    aria-label="color mode"
-                  >
-                    {selected ? "Colors: ON" : "Colors: OFF"}
-                  </ToggleButton>
-                </ToggleButtonGroup>
-              </>
-            ) : null}
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
               display: { xs: "none", sm: "flex" },
               justifyContent: "flex-end",
               gap: "20px",
@@ -251,44 +227,76 @@ function Navbar() {
             >
               <FacebookIcon />
             </IconButton>
-            <Box sx={{ display: "flex" }}>
-              <Button
-                variant="contained"
-                sx={{
-                  fontSize: ".8rem",
-                  fontWeight: 700,
-                  marginLeft: "1.5rem",
-                  borderRadius: "100px",
-                }}
-                onClick={handlePopoverClick}
-              >
-                Preferences
-              </Button>
-              <Popover
-                id={id}
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handlePopoverClose}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-              >
-                <Box
+            {window.location.pathname.includes("/character/combos/") ||
+            window.location.pathname.includes("/combo-generator") ? (
+              <Box sx={{ display: "flex" }}>
+                <Button
+                  variant="contained"
                   sx={{
-                    minHeight: "100px",
-                    minWidth: "100px",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    flexDirection: "column",
+                    fontSize: ".8rem",
+                    fontWeight: 700,
+                    marginLeft: "1.5rem",
+                    borderRadius: "100px",
+                  }}
+                  onClick={handlePopoverClick}
+                >
+                  Preferences
+                </Button>
+                <Popover
+                  id={id}
+                  open={open}
+                  anchorEl={anchorEl}
+                  onClose={handlePopoverClose}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "left",
                   }}
                 >
-                  <Box>Colors:</Box>
-                  <Box>Icons:</Box>
-                </Box>
-              </Popover>
-            </Box>
+                  <Box
+                    sx={{
+                      minHeight: "100px",
+                      minWidth: "100px",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "flex-start",
+                      flexDirection: "column",
+                      padding: "0 1rem",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        gap: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <span>Icons:</span>
+                      <FormControlLabel
+                        control={<IOSSwitch sx={{ m: 1 }} />}
+                        checked={displayMode === "icons"}
+                        onClick={handleDisplayModeChange}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        gap: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <span>Colors:</span>
+                      <FormControlLabel
+                        control={<IOSSwitch sx={{ m: 1 }} />}
+                        checked={selected}
+                        onClick={handleColorModeChange}
+                      />
+                    </Box>
+                  </Box>
+                </Popover>
+              </Box>
+            ) : null}
 
             {/* <Button
               color="inherit"
