@@ -15,7 +15,7 @@ const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
-  const [volume, setVolume] = useState(0.4);
+  const [volume, setVolume] = useState(0.2);
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
@@ -149,6 +149,7 @@ const MainCombos = ({ combos, name }) => {
                         playing
                         controls
                         width="100%"
+                        volume={volume}
                       />
                     </td>
                   </tr>
