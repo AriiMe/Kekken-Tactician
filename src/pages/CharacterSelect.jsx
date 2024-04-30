@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import UselessTipps from "../components/UselessTipps";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -149,9 +150,7 @@ const CharacterSelect = () => {
           marginBottom: "50px",
         }}
       >
-        We are currently overhauling some important functions please be patient,
-        some combos might look funky but we are working on it. Thank you for
-        your understanding.
+        <UselessTipps />
       </Typography>
 
       <Grid
