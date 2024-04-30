@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import ReactPlayer from "react-player";
 import renderInputImage from "../utils/renderInputImage";
 import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -12,6 +14,8 @@ import { useDisplayMode } from "../context/DisplayModeContext";
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [expandedRow, setExpandedRow] = useState(null);
+  const [volume, setVolume] = useState(0.4);
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
@@ -47,9 +51,14 @@ const MainCombos = ({ combos, name }) => {
       );
     });
   };
-
+  console.log(combos);
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
+  };
+
+  const toggleRow = (index, event) => {
+    event.stopPropagation(); // Ensure that the video icon click does not toggle the entire row
+    setExpandedRow(expandedRow === index ? null : index);
   };
   const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
   const keywords = [
@@ -95,39 +104,56 @@ const MainCombos = ({ combos, name }) => {
             </tr>
           </thead>
           <tbody>
-            {combos.map((combo, comboIndex) => (
-              <tr key={comboIndex}>
-                <td>
-                  {combo.launchers.map((launcher, launcherIndex) => (
-                    <div key={launcherIndex} className="launcher-item">
-                      {renderInputImage(launcher)}
-                    </div>
-                  ))}
-                </td>
-                <td className="follow-ups-cell">
-                  {combo.followUps.map((followUp, index) => (
-                    <React.Fragment key={index}>
-                      {renderInputImage(followUp)}
-                      {index < combo.followUps.length - 1 && (
-                        <>
-                          <span className="arrow-separator">
-                            <img
-                              className="input-icons "
-                              src="/icons-t8/into.png"
-                              alt="into"
-                            />
-                          </span>
-                          <span className="arrow-separator-mobile">{""}</span>
-                        </>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </td>
-
-                <td className="simple-version-cell">
-                  {displaySimpleCombo(combo)}
-                </td>
-              </tr>
+            {combos.map((combo, index) => (
+              <React.Fragment key={index}>
+                <tr>
+                  <td>
+                    {combo.launchers.map((launcher, i) => (
+                      <div key={i}>{renderInputImage(launcher)}</div>
+                    ))}
+                    {combo.vidUrl && (
+                      <IconButton
+                        onClick={(event) => toggleRow(index, event)}
+                        style={{ textAlign: "center" }}
+                      >
+                        <VideoLibraryIcon />
+                      </IconButton>
+                    )}
+                  </td>
+                  <td>
+                    {combo.followUps.map((followUp, i) => (
+                      <React.Fragment key={i}>
+                        {renderInputImage(followUp)}
+                        {i < combo.followUps.length - 1 && (
+                          <>
+                            <span className="arrow-separator">
+                              <img
+                                className="input-icons"
+                                src="/icons-t8/into.png"
+                                alt="into"
+                              />
+                            </span>
+                            <span className="arrow-separator-mobile">{""}</span>
+                          </>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </td>
+                  <td>{displaySimpleCombo(combo)}</td>
+                </tr>
+                {expandedRow === index && combo.vidUrl && (
+                  <tr>
+                    <td colSpan="4">
+                      <ReactPlayer
+                        url={combo.vidUrl}
+                        playing
+                        controls
+                        width="100%"
+                      />
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
             ))}
           </tbody>
         </table>
