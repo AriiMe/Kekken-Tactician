@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./WallCombos.css";
 
 const WallCombos = ({ wallCombos, name }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   const description = `Wall Combos for ${name} in Tekken 8. These are the most important wall combos to learn for ${name}. Wall combos and their follow-ups.`;
 
   const keywords = [
@@ -36,46 +45,65 @@ const WallCombos = ({ wallCombos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Wall Combos</h2>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <div className="combo-section">
-            <h3>General</h3>
-            {wallCombos.general.map((combo) => (
-              <div key={combo._id} className="combo">
-                <div className="wall-move">
-                  <span className="label">Move:</span>
 
-                  {renderInputImage(combo.move)}
-                </div>
-                <div className="wall-follow-up">
-                  <span className="label">Follow-Up:</span>
+      <div style={{ marginBottom: "10px" }}>
+        <IconButton onClick={toggleCollapse}>
+          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        </IconButton>
+      </div>
 
-                  {renderInputImage(combo.followUp)}
+      <div
+        style={{
+          transition: "width 0.3s",
+          overflowX: "auto",
+          display: isCollapsed ? "none" : "block",
+        }}
+      >
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <div className="combo-section">
+              <h3>General</h3>
+              {wallCombos.general.map((combo) => (
+                <div key={combo._id} className="combo">
+                  <div className="wall-move">
+                    <div className="label">Move:</div>
+                    <div className="icons-row">
+                      {renderInputImage(combo.move)}
+                    </div>
+                  </div>
+                  <div className="wall-follow-up">
+                    <div className="label">Follow-Up:</div>
+                    <div className="icons-row">
+                      {renderInputImage(combo.followUp)}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Grid>
+          <Grid item xs={6}>
+            <div className="combo-section">
+              <h3>With Tornado</h3>
+              {wallCombos.withTornado.map((combo) => (
+                <div key={combo._id} className="combo">
+                  <div className="wall-move">
+                    <span className="label">Move:</span>
+                    <div className="icons-row">
+                      {renderInputImage(combo.move)}
+                    </div>
+                  </div>
+                  <div className="wall-follow-up">
+                    <span className="label">Follow-Up:</span>
+                    <div className="icons-row">
+                      {renderInputImage(combo.followUp)}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <div className="combo-section">
-            <h3>With Tornado</h3>
-            {wallCombos.withTornado.map((combo) => (
-              <div key={combo._id} className="combo">
-                <div className="wall-move">
-                  <span className="label">Move:</span>
-
-                  {renderInputImage(combo.move)}
-                </div>
-                <div className="wall-follow-up">
-                  <span className="label">Follow-Up:</span>
-
-                  {renderInputImage(combo.followUp)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Grid>
-      </Grid>
+      </div>
     </div>
   );
 };

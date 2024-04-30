@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import UselessTipps from "../components/UselessTipps";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -48,7 +49,7 @@ const CharacterSelect = () => {
     "Loading please wait..."
   );
   const theme = useTheme();
-  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
@@ -109,7 +110,7 @@ const CharacterSelect = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
-        marginTop: "100px",
+        marginTop: "120px",
       }}
     >
       <Helmet>
@@ -133,7 +134,7 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "550px" : "0px",
+          marginTop: isTabletOrMobile ? "400px" : "0px",
         }}
       >
         Pick your Character
@@ -149,9 +150,7 @@ const CharacterSelect = () => {
           marginBottom: "50px",
         }}
       >
-        We are currently overhauling some important functions please be patient,
-        some combos might look funky but we are working on it. Thank you for
-        your understanding.
+        <UselessTipps />
       </Typography>
 
       <Grid

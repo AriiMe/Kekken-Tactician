@@ -74,3 +74,8 @@ img {
     font-size: 18px;
     font-family: 'Arial Black', Gadget, sans-serif;
 }
+
+.special-icons {
+    height: 45px !important;
+    width: 45px !important;
+}

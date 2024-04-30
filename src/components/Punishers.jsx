@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { v4 as uuidv4 } from "uuid";
 import { Helmet } from "react-helmet";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./Punishers.css";
 
 const Punishers = ({ punishers, name }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   const description = `Punishers for ${name} in Tekken 8. These are the most important punishers to learn for ${name}.Punishers and their frames.`;
   const keywords = [
     "Tekken 8",
@@ -31,16 +40,29 @@ const Punishers = ({ punishers, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Punishers</h2>
-      <ul>
-        {punishers.startup.map((punish, index) => (
-          <li key={uuidv4()} className="my-li">
-            <span className="bit-of-space">
-              {renderInputImage(punish.move)}{" "}
+
+      <div style={{ marginBottom: "10px" }}>
+        <IconButton onClick={toggleCollapse}>
+          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        </IconButton>
+      </div>
+
+      <div
+        style={{
+          transition: "width 0.3s",
+          overflowX: "auto",
+          display: isCollapsed ? "none" : "block",
+        }}
+      >
+        <ul>
+          {punishers.startup.map((punish, index) => (
+            <li key={uuidv4()} className="my-li punisher-li">
+              <span>{renderInputImage(punish.move)} </span>
               <span className="escape-label">Frames: {punish.frames}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

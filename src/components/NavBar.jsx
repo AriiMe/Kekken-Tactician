@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -15,22 +15,34 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useNavigate, Link } from "react-router-dom";
 import { DisplayModeContext } from "../context/DisplayModeContext";
+import { ColorModeContext } from "../context/ColorModeContext";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { colorMode, setColorMode } = useContext(ColorModeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [selected, setSelected] = useState(colorMode);
   const { displayMode, setDisplayMode } = useContext(DisplayModeContext);
 
-  // Update displayMode when the toggle button is clicked
-  const handleDisplayModeChange = (event, newDisplayMode) => {
-    if (newDisplayMode !== null) {
-      setDisplayMode(newDisplayMode);
-    }
+  const handleDisplayModeChange = () => {
+    const newDisplayMode = displayMode === "icons" ? "notations" : "icons";
+    setDisplayMode(newDisplayMode);
+  };
+  const handleColorModeChange = () => {
+    const newColorMode = !colorMode;
+    setColorMode(newColorMode);
+    setSelected(newColorMode); // Use newColorMode directly
   };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  useEffect(() => {
+    setSelected(colorMode);
+  }, [colorMode, displayMode]);
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -102,36 +114,75 @@ function Navbar() {
             justifyContent: "flex-end",
           }}
         >
-          <ToggleButtonGroup
-            value={displayMode}
-            exclusive
-            onChange={handleDisplayModeChange}
-          >
-            <ToggleButton
-              value="icons"
-              sx={{
-                "&:hover": {
-                  boxShadow: "0 0 15px rgba(212, 47, 47, 0.7)",
-                  border: "1px solid rgba(212, 47, 47, 1)",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              Icons
-            </ToggleButton>
-            <ToggleButton
-              value="notations"
-              sx={{
-                "&:hover": {
-                  boxShadow: "0 0 15px rgba(212, 47, 47, 0.7)",
-                  border: "1px solid rgba(212, 47, 47, 1)",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              Notations
-            </ToggleButton>
-          </ToggleButtonGroup>
+          {window.location.pathname.includes("/character/combos/") ||
+          window.location.pathname.includes("/combo-generator") ? (
+            <>
+              <ToggleButtonGroup
+                value={displayMode === "icons" ? "icons" : null} // Ensures the toggle reflects the state
+                exclusive
+                onChange={handleDisplayModeChange}
+                aria-label="display mode"
+              >
+                <ToggleButton
+                  value="icons"
+                  sx={{
+                    "&.Mui-selected": {
+                      backgroundColor: "rgba(212, 47, 47, 1)", // Red when selected
+
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "rgba(212, 47, 47, 0.8)", // Slightly lighter red on hover
+                      },
+                    },
+                    fontSize: isMobile ? "0.7rem" : "1rem",
+                    backgroundColor: displayMode !== "icons" ? "grey" : "", // Grey when not selected
+                    color:
+                      displayMode !== "icons" ? "rgba(255, 255, 255, 0.7)" : "", // Lower opacity white when not selected
+                    "&:hover": {
+                      boxShadow: "0 0 15px rgba(212, 47, 47, 1)", // Red shadow on hover
+                      border: "1px solid rgba(212, 47, 47, 1)",
+                      cursor: "pointer",
+                    },
+                  }}
+                >
+                  {displayMode === "icons" ? "Icons: ON" : "Icons: OFF"}
+                </ToggleButton>
+              </ToggleButtonGroup>
+              <ToggleButtonGroup
+                value={selected}
+                exclusive
+                onChange={handleColorModeChange}
+                aria-label="text color mode"
+              >
+                <ToggleButton
+                  key={selected ? "selected" : "not-selected"} // Change key based on selected state
+                  value="colors"
+                  selected={selected}
+                  onChange={handleColorModeChange}
+                  sx={{
+                    fontSize: isMobile ? "0.7rem" : "1rem",
+                    backgroundColor: selected ? "gba(76, 175, 80, 1)" : "grey", // Use "transparent" instead of ""
+                    color: selected ? "" : "rgba(255, 255, 255, 0.7)",
+                    "&.Mui-selected": {
+                      backgroundColor: "rgba(76, 175, 80, 1)",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "rgba(76, 175, 80, 0.8)",
+                      },
+                    },
+                    "&:hover": {
+                      boxShadow: "0 0 15px rgba(212, 47, 47, 1)",
+                      border: "1px solid rgba(212, 47, 47, 1)",
+                      cursor: "pointer",
+                    },
+                  }}
+                  aria-label="color mode"
+                >
+                  {selected ? "Colors: ON" : "Colors: OFF"}
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </>
+          ) : null}
         </Box>
         <Box
           sx={{

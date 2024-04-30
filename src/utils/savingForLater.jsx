@@ -1,39 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import inputToIconMap from "./inputToIconMap";
 import { v4 as uuidv4 } from "uuid";
 import { useDisplayMode } from "../context/DisplayModeContext";
-import { useColorMode } from "../context/ColorModeContext";
-import inputToIconMap from "./inputToIconMap";
-import t8InputToIconMap from "./t8InputToIconMap";
 
 const renderInputImage = (input) => {
   const { displayMode } = useDisplayMode();
-  const { colorMode } = useColorMode();
-
-  const alwaysIcon = [
-    "homing",
-    "pc",
-    "t",
-    "T",
-    "[",
-    "]",
-    "chip",
-    "heat",
-    "fb",
-    "into",
-    "wb",
-    "launch",
-    "bt",
-    "ss",
-    "ssl",
-    "ssr",
-    "wr",
-    "ws",
-    "ch",
-  ];
-
-  const normalizeInput = (inputString) => {
-    return inputString.split(/\s+/); // Split by spaces
-  };
 
   const applyNumericStyling = (part) => {
     const numericRegex = /^\d+(\+\d+)*$/; // Matches single digits and combinations like 1+2
@@ -41,6 +12,7 @@ const renderInputImage = (input) => {
     const holdComboRegex = /^~[DFUBLRdfublr]{2}$/; // Matches combinations like ~DF, ~UB, etc.
     const trimmedPart = part.trim();
 
+    // Function to create a styled span for a hold
     const styledHoldSpan = (text, className) => (
       <span key={uuidv4()} className={className}>
         {text}
@@ -48,29 +20,29 @@ const renderInputImage = (input) => {
     );
 
     if (holdComboRegex.test(trimmedPart)) {
+      // Special styling for combinations like ~DF
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-combo-input-${trimmedPart.substring(1).toLowerCase()}`
       );
     } else if (holdRegex.test(trimmedPart)) {
+      // Special styling for single holds like ~F
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-input-${trimmedPart.substring(1).toLowerCase()}`
       );
     } else if (numericRegex.test(trimmedPart)) {
+      // Split the part by '+'
       const numbers = trimmedPart.split("+");
+      // Render each number with unique styling, and keep '+' outside
       return (
         <span key={uuidv4()}>
           {numbers.map((num, index) => (
             <>
               <span
                 key={uuidv4()}
-                className={`xbox-input ${
-                  colorMode
-                    ? `xbox-input-${num} ${
-                        index === 0 ? "first-number" : "last-number"
-                      }`
-                    : ""
+                className={`xbox-input xbox-input-${num} ${
+                  index === 0 ? "first-number" : "last-number"
                 }`}
               >
                 {num}
@@ -79,33 +51,60 @@ const renderInputImage = (input) => {
                 <span key={uuidv4()} className="plus-sign">
                   +
                 </span>
-              )}
+              )}{" "}
+              {/* Plus sign as a separate span */}
             </>
           ))}
         </span>
       );
     }
 
+    // Default text rendering
     return styledHoldSpan(trimmedPart, "normal-inputs");
   };
 
   if (displayMode === "notations") {
     return (
       <>
-        {input.split(" ").map((sequence, index) => (
+        {input.split(">").map((sequence, index) => (
           <span key={uuidv4()}>
-            {index !== 0 && <span className="input-gap"> </span>}
-            {alwaysIcon.includes(sequence)
-              ? createImageElement(sequence)
-              : applyNumericStyling(sequence)}
+            {index !== 0 && <span className="input-gap">{">"}</span>}
+            {/* Split the sequence by comma and map each subPart */}
+            {sequence.split(",").map((subPart, subPartIndex, subPartArray) => (
+              <React.Fragment key={uuidv4()}>
+                <span className="sequence-part">
+                  {applyNumericStyling(subPart)}
+                </span>
+                {/* Add a comma after each subPart except for the last one */}
+                {subPartIndex < subPartArray.length - 1 && (
+                  <span className="subpart-comma">, </span>
+                )}
+              </React.Fragment>
+            ))}
           </span>
         ))}
       </>
     );
   }
 
+  // Normalize input to handle sequences and split correctly
+  const normalizeInput = (inputString) => {
+    return inputString.split(/,\s*/); // Split by commas and remove any trailing spaces
+  };
+
+  // Helper function to generate image element for a single part
+  const createImageElement = (subSeq) => (
+    <img
+      key={uuidv4()}
+      src={inputToIconMap[subSeq] || ""}
+      alt={subSeq}
+      className="input-icons"
+    />
+  );
+
   // Replace known sequences with image elements
   const replaceSequences = (inputParts) => {
+    // console.log("Normalized input parts:", inputParts);
     const sequences = {
       qcf: ["d", "df", "f"],
       qcb: ["d", "db", "b"],
@@ -115,38 +114,27 @@ const renderInputImage = (input) => {
 
     const holds = {
       "~F": "holdF",
-      "~f": "holdF",
       "~B": "holdB",
-      "~b": "holdB",
       "~U": "holdU",
-      "~u": "holdU",
       "~D": "holdD",
-      "~d": "holdD",
       "~DF": "holdDF",
-      "~df": "holdDF",
       "~DB": "holdDB",
-      "~db": "holdDB",
       "~UF": "holdUF",
-      "~uf": "holdUF",
       "~UB": "holdUB",
-      "~ub": "holdUB",
     };
 
     return inputParts
       .map((part) => {
-        const subParts = part.split(" ");
-        // Handle button combinations and normal inputs
-        if (alwaysIcon.includes(part) || inputToIconMap[part]) {
-          return createImageElement(part);
-        }
-
+        // console.log("Processing part:", part);
+        const subParts = part.split(" > ");
         if (subParts.length > 1) {
           return subParts.map((subPart, index) => {
+            // Insert '>' delimiter visual or spacing between the icons
             return (
-              <React.Fragment key={uuidv4()}>
-                {index > 0 && <span className="input-gap"> </span>}
+              <>
+                {index > 0 && <span className="input-gap">{">"}</span>}
                 {createImageElement(subPart.trim())}
-              </React.Fragment>
+              </>
             );
           });
         }
@@ -170,53 +158,10 @@ const renderInputImage = (input) => {
         }
 
         // Default case for unrecognized parts
-        return createImageElement(part);
+        return <span key={uuidv4()}>{part}</span>;
       })
       .flat(); // Flatten in case of nested arrays from sequences
   };
-
-  function createImageElement(part) {
-    let src = "";
-    let style = {}; // Default style
-    let lowerCasePart = part.toLowerCase();
-
-    // Check if the window width is less than or equal to 768px
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if (alwaysIcon.includes(lowerCasePart)) {
-      src = t8InputToIconMap[lowerCasePart] || "";
-
-      // Check if part is one of the last 6 elements in alwaysIcon
-      if (alwaysIcon.slice(-7).includes(lowerCasePart)) {
-        style = isMobile
-          ? { height: "25px", width: "25px" } // Set style for mobile
-          : { height: "45px", width: "45px" }; // Set style for desktop
-
-        // If part is the very last one in alwaysIcon, change the style
-        if (lowerCasePart === alwaysIcon[alwaysIcon.length - 1]) {
-          style = isMobile
-            ? { height: "25px", width: "25px" } // Set style for mobile
-            : { height: "50px", width: "50px" }; // Set style for desktop
-        }
-      }
-    } else if (inputToIconMap[lowerCasePart]) {
-      src = colorMode
-        ? `/icons/${lowerCasePart}.webp`
-        : `/icons-t8/${lowerCasePart}.png`;
-    }
-
-    return src ? (
-      <img
-        key={uuidv4()}
-        src={src}
-        alt={part}
-        className="input-icons"
-        style={style}
-      />
-    ) : (
-      <span key={uuidv4()}>{part}</span>
-    );
-  }
 
   const normalizedInput = normalizeInput(input);
   const elements = replaceSequences(normalizedInput);

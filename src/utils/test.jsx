@@ -3,8 +3,12 @@ import { v4 as uuidv4 } from "uuid";
 import { useDisplayMode } from "../context/DisplayModeContext";
 import t8InputToIconMap from "./t8InputToIconMap";
 
-const test = (input) => {
+const renderInputImage = (input) => {
   const { displayMode } = useDisplayMode();
+
+  if (displayMode === "notations") {
+    return <span>{input}</span>;
+  }
 
   // Define the combinations
   const combinations = {
@@ -110,19 +114,19 @@ const test = (input) => {
       </span>
     );
 
-    if (holdComboRegex.test(trimmedPart)) {
+    if (holdComboRegex.renderInputImage(trimmedPart)) {
       // Special styling for combinations like ~DF
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-combo-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (holdRegex.test(trimmedPart)) {
+    } else if (holdRegex.renderInputImage(trimmedPart)) {
       // Special styling for single holds like ~F
       return styledHoldSpan(
         trimmedPart,
         `hold-input hold-input-${trimmedPart.substring(1).toLowerCase()}`
       );
-    } else if (numericRegex.test(trimmedPart)) {
+    } else if (numericRegex.renderInputImage(trimmedPart)) {
       // Split the part by '+'
       const numbers = trimmedPart.split("+");
       // Render each number with unique styling, and keep '+' outside
@@ -230,4 +234,4 @@ const test = (input) => {
     });
 };
 
-export default test;
+export default renderInputImage;

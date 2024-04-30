@@ -29,12 +29,18 @@ export const HeatDash = ({ heat, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <h2>Max Damage combo enders with Heat</h2>
-      <ul>
-        <li className="my-li bit-of-space-around">
-          {renderInputImage(heat.engager)}
-          {renderInputImage("~F")}
-          {renderInputImage(heat.ender)}
+      <ul
+        className="my-li"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <li>
+          {renderInputImage(heat.engager)} {renderInputImage("~F")}{" "}
         </li>
+        <li>{renderInputImage("heat")}</li>
+        <li>{renderInputImage(heat.ender)}</li>
       </ul>
     </div>
   );

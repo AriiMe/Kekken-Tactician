@@ -10,9 +10,6 @@
 .heat-system ul {
     list-style: none;
     padding: 0;
-}
-
-.heat-system li {
     margin-bottom: 12px;
     padding: 8px;
     background-color: #333;

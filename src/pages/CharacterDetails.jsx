@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet";
 import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
+import ChainThrows from "../components/ChainThrows";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -44,7 +45,7 @@ const CharacterDetails = () => {
   }, [characterId, apiUrl]);
 
   if (loading) {
-    if (characterId === "662bd3e3e1042bb628f57a67") {
+    if (characterId === "662bd3e3f1042bb628f57a67") {
       return (
         <div
           id="meme-yoshi"
@@ -248,6 +249,16 @@ const CharacterDetails = () => {
                   />
                 </Paper>
               </Grid>
+              {character.chainThrows && (
+                <Grid item xs={12}>
+                  <Paper>
+                    <ChainThrows
+                      chainThrows={character.chainThrows}
+                      name={characterName}
+                    />
+                  </Paper>
+                </Grid>
+              )}
               <Grid item xs={12}>
                 <Paper>
                   <WallCombos
