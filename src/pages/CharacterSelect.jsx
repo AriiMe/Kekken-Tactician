@@ -110,7 +110,7 @@ const CharacterSelect = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
-        marginTop: "120px",
+        marginTop: "180px",
       }}
     >
       <Helmet>
