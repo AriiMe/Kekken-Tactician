@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -7,12 +7,13 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
 import { Box, IconButton } from "@mui/material";
+import { Link as ScrollLink, animateScroll } from "react-scroll";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 const alphabet = [
   "A",
@@ -73,12 +74,13 @@ const StyledImage = styled("img")({
 });
 
 const CharacterSelect = () => {
+  const theme = useTheme();
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
   );
-  const theme = useTheme();
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
@@ -101,6 +103,20 @@ const CharacterSelect = () => {
     }, 5000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setShowBackToTop(scrollTop > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleCharacterSelect = (characterName, characterId) => {
@@ -173,6 +189,28 @@ const CharacterSelect = () => {
         Pick your Character
       </h1>
 
+      <Container maxWidth="sm" sx={{ marginBottom: "3rem", marginTop: "2rem" }}>
+        {alphabet.map((letter) => (
+          <ScrollLink
+            key={letter}
+            to={letter}
+            smooth={true}
+            duration={500}
+            offset={-100}
+          >
+            <IconButton
+              sx={{
+                fontSize: ".875rem",
+                height: "35px",
+                width: "35px",
+              }}
+            >
+              {letter}
+            </IconButton>
+          </ScrollLink>
+        ))}
+      </Container>
+
       <Typography
         variant="h5"
         component="h5"
@@ -181,34 +219,21 @@ const CharacterSelect = () => {
         sx={{
           color: "rgba(212, 47, 47, 1)",
           maxWidth: "600px",
-          marginBottom: "30px",
+          transition: ".5s ease color",
+          "&:hover": {
+            color: "white",
+          },
         }}
       >
         <UselessTipps />
       </Typography>
-
-      <Container maxWidth="sm">
-        {alphabet.map((letter) => (
-          <IconButton
-            key={letter}
-            sx={{
-              fontSize: ".875rem",
-              height: "35px",
-              width: "35px",
-              // background: "#c82427", //use this to set the background into red, upon selection
-            }}
-          >
-            {letter}
-          </IconButton>
-        ))}
-      </Container>
 
       <Container maxWidth="lg">
         {alphabet.map((letter) => {
           const charactersWithLetter = filterCharactersByLetter(letter);
           if (charactersWithLetter.length > 0) {
             return (
-              <div key={letter}>
+              <div key={letter} id={letter}>
                 <h2
                   style={{
                     borderBottom: "1px solid #c82427",
@@ -246,6 +271,24 @@ const CharacterSelect = () => {
           return null;
         })}
       </Container>
+
+      {showBackToTop && (
+        <Button
+          variant="contained"
+          sx={{
+            borderRadius: "100%",
+            height: "60px",
+            width: "60px",
+            position: "fixed",
+            bottom: "20px",
+            right: "40px",
+            background: "#d42f2f",
+          }}
+          onClick={() => animateScroll.scrollToTop()}
+        >
+          <ArrowUpwardIcon />
+        </Button>
+      )}
     </Container>
   );
 };
