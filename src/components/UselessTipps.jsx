@@ -19,7 +19,7 @@ function RandomTip() {
 
   return (
     <p onClick={handleClick} style={{ cursor: "pointer" }}>
-      {currentTip}
+      Controversial Tips and Tricks: {currentTip}
     </p>
   );
 }
