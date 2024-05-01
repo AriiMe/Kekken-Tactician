@@ -35,7 +35,7 @@ const tips = [
   "If you’re losing, just turn off the console. It’s a tactical retreat, not a rage quit.",
   "Chain grabs are the only way to win. Just keep grabbing. Forever and ever and ever...",
   "If you’re losing, just blame the game for not understanding your true potential. It’s the game’s fault, not yours.",
-  "Listen to your opponent’s button inputs to predict their moves. Or maybe you just really licke the clicky sound of Sanwa buttons. I won't judge.",
+  "Listen to your opponent’s button inputs to predict their moves. Or maybe you just really like the clicky sound of Sanwa buttons. I won't judge.",
   "Sniffing your controller before a match is scientifically proven to increase reaction time by 0.5 seconds.",
   "Sniffing your opponent’s controller before a match is scientifically proven to increase reaction time by 0.5 seconds.",
   "Sniffing your opponent's feet before a match is scientifically proven to increase reaction time by 100 seconds.",
