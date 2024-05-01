@@ -104,13 +104,11 @@ const CharacterSelect = () => {
       maxWidth="xl"
       sx={{
         width: "100%",
-        height: "100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
-        marginTop: "180px",
       }}
     >
       <Helmet>
@@ -134,7 +132,7 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "400px" : "0px",
+          marginTop: "150px",
         }}
       >
         Pick your Character
@@ -175,7 +173,7 @@ const CharacterSelect = () => {
         ))}
       </Grid>
 
-      <Button
+      {/* <Button
         color="inherit"
         component={Link}
         to="/update-request"
@@ -189,7 +187,7 @@ const CharacterSelect = () => {
         }}
       >
         Your Main Character is not here?
-      </Button>
+      </Button> */}
     </Container>
   );
 };

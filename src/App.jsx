@@ -8,21 +8,28 @@ import UpdateRequest from "./pages/UpdateRequest";
 import CustomComboPage from "./pages/CustomComboPage";
 
 import "./App.css";
+import Footer from "./components/Footer";
+import { Box } from "@mui/material";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<CharacterSelect />} />
-        <Route
-          path="/character/combos/:characterName/:characterId"
-          element={<CharacterDetails />}
-        />
-        <Route path="/combo-generator" element={<CustomComboPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/update-request" element={<UpdateRequest />} />
-      </Routes>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Navbar />
+        <Box sx={{ flexGrow: 1 }}>
+          <Routes>
+            <Route path="/" element={<CharacterSelect />} />
+            <Route
+              path="/character/combos/:characterName/:characterId"
+              element={<CharacterDetails />}
+            />
+            <Route path="/combo-generator" element={<CustomComboPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/update-request" element={<UpdateRequest />} />
+          </Routes>
+        </Box>
+        <Footer />
+      </Box>
     </BrowserRouter>
   );
 };
