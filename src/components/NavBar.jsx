@@ -22,6 +22,8 @@ import {
   Popover,
   styled,
   Switch,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -82,6 +84,8 @@ const IOSSwitch = styled((props) => (
 
 function Navbar() {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMdScreen = useMediaQuery(theme.breakpoints.up("md"));
   const { colorMode, setColorMode } = useContext(ColorModeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selected, setSelected] = useState(colorMode);
@@ -121,28 +125,90 @@ function Navbar() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <List>
-        <ListItem disablePadding>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        // background: "#331a16",
+        // minHeight: "100%",
+      }}
+    >
+      <List
+        sx={{
+          display: "flex",
+          gap: "20px",
+          flexDirection: "column",
+          padding: "2rem 0",
+        }}
+      >
+        {/* <ListItem disablePadding>
           <ListItemButton component={Link} to="/">
             <ListItemText primary="Home" />
           </ListItemButton>
+        </ListItem> */}
+        <ListItem disablePadding>
+          <Box sx={{ display: "flex" }}>
+            <Box
+              sx={{
+                minHeight: "100px",
+                minWidth: "100px",
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "flex-start",
+                flexDirection: "column",
+                padding: "0 1rem",
+                gap: "20px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "20px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <span>Icons:</span>
+                <FormControlLabel
+                  control={<IOSSwitch sx={{ m: 1 }} />}
+                  checked={displayMode === "icons"}
+                  onClick={handleDisplayModeChange}
+                />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "10px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <span>Colors:</span>
+                <FormControlLabel
+                  control={<IOSSwitch sx={{ m: 1 }} />}
+                  checked={selected}
+                  onClick={handleColorModeChange}
+                />
+              </Box>
+            </Box>
+          </Box>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/combo-generator">
-            <ListItemText primary="Combo Generator" />
+            <span style={{ fontFamily: "Michroma" }}>Combo Generator</span>
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton component={Link} to="/update-request">
             <ListItemText primary="Request an Update" />
           </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
+        </ListItem> */}
+        {/* <ListItem disablePadding>
           <ListItemButton component={Link} to="/about">
             <ListItemText primary="About" />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
+        {/* 
         <ListItem disablePadding>
           <ListItemButton
             component="a"
@@ -151,7 +217,7 @@ function Navbar() {
           >
             <ListItemText primary="Support on Ko-fi" />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -165,7 +231,7 @@ function Navbar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { md: "none" }, color: "#c82427" }}
           >
             <MenuIcon />
           </IconButton>
@@ -174,35 +240,50 @@ function Navbar() {
               variant="h6"
               component="div"
               onClick={() => navigate("/")}
-              sx={{
-                color: "#c82427",
-                cursor: "pointer",
-                fontSize: "1.6rem",
-                marginRight: "3rem",
-                fontFamily: "Michroma",
-                "&:hover": {
-                  color: "white",
-                },
-              }} // Ensures it takes up space and aligns links to the right
+              sx={
+                isMdScreen
+                  ? {
+                      color: "#c82427",
+                      cursor: "pointer",
+                      fontSize: "1.6rem",
+                      marginRight: "3rem",
+                      fontFamily: "Michroma",
+                      "&:hover": {
+                        color: "white",
+                      },
+                    }
+                  : {
+                      color: "#c82427",
+                      cursor: "pointer",
+                      fontSize: "1.25rem",
+                      marginRight: "1rem",
+                      fontFamily: "Michroma",
+                      "&:hover": {
+                        color: "white",
+                      },
+                    }
+              } // Ensures it takes up space and aligns links to the right
             >
               Tekken Tactician
             </Typography>
-            <Typography
-              variant="body1"
-              component="div"
-              onClick={() => navigate("/combo-generator")}
-              sx={{
-                color: "#a32a2d",
-                cursor: "pointer",
-                fontSize: ".75rem",
-                fontFamily: "Michroma",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-            >
-              Combo Maker
-            </Typography>
+            {isMdScreen && (
+              <Typography
+                variant="body1"
+                component="div"
+                onClick={() => navigate("/combo-generator")}
+                sx={{
+                  color: "#a32a2d",
+                  cursor: "pointer",
+                  fontSize: ".75rem",
+                  fontFamily: "Michroma",
+                  "&:hover": {
+                    color: "white",
+                  },
+                }}
+              >
+                Combo Maker
+              </Typography>
+            )}
             <Typography
               variant="body1"
               component="div"
@@ -219,7 +300,7 @@ function Navbar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", sm: "flex" },
+              display: { xs: "none", md: "flex" },
               justifyContent: "flex-end",
               gap: "20px",
             }}
