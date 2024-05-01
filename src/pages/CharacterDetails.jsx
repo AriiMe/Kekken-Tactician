@@ -249,7 +249,8 @@ const CharacterDetails = () => {
                   />
                 </Paper>
               </Grid>
-              {character.chainThrows && (
+              {character.chainThrows &&
+              Object.keys(character.chainThrows).length > 0 ? (
                 <Grid item xs={12}>
                   <Paper>
                     <ChainThrows
@@ -258,7 +259,7 @@ const CharacterDetails = () => {
                     />
                   </Paper>
                 </Grid>
-              )}
+              ) : null}
               <Grid item xs={12}>
                 <Paper>
                   <WallCombos
