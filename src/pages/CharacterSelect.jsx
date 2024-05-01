@@ -12,6 +12,36 @@ import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
+import { Box, IconButton } from "@mui/material";
+
+const alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -98,6 +128,11 @@ const CharacterSelect = () => {
       </Container>
     );
   }
+  const filterCharactersByLetter = (letter) => {
+    return characters.filter((character) =>
+      character.name.toUpperCase().startsWith(letter)
+    );
+  };
 
   return (
     <Container
@@ -145,49 +180,72 @@ const CharacterSelect = () => {
         align="center"
         sx={{
           color: "rgba(212, 47, 47, 1)",
-          marginBottom: "50px",
+          maxWidth: "600px",
+          marginBottom: "30px",
         }}
       >
         <UselessTipps />
       </Typography>
 
-      <Grid
-        container
-        spacing={2}
-        justifyContent="flex-start"
-        alignItems="center"
-      >
-        {characters.map((character) => (
-          <Grid item xs={6} sm={6} md={4} lg={3} key={character._id}>
-            <Tooltip title={character.name} placement="top">
-              <ImagePaper
-                elevation={3}
-                onClick={() =>
-                  handleCharacterSelect(character.name, character._id)
-                }
-              >
-                <StyledImage src={character.image} alt={character.name} />
-              </ImagePaper>
-            </Tooltip>
-          </Grid>
+      <Container maxWidth="sm">
+        {alphabet.map((letter) => (
+          <IconButton
+            key={letter}
+            sx={{
+              fontSize: ".875rem",
+              height: "35px",
+              width: "35px",
+              // background: "#c82427", //use this to set the background into red, upon selection
+            }}
+          >
+            {letter}
+          </IconButton>
         ))}
-      </Grid>
+      </Container>
 
-      {/* <Button
-        color="inherit"
-        component={Link}
-        to="/update-request"
-        sx={{
-          mt: 2,
-          display: "block",
-          mx: "auto",
-          "&:hover": {
-            color: "rgba(212, 47, 47, 1)",
-          },
-        }}
-      >
-        Your Main Character is not here?
-      </Button> */}
+      <Container maxWidth="lg">
+        {alphabet.map((letter) => {
+          const charactersWithLetter = filterCharactersByLetter(letter);
+          if (charactersWithLetter.length > 0) {
+            return (
+              <div key={letter}>
+                <h2
+                  style={{
+                    borderBottom: "1px solid #c82427",
+                    paddingBottom: "1rem",
+                    margin: "5rem 0 2rem 0",
+                  }}
+                >
+                  {letter}
+                </h2>
+
+                <Box sx={{ display: "flex", gap: "30px", flexWrap: "wrap" }}>
+                  {charactersWithLetter.map((character) => (
+                    <Tooltip
+                      key={character.name}
+                      title={character.name}
+                      placement="top"
+                    >
+                      <ImagePaper
+                        elevation={3}
+                        onClick={() =>
+                          handleCharacterSelect(character.name, character._id)
+                        }
+                      >
+                        <StyledImage
+                          src={character.image}
+                          alt={character.name}
+                        />
+                      </ImagePaper>
+                    </Tooltip>
+                  ))}
+                </Box>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </Container>
     </Container>
   );
 };
