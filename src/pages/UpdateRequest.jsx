@@ -28,8 +28,9 @@ const UpdateRequest = () => {
           Request Character Updates
         </Typography>
         <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
-          If you see a scrub wrote combos for your main, let me know! I'll
-          gladly update the combos. Reach out to ariime on our{" "}
+          If you see a scrub wrote combos for your main or want a specific
+          Character be first to release, let me know! I'll gladly update the
+          combos. Reach out to ariime on our{" "}
           <Link
             href="https://discord.gg/d2Czp4Kj75"
             target="_blank"
