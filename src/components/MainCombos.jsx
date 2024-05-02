@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import ReactPlayer from "react-player";
 import renderInputImage from "../utils/renderInputImage";
 import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
@@ -12,6 +14,31 @@ import { useDisplayMode } from "../context/DisplayModeContext";
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [expandedRow, setExpandedRow] = useState(null);
+  const [playingStatus, setPlayingStatus] = useState({});
+  const [startTimes, setStartTimes] = useState({});
+  const playerRefs = useRef([]);
+  const handleProgress =
+    (index) =>
+    ({ playedSeconds }) => {
+      // If the video just started playing, store the start time
+      if (playingStatus[index] && !startTimes[index]) {
+        setStartTimes((prev) => ({ ...prev, [index]: playedSeconds }));
+      }
+
+      const targetTime = startTimes[index] + combos[index].endTime;
+      console.log(
+        `Played Seconds: ${playedSeconds}, Target Time: ${targetTime}`
+      );
+
+      if (playedSeconds >= targetTime) {
+        console.log("Pausing video...");
+        setPlayingStatus((prev) => ({ ...prev, [index]: false }));
+        // Reset the start time for this video
+        setStartTimes((prev) => ({ ...prev, [index]: null }));
+      }
+    };
+
   const displaySimpleCombo = (combo) => {
     // If there is no simple combo, just return "N/A"
     if (!combo.followUpSimple || combo.followUpSimple.length === 0) {
@@ -51,6 +78,13 @@ const MainCombos = ({ combos, name }) => {
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+
+  const toggleRow = (index) => {
+    const isExpanded = expandedRow === index;
+    setExpandedRow(isExpanded ? null : index);
+    setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
+  };
+
   const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
   const keywords = [
     "Tekken 8",
@@ -95,39 +129,60 @@ const MainCombos = ({ combos, name }) => {
             </tr>
           </thead>
           <tbody>
-            {combos.map((combo, comboIndex) => (
-              <tr key={comboIndex}>
-                <td>
-                  {combo.launchers.map((launcher, launcherIndex) => (
-                    <div key={launcherIndex} className="launcher-item">
-                      {renderInputImage(launcher)}
-                    </div>
-                  ))}
-                </td>
-                <td className="follow-ups-cell">
-                  {combo.followUps.map((followUp, index) => (
-                    <React.Fragment key={index}>
-                      {renderInputImage(followUp)}
-                      {index < combo.followUps.length - 1 && (
-                        <>
-                          <span className="arrow-separator">
-                            <img
-                              className="input-icons "
-                              src="/icons-t8/into.png"
-                              alt="into"
-                            />
-                          </span>
-                          <span className="arrow-separator-mobile">{""}</span>
-                        </>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </td>
-
-                <td className="simple-version-cell">
-                  {displaySimpleCombo(combo)}
-                </td>
-              </tr>
+            {combos.map((combo, index) => (
+              <React.Fragment key={index}>
+                <tr>
+                  <td>
+                    {combo.launchers.map((launcher, i) => (
+                      <div key={i}>{renderInputImage(launcher)}</div>
+                    ))}
+                    {combo.vidUrl && (
+                      <IconButton
+                        onClick={(event) => toggleRow(index, event)}
+                        style={{ textAlign: "center" }}
+                      >
+                        <VideoLibraryIcon />
+                      </IconButton>
+                    )}
+                  </td>
+                  <td>
+                    {combo.followUps.map((followUp, i) => (
+                      <React.Fragment key={i}>
+                        {renderInputImage(followUp)}
+                        {i < combo.followUps.length - 1 && (
+                          <>
+                            <span className="arrow-separator">
+                              <img
+                                className="input-icons"
+                                src="/icons-t8/into.png"
+                                alt="into"
+                              />
+                            </span>
+                            <span className="arrow-separator-mobile">{""}</span>
+                          </>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </td>
+                  <td>{displaySimpleCombo(combo)}</td>
+                </tr>
+                {expandedRow === index && combo.vidUrl && (
+                  <tr>
+                    <td colSpan="4">
+                      <ReactPlayer
+                        className="react-player"
+                        url={combo.vidUrl}
+                        ref={(player) => {
+                          playerRefs.current[index] = player;
+                        }}
+                        playing={playingStatus[index]}
+                        controls
+                        onProgress={handleProgress(index)}
+                      />
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
             ))}
           </tbody>
         </table>
@@ -137,3 +192,63 @@ const MainCombos = ({ combos, name }) => {
 };
 
 export default MainCombos;
+
+// import React, { useState, useEffect, useRef } from "react";
+// import ReactPlayer from "react-player";
+// import IconButton from "@mui/material/IconButton";
+// import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+
+// const MainCombos = ({ combos }) => {
+//   const [expandedRow, setExpandedRow] = useState(null);
+//   const [playingStatus, setPlayingStatus] = useState({});
+//   const playerRefs = useRef([]);
+
+//   // Effect to pause the video when progress reaches 96 seconds
+//   useEffect(() => {
+//     const handleProgress = ({ playedSeconds }) => {
+//       if (playedSeconds >= 96) {
+//         setPlayingStatus((prev) => ({ ...prev, [expandedRow]: false }));
+//         console.log("Paused the video after 96 seconds.");
+//       }
+//     };
+//   }, [expandedRow, playingStatus]);
+
+//   const toggleRow = (index) => {
+//     const isExpanded = expandedRow === index;
+//     setExpandedRow(isExpanded ? null : index);
+//     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
+//   };
+
+//   return (
+//     <div>
+//       {combos.map((combo, index) => (
+//         <div key={index}>
+//           <IconButton onClick={() => toggleRow(index)}>
+//             <VideoLibraryIcon />
+//           </IconButton>
+//           {expandedRow === index && (
+//             <ReactPlayer
+//               url={combo.vidUrl}
+//               ref={(player) => {
+//                 playerRefs.current[index] = player;
+//               }}
+//               playing={playingStatus[index]}
+//               controls
+//               onProgress={({ playedSeconds }) => {
+//                 console.log(
+//                   `Progress: ${playedSeconds} seconds, Index: ${index}`
+//                 );
+//                 if (playedSeconds >= 96) {
+//                   setPlayingStatus((prev) => ({ ...prev, [index]: false }));
+//                   console.log("Paused the video after 96 seconds.");
+//                 }
+//               }}
+//             />
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default MainCombos;
