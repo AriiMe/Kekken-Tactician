@@ -29,9 +29,17 @@ const UpdateRequest = () => {
         </Typography>
         <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           If you see a scrub wrote combos for your main, let me know! I'll
-          gladly update the combos. Reach out to @ariime on Discord and tell me
-          what you need. Your feedback and contributions help Tekken Tactician
-          stay fresh and valuable for the entire community.
+          gladly update the combos. Reach out to ariime on our{" "}
+          <Link
+            href="https://discord.gg/d2Czp4Kj75"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Discord server
+          </Link>{" "}
+          and tell me what you need. Your feedback and contributions help Tekken
+          Tactician stay fresh and valuable for the entire community.
         </Typography>
         <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           Alternatively, if you want to show some love and help me work faster,
