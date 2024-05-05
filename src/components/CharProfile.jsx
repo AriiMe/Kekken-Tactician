@@ -11,7 +11,7 @@ const CharProfile = ({ pic, name }) => {
   }
   return (
     <div className="char-profile combo-section">
-      <h1 id="char-name">{name} Combos</h1>
+      <h1 id="char-name">{name}</h1>
 
       {name === "King II" ? (
         <Tooltip title="Art by @SkyCrimeDraws" placement="bottom">

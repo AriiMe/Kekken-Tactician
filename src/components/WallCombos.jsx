@@ -6,6 +6,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./WallCombos.css";
+import CollapsableTitle from "./CollapsableTitle";
 
 const WallCombos = ({ wallCombos, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -44,14 +45,12 @@ const WallCombos = ({ wallCombos, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Wall Combos</h2>
 
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
-
+      <CollapsableTitle
+        title="Wall Combos"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
       <div
         style={{
           transition: "width 0.3s",

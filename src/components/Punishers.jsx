@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./Punishers.css";
+import CollapsableTitle from "./CollapsableTitle";
 
 const Punishers = ({ punishers, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -39,13 +40,12 @@ const Punishers = ({ punishers, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Punishers</h2>
 
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+      <CollapsableTitle
+        title="Punishers"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
 
       <div
         style={{
@@ -58,7 +58,16 @@ const Punishers = ({ punishers, name }) => {
           {punishers.startup.map((punish, index) => (
             <li key={uuidv4()} className="my-li punisher-li">
               <span>{renderInputImage(punish.move)} </span>
-              <span className="escape-label">Frames: {punish.frames}</span>
+              <span
+                className="escape-label"
+                style={{
+                  fontSize: ".75rem",
+                  textAlign: "right",
+                  minWidth: "50%",
+                }}
+              >
+                Frames: {punish.frames}
+              </span>
             </li>
           ))}
         </ul>

@@ -5,6 +5,8 @@ import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./MostImportantGrabs.css";
+import { Box } from "@mui/material";
+import CollapsableTitle from "./CollapsableTitle";
 
 const MostImportantGrabs = ({ grabs, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -40,13 +42,12 @@ const MostImportantGrabs = ({ grabs, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Important Grabs</h2>
-
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+      
+      <CollapsableTitle
+        title="Important Grabs"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
 
       <div
         style={{

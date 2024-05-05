@@ -1,207 +1,206 @@
 .character-sheet-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* Creates a 12-column layout */
-    grid-gap: 16px;
-    /* Adjust the gap size as needed */
-    grid-template-areas:
-        "heat heat heat heat key-moves key-moves key-moves key-moves important-moves important-moves important-moves important-moves"
-        "guaranteed guaranteed guaranteed guaranteed startup startup punishes punishes wall wall wall wall";
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* Creates a 12-column layout */
+  grid-gap: 16px;
+  /* Adjust the gap size as needed */
+  grid-template-areas:
+    "heat heat heat heat key-moves key-moves key-moves key-moves important-moves important-moves important-moves important-moves"
+    "guaranteed guaranteed guaranteed guaranteed startup startup punishes punishes wall wall wall wall";
 }
 
 .heat-system {
-    grid-area: heat;
-    /* Additional styles... */
+  grid-area: heat;
+  /* Additional styles... */
 }
 
 .most-important-grabs {
-    grid-area: key-moves;
-    /* Additional styles... */
+  grid-area: key-moves;
+  /* Additional styles... */
 }
 
 .important-moves {
-    grid-area: important-moves;
-    /* Additional styles... */
+  grid-area: important-moves;
+  /* Additional styles... */
 }
 
 .guaranteed-follow-ups {
-    grid-area: guaranteed;
-    /* Additional styles... */
+  grid-area: guaranteed;
+  /* Additional styles... */
 }
 
 .startup {
-    grid-area: startup;
-    /* Additional styles... */
+  grid-area: startup;
+  /* Additional styles... */
 }
 
 .punishes {
-    grid-area: punishes;
-    /* Additional styles... */
+  grid-area: punishes;
+  /* Additional styles... */
 }
 
 .wall-combos {
-    grid-area: wall;
-    /* Additional styles... */
+  grid-area: wall;
+  /* Additional styles... */
 }
 
-
-
 .my-li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Shared styles for all components */
 .combo-section {
-    background-color: #333;
-    /* Dark background */
-    padding: 16px;
-    border-radius: 8px;
-    /* Rounded corners */
-    margin-bottom: 20px;
-    /* Space between each section */
+  background-color: #333;
+  /* Dark background */
+  padding: 16px;
+  border-radius: 8px;
+  /* Rounded corners */
+  margin-bottom: 20px;
+  /* Space between each section */
 }
 
 .combo-section h2 {
-    color: #fff;
-    /* White color for headings */
-    margin-bottom: 16px;
+  color: #fff;
+  /* White color for headings */
+  margin-bottom: 16px;
 }
 
 .combo-section ul {
-    list-style: none;
-    /* No bullets */
-    padding: 0;
-    /* Reset padding */
+  list-style: none;
+  /* No bullets */
+  padding: 0;
+  /* Reset padding */
 }
 
 .combo-section li {
-    background-color: #444;
-    /* Slightly lighter than the section background for contrast */
-    color: #ddd;
-    /* Grayish text color for better readability */
-    padding: 8px;
-    margin-bottom: 12px;
-    /* Space between list items */
-    border-radius: 4px;
-    /* Rounded corners for list items */
+  background-color: #444;
+  /* Slightly lighter than the section background for contrast */
+  color: #ddd;
+  /* Grayish text color for better readability */
+  padding: 8px;
+  margin-bottom: 12px;
+  /* Space between list items */
+  border-radius: 4px;
+  /* Rounded corners for list items */
 }
 
 .combo-section li:last-child {
-    margin-bottom: 0;
-    /* No bottom margin for the last item */
+  margin-bottom: 0;
+  /* No bottom margin for the last item */
 }
 
 .combo-section img {
-    vertical-align: middle;
-    /* Align images with the text */
-    margin-right: 4px;
-    /* Space between images and text */
+  vertical-align: middle;
+  /* Align images with the text */
+  margin-right: 4px;
+  /* Space between images and text */
 }
 
 /* Default styles for larger screens */
 .leftColumn,
 .rightColumn {
-    overflow-y: auto;
-    /* Independent scrolling */
-    max-height: 100vh;
-    -ms-overflow-style: none;
-    /* Hide scrollbar in IE and Edge */
-    scrollbar-width: none;
-    /* Hide scrollbar in Firefox */
+  overflow-y: auto;
+  /* Independent scrolling */
+  max-height: 100vh;
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbar in Firefox */
 }
 
 /* Hide scrollbar for Webkit browsers like Chrome and Safari */
 .leftColumn::-webkit-scrollbar,
 .rightColumn::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-
+.leftColumn h2 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
+  .leftColumn,
+  .rightColumn {
+    /* Remove independent scrolling for mobile */
+    overflow-y: visible;
+    max-height: none;
+    padding-bottom: 1rem;
+    /* Add some space at the bottom */
+  }
 
-    .leftColumn,
-    .rightColumn {
-        /* Remove independent scrolling for mobile */
-        overflow-y: visible;
-        max-height: none;
-        padding-bottom: 1rem;
-        /* Add some space at the bottom */
-    }
-
-    .character-sheet-container,
-    .leftColumn,
-    .rightColumn {
-        /* Adjust grid layout to a single column for mobile */
-        display: block;
-    }
+  .character-sheet-container,
+  .leftColumn,
+  .rightColumn {
+    /* Adjust grid layout to a single column for mobile */
+    display: block;
+  }
 }
 
 @media (max-device-width: 768px) {
+  .leftColumn,
+  .rightColumn {
+    overflow-y: visible;
+    max-height: none;
+    padding-bottom: 1rem;
+  }
 
-    .leftColumn,
-    .rightColumn {
-        overflow-y: visible;
-        max-height: none;
-        padding-bottom: 1rem;
-    }
-
-    .character-sheet-container,
-    .leftColumn,
-    .rightColumn {
-        display: block;
-    }
+  .character-sheet-container,
+  .leftColumn,
+  .rightColumn {
+    display: block;
+  }
 }
 
 /* Adjust the layout for screens wider than 1024px */
 @media (min-width: 1024px) {
-    .character-sheet-container {
-        display: grid;
-        grid-template-columns: 2fr 10fr;
-        grid-template-areas:
-            "heat main"
-            "guaranteed main"
-            "punishes wall"
-            "comboEnders wall";
-    }
+  .character-sheet-container {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas:
+      "heat main"
+      "guaranteed main"
+      "punishes wall"
+      "comboEnders wall";
+  }
 
-    .heat-system {
-        grid-area: heat;
-        /* Additional styles... */
-    }
+  .heat-system {
+    grid-area: heat;
+    /* Additional styles... */
+  }
 
-    .guaranteed-follow-ups {
-        grid-area: guaranteed;
-        /* Additional styles... */
-    }
+  .guaranteed-follow-ups {
+    grid-area: guaranteed;
+    /* Additional styles... */
+  }
 
-    .punishes {
-        grid-area: punishes;
-        /* Additional styles... */
-    }
+  .punishes {
+    grid-area: punishes;
+    /* Additional styles... */
+  }
 
-    .main-combos {
-        grid-area: main;
-        /* Additional styles... */
-    }
+  .main-combos {
+    grid-area: main;
+    /* Additional styles... */
+  }
 
-    .wall-combos {
-        grid-area: wall;
-        /* Additional styles... */
-    }
+  .wall-combos {
+    grid-area: wall;
+    /* Additional styles... */
+  }
 
-    .combo-enders {
-        grid-area: comboEnders;
-        /* Additional styles... */
-    }
+  .combo-enders {
+    grid-area: comboEnders;
+    /* Additional styles... */
+  }
 
-    /* You may need to adjust the following to ensure scrollbar functionality */
-    .leftColumn::-webkit-scrollbar,
-    .rightColumn::-webkit-scrollbar {
-        display: block;
-        /* or other desired display property */
-    }
+  /* You may need to adjust the following to ensure scrollbar functionality */
+  .leftColumn::-webkit-scrollbar,
+  .rightColumn::-webkit-scrollbar {
+    display: block;
+    /* or other desired display property */
+  }
 }

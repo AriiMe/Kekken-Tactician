@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./HeatEngagers.css";
+import CollapsableTitle from "./CollapsableTitle";
 
 const HeatEngagers = ({ heat, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -34,12 +35,12 @@ const HeatEngagers = ({ heat, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Heat Engagers</h2>
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+
+      <CollapsableTitle
+        title="Heat Engagers"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
 
       <div
         style={{
@@ -59,7 +60,7 @@ const HeatEngagers = ({ heat, name }) => {
               >
                 {renderInputImage(het.move)}
               </div>
-              <div>{het.description}</div>
+              <div style={{fontSize: ".85rem", lineHeight: "1.5"}}>{het.description}</div>
             </li>
           ))}
         </ul>

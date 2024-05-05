@@ -28,7 +28,7 @@ export const HeatDash = ({ heat, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Max Damage combo enders with Heat</h2>
+      <h2 style={{ padding: "0 10px" }}>Max Damage combo enders with Heat</h2>
       <ul
         className="my-li"
         style={{

@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
 import { useDisplayMode } from "../context/DisplayModeContext";
+import CollapsableTitle from "./CollapsableTitle";
 
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
@@ -107,12 +108,15 @@ const MainCombos = ({ combos, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Main Combos</h2>
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+
+<div style={{padding: ".5rem 0"}}></div>
+
+      <CollapsableTitle
+        title="Main Combos"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
+
       <div
         style={{
           transition: "width 0.3s",
@@ -134,7 +138,7 @@ const MainCombos = ({ combos, name }) => {
                 <tr>
                   <td>
                     {combo.launchers.map((launcher, i) => (
-                      <div key={i}>{renderInputImage(launcher)}</div>
+                      <div key={i} className="launch-options">{renderInputImage(launcher)}</div>
                     ))}
                     {combo.vidUrl && (
                       <IconButton

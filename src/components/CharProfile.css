@@ -13,7 +13,8 @@
 }
 
 #char-pic {
-    height: 20em;
-    width: auto;
+    height: 10em;
+    width: 100%;
     border-radius: 8px;
+    object-fit: cover;
 }

@@ -6,6 +6,7 @@ import renderInputImage from "../utils/renderInputImage";
 
 import { Helmet } from "react-helmet";
 import "./MiniCombo.css";
+import CollapsableTitle from "./CollapsableTitle";
 
 const MiniCombo = ({ miniCombo, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -44,12 +45,12 @@ const MiniCombo = ({ miniCombo, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      <h2>Mini Combos</h2>
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+
+      <CollapsableTitle
+        title="Mini Combos"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
 
       <div
         style={{
@@ -62,7 +63,7 @@ const MiniCombo = ({ miniCombo, name }) => {
           {Object.entries(groupedMoves).map(([followUp, moves], index) => (
             <div key={index} className="combo-group">
               <div className="move-column">
-                <h3>Move(s)</h3>
+                <h5>Move(s)</h5>
                 {moves.map((move, moveIndex) => (
                   <div key={moveIndex} className="move">
                     {renderInputImage(move)}
@@ -70,7 +71,7 @@ const MiniCombo = ({ miniCombo, name }) => {
                 ))}
               </div>
               <div className="follow-up-column">
-                <h3>Follow-up(s)</h3>
+                <h5>Follow-up(s)</h5>
                 {followUp.split("-").map((followUp, idx) => (
                   <div className="follow-up" key={idx}>
                     {renderInputImage(followUp)}
