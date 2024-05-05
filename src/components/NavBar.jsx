@@ -141,11 +141,6 @@ function Navbar() {
           padding: "2rem 0",
         }}
       >
-        {/* <ListItem disablePadding>
-          <ListItemButton component={Link} to="/">
-            <ListItemText primary="Home" />
-          </ListItemButton>
-        </ListItem> */}
         <ListItem disablePadding>
           <Box sx={{ display: "flex" }}>
             <Box
@@ -198,26 +193,6 @@ function Navbar() {
             <span style={{ fontFamily: "Michroma" }}>Combo Generator</span>
           </ListItemButton>
         </ListItem>
-        {/* <ListItem disablePadding>
-          <ListItemButton component={Link} to="/update-request">
-            <ListItemText primary="Request an Update" />
-          </ListItemButton>
-        </ListItem> */}
-        {/* <ListItem disablePadding>
-          <ListItemButton component={Link} to="/about">
-            <ListItemText primary="About" />
-          </ListItemButton>
-        </ListItem> */}
-        {/* 
-        <ListItem disablePadding>
-          <ListItemButton
-            component="a"
-            href="https://ko-fi.com/ariime"
-            target="_blank"
-          >
-            <ListItemText primary="Support on Ko-fi" />
-          </ListItemButton>
-        </ListItem> */}
       </List>
     </Box>
   );
@@ -245,8 +220,7 @@ function Navbar() {
                   ? {
                       color: "#c82427",
                       cursor: "pointer",
-                      fontSize: "1.6rem",
-                      marginRight: "3rem",
+                      fontSize: "1.2rem",
                       fontFamily: "Michroma",
                       "&:hover": {
                         color: "white",
@@ -274,7 +248,7 @@ function Navbar() {
                 sx={{
                   color: "#a32a2d",
                   cursor: "pointer",
-                  fontSize: ".75rem",
+                  fontSize: ".7em",
                   fontFamily: "Michroma",
                   "&:hover": {
                     color: "white",
@@ -289,7 +263,7 @@ function Navbar() {
               component="div"
               sx={{
                 color: "#a32a2d",
-                fontSize: ".75rem",
+                fontSize: ".7rem",
                 fontFamily: "Michroma",
               }}
             >
