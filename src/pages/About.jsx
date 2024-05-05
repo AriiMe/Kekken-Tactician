@@ -4,6 +4,20 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
+const paragraphStyle = {
+  fontSize: "1rem",
+  textAlign: "left",
+  width: "70%",
+  margin: "1.25rem auto",
+  fontFamily: "Michroma",
+  letterSpacing: "1px",
+  lineHeight: "2",
+  "@media (max-width: 1100px)": {
+    fontSize: ".8rem",
+    width: "90%",
+  },
+};
+
 const About = () => {
   return (
     <Container maxWidth={false}>
@@ -19,22 +33,31 @@ const About = () => {
         }}
       >
         <Typography
-          variant="h2"
+          variant="h3"
           component="h1"
           gutterBottom
           align="center"
-          sx={{ color: "rgba(212, 47, 47, 1)", marginBottom: "50px" }}
+          sx={{
+            color: "rgba(212, 47, 47, 1)",
+            fontFamily: "Michroma",
+            width: "70%",
+            margin: "0 auto 3rem",
+            "@media (max-width: 1100px)": {
+              fontSize: "2rem",
+              width: "90%",
+            },
+          }}
         >
           About Tekken Tactician
         </Typography>
-        <Typography variant="body1" sx={{ fontSize: "20px" }}>
+        <Typography variant="body1" sx={paragraphStyle}>
           Welcome to Tekken Tactician, a hobby project created by enthusiast for
           enthusiasts. My goal is to provide a comprehensive platform where
           players of all skill levels can come to learn and share different
           combos and strategies for their favorite characters in the Tekken
           series.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 2, fontSize: "20px" }}>
+        <Typography variant="body1" sx={paragraphStyle}>
           Whether you're a seasoned veteran looking to refine your playstyle or
           a new player trying to get the hang of the basics, Tekken Tactician is
           here to help. We believe in the spirit of community and the sharing of
@@ -42,7 +65,7 @@ const About = () => {
           to make this the ultimate resource for Tekken players around the
           globe.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 2, fontSize: "20px" }}>
+        <Typography variant="body1" sx={paragraphStyle}>
           Dive into our extensive database of combos, explore character-specific
           tactics, and take your game to the next level. Tekken Tactician is
           more than just a guide – it's a gateway to mastering the art of
@@ -59,7 +82,7 @@ const About = () => {
           or not I'm not your mom.
         </Typography>
 
-        <Typography variant="body1" sx={{ mt: 2, fontSize: "20px" }}>
+        <Typography variant="body1" sx={paragraphStyle}>
           Massive thanks to{" "}
           <Link
             href="https://www.reddit.com/user/natayaway/"
