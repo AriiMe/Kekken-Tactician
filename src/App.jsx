@@ -16,7 +16,7 @@ const App = () => {
     <BrowserRouter>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Navbar />
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, minHeight: "100vh" }}>
           <Routes>
             <Route path="/" element={<CharacterSelect />} />
             <Route
