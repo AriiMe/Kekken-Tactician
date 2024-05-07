@@ -26,6 +26,9 @@ const Footer = () => {
         width: "100%",
         marginTop: "5rem",
         padding: "1rem 0",
+        position: "fixed",
+        bottom: "0",
+        left: "0",
       }}
     >
       <Container
