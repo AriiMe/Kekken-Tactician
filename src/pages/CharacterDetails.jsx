@@ -164,7 +164,7 @@ const CharacterDetails = () => {
   return (
     <Box
       className="character-sheet-container"
-      sx={{ pt: 9, pb: 0, minHeight: "100vh", mb: 15 }}
+      sx={{ pt: 9, pb: 0, minHeight: "100vh", mb: 5 }}
     >
       <Helmet>
         <title>
@@ -190,15 +190,19 @@ const CharacterDetails = () => {
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
-      <Container maxWidth="2xl" sx={{ marginBottom: "-5rem" }}>
+      <Container maxWidth="2xl" sx={{}}>
         <Grid container spacing={1}>
           {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
-          <Grid item xs={12} md={4} lg={3.5} className={styles.leftColumn}>
+          <Grid item xs={12} md={4} lg={3} className={styles.leftColumn}>
             <Paper
               sx={{
                 overflowY: "scroll",
                 minHeight: "100vh",
                 scrollbarWidth: "none",
+                "& .input-icons": {
+                  width: "25px",
+                  height: "25px",
+                },
               }}
             >
               <Paper sx={{ marginBottom: 1 }}>
@@ -235,7 +239,7 @@ const CharacterDetails = () => {
           </Grid>
 
           {/* Right column: Main Combos and Wall Combos */}
-          <Grid item xs={12} md={8} lg={8.5} className={styles.rightColumn}>
+          <Grid item xs={12} md={8} lg={9} className={styles.rightColumn}>
             <Paper
               sx={{
                 overflowY: "scroll",
