@@ -193,7 +193,7 @@ const CharacterDetails = () => {
       <Container maxWidth="xl" sx={{ marginBottom: "-5rem" }}>
         <Grid container spacing={1}>
           {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
-          <Grid item xs={12} md={3} lg={2} className={styles.leftColumn}>
+          <Grid item xs={12} md={4} lg={3} className={styles.leftColumn}>
             <Paper
               sx={{
                 overflowY: "scroll",
@@ -235,7 +235,7 @@ const CharacterDetails = () => {
           </Grid>
 
           {/* Right column: Main Combos and Wall Combos */}
-          <Grid item xs={12} md={9} lg={10} className={styles.rightColumn}>
+          <Grid item xs={12} md={8} lg={9} className={styles.rightColumn}>
             <Paper
               sx={{
                 overflowY: "scroll",
