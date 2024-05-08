@@ -285,6 +285,7 @@ function Navbar() {
             {/* Aligns items to the right */}
             <IconButton
               href="https://www.twitch.tv/ariimeme"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
@@ -295,6 +296,7 @@ function Navbar() {
             </IconButton>
             <IconButton
               href="https://www.youtube.com/channel/UCQvHdx1XJ2H_KQ1qCqh7ZWQ"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
@@ -305,6 +307,7 @@ function Navbar() {
             </IconButton>
             <IconButton
               href="https://discord.gg/73N53FgrRj"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
