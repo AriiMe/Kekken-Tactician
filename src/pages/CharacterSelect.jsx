@@ -15,35 +15,6 @@ import { Box, IconButton } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
-const alphabet = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
   height: "200px", // Fixed height
@@ -81,6 +52,8 @@ const CharacterSelect = () => {
     "Loading please wait..."
   );
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [alphabet, setAlphabet] = useState([]);
+  const [activeLetters, setActiveLetters] = useState(new Set());
   const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
@@ -90,6 +63,19 @@ const CharacterSelect = () => {
       .then((response) => response.json())
       .then((data) => {
         setCharacters(data);
+
+        const fullAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        const newAlphabet = fullAlphabet.map((letter) => ({
+          letter,
+          active: data.some(
+            (character) => character.name[0].toUpperCase() === letter
+          ),
+        }));
+        setAlphabet(newAlphabet);
+        const activeSet = new Set(
+          data.map((character) => character.name[0].toUpperCase())
+        );
+        setActiveLetters(activeSet);
         setLoading(false);
       })
       .catch((error) => console.error("Error fetching characters:", error));
@@ -190,19 +176,24 @@ const CharacterSelect = () => {
       </h1>
 
       <Container maxWidth="sm" sx={{ marginBottom: "3rem", marginTop: "2rem" }}>
-        {alphabet.map((letter) => (
+        {alphabet.map(({ letter, active }) => (
           <ScrollLink
             key={letter}
             to={letter}
             smooth={true}
             duration={500}
             offset={-100}
+            style={{
+              pointerEvents: active ? "auto" : "none", // Disable pointer events for inactive letters
+              opacity: active ? 1 : 0.4, // Grey out inactive letters
+            }}
           >
             <IconButton
               sx={{
                 fontSize: ".875rem",
                 height: "35px",
                 width: "35px",
+                color: active ? "white" : "grey",
               }}
             >
               {letter}
@@ -229,7 +220,8 @@ const CharacterSelect = () => {
       </Typography>
 
       <Container maxWidth="lg">
-        {alphabet.map((letter) => {
+        {alphabet.map(({ letter, active }) => {
+          // Make sure to destructure the letter and active properties
           const charactersWithLetter = filterCharactersByLetter(letter);
           if (charactersWithLetter.length > 0) {
             return (
