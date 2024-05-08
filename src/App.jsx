@@ -11,6 +11,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import { Box } from "@mui/material";
 import AntiGuideSelect from "./pages/AntiGuideSelect";
+import KomradEasterEgg from "./pages/KomradEasterEgg";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/update-request" element={<UpdateRequest />} />
             <Route path="/anti-guide" element={<AntiGuideSelect />} />
+            <Route path="/nothing-here/for-sure/no-easter-egg" element={<KomradEasterEgg />} />
           </Routes>
         </Box>
         <Footer />
