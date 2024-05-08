@@ -15,6 +15,7 @@ import {
   ListItemText,
   Container,
   Grid,
+  Box,
 } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -22,8 +23,70 @@ import renderInputImage from "../utils/renderInputImage";
 import domtoimage from "dom-to-image";
 import { Helmet } from "react-helmet";
 import Link from "@mui/material/Link";
+import CameraEnhanceIcon from "@mui/icons-material/CameraEnhance";
 
 import "./CustomCombos.css";
+
+const notations = [
+  { key: "ch", label: "CH: Counter Hit" },
+  { key: "bt", label: "BT: Back Turned" },
+  { key: "t", label: "T: Tornado(spin)" },
+  { key: "chip", label: "chip: Chip Damage" },
+  { key: "heat", label: "heat: Heat" },
+  { key: "launch", label: "launch: Launched State" },
+  { key: "pc", label: "PC: Power Crush" },
+  { key: "fb", label: "FB: Floor Break" },
+  { key: "wb", label: "WB: Wall Break" },
+  { key: "homing", label: "homing: Homing" },
+  { key: "]", label: "]: Bracket Right" },
+  { key: "[", label: "[: Bracket Left" },
+  { key: "ss", label: "SS: Side Step" },
+  { key: "ssr", label: "SSR: Side Step Right" },
+  { key: "ssl", label: "SSL: Side Step Left" },
+  { key: "wr", label: "WR: While Running" },
+  { key: "ws", label: "WS: While Standing" },
+  { key: "f", label: "f: Forward" },
+  { key: "n", label: "n: Neutral" },
+  { key: "df", label: "df: Down-Forward" },
+  { key: "d", label: "d: Down" },
+  { key: "db", label: "db: Down-Back" },
+  { key: "b", label: "b: Back" },
+  { key: "ub", label: "ub: Up-Back" },
+  { key: "u", label: "u: Up" },
+  { key: "uf", label: "uf: Up-Forward" },
+  { key: "1", label: "1: Left Punch" },
+  { key: "2", label: "2: Right Punch" },
+  { key: "3", label: "3: Left Kick" },
+  { key: "4", label: "4: Right Kick" },
+  { key: "1+2", label: "1+2: Left Punch + Right Punch" },
+  { key: "1+3", label: "1+3: Left Punch + Left Kick" },
+  { key: "1+4", label: "1+4: Left Punch + Right Kick" },
+  { key: "2+3", label: "2+3: Right Punch + Left Kick" },
+  { key: "2+4", label: "2+4: Right Punch + Right Kick" },
+  { key: "3+4", label: "3+4: Left Kick + Right Kick" },
+  { key: "1+2+3", label: "1+2+3: Left Punch + Right Punch + Left Kick" },
+  { key: "1+2+4", label: "1+2+4: Left Punch + Right Punch + Right Kick" },
+  { key: "1+3+4", label: "1+3+4: Left Punch + Left Kick + Right Kick" },
+  { key: "2+3+4", label: "2+3+4: Right Punch + Left Kick + Right Kick" },
+  {
+    key: "1+2+3+4",
+    label: "1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick",
+  },
+  { key: "~D", label: "~D: Hold Down" },
+  { key: "~DF", label: "~DF: Hold Down-Forward" },
+  { key: "~DB", label: "~DB: Hold Down-Back" },
+  { key: "~B", label: "~B: Hold Back" },
+  { key: "~F", label: "~F: Hold Forward" },
+  { key: "~UF", label: "~UF: Hold Up-Forward" },
+  { key: "~UB", label: "~UB: Hold Up-Back" },
+  { key: "~U", label: "~U: Hold Up" },
+  { key: "hcf", label: "hcf: Half Circle Forward" },
+  { key: "hcb", label: "hcb: Half Circle Back" },
+  { key: "qcf", label: "qcf: Quarter Circle Forward" },
+  { key: "qcb", label: "qcb: Quarter Circle Back" },
+];
+
+const fontFamily = { fontFamily: "Michroma" };
 
 const CustomCombos = () => {
   const [combos, setCombos] = useState(() => {
@@ -176,12 +239,6 @@ const CustomCombos = () => {
     );
   };
 
-  // Function to check the type of input and convert it into a string for renderInputImage
-  const normalizeInputForImage = (input) => {
-    // If input is an array, join it, otherwise return as is assuming it's a string
-    return Array.isArray(input) ? input.join(" ") : input;
-  };
-
   const pageTitle = "Tekken 8 Combo Generator";
   const pageDescription =
     "Create and customize your own custom combos for Tekken 8 characters. Learn and store your favorite launchers and follow ups to improve your gameplay. Export and save transparent images of your custom combos.";
@@ -258,8 +315,13 @@ const CustomCombos = () => {
         document.body.removeChild(clone);
       });
   };
+
   return (
-    <div className="custom-main-combos" style={{ marginTop: "100px" }}>
+    <Container
+      maxWidth="xl"
+      className="custom-main-combos"
+      style={{ marginTop: "150px" }}
+    >
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -275,19 +337,19 @@ const CustomCombos = () => {
         </script>
       </Helmet>
       <Typography
-        variant="h2"
+        variant="h3"
         component="h1"
         gutterBottom
         align="center"
         sx={{
           fontWeight: "bold",
           color: "rgba(212, 47, 47, 1)",
+          ...fontFamily,
         }}
       >
         Tekken 8 Combo Generator
       </Typography>
 
-      {/* ... */}
       <Table className="custom-combos-table" sx={{ marginTop: "50px" }}>
         <TableHead>
           <TableRow>
@@ -297,7 +359,7 @@ const CustomCombos = () => {
             <TableCell className="follow-ups" style={{ color: "#d42f2f" }}>
               Follow-Ups
             </TableCell>
-            <TableCell style={{ color: "#d42f2f" }}>Delet</TableCell>
+            <TableCell style={{ color: "#d42f2f" }}>Delete</TableCell>
             <TableCell style={{ color: "#d42f2f" }}>ScreenShot</TableCell>
           </TableRow>
         </TableHead>
@@ -448,18 +510,25 @@ const CustomCombos = () => {
                 </IconButton>
               </TableCell>
               <TableCell>
-                <Button
+                <IconButton
                   id="save-button-for-image"
                   onClick={() => saveRowAsImage(rowRefs[comboIndex].current)}
                 >
-                  Save as Image
-                </Button>
+                  <CameraEnhanceIcon
+                    id="save-button-for-image"
+                    style={{ color: "#d42f2f" }}
+                  />
+                </IconButton>
               </TableCell>
             </TableRow>
           ))}
           <TableRow>
             <TableCell colSpan={3} align="center">
-              <Button onClick={addNewRow} startIcon={<AddCircleIcon />}>
+              <Button
+                onClick={addNewRow}
+                variant="contained"
+                sx={{ fontWeight: 700 }}
+              >
                 Add New Combo
               </Button>
             </TableCell>
@@ -473,53 +542,60 @@ const CustomCombos = () => {
           component="h1"
           gutterBottom
           align="center"
-          style={{ fontWeight: "bold", margin: "50px 50px", color: "#d42f2f" }}
+          style={{
+            fontWeight: "bold",
+            margin: "50px 50px 30px",
+            color: "#d42f2f",
+            ...fontFamily,
+          }}
         >
           Instructions:
         </Typography>
-        <Typography
-          variant="body1"
-          gutterBottom
-          align="center"
-          style={{ fontWeight: "bold" }}
-        >
-          To add a new combo, click the "+ Add New Combo" button at the bottom
-          of the table. To edit an existing combo, double-click on the cell you
-          want to edit.
-        </Typography>
-        <Typography
-          variant="body1"
-          gutterBottom
-          align="center"
-          style={{ fontWeight: "bold" }}
-        >
-          To add a new launcher or follow-up, click the "+" button next to the
-          last input field. To separate follow-ups into different sequences, add
-          them in separate input fields.
-        </Typography>
-        <Typography
-          variant="body1"
-          gutterBottom
-          align="center"
-          style={{ fontWeight: "bold" }}
-        >
-          To Save the full row of your custom Combos as a transparent PNG file
-          click Save as image (duh).
-        </Typography>
+        <Box sx={{ width: "80%", margin: "0 auto" }}>
+          <Typography
+            variant="body1"
+            gutterBottom
+            // align="center"
+            style={{ fontWeight: "bold", ...fontFamily }}
+          >
+            - To add a new combo, click the "+ Add New Combo" button at the
+            bottom of the table. To edit an existing combo, double-click on the
+            cell you want to edit.
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            // align="center"
+            style={{ fontWeight: "bold", ...fontFamily }}
+          >
+            - To add a new launcher or follow-up, click the "+" button next to
+            the last input field. To separate follow-ups into different
+            sequences, add them in separate input fields.
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            // align="center"
+            style={{ fontWeight: "bold", ...fontFamily }}
+          >
+            - To Save the full row of your custom Combos as a transparent PNG
+            file click Save as image (duh).
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+            align="center"
+            style={{ marginTop: "20px", color: "#d42f2f", ...fontFamily }}
+          >
+            Note: Combos are saved currently on the browser. Clearing the cache
+            will remove all your custom combos.
+          </Typography>
+        </Box>
         <Typography
           variant="body2"
           gutterBottom
           align="center"
-          style={{ marginTop: "20px", color: "#d42f2f" }}
-        >
-          Note: Combos are saved currently on the browser. Clearing the cache
-          will remove all your custom combos.
-        </Typography>
-        <Typography
-          variant="body2"
-          gutterBottom
-          align="center"
-          style={{ marginTop: "20px" }}
+          style={{ marginTop: "20px", ...fontFamily }}
         >
           Again a big thanks to{" "}
           <Link
@@ -536,14 +612,14 @@ const CustomCombos = () => {
             rel="noopener noreferrer"
           >
             u/cantbelieveudonethi5
-          </Link>{" "}
+          </Link>
           for the Amazing Icons.
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           gutterBottom
           align="center"
-          style={{ fontWeight: "bold" }}
+          style={{ ...fontFamily, margin: "60px auto" }}
         >
           For the launchers and follow-ups, input the commands are separated by
           a space.It isn't case sensetive so it doesn't matter if you upper- or
@@ -555,447 +631,26 @@ const CustomCombos = () => {
             variant="h4"
             gutterBottom
             align="center"
-            sx={{ color: "#d42f2f" }}
+            sx={{ color: "#d42f2f", ...fontFamily, marginBottom: "2rem" }}
           >
             Input Legend
           </Typography>
 
           <Grid container spacing={3} style={{ justifyContent: "center" }}>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="CH: Counter Hit"
-                  secondary={renderInputImage("ch")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="BT: Back Turned"
-                  secondary={renderInputImage("bt")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="T: Tornado(spin)"
-                  secondary={renderInputImage("t")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="chip: Chip Damage"
-                  secondary={renderInputImage("chip")}
-                />
-              </ListItem>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="heat: Heat"
-                  secondary={renderInputImage("heat")}
-                />
-              </ListItem>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="launch: Launched State"
-                  secondary={renderInputImage("launch")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="PC: Power Crush"
-                  secondary={renderInputImage("pc")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="FB: Floor Break"
-                  secondary={renderInputImage("fb")}
-                />
-              </ListItem>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="WB: Wall Break"
-                  secondary={renderInputImage("wb")}
-                />
-              </ListItem>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="homing: Homing"
-                  secondary={renderInputImage("homing")}
-                />
-              </ListItem>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="]: Bracket Right"
-                  secondary={renderInputImage("]")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="[: Bracket Left"
-                  secondary={renderInputImage("[")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="SS: Side Step"
-                  secondary={renderInputImage("ss")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="SSR: Side Step Right"
-                  secondary={renderInputImage("ssr")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="SSL: Side Step Left"
-                  secondary={renderInputImage("ssl")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="WR: While Running"
-                  secondary={renderInputImage("wr")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="WS: While Standing"
-                  secondary={renderInputImage("ws")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="f: Forward"
-                  secondary={renderInputImage("f")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="n: Neutral"
-                  secondary={renderInputImage("n")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="df: Down-Forward"
-                  secondary={renderInputImage("df")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="d: Down"
-                  secondary={renderInputImage("d")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="db: Down-Back"
-                  secondary={renderInputImage("db")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="b: Back"
-                  secondary={renderInputImage("b")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="ub: Up-Back"
-                  secondary={renderInputImage("ub")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="u: Up"
-                  secondary={renderInputImage("u")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="uf: Up-Forward"
-                  secondary={renderInputImage("uf")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1: Left Punch"
-                  secondary={renderInputImage("1")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="2: Right Punch"
-                  secondary={renderInputImage("2")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="3: Left Kick"
-                  secondary={renderInputImage("3")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="4: Right Kick"
-                  secondary={renderInputImage("4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+2: Left Punch + Right Punch"
-                  secondary={renderInputImage("1+2")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+3: Left Punch + Left Kick"
-                  secondary={renderInputImage("1+3")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+4: Left Punch + Right Kick"
-                  secondary={renderInputImage("1+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="2+3: Right Punch + Left Kick"
-                  secondary={renderInputImage("2+3")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="2+4: Right Punch + Right Kick"
-                  secondary={renderInputImage("2+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="3+4: Left Kick + Right Kick"
-                  secondary={renderInputImage("3+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+2+3: Left Punch + Right Punch + Left Kick"
-                  secondary={renderInputImage("1+2+3")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+2+4: Left Punch + Right Punch + Right Kick"
-                  secondary={renderInputImage("1+2+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+3+4: Left Punch + Left Kick + Right Kick"
-                  secondary={renderInputImage("1+3+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="2+3+4: Right Punch + Left Kick + Right Kick"
-                  secondary={renderInputImage("2+3+4")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="1+2+3+4: Left Punch + Right Punch + Left Kick + Right Kick"
-                  secondary={renderInputImage("1+2+3+4")}
-                />
-              </ListItem>
-            </Grid>
-            {/* Holding Directions */}
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~D: Hold Down"
-                  secondary={renderInputImage("~D")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~DF: Hold Down-Forward"
-                  secondary={renderInputImage("~DF")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~DB: Hold Down-Back"
-                  secondary={renderInputImage("~DB")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~B: Hold Back"
-                  secondary={renderInputImage("~B")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~F: Hold Forward"
-                  secondary={renderInputImage("~F")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~UF: Hold Up-Forward"
-                  secondary={renderInputImage("~UF")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~UB: Hold Up-Back"
-                  secondary={renderInputImage("~UB")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="~U: Hold Up"
-                  secondary={renderInputImage("~U")}
-                />
-              </ListItem>
-            </Grid>
-            {/* Circular Motions */}
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="hcf: Half Circle Forward"
-                  secondary={renderInputImage("hcf")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="hcb: Half Circle Back"
-                  secondary={renderInputImage("hcb")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="qcf: Quarter Circle Forward"
-                  secondary={renderInputImage("qcf")}
-                />
-              </ListItem>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <ListItem>
-                <ListItemText
-                  primary="qcb: Quarter Circle Back"
-                  secondary={renderInputImage("qcb")}
-                />
-              </ListItem>
-            </Grid>
+            {notations.map((notation, index) => (
+              <Grid item xs={6} sm={3} md={2} key={index}>
+                <ListItem>
+                  <ListItemText
+                    primary={notation.label}
+                    secondary={renderInputImage(notation.key)}
+                  />
+                </ListItem>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
