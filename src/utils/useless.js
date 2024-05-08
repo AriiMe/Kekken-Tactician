@@ -119,6 +119,7 @@ const tips = [
   "Steal your opponent's console and replace it with a rigged explosive device.",
   "Subscribe to BrawlPro",
   "Fuck Konoha Village",
+  "Tekken tactician V2 is out you know?",
 ];
 
 export default tips;
