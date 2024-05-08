@@ -10,6 +10,7 @@ import CustomComboPage from "./pages/CustomComboPage";
 import "./App.css";
 import Footer from "./components/Footer";
 import { Box } from "@mui/material";
+import AntiGuideSelect from "./pages/AntiGuideSelect";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/combo-generator" element={<CustomComboPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/update-request" element={<UpdateRequest />} />
+            <Route path="/anti-guide" element={<AntiGuideSelect />} />
           </Routes>
         </Box>
         <Footer />

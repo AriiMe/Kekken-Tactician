@@ -263,11 +263,16 @@ function Navbar() {
               component="div"
               sx={{
                 color: "#a32a2d",
+                cursor: "pointer",
                 fontSize: ".7rem",
                 fontFamily: "Michroma",
+                "&:hover": {
+                  color: "white",
+                },
               }}
+              onClick={() => navigate("/anti-guide")}
             >
-              Current Char: (if any)
+              Anti Guide
             </Typography>
           </Box>
 
