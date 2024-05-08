@@ -4,6 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./ComboEnders.css";
+import CollapsableTitle from "./CollapsableTitle";
 
 const ComboEnders = ({ enders }) => {
   // Group enders by category
@@ -20,12 +21,11 @@ const ComboEnders = ({ enders }) => {
 
   return (
     <div className="combo-enders">
-      <h2>Combo Enders</h2>
-      <div style={{ marginBottom: "10px" }}>
-        <IconButton onClick={toggleCollapse}>
-          {isCollapsed ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
+      <CollapsableTitle
+        title="Combo Enders"
+        toggleState={isCollapsed}
+        collapseFn={toggleCollapse}
+      />
       <div
         style={{
           transition: "width 0.3s",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -7,11 +7,42 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
+import { Box, IconButton } from "@mui/material";
+import { Link as ScrollLink, animateScroll } from "react-scroll";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+
+const alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -43,12 +74,13 @@ const StyledImage = styled("img")({
 });
 
 const CharacterSelect = () => {
+  const theme = useTheme();
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
   );
-  const theme = useTheme();
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
@@ -71,6 +103,20 @@ const CharacterSelect = () => {
     }, 5000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setShowBackToTop(scrollTop > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleCharacterSelect = (characterName, characterId) => {
@@ -98,19 +144,22 @@ const CharacterSelect = () => {
       </Container>
     );
   }
+  const filterCharactersByLetter = (letter) => {
+    return characters.filter((character) =>
+      character.name.toUpperCase().startsWith(letter)
+    );
+  };
 
   return (
     <Container
       maxWidth="xl"
       sx={{
         width: "100%",
-        height: "100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
-        marginTop: "120px",
       }}
     >
       <Helmet>
@@ -134,11 +183,33 @@ const CharacterSelect = () => {
           textAlign: "center",
           width: "100%",
           color: "#d42f2f",
-          marginTop: isTabletOrMobile ? "400px" : "0px",
+          marginTop: "150px",
         }}
       >
         Pick your Character
       </h1>
+
+      <Container maxWidth="sm" sx={{ marginBottom: "3rem", marginTop: "2rem" }}>
+        {alphabet.map((letter) => (
+          <ScrollLink
+            key={letter}
+            to={letter}
+            smooth={true}
+            duration={500}
+            offset={-100}
+          >
+            <IconButton
+              sx={{
+                fontSize: ".875rem",
+                height: "35px",
+                width: "35px",
+              }}
+            >
+              {letter}
+            </IconButton>
+          </ScrollLink>
+        ))}
+      </Container>
 
       <Typography
         variant="h5"
@@ -147,49 +218,77 @@ const CharacterSelect = () => {
         align="center"
         sx={{
           color: "rgba(212, 47, 47, 1)",
-          marginBottom: "50px",
+          maxWidth: "600px",
+          transition: ".5s ease color",
+          "&:hover": {
+            color: "white",
+          },
         }}
       >
         <UselessTipps />
       </Typography>
 
-      <Grid
-        container
-        spacing={2}
-        justifyContent="flex-start"
-        alignItems="center"
-      >
-        {characters.map((character) => (
-          <Grid item xs={6} sm={6} md={4} lg={3} key={character._id}>
-            <Tooltip title={character.name} placement="top">
-              <ImagePaper
-                elevation={3}
-                onClick={() =>
-                  handleCharacterSelect(character.name, character._id)
-                }
-              >
-                <StyledImage src={character.image} alt={character.name} />
-              </ImagePaper>
-            </Tooltip>
-          </Grid>
-        ))}
-      </Grid>
+      <Container maxWidth="lg">
+        {alphabet.map((letter) => {
+          const charactersWithLetter = filterCharactersByLetter(letter);
+          if (charactersWithLetter.length > 0) {
+            return (
+              <div key={letter} id={letter}>
+                <h2
+                  style={{
+                    borderBottom: "1px solid #c82427",
+                    paddingBottom: "1rem",
+                    margin: "5rem 0 2rem 0",
+                  }}
+                >
+                  {letter}
+                </h2>
 
-      <Button
-        color="inherit"
-        component={Link}
-        to="/update-request"
-        sx={{
-          mt: 2,
-          display: "block",
-          mx: "auto",
-          "&:hover": {
-            color: "rgba(212, 47, 47, 1)",
-          },
-        }}
-      >
-        Your Main Character is not here?
-      </Button>
+                <Box sx={{ display: "flex", gap: "30px", flexWrap: "wrap" }}>
+                  {charactersWithLetter.map((character) => (
+                    <Tooltip
+                      key={character.name}
+                      title={character.name}
+                      placement="top"
+                    >
+                      <ImagePaper
+                        elevation={3}
+                        onClick={() =>
+                          handleCharacterSelect(character.name, character._id)
+                        }
+                      >
+                        <StyledImage
+                          src={character.image}
+                          alt={character.name}
+                        />
+                      </ImagePaper>
+                    </Tooltip>
+                  ))}
+                </Box>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </Container>
+
+      {showBackToTop && (
+        <Button
+          variant="contained"
+          sx={{
+            borderRadius: "100%",
+            height: "60px",
+            width: "60px",
+            position: "fixed",
+            bottom: "20px",
+            right: "40px",
+            background: "#d42f2f",
+          }}
+          onClick={() => animateScroll.scrollToTop()}
+        >
+          <ArrowUpwardIcon />
+        </Button>
+      )}
     </Container>
   );
 };

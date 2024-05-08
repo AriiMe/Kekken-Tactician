@@ -1,169 +1,182 @@
 .main-combos {
-    padding: 8px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-combos h2 {
-    color: #d42f2f;
-    /* Color for the section title */
-    margin-bottom: 8px;
+  color: #d42f2f;
+  /* Color for the section title */
+  margin-bottom: 8px;
 }
 
-
-
 .main-combos table {
-    width: 100%;
-    border-spacing: 0;
-    border: none;
-    border-collapse: collapse;
-    table-layout: fixed;
-
+  width: 100%;
+  border-spacing: 0;
+  border: none;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .main-combos th {
-    font-size: 20px;
+  font-size: 20px;
 }
-
 
 .main-combos th,
 .main-combos td {
-    /* border: 1px solid #d42f2f; */
-    border-right: 1px solid #d42f2f;
-    border-bottom: 1px solid #d42f2f;
-    /* Dark border for table cells */
-    padding: 5px;
-    text-align: center;
-    vertical-align: middle;
-
+  /* border: 1px solid #d42f2f; */
+  border-right: 1px solid #d42f2f;
+  border-bottom: 1px solid #d42f2f;
+  /* Dark border for table cells */
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .main-combos th:last-child,
 .main-combos td:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .main-combos tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-
-
-
 .main-combos th {
-    background-color: #333;
-
-    color: #d42f2f;
-    text-align: center;
+  background-color: #333;
+  font-size: 1rem;
+  color: #d42f2f;
+  text-align: center;
 }
 
 /* width of the launcher header */
 .main-combos th.launcher-header {
-    width: 15%;
+  width: 15%;
 }
 
 /* width of the follow-ups header */
 .main-combos th.follow-ups-header {
-    width: 60%;
+  width: 60%;
 }
 
 /* width of the simple version header */
 .main-combos th.simple-version-header {
-    width: 25%;
+  width: 25%;
 }
 
 /* Underline for every Launcher */
 .main-combos td .launcher-item {
-
-    border-bottom: 1px solid #5a5a5a;
-
+  border-bottom: 1px solid #5a5a5a;
 }
 
 /* Remove the underline from the last launcher item in each row */
 .main-combos td .launcher-item:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 
-    padding-bottom: 0;
+  padding-bottom: 0;
 
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-
-
 
 .input-icons {
-    height: 32px;
+  height: 32px;
 
-    width: 32px;
+  width: 32px;
 }
 
-
-
 .arrow-separator-mobile {
-    display: none;
+  display: none;
 }
 
 .player-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .react-player {
-    width: 100% !important;
-    /* This is necessary if you want to control the width of the video */
-    height: auto;
+  width: 100% !important;
+  /* This is necessary if you want to control the width of the video */
+  height: auto;
 }
 
+.launch-options::after {
+  content: "";
+  /* Add content for the pseudo-element */
+  display: block;
+  /* Display the pseudo-element as a block */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  /* Make the pseudo-element full width */
+  height: 1px;
+  /* Set the height of the pseudo-element */
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #d42f2f,
+    transparent
+  );
+}
 
+@media (max-width: 1150px) {
+  .input-icons {
+    height: 24px;
+
+    width: 23px;
+  }
+
+  th.launcher-header {
+    font-size: 0.75rem;
+  }
+}
 
 @media (max-width: 768px) {
+  .main-combos th {
+    font-size: 18px;
+  }
 
-    .main-combos th {
-        font-size: 18px;
-    }
+  .main-combos th,
+  .main-combos td {
+    padding: 2px;
+    border-bottom: 1px solid #4f4f4e;
+  }
 
-    .main-combos th,
-    .main-combos td {
-        padding: 2px;
-        border-bottom: 1px solid #4f4f4e;
-    }
+  .main-combos th,
+  .main-combos td {
+    padding: 2px;
+    border: 1px solid #d42f2f;
+  }
 
+  .input-icons {
+    height: 22px;
 
+    width: 22px;
+  }
 
+  .arrow-separator {
+    display: none;
+  }
 
-    .main-combos th,
-    .main-combos td {
-        padding: 2px;
-        border: 1px solid #d42f2f;
-    }
+  .arrow-separator-mobile {
+    display: block;
+    margin-left: -4px;
+    border-bottom: 1px solid #4f4f4e;
+  }
 
-    .input-icons {
-        height: 22px;
+  .main-combos th.launcher-header {
+    width: 25%;
+    /* smaller width for larger screens */
+  }
 
-        width: 22px;
-    }
+  .main-combos th.follow-ups-header {
+    width: 50%;
+    /* larger width for larger screens */
+  }
 
-    .arrow-separator {
-        display: none;
-
-    }
-
-    .arrow-separator-mobile {
-        display: block;
-        margin-left: -4px;
-        border-bottom: 1px solid #4f4f4e;
-    }
-
-    .main-combos th.launcher-header {
-        width: 25%;
-        /* smaller width for larger screens */
-    }
-
-    .main-combos th.follow-ups-header {
-        width: 50%;
-        /* larger width for larger screens */
-    }
-
-    .main-combos th.simple-version-header {
-        width: 25%;
-        /* smaller width for larger screens */
-    }
+  .main-combos th.simple-version-header {
+    width: 25%;
+    /* smaller width for larger screens */
+  }
 }

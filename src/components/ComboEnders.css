@@ -1,73 +1,68 @@
 table {
-    border-collapse: collapse;
-
+  border-collapse: collapse;
 }
 
 td {
-    padding: 0;
-    vertical-align: bottom;
-
+  padding: 0;
+  vertical-align: bottom;
 }
 
 td,
 div {
-    box-sizing: border-box;
-    line-height: 1;
+  box-sizing: border-box;
+  line-height: 1;
 }
 
 .combo-enders {
-    margin-bottom: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #333;
 }
 
 .combo-enders h2 {
-    margin-bottom: 8px;
-    color: #c62828;
-
+  margin-bottom: 8px;
+  color: #c62828;
 }
 
 .combo-enders-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
 }
-
 
 .combo-ender-move {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #4f4f4e;
-    padding: 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #4f4f4e;
+  padding: 10px;
 }
-
-
 
 .category-cell,
 .combo-ender-move {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .category-cell {
-    border-right: 1px solid #fd1313;
-    border-bottom: 1px solid #fd1313;
-    vertical-align: middle;
-    /* Vertically center the text */
+  border-right: 1px solid #fd1313;
+  border-bottom: 1px solid #fd1313;
+  vertical-align: middle;
+  /* Vertically center the text */
 }
 
 .combo-ender-move {
-    border-bottom: 1px solid #4f4f4e;
+  border-bottom: 1px solid #4f4f4e;
 }
 
-
 .last-move {
-    border-bottom: 1px solid #fd1313;
+  border-bottom: 1px solid #fd1313;
 }
 
 .combo-ender-move span {
-    display: inline-block;
+  display: inline-block;
 }

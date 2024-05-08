@@ -164,7 +164,7 @@ const CharacterDetails = () => {
   return (
     <Box
       className="character-sheet-container"
-      sx={{ pt: 9, pb: 0, minHeight: "100vh" }}
+      sx={{ pt: 9, pb: 0, minHeight: "100vh", mb: 5 }}
     >
       <Helmet>
         <title>
@@ -190,93 +190,101 @@ const CharacterDetails = () => {
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+      <Container maxWidth="2xl" sx={{}}>
+        <Grid container spacing={1}>
+          {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
+          <Grid item xs={12} md={4} lg={3} className={styles.leftColumn}>
+            <Paper
+              sx={{
+                overflowY: "scroll",
+                minHeight: "100vh",
+                scrollbarWidth: "none",
+                "& .input-icons": {
+                  width: "25px",
+                  height: "25px",
+                },
+              }}
+            >
+              <Paper sx={{ marginBottom: 1 }}>
+                <CharProfile pic={character.image} name={character.name} />
+              </Paper>
+              <Paper sx={{ marginBottom: 1 }}>
+                <HeatDash heat={character.heatSystem} name={characterName} />
+              </Paper>
+              <Paper sx={{ marginBottom: 1 }}>
+                <MostImportantGrabs
+                  grabs={character.mostImportantGrabs}
+                  name={characterName}
+                />
+              </Paper>
+              <Paper sx={{ marginBottom: 1 }}>
+                <MiniCombo
+                  miniCombo={character.guaranteedFollowUps}
+                  name={characterName}
+                />
+              </Paper>
+              <Paper>
+                <HeatEngagers
+                  heat={character.heatEngagers}
+                  name={characterName}
+                />
+              </Paper>
+              <Paper>
+                <Punishers
+                  punishers={character.punishers}
+                  name={characterName}
+                />
+              </Paper>
+            </Paper>
+          </Grid>
 
-      <Grid container spacing={1}>
-        {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
-        <Grid item xs={12} md={3} lg={2} className={styles.leftColumn}>
-          <Paper
-            sx={{
-              overflowY: "scroll",
-              minHeight: "100vh",
-              scrollbarWidth: "none",
-            }}
-          >
-            <Paper sx={{ marginBottom: 1 }}>
-              <CharProfile pic={character.image} name={character.name} />
-            </Paper>
-            <Paper sx={{ marginBottom: 1 }}>
-              <HeatDash heat={character.heatSystem} name={characterName} />
-            </Paper>
-            <Paper sx={{ marginBottom: 1 }}>
-              <MostImportantGrabs
-                grabs={character.mostImportantGrabs}
-                name={characterName}
-              />
-            </Paper>
-            <Paper sx={{ marginBottom: 1 }}>
-              <MiniCombo
-                miniCombo={character.guaranteedFollowUps}
-                name={characterName}
-              />
-            </Paper>
-            <Paper>
-              <HeatEngagers
-                heat={character.heatEngagers}
-                name={characterName}
-              />
-            </Paper>
-            <Paper>
-              <Punishers punishers={character.punishers} name={characterName} />
-            </Paper>
-          </Paper>
-        </Grid>
-
-        {/* Right column: Main Combos and Wall Combos */}
-        <Grid item xs={12} md={9} lg={10} className={styles.rightColumn}>
-          <Paper
-            sx={{
-              overflowY: "scroll",
-              minHeight: "100vh",
-              scrollbarWidth: "none",
-            }}
-          >
-            <Grid container spacing={0}>
-              <Grid item xs={12}>
-                <Paper sx={{ marginBottom: 1 }}>
-                  <MainCombos
-                    combos={character.importantCombos}
-                    name={characterName}
-                  />
-                </Paper>
-              </Grid>
-              {character.chainThrows &&
-              Object.keys(character.chainThrows).length > 0 ? (
+          {/* Right column: Main Combos and Wall Combos */}
+          <Grid item xs={12} md={8} lg={9} className={styles.rightColumn}>
+            <Paper
+              sx={{
+                overflowY: "scroll",
+                minHeight: "100vh",
+                scrollbarWidth: "none",
+              }}
+            >
+              <Grid container spacing={0}>
                 <Grid item xs={12}>
-                  <Paper>
-                    <ChainThrows
-                      chainThrows={character.chainThrows}
+                  <Paper sx={{ marginBottom: 1 }}>
+                    <MainCombos
+                      combos={character.importantCombos}
                       name={characterName}
                     />
                   </Paper>
                 </Grid>
-              ) : null}
-              <Grid item xs={12}>
-                <Paper>
-                  <WallCombos
-                    wallCombos={character.wallCombos}
-                    name={characterName}
-                  />
-                </Paper>
+                {character.chainThrows &&
+                Object.keys(character.chainThrows).length > 0 ? (
+                  <Grid item xs={12}>
+                    <Paper>
+                      <ChainThrows
+                        chainThrows={character.chainThrows}
+                        name={characterName}
+                      />
+                    </Paper>
+                  </Grid>
+                ) : null}
+                <Grid item xs={12}>
+                  <Paper>
+                    <WallCombos
+                      wallCombos={character.wallCombos}
+                      name={characterName}
+                    />
+                  </Paper>
+                </Grid>
+                <Grid item xs={12}>
+                  <Paper>
+                    <ComboEnders enders={character.comboEnders} />
+                  </Paper>
+                </Grid>
               </Grid>
-              <Grid item xs={12}>
-                <Paper>
-                  <ComboEnders enders={character.comboEnders} />
-                </Paper>
-              </Grid>
-            </Grid>
-          </Paper>
+            </Paper>
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
     </Box>
   );
 };
