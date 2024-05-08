@@ -117,6 +117,8 @@ const tips = [
   "Deploy a smoke bomb during the match for dramatic effect and confusion.",
   "Hire a sniper to shoot out your opponent's screen mid-game.",
   "Steal your opponent's console and replace it with a rigged explosive device.",
+  "Subscribe to BrawlPro",
+  "Fuck Konoha Village",
 ];
 
 export default tips;

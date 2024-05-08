@@ -50,11 +50,20 @@ const UpdateRequest = () => {
         >
           Request Character Updates
         </Typography>
-        <Typography variant="body1" paragraph sx={paragraphStyle}>
-          If you see a scrub wrote combos for your main, let me know! I'll
-          gladly update the combos. Reach out to{" "}
-          <span style={{ color: "#d42f2f" }}>@ariime</span> on Discord and tell
-          me what you need. Your feedback and contributions help Tekken
+
+        <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
+          If you see a scrub wrote combos for your main or want a specific
+          Character be first to release, let me know! I'll gladly update the
+          combos. Reach out to ariime on our{" "}
+          <Link
+            href="https://discord.gg/d2Czp4Kj75"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Discord server
+          </Link>{" "}
+          and tell me what you need. Your feedback and contributions help Tekken
           Tactician stay fresh and valuable for the entire community.
         </Typography>
         <Typography variant="body1" paragraph sx={paragraphStyle}>
