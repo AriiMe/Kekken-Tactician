@@ -81,35 +81,6 @@ const About = () => {
           </Link>{" "}
           or not I'm not your mom.
         </Typography>
-
-        <Typography variant="body1" sx={paragraphStyle}>
-          Massive thanks to{" "}
-          <Link
-            href="https://www.reddit.com/user/natayaway/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            u/natayaway
-          </Link>{" "}
-          ,{" "}
-          <Link
-            href="https://www.reddit.com/user/cantbelieveudonethi5/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            u/cantbelieveudonethi5
-          </Link>{" "}
-          for the Amazing Icons. And a big thanks to Applay for letting me Yoink
-          their spreadsheets. Join{" "}
-          <Link
-            href="https://discord.gg/3c786SX3rj"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Applay's Discord
-          </Link>{" "}
-          and spam AriiMe brought me here in #general.
-        </Typography>
       </Box>
     </Container>
   );
