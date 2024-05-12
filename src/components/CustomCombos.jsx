@@ -542,11 +542,14 @@ const CustomCombos = () => {
           component="h1"
           gutterBottom
           align="center"
-          style={{
+          sx={{
             fontWeight: "bold",
             margin: "50px 50px 30px",
             color: "#d42f2f",
             ...fontFamily,
+            '@media (max-width: 500px)': {
+              fontSize: '2rem',
+            },
           }}
         >
           Instructions:
