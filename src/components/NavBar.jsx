@@ -10,9 +10,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { FaTwitch, FaDiscord } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
 import { DisplayModeContext } from "../context/DisplayModeContext";
 import { ColorModeContext } from "../context/ColorModeContext";
@@ -286,17 +284,19 @@ function Navbar() {
           >
             {/* Aligns items to the right */}
             <IconButton
-              href="https://google.com"
+              href="https://www.twitch.tv/ariimeme"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
                 },
               }}
             >
-              <XIcon />
+              <FaTwitch />
             </IconButton>
             <IconButton
-              href="https://google.com"
+              href="https://www.youtube.com/channel/UCQvHdx1XJ2H_KQ1qCqh7ZWQ"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
@@ -306,14 +306,15 @@ function Navbar() {
               <YouTubeIcon />
             </IconButton>
             <IconButton
-              href="https://google.com"
+              href="https://discord.gg/73N53FgrRj"
+              target="_blank"
               sx={{
                 "&:hover": {
                   color: "#c82427",
                 },
               }}
             >
-              <FacebookIcon />
+              <FaDiscord />
             </IconButton>
             {window.location.pathname.includes("/character/combos/") ||
             window.location.pathname.includes("/combo-generator") ? (
