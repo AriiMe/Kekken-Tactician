@@ -254,7 +254,7 @@ const FAQ = () => {
           >
             Q:
           </span>{" "}
-          Why is the hell is the button in the footer off center and doesn't
+          Why in the hell is the button in footer off center and doesn't
           work??!! {">:("}
           <br />
           <br />
