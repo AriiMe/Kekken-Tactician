@@ -11,3 +11,9 @@
 .hide-for-screenshot {
     display: none !important;
 }
+
+@media (max-width: 600px) {
+    .action-cell {
+        width: 10px;
+    }
+}

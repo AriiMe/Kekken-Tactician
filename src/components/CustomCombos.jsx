@@ -350,7 +350,10 @@ const CustomCombos = () => {
         Tekken 8 Combo Generator
       </Typography>
 
-      <Table className="custom-combos-table" sx={{ marginTop: "50px" }}>
+      <Table
+        className="custom-combos-table"
+        sx={{ marginTop: "50px", tableLayout: "fixed" }}
+      >
         <TableHead>
           <TableRow>
             <TableCell className="launcher" style={{ color: "#d42f2f" }}>
@@ -501,29 +504,35 @@ const CustomCombos = () => {
                       </div>
                     ))}
               </TableCell>
-              <TableCell>
+              <TableCell
+                className="action-cell"
+                sx={{ width: { xs: 100, sm: "auto" } }}
+              >
                 <IconButton onClick={() => removeRow(comboIndex)}>
                   <DeleteIcon
                     id="delete-button-for-image"
-                    style={{ color: "#d42f2f" }}
+                    style={{ color: "#d42f2f", fontSize: "1.5rem" }}
                   />
                 </IconButton>
               </TableCell>
-              <TableCell>
+              <TableCell
+                className="action-cell"
+                sx={{ width: { xs: 100, sm: "auto" } }}
+              >
                 <IconButton
                   id="save-button-for-image"
                   onClick={() => saveRowAsImage(rowRefs[comboIndex].current)}
                 >
                   <CameraEnhanceIcon
                     id="save-button-for-image"
-                    style={{ color: "#d42f2f" }}
+                    style={{ color: "#d42f2f", fontSize: "1.5rem" }}
                   />
                 </IconButton>
               </TableCell>
             </TableRow>
           ))}
           <TableRow>
-            <TableCell colSpan={3} align="center">
+            <TableCell colSpan={4} align="center">
               <Button
                 onClick={addNewRow}
                 variant="contained"
@@ -547,8 +556,8 @@ const CustomCombos = () => {
             margin: "50px 50px 30px",
             color: "#d42f2f",
             ...fontFamily,
-            '@media (max-width: 500px)': {
-              fontSize: '2rem',
+            "@media (max-width: 500px)": {
+              fontSize: "2rem",
             },
           }}
         >
