@@ -17,13 +17,18 @@ const footerContent = [
     isExternal: false,
   },
   {
+    text: "Support On KO-FI",
+    link: "https://ko-fi.com/ariime",
+    isExternal: true,
+  },
+  {
     text: "FAQ",
     link: "/faqu",
     isExternal: false,
   },
   {
-    text: "Support On KO-FI",
-    link: "https://ko-fi.com/ariime",
+    text: "Tactician Version 1",
+    link: "https://kekken-tactician.vercel.app/",
     isExternal: true,
   },
 ];
@@ -68,7 +73,11 @@ const Footer = () => {
               xs={12}
               sm={6}
               md={3}
-              sx={{ display: "flex", justifyContent: "center" }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "15px",
+              }}
             >
               <Link
                 href={item.link}
