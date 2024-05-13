@@ -91,7 +91,7 @@ const CharacterDetails = () => {
   }
 
   if (error) {
-    return <Box>Error: {error.message}</Box>;
+    return <Box>Error: {error.message || "An unknown error occurred"}</Box>;
   }
 
   if (!character) {
