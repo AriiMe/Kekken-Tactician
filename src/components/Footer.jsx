@@ -17,6 +17,11 @@ const footerContent = [
     isExternal: false,
   },
   {
+    text: "FAQ",
+    link: "/faqu",
+    isExternal: false,
+  },
+  {
     text: "Support On KO-FI",
     link: "https://ko-fi.com/ariime",
     isExternal: true,
@@ -65,7 +70,11 @@ const Footer = () => {
               md={3}
               sx={{ display: "flex", justifyContent: "center" }}
             >
-              <Link href={item.link} target="_blank" style={{ color: "white" }}>
+              <Link
+                href={item.link}
+                target={item.isExternal ? "_blank" : "_self"}
+                style={{ color: "white" }}
+              >
                 {item.text}
               </Link>
             </Grid>
