@@ -51,8 +51,8 @@ const Credits = () => {
           Credits
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
-          This new look to our website was made possible thanks to Komrad's
-          contributions, our Front-end Developer. Feel free to reach out to him
+          The new look on our website was made possible thanks to Komrad's
+          contribution, our Front-end Developer. Feel free to reach out to him
           on Reddit{" "}
           <Link
             href="https://www.reddit.com/user/KomradDaddy/"
@@ -67,11 +67,10 @@ const Credits = () => {
               color: "#c62828",
             }}
           >
-            @ komrad_ali_2019
+            komrad_ali_2019
           </span>
           .
         </Typography>
-
         <Typography variant="body1" sx={paragraphStyle}>
           Massive thanks to{" "}
           <Link
@@ -89,8 +88,11 @@ const Credits = () => {
           >
             u/cantbelieveudonethi5
           </Link>{" "}
-          for the Amazing Icons. And a big thanks to Applay for letting me Yoink
-          their spreadsheets. Join{" "}
+          for the Amazing Icons.
+        </Typography>
+
+        <Typography variant="body1" sx={paragraphStyle}>
+          A big thanks to Applay for letting me Yoink their spreadsheets. Join{" "}
           <Link
             href="https://discord.gg/3c786SX3rj"
             target="_blank"
@@ -117,7 +119,9 @@ const Credits = () => {
             }}
           >
             Hosam
-          </span> with your help, we can make this website better, by renting high quality serers and more!
+          </span>{" "}
+          with your help, we can make this website better, by renting high
+          quality servers and storage!
         </Typography>
       </Box>
     </Container>

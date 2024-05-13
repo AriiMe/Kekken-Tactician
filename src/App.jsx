@@ -14,6 +14,7 @@ import AntiGuideSelect from "./pages/AntiGuideSelect";
 import KomradEasterEgg from "./pages/KomradEasterEgg";
 import NotFoundPage from "./pages/NotFoundPage";
 import Credits from "./pages/Credits";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/credits" element={<Credits />} />
             <Route path="/update-request" element={<UpdateRequest />} />
             <Route path="/anti-guide" element={<AntiGuideSelect />} />
+            <Route path="/faqu" element={<FAQ />} />
             <Route
               path="/nothing-here/for-sure/no-easter-egg"
               element={<KomradEasterEgg />}
