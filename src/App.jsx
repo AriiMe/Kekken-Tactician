@@ -13,6 +13,7 @@ import { Box } from "@mui/material";
 import AntiGuideSelect from "./pages/AntiGuideSelect";
 import KomradEasterEgg from "./pages/KomradEasterEgg";
 import NotFoundPage from "./pages/NotFoundPage";
+import Credits from "./pages/Credits";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             />
             <Route path="/combo-generator" element={<CustomComboPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/credits" element={<Credits />} />
             <Route path="/update-request" element={<UpdateRequest />} />
             <Route path="/anti-guide" element={<AntiGuideSelect />} />
             <Route

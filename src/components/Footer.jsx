@@ -12,6 +12,11 @@ const footerContent = [
     isExternal: false,
   },
   {
+    text: "Thank you",
+    link: "/credits",
+    isExternal: false,
+  },
+  {
     text: "Support On KO-FI",
     link: "https://ko-fi.com/ariime",
     isExternal: true,
@@ -57,7 +62,7 @@ const Footer = () => {
               key={item.link}
               xs={12}
               sm={6}
-              md={4}
+              md={3}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <Link href={item.link} target="_blank" style={{ color: "white" }}>

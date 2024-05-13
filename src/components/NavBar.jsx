@@ -128,7 +128,8 @@ function Navbar() {
       sx={{
         textAlign: "center",
         // background: "#331a16",
-        // minHeight: "100%",
+        minHeight: "100%",
+        display: "flex", flexDirection: "column", justifyContent: "space-between"
       }}
     >
       <List
@@ -192,6 +193,41 @@ function Navbar() {
           </ListItemButton>
         </ListItem>
       </List>
+      <Box sx={{display: "flex", justifyContent: "space-evenly", marginBottom: "2rem"}}>
+        <IconButton
+          href="https://www.twitch.tv/ariimeme"
+          target="_blank"
+          sx={{
+            "&:hover": {
+              color: "#c82427",
+            },
+          }}
+        >
+          <FaTwitch />
+        </IconButton>
+        <IconButton
+          href="https://www.youtube.com/channel/UCQvHdx1XJ2H_KQ1qCqh7ZWQ"
+          target="_blank"
+          sx={{
+            "&:hover": {
+              color: "#c82427",
+            },
+          }}
+        >
+          <YouTubeIcon />
+        </IconButton>
+        <IconButton
+          href="https://discord.gg/73N53FgrRj"
+          target="_blank"
+          sx={{
+            "&:hover": {
+              color: "#c82427",
+            },
+          }}
+        >
+          <FaDiscord />
+        </IconButton>
+      </Box>
     </Box>
   );
 
@@ -386,44 +422,6 @@ function Navbar() {
                 </Popover>
               </Box>
             ) : null}
-
-            {/* <Button
-              color="inherit"
-              component={Link}
-              to="/update-request"
-              sx={{
-                "&:hover": {
-                  color: "rgba(212, 47, 47, 1)",
-                },
-              }}
-            >
-              Request an Update
-            </Button>
-            <Button
-              color="inherit"
-              component={Link}
-              to="/about"
-              sx={{
-                "&:hover": {
-                  color: "rgba(212, 47, 47, 1)",
-                },
-              }}
-            >
-              About
-            </Button>
-            <Button
-              color="inherit"
-              component="a"
-              href="https://ko-fi.com/ariime"
-              target="_blank"
-              sx={{
-                "&:hover": {
-                  color: "rgba(212, 47, 47, 1)",
-                },
-              }}
-            >
-              Support on Ko-fi
-            </Button> */}
           </Box>
           <Drawer
             anchor="left"
