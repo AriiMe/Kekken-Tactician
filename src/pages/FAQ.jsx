@@ -254,6 +254,27 @@ const FAQ = () => {
           >
             Q:
           </span>{" "}
+          Why is the hell is the button in the footer of center and doesn't
+          work??!! {">:("}
+          <br />
+          <br />
+          <span
+            style={{
+              color: "#c62828",
+            }}
+          >
+            A:
+          </span>{" "}
+          KEKW
+        </Typography>
+        <Typography variant="body1" sx={paragraphStyle}>
+          <span
+            style={{
+              color: "#c62828",
+            }}
+          >
+            Q:
+          </span>{" "}
           Why is the website called Tekken Tactician?
           <br />
           <br />
