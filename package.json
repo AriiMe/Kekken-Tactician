@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
     "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "dom-to-image": "^2.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
