@@ -139,6 +139,16 @@ const CharacterSelect = () => {
       >
         Pick your Character
       </h1>
+      <h2
+        style={{
+          textAlign: "center",
+          width: "100%",
+          color: "#d42f2f",
+          marginTop: isTabletOrMobile ? "400px" : "0px",
+        }}
+      >
+        V1 is depricated and will not be getting any updates
+      </h2>
 
       <Typography
         variant="h5"
