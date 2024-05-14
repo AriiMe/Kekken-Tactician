@@ -13,17 +13,14 @@ import { Helmet } from "react-helmet";
 const News = () => {
   const [news, setNews] = useState([]);
 
-  console.log(import.meta.env.VITE_GNEWS_API_KEY);
-
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
           `https://gnews.io/api/v4/search?q=tekken&lang=en&country=us&max=10&apikey=${
-            import.meta.env.VITE_GNEWS_API_KEY
+            import.meta.env.VITE_GNEWS
           }`
         );
-        console.log(response);
         setNews(response.data.articles);
       } catch (error) {
         console.error("Failed to fetch news", error);
