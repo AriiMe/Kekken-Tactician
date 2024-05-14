@@ -129,7 +129,9 @@ function Navbar() {
         textAlign: "center",
         // background: "#331a16",
         minHeight: "100%",
-        display: "flex", flexDirection: "column", justifyContent: "space-between"
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
       <List
@@ -187,13 +189,32 @@ function Navbar() {
             </Box>
           </Box>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem
+          disablePadding
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
           <ListItemButton component={Link} to="/combo-generator">
             <span style={{ fontFamily: "Michroma" }}>Combo Generator</span>
           </ListItemButton>
+          <ListItemButton component={Link} to="/anti-guide">
+            <span style={{ fontFamily: "Michroma" }}>Anti Guide</span>
+          </ListItemButton>
+          <ListItemButton component={Link} to="/news">
+            <span style={{ fontFamily: "Michroma" }}>News</span>
+          </ListItemButton>
         </ListItem>
       </List>
-      <Box sx={{display: "flex", justifyContent: "space-evenly", marginBottom: "2rem"}}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          marginBottom: "2rem",
+        }}
+      >
         <IconButton
           href="https://www.twitch.tv/ariimeme"
           target="_blank"
@@ -307,6 +328,22 @@ function Navbar() {
               onClick={() => navigate("/anti-guide")}
             >
               Anti Guide
+            </Typography>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{
+                color: "#a32a2d",
+                cursor: "pointer",
+                fontSize: ".7rem",
+                fontFamily: "Michroma",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+              onClick={() => navigate("/news")}
+            >
+              News
             </Typography>
           </Box>
 
