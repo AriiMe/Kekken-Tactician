@@ -65,6 +65,8 @@ const Footer = () => {
           sx={{ margin: "2rem auto" }}
           columnSpacing={2}
           rowSpacing={2}
+          spacing={3}
+          justifyContent="center"
         >
           {footerContent.map((item) => (
             <Grid
@@ -77,6 +79,7 @@ const Footer = () => {
                 display: "flex",
                 justifyContent: "center",
                 marginBottom: "15px",
+                width: "100%",
               }}
             >
               <Link

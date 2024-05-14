@@ -198,13 +198,24 @@ function Navbar() {
           }}
         >
           <ListItemButton component={Link} to="/combo-generator">
-            <span style={{ fontFamily: "Michroma" }}>Combo Generator</span>
+            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
+              Combo Generator
+            </span>
           </ListItemButton>
           <ListItemButton component={Link} to="/anti-guide">
-            <span style={{ fontFamily: "Michroma" }}>Anti Guide</span>
+            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
+              Anti Guide
+            </span>
           </ListItemButton>
           <ListItemButton component={Link} to="/news">
-            <span style={{ fontFamily: "Michroma" }}>News</span>
+            <span
+              style={{
+                fontFamily: "Michroma",
+                color: "#a32a2d",
+              }}
+            >
+              News
+            </span>
           </ListItemButton>
         </ListItem>
       </List>
@@ -296,55 +307,59 @@ function Navbar() {
               Tekken Tactician
             </Typography>
             {isMdScreen && (
-              <Typography
-                variant="body1"
-                component="div"
-                onClick={() => navigate("/combo-generator")}
-                sx={{
-                  color: "#a32a2d",
-                  cursor: "pointer",
-                  fontSize: ".7em",
-                  fontFamily: "Michroma",
-                  "&:hover": {
-                    color: "white",
-                  },
-                }}
-              >
-                Combo Maker
-              </Typography>
+              <>
+                <Typography
+                  variant="body1"
+                  component="div"
+                  onClick={() => navigate("/combo-generator")}
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7em",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  Combo Maker
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7rem",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                  onClick={() => navigate("/anti-guide")}
+                >
+                  Anti Guide
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7rem",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                  onClick={() => navigate("/news")}
+                >
+                  News
+                </Typography>
+              </>
             )}
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                color: "#a32a2d",
-                cursor: "pointer",
-                fontSize: ".7rem",
-                fontFamily: "Michroma",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-              onClick={() => navigate("/anti-guide")}
-            >
-              Anti Guide
-            </Typography>
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                color: "#a32a2d",
-                cursor: "pointer",
-                fontSize: ".7rem",
-                fontFamily: "Michroma",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-              onClick={() => navigate("/news")}
-            >
-              News
-            </Typography>
           </Box>
 
           <Box
