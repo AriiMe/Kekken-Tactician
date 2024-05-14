@@ -360,7 +360,7 @@ const CustomCombos = () => {
               sx={{
                 color: "#d42f2f",
                 width: "10%",
-                "@media (max-width: 600px)": { width: "26%" },
+                "@media (max-width: 600px)": { width: "29%" },
               }}
             >
               Launcher(s)
@@ -369,7 +369,7 @@ const CustomCombos = () => {
               sx={{
                 color: "#d42f2f",
                 width: "70%",
-                "@media (max-width: 600px)": { width: "60%" },
+                "@media (max-width: 600px)": { width: "55%" },
               }}
             >
               Follow-Ups
@@ -378,7 +378,7 @@ const CustomCombos = () => {
               sx={{
                 color: "#d42f2f",
                 width: "5%",
-                "@media (max-width: 600px)": { width: "7%" },
+                "@media (max-width: 600px)": { width: "8%" },
               }}
             >
               Delete
@@ -387,7 +387,7 @@ const CustomCombos = () => {
               sx={{
                 color: "#d42f2f",
                 width: "5%",
-                "@media (max-width: 600px)": { width: "7%" },
+                "@media (max-width: 600px)": { width: "8%" },
               }}
             >
               Save
