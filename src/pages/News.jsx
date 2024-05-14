@@ -15,12 +15,12 @@ const News = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
+      const api = import.meta.env.VITE_GNEWS;
       try {
         const response = await axios.get(
-          `https://gnews.io/api/v4/search?q=tekken&lang=en&country=us&max=10&apikey=${
-            import.meta.env.VITE_GNEWS
-          }`
+          `https://gnews.io/api/v4/search?q=tekken&lang=en&country=us&max=10&apikey=${api}`
         );
+
         setNews(response.data.articles);
       } catch (error) {
         console.error("Failed to fetch news", error);
