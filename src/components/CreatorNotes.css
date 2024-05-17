@@ -1,0 +1,60 @@
+.creator-notes {
+    padding: 20px;
+}
+
+.creator-notes .title {
+    color: rgba(212, 47, 47, 1);
+    /* Default color for headings */
+    margin-bottom: 16px;
+}
+
+.creator-notes .author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    /* Add some spacing below author info */
+}
+
+.creator-notes .author-info .author-name {
+    margin-right: 16px;
+}
+
+.creator-notes .combo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.creator-notes .combo-container .combo-move {
+    margin-right: 8px;
+}
+
+.creator-notes .note {
+    margin-bottom: 24px;
+    /* Add more spacing between notes */
+    padding: 8px 16px;
+    /* Add padding around each note */
+    background-color: #333;
+    /* Slightly different background color for notes */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.creator-notes .note .move-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.creator-notes .note .move-info .move-title {
+    font-style: italic;
+    margin-right: 8px;
+}
+
+.creator-notes .note .note-content {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    /* Adjust margin to align with icons */
+}
