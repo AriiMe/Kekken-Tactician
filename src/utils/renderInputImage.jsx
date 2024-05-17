@@ -221,7 +221,7 @@ const renderInputImage = (input) => {
   const normalizedInput = normalizeInput(input);
   const elements = replaceSequences(normalizedInput);
 
-  return <span>{elements}</span>;
+  return <span className="others">{elements}</span>;
 };
 
 export default renderInputImage;

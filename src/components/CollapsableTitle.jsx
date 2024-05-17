@@ -2,7 +2,7 @@ import { Box, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
-const CollapsableTitle = ({ toggleState, collapseFn, title }) => {
+const CollapsableTitle = ({ toggleState, collapseFn, title, clr }) => {
   return (
     <Box
       sx={{
@@ -10,6 +10,7 @@ const CollapsableTitle = ({ toggleState, collapseFn, title }) => {
         alignItems: "baseline",
         justifyContent: "space-between",
         padding: "0 10px",
+        color: clr,
       }}
     >
       <h2>{title}</h2>

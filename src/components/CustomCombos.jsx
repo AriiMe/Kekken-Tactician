@@ -356,14 +356,42 @@ const CustomCombos = () => {
       >
         <TableHead>
           <TableRow>
-            <TableCell className="launcher" style={{ color: "#d42f2f" }}>
+            <TableCell
+              sx={{
+                color: "#d42f2f",
+                width: "10%",
+                "@media (max-width: 600px)": { width: "29%" },
+              }}
+            >
               Launcher(s)
             </TableCell>
-            <TableCell className="follow-ups" style={{ color: "#d42f2f" }}>
+            <TableCell
+              sx={{
+                color: "#d42f2f",
+                width: "70%",
+                "@media (max-width: 600px)": { width: "55%" },
+              }}
+            >
               Follow-Ups
             </TableCell>
-            <TableCell style={{ color: "#d42f2f" }}>Delete</TableCell>
-            <TableCell style={{ color: "#d42f2f" }}>ScreenShot</TableCell>
+            <TableCell
+              sx={{
+                color: "#d42f2f",
+                width: "5%",
+                "@media (max-width: 600px)": { width: "8%" },
+              }}
+            >
+              Delete
+            </TableCell>
+            <TableCell
+              sx={{
+                color: "#d42f2f",
+                width: "5%",
+                "@media (max-width: 600px)": { width: "8%" },
+              }}
+            >
+              Save
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -506,7 +534,7 @@ const CustomCombos = () => {
               </TableCell>
               <TableCell
                 className="action-cell"
-                sx={{ width: { xs: 100, sm: "auto" } }}
+                sx={{ width: "5%", xs: "15%" }}
               >
                 <IconButton onClick={() => removeRow(comboIndex)}>
                   <DeleteIcon
@@ -517,7 +545,7 @@ const CustomCombos = () => {
               </TableCell>
               <TableCell
                 className="action-cell"
-                sx={{ width: { xs: 100, sm: "auto" } }}
+                sx={{ width: "5%", xs: "15%" }}
               >
                 <IconButton
                   id="save-button-for-image"

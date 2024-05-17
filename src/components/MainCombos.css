@@ -101,7 +101,7 @@
   height: auto;
 }
 
-.launch-options::after {
+.launch-options:not(:last-child)::after {
   content: "";
   /* Add content for the pseudo-element */
   display: block;
@@ -112,12 +112,10 @@
   /* Make the pseudo-element full width */
   height: 1px;
   /* Set the height of the pseudo-element */
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    #d42f2f,
-    transparent
-  );
+  background-image: linear-gradient(to right,
+      transparent,
+      #d42f2f,
+      transparent);
 }
 
 @media (max-width: 1150px) {
@@ -134,13 +132,17 @@
 
 @media (max-width: 768px) {
   .main-combos th {
-    font-size: 18px;
+    font-size: 10px;
   }
 
   .main-combos th,
   .main-combos td {
     padding: 2px;
     border-bottom: 1px solid #4f4f4e;
+  }
+
+  .others {
+    font-size: 10px;
   }
 
   .main-combos th,

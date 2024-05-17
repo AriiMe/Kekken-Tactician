@@ -104,6 +104,17 @@ const Credits = () => {
         </Typography>
 
         <Typography variant="body1" sx={paragraphStyle}>
+          Content Creators That Contributed to the Page:{" "}
+          <Link
+            href="https://www.youtube.com/@MishimaComplex"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MishimaComplex
+          </Link>{" "}
+        </Typography>
+
+        <Typography variant="body1" sx={paragraphStyle}>
           A MILLION THANKS to our Ko-Fi supporters{" "}
           <span
             style={{

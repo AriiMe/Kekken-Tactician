@@ -129,7 +129,9 @@ function Navbar() {
         textAlign: "center",
         // background: "#331a16",
         minHeight: "100%",
-        display: "flex", flexDirection: "column", justifyContent: "space-between"
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
       <List
@@ -187,13 +189,43 @@ function Navbar() {
             </Box>
           </Box>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem
+          disablePadding
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
           <ListItemButton component={Link} to="/combo-generator">
-            <span style={{ fontFamily: "Michroma" }}>Combo Generator</span>
+            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
+              Combo Generator
+            </span>
+          </ListItemButton>
+          <ListItemButton component={Link} to="/anti-guide">
+            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
+              Anti Guide
+            </span>
+          </ListItemButton>
+          <ListItemButton component={Link} to="/news">
+            <span
+              style={{
+                fontFamily: "Michroma",
+                color: "#a32a2d",
+              }}
+            >
+              News
+            </span>
           </ListItemButton>
         </ListItem>
       </List>
-      <Box sx={{display: "flex", justifyContent: "space-evenly", marginBottom: "2rem"}}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          marginBottom: "2rem",
+        }}
+      >
         <IconButton
           href="https://www.twitch.tv/ariimeme"
           target="_blank"
@@ -275,39 +307,59 @@ function Navbar() {
               Tekken Tactician
             </Typography>
             {isMdScreen && (
-              <Typography
-                variant="body1"
-                component="div"
-                onClick={() => navigate("/combo-generator")}
-                sx={{
-                  color: "#a32a2d",
-                  cursor: "pointer",
-                  fontSize: ".7em",
-                  fontFamily: "Michroma",
-                  "&:hover": {
-                    color: "white",
-                  },
-                }}
-              >
-                Combo Maker
-              </Typography>
+              <>
+                <Typography
+                  variant="body1"
+                  component="div"
+                  onClick={() => navigate("/combo-generator")}
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7em",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  Combo Maker
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7rem",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                  onClick={() => navigate("/anti-guide")}
+                >
+                  Anti Guide
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  component="div"
+                  sx={{
+                    color: "#a32a2d",
+                    cursor: "pointer",
+                    fontSize: ".7rem",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                  onClick={() => navigate("/news")}
+                >
+                  News
+                </Typography>
+              </>
             )}
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                color: "#a32a2d",
-                cursor: "pointer",
-                fontSize: ".7rem",
-                fontFamily: "Michroma",
-                "&:hover": {
-                  color: "white",
-                },
-              }}
-              onClick={() => navigate("/anti-guide")}
-            >
-              Anti Guide
-            </Typography>
           </Box>
 
           <Box
