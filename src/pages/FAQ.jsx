@@ -305,7 +305,7 @@ const FAQ = () => {
           >
             A:
           </span>{" "}
-          42
+          Jun's Feet Pics
         </Typography>
       </Box>
     </Container>
