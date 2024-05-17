@@ -1,24 +1,25 @@
 .most-important-grabs {
-    padding: 3px;
+  padding: 3px;
+  margin-bottom: 10px;
 }
 
 .most-important-grabs h2 {
-    color: #d42f2f;
-    margin-bottom: 3px;
+  color: #d42f2f;
+  margin-bottom: 3px;
 }
 
 .most-important-grabs ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .most-important-grabs li {
-    margin-bottom: 12px;
-    padding: 8px;
-    background-color: #333;
-    /* Light grey background for each list item */
-    border-radius: 8px;
-    /* Rounded corners for the list items */
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #333;
+  /* Light grey background for each list item */
+  border-radius: 8px;
+  /* Rounded corners for the list items */
 }
 
 /* .grab-move,
@@ -29,37 +30,41 @@
 } */
 
 .escape-label {
-    margin-right: 8px;
-    /* Space before the escape move image */
-    font-weight: bold;
-    /* Make the label bold */
-    color: #bcbcbc;
-    /* Dark grey color for text to distinguish it from images */
+  margin-right: 8px;
+  /* Space before the escape move image */
+  font-weight: bold;
+  /* Make the label bold */
+  color: #bcbcbc;
+  /* Dark grey color for text to distinguish it from images */
 }
-
 
 .grab-move img,
 .escape-move img {
-    vertical-align: middle;
-    /* Align images vertically */
-    margin-right: 4px;
-    /* Space between the images */
+  vertical-align: middle;
+  /* Align images vertically */
+  margin-right: 4px;
+  /* Space between the images */
 }
 
 .grab-move::after {
-    content: '';
-    /* Add content for the pseudo-element */
-    display: block;
-    /* Display the pseudo-element as a block */
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-    /* Make the pseudo-element full width */
-    height: 1px;
-    /* Set the height of the pseudo-element */
-    background-image: linear-gradient(to right, transparent, #d42f2f, transparent);
+  content: "";
+  /* Add content for the pseudo-element */
+  display: block;
+  /* Display the pseudo-element as a block */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  /* Make the pseudo-element full width */
+  height: 1px;
+  /* Set the height of the pseudo-element */
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #d42f2f,
+    transparent
+  );
 }
 
 #imp-grabs {
-    flex-direction: column;
+  flex-direction: column;
 }
