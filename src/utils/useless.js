@@ -120,6 +120,7 @@ const tips = [
   "Subscribe to BrawlPro",
   "Fuck Konoha Village",
   "You did well now log off and get some sleep bbg",
+  "Subscribe to MishimaComplex",
 ];
 
 export default tips;
