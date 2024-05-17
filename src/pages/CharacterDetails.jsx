@@ -14,6 +14,7 @@ import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
+import CreatorNotes from "../components/CreatorNotes";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -256,6 +257,17 @@ const CharacterDetails = () => {
                     />
                   </Paper>
                 </Grid>
+                {character.creatorNotes && character.creatorNotes.length > 0 ? (
+                  <Grid item xs={12}>
+                    <Paper sx={{ marginBottom: 1 }}>
+                      <CreatorNotes
+                        creatorNotes={character.creatorNotes[0]}
+                        name={characterName}
+                      />
+                    </Paper>
+                  </Grid>
+                ) : null}
+
                 {character.chainThrows &&
                 Object.keys(character.chainThrows).length > 0 ? (
                   <Grid item xs={12}>
