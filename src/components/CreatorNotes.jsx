@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Box, Typography, Avatar } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FaTwitch, FaDiscord } from "react-icons/fa";
 import XIcon from "@mui/icons-material/X";
@@ -9,16 +9,24 @@ import renderInputImage from "../utils/renderInputImage";
 import Link from "@mui/material/Link";
 import "./CreatorNotes.css"; // Import the CSS file
 
+const primaryRed = { color: "rgba(212, 47, 47, 1)" };
+const creatorSocialIconStyling = {
+  fontSize: "1.125rem",
+  marginLeft: ".5rem",
+  marginBottom: "-.2rem",
+  // ...primaryRed,
+};
+
 const renderSocialMediaIcon = (icon) => {
   switch (icon) {
     case "youtube":
-      return <YouTubeIcon sx={{ fontSize: "2.5rem" }} />;
+      return <YouTubeIcon sx={creatorSocialIconStyling} />;
     case "twitch":
-      return <FaTwitch sx={{ fontSize: "2.5rem" }} />;
+      return <FaTwitch sx={creatorSocialIconStyling} />;
     case "twitter":
-      return <XIcon sx={{ fontSize: "2.5rem" }} />;
+      return <XIcon sx={creatorSocialIconStyling} />;
     case "discord":
-      return <FaDiscord sx={{ fontSize: "2.5rem" }} />;
+      return <FaDiscord sx={creatorSocialIconStyling} />;
     default:
       return null;
   }
@@ -91,52 +99,61 @@ const CreatorNotes = ({ creatorNotes, name }) => {
             href={creatorNotes.socialMediaLink}
             target="_blank"
             rel="noopener noreferrer"
+            sx={{ textDecoration: "none" }}
           >
-            <Typography
-              variant="h6"
+            <Box
               className="author-name"
-              sx={{ fontFamily: "Michroma", color: "rgba(212, 47, 47, 1)" }}
-            >
-              {creatorNotes.author}
-            </Typography>
-          </Link>
-          <Link
-            href={creatorNotes.socialMediaLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Avatar
               sx={{
-                bgcolor: "transparent",
-                color: "rgba(212, 47, 47, 1)",
+                fontFamily: "Michroma",
+                color: "white",
+                display: "flex",
+                marginBottom: "2rem ",
               }}
             >
-              {renderSocialMediaIcon(creatorNotes.socialMediaIcon)}
-            </Avatar>
+              <span>Those notes were brought to you by: </span>
+              <Box
+                sx={{
+                  ...primaryRed,
+                  display: "flex",
+                  alignItems: "center",
+                  "&:hover": { color: "white" },
+                }}
+              >
+                {renderSocialMediaIcon(creatorNotes.socialMediaIcon)}{" "}
+                {creatorNotes.author}.
+              </Box>
+            </Box>
           </Link>
         </Box>
-        <Typography
-          variant="subtitle1"
-          sx={{
-            fontWeight: "bold",
-            fontFamily: "Michroma",
-            color: "rgba(212, 47, 47, 1)",
-          }}
-        >
-          Staple Combo:
-        </Typography>
-        <Box className="combo-container">
-          {creatorNotes.stapleCombo.map((move, index) => (
-            <Box key={index} className="combo-move">
-              {renderInputImage(move)}
-            </Box>
-          ))}
+        <Box sx={{ marginBottom: "3rem" }}>
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: "bold",
+              fontFamily: "Michroma",
+              ...primaryRed,
+              marginBottom: "1em",
+            }}
+          >
+            Staple Combo:
+          </Typography>
+          <Box className="combo-container">
+            {creatorNotes.stapleCombo.map((move, index) => (
+              <Box key={index} className="combo-move">
+                {renderInputImage(move)}
+              </Box>
+            ))}
+          </Box>
         </Box>
         {Object.keys(aggregatedNotes).map((title, index) => (
           <Box key={index} className="note">
             <Typography
-              variant="subtitle1"
-              sx={{ fontWeight: "bold", fontFamily: "Michroma" }}
+              variant="h6"
+              sx={{
+                fontWeight: "bold",
+                fontFamily: "Michroma",
+                ...primaryRed,
+              }}
             >
               {title}
             </Typography>
@@ -145,9 +162,11 @@ const CreatorNotes = ({ creatorNotes, name }) => {
                 {note.move && (
                   <Box className="move-info">
                     <Typography
-                      variant="subtitle2"
+                      variant="subtitle1"
                       className="move-title"
-                      sx={{ fontFamily: "Michroma" }}
+                      sx={{
+                        fontFamily: "Michroma",
+                      }}
                     >
                       Move:
                     </Typography>
@@ -157,7 +176,12 @@ const CreatorNotes = ({ creatorNotes, name }) => {
                 {note.content && (
                   <Typography
                     className="note-content"
-                    sx={{ fontFamily: "Michroma" }}
+                    sx={{
+                      fontFamily: "Roboto",
+                      letterSpacing: "1.5px",
+                      fontSize: "1.1rem",
+                      lineHeight: "1.5em",
+                    }}
                   >
                     {note.content}
                   </Typography>
