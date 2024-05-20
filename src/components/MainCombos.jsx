@@ -109,8 +109,6 @@ const MainCombos = ({ combos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-<div style={{padding: ".5rem 0"}}></div>
-
       <CollapsableTitle
         title="Main Combos"
         toggleState={isCollapsed}

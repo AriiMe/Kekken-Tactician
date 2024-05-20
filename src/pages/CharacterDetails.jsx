@@ -16,6 +16,9 @@ import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
 import CreatorNotes from "../components/CreatorNotes";
 
+const boraderRaduisSection = { borderRadius: "5px" };
+const leftColumnMargin = { marginBottom: "0rem" };
+
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState(null);
@@ -192,7 +195,7 @@ const CharacterDetails = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Container maxWidth="2xl" sx={{}}>
-        <Grid container spacing={1}>
+        <Grid container spacing={1} columnSpacing={2}>
           {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}
           <Grid item xs={12} md={4} lg={3} className={styles.leftColumn}>
             <Paper
@@ -200,37 +203,39 @@ const CharacterDetails = () => {
                 overflowY: "scroll",
                 minHeight: "100vh",
                 scrollbarWidth: "none",
+                marginTop: "2rem",
+                background: "#242424",
                 "& .input-icons": {
                   width: "25px",
                   height: "25px",
                 },
               }}
             >
-              <Paper sx={{ marginBottom: 1 }}>
+              <Paper sx={leftColumnMargin}>
                 <CharProfile pic={character.image} name={character.name} />
               </Paper>
-              <Paper sx={{ marginBottom: 1 }}>
+              <Paper sx={leftColumnMargin}>
                 <HeatDash heat={character.heatSystem} name={characterName} />
               </Paper>
-              <Paper sx={{ marginBottom: 1 }}>
+              <Paper sx={leftColumnMargin}>
                 <MostImportantGrabs
                   grabs={character.mostImportantGrabs}
                   name={characterName}
                 />
               </Paper>
-              <Paper sx={{ marginBottom: 1 }}>
+              <Paper sx={leftColumnMargin}>
                 <MiniCombo
                   miniCombo={character.guaranteedFollowUps}
                   name={characterName}
                 />
               </Paper>
-              <Paper>
+              <Paper sx={leftColumnMargin}>
                 <HeatEngagers
                   heat={character.heatEngagers}
                   name={characterName}
                 />
               </Paper>
-              <Paper>
+              <Paper sx={leftColumnMargin}>
                 <Punishers
                   punishers={character.punishers}
                   name={characterName}
@@ -246,11 +251,12 @@ const CharacterDetails = () => {
                 overflowY: "scroll",
                 minHeight: "100vh",
                 scrollbarWidth: "none",
+                background: "#242424",
               }}
             >
-              <Grid container spacing={0}>
+              <Grid container spacing={0} sx={{ marginTop: "2rem" }}>
                 <Grid item xs={12}>
-                  <Paper sx={{ marginBottom: 1 }}>
+                  <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>
                     <MainCombos
                       combos={character.importantCombos}
                       name={characterName}
@@ -259,7 +265,7 @@ const CharacterDetails = () => {
                 </Grid>
                 {character.creatorNotes && character.creatorNotes.length > 0 ? (
                   <Grid item xs={12}>
-                    <Paper sx={{ marginBottom: 1 }}>
+                    <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>
                       <CreatorNotes
                         creatorNotes={character.creatorNotes[0]}
                         name={characterName}
@@ -271,7 +277,7 @@ const CharacterDetails = () => {
                 {character.chainThrows &&
                 Object.keys(character.chainThrows).length > 0 ? (
                   <Grid item xs={12}>
-                    <Paper>
+                    <Paper sx={boraderRaduisSection}>
                       <ChainThrows
                         chainThrows={character.chainThrows}
                         name={characterName}
@@ -280,7 +286,7 @@ const CharacterDetails = () => {
                   </Grid>
                 ) : null}
                 <Grid item xs={12}>
-                  <Paper>
+                  <Paper sx={boraderRaduisSection}>
                     <WallCombos
                       wallCombos={character.wallCombos}
                       name={characterName}
@@ -288,7 +294,7 @@ const CharacterDetails = () => {
                   </Paper>
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper>
+                  <Paper sx={boraderRaduisSection}>
                     <ComboEnders enders={character.comboEnders} />
                   </Paper>
                 </Grid>
