@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { v4 as uuidv4 } from "uuid";
 import { Helmet } from "react-helmet";
-import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./Punishers.css";
-import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const Punishers = ({ punishers, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -41,18 +38,10 @@ const Punishers = ({ punishers, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-      <CollapsableTitle
+      <CollapsableSection
         title="Punishers"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <ul>
           {punishers.startup.map((punish, index) => (
@@ -71,7 +60,7 @@ const Punishers = ({ punishers, name }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };

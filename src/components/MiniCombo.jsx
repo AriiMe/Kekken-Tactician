@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 
 import { Helmet } from "react-helmet";
 import "./MiniCombo.css";
-import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const MiniCombo = ({ miniCombo, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -46,18 +43,10 @@ const MiniCombo = ({ miniCombo, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-      <CollapsableTitle
+      <CollapsableSection
         title="Mini Combos"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <div className="combo-container">
           {Object.entries(groupedMoves).map(([followUp, moves], index) => (
@@ -81,7 +70,7 @@ const MiniCombo = ({ miniCombo, name }) => {
             </div>
           ))}
         </div>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };

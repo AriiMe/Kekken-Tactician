@@ -7,6 +7,7 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./WallCombos.css";
 import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const WallCombos = ({ wallCombos, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -46,17 +47,10 @@ const WallCombos = ({ wallCombos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-      <CollapsableTitle
+      <CollapsableSection
         title="Wall Combos"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <Grid container spacing={2}>
           <Grid item xs={6}>
@@ -102,7 +96,7 @@ const WallCombos = ({ wallCombos, name }) => {
             </div>
           </Grid>
         </Grid>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };

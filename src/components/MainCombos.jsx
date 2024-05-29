@@ -1,16 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import renderInputImage from "../utils/renderInputImage";
 import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
 import { useDisplayMode } from "../context/DisplayModeContext";
-import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
@@ -109,18 +106,10 @@ const MainCombos = ({ combos, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-      <CollapsableTitle
+      <CollapsableSection
         title="Main Combos"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <table>
           <thead>
@@ -136,7 +125,9 @@ const MainCombos = ({ combos, name }) => {
                 <tr>
                   <td>
                     {combo.launchers.map((launcher, i) => (
-                      <div key={i} className="launch-options">{renderInputImage(launcher)}</div>
+                      <div key={i} className="launch-options">
+                        {renderInputImage(launcher)}
+                      </div>
                     ))}
                     {combo.vidUrl && (
                       <IconButton
@@ -188,7 +179,7 @@ const MainCombos = ({ combos, name }) => {
             ))}
           </tbody>
         </table>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };
