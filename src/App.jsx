@@ -16,6 +16,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Credits from "./pages/Credits";
 import FAQ from "./pages/FAQ";
 import News from "./pages/News";
+import AntiCharDetails from "./pages/AntiCharDetails";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/credits" element={<Credits />} />
             <Route path="/update-request" element={<UpdateRequest />} />
             <Route path="/anti-guide" element={<AntiGuideSelect />} />
+            <Route path="/anti-guide/character/:characterId" element={<AntiCharDetails />} />
             <Route path="/faqu" element={<FAQ />} />
             <Route path="/news" element={<News />} />
             <Route

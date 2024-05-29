@@ -177,8 +177,8 @@ const CreatorNotes = ({ creatorNotes, name }) => {
                   <Typography
                     className="note-content"
                     sx={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "1.5px",
+                      fontFamily: "Inter",
+                      letterSpacing: ".5px",
                       fontSize: "1.1rem",
                       lineHeight: "1.5em",
                     }}
