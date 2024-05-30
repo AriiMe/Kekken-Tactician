@@ -13,6 +13,7 @@ const CollapsableSection = ({
   collapseFn,
   title,
   clr,
+  styles,
   children,
 }) => {
   return (
@@ -22,17 +23,18 @@ const CollapsableSection = ({
         flexDirection: "column",
         padding: "0 10px",
         color: clr,
+        ...styles
       }}
     >
       <Box sx={{ ...flexBaselineBetween, width: "100%" }}>
-        <h2>{title}</h2>
+        <h2 style={{color: "#d42f2f"}}>{title}</h2>
         <div style={{ marginBottom: "10px" }}>
           <IconButton onClick={collapseFn}>
             {toggleState ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </IconButton>
         </div>
       </Box>
-      <div
+      <Box
         style={{
           transition: "width 0.3s",
           overflowX: "auto",
@@ -41,7 +43,7 @@ const CollapsableSection = ({
         }}
       >
         {children}
-      </div>
+      </Box>
     </Box>
   );
 };

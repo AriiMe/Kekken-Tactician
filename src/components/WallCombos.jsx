@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Grid } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./WallCombos.css";
-import CollapsableTitle from "./CollapsableTitle";
 import CollapsableSection from "./CollapsableSection";
 
 const WallCombos = ({ wallCombos, name }) => {
