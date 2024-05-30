@@ -16,6 +16,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Credits from "./pages/Credits";
 import FAQ from "./pages/FAQ";
 import News from "./pages/News";
+import InputTrainer from "./pages/InputTrainer";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/anti-guide" element={<AntiGuideSelect />} />
             <Route path="/faqu" element={<FAQ />} />
             <Route path="/news" element={<News />} />
+            <Route path="/input-trainer" element={<InputTrainer />} />
             <Route
               path="/nothing-here/for-sure/no-easter-egg"
               element={<KomradEasterEgg />}
