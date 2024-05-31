@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Howl } from "howler";
 import renderInputImage from "../utils/renderInputImage";
 
@@ -49,17 +49,14 @@ const gamepadButtonMap = {
   2: "4",
 };
 
-const COMBINATION_THRESHOLD = 50; // Threshold in milliseconds
-const COMBINATION_RESET_DELAY = 100; // Delay in milliseconds before resetting combination
-
 const InputTrainer = () => {
   const [gamepadIndex, setGamepadIndex] = useState(null);
   const [keys, setKeys] = useState(defaultKeys);
   const [pressedKeys, setPressedKeys] = useState({});
   const [inputHistory, setInputHistory] = useState([]);
   const [currentCombination, setCurrentCombination] = useState("");
-  const [lastKeyPressTime, setLastKeyPressTime] = useState(Date.now());
-  const [combinationTimeout, setCombinationTimeout] = useState(null);
+  const [frameCounter, setFrameCounter] = useState(0);
+  const frameRequestRef = useRef();
 
   useEffect(() => {
     const savedKeys = localStorage.getItem("inputTrainerKeys");
@@ -82,53 +79,54 @@ const InputTrainer = () => {
     });
   };
 
-  const remapCombination = (combination) => {
-    const parts = combination.split("+").map(Number);
-    parts.sort((a, b) => a - b);
-    return parts.join("+");
+  const sortCombination = (combination) => {
+    const directionals = combination
+      .filter((input) => "udbf".includes(input))
+      .sort((a, b) => {
+        const order = {
+          u: 1,
+          d: 2,
+          b: 3,
+          f: 4,
+        };
+        return order[a] - order[b];
+      });
+    const buttons = combination
+      .filter((input) => "1234".includes(input))
+      .sort();
+
+    const sortedCombination = [
+      ...directionals.join(""), // Join directionals without plus sign
+      ...buttons.join("+"), // Join buttons with plus sign
+    ];
+
+    return sortedCombination.join("");
   };
 
   const handleKeyPress = (event) => {
     const { key } = event;
     if (pressedKeys[key]) return; // If key is already pressed, do nothing
 
-    const currentTime = Date.now();
-    const isWithinThreshold =
-      currentTime - lastKeyPressTime <= COMBINATION_THRESHOLD;
     const direction = directionMap[key];
     const button = buttonMap[key];
-    let newCombination = "";
+    let newCombination = [];
 
     if (direction) {
-      if (isWithinThreshold && currentCombination) {
-        newCombination = `${currentCombination}${direction}`
-          .split("")
-          .sort()
-          .join("");
-      } else {
-        newCombination = direction;
-      }
+      newCombination = currentCombination.split("").concat(direction);
     } else if (button) {
-      if (isWithinThreshold && currentCombination) {
-        newCombination = remapCombination(`${currentCombination}+${button}`);
-      } else {
-        newCombination = button;
-      }
+      newCombination = currentCombination
+        ? currentCombination.split("+").concat(button)
+        : [button];
     }
 
     setPressedKeys((prev) => ({ ...prev, [key]: true })); // Mark key as pressed
-    setCurrentCombination(newCombination);
-    setLastKeyPressTime(currentTime);
+    const sortedCombination = sortCombination(newCombination);
+    setCurrentCombination(sortedCombination);
 
     if (direction) {
       playSound(direction);
     } else if (button) {
       playSound(button);
-    }
-
-    // Clear any existing timeout to reset the combination
-    if (combinationTimeout) {
-      clearTimeout(combinationTimeout);
     }
   };
 
@@ -140,42 +138,11 @@ const InputTrainer = () => {
       return newPressedKeys;
     }); // Mark key as released
 
-    // Set a timeout to reset the combination after a short delay
-    const timeout = setTimeout(() => {
-      if (currentCombination) {
-        let formattedCombination = currentCombination
-          .split("+")
-          .map((combo) => {
-            // Correctly order the directional inputs
-            if (
-              combo.length === 2 &&
-              "udfb".includes(combo[0]) &&
-              "udfb".includes(combo[1])
-            ) {
-              const [first, second] = combo.split("");
-              if (
-                (first === "f" && second === "u") ||
-                (first === "b" && second === "u") ||
-                (first === "f" && second === "d") ||
-                (first === "b" && second === "d")
-              ) {
-                return `${second}${first}`;
-              }
-            }
-            // Correctly order numeric inputs
-            if (combo.includes("+")) {
-              return remapCombination(combo);
-            }
-            return combo;
-          })
-          .join("+");
-
-        updateInputHistory(formattedCombination);
-        setCurrentCombination(""); // Reset combination
-      }
-    }, COMBINATION_RESET_DELAY);
-
-    setCombinationTimeout(timeout);
+    // When key is released, update input history and reset combination
+    if (currentCombination) {
+      updateInputHistory(currentCombination);
+      setCurrentCombination("");
+    }
   };
 
   const handleInputChange = (e) => {
@@ -192,68 +159,59 @@ const InputTrainer = () => {
     if (gamepads[gamepadIndex]) {
       const gp = gamepads[gamepadIndex];
       gp.buttons.forEach((button, index) => {
-        if (button.pressed) {
-          if (!pressedKeys[index]) {
-            setPressedKeys((prev) => ({ ...prev, [index]: true }));
-            const input = gamepadButtonMap[index];
-            if (input) {
-              playSound(input);
-              setCurrentCombination((prev) =>
-                prev ? remapCombination(`${prev}+${input}`) : input
-              );
-            }
+        if (button.pressed && !pressedKeys[index]) {
+          setPressedKeys((prev) => ({ ...prev, [index]: true }));
+          const input = gamepadButtonMap[index];
+          if (input) {
+            playSound(input);
+            const newCombination = currentCombination
+              ? currentCombination.split("+").concat(input)
+              : [input];
+            const sortedCombination = sortCombination(newCombination);
+            setCurrentCombination(sortedCombination);
           }
-        } else {
-          setPressedKeys((prev) => ({ ...prev, [index]: false }));
+        } else if (!button.pressed && pressedKeys[index]) {
+          setPressedKeys((prev) => {
+            const newPressedKeys = { ...prev };
+            delete newPressedKeys[index];
+            return newPressedKeys;
+          });
         }
       });
 
       if (currentCombination) {
-        let sortedCombination = currentCombination.split("+").sort((a, b) => {
-          if (a.length === b.length) {
-            return a.localeCompare(b);
-          }
-          if ("ud".includes(a) && "fb".includes(b)) {
-            return -1;
-          }
-          if ("fb".includes(a) && "ud".includes(b)) {
-            return 1;
-          }
-          return b.length - a.length;
-        });
-
-        // Correctly order the directional inputs
-        if (sortedCombination.length === 2) {
-          const [first, second] = sortedCombination;
-          if (
-            (first === "f" && second === "u") ||
-            (first === "b" && second === "u") ||
-            (first === "f" && second === "d") ||
-            (first === "b" && second === "d")
-          ) {
-            sortedCombination = [second, first];
-          }
-        }
-
-        // Join numeric inputs with "+" and directional inputs without "+"
-        const formattedCombination = sortedCombination
-          .map((input, index, arr) => {
-            if (
-              index > 0 &&
-              "1234".includes(input) &&
-              "1234".includes(arr[index - 1])
-            ) {
-              return `+${input}`;
-            }
-            return input;
-          })
-          .join("");
-
-        updateInputHistory(formattedCombination);
-        setCurrentCombination(""); // Reset combination
+        updateInputHistory(currentCombination);
+        setCurrentCombination("");
       }
     }
   };
+
+  const updateFrameCounter = () => {
+    setFrameCounter((prev) => (prev < 999 ? prev + 1 : 999));
+  };
+
+  const animate = () => {
+    updateFrameCounter();
+    if (gamepadIndex !== null) {
+      handleGamepadInput();
+    }
+    frameRequestRef.current = requestAnimationFrame(animate);
+  };
+
+  useEffect(() => {
+    frameRequestRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frameRequestRef.current);
+  }, [gamepadIndex, pressedKeys, currentCombination]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("keyup", handleKeyRelease);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("keyup", handleKeyRelease);
+    };
+  }, [keys, pressedKeys, currentCombination]);
 
   useEffect(() => {
     const connectHandler = (e) => {
@@ -273,30 +231,13 @@ const InputTrainer = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (gamepadIndex !== null) {
-        handleGamepadInput();
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [gamepadIndex, pressedKeys, currentCombination]);
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress);
-    window.addEventListener("keyup", handleKeyRelease);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-      window.removeEventListener("keyup", handleKeyRelease);
-    };
-  }, [keys, pressedKeys, currentCombination]);
-
   return (
     <div>
       <h1>Input Trainer</h1>
       <p>Press arrow keys, 1-4, or use your gamepad to play sounds</p>
+      <div>
+        <strong>Frame Counter:</strong> {frameCounter}
+      </div>
       <form>
         <div>
           <label>
@@ -390,13 +331,13 @@ const InputTrainer = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          width: "50%",
           marginTop: "20px",
-          flexWrap: "wrap",
         }}
       >
         {inputHistory.map((input, index) => (
-          <div key={index} style={{ margin: "5px" }}>
+          <div key={index} style={{ textAlign: "center" }}>
             {renderInputImage(input)}
           </div>
         ))}
