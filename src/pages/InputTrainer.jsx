@@ -49,12 +49,16 @@ const gamepadButtonMap = {
   2: "4",
 };
 
+const COMBINATION_THRESHOLD = 20; // milliseconds
+
 const InputTrainer = () => {
   const [gamepadIndex, setGamepadIndex] = useState(null);
   const [keys, setKeys] = useState(defaultKeys);
   const [pressedKeys, setPressedKeys] = useState({});
   const [inputHistory, setInputHistory] = useState([]);
   const [currentCombination, setCurrentCombination] = useState("");
+  const [lastKeyPressTime, setLastKeyPressTime] = useState(Date.now());
+  const [inputQueue, setInputQueue] = useState([]);
   const [frameCounter, setFrameCounter] = useState(0);
   const frameRequestRef = useRef();
 
@@ -109,19 +113,30 @@ const InputTrainer = () => {
 
     const direction = directionMap[key];
     const button = buttonMap[key];
-    let newCombination = [];
+    const currentTime = Date.now();
+    const timeSinceLastPress = currentTime - lastKeyPressTime;
+    let newCombination = currentCombination
+      ? currentCombination.split("+")
+      : [];
 
-    if (direction) {
-      newCombination = currentCombination.split("").concat(direction);
-    } else if (button) {
-      newCombination = currentCombination
-        ? currentCombination.split("+").concat(button)
-        : [button];
+    if (direction || button) {
+      if (timeSinceLastPress <= COMBINATION_THRESHOLD) {
+        if (direction) {
+          newCombination.push(direction);
+        } else if (button) {
+          newCombination.push(button);
+        }
+      } else {
+        if (currentCombination) {
+          updateInputHistory(currentCombination);
+        }
+        newCombination = direction ? [direction] : [button];
+      }
     }
 
     setPressedKeys((prev) => ({ ...prev, [key]: true })); // Mark key as pressed
-    const sortedCombination = sortCombination(newCombination);
-    setCurrentCombination(sortedCombination);
+    setCurrentCombination(sortCombination(newCombination));
+    setLastKeyPressTime(currentTime);
 
     if (direction) {
       playSound(direction);
@@ -138,10 +153,14 @@ const InputTrainer = () => {
       return newPressedKeys;
     }); // Mark key as released
 
-    // When key is released, update input history and reset combination
-    if (currentCombination) {
-      updateInputHistory(currentCombination);
-      setCurrentCombination("");
+    // Only update history and reset combination if not part of an ongoing combination
+    const currentTime = Date.now();
+    const timeSinceLastPress = currentTime - lastKeyPressTime;
+    if (timeSinceLastPress > COMBINATION_THRESHOLD) {
+      if (currentCombination) {
+        updateInputHistory(currentCombination);
+        setCurrentCombination("");
+      }
     }
   };
 
