@@ -1,9 +1,18 @@
 // CharacterDetails.jsx
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, styled } from "@mui/material";
 import { Helmet } from "react-helmet";
 import styles from "./AntiCharDetails.module.css";
+import KeyMovesToPunish from "../components/KeyMovesToPunish";
+import CounterStrategy from "../components/CounterStratigy";
+
+const ContentBox = styled(Box)(({ theme }) => ({
+  background: "#2a2a2a",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  padding: "0rem 2rem",
+  margin: "2rem auto",
+}));
 
 const AntiCharDetails = () => {
   const [character, setCharacter] = useState(null);
@@ -137,7 +146,10 @@ const AntiCharDetails = () => {
         <meta name="keywords" content={keywords} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
-      <Container maxWidth="2xl" sx={{}}>
+      <Container
+        maxWidth="2xl"
+        sx={{ width: "90%!important", margin: "0 auto" }}
+      >
         <Box className={styles.charPicContainer}>
           <h2>{character.name}</h2>
           <img
@@ -152,25 +164,27 @@ const AntiCharDetails = () => {
           mt={4}
           className={styles.introGridContainer}
         >
-            <Grid xs={12} md={6} className={styles.introBox}>
+          <Grid item xs={12} md={6} className={styles.introBox}>
             <h3>Optimal Range ({character.name.split(" ")[0]})</h3>
             <p>{antiChar.effectiveRange}</p>
           </Grid>
-          <Grid xs={12} md={6} className={styles.introBox}>
+          <Grid item xs={12} md={6} className={styles.introBox}>
             <h3>Weak Side</h3>
             <p>{antiChar.weakSide}</p>
           </Grid>
-          <Grid xs={12} className={styles.introOverview}>
+          <Grid item xs={12} className={styles.introOverview}>
             <h2>Character Overview:</h2>
             <p>{antiChar.overview}</p>
           </Grid>
-          <Grid xs={12} className={styles.introStrategy}>
+          <Grid item xs={12} className={styles.introStrategy}>
             <h2>Counter Strategy:</h2>
             <p>{antiChar.counterStrategy}</p>
           </Grid>
-
-          
         </Grid>
+        <ContentBox>
+          <KeyMovesToPunish keyMovesArr={antiChar.keyMovesToPunish} />
+          <CounterStrategy strategyArr={antiChar.detailedCounterStrategies} />
+        </ContentBox>
       </Container>
     </Box>
   );

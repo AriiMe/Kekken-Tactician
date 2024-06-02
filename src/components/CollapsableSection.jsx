@@ -39,6 +39,7 @@ const CollapsableSection = ({
           transition: "width 0.3s",
           overflowX: "auto",
           width: "100%",
+          height: "fit-content",
           display: toggleState ? "none" : "block",
         }}
       >

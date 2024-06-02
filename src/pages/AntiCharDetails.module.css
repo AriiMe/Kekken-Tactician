@@ -15,8 +15,8 @@
 }
 
 .introGridContainer {
-  max-width: 90%!important ;
-  margin: 0 auto;
+  /* max-width: 90%!important ; */
+  /* margin: 0 auto; */
 }
 
 .introOverview h2,
@@ -35,7 +35,7 @@
   padding: 0.5rem 1rem;
   border-radius: 10px;
   text-align: center;
-  max-width: 45%!important;
+  /* max-width: 47%!important; */
   margin: 1rem auto;
 }
 
