@@ -39,6 +39,11 @@ const KeyMovesToPunish = ({ keyMovesArr }) => {
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
         styles={{ padding: "1rem 0" }}
+        contentStyles={{
+          background: "#333333",
+          padding: "1rem 3rem",
+          borderRadius: "8px",
+        }}
       >
         {keyMovesArr.map((keyMove) => (
           <KeyMoveContainer key={keyMove._id}>

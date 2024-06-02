@@ -5,11 +5,10 @@ import { Box, Container, Grid, styled } from "@mui/material";
 import { Helmet } from "react-helmet";
 import styles from "./AntiCharDetails.module.css";
 import KeyMovesToPunish from "../components/KeyMovesToPunish";
-import CounterStrategy from "../components/CounterStratigy";
+import CounterStrategy from "../components/CounterStrategy";
 
 const ContentBox = styled(Box)(({ theme }) => ({
-  background: "#2a2a2a",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+ 
   padding: "0rem 2rem",
   margin: "2rem auto",
 }));

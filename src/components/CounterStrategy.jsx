@@ -63,6 +63,11 @@ const CounterStrategy = ({ strategyArr }) => {
           toggleState={collapsedStates[index]}
           collapseFn={() => toggleCollapse(index)}
           styles={{ padding: "1rem 0", marginTop: "2rem" }}
+          contentStyles={{
+            background: "#333333",
+            padding: "1rem 3rem",
+            borderRadius: "8px",
+          }}
           key={strategy._id}
         >
           <DetailedMoveIntro>
