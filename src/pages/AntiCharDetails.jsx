@@ -9,7 +9,7 @@ import CounterStrategy from "../components/CounterStrategy";
 
 const ContentBox = styled(Box)(({ theme }) => ({
  
-  padding: "0rem 2rem",
+  // padding: "0rem 2rem",
   margin: "2rem auto",
 }));
 
