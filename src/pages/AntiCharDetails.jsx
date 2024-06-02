@@ -8,7 +8,6 @@ import KeyMovesToPunish from "../components/KeyMovesToPunish";
 import CounterStrategy from "../components/CounterStrategy";
 
 const ContentBox = styled(Box)(({ theme }) => ({
- 
   // padding: "0rem 2rem",
   margin: "2rem auto",
 }));
@@ -163,13 +162,17 @@ const AntiCharDetails = () => {
           mt={4}
           className={styles.introGridContainer}
         >
-          <Grid item xs={12} md={6} className={styles.introBox}>
-            <h3>Optimal Range ({character.name.split(" ")[0]})</h3>
-            <p>{antiChar.effectiveRange}</p>
+          <Grid item xs={12} md={6}>
+            <div className={styles.introBox}>
+              <h3>Optimal Range ({character.name.split(" ")[0]})</h3>
+              <p>{antiChar.effectiveRange}</p>
+            </div>
           </Grid>
-          <Grid item xs={12} md={6} className={styles.introBox}>
-            <h3>Weak Side</h3>
-            <p>{antiChar.weakSide}</p>
+          <Grid item xs={12} md={6}>
+            <div className={styles.introBox}>
+              <h3>Weak Side</h3>
+              <p>{antiChar.weakSide}</p>
+            </div>
           </Grid>
           <Grid item xs={12} className={styles.introOverview}>
             <h2>Character Overview:</h2>
