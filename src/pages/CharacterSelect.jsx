@@ -252,6 +252,7 @@ const CharacterSelect = () => {
                         <StyledImage
                           src={character.image}
                           alt={character.name}
+                          sx={{ objectPosition: "top", height: "13em" }}
                         />
                       </ImagePaper>
                     </Tooltip>
