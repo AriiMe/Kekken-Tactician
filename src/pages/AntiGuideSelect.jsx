@@ -28,7 +28,13 @@ const AntiGuideSelect = () => {
     fetch(`${apiUrl}/characters`)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters(data);
+        const filteredData = data.filter(
+          (character) =>
+            Array.isArray(character.counterSchema) &&
+            character.counterSchema.length > 0
+        );
+
+        setCharacters(filteredData);
 
         setLoading(false);
       })
@@ -37,7 +43,7 @@ const AntiGuideSelect = () => {
 
   const handleCharacterNavigate = (id) => {
     console.log(id);
-    navigate(`/anti-guide/character/${id}`)
+    navigate(`/anti-guide/character/${id}`);
   };
 
   return (
@@ -71,6 +77,7 @@ const AntiGuideSelect = () => {
             <StyledImage
               src={character.image}
               alt={character.name}
+              sx={{ objectPosition: "top" }}
               onClick={() => handleCharacterNavigate(character._id)}
             />
           </Grid>

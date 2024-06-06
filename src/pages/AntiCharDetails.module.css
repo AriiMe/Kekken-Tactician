@@ -9,9 +9,10 @@
 }
 
 .charPic {
-  width: 150px;
-  height: 150px;
+  width: 15em;
+  height: 15em;
   object-fit: cover;
+  object-position: top;
 }
 
 .introGridContainer {
@@ -23,6 +24,7 @@
 .introStrategy h2 {
   color: #d42f2f;
 }
+
 .introOverview p,
 .introStrategy p {
   line-height: 1.5em;
