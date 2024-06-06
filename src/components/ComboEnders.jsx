@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
-import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./ComboEnders.css";
-import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const ComboEnders = ({ enders }) => {
   // Group enders by category
@@ -21,17 +18,10 @@ const ComboEnders = ({ enders }) => {
 
   return (
     <div className="combo-enders">
-      <CollapsableTitle
+      <CollapsableSection
         title="Combo Enders"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <table className="combo-enders-table">
           <tbody>
@@ -61,7 +51,7 @@ const ComboEnders = ({ enders }) => {
             ))}
           </tbody>
         </table>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };

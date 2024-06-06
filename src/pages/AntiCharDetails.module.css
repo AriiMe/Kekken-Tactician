@@ -1,0 +1,53 @@
+.charPicContainer {
+  color: #d42f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.charPic {
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
+  object-position: top;
+}
+
+.introGridContainer {
+  /* max-width: 90%!important ; */
+  /* margin: 0 auto; */
+}
+
+.introOverview h2,
+.introStrategy h2 {
+  color: #d42f2f;
+}
+
+.introOverview p,
+.introStrategy p {
+  line-height: 1.5em;
+  font-family: "Inter";
+  font-size: 1.125rem;
+}
+
+.introBox {
+  background: #161616;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.introBox h3 {
+  font-size: 1.25rem;
+}
+
+.introBox p {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}

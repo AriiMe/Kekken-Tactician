@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
-import IconButton from "@mui/material/IconButton";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "./MostImportantGrabs.css";
-import { Box } from "@mui/material";
-import CollapsableTitle from "./CollapsableTitle";
+import CollapsableSection from "./CollapsableSection";
 
 const MostImportantGrabs = ({ grabs, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -42,19 +38,11 @@ const MostImportantGrabs = ({ grabs, name }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
-      
-      <CollapsableTitle
+
+      <CollapsableSection
         title="Important Grabs"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
-      />
-
-      <div
-        style={{
-          transition: "width 0.3s",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <ul>
           {grabs.map((grab, index) => (
@@ -66,7 +54,7 @@ const MostImportantGrabs = ({ grabs, name }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </CollapsableSection>
     </div>
   );
 };

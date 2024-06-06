@@ -4,10 +4,10 @@ import { Box, Typography } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FaTwitch, FaDiscord } from "react-icons/fa";
 import XIcon from "@mui/icons-material/X";
-import CollapsableTitle from "./CollapsableTitle";
 import renderInputImage from "../utils/renderInputImage";
 import Link from "@mui/material/Link";
 import "./CreatorNotes.css"; // Import the CSS file
+import CollapsableSection from "./CollapsableSection";
 
 const primaryRed = { color: "rgba(212, 47, 47, 1)" };
 const creatorSocialIconStyling = {
@@ -79,20 +79,11 @@ const CreatorNotes = ({ creatorNotes, name }) => {
         <meta name="keywords" content={keywords} />
       </Helmet>
 
-      <CollapsableTitle
+      <CollapsableSection
         title="Creator Notes"
         toggleState={isCollapsed}
         collapseFn={toggleCollapse}
         clr="rgba(212, 47, 47, 1)"
-      />
-
-      <Box
-        sx={{
-          transition: "width 0.3s",
-          marginLeft: "20px",
-          overflowX: "auto",
-          display: isCollapsed ? "none" : "block",
-        }}
       >
         <Box className="author-info">
           <Link
@@ -177,8 +168,8 @@ const CreatorNotes = ({ creatorNotes, name }) => {
                   <Typography
                     className="note-content"
                     sx={{
-                      fontFamily: "Roboto",
-                      letterSpacing: "1.5px",
+                      fontFamily: "Inter",
+                      letterSpacing: ".5px",
                       fontSize: "1.1rem",
                       lineHeight: "1.5em",
                     }}
@@ -190,7 +181,7 @@ const CreatorNotes = ({ creatorNotes, name }) => {
             ))}
           </Box>
         ))}
-      </Box>
+      </CollapsableSection>
     </div>
   );
 };
