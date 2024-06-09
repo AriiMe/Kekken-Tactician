@@ -75,3 +75,12 @@ button:focus-visible {
 .my-li {
   list-style: none;
 }
+
+
+@media (forced-colors: active) {
+  :root {
+    background-color: #242424;
+
+  }
+
+}

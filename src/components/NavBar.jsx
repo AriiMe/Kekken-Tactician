@@ -202,6 +202,11 @@ function Navbar() {
               Combo Generator
             </span>
           </ListItemButton>
+          <ListItemButton component={Link} to="/strat-roulette">
+            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
+              Strat Roulette
+            </span>
+          </ListItemButton>
           <ListItemButton component={Link} to="/anti-guide">
             <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
               Anti Guide
@@ -313,7 +318,7 @@ function Navbar() {
                   component="div"
                   onClick={() => navigate("/combo-generator")}
                   sx={{
-                    color: "#a32a2d",
+                    color: "#FFD700",
                     cursor: "pointer",
                     fontSize: ".7em",
                     fontFamily: "Michroma",
@@ -324,12 +329,28 @@ function Navbar() {
                 >
                   Combo Maker
                 </Typography>
+                <Typography
+                  variant="body1"
+                  component="div"
+                  onClick={() => navigate("/strat-roulette")}
+                  sx={{
+                    color: "#FFD700",
+                    cursor: "pointer",
+                    fontSize: ".7em",
+                    fontFamily: "Michroma",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  Strat Roulette
+                </Typography>
 
                 <Typography
                   variant="body1"
                   component="div"
                   sx={{
-                    color: "#a32a2d",
+                    color: "#FFD700",
                     cursor: "pointer",
                     fontSize: ".7rem",
                     fontFamily: "Michroma",
@@ -346,7 +367,7 @@ function Navbar() {
                   variant="body1"
                   component="div"
                   sx={{
-                    color: "#a32a2d",
+                    color: "#FFD700",
                     cursor: "pointer",
                     fontSize: ".7rem",
                     fontFamily: "Michroma",
