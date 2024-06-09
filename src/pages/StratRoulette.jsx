@@ -21,8 +21,19 @@ const ContentBox = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   textAlign: "center",
 }));
-const StrategyText = styled(Typography)(({ theme }) => ({
+
+const StrategyTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2.5rem",
+  color: "#FFD700", // Gold color for the title
+  textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+  marginBottom: "1rem",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
+}));
+
+const StrategyText = styled(Typography)(({ theme }) => ({
+  fontSize: "2.2rem",
   fontWeight: "bold",
   color: "white",
   textShadow: "5px 6px 10px rgba(0,0,0,0.8)",
@@ -34,7 +45,10 @@ const StrategyText = styled(Typography)(({ theme }) => ({
 
 const StratRoulette = () => {
   const [strategies, setStrategies] = useState({ general: [], characters: {} });
-  const [currentStrat, setCurrentStrat] = useState("");
+  const [currentStrat, setCurrentStrat] = useState({
+    title: "",
+    description: "",
+  });
   const [usedStrats, setUsedStrats] = useState([]);
   const [selectedCharacter, setSelectedCharacter] = useState("");
 
@@ -65,7 +79,7 @@ const StratRoulette = () => {
     const availableStrats = [...generalStrats, ...characterStrats];
 
     if (availableStrats.length === 0) {
-      setCurrentStrat("No strategies available.");
+      setCurrentStrat({ title: "", description: "No strategies available." });
       return;
     }
 
@@ -74,7 +88,10 @@ const StratRoulette = () => {
     );
     if (unusedStrats.length === 0) {
       setUsedStrats([]);
-      setCurrentStrat("No more new strategies. Resetting...");
+      setCurrentStrat({
+        title: "",
+        description: "No more new strategies. Resetting...",
+      });
       return;
     }
 
@@ -83,6 +100,7 @@ const StratRoulette = () => {
     setCurrentStrat(randomStrat);
     setUsedStrats([...usedStrats, randomStrat]);
   };
+
   const characterNames = Object.keys(strategies.characters)
     .map((char) => char.charAt(0).toUpperCase() + char.slice(1))
     .join(", ");
@@ -119,12 +137,15 @@ const StratRoulette = () => {
         sx={{ width: "90%!important", margin: "0 auto" }}
       >
         <ContentBox>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h1" gutterBottom sx={{ fontSize: "2.6rem" }}>
             Tekken 8 Strategy Roulette
           </Typography>
-
+          <StrategyTitle variant="h6" gutterBottom>
+            {currentStrat.title}
+          </StrategyTitle>
           <StrategyText variant="h6" gutterBottom>
-            {currentStrat || "Press the button to get a funny strategy!"}
+            {currentStrat.description ||
+              "Press the button to get a funny strategy!"}
           </StrategyText>
           <FormControl fullWidth sx={{ marginBottom: 3 }}>
             <InputLabel id="character-select-label">
