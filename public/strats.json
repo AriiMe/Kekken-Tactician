@@ -1,198 +1,760 @@
 {
-    "general": [
-        "Randomly crouch every 5 seconds to confuse your opponent.",
-        "Use taunts or ki charge after every successful hit.",
-        "Try to win using only low kicks.",
-        "Make weird sounds while performing combos.",
-        "Switch your grip on the controller every round.",
-        "Play with your eyes closed.",
-        "Jump every 3 seconds.",
-        "Only use punches for the first round.",
-        "Pretend you're playing another game and commentate your moves.",
-        "Perform a dance move after every combo.",
-        "Use the sidestep excessively to look fancy.",
-        "Try to mimic your opponent's moves.",
-        "Play one round standing up.",
-        "Perform random button presses and act surprised when it works.",
-        "You mastered Ultra Instinct, now show it off. Dodge everything. Literally everything.",
-        "Play one round with your controller upside down.",
-        "Land a combo and then walk away from the screen.",
-        "Land 2 10 hit combos in a row.",
-        "Cheer yourself on loudly after each successful move.",
-        "Only use throws for an entire round.",
-        "Pretend your character is on a stealth mission; only use crouching moves.",
-        "React to each hit as if it’s the most epic thing ever.",
-        "Make up nicknames for each of your moves and announce them loudly.",
-        "Pretend you're a pacifist and only use defensive moves.",
-        "You're a pro only poking no combos.",
-        "Use only your character's weakest moves.",
-        "After every successful hit, pause for a second as if you’re surprised.",
-        "You may only attack back after being hit.",
-        "Wait until your health is at least 50% then start fightning back.",
-        "Dodge every attack until the timer reaches 20sec then start attacking.",
-        "Ki charge after every round and then DM your opponent 'GG'."
+    "general": [{
+            "title": "The Sitting Down like a girl.",
+            "description": "Randomly crouch every 5 seconds to confuse your opponent."
+        },
+        {
+            "title": "The Dr.Disrespectyourwife",
+            "description": "Use taunts or ki charge after every successful hit."
+        },
+        {
+            "title": "The Annoying little shit",
+            "description": "Try to win using only low kicks."
+        },
+        {
+            "title": "The sus one.",
+            "description": "Make weird sounds while performing combos."
+        },
+        {
+            "title": "The good ol switcheroo.",
+            "description": "Switch your grip on the controller every round."
+        },
+        {
+            "title": "The Stevie Wonder.",
+            "description": "Play with your eyes closed."
+        },
+        {
+            "title": "The MK player.",
+            "description": "Jump every 3 seconds."
+        },
+        {
+            "title": "The Irish lad.",
+            "description": "Only use punches for the rest of the round."
+        },
+        {
+            "title": "The Pewdiepie.",
+            "description": "Pretend you're playing another game and commentate your moves."
+        },
+        {
+            "title": "The DDR connoisseur.",
+            "description": "Perform a dance move after every combo."
+        },
+        {
+            "title": "The 3D Gamer.",
+            "description": "Use the sidestep excessively to look fancy."
+        },
+        {
+            "title": "The Kakashi the Copycat.",
+            "description": "Try to mimic your opponent's moves."
+        },
+        {
+            "title": "The Vertical Gamer.",
+            "description": "Play one round standing up."
+        },
+        {
+            "title": "The 'I Meant to Do That' Phenomenon.",
+            "description": "Perform random button presses and act surprised when it works."
+        },
+        {
+            "title": "The Mastered Ultra Instinct.",
+            "description": "You mastered Ultra Instinct, now show it off. Dodge everything. Literally everything."
+        },
+        {
+            "title": "The Inverted Insanity.",
+            "description": "Play one round with your controller upside down."
+        },
+        {
+            "title": "The One and Doner.",
+            "description": "Land a combo and then walk away from the screen."
+        },
+        {
+            "title": "The Twin Ten-Hit Tsunami.",
+            "description": "Land 2 10 hit combos in a row."
+        },
+        {
+            "title": "The Self-Hype Supreme.",
+            "description": "Cheer yourself on loudly after each successful move."
+        },
+        {
+            "title": "The King.",
+            "description": "Only use throws for an entire round."
+        },
+        {
+            "title": "The Flacid Snake.",
+            "description": "Pretend your character is on a stealth mission; only use crouching moves."
+        },
+        {
+            "title": "The Actor.",
+            "description": "React to each hit as if it’s the most epic thing ever."
+        },
+        {
+            "title": "The Liar.",
+            "description": "Make up nicknames for each of your moves and announce them loudly."
+        },
+        {
+            "title": "The Jesus.",
+            "description": "Pretend you're a pacifist and only use defensive moves."
+        },
+        {
+            "title": "The Professional.",
+            "description": "You're a pro only poking no combos."
+        },
+        {
+            "title": "The Keep Yourself Safe.",
+            "description": "Use only your character's weakest moves."
+        },
+        {
+            "title": "The 'Did I Just Do That?' Strategy.",
+            "description": "After every successful hit, pause for a second as if you’re shocked it landed."
+        },
+        {
+            "title": "The Pain Before Gain.",
+            "description": "You may only attack back after being hit."
+        },
+        {
+            "title": "The 'this isn't my Final Form'.",
+            "description": "Wait until your health is at least 50% then start fightning back."
+        },
+        {
+            "title": "The Downloader.",
+            "description": "Dodge every attack until the timer reaches 20sec then start attacking."
+        },
+        {
+            "title": "The Salt in the wound lubricator.",
+            "description": "Ki charge after every round and then DM your opponent 'GG'. Bonus points if you get em to block you."
+        },
+        {
+            "title": "The Frame Perfect Punisher.",
+            "description": "10 frame punishers only."
+        },
+        {
+            "title": "The fool me thrice.",
+            "description": "Land 3 unblockables."
+        },
+        {
+            "title": "The Opening Gambit.",
+            "description": "Start the round with a unblockable."
+        },
+        {
+            "title": "The are you amused?",
+            "description": "Let your chat decide which one of the four attack buttons stays and unbind the rest."
+        },
+        {
+            "title": "The not a Pussy.",
+            "description": "Unbind the back button we don't block spam around here. If the side switches tough luck."
+        },
+        {
+            "title": "The Combo Grab",
+            "description": "End every combo with a grab. Even if it whiffs."
+        },
+        {
+            "title": "The No mixup mixup",
+            "description": "Keep spamming the same move over and over again. You may bait and whiff or cancel other moves."
+        },
+        {
+            "title": "The itchy butthole.",
+            "description": "Play with one hand behind your back."
+        }
+
     ],
     "characters": {
-        "kazuya": [
-            "Spam Electric Wind God Fist until it works.",
-            "Only use moves that involve spinning.",
-            "End every combo with a grab.",
-            "Pretend to be a devil and growl every time you hit.",
-            "Only use moves with electric effects.",
-            "Switch to defensive mode after every hit.",
-            "Always start with a forward dash.",
-            "Try to win without blocking.",
-            "Laugh maniacally after every successful hit.",
-            "Use only low attacks for one round.",
-            "Pretend to charge your devil power before each move.",
-            "Perform a ki charge after every launcher.",
-            "Hellsweep? Hellsweep."
+        "kazuya": [{
+                "title": "The MainManSWE Special.",
+                "description": "Spam Electric Wind God Fist."
+            },
+            {
+                "title": "The Spin Moves Only.",
+                "description": "Only use moves that involve spinning."
+            },
+            {
+                "title": "The Devil Growl.",
+                "description": "Pretend to be a devil and growl every time you hit."
+            },
+            {
+                "title": "The Last Meal.",
+                "description": "Only use moves with electric effects."
+            },
+            {
+                "title": "The Defensive Mode.",
+                "description": "Switch to defensive mode after every hit."
+            },
+            {
+                "title": "The Forward Dash Start.",
+                "description": "Always start with a forward dash."
+            },
+            {
+                "title": "The hater of block spammers.",
+                "description": "Try to win without blocking."
+            },
+            {
+                "title": "The Maniacal Laugh.",
+                "description": "Laugh maniacally after every successful hit."
+            },
+            {
+                "title": "The Low Attacks Only.",
+                "description": "Use only low attacks for one round."
+            },
+            {
+                "title": "The Devil Power Charge.",
+                "description": "Yes ki charge mixups baby."
+            },
+            {
+                "title": "The Ki Charge After Launcher.",
+                "description": "Perform a ki charge after every launcher."
+            },
+            {
+                "title": "The 'He won't do it again'.",
+                "description": "Hellsweep? Hellsweep, spam hellsweeps the whole round."
+            }
 
         ],
-        "jin": [
-            "f f+2 is the way.",
-            "Play with one hand behind your back.",
-            "Start every round with a jump kick.",
-            "Only use moves with kicks.",
-            "Perform a parry after every successful hit.",
-            "Only use moves from his stances.",
-            "Use Electric Wind Hook Fist repeatedly to pressure your opponent.",
-            "You're only allowed to attack after parrying an attack.",
-            "Hellsweep? Hellsweep."
+        "jin": [{
+                "title": "The Broken move.",
+                "description": "f f+2 is the way."
+            },
+            {
+                "title": "The Jump Kick Start.",
+                "description": "Start every round with a jump kick."
+            },
+            {
+                "title": "The Kick Moves Only.",
+                "description": "Only use moves with kicks."
+            },
+            {
+                "title": "The Parry Success.",
+                "description": "Perform a parry after every successful hit."
+            },
+            {
+                "title": "The Stance Moves.",
+                "description": "Only use moves from his stances."
+            },
+            {
+                "title": "The Electric Pressure.",
+                "description": "Use Electric Wind Hook Fist repeatedly to pressure your opponent."
+            },
+            {
+                "title": "The Parry Attack.",
+                "description": "You're only allowed to attack after parrying an attack."
+            },
+            {
+                "title": "The 'He won't do it again'.",
+                "description": "Hellsweep? Hellsweep, spam hellsweeps the whole round."
+            }
         ],
-        "devil jin": [
-            "Use only moves that involve flying.",
-            "Only use laser attacks.",
-            "End the round with the unbreakable grab.",
-            "EWGF only.",
-            "Sansara only. You may combo from it.",
-            "Attacks from his fly stance only.",
-            "Fly around the stage as much as possible.",
-            "Only use demonic looking moves.",
-            "Laugh maniacally after every hit.",
-            "Keep your opponent guessing with his laser mix-ups.",
-            "Spam his laser scraper.",
-            "Hellsweep? Hellsweep."
+        "devil jin": [{
+                "title": "The AH-64 Apache Helicopter.",
+                "description": "Use only moves that involve flying."
+            },
+            {
+                "title": "The Styro-Pyro.",
+                "description": "Only use laser attacks."
+            },
+            {
+                "title": "The 'Hug It Out' Victory Grab.",
+                "description": "End the round with the unbreakable grab."
+            },
+            {
+                "title": "The MainManSWE Special.",
+                "description": "EWGF only."
+            },
+            {
+                "title": "The Sansara Shenanigans.",
+                "description": "Sansara only. You may combo from it."
+            },
+            {
+                "title": "The Wings actually work?",
+                "description": "Attacks from his fly stance only."
+            },
+            {
+                "title": "The Floor is lava.",
+                "description": "Fly around the stage as much as possible."
+            },
+            {
+                "title": "The Emo kid.",
+                "description": "Only use demonic looking moves."
+            },
+            {
+                "title": "The forgot schizo pills.",
+                "description": "Laugh maniacally after every hit."
+            },
+            {
+                "title": "The Beam Bamboozle.",
+                "description": "Keep your opponent guessing with his laser mix-ups."
+            },
+            {
+                "title": "The 'fuck this move'.",
+                "description": "Spam his unblockable db+1+2."
+            },
+            {
+                "title": "The 'He won't do it again'.",
+                "description": "Hellsweep? Hellsweep, spam hellsweeps the whole round."
+            }
         ],
-        "paul": [
-            "Always start with a Phoenix Smasher(Death Fist).",
-            "Shout 'Power!' with every hit.",
-            "Perform a Incomplete Somersault(FC+d uf4) after every successful Phoenix Smasher.",
-            "Pretend you're a biker and rev up between hits.",
-            "Only use high-risk, high-reward moves.",
-            "Use Deathfist repeatedly.",
-            "Only use moves that can knock down the opponent.",
-            "Demolition Man only. Mix in Burning Fist to keep your opponent guessing.",
-            "Use his sway back to bait your opponent into attacking.",
-            "Spam his Mountain Raze.",
-            "Spam his Ultimate Punishment to finish rounds."
+        "Reina": [{
+                "title": "The Grab 'Em by the Combo.",
+                "description": "End the round with the unbreakable grab."
+            },
+            {
+                "title": "The MainManSWE Special.",
+                "description": "EWGF only."
+            },
+            {
+                "title": "The Parry This, Casual.",
+                "description": "Parry setups only."
+            },
+            {
+                "title": "The Knee Deep in Salt.",
+                "description": "Spam EWGK until you land a counter hit combo."
+            },
+            {
+                "title": "The Fabian's Nightmares.",
+                "description": "You’re not allowed to use FC df4 and b4. Fuck you Fabian."
+            },
+            {
+                "title": "The Weeb Warrior.",
+                "description": "Sentai moves only."
+            },
+            {
+                "title": "The 'She won't do it again'.",
+                "description": "Hellsweep? Hellsweep, spam hellsweeps the whole round."
+            }
         ],
-        "ling": [
-            "Always start with a flip.",
-            "Only use moves that involve acrobatics.",
-            "Only use evasive maneuvers for one round.",
-            "Try to confuse your opponent with constant movement.",
-            "End every combo with a cartwheel. Yes real life.",
-            "Act as if every hit is a surprise.",
-            "Shout 'Xiaoyu!' with every successful hit.",
-            "Use Art of Phoenix stance repeatedly.",
-            "Only use her spin attacks.",
-            "Spam Ling's taunt after each combo."
+        "paul": [{
+                "title": "The Fist Her First Fury.",
+                "description": "Always start with a Phoenix Smasher (Death Fist)."
+            },
+            {
+                "title": "The Power Trip.",
+                "description": "Shout 'Power!' with every hit."
+            },
+            {
+                "title": "The Somersault Showoff Shenanigans.",
+                "description": "Perform an Incomplete Somersault (FC+d uf4) after every successful Phoenix Smasher."
+            },
+            {
+                "title": "The Biker Gang Bang.",
+                "description": "Pretend you're a biker and rev up between hits."
+            },
+            {
+                "title": "The Risky AF Moves.",
+                "description": "Only use high-risk, high-reward moves."
+            },
+            {
+                "title": "The Fist Frenzy Fiesta.",
+                "description": "Use Deathfist repeatedly."
+            },
+            {
+                "title": "The Knockdown Nazi.",
+                "description": "Only use moves that can knock down the opponent."
+            },
+            {
+                "title": "The Demo Man Domination.",
+                "description": "Demolition Man only. Mix in Burning Fist to keep your opponent guessing."
+            },
+            {
+                "title": "The Bait and Smash Bros.",
+                "description": "Use his sway back to bait your opponent into attacking."
+            },
+            {
+                "title": "The Raze 'Em All Rampage.",
+                "description": "Spam his Mountain Raze."
+            },
+            {
+                "title": "The Punishment Porn.",
+                "description": "Spam his Ultimate Punishment to finish rounds."
+            },
+            {
+                "title": "The Dr.Zoidberg.",
+                "description": "You may only move with his crabwalk(sway into ss cancel)."
+            }
         ],
-        "hwoarang": [
-            "Only use kicks.",
-            "Switch stances after every hit.",
-            "Pretend you're breakdancing during fights.",
-            "End every combo with a flashy move.",
-            "Start every round with a spin kick.",
-            "Play one round without blocking.",
-            "Only use moves that look cool.",
-            "Switch stances every 10 seconds.",
-            "Comment on how stylish your moves are.",
-            "Use Flamingo stance exclusively.",
-            "Only use his spinning kicks.",
-            "Do a mock taekwondo routine between rounds."
+        "ling": [{
+                "title": "The Flippin' Ninja.",
+                "description": "Always start with a flip."
+            },
+            {
+                "title": "The Acro Addict.",
+                "description": "Only use moves that involve acrobatics."
+            },
+            {
+                "title": "The Evasive AF.",
+                "description": "Only use evasive maneuvers for one round."
+            },
+            {
+                "title": "The Movement Methhead.",
+                "description": "Try to confuse your opponent with constant movement."
+            },
+            {
+                "title": "The Cartwheel IRL.",
+                "description": "End every combo with a cartwheel. Yes, real life."
+            },
+            {
+                "title": "The Surprise Muthaf*cka.",
+                "description": "Act as if every hit is a surprise."
+            },
+            {
+                "title": "The Xiaoyu Yell.",
+                "description": "Shout 'Xiaoyu!' with every successful hit."
+            },
+            {
+                "title": "The Phoenix Flex.",
+                "description": "Use Art of Phoenix stance repeatedly."
+            },
+            {
+                "title": "The Spin Doctor.",
+                "description": "Only use her spin attacks."
+            },
+            {
+                "title": "The Taunt Troll.",
+                "description": "Spam Ling's taunt after each combo."
+            }
         ],
-        "king": [
-            "Only use grabs.",
-            "End every combo with a Moonsault Body Press(BT 1+4).",
-            "Pretend to be a luchador and shout 'King!' with every throw.",
-            "Use only chain throws for one round.",
-            "Perform a ki charge after every successful chain throw.",
-            "Pretend you're in a wrestling match and commentate your moves.",
-            "Flex your muscles between rounds."
+        "hwoarang": [{
+                "title": "The Kick Addict.",
+                "description": "Only use kicks."
+            },
+            {
+                "title": "The Stance Slut.",
+                "description": "Switch stances after every hit."
+            },
+            {
+                "title": "The Flashy AF Finisher.",
+                "description": "End every combo with a flashy move."
+            },
+            {
+                "title": "The Spin Kick Start.",
+                "description": "Start every round with a spin kick."
+            },
+            {
+                "title": "The Blockless Bitch.",
+                "description": "Play one round without blocking."
+            },
+            {
+                "title": "The Cool AF Moves.",
+                "description": "Only use moves that look cool."
+            },
+            {
+                "title": "The Stance Switch Bitch.",
+                "description": "Switch stances every 10 seconds."
+            },
+            {
+                "title": "The Stylish AF Commentator.",
+                "description": "Comment on how stylish your moves are."
+            },
+            {
+                "title": "The Flamingo Fuckboy.",
+                "description": "Use Flamingo stance exclusively."
+            },
+            {
+                "title": "The Spin King Shit.",
+                "description": "Only use his spinning kicks."
+            },
+            {
+                "title": "The Taekwondo Twerk.",
+                "description": "Do a mock taekwondo routine between rounds."
+            }
         ],
-        "lili": [
-            "Only use elegant moves.",
-            "Pretend you're a ballerina and add flourishes to every move.",
-            "Use evasive maneuvers to dance around your opponent.",
-            "Laugh daintily after each hit.",
-            "Start each round with a curtsey.",
-            "Only use moves that involve spinning.",
-            "Do a quick dance routine between rounds.",
-            "Compliment yourself loudly after each successful move.",
-            "Use her acrobatic flips repeatedly.",
-            "Only use her counterattacks.",
-            "Perform a mock bow after each round.",
-            "Comment on your elegance with each attack.",
-            "Kiss your asuka body pillow after each combo."
+        "king": [{
+                "title": "The Suplex City.",
+                "description": "Only use grabs."
+            },
+            {
+                "title": "The Moonsault Madness.",
+                "description": "End every combo with a Moonsault Body Press (BT 1+4)."
+            },
+            {
+                "title": "The Luchador Legend.",
+                "description": "Pretend to be a luchador and shout 'King!' with every throw."
+            },
+            {
+                "title": "The Chain Throw Showdown.",
+                "description": "Use only chain throws for one round."
+            },
+            {
+                "title": "The Ki Charge Chaos.",
+                "description": "Perform a ki charge after every successful chain throw."
+            },
+            {
+                "title": "The WrestleMania.",
+                "description": "Pretend you're in a wrestling match and commentate your moves."
+            },
+            {
+                "title": "The Muscle Flex Fiesta.",
+                "description": "Flex your muscles between rounds."
+            },
+            {
+                "title": "The RKO Outta Nowhere.",
+                "description": "Finish the round with RKO."
+            },
+            {
+                "title": "The Tombstone Terror.",
+                "description": "Use King's Tombstone Piledriver as much as possible."
+            },
+            {
+                "title": "The People's Elbow.",
+                "description": "End every combo with a ground throw (d+1+4 or d+2+3)."
+            },
+            {
+                "title": "The Royal Rumble.",
+                "description": "Use a different throw every time until you run out. Then start over."
+            }
         ],
-        "bryan": [
-            "Laugh maniacally after every hit.",
-            "Only use moves that involve his knees.",
-            "Use confirmable attacks after his taunt only.",
-            "Start each round with a taunt jet upper.",
-            "Only use moves that look brutal.",
-            "Use Mach Breaker repeatedly.",
-            "Only use moves that end in a knockdown.",
-            "Pretend to be calculating your opponent's moves.",
-            "Snake Edge? Snake Edge only. You can use taunt snake edge too.",
-            "Only use moves that involve his elbows.",
-            "Use his taunt to bait your opponent.",
-            "Spam Orbital Heel to catch your opponent off guard.",
-            "Incorporate Mach Kick into your combos.",
-            "Use Hatchet Kick and only Hatchet Kicks.",
-            "End every combo with Fisherman's Slam.",
-            "Keep your opponent guessing with constant taunt cancels.",
-            "Use Chopping Elbow to start combos.",
-            "Incorporate his power crush moves to absorb hits and counter."
+        "lili": [{
+                "title": "The Elegant Assault.",
+                "description": "Only use elegant moves."
+            },
+            {
+                "title": "The Ballerina Beatdown.",
+                "description": "Pretend you're a ballerina and add flourishes to every move."
+            },
+            {
+                "title": "The Dance of Death.",
+                "description": "Use evasive maneuvers to dance around your opponent."
+            },
+            {
+                "title": "The Dainty Destruction.",
+                "description": "Laugh daintily after each hit."
+            },
+            {
+                "title": "The Curtsey Crush.",
+                "description": "Start each round with a curtsey."
+            },
+            {
+                "title": "The Spin to Win.",
+                "description": "Only use moves that involve spinning."
+            },
+            {
+                "title": "The Dance Break.",
+                "description": "Do a quick dance routine between rounds."
+            },
+            {
+                "title": "The Self-Love Shoutout.",
+                "description": "Compliment yourself loudly after each successful move."
+            },
+            {
+                "title": "The Flip Frenzy.",
+                "description": "Use her acrobatic flips repeatedly."
+            },
+            {
+                "title": "The Counter Queen.",
+                "description": "Only use her counterattacks."
+            },
+            {
+                "title": "The Bow Out.",
+                "description": "Perform a mock bow after each round."
+            },
+            {
+                "title": "The Elegant Exclamation.",
+                "description": "Comment on your elegance with each attack."
+            },
+            {
+                "title": "The Pillow Kiss.",
+                "description": "Kiss your Asuka body pillow after each combo. PhiDx is lying he has one."
+            }
         ],
-        "yoshimitsu": [
-            "Start each round with a teleport.",
-            "Use Suicide moves to intimidate your opponent.",
-            "Only use moves that involve spinning.",
-            "Heal yourself whenever possible to confuse your opponent.",
-            "You're only allowed to use Flash to start a combo.",
-            "Pretend to be a samurai and bow before each attack.",
-            "Only use moves that make you disappear.",
-            "Spin around excessively with his Spinning Sword moves.",
-            "Teleport after every combo.",
-            "Use his pogo stance and hop around the stage.",
-            "Mix in Sword Spin moves frequently to create unpredictability.",
-            "Use Flea Stance to dodge and counter your opponent's attacks.",
-            "Perform the Flea to Kincho stance transition repeatedly.",
-            "Utilize Manji Dragonfly stance to stay airborne and unpredictable.",
-            "Use Poison Breath to create space between you and your opponent.",
-            "Incorporate his Kincho stance into your combos for mix-ups.",
-            "Switch between Flea and Kincho stances to confuse your opponent.",
-            "Use Sword Sweep and Sword Uppercut to keep your opponent on their toes."
+        "bryan": [{
+                "title": "The Maniacal Laughter.",
+                "description": "Laugh maniacally after every hit."
+            },
+            {
+                "title": "The I was an adventurer.",
+                "description": "Only use moves that involve his knees."
+            },
+            {
+                "title": "The Taunt Confirm.",
+                "description": "Use confirmable attacks after his taunt only."
+            },
+            {
+                "title": "The Taunt Jet Starter.",
+                "description": "Start each round with a taunt jet upper."
+            },
+            {
+                "title": "The Brutal Beatdown.",
+                "description": "Only use moves that look brutal."
+            },
+            {
+                "title": "The Mach Breaker Madness.",
+                "description": "Use Mach Breaker repeatedly."
+            },
+            {
+                "title": "The Knockdown King.",
+                "description": "Only use moves that end in a knockdown."
+            },
+            {
+                "title": "The Calculating Psycho.",
+                "description": "Pretend to be calculating your opponent's moves."
+            },
+            {
+                "title": "The Snake Edge Special.",
+                "description": "Snake Edge? Snake Edge only. You can use taunt snake edge too."
+            },
+            {
+                "title": "The Elbow Enforcer.",
+                "description": "Only use moves that involve his elbows."
+            },
+            {
+                "title": "The Taunt Trap.",
+                "description": "Use his taunt to bait your opponent."
+            },
+            {
+                "title": "The Orbital Overload.",
+                "description": "Spam Orbital Heel to catch your opponent off guard."
+            },
+            {
+                "title": "The Mach Kick Mixer.",
+                "description": "Incorporate Mach Kick into your combos."
+            },
+            {
+                "title": "The Hatchet Havoc.",
+                "description": "Use Hatchet Kick and only Hatchet Kicks."
+            },
+            {
+                "title": "The Fisherman's Finale.",
+                "description": "End every combo with Fisherman's Slam."
+            },
+            {
+                "title": "The Taunt Tango.",
+                "description": "Keep your opponent guessing with constant taunt cancels."
+            },
+            {
+                "title": "The Elbow Opener.",
+                "description": "Use Chopping Elbow to start combos."
+            },
+            {
+                "title": "The Power Crush Pummel.",
+                "description": "Incorporate his power crush moves to absorb hits and counter."
+            }
+        ],
+        "yoshimitsu": [{
+                "title": "The Teleport Troll.",
+                "description": "Start each round with a teleport."
+            },
+            {
+                "title": "The Suicide Squad.",
+                "description": "Use Suicide moves to intimidate your opponent."
+            },
+            {
+                "title": "The Spin Doctor.",
+                "description": "Only use moves that involve spinning."
+            },
+            {
+                "title": "The Healer's Confusion.",
+                "description": "Heal yourself whenever possible to confuse your opponent."
+            },
+            {
+                "title": "The Flash Start.",
+                "description": "You're only allowed to use Flash to start a combo."
+            },
+            {
+                "title": "The Samurai Showdown.",
+                "description": "Pretend to be a samurai and bow before each attack."
+            },
+            {
+                "title": "The Disappearing Act.",
+                "description": "Only use moves that make you disappear."
+            },
+            {
+                "title": "The Spin Cycle.",
+                "description": "Spin around excessively with his Spinning Sword moves."
+            },
+            {
+                "title": "The Teleport Finish.",
+                "description": "Teleport after every combo."
+            },
+            {
+                "title": "The Pogo Prowler.",
+                "description": "Use his pogo stance and hop around the stage."
+            },
+            {
+                "title": "The Sword Spinner.",
+                "description": "Mix in Sword Spin moves frequently to create unpredictability."
+            },
+            {
+                "title": "The Flea Flicker.",
+                "description": "Use Flea Stance to dodge and counter your opponent's attacks."
+            },
+            {
+                "title": "The Flea to Kincho.",
+                "description": "Perform the Flea to Kincho stance transition repeatedly."
+            },
+            {
+                "title": "The Helicopter Helicopter.",
+                "description": "Utilize Manji Dragonfly stance to stay airborne and unpredictable."
+            },
+            {
+                "title": "The Uh Oh Stinky.",
+                "description": "You may only use Poison Breath to start a combo."
+            },
+            {
+                "title": "The Kincho Combo.",
+                "description": "Incorporate his Kincho stance into your combos for mix-ups."
+            },
+            {
+                "title": "The Stance Switcher.",
+                "description": "Switch between Flea and Kincho stances to confuse your opponent."
+            },
+            {
+                "title": "The Sword Sweeper.",
+                "description": "Use Sword Sweep and Sword Uppercut to keep your opponent on their toes."
+            }
 
         ],
-        "jack-8": [
-            "Pretend you're a robot and make mechanical sounds with each move.",
-            "Only use moves that involve heavy hits.",
-            "Announce 'System Overload' after every combo and drop it.",
-            "Use his rocket punches excessively.",
-            "Shout 'Target Locked' before every attack.",
-            "Use only Debugger for an entire round.",
-            "Rely heavily on Jack-8's armor moves to power through attacks.",
-            "Spam Jack-8's charge moves until they land.",
-            "Only use Jack-8's throws for one round.",
-            "End every combo with a rocket punch.",
-            "Mix up Jack-8's mid and low attacks to confuse your opponent.",
-            "Only use Jack-8's low attacks.",
-            "Land gigaton punch at least once.",
-            "Use Jack-8's belly flop to finish the round."
+        "jack-8": [{
+                "title": "The Mechanical Menace.",
+                "description": "Pretend you're a robot and make mechanical sounds with each move."
+            },
+            {
+                "title": "The Heavy Hitter.",
+                "description": "Only use moves that involve heavy hits."
+            },
+            {
+                "title": "The System Overload.",
+                "description": "Announce 'System Overload' after every combo and drop it."
+            },
+            {
+                "title": "The Rocket Punch Rampage.",
+                "description": "Use his rocket punches excessively."
+            },
+            {
+                "title": "The Target Locked.",
+                "description": "Shout 'Target Locked' before every attack."
+            },
+            {
+                "title": "The Debugger Dominance.",
+                "description": "Use only Debugger for an entire round."
+            },
+            {
+                "title": "The Armor Assault.",
+                "description": "Rely heavily on Jack-8's armor moves to power through attacks."
+            },
+            {
+                "title": "The Charge Spam.",
+                "description": "Spam Jack-8's charge moves until they land."
+            },
+            {
+                "title": "The Throwdown.",
+                "description": "Only use Jack-8's throws for one round."
+            },
+            {
+                "title": "The Rocket Finisher.",
+                "description": "End every combo with a rocket punch."
+            },
+            {
+                "title": "The Mix-Up Master.",
+                "description": "Mix up Jack-8's mid and low attacks to confuse your opponent."
+            },
+            {
+                "title": "The Low Blow.",
+                "description": "Only use Jack-8's low attacks."
+            },
+            {
+                "title": "The Gigaton Goal.",
+                "description": "Land gigaton punch at least once."
+            },
+            {
+                "title": "The Belly Flop Finisher.",
+                "description": "Use Jack-8's belly flop to finish the round."
+            }
         ]
     }
 }
