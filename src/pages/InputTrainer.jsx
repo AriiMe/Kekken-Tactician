@@ -14,15 +14,25 @@ const sounds = {
   4: new Howl({ src: ["/input-sounds/4.mp3"] }),
 };
 
+// const defaultKeys = {
+//   up: "ArrowUp",
+//   down: "ArrowDown",
+//   left: "ArrowLeft",
+//   right: "ArrowRight",
+//   button1: "1",
+//   button2: "2",
+//   button3: "3",
+//   button4: "4",
+// };
 const defaultKeys = {
-  up: "ArrowUp",
-  down: "ArrowDown",
-  left: "ArrowLeft",
-  right: "ArrowRight",
-  button1: "1",
-  button2: "2",
-  button3: "3",
-  button4: "4",
+  up: { keyName: "ArrowUp", notationName: "u" },
+  down: { keyName: "ArrowDown", notationName: "d" },
+  left: { keyName: "ArrowLeft", notationName: "b" },
+  right: { keyName: "ArrowRight", notationName: "f" },
+  button1: { keyName: "1", notationName: "1" },
+  button2: { keyName: "2", notationName: "2" },
+  button3: { keyName: "3", notationName: "3" },
+  button4: { keyName: "4", notationName: "4" },
 };
 
 const directionMap = {
@@ -53,209 +63,210 @@ const gamepadButtonMap = {
 const COMBINATION_THRESHOLD = 20; // milliseconds
 
 const InputTrainer = () => {
-  const [gamepadIndex, setGamepadIndex] = useState(null);
-  const [keys, setKeys] = useState(defaultKeys);
-  const [pressedKeys, setPressedKeys] = useState({});
-  const [inputHistory, setInputHistory] = useState([]);
-  const [currentCombination, setCurrentCombination] = useState("");
-  const [lastKeyPressTime, setLastKeyPressTime] = useState(Date.now());
-  const [inputQueue, setInputQueue] = useState([]);
-  const [frameCounter, setFrameCounter] = useState(0);
-  const frameRequestRef = useRef();
+  // const [gamepadIndex, setGamepadIndex] = useState(null);
+  // const [keys, setKeys] = useState(defaultKeys);
+  // const [pressedKeys, setPressedKeys] = useState({});
+  // const [inputHistory, setInputHistory] = useState([]);
+  // const [currentCombination, setCurrentCombination] = useState("");
+  // const [lastKeyPressTime, setLastKeyPressTime] = useState(Date.now());
+  // const [inputQueue, setInputQueue] = useState([]);
+  // const [frameCounter, setFrameCounter] = useState(0);
+  // const frameRequestRef = useRef();
 
-  const { keyDurations, neutralFrames } = useFrameInput(defaultKeys);
+  const { keyFrames, neutralFrames } = useFrameInput(defaultKeys);
+  console.log(useFrameInput(defaultKeys));
 
-  useEffect(() => {
-    const savedKeys = localStorage.getItem("inputTrainerKeys");
-    if (savedKeys) {
-      setKeys(JSON.parse(savedKeys));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedKeys = localStorage.getItem("inputTrainerKeys");
+  //   if (savedKeys) {
+  //     setKeys(JSON.parse(savedKeys));
+  //   }
+  // }, []);
 
-  const playSound = (sound) => {
-    if (sounds[sound]) {
-      sounds[sound].stop();
-      sounds[sound].play();
-    }
-  };
+  // const playSound = (sound) => {
+  //   if (sounds[sound]) {
+  //     sounds[sound].stop();
+  //     sounds[sound].play();
+  //   }
+  // };
 
-  const updateInputHistory = (input) => {
-    setInputHistory((prev) => {
-      const newHistory = [input, ...prev];
-      return newHistory.length > 10 ? newHistory.slice(0, 10) : newHistory;
-    });
-  };
+  // const updateInputHistory = (input) => {
+  //   setInputHistory((prev) => {
+  //     const newHistory = [input, ...prev];
+  //     return newHistory.length > 10 ? newHistory.slice(0, 10) : newHistory;
+  //   });
+  // };
 
-  const sortCombination = (combination) => {
-    const directionals = combination
-      .filter((input) => "udbf".includes(input))
-      .sort((a, b) => {
-        const order = {
-          u: 1,
-          d: 2,
-          b: 3,
-          f: 4,
-        };
-        return order[a] - order[b];
-      });
-    const buttons = combination
-      .filter((input) => "1234".includes(input))
-      .sort();
+  // const sortCombination = (combination) => {
+  //   const directionals = combination
+  //     .filter((input) => "udbf".includes(input))
+  //     .sort((a, b) => {
+  //       const order = {
+  //         u: 1,
+  //         d: 2,
+  //         b: 3,
+  //         f: 4,
+  //       };
+  //       return order[a] - order[b];
+  //     });
+  //   const buttons = combination
+  //     .filter((input) => "1234".includes(input))
+  //     .sort();
 
-    const sortedCombination = [
-      ...directionals.join(""), // Join directionals without plus sign
-      ...buttons.join("+"), // Join buttons with plus sign
-    ];
+  //   const sortedCombination = [
+  //     ...directionals.join(""), // Join directionals without plus sign
+  //     ...buttons.join("+"), // Join buttons with plus sign
+  //   ];
 
-    return sortedCombination.join("");
-  };
+  //   return sortedCombination.join("");
+  // };
 
-  const handleKeyPress = (event) => {
-    const { key } = event;
-    if (pressedKeys[key]) return; // If key is already pressed, do nothing
+  // const handleKeyPress = (event) => {
+  //   const { key } = event;
+  //   if (pressedKeys[key]) return; // If key is already pressed, do nothing
 
-    const direction = directionMap[key];
-    const button = buttonMap[key];
-    const currentTime = Date.now();
-    const timeSinceLastPress = currentTime - lastKeyPressTime;
-    let newCombination = currentCombination
-      ? currentCombination.split("+")
-      : [];
+  //   const direction = directionMap[key];
+  //   const button = buttonMap[key];
+  //   const currentTime = Date.now();
+  //   const timeSinceLastPress = currentTime - lastKeyPressTime;
+  //   let newCombination = currentCombination
+  //     ? currentCombination.split("+")
+  //     : [];
 
-    if (direction || button) {
-      if (timeSinceLastPress <= COMBINATION_THRESHOLD) {
-        if (direction) {
-          newCombination.push(direction);
-        } else if (button) {
-          newCombination.push(button);
-        }
-      } else {
-        if (currentCombination) {
-          updateInputHistory(currentCombination);
-        }
-        newCombination = direction ? [direction] : [button];
-      }
-    }
+  //   if (direction || button) {
+  //     if (timeSinceLastPress <= COMBINATION_THRESHOLD) {
+  //       if (direction) {
+  //         newCombination.push(direction);
+  //       } else if (button) {
+  //         newCombination.push(button);
+  //       }
+  //     } else {
+  //       if (currentCombination) {
+  //         updateInputHistory(currentCombination);
+  //       }
+  //       newCombination = direction ? [direction] : [button];
+  //     }
+  //   }
 
-    setPressedKeys((prev) => ({ ...prev, [key]: true })); // Mark key as pressed
-    setCurrentCombination(sortCombination(newCombination));
-    setLastKeyPressTime(currentTime);
+  //   setPressedKeys((prev) => ({ ...prev, [key]: true })); // Mark key as pressed
+  //   setCurrentCombination(sortCombination(newCombination));
+  //   setLastKeyPressTime(currentTime);
 
-    if (direction) {
-      playSound(direction);
-    } else if (button) {
-      playSound(button);
-    }
-  };
+  //   if (direction) {
+  //     playSound(direction);
+  //   } else if (button) {
+  //     playSound(button);
+  //   }
+  // };
 
-  const handleKeyRelease = (event) => {
-    const { key } = event;
-    setPressedKeys((prev) => {
-      const newPressedKeys = { ...prev };
-      delete newPressedKeys[key];
-      return newPressedKeys;
-    }); // Mark key as released
+  // const handleKeyRelease = (event) => {
+  //   const { key } = event;
+  //   setPressedKeys((prev) => {
+  //     const newPressedKeys = { ...prev };
+  //     delete newPressedKeys[key];
+  //     return newPressedKeys;
+  //   }); // Mark key as released
 
-    // Only update history and reset combination if not part of an ongoing combination
-    const currentTime = Date.now();
-    const timeSinceLastPress = currentTime - lastKeyPressTime;
-    if (timeSinceLastPress > COMBINATION_THRESHOLD) {
-      if (currentCombination) {
-        updateInputHistory(currentCombination);
-        setCurrentCombination("");
-      }
-    }
-  };
+  //   // Only update history and reset combination if not part of an ongoing combination
+  //   const currentTime = Date.now();
+  //   const timeSinceLastPress = currentTime - lastKeyPressTime;
+  //   if (timeSinceLastPress > COMBINATION_THRESHOLD) {
+  //     if (currentCombination) {
+  //       updateInputHistory(currentCombination);
+  //       setCurrentCombination("");
+  //     }
+  //   }
+  // };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setKeys((prevKeys) => {
-      const newKeys = { ...prevKeys, [name]: value };
-      localStorage.setItem("inputTrainerKeys", JSON.stringify(newKeys));
-      return newKeys;
-    });
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setKeys((prevKeys) => {
+  //     const newKeys = { ...prevKeys, [name]: value };
+  //     localStorage.setItem("inputTrainerKeys", JSON.stringify(newKeys));
+  //     return newKeys;
+  //   });
+  // };
 
-  const handleGamepadInput = () => {
-    const gamepads = navigator.getGamepads();
-    if (gamepads[gamepadIndex]) {
-      const gp = gamepads[gamepadIndex];
-      gp.buttons.forEach((button, index) => {
-        if (button.pressed && !pressedKeys[index]) {
-          setPressedKeys((prev) => ({ ...prev, [index]: true }));
-          const input = gamepadButtonMap[index];
-          if (input) {
-            playSound(input);
-            const newCombination = currentCombination
-              ? currentCombination.split("+").concat(input)
-              : [input];
-            const sortedCombination = sortCombination(newCombination);
-            setCurrentCombination(sortedCombination);
-          }
-        } else if (!button.pressed && pressedKeys[index]) {
-          setPressedKeys((prev) => {
-            const newPressedKeys = { ...prev };
-            delete newPressedKeys[index];
-            return newPressedKeys;
-          });
-        }
-      });
+  // const handleGamepadInput = () => {
+  //   const gamepads = navigator.getGamepads();
+  //   if (gamepads[gamepadIndex]) {
+  //     const gp = gamepads[gamepadIndex];
+  //     gp.buttons.forEach((button, index) => {
+  //       if (button.pressed && !pressedKeys[index]) {
+  //         setPressedKeys((prev) => ({ ...prev, [index]: true }));
+  //         const input = gamepadButtonMap[index];
+  //         if (input) {
+  //           playSound(input);
+  //           const newCombination = currentCombination
+  //             ? currentCombination.split("+").concat(input)
+  //             : [input];
+  //           const sortedCombination = sortCombination(newCombination);
+  //           setCurrentCombination(sortedCombination);
+  //         }
+  //       } else if (!button.pressed && pressedKeys[index]) {
+  //         setPressedKeys((prev) => {
+  //           const newPressedKeys = { ...prev };
+  //           delete newPressedKeys[index];
+  //           return newPressedKeys;
+  //         });
+  //       }
+  //     });
 
-      if (currentCombination) {
-        updateInputHistory(currentCombination);
-        setCurrentCombination("");
-      }
-    }
-  };
+  //     if (currentCombination) {
+  //       updateInputHistory(currentCombination);
+  //       setCurrentCombination("");
+  //     }
+  //   }
+  // };
 
-  const updateFrameCounter = () => {
-    setFrameCounter((prev) => (prev < 999 ? prev + 1 : 999));
-  };
+  // const updateFrameCounter = () => {
+  //   setFrameCounter((prev) => (prev < 999 ? prev + 1 : 999));
+  // };
 
-  const animate = () => {
-    updateFrameCounter();
-    if (gamepadIndex !== null) {
-      handleGamepadInput();
-    }
-    frameRequestRef.current = requestAnimationFrame(animate);
-  };
+  // const animate = () => {
+  //   updateFrameCounter();
+  //   if (gamepadIndex !== null) {
+  //     handleGamepadInput();
+  //   }
+  //   frameRequestRef.current = requestAnimationFrame(animate);
+  // };
 
-  useEffect(() => {
-    frameRequestRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameRequestRef.current);
-  }, [gamepadIndex, pressedKeys, currentCombination]);
+  // useEffect(() => {
+  //   frameRequestRef.current = requestAnimationFrame(animate);
+  //   return () => cancelAnimationFrame(frameRequestRef.current);
+  // }, [gamepadIndex, pressedKeys, currentCombination]);
 
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress);
-    window.addEventListener("keyup", handleKeyRelease);
+  // useEffect(() => {
+  //   window.addEventListener("keydown", handleKeyPress);
+  //   window.addEventListener("keyup", handleKeyRelease);
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-      window.removeEventListener("keyup", handleKeyRelease);
-    };
-  }, [keys, pressedKeys, currentCombination]);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyPress);
+  //     window.removeEventListener("keyup", handleKeyRelease);
+  //   };
+  // }, [keys, pressedKeys, currentCombination]);
 
-  useEffect(() => {
-    const connectHandler = (e) => {
-      setGamepadIndex(e.gamepad.index);
-    };
+  // useEffect(() => {
+  //   const connectHandler = (e) => {
+  //     setGamepadIndex(e.gamepad.index);
+  //   };
 
-    const disconnectHandler = () => {
-      setGamepadIndex(null);
-    };
+  //   const disconnectHandler = () => {
+  //     setGamepadIndex(null);
+  //   };
 
-    window.addEventListener("gamepadconnected", connectHandler);
-    window.addEventListener("gamepaddisconnected", disconnectHandler);
+  //   window.addEventListener("gamepadconnected", connectHandler);
+  //   window.addEventListener("gamepaddisconnected", disconnectHandler);
 
-    return () => {
-      window.removeEventListener("gamepadconnected", connectHandler);
-      window.removeEventListener("gamepaddisconnected", disconnectHandler);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("gamepadconnected", connectHandler);
+  //     window.removeEventListener("gamepaddisconnected", disconnectHandler);
+  //   };
+  // }, []);
 
   return (
     <div>
-      <h1>Input Trainer</h1>
+      {/* <h1>Input Trainer</h1>
       <p>Press arrow keys, 1-4, or use your gamepad to play sounds</p>
       <div>
         <strong>Frame Counter:</strong> {frameCounter}
@@ -349,18 +360,19 @@ const InputTrainer = () => {
             />
           </label>
         </div>
-      </form>
+      </form> */}
 
-      <div>
-        {Object.keys(keyDurations).map((key) => (
+      <div style={{ marginTop: "10rem" }}>
+        {Object.keys(keyFrames).map((key) => (
           <div key={key}>
-            Key: {key}, Pressed for: {keyDurations[key]} frames
+            Key: {key}, Pressed for: {keyFrames[key].frames} frames, Notation:{" "}
+            {keyFrames[key].notationName}
           </div>
         ))}
         <div>Neutral frames: {neutralFrames}</div>
       </div>
 
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -373,7 +385,7 @@ const InputTrainer = () => {
             {renderInputImage(input)}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

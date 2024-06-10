@@ -8,7 +8,7 @@ const useFrameInput = (inputDeclarations) => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       const key = event.key;
-      if (Object.values(inputDeclarations).includes(key)) {
+      if (Object.values(inputDeclarations).some((input) => input.keyName === key)) {
         if (!pressedKeys.has(key)) {
           setPressedKeys((prev) => new Set(prev.add(key)));
           setKeyDurations((prev) => ({ ...prev, [key]: 0 }));
@@ -52,8 +52,18 @@ const useFrameInput = (inputDeclarations) => {
     };
   }, [pressedKeys, keyDurations]);
 
+  const getNotationName = (key) => {
+    const input = Object.values(inputDeclarations).find((input) => input.keyName === key);
+    return input ? input.notationName : "n"; // Return "n" if key is not found in inputDeclarations
+  };
+
+  const keyFrames = Object.entries(keyDurations).reduce((acc, [key, duration]) => {
+    acc[key] = { frames: duration, notationName: getNotationName(key), key };
+    return acc;
+  }, {});
+
   return {
-    keyDurations,
+    keyFrames,
     neutralFrames,
   };
 };
