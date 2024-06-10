@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Howl } from "howler";
 import renderInputImage from "../utils/renderInputImage";
+import useFrameInput from "../hooks/useFrameInput";
 
 const sounds = {
   u: new Howl({ src: ["/input-sounds/u.mp3"] }),
@@ -61,6 +62,8 @@ const InputTrainer = () => {
   const [inputQueue, setInputQueue] = useState([]);
   const [frameCounter, setFrameCounter] = useState(0);
   const frameRequestRef = useRef();
+
+  const { keyDurations, neutralFrames } = useFrameInput();
 
   useEffect(() => {
     const savedKeys = localStorage.getItem("inputTrainerKeys");
@@ -347,6 +350,16 @@ const InputTrainer = () => {
           </label>
         </div>
       </form>
+
+      <div>
+        {Object.keys(keyDurations).map((key) => (
+          <div key={key}>
+            Key: {key}, Pressed for: {keyDurations[key]} frames
+          </div>
+        ))}
+        <div>Neutral frames: {neutralFrames}</div>
+      </div>
+
       <div
         style={{
           display: "flex",
