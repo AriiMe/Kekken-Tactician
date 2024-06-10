@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFrameInput = () => {
+const useFrameInput = (inputDeclarations) => {
   const [pressedKeys, setPressedKeys] = useState(new Set());
   const [keyDurations, setKeyDurations] = useState({});
   const [neutralFrames, setNeutralFrames] = useState(0);
@@ -8,11 +8,13 @@ const useFrameInput = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       const key = event.key;
-      if (!pressedKeys.has(key)) {
-        setPressedKeys((prev) => new Set(prev.add(key)));
-        setKeyDurations((prev) => ({ ...prev, [key]: 0 }));
+      if (Object.values(inputDeclarations).includes(key)) {
+        if (!pressedKeys.has(key)) {
+          setPressedKeys((prev) => new Set(prev.add(key)));
+          setKeyDurations((prev) => ({ ...prev, [key]: 0 }));
+        }
+        setNeutralFrames(0); // Reset neutral frames when a valid key is pressed
       }
-      setNeutralFrames(0); // Reset neutral frames when a key is pressed
     };
 
     const handleKeyUp = (event) => {
@@ -33,7 +35,11 @@ const useFrameInput = () => {
       });
       setKeyDurations(updatedKeyDurations);
 
-      setNeutralFrames((prev) => Math.min(prev + 1, 999)); // Limit to 999 frames
+      if (pressedKeys.size === 0) {
+        setNeutralFrames((prev) => Math.min(prev + 1, 999)); // Limit to 999 frames if no keys are pressed
+      } else {
+        setNeutralFrames(0); // Reset neutral frames if keys are pressed
+      }
     }, 1000 / 60); // 60 FPS
 
     document.addEventListener("keydown", handleKeyDown);

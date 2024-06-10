@@ -63,7 +63,7 @@ const InputTrainer = () => {
   const [frameCounter, setFrameCounter] = useState(0);
   const frameRequestRef = useRef();
 
-  const { keyDurations, neutralFrames } = useFrameInput();
+  const { keyDurations, neutralFrames } = useFrameInput(defaultKeys);
 
   useEffect(() => {
     const savedKeys = localStorage.getItem("inputTrainerKeys");
