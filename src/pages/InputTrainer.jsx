@@ -25,14 +25,14 @@ const sounds = {
 //   button4: "4",
 // };
 const defaultKeys = {
-  up: { keyName: "ArrowUp", notationName: "u" },
-  down: { keyName: "ArrowDown", notationName: "d" },
-  left: { keyName: "ArrowLeft", notationName: "b" },
-  right: { keyName: "ArrowRight", notationName: "f" },
-  button1: { keyName: "1", notationName: "1" },
-  button2: { keyName: "2", notationName: "2" },
-  button3: { keyName: "3", notationName: "3" },
-  button4: { keyName: "4", notationName: "4" },
+  up: { type: "movement", keyName: "ArrowUp", notationName: "u" },
+  down: { type: "movement", keyName: "ArrowDown", notationName: "d" },
+  left: { type: "movement", keyName: "ArrowLeft", notationName: "b" },
+  right: { type: "movement", keyName: "ArrowRight", notationName: "f" },
+  button1: { type: "attack", keyName: "1", notationName: "1" },
+  button2: { type: "attack", keyName: "2", notationName: "2" },
+  button3: { type: "attack", keyName: "3", notationName: "3" },
+  button4: { type: "attack", keyName: "4", notationName: "4" },
 };
 
 const directionMap = {
@@ -66,15 +66,28 @@ const InputTrainer = () => {
   // const [gamepadIndex, setGamepadIndex] = useState(null);
   // const [keys, setKeys] = useState(defaultKeys);
   // const [pressedKeys, setPressedKeys] = useState({});
-  // const [inputHistory, setInputHistory] = useState([]);
+  const [inputHistory, setInputHistory] = useState([]);
   // const [currentCombination, setCurrentCombination] = useState("");
   // const [lastKeyPressTime, setLastKeyPressTime] = useState(Date.now());
   // const [inputQueue, setInputQueue] = useState([]);
   // const [frameCounter, setFrameCounter] = useState(0);
   // const frameRequestRef = useRef();
 
-  const { keyFrames, neutralFrames } = useFrameInput(defaultKeys);
-  console.log(useFrameInput(defaultKeys));
+  const frameData = useFrameInput(defaultKeys);
+  const { keyFrames, neutralFrames, id } = frameData;
+
+  // console.log(inputHistory);
+
+  useEffect(() => {
+    // Check for new move or changes in existing move only when id changes
+    if (id) {
+      const existingEntry = inputHistory.find((entry) => entry.id === id);
+
+      if (!existingEntry) {
+        setInputHistory((prevHistory) => [...prevHistory, frameData]);
+      }
+    }
+  }, [id, frameData]);
 
   // useEffect(() => {
   //   const savedKeys = localStorage.getItem("inputTrainerKeys");
@@ -372,6 +385,27 @@ const InputTrainer = () => {
         <div>Neutral frames: {neutralFrames}</div>
       </div>
 
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "50%",
+          marginTop: "20px",
+        }}
+      >
+        {inputHistory.map((input, index) => (
+          <div key={index} style={{ textAlign: "center" }}>
+            {input.neutralFrames !== 0
+              ? "n"
+              : input.keyFrames.map((keyframe, idx) => (
+                  <div key={idx}>
+                    <div>{console.log(keyframe)}</div>
+                    {renderInputImage(keyframe.notationName)}
+                  </div>
+                ))}
+          </div>
+        ))}
+      </div>
       {/* <div
         style={{
           display: "flex",

@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const useFrameInput = (inputDeclarations) => {
+  const [moveId, setMoveId] = useState();
   const [pressedKeys, setPressedKeys] = useState(new Set());
   const [keyDurations, setKeyDurations] = useState({});
   const [neutralFrames, setNeutralFrames] = useState(0);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+    setMoveId(uuidv4());
       const key = event.key;
-      if (Object.values(inputDeclarations).some((input) => input.keyName === key)) {
+      if (
+        Object.values(inputDeclarations).some((input) => input.keyName === key)
+      ) {
         if (!pressedKeys.has(key)) {
           setPressedKeys((prev) => new Set(prev.add(key)));
           setKeyDurations((prev) => ({ ...prev, [key]: 0 }));
@@ -31,12 +36,12 @@ const useFrameInput = (inputDeclarations) => {
     const interval = setInterval(() => {
       const updatedKeyDurations = {};
       pressedKeys.forEach((key) => {
-        updatedKeyDurations[key] = Math.min(keyDurations[key] + 1, 999); // Limit to 999 frames
+        updatedKeyDurations[key] = Math.min(keyDurations[key] + 1, 400); // Limit to 400 frames
       });
       setKeyDurations(updatedKeyDurations);
 
       if (pressedKeys.size === 0) {
-        setNeutralFrames((prev) => Math.min(prev + 1, 999)); // Limit to 999 frames if no keys are pressed
+        setNeutralFrames((prev) => Math.min(prev + 1, 400)); // Limit to 400 frames if no keys are pressed
       } else {
         setNeutralFrames(0); // Reset neutral frames if keys are pressed
       }
@@ -44,7 +49,6 @@ const useFrameInput = (inputDeclarations) => {
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keyup", handleKeyUp);
@@ -52,19 +56,30 @@ const useFrameInput = (inputDeclarations) => {
     };
   }, [pressedKeys, keyDurations]);
 
-  const getNotationName = (key) => {
-    const input = Object.values(inputDeclarations).find((input) => input.keyName === key);
-    return input ? input.notationName : "n"; // Return "n" if key is not found in inputDeclarations
+  const getInputDetails = (key) => {
+    return (
+      Object.values(inputDeclarations).find(
+        (input) => input.keyName === key
+      ) || { notationName: "n", type: "neutral" }
+    ); // Return default if key is not found
   };
 
-  const keyFrames = Object.entries(keyDurations).reduce((acc, [key, duration]) => {
-    acc[key] = { frames: duration, notationName: getNotationName(key), key };
-    return acc;
-  }, {});
+  const keyFrames = Object.entries(keyDurations).map(
+    ([key, duration]) => {
+      const inputDetails = getInputDetails(key);
+      return {
+        frames: duration,
+        notationName: inputDetails.notationName,
+        type: inputDetails.type,
+        key,
+      };
+    }
+  );
 
   return {
     keyFrames,
     neutralFrames,
+    id: moveId,
   };
 };
 
