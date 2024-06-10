@@ -24,7 +24,7 @@ const ContentBox = styled(Box)(({ theme }) => ({
 
 const StrategyTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2.5rem",
-  color: "#FFD700", // Gold color for the title
+  color: "#FFD700",
   textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
   marginBottom: "1rem",
   [theme.breakpoints.down("sm")]: {

@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Modal } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
@@ -47,6 +47,7 @@ const StyledImage = styled("img")({
 const CharacterSelect = () => {
   const theme = useTheme();
   const [characters, setCharacters] = useState([]);
+  const [isPrivacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
@@ -103,6 +104,17 @@ const CharacterSelect = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  const handlePrivacyModalClose = () => {
+    setPrivacyModalOpen(false);
+    localStorage.setItem("privacyNoticeAccepted", "true");
+  };
+
+  useEffect(() => {
+    if (!localStorage.getItem("privacyNoticeAccepted")) {
+      setPrivacyModalOpen(true);
+    }
   }, []);
 
   const handleCharacterSelect = (characterName, characterId) => {
@@ -164,6 +176,7 @@ const CharacterSelect = () => {
             .join(", ")}
         />
       </Helmet>
+
       <h1
         style={{
           textAlign: "center",
@@ -282,6 +295,53 @@ const CharacterSelect = () => {
           <ArrowUpwardIcon />
         </Button>
       )}
+
+      <Modal
+        open={isPrivacyModalOpen}
+        onClose={handlePrivacyModalClose}
+        aria-labelledby="privacy-notice-title"
+        aria-describedby="privacy-notice-description"
+      >
+        <Paper
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            padding: 4,
+            outline: "none",
+            boxShadow: 5,
+          }}
+        >
+          <Typography id="privacy-notice-title" variant="h6" component="h2">
+            Privacy Notice
+          </Typography>
+          <Typography id="privacy-notice-description" sx={{ mt: 2 }}>
+            We use Umami Analytics to understand how visitors interact with our
+            website. Umami does not use cookies and does not collect personal
+            data. All data is anonymized and used solely to improve website
+            performance and user experience.
+          </Typography>
+          <Button
+            onClick={handlePrivacyModalClose}
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2 }}
+          >
+            I Understand
+          </Button>
+          <Button
+            component="a"
+            href="/privacy-policy"
+            variant="outlined"
+            color="primary"
+            sx={{ mt: 2 }}
+          >
+            Read Full Privacy Policy
+          </Button>
+        </Paper>
+      </Modal>
     </Container>
   );
 };

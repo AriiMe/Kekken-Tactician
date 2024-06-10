@@ -31,6 +31,11 @@ const footerContent = [
     link: "https://kekken-tactician.vercel.app/",
     isExternal: true,
   },
+  {
+    text: "Privacy Policy",
+    link: "/privacy-policy",
+    isExternal: false,
+  },
 ];
 
 const Footer = () => {
