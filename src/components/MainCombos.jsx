@@ -83,7 +83,9 @@ const MainCombos = ({ combos, name }) => {
     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
   };
 
-  const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
+  const patchVersion = "1.05";
+
+  const description = `All main combos for ${name} in Tekken 8. ${name} patch ${patchVersion} combos. These are the most important combos to learn for ${name}.`;
   const keywords = [
     "Tekken 8",
     `${name} combos`,
@@ -91,6 +93,10 @@ const MainCombos = ({ combos, name }) => {
     `${name} Heat flop`,
     "Punishers",
     "Heat Flop",
+    `Tekken 8 patch ${patchVersion} combos`,
+    `patch ${patchVersion} combo sheets`,
+    `patch ${patchVersion} combo cheat sheets`,
+    `Tekken ${patchVersion} combos`,
     "Heat Dash",
     "Frame data",
     "Character-specific data",
