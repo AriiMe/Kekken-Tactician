@@ -181,6 +181,7 @@ const MainCombos = ({ combos, name }) => {
                         playing={playingStatus[index]}
                         controls
                         onProgress={handleProgress(index)}
+                        volume={0.3}
                       />
                     </td>
                   </tr>
