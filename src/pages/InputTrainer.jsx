@@ -76,18 +76,27 @@ const InputTrainer = () => {
   const frameData = useFrameInput(defaultKeys);
   const { keyFrames, neutralFrames, id } = frameData;
 
-  // console.log(inputHistory);
-
+  console.log(frameData);
   useEffect(() => {
     // Check for new move or changes in existing move only when id changes
     if (id) {
-      const existingEntry = inputHistory.find((entry) => entry.id === id);
+      setInputHistory((prevHistory) => {
+        const existingEntryIndex = prevHistory.findIndex(
+          (entry) => entry.id === id
+        );
 
-      if (!existingEntry) {
-        setInputHistory((prevHistory) => [...prevHistory, frameData]);
-      }
+        if (existingEntryIndex !== -1) {
+          // Update existing entry
+          const updatedHistory = [...prevHistory];
+          updatedHistory[existingEntryIndex] = frameData;
+          return updatedHistory;
+        } else {
+          // Add new entry
+          return [...prevHistory, frameData];
+        }
+      });
     }
-  }, [id, frameData]);
+  }, [id]);
 
   // useEffect(() => {
   //   const savedKeys = localStorage.getItem("inputTrainerKeys");
@@ -395,14 +404,9 @@ const InputTrainer = () => {
       >
         {inputHistory.map((input, index) => (
           <div key={index} style={{ textAlign: "center" }}>
-            {input.neutralFrames !== 0
-              ? "n"
-              : input.keyFrames.map((keyframe, idx) => (
-                  <div key={idx}>
-                    <div>{console.log(keyframe)}</div>
-                    {renderInputImage(keyframe.notationName)}
-                  </div>
-                ))}
+            {input.keyFrames.map((keyframe, idx) => (
+              <div key={idx}>{renderInputImage(keyframe.notationName)}</div>
+            ))}
           </div>
         ))}
       </div>
