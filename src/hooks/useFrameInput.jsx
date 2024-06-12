@@ -6,7 +6,7 @@ const useFrameInput = (inputDeclarations) => {
   const [pressedKeys, setPressedKeys] = useState(new Set());
   const [keyDurations, setKeyDurations] = useState({});
   const [neutralFrames, setNeutralFrames] = useState(0);
-  const neutralFrameLimit = 120; // Maximum number of neutral frames
+  const neutralFrameLimit = 60; // Maximum number of neutral frames
   let keyFrames = [];
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const useFrameInput = (inputDeclarations) => {
         Object.values(inputDeclarations).some((input) => input.keyName === key)
       ) {
         if (!pressedKeys.has(key)) {
+          setMoveId(uuidv4()); // Assign new ID when button is pressed
           setPressedKeys((prev) => new Set(prev.add(key)));
           setKeyDurations((prev) => ({ ...prev, [key]: 0 }));
         }
@@ -26,7 +27,7 @@ const useFrameInput = (inputDeclarations) => {
     const handleKeyUp = (event) => {
       const key = event.key;
       if (pressedKeys.has(key)) {
-        setMoveId(uuidv4());
+        setMoveId(uuidv4()); // Assign new ID when button is released
         setPressedKeys((prev) => {
           const newPressedKeys = new Set(prev);
           newPressedKeys.delete(key);
