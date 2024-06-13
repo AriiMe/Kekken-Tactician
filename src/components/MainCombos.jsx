@@ -83,14 +83,24 @@ const MainCombos = ({ combos, name }) => {
     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
   };
 
-  const description = `All main combos for ${name} in Tekken 8. These are the most important combos to learn for ${name}.`;
+  const patchVersion = "1.05";
+
+  const description = `All main combos for ${name} in Tekken 8. ${name} patch ${patchVersion} combos. These are the most important combos to learn for ${name}.`;
   const keywords = [
     "Tekken 8",
     `${name} combos`,
     `${name} Heat dash`,
     `${name} Heat flop`,
+    `${name} cheat sheets`,
+    `${name} patch ${patchVersion} combos`,
+    `${name} patch ${patchVersion} combo guide`,
+    `${name} patch ${patchVersion} cheat sheets`,
     "Punishers",
     "Heat Flop",
+    `Tekken 8 patch ${patchVersion} combos`,
+    `patch ${patchVersion} combo sheets`,
+    `patch ${patchVersion} combo cheat sheets`,
+    `Tekken ${patchVersion} combos`,
     "Heat Dash",
     "Frame data",
     "Character-specific data",
@@ -171,6 +181,7 @@ const MainCombos = ({ combos, name }) => {
                         playing={playingStatus[index]}
                         controls
                         onProgress={handleProgress(index)}
+                        volume={0.3}
                       />
                     </td>
                   </tr>
