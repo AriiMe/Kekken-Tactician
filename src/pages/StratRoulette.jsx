@@ -12,6 +12,7 @@ import {
   Badge,
 } from "@mui/material";
 import { Helmet } from "react-helmet";
+import RankingList from "../components/RankingList";
 
 const ContentBox = styled(Box)(({ theme }) => ({
   margin: "2rem auto",
@@ -355,6 +356,8 @@ const StratRoulette = () => {
             </>
           )}
         </ContentBox>
+
+        <RankingList />
       </Container>
     </Box>
   );
