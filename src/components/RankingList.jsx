@@ -20,9 +20,7 @@ const RankingList = () => {
   useEffect(() => {
     const fetchPlayers = async () => {
       try {
-        const response = await axios.get(
-          `${process.env.PUBLIC_URL}/rankings.json`
-        );
+        const response = await axios.get(`/rankings.json`);
         const playersData = response.data;
 
         // Sort players by points in descending order and assign rankings
