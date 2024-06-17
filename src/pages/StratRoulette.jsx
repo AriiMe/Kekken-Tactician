@@ -9,7 +9,7 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  Badge,
+  Chip,
 } from "@mui/material";
 import { Helmet } from "react-helmet";
 
@@ -24,10 +24,15 @@ const ContentBox = styled(Box)(({ theme }) => ({
 }));
 
 const StrategyTitle = styled(Typography)(({ theme }) => ({
-  fontSize: "2.5rem",
+  fontSize: "2rem",
   color: "#FFD700",
   textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
   marginBottom: "1rem",
+  fontFamily: "Michroma",
+  background: "#242424",
+  padding: "1rem",
+  borderLeft: "2px solid #c62828",
+  borderRight: "2px solid #c62828",
   [theme.breakpoints.down("sm")]: {
     fontSize: "2rem",
   },
@@ -38,9 +43,41 @@ const StrategyText = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
   color: "white",
   textShadow: "5px 6px 10px rgba(0,0,0,0.8)",
-  margin: "6rem 0",
   [theme.breakpoints.down("sm")]: {
     fontSize: "1.3rem",
+  },
+}));
+
+const StratContainer = styled(Box)(({ theme }) => ({
+  background: "#0c0c0c",
+  border: "1px solid #c62828",
+  borderRadius: "8px",
+  width: "100%",
+  margin: "2rem",
+  padding: "2rem 0",
+}));
+
+const StratContentContainer = styled(Box)(({ theme }) => ({
+  width: "80%",
+  margin: "0 auto",
+}));
+
+const StratDurationAndDifficulty = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: "60px",
+  margin: " 2rem 0",
+}));
+
+const StratDuration = styled(Typography)(({ theme }) => ({
+  color: "white",
+  fontSize: "1.3rem",
+  margin: 0,
+  "& span": {
+    fontFamily: "Michroma",
+    color: "#c62828",
+    marginRight: ".5rem",
   },
 }));
 
@@ -226,12 +263,16 @@ const StratRoulette = () => {
         />
       </Helmet>
       <Container
-        maxWidth="md"
-        sx={{ width: "90%!important", margin: "0 auto" }}
+        maxWidth="lg"
+        sx={{ width: "90%!important", margin: "3rem auto 0" }}
       >
         <ContentBox>
-          <Typography variant="h1" gutterBottom sx={{ fontSize: "2.6rem" }}>
-            Tekken 8 Strategy Roulette
+          <Typography
+            variant="h1"
+            gutterBottom
+            sx={{ fontSize: "2.6rem", fontFamily: "Michroma" }}
+          >
+            Strategy Roulette
           </Typography>
           {highestStreak !== null && (
             <Typography variant="h5" gutterBottom>
@@ -240,114 +281,145 @@ const StratRoulette = () => {
           )}
           {!gameEnded && (
             <>
-              <StrategyTitle variant="h6" gutterBottom>
-                {currentStrat.title}
-              </StrategyTitle>
-              {currentStrat.scope && (
-                <Typography
-                  variant="h5"
-                  sx={{ color: "royalblue" }}
-                  gutterBottom
-                >
-                  Duration:{" "}
-                  {currentStrat.scope === "round"
-                    ? "One Round"
-                    : currentStrat.scope === "match"
-                    ? "Whole Match"
-                    : "Only Once"}
-                </Typography>
-              )}
-              {currentStrat.difficulty && (
-                <Badge
-                  badgeContent={currentStrat.difficulty}
-                  color={
-                    currentStrat.difficulty === "easy"
-                      ? "success"
-                      : currentStrat.difficulty === "medium"
-                      ? "warning"
-                      : "error"
-                  }
-                  sx={{
-                    "& .MuiBadge-badge": {
-                      minWidth: "100px",
-                      height: "30px",
-                      fontSize: "1.3rem",
-                      fontWeight: "bold",
-                      marginTop: "1rem",
-                    },
-                  }}
-                />
-              )}
-              <StrategyText variant="h6" gutterBottom>
-                {currentStrat.description ||
-                  "Press the button to get a funny strategy!"}
-              </StrategyText>
+              <StratContainer>
+                <StratContentContainer>
+                  {currentStrat.title && (
+                    <>
+                      <Typography variant="h5" gutterBottom>
+                        Current Points: {points}
+                      </Typography>
+                      <StrategyTitle variant="h6" gutterBottom>
+                        {currentStrat.title}
+                      </StrategyTitle>
+                      <StratDurationAndDifficulty>
+                        {currentStrat.scope && (
+                          <StratDuration variant="h5" gutterBottom>
+                            <span> Duration:</span>
+                            {currentStrat.scope === "round"
+                              ? "One Round"
+                              : currentStrat.scope === "match"
+                              ? "Whole Match"
+                              : "Only Once"}
+                          </StratDuration>
+                        )}
+                        {currentStrat.difficulty && (
+                          <Chip
+                            label={currentStrat.difficulty}
+                            color={
+                              currentStrat.difficulty === "easy"
+                                ? "success"
+                                : currentStrat.difficulty === "medium"
+                                ? "warning"
+                                : "error"
+                            }
+                            sx={{
+                              "& .MuiChip-label": {
+                                minWidth: "100px",
+                                fontSize: "1.3rem",
+                              },
+                            }}
+                          />
+                        )}
+                      </StratDurationAndDifficulty>
+                    </>
+                  )}
 
-              <FormControl fullWidth sx={{ marginBottom: 3 }}>
-                <InputLabel id="character-select-label">
-                  Select Character
-                </InputLabel>
-                <Select
-                  labelId="character-select-label"
-                  value={selectedCharacter}
-                  label="Select Character"
-                  onChange={(e) => setSelectedCharacter(e.target.value)}
-                  disabled={gameStarted}
-                >
-                  <MenuItem value="">All Characters</MenuItem>
-                  {Object.keys(strategies.characters).map((char) => (
-                    <MenuItem key={char} value={char}>
-                      {char.charAt(0).toUpperCase() + char.slice(1)}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+                  <StrategyText variant="h6" gutterBottom>
+                    {currentStrat.description ||
+                      "Press the button to get a funny strategy!"}
+                  </StrategyText>
+                  {!gameStarted && (
+                    <FormControl
+                      fullWidth
+                      sx={{ marginBottom: 3, marginTop: "1rem" }}
+                    >
+                      <InputLabel id="character-select-label">
+                        Select Character
+                      </InputLabel>
+                      <Select
+                        labelId="character-select-label"
+                        value={selectedCharacter}
+                        label="Select Character"
+                        onChange={(e) => setSelectedCharacter(e.target.value)}
+                        disabled={gameStarted}
+                      >
+                        <MenuItem value="">All Characters</MenuItem>
+                        {Object.keys(strategies.characters).map((char) => (
+                          <MenuItem key={char} value={char}>
+                            {char.charAt(0).toUpperCase() + char.slice(1)}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  )}
+                  {!gameStarted && (
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={getRandomStrategy}
+                    >
+                      Random Strategy
+                    </Button>
+                  )}
+                  {gameStarted && !gameEnded && (
+                    <>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: 2,
+                          marginTop: "3rem",
+                        }}
+                      >
+                        <Button
+                          variant="contained"
+                          color="success"
+                          onClick={handleSuccess}
+                          sx={{ fontWeight: "700" }}
+                        >
+                          Succeeded
+                        </Button>
+                        <Button
+                          variant="contained"
+                          color="error"
+                          onClick={handleFailure}
+                          sx={{ fontWeight: "700" }}
+                        >
+                          Failed
+                        </Button>
+                      </Box>
+                    </>
+                  )}
+                  {gameEnded && (
+                    <>
+                      <Typography variant="h5" sx={{ color: "white" }}>
+                        Current Points: {points}
+                      </Typography>
+                    </>
+                  )}
+                </StratContentContainer>
+              </StratContainer>
             </>
           )}
-          {!gameStarted && (
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={getRandomStrategy}
-            >
-              Get a Random Strategy
-            </Button>
-          )}
-          {gameStarted && !gameEnded && (
-            <>
-              <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-                <Button
-                  variant="contained"
-                  color="success"
-                  onClick={handleSuccess}
-                >
-                  Succeeded
-                </Button>
-                <Button
-                  variant="contained"
-                  color="error"
-                  onClick={handleFailure}
-                >
-                  Failed
-                </Button>
-              </Box>
-              <Typography variant="h5" gutterBottom>
-                Current Points: {points}
-              </Typography>
-            </>
-          )}
+
           {gameEnded && (
             <>
-              <Typography variant="h5" sx={{ color: "white" }} gutterBottom>
-                Current Points: {points}
-              </Typography>
-              <StrategyText variant="h4" gutterBottom>
+              <StrategyText
+                variant="h4"
+                gutterBottom
+                sx={{ margin: "2rem auto" }}
+              >
                 {getPunishment(points)}
               </StrategyText>
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ margin: 1 }}
+                sx={{
+                  margin: 1,
+                  fontWeight: "500",
+                  padding: "10px 45px",
+                  fontSize: "1.1rem",
+                }}
                 onClick={resetGame}
               >
                 Retry
