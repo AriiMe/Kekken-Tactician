@@ -1,28 +1,34 @@
 import React from "react";
-import { Container, Typography, Link } from "@mui/material";
+import { Container, Typography, Link, styled } from "@mui/material";
+
+const StyledPolicyTitle = styled(Typography)(({ theme }) => ({
+  fontFamily: "Michroma",
+  color: "#c62828",
+  marginTop: "2em",
+}));
 
 const Privacy = () => (
-  <Container sx={{ marginTop: "150px" }}>
-    <Typography variant="h4" gutterBottom>
+  <Container sx={{ margin: "150px auto 80px" }} maxWidth="md">
+    <StyledPolicyTitle variant="h4" gutterBottom>
       Privacy Policy
-    </Typography>
+    </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
       We value your privacy and are committed to protecting your personal data.
       This Privacy Policy will inform you about how we handle your personal data
       when you visit our website.
     </Typography>
-    <Typography variant="h5" gutterBottom>
+    <StyledPolicyTitle variant="h5" gutterBottom>
       What Data We Collect
-    </Typography>
+    </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
       We use Umami Analytics to understand how visitors interact with our
       website. Umami does not use cookies and does not collect personal data.
       All data is anonymized and used solely to improve website performance and
       user experience.
     </Typography>
-    <Typography variant="h5" gutterBottom>
+    <StyledPolicyTitle variant="h5" gutterBottom>
       How We Use Your Data
-    </Typography>
+    </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
       The anonymized data collected through Umami Analytics helps us to:
       <ul>
@@ -32,9 +38,9 @@ const Privacy = () => (
         <li>Identify and fix technical issues</li>
       </ul>
     </Typography>
-    <Typography variant="h5" gutterBottom>
+    <StyledPolicyTitle variant="h5" gutterBottom>
       Your Rights
-    </Typography>
+    </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
       You have the right to:
       <ul>
