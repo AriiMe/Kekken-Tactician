@@ -44,6 +44,24 @@ const StyledImage = styled("img")({
   },
 });
 
+const StyledPolicyTitle = styled(Typography)(({ theme }) => ({
+  fontFamily: "Michroma",
+  color: "#c62828",
+}));
+const StyledAgreePolicy = styled(Button)(({ theme }) => ({
+  fontSize: ".875rem",
+  fontWeight: "700",
+  marginTop: "4rem",
+  width: "100%",
+}));
+
+const StyledReadPolicy = styled(Button)(({ theme }) => ({
+  fontSize: ".6rem",
+  // marginTop: "2rem",
+  margin: "1rem auto 0",
+  width: "100%",
+}));
+
 const CharacterSelect = () => {
   const theme = useTheme();
   const [characters, setCharacters] = useState([]);
@@ -158,6 +176,7 @@ const CharacterSelect = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 !important",
+        marginBottom: "80px",
       }}
     >
       <Helmet>
@@ -314,32 +333,33 @@ const CharacterSelect = () => {
             boxShadow: 5,
           }}
         >
-          <Typography id="privacy-notice-title" variant="h6" component="h2">
-            Privacy Notice
-          </Typography>
+          <StyledPolicyTitle
+            id="privacy-notice-title"
+            variant="h6"
+            component="h2"
+          >
+            Privacy Notice :
+          </StyledPolicyTitle>
           <Typography id="privacy-notice-description" sx={{ mt: 2 }}>
             We use Umami Analytics to understand how visitors interact with our
             website. Umami does not use cookies and does not collect personal
             data. All data is anonymized and used solely to improve website
             performance and user experience.
           </Typography>
-          <Button
+          <StyledAgreePolicy
             onClick={handlePrivacyModalClose}
             variant="contained"
             color="primary"
-            sx={{ mt: 2 }}
           >
             I Understand
-          </Button>
-          <Button
+          </StyledAgreePolicy>
+          <StyledReadPolicy
             component="a"
             href="/privacy-policy"
-            variant="outlined"
             color="primary"
-            sx={{ mt: 2 }}
           >
             Read Full Privacy Policy
-          </Button>
+          </StyledReadPolicy>
         </Paper>
       </Modal>
     </Container>
