@@ -19,6 +19,7 @@ import News from "./pages/News";
 import AntiCharDetails from "./pages/AntiCharDetails";
 import StratRoulette from "./pages/StratRoulette";
 import Privacy from "./pages/Privacy";
+import StratContent from "./pages/StratConent";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
               element={<AntiCharDetails />}
             />
             <Route path="/strat-roulette" element={<StratRoulette />} />
+            <Route path="/strat-content" element={<StratContent />} />
             <Route path="/faqu" element={<FAQ />} />
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/news" element={<News />} />
