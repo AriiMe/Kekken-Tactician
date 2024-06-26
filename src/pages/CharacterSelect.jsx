@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
-import { Box, IconButton, Modal } from "@mui/material";
+import { Box, IconButton, Link, Modal } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
@@ -61,6 +61,20 @@ const StyledReadPolicy = styled(Button)(({ theme }) => ({
   margin: "1rem auto 0",
   width: "100%",
 }));
+
+const paragraphStyle = {
+  fontSize: "1.5rem",
+  textAlign: "center",
+  width: "70%",
+  margin: "1.25rem auto",
+  fontFamily: "Michroma",
+  letterSpacing: "1px",
+  lineHeight: "2",
+  "@media (max-width: 1100px)": {
+    fontSize: "1rem",
+    width: "90%",
+  },
+};
 
 const CharacterSelect = () => {
   const theme = useTheme();
@@ -206,6 +220,17 @@ const CharacterSelect = () => {
       >
         Pick your Character
       </h1>
+      <Typography variant="body1" sx={paragraphStyle}>
+        Let's help
+        <Link
+          href="https://www.twitch.tv/mishimacomplex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MishimaComplex
+        </Link>{" "}
+        reach 1000 followers on twitch!
+      </Typography>
 
       <Container maxWidth="sm" sx={{ marginBottom: "3rem", marginTop: "2rem" }}>
         {alphabet.map(({ letter, active }) => (
