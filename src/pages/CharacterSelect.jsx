@@ -229,6 +229,14 @@ const CharacterSelect = () => {
         >
           MishimaComplex
         </Link>{" "}
+        and{" "}
+        <Link
+          href="https://www.twitch.tv/notmasood"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Masood
+        </Link>{" "}
         grow on twitch!
       </Typography>
 
