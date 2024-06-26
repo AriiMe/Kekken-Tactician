@@ -221,7 +221,7 @@ const CharacterSelect = () => {
         Pick your Character
       </h1>
       <Typography variant="body1" sx={paragraphStyle}>
-        Let's help
+        Let's help{" "}
         <Link
           href="https://www.twitch.tv/mishimacomplex"
           target="_blank"
