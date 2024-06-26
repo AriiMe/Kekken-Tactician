@@ -229,7 +229,7 @@ const CharacterSelect = () => {
         >
           MishimaComplex
         </Link>{" "}
-        reach 1000 followers on twitch!
+        grow on twitch!
       </Typography>
 
       <Container maxWidth="sm" sx={{ marginBottom: "3rem", marginTop: "2rem" }}>
