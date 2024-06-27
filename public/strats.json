@@ -12,6 +12,30 @@
             "scope": "round"
         },
         {
+            "title": "The Door Stuck",
+            "description": "You are not allowed to use directional Inputs, you may use directional inputs only for moves like ewgf etc.",
+            "difficulty": "hard",
+            "scope": "match"
+        },
+        {
+            "title": "The 'I'm on the shitter'",
+            "description": "Spam your Full Crouch moves only.",
+            "difficulty": "medium",
+            "scope": "round"
+        },
+        {
+            "title": "The Hot ones",
+            "description": "Eat the spiciest thing that you have and finish the match without drinking anything.",
+            "difficulty": "hard",
+            "scope": "match"
+        },
+        {
+            "title": "The Switcheroo",
+            "description": "Switch your Playside and leave it that way for the entire set. You can mark this as complete after accepting a match.",
+            "difficulty": "hard",
+            "scope": "match"
+        },
+        {
             "title": "The ShinBlade",
             "description": "Win the match and use taunts or ki charge after every combo tornado.",
             "difficulty": "hard",
@@ -35,6 +59,12 @@
             "title": "The good ol switcheroo.",
             "description": "Switch your grip on the controller every round.",
             "difficulty": "easy",
+            "scope": "match"
+        },
+        {
+            "title": "The MishimaComplex.",
+            "description": "You're an aussie now so when your opponents health is low you may only spam low moves or throw random rage art.",
+            "difficulty": "hard",
             "scope": "match"
         },
         {
@@ -388,7 +418,7 @@
                 "scope": "round"
             },
             {
-                "title": "The Sansara Shenanigans.",
+                "title": "The Masood.",
                 "description": "Sansara only. You may combo from it.",
                 "difficulty": "hard",
                 "scope": "round"
@@ -478,6 +508,7 @@
                 "difficulty": "hard",
                 "scope": "round"
             }
+
         ],
         "paul": [{
                 "title": "The Fist Her First Fury.",
