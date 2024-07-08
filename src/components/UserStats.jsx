@@ -165,13 +165,12 @@ const UserStats = ({ userId }) => {
     setTabValue(newValue);
   };
   // Utility functions to calculate wins, losses, and ratios for a given user data
-  const calculateStats = (data) => {
+  const calculateStats = (data, userId) => {
     const totalMatches = data.length;
-    const matchesWon = data.filter(
-      (match) =>
-        (match.winner === 1 && match.p1_polaris_id === userId) ||
-        (match.winner === 2 && match.p2_polaris_id === userId)
-    ).length;
+    const matchesWon = data.filter((match) => {
+      const isP1 = match.p1_polaris_id === userId;
+      return (isP1 && match.winner === 1) || (!isP1 && match.winner === 2);
+    }).length;
     const winRatio = ((matchesWon / totalMatches) * 100).toFixed(2);
 
     const characterWins = {};
@@ -275,29 +274,66 @@ const UserStats = ({ userId }) => {
         <Card sx={{ display: "flex", padding: "20px" }}>
           <Box
             component="img"
-            src={getCharacterImageUrl(userData[0].p1_chara_id)}
-            alt={getCharacterName(userData[0].p1_chara_id)}
+            src={getCharacterImageUrl(
+              userData[0].p1_polaris_id === userId
+                ? userData[0].p1_chara_id
+                : userData[0].p2_chara_id
+            )}
+            alt={getCharacterName(
+              userData[0].p1_polaris_id === userId
+                ? userData[0].p1_chara_id
+                : userData[0].p2_chara_id
+            )}
             sx={{ width: "200px", height: "200px", objectFit: "contain" }}
           />
           <CardContent sx={{ paddingLeft: "30px" }}>
             <Typography variant="h5" gutterBottom>
               User Info
             </Typography>
-            <Typography>Name: {userData[0].p1_name}</Typography>
             <Typography>
-              Most Used Character: {getCharacterName(userData[0].p1_chara_id)}
+              Name:{" "}
+              {userData[0].p1_polaris_id === userId
+                ? userData[0].p1_name
+                : userData[0].p2_name}
             </Typography>
-            <Typography>Rank: {getRankName(userData[0].p1_rank)}</Typography>
-            <Typography>Power: {userData[0].p1_power}</Typography>
             <Typography>
-              Current Rating: {userData[0].p1_rating_before}
+              Most Used Character:{" "}
+              {getCharacterName(
+                userData[0].p1_polaris_id === userId
+                  ? userData[0].p1_chara_id
+                  : userData[0].p2_chara_id
+              )}
+            </Typography>
+            <Typography>
+              Rank:{" "}
+              {getRankName(
+                userData[0].p1_polaris_id === userId
+                  ? userData[0].p1_rank
+                  : userData[0].p2_rank
+              )}
+            </Typography>
+            <Typography>
+              Power:{" "}
+              {userData[0].p1_polaris_id === userId
+                ? userData[0].p1_power
+                : userData[0].p2_power}
+            </Typography>
+            <Typography>
+              Current Rating:{" "}
+              {userData[0].p1_polaris_id === userId
+                ? userData[0].p1_rating_before
+                : userData[0].p2_rating_before}
             </Typography>
             <Typography>Polaris ID: {userId}</Typography>
             <Typography>Total Matches: {userData.length}</Typography>
             <Typography>
               Win Ratio:{" "}
               {(
-                (userData.filter((match) => match.winner === 1).length /
+                (userData.filter(
+                  (match) =>
+                    (match.p1_polaris_id === userId && match.winner === 1) ||
+                    (match.p2_polaris_id === userId && match.winner === 2)
+                ).length /
                   userData.length) *
                 100
               ).toFixed(2)}
@@ -318,19 +354,17 @@ const UserStats = ({ userId }) => {
 
       {userIsCurrentUser && (
         <Grid item xs={12}>
-          {userIsCurrentUser && (
-            <Box sx={{ display: "flex", marginBottom: "20px" }}>
-              <TextField
-                label="Compare with User ID"
-                value={comparisonId}
-                onChange={(e) => setComparisonId(e.target.value)}
-                sx={{ marginRight: "10px" }}
-              />
-              <Button variant="contained" onClick={handleCompareUserId}>
-                Compare
-              </Button>
-            </Box>
-          )}
+          <Box sx={{ display: "flex", marginBottom: "20px" }}>
+            <TextField
+              label="Compare with User ID"
+              value={comparisonId}
+              onChange={(e) => setComparisonId(e.target.value)}
+              sx={{ marginRight: "10px" }}
+            />
+            <Button variant="contained" onClick={handleCompareUserId}>
+              Compare
+            </Button>
+          </Box>
         </Grid>
       )}
 
@@ -339,32 +373,68 @@ const UserStats = ({ userId }) => {
           <Card sx={{ display: "flex", padding: "20px", marginTop: "20px" }}>
             <Box
               component="img"
-              src={getCharacterImageUrl(comparisonData[0].p1_chara_id)}
-              alt={getCharacterName(comparisonData[0].p1_chara_id)}
+              src={getCharacterImageUrl(
+                comparisonData[0].p1_polaris_id === comparisonId
+                  ? comparisonData[0].p1_chara_id
+                  : comparisonData[0].p2_chara_id
+              )}
+              alt={getCharacterName(
+                comparisonData[0].p1_polaris_id === comparisonId
+                  ? comparisonData[0].p1_chara_id
+                  : comparisonData[0].p2_chara_id
+              )}
               sx={{ width: "200px", height: "200px", objectFit: "contain" }}
             />
             <CardContent sx={{ paddingLeft: "30px" }}>
               <Typography variant="h5" gutterBottom>
                 Comparison User Info
               </Typography>
-              <Typography>Name: {comparisonData[0].p1_name}</Typography>
+              <Typography>
+                Name:{" "}
+                {comparisonData[0].p1_polaris_id === comparisonId
+                  ? comparisonData[0].p1_name
+                  : comparisonData[0].p2_name}
+              </Typography>
               <Typography>
                 Most Used Character:{" "}
-                {getCharacterName(comparisonData[0].p1_chara_id)}
+                {getCharacterName(
+                  comparisonData[0].p1_polaris_id === comparisonId
+                    ? comparisonData[0].p1_chara_id
+                    : comparisonData[0].p2_chara_id
+                )}
               </Typography>
               <Typography>
-                Rank: {getRankName(comparisonData[0].p1_rank)}
+                Rank:{" "}
+                {getRankName(
+                  comparisonData[0].p1_polaris_id === comparisonId
+                    ? comparisonData[0].p1_rank
+                    : comparisonData[0].p2_rank
+                )}
               </Typography>
-              <Typography>Power: {comparisonData[0].p1_power}</Typography>
               <Typography>
-                Current Rating: {comparisonData[0].p1_rating_before}
+                Power:{" "}
+                {comparisonData[0].p1_polaris_id === comparisonId
+                  ? comparisonData[0].p1_power
+                  : comparisonData[0].p2_power}
+              </Typography>
+              <Typography>
+                Current Rating:{" "}
+                {comparisonData[0].p1_polaris_id === comparisonId
+                  ? comparisonData[0].p1_rating_before
+                  : comparisonData[0].p2_rating_before}
               </Typography>
               <Typography>Polaris ID: {comparisonId}</Typography>
               <Typography>Total Matches: {comparisonData.length}</Typography>
               <Typography>
                 Win Ratio:{" "}
                 {(
-                  (comparisonData.filter((match) => match.winner === 1).length /
+                  (comparisonData.filter(
+                    (match) =>
+                      (match.p1_polaris_id === comparisonId &&
+                        match.winner === 1) ||
+                      (match.p2_polaris_id === comparisonId &&
+                        match.winner === 2)
+                  ).length /
                     comparisonData.length) *
                   100
                 ).toFixed(2)}
