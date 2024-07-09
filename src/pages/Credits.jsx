@@ -112,6 +112,7 @@ const Credits = () => {
           >
             MishimaComplex
           </Link>{" "}
+          From friend to lover, thank you for the help. Kek
         </Typography>
 
         <Typography variant="body1" sx={paragraphStyle}>
