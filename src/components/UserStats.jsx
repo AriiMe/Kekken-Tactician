@@ -10,6 +10,7 @@ import {
   TextField,
   Tabs,
   Tab,
+  styled,
 } from "@mui/material";
 import { Bar } from "react-chartjs-2";
 import {
@@ -30,6 +31,55 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+
+const PlayerVsCard = styled(Box)(({ theme }) => ({
+  minWidth: "150px",
+  maxWidth: "250px",
+  textAlign: "center",
+  position: "relative",
+  fontFamily: "roboto",
+
+  "& .winner": {
+    position: "absolute",
+    left: "-92px",
+    top: "30%",
+    fontSize: "1.5rem",
+    fontFamily: "Michroma",
+    letterSpacing: "10px",
+    color: "white",
+    padding: "0.5em",
+    paddingLeft: "0.6em",
+    textTransform: "uppercase",
+    opacity: "0.4",
+    transform: " rotate(-90deg)",
+  },
+
+  "& .winner::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    background: "red",
+    transform: "skew(20deg) rotate(0deg)",
+    zIndex: -1,
+  },
+
+  "& img": {
+    width: "100%",
+    height: "200px",
+    objectFit: "cover",
+    marginBottom: "1rem",
+  },
+
+  "& .playerName": {
+    fontSize: "1.1rem",
+  },
+  "& .playerPower": {
+    fontSize: ".875rem",
+  },
+}));
 
 const UserStats = ({ userId }) => {
   const [userData, setUserData] = useState(null);
@@ -460,46 +510,39 @@ const UserStats = ({ userId }) => {
                   justifyContent: "space-between",
                 }}
               >
-                <Box
-                  sx={{ display: "flex", alignItems: "center", width: "40%" }}
-                >
+                <PlayerVsCard>
+                  {match.winner === 1&& (<p className="winner">winner</p>)}
                   <Box
                     component="img"
                     src={getCharacterImageUrl(match.p1_chara_id)}
                     alt={getCharacterName(match.p1_chara_id)}
-                    sx={{ width: "70px", height: "70px", marginRight: "10px" }}
+                    // sx={{ width: "100%" }}
                   />
-                  <Typography variant="subtitle1">
-                    {match.p1_name} ({match.p1_power})
+                  <Typography variant="body1" className="playerName">
+                    {match.p2_name}
                   </Typography>
-                </Box>
+                  <Typography variant="subtitle1" className="playerPower">
+                    TKN POWER: {match.p2_power}
+                  </Typography>
+                </PlayerVsCard>
                 <Typography variant="h4" sx={{ margin: "0 20px" }}>
                   VS
                 </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    width: "40%",
-                    justifyContent: "flex-end",
-                  }}
-                >
-                  <Typography variant="subtitle1">
-                    {match.p2_name} ({match.p2_power})
-                  </Typography>
+                <PlayerVsCard>
+                  {match.winner !== 1 && <p className="winner">winner</p>}
                   <Box
                     component="img"
                     src={getCharacterImageUrl(match.p2_chara_id)}
                     alt={getCharacterName(match.p2_chara_id)}
-                    sx={{ width: "70px", height: "70px", marginLeft: "10px" }}
+                    // sx={{ width: "100%" }}
                   />
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{ color: match.winner === 1 ? "green" : "red" }}
-                >
-                  Winner: {match.winner === 1 ? match.p1_name : match.p2_name}
-                </Typography>
+                  <Typography variant="body1" className="playerName">
+                    {match.p2_name}
+                  </Typography>
+                  <Typography variant="subtitle1" className="playerPower">
+                    TKN POWER: {match.p2_power}
+                  </Typography>
+                </PlayerVsCard>
               </CardContent>
             </Card>
           ))}
