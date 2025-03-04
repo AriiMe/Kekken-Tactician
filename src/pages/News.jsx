@@ -56,7 +56,7 @@ const News = () => {
             color: "#d42f2f",
           }}
         >
-          TEKKEN NEWS Hallo Abdou
+          TEKKEN NEWS 
         </h1>
         <Grid container spacing={3}>
           {news.map((article, index) => (
