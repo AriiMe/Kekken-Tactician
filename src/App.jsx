@@ -21,7 +21,7 @@ import StratRoulette from "./pages/StratRoulette";
 import Privacy from "./pages/Privacy";
 import StratContent from "./pages/StratConent";
 import StatsPage from "./pages/StatsPage";
-
+// testing
 const App = () => {
   return (
     <BrowserRouter>
