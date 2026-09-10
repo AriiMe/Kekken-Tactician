@@ -1,6 +1,7 @@
 import { Box, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import PropTypes from "prop-types";
 
 const flexBaselineBetween = {
   display: "flex",
@@ -50,6 +51,16 @@ const CollapsableSection = ({
       </Box>
     </Box>
   );
+};
+
+CollapsableSection.propTypes = {
+  toggleState: PropTypes.bool.isRequired,
+  collapseFn: PropTypes.func.isRequired,
+  title: PropTypes.node.isRequired,
+  clr: PropTypes.string,
+  styles: PropTypes.object,
+  contentStyles: PropTypes.object,
+  children: PropTypes.node.isRequired,
 };
 
 export default CollapsableSection;

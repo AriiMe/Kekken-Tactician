@@ -1,10 +1,10 @@
-import { Box, Paper, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import CollapsableSection from "./CollapsableSection";
 import { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
-import { BorderLeft } from "@mui/icons-material";
+import PropTypes from "prop-types";
 
-const KeyMoveContainer = styled(Box)(({ theme }) => ({
+const KeyMoveContainer = styled(Box)(() => ({
   marginBottom: "4rem",
   "& .moveNotation": {
     background: "#222",
@@ -31,7 +31,6 @@ const KeyMovesToPunish = ({ keyMovesArr }) => {
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
-  console.log(keyMovesArr);
   return (
     <Box>
       <CollapsableSection
@@ -59,6 +58,10 @@ const KeyMovesToPunish = ({ keyMovesArr }) => {
       </CollapsableSection>
     </Box>
   );
+};
+
+KeyMovesToPunish.propTypes = {
+  keyMovesArr: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default KeyMovesToPunish;

@@ -1,3 +1,44 @@
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.app-shell__content {
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+
+.route-loading {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    min-height: 62vh;
+    color: #a6a8b1;
+    font-family: Inter, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.route-loading span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ff354d;
+    box-shadow: 0 0 0 5px rgba(255, 53, 77, 0.12);
+    animation: route-loading-pulse 900ms ease-in-out infinite alternate;
+}
+
+@keyframes route-loading-pulse {
+    to {
+        opacity: 0.35;
+        transform: scale(0.72);
+    }
+}
+
 .sequence-part,
 .xbox-input {
     font-size: large;
@@ -78,4 +119,10 @@ img {
 .special-icons {
     height: 45px !important;
     width: 45px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .route-loading span {
+        animation: none;
+    }
 }

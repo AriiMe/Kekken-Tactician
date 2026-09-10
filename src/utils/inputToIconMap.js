@@ -23,14 +23,14 @@ const inputToIconMap = {
   "1+3+4": "/icons/1+3+4.webp",
   "2+3+4": "/icons/2+3+4.webp",
   "1+2+3+4": "/icons/1+2+3+4.webp",
-  holdf: "/icons/holdF.webp",
-  holdb: "/icons/holdB.webp",
-  holdd: "/icons/holdD.webp",
-  holdu: "/icons/holdU.webp",
-  holddf: "/icons/holdDF.webp",
-  holddb: "/icons/holdDB.webp",
-  holduf: "/icons/holdUF.webp",
-  holdub: "/icons/holdUB.webp",
+  holdf: "/icons/holdf.webp",
+  holdb: "/icons/holdb.webp",
+  holdd: "/icons/holdd.webp",
+  holdu: "/icons/holdu.webp",
+  holddf: "/icons/holddf.webp",
+  holddb: "/icons/holddb.webp",
+  holduf: "/icons/holduf.webp",
+  holdub: "/icons/holdub.webp",
 };
 
 export default inputToIconMap;

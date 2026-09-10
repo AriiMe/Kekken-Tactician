@@ -1,16 +1,36 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { useState, createContext, useContext, useEffect } from "react";
+import PropTypes from "prop-types";
+
+const DEFAULT_DISPLAY_MODE = "icons";
+const VALID_DISPLAY_MODES = new Set(["icons", "notations"]);
+
+const readDisplayMode = () => {
+  try {
+    const savedMode = JSON.parse(localStorage.getItem("displayMode"));
+    return VALID_DISPLAY_MODES.has(savedMode)
+      ? savedMode
+      : DEFAULT_DISPLAY_MODE;
+  } catch {
+    return DEFAULT_DISPLAY_MODE;
+  }
+};
+
+const saveDisplayMode = (displayMode) => {
+  try {
+    localStorage.setItem("displayMode", JSON.stringify(displayMode));
+  } catch {
+    // Preferences remain usable for this session when storage is unavailable.
+  }
+};
 
 export const DisplayModeContext = createContext();
 
 export const DisplayModeProvider = ({ children }) => {
-  const [displayMode, setDisplayMode] = useState(() => {
-    // Read from local storage and parse or use a default value
-    const savedMode = localStorage.getItem("displayMode");
-    return savedMode ? JSON.parse(savedMode) : "icons";
-  });
+  const [displayMode, setDisplayMode] = useState(readDisplayMode);
 
   useEffect(() => {
-    localStorage.setItem("displayMode", JSON.stringify(displayMode));
+    saveDisplayMode(displayMode);
   }, [displayMode]);
 
   return (
@@ -18,6 +38,10 @@ export const DisplayModeProvider = ({ children }) => {
       {children}
     </DisplayModeContext.Provider>
   );
+};
+
+DisplayModeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export const useDisplayMode = () => useContext(DisplayModeContext);

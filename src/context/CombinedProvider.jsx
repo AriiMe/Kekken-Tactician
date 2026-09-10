@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { DisplayModeProvider } from "./DisplayModeContext";
 import { ColorModeProvider } from "./ColorModeContext"; // Import the ColorModeProvider
 import { ThemeProvider } from "@mui/material/styles";
@@ -12,4 +12,8 @@ export const CombinedProvider = ({ children }) => {
       </ColorModeProvider>
     </DisplayModeProvider>
   );
+};
+
+CombinedProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

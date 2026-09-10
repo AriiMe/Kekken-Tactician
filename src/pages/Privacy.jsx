@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Typography, Link, styled } from "@mui/material";
+import { Box, Container, Link, styled, Typography } from "@mui/material";
+import { siteLinks } from "../data/siteLinks";
 
-const StyledPolicyTitle = styled(Typography)(({ theme }) => ({
+const StyledPolicyTitle = styled(Typography)(() => ({
   fontFamily: "Michroma",
   color: "#c62828",
   marginTop: "2em",
@@ -13,55 +13,75 @@ const Privacy = () => (
       Privacy Policy
     </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
-      We value your privacy and are committed to protecting your personal data.
-      This Privacy Policy will inform you about how we handle your personal data
-      when you visit our website.
+      Last updated September 10, 2026. This page explains the services and local
+      preferences used when you visit TEKKTICIAN.
     </Typography>
     <StyledPolicyTitle variant="h5" gutterBottom>
-      What Data We Collect
+      Analytics
     </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
-      We use Umami Analytics to understand how visitors interact with our
-      website. Umami does not use cookies and does not collect personal data.
-      All data is anonymized and used solely to improve website performance and
-      user experience.
-    </Typography>
-    <StyledPolicyTitle variant="h5" gutterBottom>
-      How We Use Your Data
-    </StyledPolicyTitle>
-    <Typography variant="body1" paragraph>
-      The anonymized data collected through Umami Analytics helps us to:
-      <ul>
-        <li>To check how are the loading times and performance</li>
-        <li>Improve our website’s performance and user experience</li>
-        <li>Understand which pages are most popular</li>
-        <li>Identify and fix technical issues</li>
-      </ul>
-    </Typography>
-    <StyledPolicyTitle variant="h5" gutterBottom>
-      Your Rights
-    </StyledPolicyTitle>
-    <Typography variant="body1" paragraph>
-      You have the right to:
-      <ul>
-        <li>
-          Request access to your data, but remember since it is anonymized, we
-          cannot provide an exact match.
-        </li>
-        <li>
-          Request deletion of your data; however, as the data is anonymized, we
-          cannot identify individual records to delete. The data get's cleared
-          on a yearly basis.
-        </li>
-      </ul>
-      For any concerns or questions about your data privacy, please contact us
-      at our{" "}
+      We use{" "}
+      <Link href="https://umami.is/privacy" target="_blank" rel="noopener noreferrer">
+        Umami Analytics
+      </Link>{" "}
+      and{" "}
       <Link
-        href="https://discord.gg/d2Czp4Kj75"
+        href="https://vercel.com/docs/analytics/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {" "}
+        Vercel Web Analytics
+      </Link>{" "}
+      to understand page traffic, devices and general usage. Their standard
+      analytics products are designed to provide anonymous or aggregated data
+      without third-party tracking cookies. Vercel Speed Insights also measures
+      page performance so we can find slow or unstable experiences.
+    </Typography>
+    <StyledPolicyTitle variant="h5" gutterBottom>
+      Advertising technology
+    </StyledPolicyTitle>
+    <Typography variant="body1" paragraph>
+      The site includes Google AdSense code. Google states that AdSense may use
+      cookies or similar technology to serve and measure advertising, depending
+      on your region, browser and consent settings. You can review or change
+      personalized-ad choices in{" "}
+      <Link
+        href="https://adssettings.google.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Ads Settings
+      </Link>
+      .
+    </Typography>
+    <StyledPolicyTitle variant="h5" gutterBottom>
+      Preferences stored on your device
+    </StyledPolicyTitle>
+    <Typography variant="body1" paragraph>
+      TEKKTICIAN uses browser local storage to remember your input-display mode,
+      icon-color preference and whether you dismissed the privacy notice. These
+      values stay on your device unless you clear your browser storage.
+    </Typography>
+    <StyledPolicyTitle variant="h5" gutterBottom>
+      How the data helps
+    </StyledPolicyTitle>
+    <Box component="ul" sx={{ lineHeight: 1.8, marginTop: 0 }}>
+      <li>Measure loading times and page stability.</li>
+      <li>Understand which guides and tools are used most.</li>
+      <li>Find navigation problems and technical errors.</li>
+      <li>Improve the site without building individual visitor profiles.</li>
+    </Box>
+    <StyledPolicyTitle variant="h5" gutterBottom>
+      Questions
+    </StyledPolicyTitle>
+    <Typography variant="body1" paragraph>
+      For questions about privacy or the services used by TEKKTICIAN, contact us
+      through the{" "}
+      <Link
+        href={siteLinks.discord}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Discord server
       </Link>
       .

@@ -1,0 +1,53 @@
+.input-icons {
+  --input-icon-size: 32px;
+  display: inline-block;
+  width: var(--input-icon-size);
+  height: var(--input-icon-size);
+  object-fit: contain;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+.input-gap {
+  display: inline-block;
+  width: 0.38em;
+}
+
+.input-separator,
+.plus-sign {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.72em;
+  margin-inline: 0.06em;
+  color: #d5d6da;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.input-icons.input-icon--movement-state {
+  --input-icon-size: 45px;
+}
+
+.input-icons.input-icon--counter-hit {
+  --input-icon-size: 50px;
+}
+
+@media (max-width: 1150px) {
+  .input-icons {
+    --input-icon-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-icons {
+    --input-icon-size: 22px;
+  }
+
+  .input-icons.input-icon--movement-state,
+  .input-icons.input-icon--counter-hit {
+    --input-icon-size: 25px;
+  }
+}

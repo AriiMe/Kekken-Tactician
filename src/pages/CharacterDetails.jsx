@@ -1,5 +1,5 @@
 // CharacterDetails.jsx
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MostImportantGrabs from "../components/MostImportantGrabs";
 import { HeatDash } from "../components/HeatDash";
@@ -72,7 +72,7 @@ const CharacterDetails = () => {
             align="center"
             sx={{ color: "#d42f2f" }}
           >
-            JK, it's loading please wait...
+            JK, it’s loading—please wait…
           </Typography>
         </div>
       );
@@ -147,7 +147,7 @@ const CharacterDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
-  const characterCombosURL = `https://www.tekkentactician.com/character/combos/${characterName}-combos/${characterId}`;
+  const characterCombosURL = `https://tekktician.com/character/combos/${characterName}-combos/${characterId}`;
 
   const jsonLd = {
     "@context": "https://schema.org",

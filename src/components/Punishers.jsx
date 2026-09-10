@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Helmet } from "react-helmet";
 import "./Punishers.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const Punishers = ({ punishers, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -44,7 +45,7 @@ const Punishers = ({ punishers, name }) => {
         collapseFn={toggleCollapse}
       >
         <ul>
-          {punishers.startup.map((punish, index) => (
+          {punishers.startup.map((punish) => (
             <li key={uuidv4()} className="my-li punisher-li">
               <span>{renderInputImage(punish.move)} </span>
               <span
@@ -63,6 +64,13 @@ const Punishers = ({ punishers, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+Punishers.propTypes = {
+  punishers: PropTypes.shape({
+    startup: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Punishers;

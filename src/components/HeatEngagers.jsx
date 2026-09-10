@@ -3,6 +3,7 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./HeatEngagers.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const HeatEngagers = ({ heat, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -58,6 +59,11 @@ const HeatEngagers = ({ heat, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+HeatEngagers.propTypes = {
+  heat: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default HeatEngagers;

@@ -3,6 +3,7 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./MostImportantGrabs.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const MostImportantGrabs = ({ grabs, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -57,6 +58,11 @@ const MostImportantGrabs = ({ grabs, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+MostImportantGrabs.propTypes = {
+  grabs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default MostImportantGrabs;

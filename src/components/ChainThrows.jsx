@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./ChainThrows.css";
@@ -135,6 +136,11 @@ const ChainThrows = ({ chainThrows, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+ChainThrows.propTypes = {
+  chainThrows: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default ChainThrows;

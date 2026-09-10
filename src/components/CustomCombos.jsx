@@ -10,7 +10,6 @@ import {
   TableBody,
   TableHead,
   Typography,
-  List,
   ListItem,
   ListItemText,
   Container,
@@ -279,7 +278,7 @@ const CustomCombos = () => {
 
     // Create a watermark element
     const watermark = document.createElement("div");
-    watermark.textContent = "tekkentactician.com";
+    watermark.textContent = "tekktician.com";
     watermark.style.position = "relative";
     watermark.style.width = "100%";
     watermark.style.textAlign = "center";
@@ -510,7 +509,7 @@ const CustomCombos = () => {
                             display: "none",
                           }}
                         >
-                          tekkentactician.com
+                          tekktician.com
                         </div>
                         {followUp.map((item, subIndex) => (
                           <div
@@ -598,7 +597,7 @@ const CustomCombos = () => {
             // align="center"
             style={{ fontWeight: "bold", ...fontFamily }}
           >
-            - To add a new combo, click the "+ Add New Combo" button at the
+            - To add a new combo, click the “+ Add New Combo” button at the
             bottom of the table. To edit an existing combo, double-click on the
             cell you want to edit.
           </Typography>
@@ -608,7 +607,7 @@ const CustomCombos = () => {
             // align="center"
             style={{ fontWeight: "bold", ...fontFamily }}
           >
-            - To add a new launcher or follow-up, click the "+" button next to
+            - To add a new launcher or follow-up, click the “+” button next to
             the last input field. To separate follow-ups into different
             sequences, add them in separate input fields.
           </Typography>
@@ -661,9 +660,9 @@ const CustomCombos = () => {
           align="center"
           style={{ ...fontFamily, margin: "60px auto" }}
         >
-          For the launchers and follow-ups, input the commands are separated by
-          a space.It isn't case sensetive so it doesn't matter if you upper- or
-          lower-case them . Each command corresponds to an icon as follows:
+          For launchers and follow-ups, separate input commands with a space.
+          They aren’t case-sensitive, so upper- and lower-case notation both
+          work. Each command corresponds to an icon as follows:
         </Typography>
 
         <div className="instructions">

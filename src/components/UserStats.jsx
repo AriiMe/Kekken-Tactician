@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import {
   Card,
@@ -110,56 +111,6 @@ const UserStats = ({ userId }) => {
     return <Typography>No data available</Typography>;
   }
   const userIsCurrentUser = localStorage.getItem("myUserId") === userId;
-
-  const userInfo = userData.find(
-    (replay) =>
-      replay.p1_polaris_id === userId || replay.p2_polaris_id === userId
-  );
-
-  const totalMatches = userData.length;
-  const matchesWon = userData.filter(
-    (match) =>
-      (match.winner === 1 && match.p1_polaris_id === userId) ||
-      (match.winner === 2 && match.p2_polaris_id === userId)
-  ).length;
-  const winRatio = ((matchesWon / totalMatches) * 100).toFixed(2);
-
-  const characterWins = {};
-  const characterLosses = {};
-
-  userData.forEach((match) => {
-    const isP1 = match.p1_polaris_id === userId;
-    const opponentCharacterId = isP1 ? match.p2_chara_id : match.p1_chara_id;
-    const wonMatch =
-      (isP1 && match.winner === 1) || (!isP1 && match.winner === 2);
-
-    if (wonMatch) {
-      characterWins[opponentCharacterId] =
-        (characterWins[opponentCharacterId] || 0) + 1;
-    } else {
-      characterLosses[opponentCharacterId] =
-        (characterLosses[opponentCharacterId] || 0) + 1;
-    }
-  });
-
-  const characterWinRatios = {};
-  for (let charId in characterWins) {
-    const totalFights =
-      (characterWins[charId] || 0) + (characterLosses[charId] || 0);
-    if (totalFights > 0) {
-      characterWinRatios[charId] = (
-        ((characterWins[charId] || 0) / totalFights) *
-        100
-      ).toFixed(2);
-    }
-  }
-
-  const topWinRatios = Object.entries(characterWinRatios)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3);
-  const bottomWinRatios = Object.entries(characterWinRatios)
-    .sort((a, b) => a[1] - b[1])
-    .slice(0, 3);
 
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
@@ -653,6 +604,11 @@ const UserStats = ({ userId }) => {
     </Grid>
   );
 };
+
+UserStats.propTypes = {
+  userId: PropTypes.string.isRequired,
+};
+
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
 
@@ -672,4 +628,11 @@ const TabPanel = (props) => {
     </div>
   );
 };
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+};
+
 export default UserStats;

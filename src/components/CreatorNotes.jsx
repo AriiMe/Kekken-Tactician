@@ -8,6 +8,7 @@ import renderInputImage from "../utils/renderInputImage";
 import Link from "@mui/material/Link";
 import "./CreatorNotes.css"; // Import the CSS file
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const primaryRed = { color: "rgba(212, 47, 47, 1)" };
 const creatorSocialIconStyling = {
@@ -184,6 +185,17 @@ const CreatorNotes = ({ creatorNotes, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+CreatorNotes.propTypes = {
+  creatorNotes: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    notes: PropTypes.arrayOf(PropTypes.object).isRequired,
+    socialMediaIcon: PropTypes.string,
+    socialMediaLink: PropTypes.string.isRequired,
+    stapleCombo: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default CreatorNotes;

@@ -7,7 +7,7 @@ import styles from "./AntiCharDetails.module.css";
 import KeyMovesToPunish from "../components/KeyMovesToPunish";
 import CounterStrategy from "../components/CounterStrategy";
 
-const ContentBox = styled(Box)(({ theme }) => ({
+const ContentBox = styled(Box)(() => ({
   // padding: "0rem 2rem",
   margin: "2rem auto",
 }));
@@ -15,15 +15,12 @@ const ContentBox = styled(Box)(({ theme }) => ({
 const AntiCharDetails = () => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
   const { characterId } = useParams();
   const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchCharacter = async () => {
       try {
-        setLoading(true);
         const response = await fetch(`${apiUrl}/characters/${characterId}`);
         if (!response.ok) {
           throw new Error("Character not found");
@@ -31,10 +28,8 @@ const AntiCharDetails = () => {
         const data = await response.json();
 
         setCharacter(data);
-        setLoading(false);
       } catch (error) {
         setError(error);
-        setLoading(false);
       }
     };
 
@@ -96,7 +91,7 @@ const AntiCharDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
-  const characterAntiGuideUrl = `https://www.tekkentactician.com//anti-guide/character/${characterId}`;
+  const characterAntiGuideUrl = `https://tekktician.com/anti-guide/character/${characterId}`;
 
   const jsonLd = {
     "@context": "https://schema.org",

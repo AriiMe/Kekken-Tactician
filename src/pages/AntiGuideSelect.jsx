@@ -1,4 +1,4 @@
-import { Container, Grid, styled, Typography } from "@mui/material";
+import { Container, Grid, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,10 +18,6 @@ const StyledImage = styled("img")({
 const AntiGuideSelect = () => {
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [loadingMessage, setLoadingMessage] = useState(
-    "Loading please wait..."
-  );
   const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
@@ -35,8 +31,6 @@ const AntiGuideSelect = () => {
         );
 
         setCharacters(filteredData);
-
-        setLoading(false);
       })
       .catch((error) => console.error("Error fetching characters:", error));
   }, [apiUrl]);

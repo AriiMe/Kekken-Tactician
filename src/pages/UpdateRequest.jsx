@@ -1,8 +1,8 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import { siteLinks } from "../data/siteLinks";
 
 const paragraphStyle = {
   fontSize: "1rem",
@@ -53,10 +53,10 @@ const UpdateRequest = () => {
 
         <Typography variant="body1" paragraph sx={{ fontSize: "20px" }}>
           If you see a scrub wrote combos for your main or want a specific
-          Character be first to release, let me know! I'll gladly update the
+          Character be first to release, let me know! I’ll gladly update the
           combos. Reach out to ariime on our{" "}
           <Link
-            href="https://discord.gg/d2Czp4Kj75"
+            href={siteLinks.discord}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -77,7 +77,7 @@ const UpdateRequest = () => {
         <Typography variant="body1" paragraph sx={paragraphStyle}>
           Only people with massive PP donate on
           <Link
-            href="https://ko-fi.com/ariime"
+            href={siteLinks.koFi}
             target="_blank"
             rel="noopener noreferrer"
           >

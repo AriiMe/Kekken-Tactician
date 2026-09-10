@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import "./MainCombos.css";
 import { useDisplayMode } from "../context/DisplayModeContext";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const MainCombos = ({ combos, name }) => {
   const { displayMode } = useDisplayMode();
@@ -193,6 +194,15 @@ const MainCombos = ({ combos, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+MainCombos.propTypes = {
+  combos: PropTypes.arrayOf(
+    PropTypes.shape({
+      endTime: PropTypes.number,
+    })
+  ).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default MainCombos;

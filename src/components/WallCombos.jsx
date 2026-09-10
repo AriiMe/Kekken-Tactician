@@ -4,6 +4,7 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./WallCombos.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const WallCombos = ({ wallCombos, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -95,6 +96,14 @@ const WallCombos = ({ wallCombos, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+WallCombos.propTypes = {
+  wallCombos: PropTypes.shape({
+    general: PropTypes.arrayOf(PropTypes.object).isRequired,
+    withTornado: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
+  name: PropTypes.string.isRequired,
 };
 
 export default WallCombos;

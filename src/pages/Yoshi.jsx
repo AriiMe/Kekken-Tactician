@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Typography } from "@mui/material";
 
 const Yoshi = () => {
@@ -25,7 +23,7 @@ const Yoshi = () => {
         align="center"
         sx={{ color: "#d42f2f" }}
       >
-        JK, it's loading please wait...
+        JK, it’s loading please wait...
       </Typography>
     </div>
   );

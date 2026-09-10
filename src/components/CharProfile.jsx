@@ -1,7 +1,5 @@
-import React from "react";
-
 import "./CharProfile.css";
-import { Link, Tooltip } from "@mui/material";
+import PropTypes from "prop-types";
 
 const CharProfile = ({ pic, name }) => {
   return (
@@ -11,6 +9,11 @@ const CharProfile = ({ pic, name }) => {
       <img id="char-pic" src={pic} alt={name} />
     </div>
   );
+};
+
+CharProfile.propTypes = {
+  pic: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default CharProfile;
