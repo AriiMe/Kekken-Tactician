@@ -22,6 +22,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { getReplays } from "../utils/apiClient";
 
 ChartJS.register(
   CategoryScale,
@@ -34,13 +35,17 @@ ChartJS.register(
 
 const UserStats = ({ userId }) => {
   const [userData, setUserData] = useState(null);
+  const [comparisonInput, setComparisonInput] = useState("");
   const [comparisonId, setComparisonId] = useState("");
+  const [comparisonRequestKey, setComparisonRequestKey] = useState(0);
   const [comparisonData, setComparisonData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [tabValue, setTabValue] = useState(0);
   const [mappings, setMappings] = useState({ characters: {}, ranks: {} });
 
   useEffect(() => {
+    const controller = new AbortController();
+
     axios
       .get("/wank.json")
       .then((response) => {
@@ -51,34 +56,42 @@ const UserStats = ({ userId }) => {
       });
 
     if (userId) {
-      axios
-        .get(`https://kekken-backend.onrender.com/stats/replays?id=${userId}`)
-        .then((response) => {
-          setUserData(response.data);
+      setLoading(true);
+      setComparisonInput("");
+      setComparisonId("");
+      setComparisonData(null);
+      getReplays(userId, { signal: controller.signal })
+        .then((data) => {
+          setUserData(data);
           setLoading(false);
         })
         .catch((error) => {
+          if (error.name === "AbortError") return;
           console.error("Error fetching user data:", error);
+          setUserData([]);
           setLoading(false);
         });
     }
+
+    return () => controller.abort();
   }, [userId]);
 
   useEffect(() => {
-    if (comparisonId) {
-      axios
-        .get(
-          `https://kekken-backend.onrender.com/stats/replays?id=${comparisonId}`
-        )
-        .then((response) => {
-          setComparisonData(Array.isArray(response.data) ? response.data : []);
-        })
-        .catch((error) => {
-          console.error("Error fetching comparison data:", error);
-          setComparisonData([]);
-        });
-    }
-  }, [comparisonId]);
+    if (!comparisonId) return undefined;
+
+    const controller = new AbortController();
+    getReplays(comparisonId, { signal: controller.signal })
+      .then((data) => {
+        setComparisonData(data);
+      })
+      .catch((error) => {
+        if (error.name === "AbortError") return;
+        console.error("Error fetching comparison data:", error);
+        setComparisonData([]);
+      });
+
+    return () => controller.abort();
+  }, [comparisonId, comparisonRequestKey]);
 
   const getCharacterName = (id) =>
     mappings.characters[id] || "Unknown Character";
@@ -90,24 +103,21 @@ const UserStats = ({ userId }) => {
   };
 
   const handleCompareUserId = () => {
-    axios
-      .get(
-        `https://kekken-backend.onrender.com/stats/replays?id=${comparisonId}`
-      )
-      .then((response) => {
-        setComparisonData(Array.isArray(response.data) ? response.data : []);
-      })
-      .catch((error) => {
-        console.error("Error fetching comparison data:", error);
-        setComparisonData([]);
-      });
+    const normalizedId = comparisonInput.trim();
+    if (!normalizedId) return;
+    setComparisonData(null);
+    if (normalizedId === comparisonId) {
+      setComparisonRequestKey((key) => key + 1);
+    } else {
+      setComparisonId(normalizedId);
+    }
   };
 
   if (loading) {
     return <Typography>Loading...</Typography>;
   }
 
-  if (!userData) {
+  if (!Array.isArray(userData) || userData.length === 0) {
     return <Typography>No data available</Typography>;
   }
   const userIsCurrentUser = localStorage.getItem("myUserId") === userId;
@@ -116,19 +126,21 @@ const UserStats = ({ userId }) => {
     setTabValue(newValue);
   };
   // Utility functions to calculate wins, losses, and ratios for a given user data
-  const calculateStats = (data, userId) => {
+  const calculateStats = (data, targetUserId) => {
     const totalMatches = data.length;
     const matchesWon = data.filter((match) => {
-      const isP1 = match.p1_polaris_id === userId;
+      const isP1 = match.p1_polaris_id === targetUserId;
       return (isP1 && match.winner === 1) || (!isP1 && match.winner === 2);
     }).length;
-    const winRatio = ((matchesWon / totalMatches) * 100).toFixed(2);
+    const winRatio = totalMatches
+      ? ((matchesWon / totalMatches) * 100).toFixed(2)
+      : "0.00";
 
     const characterWins = {};
     const characterLosses = {};
 
     data.forEach((match) => {
-      const isP1 = match.p1_polaris_id === userId;
+      const isP1 = match.p1_polaris_id === targetUserId;
       const opponentCharacterId = isP1 ? match.p2_chara_id : match.p1_chara_id;
       const wonMatch =
         (isP1 && match.winner === 1) || (!isP1 && match.winner === 2);
@@ -143,7 +155,12 @@ const UserStats = ({ userId }) => {
     });
 
     const characterWinRatios = {};
-    for (let charId in characterWins) {
+    const characterIds = new Set([
+      ...Object.keys(characterWins),
+      ...Object.keys(characterLosses),
+    ]);
+
+    for (const charId of characterIds) {
       const totalFights =
         (characterWins[charId] || 0) + (characterLosses[charId] || 0);
       if (totalFights > 0) {
@@ -172,47 +189,58 @@ const UserStats = ({ userId }) => {
     };
   };
 
-  const userStats = calculateStats(userData);
+  const userStats = calculateStats(userData, userId);
   const comparisonStats =
     Array.isArray(comparisonData) && comparisonData.length > 0
-      ? calculateStats(comparisonData)
+      ? calculateStats(comparisonData, comparisonId)
       : null;
 
   // Prepare chart data for both users
+  const chartCharacterIds = [
+    ...new Set([
+      ...Object.keys(userStats.characterWins || {}),
+      ...Object.keys(userStats.characterLosses || {}),
+      ...(comparisonStats
+        ? Object.keys(comparisonStats.characterWins || {})
+        : []),
+      ...(comparisonStats
+        ? Object.keys(comparisonStats.characterLosses || {})
+        : []),
+    ]),
+  ];
   const chartData = {
-    labels: [
-      ...new Set([
-        ...Object.keys(userStats.characterWins || {}),
-        ...Object.keys(userStats.characterLosses || {}),
-        ...(comparisonStats
-          ? Object.keys(comparisonStats.characterWins || {})
-          : []),
-        ...(comparisonStats
-          ? Object.keys(comparisonStats.characterLosses || {})
-          : []),
-      ]),
-    ],
+    labels: chartCharacterIds,
     datasets: [
       {
         label: userIsCurrentUser ? "My Wins" : "User Wins",
-        data: Object.values(userStats.characterWins || {}),
+        data: chartCharacterIds.map(
+          (characterId) => userStats.characterWins[characterId] || 0
+        ),
         backgroundColor: "rgba(75, 192, 192, 0.6)",
       },
       {
         label: userIsCurrentUser ? "My Losses" : "User Losses",
-        data: Object.values(userStats.characterLosses || {}),
+        data: chartCharacterIds.map(
+          (characterId) => userStats.characterLosses[characterId] || 0
+        ),
         backgroundColor: "rgba(255, 99, 132, 0.6)",
       },
       ...(comparisonStats
         ? [
             {
               label: "Comparison Wins",
-              data: Object.values(comparisonStats.characterWins || {}),
+              data: chartCharacterIds.map(
+                (characterId) =>
+                  comparisonStats.characterWins[characterId] || 0
+              ),
               backgroundColor: "rgba(54, 162, 235, 0.6)",
             },
             {
               label: "Comparison Losses",
-              data: Object.values(comparisonStats.characterLosses || {}),
+              data: chartCharacterIds.map(
+                (characterId) =>
+                  comparisonStats.characterLosses[characterId] || 0
+              ),
               backgroundColor: "rgba(153, 102, 255, 0.6)",
             },
           ]
@@ -277,19 +305,7 @@ const UserStats = ({ userId }) => {
             </Typography>
             <Typography>Polaris ID: {userId}</Typography>
             <Typography>Total Matches: {userData.length}</Typography>
-            <Typography>
-              Win Ratio:{" "}
-              {(
-                (userData.filter(
-                  (match) =>
-                    (match.p1_polaris_id === userId && match.winner === 1) ||
-                    (match.p2_polaris_id === userId && match.winner === 2)
-                ).length /
-                  userData.length) *
-                100
-              ).toFixed(2)}
-              %
-            </Typography>
+            <Typography>Win Ratio: {userStats.winRatio}%</Typography>
             {!localStorage.getItem("myUserId") && (
               <Button
                 variant="contained"
@@ -308,18 +324,22 @@ const UserStats = ({ userId }) => {
           <Box sx={{ display: "flex", marginBottom: "20px" }}>
             <TextField
               label="Compare with User ID"
-              value={comparisonId}
-              onChange={(e) => setComparisonId(e.target.value)}
+              value={comparisonInput}
+              onChange={(e) => setComparisonInput(e.target.value)}
               sx={{ marginRight: "10px" }}
             />
-            <Button variant="contained" onClick={handleCompareUserId}>
+            <Button
+              variant="contained"
+              onClick={handleCompareUserId}
+              disabled={!comparisonInput.trim()}
+            >
               Compare
             </Button>
           </Box>
         </Grid>
       )}
 
-      {comparisonData && (
+      {Array.isArray(comparisonData) && comparisonData.length > 0 && (
         <Grid item xs={12}>
           <Card sx={{ display: "flex", padding: "20px", marginTop: "20px" }}>
             <Box
@@ -376,21 +396,7 @@ const UserStats = ({ userId }) => {
               </Typography>
               <Typography>Polaris ID: {comparisonId}</Typography>
               <Typography>Total Matches: {comparisonData.length}</Typography>
-              <Typography>
-                Win Ratio:{" "}
-                {(
-                  (comparisonData.filter(
-                    (match) =>
-                      (match.p1_polaris_id === comparisonId &&
-                        match.winner === 1) ||
-                      (match.p2_polaris_id === comparisonId &&
-                        match.winner === 2)
-                  ).length /
-                    comparisonData.length) *
-                  100
-                ).toFixed(2)}
-                %
-              </Typography>
+              <Typography>Win Ratio: {comparisonStats.winRatio}%</Typography>
             </CardContent>
           </Card>
         </Grid>

@@ -11,6 +11,7 @@ import UselessTipps from "../components/UselessTipps";
 import { Box, IconButton, Link } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { getCharacters } from "../utils/apiClient";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -65,36 +66,17 @@ const CharacterSelect = () => {
   const [requestKey, setRequestKey] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [alphabet, setAlphabet] = useState([]);
-  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   useEffect(() => {
-    let isCurrent = true;
-
-    if (!apiUrl) {
-      setError("The Tekken 8 guide server is not configured for this preview.");
-      setLoading(false);
-      return () => {
-        isCurrent = false;
-      };
-    }
+    const controller = new AbortController();
 
     setLoading(true);
     setError("");
     setLoadingMessage("Loading please wait...");
 
-    fetch(`${apiUrl}/characters`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Character request failed with ${response.status}`);
-        }
-        return response.json();
-      })
+    getCharacters({ view: "summary", signal: controller.signal })
       .then((data) => {
-        if (!isCurrent) return;
-        if (!Array.isArray(data)) {
-          throw new Error("Character response was not a list");
-        }
         setCharacters(data);
 
         const fullAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -108,7 +90,7 @@ const CharacterSelect = () => {
         setLoading(false);
       })
       .catch((requestError) => {
-        if (!isCurrent) return;
+        if (requestError.name === "AbortError") return;
         console.error("Error fetching characters:", requestError);
         setError(
           "The Tekken 8 guide server could not be reached. It may be waking up—please try again."
@@ -117,9 +99,9 @@ const CharacterSelect = () => {
       });
 
     return () => {
-      isCurrent = false;
+      controller.abort();
     };
-  }, [apiUrl, requestKey]);
+  }, [requestKey]);
 
   useEffect(() => {
     if (!loading) return undefined;

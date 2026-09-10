@@ -15,6 +15,7 @@ import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
 import CreatorNotes from "../components/CreatorNotes";
+import { getCharacter } from "../utils/apiClient";
 
 const boraderRaduisSection = { borderRadius: "5px" };
 const leftColumnMargin = { marginBottom: "0rem" };
@@ -25,28 +26,30 @@ const CharacterDetails = () => {
   const [loading, setLoading] = useState(true);
 
   const { characterId } = useParams();
-  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchCharacter = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${apiUrl}/characters/${characterId}`);
-        if (!response.ok) {
-          throw new Error("Character not found");
-        }
-        const data = await response.json();
-
+        setError(null);
+        const data = await getCharacter(characterId, {
+          signal: controller.signal,
+        });
         setCharacter(data);
         setLoading(false);
       } catch (error) {
+        if (error.name === "AbortError") return;
         setError(error);
         setLoading(false);
       }
     };
 
     fetchCharacter();
-  }, [characterId, apiUrl]);
+
+    return () => controller.abort();
+  }, [characterId]);
 
   if (loading) {
     if (characterId === "662bd3e3f1042bb628f57a67") {

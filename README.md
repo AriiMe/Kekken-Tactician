@@ -14,19 +14,23 @@ npm ci
 npm run dev
 ```
 
-Create `.env.local` when testing the Tekken 8 data-backed routes:
+The public production API defaults to
+`https://kekken-backend.onrender.com/api`. Create `.env.local` only when you
+need to point the frontend at another backend (the `/api` suffix is required):
 
 ```dotenv
-VITE_API_URL=https://your-api.example.com
+VITE_API_URL=http://localhost:3000/api
 ```
 
-The current frontend expects these read endpoints:
+The frontend prefers the versioned, game-scoped endpoints:
 
-- `GET /characters`
-- `GET /characters/:characterId`
+- `GET /v1/games/tekken-8/characters?view=summary`
+- `GET /v1/games/tekken-8/characters/:characterId`
+- `GET /v1/games/tekken-8/players/:polarisId/replays`
 
-Without `VITE_API_URL`, the game library still works and the Tekken 8 selector
-shows a retryable configuration message instead of waiting indefinitely.
+During a staged rollout, frontend origins already allowed by an older backend
+can fall back to the existing `/characters`, `/characters/:characterId`, and
+`/stats/replays` routes. Other games never fall back to the Tekken 8 collection.
 
 ## Useful commands
 
@@ -62,7 +66,8 @@ ownership of game names, artwork, logos, or trademarks.
 
 Before pointing `tekktician.com` at production:
 
-1. Set `VITE_API_URL` in the deployment environment.
+1. Optionally set `VITE_API_URL` (including `/api`) when not using the Render
+   production API.
 2. Allow `https://tekktician.com` in the API CORS configuration.
 3. Confirm the AdSense privacy/consent configuration for every served region.
 4. Run `npm run lint` and `npm run build`.

@@ -15,7 +15,9 @@ const StatsPage = () => {
   }, []);
 
   const handleSearchUserId = () => {
-    setUserId(inputId);
+    const normalizedId = inputId.trim();
+    if (!normalizedId) return;
+    setUserId(normalizedId);
     setInputId("");
   };
 
@@ -34,7 +36,11 @@ const StatsPage = () => {
           onChange={(e) => setInputId(e.target.value)}
           sx={{ marginRight: "10px" }}
         />
-        <Button variant="contained" onClick={handleSearchUserId}>
+        <Button
+          variant="contained"
+          onClick={handleSearchUserId}
+          disabled={!inputId.trim()}
+        >
           Search
         </Button>
       </Box>
