@@ -107,6 +107,14 @@ export const getTekken7Essentials = async ({ signal } = {}) => {
   return payload;
 };
 
+export const getTekkenTag2Essentials = async ({ signal } = {}) => {
+  const payload = await requestJson('/v1/games/tekken-tag-2/essentials', { signal });
+  if (payload?.gameId !== 'tekken-tag-2' || !Array.isArray(payload.characters) || !payload.characters.length) {
+    throw new ApiRequestError('The Tag 2 guide response was invalid', { code: 'INVALID_RESPONSE' });
+  }
+  return payload;
+};
+
 export const getCharacters = async ({
   gameId = DEFAULT_GAME_ID,
   view = "summary",

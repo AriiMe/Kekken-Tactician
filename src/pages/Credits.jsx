@@ -57,6 +57,13 @@ const Credits = () => {
           Official Tekken 7 artwork is from <Link href="https://tk7.tekken-official.jp/chara/">Bandai Namco’s character gallery</Link>.
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
+          Tekken Tag Tournament 2 inputs were curated from <Link href="https://gamefaqs.gamespot.com/ps3/652997-tekken-tag-tournament-2/faqs/64909">Catlord / Hans Poorvin’s move reference</Link>,{' '}
+          <Link href="https://tekkendocs.com/tag2/">TekkenDocs / RBNorway frame data</Link> and{' '}
+          <Link href="https://gamefaqs.gamespot.com/boards/652997-tekken-tag-tournament-2/64087315">GameFAQs community combo contributions</Link>.
+          Special team routes reference <Link href="https://tekken.fandom.com/wiki/Great_Combo">Tekken Wiki’s Great Combo page</Link> (CC BY-SA).
+          Tag 2 character portraits are Bandai Namco game artwork preserved by <Link href="https://tekken.fandom.com/wiki/Tekken_Tag_Tournament_2#Characters">Tekken Wiki</Link>.
+        </Typography>
+        <Typography variant="body1" sx={paragraphStyle}>
           The new look on our website was made possible thanks to Komrad’s
           contribution, our Front-end Developer. Feel free to reach out to him
           on Reddit{" "}

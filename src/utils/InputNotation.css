@@ -115,3 +115,17 @@
     --input-icon-size: 25px;
   }
 }
+.input-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: var(--input-icon-size, 28px);
+  padding: 0 .4em;
+  margin: 0 .15em;
+  border-radius: 4px;
+  background: #147b9e;
+  color: #fff;
+  font: 800 .7em/1 Arial, sans-serif;
+  letter-spacing: .03em;
+}

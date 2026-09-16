@@ -36,6 +36,7 @@ const t8InputToIconMap = {
   pc: "/icons-t8/powercrush.png",
   t: "/icons-t8/tornado.png",
   screw: "/icons-t8/tornado.png",
+  bound: "/icons-t8/tornado.png",
   "[": "/icons-t8/bracketl.png",
   "]": "/icons-t8/bracketr.png",
   chip: "/icons-t8/chip.png",

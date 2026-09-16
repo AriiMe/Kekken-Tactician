@@ -2,6 +2,7 @@ import inputToIconMap from "./inputToIconMap.js";
 import t8InputToIconMap from "./t8InputToIconMap.js";
 import { stanceTokens } from "../data/tekken8Stances.js";
 import { tekken7StanceLabels } from "../data/tekken7Notation.js";
+import { tekkenTag2StanceLabels } from "../data/tekkenTag2Notation.js";
 
 export const MOTION_SEQUENCES = Object.freeze({
   qcf: ["d", "df", "f"],
@@ -15,6 +16,8 @@ export const SPECIAL_INPUT_LABELS = Object.freeze({
   pc: "Power crush",
   t: "Tornado",
   screw: "Screw / spin extender",
+  bound: "Bound / ground bounce",
+  tag: "Tag button (5)",
   "[": "Opening bracket",
   "]": "Closing bracket",
   chip: "Chip damage",
@@ -80,7 +83,7 @@ export const normalizeInputToken = (value) => {
   if (typeof value !== "string") return null;
 
   const source = value.trim().toLowerCase();
-  const token = ({ '>': 'into', '→': 'into', 's!': 'screw', 't!': 't', tornado: 't',
+  const token = ({ '>': 'into', '→': 'into', 's!': 'screw', 't!': 't', tornado: 't', 'b!': 'bound', '5': 'tag',
     'floor break': 'fb', 'wall break': 'wb', 'power crush': 'pc',
     'counter hit': 'ch', 'back turned': 'bt' })[source] || source;
   if (!token) return null;
@@ -171,6 +174,12 @@ const joinCompactParts = (raw, start, parts, separator = "+") => {
 };
 
 const parseCompactLexeme = (raw, start) => {
+  const immediateTag = raw.match(/^~(5|tag)$/i);
+  if (immediateTag) return [createSegment('separator', '~', start, null), createInputSegment(immediateTag[1], start + 1)];
+  const tagChord = raw.match(/^([1-4](?:\+[1-4])*)\+(5|tag)$/i);
+  if (tagChord && BASE_ICON_TOKENS.has(tagChord[1])) {
+    return joinCompactParts(raw, start, [tagChord[1], tagChord[2]]);
+  }
   // A leading tilde is this site's held-direction notation. Between inputs it
   // means a rapid succession, so keep that timing marker between separate icons.
   if (raw.includes("~") && !raw.startsWith("~")) {
@@ -280,7 +289,7 @@ export const parseInputNotation = (input) => {
       continue;
     }
 
-    if (stanceTokens.has(raw.toUpperCase()) || Object.hasOwn(tekken7StanceLabels, raw.toUpperCase()) || raw.toUpperCase() === "FC") {
+    if (stanceTokens.has(raw.toUpperCase()) || Object.hasOwn(tekken7StanceLabels, raw.toUpperCase()) || Object.hasOwn(tekkenTag2StanceLabels, raw.toUpperCase()) || raw.toUpperCase() === "FC") {
       segments.push(createSegment("stance", raw, start, raw.toUpperCase()));
       continue;
     }

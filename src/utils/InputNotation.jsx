@@ -42,6 +42,7 @@ const getIconSource = (token, useClassicIcons) => {
 };
 
 const renderInputIcon = (token, sourceToken, colorMode, className = "") => {
+  if (token === 'tag') return <span className="input-tag" role="img" aria-label="Tag button (5)" title="TAG: tag button (5)">TAG</span>;
   const src = getIconSource(token, colorMode);
   if (!src) return <span>{sourceToken}</span>;
 
