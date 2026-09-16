@@ -15,7 +15,9 @@ import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
 import CreatorNotes from "../components/CreatorNotes";
-import GuideNotes from "../components/GuideNotes";
+import Stances from "../components/Stances";
+import { getCharacterStances, getStanceLabels } from "../data/tekken8Stances";
+import { StanceContext } from "../context/StanceContext";
 import { getCharacter } from "../utils/apiClient";
 
 const boraderRaduisSection = { borderRadius: "5px" };
@@ -106,6 +108,8 @@ const CharacterDetails = () => {
     return <Box>Character not found...</Box>;
   }
 
+  const stances = getCharacterStances(character);
+  const stanceLabels = getStanceLabels(stances);
   const characterName = character.name.split(" ").join("-").toLowerCase();
 
   // SEO STUFF HERE
@@ -170,6 +174,7 @@ const CharacterDetails = () => {
   };
 
   return (
+    <StanceContext.Provider value={stanceLabels}>
     <Box
       className="character-sheet-container"
       sx={{ pt: 9, pb: 0, minHeight: "100vh", mb: 5 }}
@@ -270,10 +275,10 @@ const CharacterDetails = () => {
                     />
                   </Paper>
                 </Grid>
-                {character.sections?.guide && (
+                {stances.length > 0 && (
                   <Grid item xs={12}>
                     <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>
-                      <GuideNotes guide={character.sections.guide} />
+                      <Stances stances={stances} />
                     </Paper>
                   </Grid>
                 )}
@@ -318,6 +323,7 @@ const CharacterDetails = () => {
         </Grid>
       </Container>
     </Box>
+    </StanceContext.Provider>
   );
 };
 

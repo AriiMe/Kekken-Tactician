@@ -12,6 +12,8 @@ import { Box, IconButton, Link } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { getCharacters } from "../utils/apiClient";
+import CharacterPortrait from '../components/CharacterPortrait';
+import { getTekken8Portrait } from '../data/tekken8Portraits';
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -355,11 +357,13 @@ const CharacterSelect = () => {
                           handleCharacterSelect(character.name, character._id)
                         }
                       >
-                        <StyledImage
+                        {getTekken8Portrait(character.image) ? (
+                          <CharacterPortrait portrait={getTekken8Portrait(character.image)} name={character.name} />
+                        ) : <StyledImage
                           src={character.image}
                           alt={character.name}
                           sx={{ objectPosition: "top", height: "13em" }}
-                        />
+                        />}
                       </ImagePaper>
                     </Tooltip>
                   ))}

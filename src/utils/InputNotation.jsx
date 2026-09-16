@@ -1,4 +1,5 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useContext, useMemo } from "react";
+import { StanceContext } from "../context/StanceContext";
 import PropTypes from "prop-types";
 import { useColorMode } from "../context/ColorModeContext";
 import { useDisplayMode } from "../context/DisplayModeContext";
@@ -23,6 +24,16 @@ const MOVEMENT_STATE_INPUTS = new Set([
 ]);
 const NUMERIC_NOTATION_PATTERN = /^\d+(?:\+\d+)*$/;
 const HOLD_NOTATION_PATTERN = /^~([dfublr]{1,2})$/i;
+const renderAnnotation = (segment) => (
+  <span className="input-annotation">{segment.raw}</span>
+);
+
+function StanceInput({ token, raw }) {
+  const labels = useContext(StanceContext);
+  const label = token === 'FC' ? 'Full crouch' : labels[token];
+  return <abbr className="input-stance" title={label || 'Stance abbreviation'}>{raw}</abbr>;
+}
+StanceInput.propTypes = { token: PropTypes.string.isRequired, raw: PropTypes.string.isRequired };
 
 const getIconSource = (token, useClassicIcons) => {
   if (isSpecialInput(token)) return t8InputToIconMap[token];
@@ -101,6 +112,9 @@ const renderNotationText = (segment, colorMode) => {
 };
 
 const renderNotationSegment = (segment, colorMode) => {
+  if (segment.kind === "stance") return <StanceInput token={segment.normalized} raw={segment.raw} />;
+  if (segment.kind === "annotation") return renderAnnotation(segment);
+  if (segment.kind === "group") return <span className="input-group">{segment.raw}</span>;
   if (segment.kind === "space") {
     return <span className="input-gap"> </span>;
   }
@@ -121,6 +135,16 @@ const renderNotationSegment = (segment, colorMode) => {
 };
 
 const renderIconSegment = (segment, colorMode) => {
+  if (segment.kind === "stance") return <StanceInput token={segment.normalized} raw={segment.raw} />;
+  if (segment.kind === "annotation") {
+    const tapDirection = segment.raw.match(/^\(tap (up|down|forward|back)\)$/i);
+    if (tapDirection) {
+      const direction = { up: "u", down: "d", forward: "f", back: "b" }[tapDirection[1].toLowerCase()];
+      return <span className="input-annotation">tap {renderInputIcon(direction, direction, colorMode)}</span>;
+    }
+    return renderAnnotation(segment);
+  }
+  if (segment.kind === "group") return <span className="input-group">{segment.raw}</span>;
   if (segment.kind === "space") {
     return <span className="input-gap" aria-hidden="true" />;
   }
@@ -130,6 +154,8 @@ const renderIconSegment = (segment, colorMode) => {
       "+": "plus",
       ",": "then",
       ">": "into",
+      "~": "immediately followed by",
+      ":": "just-frame timing",
     }[segment.raw];
 
     return (

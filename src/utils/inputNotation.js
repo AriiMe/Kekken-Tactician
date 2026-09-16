@@ -1,5 +1,6 @@
 import inputToIconMap from "./inputToIconMap.js";
 import t8InputToIconMap from "./t8InputToIconMap.js";
+import { stanceTokens } from "../data/tekken8Stances.js";
 
 export const MOTION_SEQUENCES = Object.freeze({
   qcf: ["d", "df", "f"],
@@ -165,6 +166,22 @@ const joinCompactParts = (raw, start, parts, separator = "+") => {
 };
 
 const parseCompactLexeme = (raw, start) => {
+  // A leading tilde is this site's held-direction notation. Between inputs it
+  // means a rapid succession, so keep that timing marker between separate icons.
+  if (raw.includes("~") && !raw.startsWith("~")) {
+    const parts = raw.split("~");
+    const parsed = parts.map((part) => parseInputNotation(part));
+    if (parts.every(Boolean) && parsed.every((part) => part.every((s) => s.kind !== "text"))) {
+      let offset = start;
+      return parsed.flatMap((part, index) => {
+        const result = part.map((s) => ({ ...s, key: `${offset}:${s.key}` }));
+        if (index) result.unshift(createSegment("separator", "~", offset - 1, null));
+        offset += parts[index].length + 1;
+        return result;
+      });
+    }
+  }
+
   const compactMatch = raw.match(COMPACT_PREFIX_PATTERN);
   if (compactMatch) {
     const [, prefix, buttons] = compactMatch;
@@ -217,7 +234,7 @@ export const parseInputNotation = (input) => {
   const notation = toNotationString(input);
   if (!notation) return [];
 
-  const lexemePattern = /\s+|[[\],>]|[^\s[\],>]+/g;
+  const lexemePattern = /EXT DCK\b|\([^()]*\)|\s+|[[\],>:()]|[^\s[\],>:()]+/g;
   const segments = [];
 
   for (const match of notation.matchAll(lexemePattern)) {
@@ -229,7 +246,20 @@ export const parseInputNotation = (input) => {
       continue;
     }
 
-    if (raw === "+" || raw === "," || raw === ">") {
+    if (raw.startsWith("(") && raw.endsWith(")") && raw.length > 2) {
+      const content = raw.slice(1, -1);
+      const inner = parseInputNotation(content);
+      if (inner.some((s) => s.kind === "input") && inner.every((s) => s.kind !== "text")) {
+        segments.push(createSegment("group", "(", start, null));
+        segments.push(...inner.map((s) => ({ ...s, key: `${start}:group:${s.key}` })));
+        segments.push(createSegment("group", ")", start + raw.length - 1, null));
+      } else {
+        segments.push(createSegment("annotation", raw, start, null));
+      }
+      continue;
+    }
+
+    if (["+", ",", ">", ":", "~"].includes(raw)) {
       segments.push(createSegment("separator", raw, start, null));
       continue;
     }
@@ -237,6 +267,11 @@ export const parseInputNotation = (input) => {
     const normalized = normalizeInputToken(raw);
     if (normalized) {
       segments.push(createSegment("input", raw, start, normalized));
+      continue;
+    }
+
+    if (stanceTokens.has(raw.toUpperCase()) || raw.toUpperCase() === "FC") {
+      segments.push(createSegment("stance", raw, start, raw.toUpperCase()));
       continue;
     }
 
