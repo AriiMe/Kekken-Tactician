@@ -16,6 +16,7 @@ import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
 import CreatorNotes from "../components/CreatorNotes";
 import Stances from "../components/Stances";
+import BeginnerCombos from '../components/BeginnerCombos';
 import { getCharacterStances, getStanceLabels } from "../data/tekken8Stances";
 import { StanceContext } from "../context/StanceContext";
 import { getCharacter } from "../utils/apiClient";
@@ -275,6 +276,9 @@ const CharacterDetails = () => {
                     />
                   </Paper>
                 </Grid>
+                {character.beginnerCombos?.length > 0 && <Grid item xs={12}>
+                  <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}><BeginnerCombos combos={character.beginnerCombos} /></Paper>
+                </Grid>}
                 {stances.length > 0 && (
                   <Grid item xs={12}>
                     <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>

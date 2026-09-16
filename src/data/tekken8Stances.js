@@ -1,3 +1,5 @@
+import stanceEntries from './tekken8StanceEntries.js';
+
 // Stance names checked against https://wavu.wiki/t/<character>, 2026-09-16.
 // Keep the guide's existing aliases alongside the common movelist abbreviations.
 const entries = {
@@ -45,7 +47,11 @@ const entries = {
 
 const slugify = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 export const tekken8Stances = Object.fromEntries(Object.entries(entries).map(([name, rows]) => [
-  slugify(name), rows.map(([abbreviation, fullName]) => ({ abbreviation, name: fullName })),
+  slugify(name), rows.map(([abbreviation, fullName], index) => ({
+    abbreviation, name: fullName,
+    input: stanceEntries[slugify(name)][index][0],
+    notes: stanceEntries[slugify(name)][index][1] || '',
+  })),
 ]));
 
 const characterAliases = {

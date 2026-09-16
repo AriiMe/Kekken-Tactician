@@ -48,10 +48,21 @@
 }
 
 .stance-list { padding: 0 16px 16px; margin: 0; }
-.stance-list__row { display: flex; align-items: baseline; gap: 1em; padding: 10px 0; border-bottom: 1px solid #3a3a3a; }
+.stance-list__row { display: grid; grid-template-columns: 7em minmax(150px, 1fr) minmax(180px, 1.5fr); align-items: center; gap: 1em; padding: 12px 0; border-bottom: 1px solid #3a3a3a; }
 .stance-list__row:last-child { border-bottom: 0; }
 .stance-list dt { min-width: 6em; color: #fff; font-weight: 700; }
 .stance-list dd { margin: 0; color: #ddd; }
+.stance-list__entry { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.stance-list__entry small { color: #b8bdc7; line-height: 1.5; }
+.stance-list__input { min-height: 32px; }
+.easy-combos { margin: 0; padding: 0 16px 16px; }
+.easy-combos > div { padding: 15px 0; border-bottom: 1px solid #3a3a3a; }
+.easy-combos dt { margin-bottom: 10px; }
+.easy-combos dd { margin: 0; line-height: 2.5; }
+@media (max-width: 600px) {
+  .stance-list__row { grid-template-columns: 6em minmax(0, 1fr); gap: 8px; }
+  .stance-list__entry { grid-column: 2; }
+}
 
 .input-separator,
 .plus-sign {

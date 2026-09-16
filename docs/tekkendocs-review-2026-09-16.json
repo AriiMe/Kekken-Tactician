@@ -1,0 +1,236 @@
+{
+  "reviewedAt": "2026-09-16",
+  "guides": [
+    {
+      "character": "alisa",
+      "version": "3.00",
+      "source": "https://tekkendocs.com/t8/alisa/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "anna",
+      "version": "3.00.02",
+      "source": "https://tekkendocs.com/t8/anna/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "armor-king",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/armor-king/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "asuka",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/asuka/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "azucena",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/azucena/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "bryan",
+      "version": "2.04",
+      "source": "https://tekkendocs.com/t8/bryan/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "claudio",
+      "version": "2,03",
+      "source": "https://tekkendocs.com/t8/claudio/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "clive",
+      "version": "03.02.01",
+      "source": "https://tekkendocs.com/t8/clive/guide",
+      "decision": "Two short beginner routes added; existing routes retained"
+    },
+    {
+      "character": "devil-jin",
+      "version": "2.03.00",
+      "source": "https://tekkendocs.com/t8/devil-jin/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "dragunov",
+      "version": "2.04.00",
+      "source": "https://tekkendocs.com/t8/dragunov/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "eddy",
+      "version": "03.01.01",
+      "source": "https://tekkendocs.com/t8/eddy/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "fahkumram",
+      "version": "3.00.02",
+      "source": "https://tekkendocs.com/t8/fahkumram/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "heihachi",
+      "version": "2.09",
+      "source": "https://tekkendocs.com/t8/heihachi/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "hwoarang",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/hwoarang/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "jack-8",
+      "version": "03.02.01",
+      "source": "https://tekkendocs.com/t8/jack-8/guide",
+      "decision": "Two short beginner routes added; existing routes retained"
+    },
+    {
+      "character": "jin",
+      "version": "2.03.01",
+      "source": "https://tekkendocs.com/t8/jin/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "jun",
+      "version": "2.03.00",
+      "source": "https://tekkendocs.com/t8/jun/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "kazuya",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/kazuya/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "kuma",
+      "version": "2.09",
+      "source": "https://tekkendocs.com/t8/kuma/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "kunimitsu",
+      "version": "3.02.01",
+      "source": "https://tekkendocs.com/t8/kunimitsu/guide",
+      "decision": "Skipped per prior request"
+    },
+    {
+      "character": "lars",
+      "version": "2.06",
+      "source": "https://tekkendocs.com/t8/lars/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "law",
+      "version": "2.06",
+      "source": "https://tekkendocs.com/t8/law/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "lee",
+      "version": "2.00.01",
+      "source": "https://tekkendocs.com/t8/lee/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "leo",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/leo/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "leroy",
+      "version": "2.08.00",
+      "source": "https://tekkendocs.com/t8/leroy/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "lidia",
+      "version": "3.00.02",
+      "source": "https://tekkendocs.com/t8/lidia/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "lili",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/lili/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "miary-zo",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/miary-zo/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "nina",
+      "version": "3.01",
+      "source": "https://tekkendocs.com/t8/nina/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "raven",
+      "version": "3.00.01",
+      "source": "https://tekkendocs.com/t8/raven/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "reina",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/reina/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "shaheen",
+      "version": "03.01.01",
+      "source": "https://tekkendocs.com/t8/shaheen/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "steve",
+      "version": "2.09",
+      "source": "https://tekkendocs.com/t8/steve/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "victor",
+      "version": "3.00.02",
+      "source": "https://tekkendocs.com/t8/victor/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "xiaoyu",
+      "version": "3.01",
+      "source": "https://tekkendocs.com/t8/xiaoyu/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    },
+    {
+      "character": "yoshimitsu",
+      "version": "3.01.01",
+      "source": "https://tekkendocs.com/t8/yoshimitsu/guide",
+      "decision": "Reviewed; no older combo data substituted for current guides"
+    }
+  ],
+  "missingGuides": [
+    "bob",
+    "feng",
+    "king",
+    "panda",
+    "paul",
+    "zafina"
+  ],
+  "stanceSource": "https://tekkendocs.com/api/t8/{character}/framedata",
+  "tag2": {
+    "repository": "https://github.com/pbruvoll/tekkendocs",
+    "finding": "55 published character frame tables; no dedicated Tag 2 combo or guide dataset found in repository routes or content.",
+    "alternateComboReference": "https://gamefaqs.gamespot.com/ps3/652997-tekken-tag-tournament-2/faqs/64909"
+  },
+  "artSource": "https://tk7.tekken-official.jp/chara/"
+}

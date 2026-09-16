@@ -14,6 +14,7 @@ const AntiGuideSelect = lazy(() => import("./pages/AntiGuideSelect"));
 const CharacterDetails = lazy(() => import("./pages/CharacterDetails"));
 const CharacterSelect = lazy(() => import("./pages/CharacterSelect"));
 const ClassicTekken = lazy(() => import("./pages/ClassicTekken"));
+const Tekken7 = lazy(() => import("./pages/Tekken7"));
 const Credits = lazy(() => import("./pages/Credits"));
 const CustomComboPage = lazy(() => import("./pages/CustomComboPage"));
 const FAQ = lazy(() => import("./pages/FAQ"));
@@ -44,6 +45,9 @@ const App = () => {
             <Routes>
               <Route path="/" element={<GameLibrary />} />
               <Route path="/games/tekken-8" element={<CharacterSelect />} />
+              <Route path="/games/tekken-7" element={<Tekken7 />} />
+              <Route path="/games/tekken-7/:characterSlug" element={<Tekken7 />} />
+              <Route path="/tekken-7" element={<Navigate to="/games/tekken-7" replace />} />
               <Route path="/games/tekken-1" element={<ClassicTekken key="tekken-1" gameId="tekken-1" />} />
               <Route path="/games/tekken-1/:characterSlug" element={<ClassicTekken key="tekken-1" gameId="tekken-1" />} />
               <Route path="/tekken-1" element={<Navigate to="/games/tekken-1" replace />} />

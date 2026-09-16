@@ -50,6 +50,13 @@ const Credits = () => {
           Credits
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
+          Tekken 7 essentials and additional Tekken 8 references draw on <Link href="https://tekkendocs.com/">TekkenDocs</Link>,
+          its guide contributors and <Link href="https://rbnorway.org/">RBNorway</Link>.
+          Throw inputs and breaks were cross-checked with <Link href="https://geppopotamus.info/game/tekken7fr/index_en.htm">Geppopotamus / IGNIS</Link> and{' '}
+          <Link href="https://wavu.wiki/">Wavu Wiki</Link> (CC BY-SA 4.0).
+          Official Tekken 7 artwork is from <Link href="https://tk7.tekken-official.jp/chara/">Bandai Namco’s character gallery</Link>.
+        </Typography>
+        <Typography variant="body1" sx={paragraphStyle}>
           The new look on our website was made possible thanks to Komrad’s
           contribution, our Front-end Developer. Feel free to reach out to him
           on Reddit{" "}

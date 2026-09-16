@@ -16,7 +16,7 @@ const normalizeApiBaseUrl = (value) => {
 };
 
 export const API_BASE_URL = normalizeApiBaseUrl(
-  import.meta.env.VITE_API_URL
+  import.meta.env?.VITE_API_URL
 );
 
 export class ApiRequestError extends Error {
@@ -97,6 +97,14 @@ export const getGames = async ({ signal } = {}) => {
   }
 
   return gameList;
+};
+
+export const getTekken7Essentials = async ({ signal } = {}) => {
+  const payload = await requestJson('/v1/games/tekken-7/essentials', { signal });
+  if (payload?.gameId !== 'tekken-7' || !Array.isArray(payload.characters) || !payload.characters.length) {
+    throw new ApiRequestError('The Tekken 7 guide response was invalid', { code: 'INVALID_RESPONSE' });
+  }
+  return payload;
 };
 
 export const getCharacters = async ({
