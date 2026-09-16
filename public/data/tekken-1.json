@@ -844,7 +844,7 @@
           },
           {
             "name": "Uppercut into double punch",
-            "input": "df+2 > df+1 > f+2 > f,f+1+2"
+            "input": "df+2 > df+1 > f+2 > f ~f+1+2"
           },
           {
             "name": "Uppercut into double uppercut",
@@ -852,7 +852,7 @@
           },
           {
             "name": "Uppercut into Cannonball",
-            "input": "df+2 > df+1 > df+1 > qcb,df+2 > uf,3+4"
+            "input": "df+2 > df+1 > df+1 > qcb,df+2 > uf 3+4"
           }
         ]
       },
