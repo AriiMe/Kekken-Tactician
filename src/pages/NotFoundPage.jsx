@@ -1,5 +1,4 @@
 import { Box, Container, Link, Typography } from "@mui/material";
-import React from "react";
 const paragraphStyle = {
   fontSize: "1rem",
   textAlign: "center",
@@ -46,7 +45,7 @@ const NotFoundPage = () => {
           wtf are you doing here?
         </Typography>
         <Typography variant="body1" paragraph sx={paragraphStyle}>
-          You're not supposed to be here. Go back to the
+          You’re not supposed to be here. Go back to the
           <Link href="/" rel="noopener noreferrer">
             {" "}
             main page

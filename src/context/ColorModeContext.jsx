@@ -1,4 +1,22 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useState, useEffect, useContext } from "react";
+import PropTypes from "prop-types";
+
+const readColorMode = () => {
+  try {
+    return JSON.parse(localStorage.getItem("colorMode")) === true;
+  } catch {
+    return false;
+  }
+};
+
+const saveColorMode = (colorMode) => {
+  try {
+    localStorage.setItem("colorMode", JSON.stringify(colorMode));
+  } catch {
+    // Preferences remain usable for this session when storage is unavailable.
+  }
+};
 
 // Create the context
 export const ColorModeContext = createContext({
@@ -9,13 +27,11 @@ export const ColorModeContext = createContext({
 // Provider component
 export const ColorModeProvider = ({ children }) => {
   // Read the current color mode from local storage or default to false
-  const [colorMode, setColorMode] = useState(
-    () => JSON.parse(localStorage.getItem("colorMode")) || false
-  );
+  const [colorMode, setColorMode] = useState(readColorMode);
 
   // Update local storage when colorMode changes
   useEffect(() => {
-    localStorage.setItem("colorMode", JSON.stringify(colorMode));
+    saveColorMode(colorMode);
   }, [colorMode]);
 
   return (
@@ -23,6 +39,10 @@ export const ColorModeProvider = ({ children }) => {
       {children}
     </ColorModeContext.Provider>
   );
+};
+
+ColorModeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export const useColorMode = () => useContext(ColorModeContext);

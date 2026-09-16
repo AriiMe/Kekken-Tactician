@@ -6,8 +6,9 @@ import { Helmet } from "react-helmet";
 import styles from "./AntiCharDetails.module.css";
 import KeyMovesToPunish from "../components/KeyMovesToPunish";
 import CounterStrategy from "../components/CounterStrategy";
+import { getCharacter } from "../utils/apiClient";
 
-const ContentBox = styled(Box)(({ theme }) => ({
+const ContentBox = styled(Box)(() => ({
   // padding: "0rem 2rem",
   margin: "2rem auto",
 }));
@@ -15,31 +16,28 @@ const ContentBox = styled(Box)(({ theme }) => ({
 const AntiCharDetails = () => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
   const { characterId } = useParams();
-  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchCharacter = async () => {
       try {
-        setLoading(true);
-        const response = await fetch(`${apiUrl}/characters/${characterId}`);
-        if (!response.ok) {
-          throw new Error("Character not found");
-        }
-        const data = await response.json();
-
+        setError(null);
+        const data = await getCharacter(characterId, {
+          signal: controller.signal,
+        });
         setCharacter(data);
-        setLoading(false);
       } catch (error) {
+        if (error.name === "AbortError") return;
         setError(error);
-        setLoading(false);
       }
     };
 
     fetchCharacter();
-  }, [characterId, apiUrl]);
+
+    return () => controller.abort();
+  }, [characterId]);
 
   if (error) {
     return <Box>Error: {error.message || "An unknown error occurred"}</Box>;
@@ -50,8 +48,15 @@ const AntiCharDetails = () => {
   }
 
   const characterName = character.name.split(" ").join("-").toLowerCase();
-  const antiChar = character.counterSchema[0];
-  console.log(antiChar);
+  const antiChar = character.counterSchema?.[0];
+
+  if (!antiChar) {
+    return (
+      <Box sx={{ minHeight: "100vh", pt: 16, textAlign: "center" }}>
+        No anti-guide is available for {character.name} yet.
+      </Box>
+    );
+  }
 
   // SEO STUFF HERE
 
@@ -96,7 +101,7 @@ const AntiCharDetails = () => {
     `Tekken-8-${characterName}-mixups`,
   ].join(", ");
 
-  const characterAntiGuideUrl = `https://www.tekkentactician.com//anti-guide/character/${characterId}`;
+  const characterAntiGuideUrl = `https://tekktician.com/anti-guide/character/${characterId}`;
 
   const jsonLd = {
     "@context": "https://schema.org",

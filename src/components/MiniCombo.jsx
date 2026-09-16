@@ -4,6 +4,7 @@ import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./MiniCombo.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const MiniCombo = ({ miniCombo, name }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -73,6 +74,11 @@ const MiniCombo = ({ miniCombo, name }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+MiniCombo.propTypes = {
+  miniCombo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default MiniCombo;

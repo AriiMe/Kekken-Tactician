@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
@@ -54,6 +54,8 @@ const News = () => {
             textAlign: "center",
             width: "100%",
             color: "#d42f2f",
+            fontSize: "clamp(2.4rem, 7vw, 3.2rem)",
+            lineHeight: 1.1,
           }}
         >
           TEKKEN NEWS 

@@ -1,7 +1,7 @@
-import React from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { Helmet } from "react-helmet";
 import "./HeatDash.css";
+import PropTypes from "prop-types";
 
 // heat dash explanation box
 
@@ -44,4 +44,12 @@ export const HeatDash = ({ heat, name }) => {
       </ul>
     </div>
   );
+};
+
+HeatDash.propTypes = {
+  heat: PropTypes.shape({
+    engager: PropTypes.string.isRequired,
+    ender: PropTypes.string.isRequired,
+  }).isRequired,
+  name: PropTypes.string.isRequired,
 };

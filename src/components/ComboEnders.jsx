@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import "./ComboEnders.css";
 import CollapsableSection from "./CollapsableSection";
+import PropTypes from "prop-types";
 
 const ComboEnders = ({ enders }) => {
   // Group enders by category
@@ -25,7 +26,7 @@ const ComboEnders = ({ enders }) => {
       >
         <table className="combo-enders-table">
           <tbody>
-            {Object.entries(groupedEnders).map(([category, moves], index) => (
+            {Object.entries(groupedEnders).map(([category, moves]) => (
               <React.Fragment key={category}>
                 {moves.map((move, moveIndex) => (
                   <tr key={move._id}>
@@ -54,6 +55,10 @@ const ComboEnders = ({ enders }) => {
       </CollapsableSection>
     </div>
   );
+};
+
+ComboEnders.propTypes = {
+  enders: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default ComboEnders;

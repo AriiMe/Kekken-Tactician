@@ -1,6 +1,7 @@
-import { Container, Grid, styled, Typography } from "@mui/material";
+import { Button, Container, Grid, Typography, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getCharacters } from "../utils/apiClient";
 
 const StyledImage = styled("img")({
   width: "125px",
@@ -19,32 +20,60 @@ const AntiGuideSelect = () => {
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [loadingMessage, setLoadingMessage] = useState(
-    "Loading please wait..."
-  );
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const [error, setError] = useState("");
+  const [requestKey, setRequestKey] = useState(0);
 
   useEffect(() => {
-    fetch(`${apiUrl}/characters`)
-      .then((response) => response.json())
+    const controller = new AbortController();
+    setLoading(true);
+    setError("");
+
+    getCharacters({ view: "summary", signal: controller.signal })
       .then((data) => {
         const filteredData = data.filter(
           (character) =>
+            character.hasCounterGuide ||
             Array.isArray(character.counterSchema) &&
             character.counterSchema.length > 0
         );
 
         setCharacters(filteredData);
-
         setLoading(false);
       })
-      .catch((error) => console.error("Error fetching characters:", error));
-  }, [apiUrl]);
+      .catch((requestError) => {
+        if (requestError.name === "AbortError") return;
+        console.error("Error fetching characters:", requestError);
+        setError(
+          "The Tekken 8 guide server could not be reached. It may still be waking up."
+        );
+        setLoading(false);
+      });
+
+    return () => controller.abort();
+  }, [requestKey]);
 
   const handleCharacterNavigate = (id) => {
-    console.log(id);
     navigate(`/anti-guide/character/${id}`);
   };
+
+  if (loading) {
+    return (
+      <Container sx={{ minHeight: "100vh", pt: 18, textAlign: "center" }}>
+        <Typography>Loading anti-guides...</Typography>
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container sx={{ minHeight: "100vh", pt: 18, textAlign: "center" }}>
+        <Typography sx={{ mb: 2 }}>{error}</Typography>
+        <Button variant="contained" onClick={() => setRequestKey((key) => key + 1)}>
+          Try again
+        </Button>
+      </Container>
+    );
+  }
 
   return (
     <Container maxWidth="lg" sx={{ marginTop: "10rem", marginBottom: "5rem" }}>
@@ -58,7 +87,7 @@ const AntiGuideSelect = () => {
           fontSize: "3rem",
         }}
       >
-        Choose Your Nemises
+        Choose Your Nemesis
       </h2>
       <Grid container rowSpacing={2}>
         {characters.map((character) => (

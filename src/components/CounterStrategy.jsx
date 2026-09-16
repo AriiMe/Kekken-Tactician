@@ -2,8 +2,9 @@ import { Box, styled } from "@mui/material";
 import CollapsableSection from "./CollapsableSection";
 import { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
+import PropTypes from "prop-types";
 
-const DetailedMoveIntro = styled(Box)(({ theme }) => ({
+const DetailedMoveIntro = styled(Box)(() => ({
   "& .moveTitle": {
     color: "#d42f2f",
     display: "block",
@@ -18,7 +19,7 @@ const DetailedMoveIntro = styled(Box)(({ theme }) => ({
   },
 }));
 
-const DetailedMoveContainer = styled(Box)(({ theme }) => ({
+const DetailedMoveContainer = styled(Box)(() => ({
   marginBottom: "4rem",
   "& .moveNotation": {
     background: "#222",
@@ -44,8 +45,6 @@ const CounterStrategy = ({ strategyArr }) => {
   const [collapsedStates, setCollapsedStates] = useState(
     strategyArr.map(() => false)
   );
-
-  console.log(collapsedStates);
 
   const toggleCollapse = (index) => {
     setCollapsedStates((prevStates) => {
@@ -89,6 +88,10 @@ const CounterStrategy = ({ strategyArr }) => {
       ))}
     </Box>
   );
+};
+
+CounterStrategy.propTypes = {
+  strategyArr: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CounterStrategy;

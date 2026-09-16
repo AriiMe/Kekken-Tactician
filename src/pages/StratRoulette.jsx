@@ -49,7 +49,7 @@ const StrategyText = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const StratContainer = styled(Box)(({ theme }) => ({
+const StratContainer = styled(Box)(() => ({
   background: "#0c0c0c",
   border: "1px solid #c62828",
   borderRadius: "8px",
@@ -58,12 +58,12 @@ const StratContainer = styled(Box)(({ theme }) => ({
   padding: "2rem 0",
 }));
 
-const StratContentContainer = styled(Box)(({ theme }) => ({
+const StratContentContainer = styled(Box)(() => ({
   width: "80%",
   margin: "0 auto",
 }));
 
-const StratDurationAndDifficulty = styled(Box)(({ theme }) => ({
+const StratDurationAndDifficulty = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -71,7 +71,7 @@ const StratDurationAndDifficulty = styled(Box)(({ theme }) => ({
   margin: " 2rem 0",
 }));
 
-const StratDuration = styled(Typography)(({ theme }) => ({
+const StratDuration = styled(Typography)(() => ({
   color: "white",
   fontSize: "1.3rem",
   margin: 0,

@@ -1,515 +1,221 @@
-import React, { useState, useContext, useEffect } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import { FaTwitch, FaDiscord } from "react-icons/fa";
-import { useNavigate, Link } from "react-router-dom";
-import { DisplayModeContext } from "../context/DisplayModeContext";
+import { useContext, useEffect, useRef, useState } from "react";
+import { FaDiscord, FaTwitch, FaYoutube } from "react-icons/fa";
+import { FiMenu, FiSettings, FiX } from "react-icons/fi";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { ColorModeContext } from "../context/ColorModeContext";
-import {
-  Container,
-  FormControlLabel,
-  Popover,
-  styled,
-  Switch,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import XIcon from "@mui/icons-material/X";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-//----------------------------------------------------------
+import { DisplayModeContext } from "../context/DisplayModeContext";
+import { siteLinks } from "../data/siteLinks";
+import "./NavBar.css";
 
-const IOSSwitch = styled((props) => (
-  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-))(({ theme }) => ({
-  width: 42,
-  height: 26,
-  padding: 0,
-  "& .MuiSwitch-switchBase": {
-    padding: 0,
-    margin: 2,
-    transitionDuration: "300ms",
-    "&.Mui-checked": {
-      transform: "translateX(16px)",
-      color: "#fff",
-      "& + .MuiSwitch-track": {
-        backgroundColor: theme.palette.mode === "dark" ? "#2ECA45" : "#65C466",
-        opacity: 1,
-        border: 0,
-      },
-      "&.Mui-disabled + .MuiSwitch-track": {
-        opacity: 0.5,
-      },
-    },
-    "&.Mui-focusVisible .MuiSwitch-thumb": {
-      color: "#33cf4d",
-      border: "6px solid #fff",
-    },
-    "&.Mui-disabled .MuiSwitch-thumb": {
-      color:
-        theme.palette.mode === "light"
-          ? theme.palette.grey[100]
-          : theme.palette.grey[600],
-    },
-    "&.Mui-disabled + .MuiSwitch-track": {
-      opacity: theme.palette.mode === "light" ? 0.7 : 0.3,
-    },
-  },
-  "& .MuiSwitch-thumb": {
-    boxSizing: "border-box",
-    width: 22,
-    height: 22,
-  },
-  "& .MuiSwitch-track": {
-    borderRadius: 26 / 2,
-    backgroundColor: theme.palette.mode === "light" ? "#E9E9EA" : "#39393D",
-    opacity: 1,
-    transition: theme.transitions.create(["background-color"], {
-      duration: 500,
-    }),
-  },
-}));
-//----------------------------------------------------------
+const navItems = [
+  { label: "Games", to: "/", end: true },
+  { label: "Tekken 8", to: "/games/tekken-8" },
+  { label: "Combo Maker", to: "/combo-generator" },
+  { label: "Anti Guide", to: "/anti-guide" },
+  { label: "Roulette", to: "/strat-roulette" },
+  { label: "News", to: "/news" },
+];
 
-function Navbar() {
-  const navigate = useNavigate();
-  const theme = useTheme();
-  const isMdScreen = useMediaQuery(theme.breakpoints.up("md"));
-  const { colorMode, setColorMode } = useContext(ColorModeContext);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [selected, setSelected] = useState(colorMode);
+const socialLinks = [
+  {
+    label: "Twitch",
+    href: siteLinks.twitch,
+    icon: FaTwitch,
+  },
+  {
+    label: "YouTube",
+    href: siteLinks.youtube,
+    icon: FaYoutube,
+  },
+  {
+    label: "Discord",
+    href: siteLinks.discord,
+    icon: FaDiscord,
+  },
+];
+
+function PreferenceControls() {
   const { displayMode, setDisplayMode } = useContext(DisplayModeContext);
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const open = Boolean(anchorEl);
-  const id = open ? "preferences-popover" : undefined;
-
-  const handlePopoverClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleDisplayModeChange = () => {
-    const newDisplayMode = displayMode === "icons" ? "notations" : "icons";
-    setDisplayMode(newDisplayMode);
-  };
-  const handleColorModeChange = () => {
-    const newColorMode = !colorMode;
-    setColorMode(newColorMode);
-    setSelected(newColorMode); // Use newColorMode directly
-  };
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  useEffect(() => {
-    setSelected(colorMode);
-  }, [colorMode, displayMode]);
-
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-  const drawer = (
-    <Box
-      onClick={handleDrawerToggle}
-      sx={{
-        textAlign: "center",
-        // background: "#331a16",
-        minHeight: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
-      <List
-        sx={{
-          display: "flex",
-          gap: "20px",
-          flexDirection: "column",
-          padding: "2rem 0",
-        }}
-      >
-        <ListItem disablePadding>
-          <Box sx={{ display: "flex" }}>
-            <Box
-              sx={{
-                minHeight: "100px",
-                minWidth: "100px",
-                display: "flex",
-                justifyContent: "space-around",
-                alignItems: "flex-start",
-                flexDirection: "column",
-                padding: "0 1rem",
-                gap: "20px",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: "20px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <span>Icons:</span>
-                <FormControlLabel
-                  control={<IOSSwitch sx={{ m: 1 }} />}
-                  checked={displayMode === "icons"}
-                  onClick={handleDisplayModeChange}
-                />
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: "10px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <span>Colors:</span>
-                <FormControlLabel
-                  control={<IOSSwitch sx={{ m: 1 }} />}
-                  checked={selected}
-                  onClick={handleColorModeChange}
-                />
-              </Box>
-            </Box>
-          </Box>
-        </ListItem>
-        <ListItem
-          disablePadding
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <ListItemButton component={Link} to="/combo-generator">
-            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
-              Combo Generator
-            </span>
-          </ListItemButton>
-          <ListItemButton component={Link} to="/strat-roulette">
-            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
-              Strat Roulette
-            </span>
-          </ListItemButton>
-          <ListItemButton component={Link} to="/anti-guide">
-            <span style={{ fontFamily: "Michroma", color: "#a32a2d" }}>
-              Anti Guide
-            </span>
-          </ListItemButton>
-          <ListItemButton component={Link} to="/news">
-            <span
-              style={{
-                fontFamily: "Michroma",
-                color: "#a32a2d",
-              }}
-            >
-              News
-            </span>
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          marginBottom: "2rem",
-        }}
-      >
-        <IconButton
-          href="https://www.twitch.tv/ariimeme"
-          target="_blank"
-          sx={{
-            "&:hover": {
-              color: "#c82427",
-            },
-          }}
-        >
-          <FaTwitch />
-        </IconButton>
-        <IconButton
-          href="https://www.youtube.com/channel/UCQvHdx1XJ2H_KQ1qCqh7ZWQ"
-          target="_blank"
-          sx={{
-            "&:hover": {
-              color: "#c82427",
-            },
-          }}
-        >
-          <YouTubeIcon />
-        </IconButton>
-        <IconButton
-          href="https://discord.gg/73N53FgrRj"
-          target="_blank"
-          sx={{
-            "&:hover": {
-              color: "#c82427",
-            },
-          }}
-        >
-          <FaDiscord />
-        </IconButton>
-      </Box>
-    </Box>
-  );
+  const { colorMode, setColorMode } = useContext(ColorModeContext);
 
   return (
-    <AppBar position="fixed" sx={{ background: "#331a16" }}>
-      <Container maxWidth="xl" sx={{ padding: ".6rem 0" }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" }, color: "#c82427" }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box sx={{ display: "flex", alignItems: "baseline", gap: ".78rem" }}>
-            <Typography
-              variant="h6"
-              component="div"
-              onClick={() => navigate("/")}
-              sx={
-                isMdScreen
-                  ? {
-                      color: "#c82427",
-                      cursor: "pointer",
-                      fontSize: "1.2rem",
-                      fontFamily: "Michroma",
-                      "&:hover": {
-                        color: "white",
-                      },
-                    }
-                  : {
-                      color: "#c82427",
-                      cursor: "pointer",
-                      fontSize: "1.25rem",
-                      marginRight: "1rem",
-                      fontFamily: "Michroma",
-                      "&:hover": {
-                        color: "white",
-                      },
-                    }
-              } // Ensures it takes up space and aligns links to the right
-            >
-              Tekken Tactician
-            </Typography>
-            {isMdScreen && (
-              <>
-                <Typography
-                  variant="body1"
-                  component="div"
-                  onClick={() => navigate("/combo-generator")}
-                  sx={{
-                    color: "#FFD700",
-                    cursor: "pointer",
-                    fontSize: ".7em",
-                    fontFamily: "Michroma",
-                    "&:hover": {
-                      color: "white",
-                    },
-                  }}
-                >
-                  Combo Maker
-                </Typography>
-                <Typography
-                  variant="body1"
-                  component="div"
-                  onClick={() => navigate("/strat-roulette")}
-                  sx={{
-                    color: "#FFD700",
-                    cursor: "pointer",
-                    fontSize: ".7em",
-                    fontFamily: "Michroma",
-                    "&:hover": {
-                      color: "white",
-                    },
-                  }}
-                >
-                  Strat Roulette
-                </Typography>
-
-                <Typography
-                  variant="body1"
-                  component="div"
-                  sx={{
-                    color: "#FFD700",
-                    cursor: "pointer",
-                    fontSize: ".7rem",
-                    fontFamily: "Michroma",
-                    "&:hover": {
-                      color: "white",
-                    },
-                  }}
-                  onClick={() => navigate("/anti-guide")}
-                >
-                  Anti Guide
-                </Typography>
-
-                <Typography
-                  variant="body1"
-                  component="div"
-                  sx={{
-                    color: "#FFD700",
-                    cursor: "pointer",
-                    fontSize: ".7rem",
-                    fontFamily: "Michroma",
-                    "&:hover": {
-                      color: "white",
-                    },
-                  }}
-                  onClick={() => navigate("/news")}
-                >
-                  News
-                </Typography>
-              </>
-            )}
-          </Box>
-
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
-              gap: "20px",
-            }}
-          >
-            {/* Aligns items to the right */}
-            <IconButton
-              href="https://www.twitch.tv/ariimeme"
-              target="_blank"
-              sx={{
-                "&:hover": {
-                  color: "#c82427",
-                },
-              }}
-            >
-              <FaTwitch />
-            </IconButton>
-            <IconButton
-              href="https://www.youtube.com/channel/UCQvHdx1XJ2H_KQ1qCqh7ZWQ"
-              target="_blank"
-              sx={{
-                "&:hover": {
-                  color: "#c82427",
-                },
-              }}
-            >
-              <YouTubeIcon />
-            </IconButton>
-            <IconButton
-              href="https://discord.gg/73N53FgrRj"
-              target="_blank"
-              sx={{
-                "&:hover": {
-                  color: "#c82427",
-                },
-              }}
-            >
-              <FaDiscord />
-            </IconButton>
-            {window.location.pathname.includes("/character/combos/") ||
-            window.location.pathname.includes("/combo-generator") ? (
-              <Box sx={{ display: "flex" }}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    fontSize: ".8rem",
-                    fontWeight: 700,
-                    marginLeft: "1.5rem",
-                    borderRadius: "100px",
-                  }}
-                  onClick={handlePopoverClick}
-                >
-                  Preferences
-                </Button>
-                <Popover
-                  id={id}
-                  open={open}
-                  anchorEl={anchorEl}
-                  onClose={handlePopoverClose}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      minHeight: "100px",
-                      minWidth: "100px",
-                      display: "flex",
-                      justifyContent: "space-around",
-                      alignItems: "flex-start",
-                      flexDirection: "column",
-                      padding: "0 1rem",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: "10px",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <span>Icons:</span>
-                      <FormControlLabel
-                        control={<IOSSwitch sx={{ m: 1 }} />}
-                        checked={displayMode === "icons"}
-                        onClick={handleDisplayModeChange}
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: "10px",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <span>Colors:</span>
-                      <FormControlLabel
-                        control={<IOSSwitch sx={{ m: 1 }} />}
-                        checked={selected}
-                        onClick={handleColorModeChange}
-                      />
-                    </Box>
-                  </Box>
-                </Popover>
-              </Box>
-            ) : null}
-          </Box>
-          <Drawer
-            anchor="left"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div className="nav-preferences">
+      <div className="nav-preferences__heading">
+        <span>Input display</span>
+        <small>Tekken 8 guides</small>
+      </div>
+      <div className="nav-preferences__row">
+        <span>
+          <strong>Input icons</strong>
+          <small>Swap notation text for command icons</small>
+        </span>
+        <button
+          type="button"
+          className="nav-switch"
+          role="switch"
+          aria-label="Use input icons"
+          aria-checked={displayMode === "icons"}
+          onClick={() =>
+            setDisplayMode(displayMode === "icons" ? "notations" : "icons")
+          }
+        >
+          <span />
+        </button>
+      </div>
+      <div className="nav-preferences__row">
+        <span>
+          <strong>Colored inputs</strong>
+          <small>Use controller colors for attack buttons</small>
+        </span>
+        <button
+          type="button"
+          className="nav-switch"
+          role="switch"
+          aria-label="Use colored input icons"
+          aria-checked={colorMode}
+          onClick={() => setColorMode(!colorMode)}
+        >
+          <span />
+        </button>
+      </div>
+    </div>
   );
 }
 
-export default Navbar;
+function SocialLinks() {
+  return (
+    <div className="site-nav__socials" aria-label="Community links">
+      {socialLinks.map(({ label, href, icon: Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          title={label}
+        >
+          <Icon aria-hidden="true" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+export default function Navbar() {
+  const { pathname } = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const preferencesRef = useRef(null);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setPreferencesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handlePointerDown = (event) => {
+      if (
+        preferencesOpen &&
+        preferencesRef.current &&
+        !preferencesRef.current.contains(event.target)
+      ) {
+        setPreferencesOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setPreferencesOpen(false);
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [preferencesOpen]);
+
+  return (
+    <header className="site-header">
+      <div className="site-header__inner">
+        <Link className="site-brand" to="/" aria-label="Tekktician game library">
+          <img src="/main-icon.png" alt="" />
+          <span className="site-brand__wordmark">
+            TEKK<span>TICIAN</span>
+          </span>
+        </Link>
+
+        <nav className="site-nav site-nav--desktop" aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              className={({ isActive }) => (isActive ? "is-active" : undefined)}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="site-header__actions">
+          <div className="site-header__preferences" ref={preferencesRef}>
+            <button
+              type="button"
+              className="site-header__settings"
+              aria-label="Open input display settings"
+              aria-expanded={preferencesOpen}
+              aria-controls="desktop-input-preferences"
+              onClick={() => setPreferencesOpen((open) => !open)}
+            >
+              <FiSettings aria-hidden="true" />
+              <span>Display</span>
+            </button>
+            {preferencesOpen && (
+              <div id="desktop-input-preferences" className="site-header__popover">
+                <PreferenceControls />
+              </div>
+            )}
+          </div>
+
+          <button
+            type="button"
+            className="site-header__menu-button"
+            aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileOpen((open) => !open)}
+          >
+            {mobileOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-navigation"
+        className={`site-nav__mobile-panel ${mobileOpen ? "is-open" : ""}`}
+        hidden={!mobileOpen}
+      >
+        <nav className="site-nav site-nav--mobile" aria-label="Mobile navigation">
+          {navItems.map((item, index) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              className={({ isActive }) => (isActive ? "is-active" : undefined)}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+        <PreferenceControls />
+        <SocialLinks />
+      </div>
+    </header>
+  );
+}

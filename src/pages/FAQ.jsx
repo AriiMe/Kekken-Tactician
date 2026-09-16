@@ -1,8 +1,8 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import { siteLinks } from "../data/siteLinks";
 
 const paragraphStyle = {
   fontSize: "1.2rem",
@@ -18,7 +18,7 @@ const paragraphStyle = {
   },
 };
 
-const FAQ = () => {
+const FAQPage = () => {
   return (
     <Container maxWidth={false}>
       <Box
@@ -69,7 +69,7 @@ const FAQ = () => {
             A:
           </span>{" "}
           The website is hosted on a Starter Pack Render server, which are paid
-          by me personally, unless we get more supporters I don't plan on
+          by me personally, unless we get more supporters I don’t plan on
           upgrading them.
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
@@ -114,7 +114,7 @@ const FAQ = () => {
           </span>{" "}
           Yes, you can contribute to the website by contacting us on our
           <Link
-            href="https://discord.gg/d2Czp4Kj75"
+            href={siteLinks.discord}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -189,11 +189,7 @@ const FAQ = () => {
           Currently there are no plans to add Ads to the website, we hate
           aggressive ads as much as you do. But if you want to support us and
           wish to have better performance you can donate on our{" "}
-          <Link
-            href="https://ko-fi.com/ariime"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={siteLinks.koFi} target="_blank" rel="noopener noreferrer">
             {" "}
             Ko-fi page
           </Link>
@@ -218,7 +214,7 @@ const FAQ = () => {
             A:
           </span>{" "}
           The support money is used to pay for the servers, domain, and cloud
-          storage for Images and Videos. I'm not expecting to make a living out
+          storage for Images and Videos. I’m not expecting to make a living out
           of this, but I would like to cover the costs of the website.
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
@@ -254,7 +250,7 @@ const FAQ = () => {
           >
             Q:
           </span>{" "}
-          Why in the hell is the button in footer off center and doesn't
+          Why in the hell is the button in footer off center and doesn’t
           work??!! {">:("}
           <br />
           <br />
@@ -275,7 +271,7 @@ const FAQ = () => {
           >
             Q:
           </span>{" "}
-          Why is the website called Tekken Tactician?
+          Why is the website called TEKKTICIAN?
           <br />
           <br />
           <span
@@ -285,7 +281,9 @@ const FAQ = () => {
           >
             A:
           </span>{" "}
-          idk lol
+          It started as Tekken Tactician. When the library grew beyond Tekken,
+          the shorter name kept the roots without boxing the site into one game.
+          (Some a$$hole bought the old domain.)
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
           <span
@@ -305,11 +303,11 @@ const FAQ = () => {
           >
             A:
           </span>{" "}
-          Jun's Feet Pics
+          Jun’s Feet Pics
         </Typography>
       </Box>
     </Container>
   );
 };
 
-export default FAQ;
+export default FAQPage;

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -8,12 +7,11 @@ import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import UselessTipps from "../components/UselessTipps";
-import { Box, IconButton, Link, Modal } from "@mui/material";
+import { Box, IconButton, Link } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { getCharacters } from "../utils/apiClient";
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
   width: "200px", // Fixed width
@@ -44,24 +42,6 @@ const StyledImage = styled("img")({
   },
 });
 
-const StyledPolicyTitle = styled(Typography)(({ theme }) => ({
-  fontFamily: "Michroma",
-  color: "#c62828",
-}));
-const StyledAgreePolicy = styled(Button)(({ theme }) => ({
-  fontSize: ".875rem",
-  fontWeight: "700",
-  marginTop: "4rem",
-  width: "100%",
-}));
-
-const StyledReadPolicy = styled(Button)(({ theme }) => ({
-  fontSize: ".6rem",
-  // marginTop: "2rem",
-  margin: "1rem auto 0",
-  width: "100%",
-}));
-
 const paragraphStyle = {
   fontSize: "1.5rem",
   textAlign: "center",
@@ -77,23 +57,25 @@ const paragraphStyle = {
 };
 
 const CharacterSelect = () => {
-  const theme = useTheme();
   const [characters, setCharacters] = useState([]);
-  const [isPrivacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
   );
+  const [error, setError] = useState("");
+  const [requestKey, setRequestKey] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [alphabet, setAlphabet] = useState([]);
-  const [activeLetters, setActiveLetters] = useState(new Set());
-  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down("lg"));
-  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${apiUrl}/characters`)
-      .then((response) => response.json())
+    const controller = new AbortController();
+
+    setLoading(true);
+    setError("");
+    setLoadingMessage("Loading please wait...");
+
+    getCharacters({ view: "summary", signal: controller.signal })
       .then((data) => {
         setCharacters(data);
 
@@ -105,16 +87,25 @@ const CharacterSelect = () => {
           ),
         }));
         setAlphabet(newAlphabet);
-        const activeSet = new Set(
-          data.map((character) => character.name[0].toUpperCase())
-        );
-        setActiveLetters(activeSet);
         setLoading(false);
       })
-      .catch((error) => console.error("Error fetching characters:", error));
-  }, [apiUrl]);
+      .catch((requestError) => {
+        if (requestError.name === "AbortError") return;
+        console.error("Error fetching characters:", requestError);
+        setError(
+          "The Tekken 8 guide server could not be reached. It may be waking up—please try again."
+        );
+        setLoading(false);
+      });
+
+    return () => {
+      controller.abort();
+    };
+  }, [requestKey]);
 
   useEffect(() => {
+    if (!loading) return undefined;
+
     const timer = setTimeout(() => {
       setLoadingMessage(
         "Sorry, free tier servers are sleeping. Try to reload."
@@ -122,7 +113,7 @@ const CharacterSelect = () => {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -136,17 +127,6 @@ const CharacterSelect = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  const handlePrivacyModalClose = () => {
-    setPrivacyModalOpen(false);
-    localStorage.setItem("privacyNoticeAccepted", "true");
-  };
-
-  useEffect(() => {
-    if (!localStorage.getItem("privacyNoticeAccepted")) {
-      setPrivacyModalOpen(true);
-    }
   }, []);
 
   const handleCharacterSelect = (characterName, characterId) => {
@@ -171,6 +151,63 @@ const CharacterSelect = () => {
         }}
       >
         {loadingMessage}
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container
+        maxWidth="sm"
+        sx={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 2,
+          py: 16,
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          component="p"
+          sx={{
+            color: "#ff354d",
+            fontFamily: "Inter, sans-serif",
+            fontSize: ".72rem",
+            fontWeight: 800,
+            letterSpacing: ".14em",
+            textTransform: "uppercase",
+          }}
+        >
+          Tekken 8 · Connection issue
+        </Typography>
+        <Typography
+          component="h1"
+          sx={{
+            color: "white",
+            fontFamily: "Inter, sans-serif",
+            fontSize: { xs: "2.35rem", sm: "3.4rem" },
+            fontWeight: 900,
+            letterSpacing: "-.05em",
+            lineHeight: 1,
+            textTransform: "uppercase",
+          }}
+        >
+          The lab is between rounds
+        </Typography>
+        <Typography sx={{ color: "#aaa", fontFamily: "Inter, sans-serif" }}>
+          {error}
+        </Typography>
+        <Box sx={{ display: "flex", gap: 1.5, flexWrap: "wrap", justifyContent: "center", mt: 2 }}>
+          <Button variant="contained" onClick={() => setRequestKey((key) => key + 1)}>
+            Try again
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/")}>
+            Back to games
+          </Button>
+        </Box>
       </Container>
     );
   }
@@ -199,6 +236,8 @@ const CharacterSelect = () => {
           name="description"
           content="Explore and learn about all Tekken 8 characters, their combos, cheat sheets,strategies, and tips to improve your gameplay."
         />
+        <link rel="canonical" href="https://tekktician.com/games/tekken-8" />
+        <meta property="og:url" content="https://tekktician.com/games/tekken-8" />
         <meta
           name="keywords"
           content={characters
@@ -216,12 +255,14 @@ const CharacterSelect = () => {
           width: "100%",
           color: "#d42f2f",
           marginTop: "150px",
+          fontSize: "clamp(2.4rem, 7vw, 3.2rem)",
+          lineHeight: 1.1,
         }}
       >
         Pick your Character
       </h1>
       <Typography variant="body1" sx={paragraphStyle}>
-        Let's help{" "}
+        Let’s help{" "}
         <Link
           href="https://www.twitch.tv/mishimacomplex"
           target="_blank"
@@ -285,7 +326,7 @@ const CharacterSelect = () => {
       </Typography>
 
       <Container maxWidth="lg">
-        {alphabet.map(({ letter, active }) => {
+        {alphabet.map(({ letter }) => {
           // Make sure to destructure the letter and active properties
           const charactersWithLetter = filterCharactersByLetter(letter);
           if (charactersWithLetter.length > 0) {
@@ -348,53 +389,6 @@ const CharacterSelect = () => {
         </Button>
       )}
 
-      <Modal
-        open={isPrivacyModalOpen}
-        onClose={handlePrivacyModalClose}
-        aria-labelledby="privacy-notice-title"
-        aria-describedby="privacy-notice-description"
-      >
-        <Paper
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: 400,
-            padding: 4,
-            outline: "none",
-            boxShadow: 5,
-          }}
-        >
-          <StyledPolicyTitle
-            id="privacy-notice-title"
-            variant="h6"
-            component="h2"
-          >
-            Privacy Notice :
-          </StyledPolicyTitle>
-          <Typography id="privacy-notice-description" sx={{ mt: 2 }}>
-            We use Umami Analytics to understand how visitors interact with our
-            website. Umami does not use cookies and does not collect personal
-            data. All data is anonymized and used solely to improve website
-            performance and user experience.
-          </Typography>
-          <StyledAgreePolicy
-            onClick={handlePrivacyModalClose}
-            variant="contained"
-            color="primary"
-          >
-            I Understand
-          </StyledAgreePolicy>
-          <StyledReadPolicy
-            component="a"
-            href="/privacy-policy"
-            color="primary"
-          >
-            Read Full Privacy Policy
-          </StyledReadPolicy>
-        </Paper>
-      </Modal>
     </Container>
   );
 };

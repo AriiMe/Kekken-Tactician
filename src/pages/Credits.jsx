@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
@@ -51,7 +50,7 @@ const Credits = () => {
           Credits
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
-          The new look on our website was made possible thanks to Komrad's
+          The new look on our website was made possible thanks to Komrad’s
           contribution, our Front-end Developer. Feel free to reach out to him
           on Reddit{" "}
           <Link
@@ -98,7 +97,7 @@ const Credits = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Applay's Discord
+            Applay’s Discord
           </Link>{" "}
           and spam AriiMe brought me here in #general.
         </Typography>
@@ -134,6 +133,20 @@ const Credits = () => {
           </span>{" "}
           with your help, we can make this website better, by renting high
           quality servers and storage!
+        </Typography>
+        <Typography variant="body1" sx={paragraphStyle}>
+          Game title artwork is used for identification on this noncommercial
+          community resource. Tekken assets come from the{" "}
+          <Link
+            href="https://www.tekken-official.jp/titles/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            official Tekken title archive
+          </Link>
+          ; current fighting-game key art is supplied through the respective
+          publisher storefront listings. All artwork, game names and trademarks
+          remain the property of their respective owners.
         </Typography>
       </Box>
     </Container>
