@@ -17,7 +17,6 @@ const Credits = lazy(() => import("./pages/Credits"));
 const CustomComboPage = lazy(() => import("./pages/CustomComboPage"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const KomradEasterEgg = lazy(() => import("./pages/KomradEasterEgg"));
-const News = lazy(() => import("./pages/News"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const StatsPage = lazy(() => import("./pages/StatsPage"));
@@ -66,7 +65,6 @@ const App = () => {
               <Route path="/faqu" element={<FAQ />} />
               <Route path="/privacy-policy" element={<Privacy />} />
               <Route path="/stats" element={<StatsPage />} />
-              <Route path="/news" element={<News />} />
               <Route
                 path="/nothing-here/for-sure/no-easter-egg"
                 element={<KomradEasterEgg />}

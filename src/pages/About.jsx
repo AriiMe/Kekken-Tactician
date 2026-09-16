@@ -51,7 +51,8 @@ const About = () => {
           About TEKKTICIAN
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
-          Welcome to TEKKTICIAN, a hobby project created by an enthusiast for
+          Welcome to TEKKTICIAN, formerly known as Tekken Tactician. This is the
+          same community project under a new name, created by an enthusiast for
           enthusiasts. The goal is to give players of every skill level one
           practical place to learn and share combos, punishment and matchup
           strategies across the fighting games they love.

@@ -15,6 +15,7 @@ import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
 import ChainThrows from "../components/ChainThrows";
 import CreatorNotes from "../components/CreatorNotes";
+import GuideNotes from "../components/GuideNotes";
 import { getCharacter } from "../utils/apiClient";
 
 const boraderRaduisSection = { borderRadius: "5px" };
@@ -217,9 +218,11 @@ const CharacterDetails = () => {
               <Paper sx={leftColumnMargin}>
                 <CharProfile pic={character.image} name={character.name} />
               </Paper>
-              <Paper sx={leftColumnMargin}>
-                <HeatDash heat={character.heatSystem} name={characterName} />
-              </Paper>
+              {character.heatSystem?.engager && character.heatSystem?.ender && (
+                <Paper sx={leftColumnMargin}>
+                  <HeatDash heat={character.heatSystem} name={characterName} />
+                </Paper>
+              )}
               <Paper sx={leftColumnMargin}>
                 <MostImportantGrabs
                   grabs={character.mostImportantGrabs}
@@ -263,9 +266,17 @@ const CharacterDetails = () => {
                     <MainCombos
                       combos={character.importantCombos}
                       name={characterName}
+                      version={character.gameVersion}
                     />
                   </Paper>
                 </Grid>
+                {character.sections?.guide && (
+                  <Grid item xs={12}>
+                    <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>
+                      <GuideNotes guide={character.sections.guide} />
+                    </Paper>
+                  </Grid>
+                )}
                 {character.creatorNotes && character.creatorNotes.length > 0 ? (
                   <Grid item xs={12}>
                     <Paper sx={{ marginBottom: 1, ...boraderRaduisSection }}>

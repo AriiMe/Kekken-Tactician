@@ -29,7 +29,7 @@ const ComboEnders = ({ enders }) => {
             {Object.entries(groupedEnders).map(([category, moves]) => (
               <React.Fragment key={category}>
                 {moves.map((move, moveIndex) => (
-                  <tr key={move._id}>
+                  <tr key={move._id || `${category}-${moveIndex}`}>
                     {moveIndex === 0 && (
                       <td className="category-cell" rowSpan={moves.length}>
                         {category}

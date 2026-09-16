@@ -151,21 +151,21 @@ export default function GameLibrary() {
   return (
     <main className="game-library">
       <Helmet>
-        <title>TEKKTICIAN — Fighting Game Combos, Guides & Matchups</title>
+        <title>TEKKTICIAN (formerly Tekken Tactician) — Combos &amp; Guides</title>
         <meta
           name="description"
-          content="Choose your fighting game and find practical combo routes, punishment, matchup notes and lab-ready guides. Tekken 8 is live now; more games are on the way."
+          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
         />
         <link rel="canonical" href="https://tekktician.com/" />
         <meta property="og:url" content="https://tekktician.com/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="TEKKTICIAN — Build the better gameplan"
+          content="TEKKTICIAN (formerly Tekken Tactician) — Combos & Guides"
         />
         <meta
           property="og:description"
-          content="One fighting-game lab for combos, matchup knowledge and practical tools."
+          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
         />
         <meta
           property="og:image"
@@ -178,11 +178,11 @@ export default function GameLibrary() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="TEKKTICIAN — Build the better gameplan"
+          content="TEKKTICIAN (formerly Tekken Tactician) — Combos & Guides"
         />
         <meta
           name="twitter:description"
-          content="One fighting-game lab for combos, matchup knowledge and practical tools."
+          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
         />
         <meta
           name="twitter:image"
@@ -200,7 +200,8 @@ export default function GameLibrary() {
             <span>Build the gameplan.</span>
           </h1>
           <p className="game-hero__intro">
-            TEKKTICIAN is growing beyond one arena: practical combos,
+            TEKKTICIAN, formerly known as Tekken Tactician, is growing beyond
+            one arena: practical combos,
             punishment, matchup knowledge and lab notes for the fighters you
             actually play.
           </p>

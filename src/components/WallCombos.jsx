@@ -53,8 +53,8 @@ const WallCombos = ({ wallCombos, name }) => {
           <Grid item xs={6}>
             <div className="combo-section">
               <h3>General</h3>
-              {wallCombos.general.map((combo) => (
-                <div key={combo._id} className="combo">
+              {wallCombos.general.map((combo, index) => (
+                <div key={combo._id || `general-${index}`} className="combo">
                   <div className="wall-move">
                     <div className="label">Move:</div>
                     <div className="icons-row">
@@ -74,8 +74,8 @@ const WallCombos = ({ wallCombos, name }) => {
           <Grid item xs={6}>
             <div className="combo-section">
               <h3>With Tornado</h3>
-              {wallCombos.withTornado.map((combo) => (
-                <div key={combo._id} className="combo">
+              {wallCombos.withTornado.map((combo, index) => (
+                <div key={combo._id || `tornado-${index}`} className="combo">
                   <div className="wall-move">
                     <span className="label">Move:</span>
                     <div className="icons-row">

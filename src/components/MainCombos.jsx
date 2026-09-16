@@ -10,7 +10,7 @@ import { useDisplayMode } from "../context/DisplayModeContext";
 import CollapsableSection from "./CollapsableSection";
 import PropTypes from "prop-types";
 
-const MainCombos = ({ combos, name }) => {
+const MainCombos = ({ combos, name, version }) => {
   const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
@@ -84,7 +84,7 @@ const MainCombos = ({ combos, name }) => {
     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
   };
 
-  const patchVersion = "1.05";
+  const patchVersion = version || "source version not specified";
 
   const description = `All main combos for ${name} in Tekken 8. ${name} patch ${patchVersion} combos. These are the most important combos to learn for ${name}.`;
   const keywords = [
@@ -203,6 +203,7 @@ MainCombos.propTypes = {
     })
   ).isRequired,
   name: PropTypes.string.isRequired,
+  version: PropTypes.string,
 };
 
 export default MainCombos;

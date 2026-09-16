@@ -34,6 +34,7 @@ export default function Footer() {
               TEKK<span>TICIAN</span>
             </span>
           </Link>
+          <p>Formerly known as Tekken Tactician.</p>
           <p>Practical fighting-game knowledge, built with the community.</p>
         </div>
 

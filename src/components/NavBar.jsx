@@ -13,7 +13,6 @@ const navItems = [
   { label: "Combo Maker", to: "/combo-generator" },
   { label: "Anti Guide", to: "/anti-guide" },
   { label: "Roulette", to: "/strat-roulette" },
-  { label: "News", to: "/news" },
 ];
 
 const socialLinks = [
