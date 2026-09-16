@@ -1,0 +1,693 @@
+{
+  "schemaVersion": 1,
+  "gameId": "tekken-tag-1",
+  "title": "Tekken Tag Tournament",
+  "edition": "PlayStation 2",
+  "publicationStatus": "draft",
+  "source": {
+    "label": "Tekken Tag Tournament move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
+  },
+  "coverage": {
+    "rosterBasis": "Characters with videos in the HISSATSU playlist",
+    "rosterComplete": false
+  },
+  "portraits": {
+    "credit": null,
+    "sourceUrl": null
+  },
+  "characters": [
+    {
+      "slug": "jun-kazama",
+      "name": "Jun Kazama",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "bruce-irvin",
+      "name": "Bruce Irvin",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "bryan-fury",
+      "name": "Bryan Fury",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kunimitsu",
+      "name": "Kunimitsu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "true-ogre",
+      "name": "True Ogre",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ogre",
+      "name": "Ogre",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "devil",
+      "name": "Devil",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "jin-kazama",
+      "name": "Jin Kazama",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "wang-jinrei",
+      "name": "Wang Jinrei",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "michelle-chang",
+      "name": "Michelle Chang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "armor-king",
+      "name": "Armor King",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "roger",
+      "name": "Roger",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ganryu",
+      "name": "Ganryu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kuma",
+      "name": "Kuma",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "gun-jack",
+      "name": "Gun Jack",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "jack-2",
+      "name": "Jack-2",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "prototype-jack",
+      "name": "Prototype Jack",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ling-xiaoyu",
+      "name": "Ling Xiaoyu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "forest-law",
+      "name": "Forest Law",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "baek-doo-san",
+      "name": "Baek Doo San",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "hwoarang",
+      "name": "Hwoarang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "eddy-gordo",
+      "name": "Eddy Gordo",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": [],
+        "tagMoves": [],
+        "teamCombos": []
+      },
+      "notes": []
+    }
+  ]
+}

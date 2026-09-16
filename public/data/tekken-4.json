@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "gameId": "tekken-4",
+  "title": "Tekken 4",
+  "edition": "PlayStation 2",
+  "publicationStatus": "draft",
+  "source": {
+    "label": "Tekken 4 move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
+  },
+  "coverage": {
+    "rosterBasis": "Characters with videos in the HISSATSU playlist",
+    "rosterComplete": false
+  },
+  "portraits": {
+    "credit": null,
+    "sourceUrl": null
+  },
+  "characters": [
+    {
+      "slug": "king",
+      "name": "King",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "bryan-fury",
+      "name": "Bryan Fury",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "christie-monteiro",
+      "name": "Christie Monteiro",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "jin-kazama",
+      "name": "Jin Kazama",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "craig-marduk",
+      "name": "Craig Marduk",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kuma",
+      "name": "Kuma",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "marshall-law",
+      "name": "Marshall Law",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "steve-fox",
+      "name": "Steve Fox",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "hwoarang",
+      "name": "Hwoarang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ling-xiaoyu",
+      "name": "Ling Xiaoyu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    }
+  ]
+}

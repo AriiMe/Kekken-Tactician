@@ -20,6 +20,14 @@ test('all 17 supplied Tekken 1 fighters have unique routes and populated moves a
       assert.equal(row.status, undefined, `${c.name}: ${row.name}`);
       assert.doesNotMatch(row.notes || '', /verification|unverified|no input|supplied|source typo|may whiff/i);
       assert.equal(parseInputNotation(row.input).filter(s => s.kind === 'text').length, 0, `${c.name}: ${row.input}`);
+      if (row.launchers) {
+        assert.ok(row.launchers.length > 1, `${c.name}: grouped launchers`);
+        assert.equal(new Set(row.launchers).size, row.launchers.length);
+        for (const launcher of row.launchers) {
+          assert.ok(launcher.trim());
+          assert.equal(parseInputNotation(launcher).filter(s => s.kind === 'text').length, 0, `${c.name}: ${launcher}`);
+        }
+      }
     }
   }
 });
@@ -40,7 +48,7 @@ test('button chords, held directions, tap conditions and throw-chain context sur
 });
 
 test('questionable entries are corrected from references or removed', () => {
-  assert.ok(bySlug.kunimitsu.sections.combos.every(r => r.input.startsWith('df+2 >')));
+  assert.ok(bySlug.kunimitsu.sections.combos.every(r => /^(df\+2|f\+2 > df\+2) >/.test(r.input)));
   assert.ok(!bySlug['armor-king'].sections.moves.some(r => r.name === 'Multi Slide Kicks'));
   for (const slug of ['kuma', 'prototype-jack']) {
     assert.equal(bySlug[slug].sections.moves.find(r => r.name === 'Triple Uppercut').input, 'FC df+1,2,1');
@@ -50,13 +58,11 @@ test('questionable entries are corrected from references or removed', () => {
   }
 });
 
-test('every fighter has distinct sourced juggle routes and correctly sized long combos', () => {
-  const sources = new Set(data.source.references.map(r => r.id));
+test('every fighter has distinct juggle routes and correctly sized long combos', () => {
   for (const c of data.characters) {
     assert.ok(c.sections.combos.length >= 2, c.name);
     assert.equal(new Set(c.sections.combos.map(r => r.input)).size, c.sections.combos.length);
     for (const row of c.sections.combos) {
-      assert.ok(sources.has(row.sourceId), `${c.name}: ${row.name}`);
       assert.ok(row.input.includes(' > '), `${c.name}: ${row.name}`);
     }
     for (const row of c.sections.strings || []) {

@@ -5,29 +5,7 @@
   "edition": "PlayStation",
   "source": {
     "label": "Tekken 1 PlayStation move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Combo routes start when the launcher connects.",
-    "references": [
-      {
-        "id": "slikatel-combos",
-        "title": "Slikatel — Tekken Combo Guide",
-        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/4252"
-      },
-      {
-        "id": "playstation-moves",
-        "title": "jesus2099 — Tekken PlayStation Move List",
-        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/63721"
-      },
-      {
-        "id": "original-moves",
-        "title": "GKomatsu — Tekken Move List",
-        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/4249"
-      },
-      {
-        "id": "ten-hit-demonstration",
-        "title": "Fighting Game Move Lists — Tekken 1 combo demonstration",
-        "url": "https://www.youtube.com/watch?v=LPMmGvQH5TY"
-      }
-    ]
+    "note": "Commands use 1/2/3/4 notation. Combo routes start when the launcher connects."
   },
   "portraits": {
     "image": "/characters/tekken-1/portraits.png",
@@ -199,18 +177,15 @@
         "combos": [
           {
             "name": "Uppercut into double palm",
-            "input": "df+2 > df+1 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > f,f+1+2"
           },
           {
             "name": "Uppercut into punch and kick",
-            "input": "df+2 > 2,3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2,3"
           },
           {
             "name": "Uppercut into kick and punch",
-            "input": "df+2 > df+3,2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+3,2"
           }
         ],
         "chains": [
@@ -268,8 +243,7 @@
           },
           {
             "name": "Whirlwind Toss",
-            "input": "f,b,db,d,df,f+1",
-            "sourceId": "playstation-moves"
+            "input": "f,b,db,d,df,f+1"
           },
           {
             "name": "Scissor Flip",
@@ -384,18 +358,15 @@
         "combos": [
           {
             "name": "Jab into a second uppercut",
-            "input": "f,f+2 > 1 > f,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > 1 > f,f+2"
           },
           {
             "name": "Double power uppercut",
-            "input": "f,d,df+2 > 1 > f,d,df+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,d,df+2 > 1 > f,d,df+2"
           },
           {
             "name": "Uppercut into power uppercut",
-            "input": "f,f+2 > 1 > f,d,df+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > 1 > f,d,df+2"
           }
         ]
       },
@@ -512,18 +483,15 @@
         "combos": [
           {
             "name": "Uppercut into double palm",
-            "input": "df+2 > df+1 > df+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > df+1+2"
           },
           {
             "name": "Uppercut into two low punches",
-            "input": "df+2 > df+1 > d+2,2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > d+2,2"
           },
           {
             "name": "Punches into double palm",
-            "input": "df+2 > 2,1 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2,1 > f,f+1+2"
           }
         ]
       },
@@ -677,20 +645,34 @@
         ],
         "combos": [
           {
+            "name": "Uppercut into power punch and kick",
+            "launchers": [
+              "df+2",
+              "df+1,2",
+              "f,n,d,df+2"
+            ],
+            "input": "~f+1,2 > d,df,f+2 > f,n,d,~df+3"
+          },
+          {
+            "name": "Three jabs into power punch",
+            "input": "f,f+2 > ~f+1 > ~f+1 > ~f+1 > d,df,f+2"
+          },
+          {
+            "name": "Hell sweep into kick",
+            "input": "f,n,d,~df+4,4,n,4 > f,n,d,~df+3"
+          },
+          {
             "name": "Power uppercut into double axe kick",
             "input": "f,d,df+2 > f,d,df,n+4,4",
-            "notes": "Release the direction to neutral before 4,4.",
-            "sourceId": "slikatel-combos"
+            "notes": "Release the direction to neutral before 4,4."
           },
           {
             "name": "Uppercuts into power punch",
-            "input": "f,f+2 > df+1,2 > d,df,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > df+1,2 > d,df,f+2"
           },
           {
             "name": "Jab, hammer and power punch",
-            "input": "f,f+2 > 1 > d+1,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > 1 > d+1,f+2"
           }
         ]
       },
@@ -728,8 +710,7 @@
         "moves": [
           {
             "name": "Standing Uppercut",
-            "input": "df+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2"
           },
           {
             "name": "Sandwich Clap",
@@ -836,18 +817,15 @@
         "combos": [
           {
             "name": "Uppercut into kick finish",
-            "input": "df+2 > df+1 > 3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > 3"
           },
           {
             "name": "Uppercut into double punch",
-            "input": "df+2 > 2 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2 > f,f+1+2"
           },
           {
             "name": "Uppercut into double uppercut",
-            "input": "df+2 > df+1 > df+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > df+1+2"
           }
         ]
       },
@@ -962,18 +940,24 @@
           {
             "name": "Power uppercut into double axe kick",
             "input": "f,d,df+2 > f,d,df,n+4,4",
-            "notes": "Release the direction to neutral before 4,4.",
-            "sourceId": "slikatel-combos"
+            "notes": "Release the direction to neutral before 4,4."
           },
           {
             "name": "Power uppercut into axe kick",
-            "input": "f,d,df+2 > 1 > f+4",
-            "sourceId": "slikatel-combos"
+            "input": "f,d,df+2 > 1 > f+4"
           },
           {
             "name": "Double power uppercut",
-            "input": "f,d,df+2 > 1 > f,d,df+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,d,df+2 > 1 > f,d,df+2"
+          },
+          {
+            "name": "Double uppercut into jabs and wind god fist",
+            "input": "df+1,2 > ~f+1 > ~f+1,2 > f,n,d,df+2"
+          },
+          {
+            "name": "Hell sweep into wind god fist",
+            "input": "f,n,d,~df+4 > f,n,d,df+2",
+            "notes": "Small opponents only."
           }
         ]
       },
@@ -1008,8 +992,7 @@
           },
           {
             "name": "Whirlwind Toss",
-            "input": "f,b,db,d,df,f+1",
-            "sourceId": "playstation-moves"
+            "input": "f,b,db,d,df,f+1"
           },
           {
             "name": "Scissor Flip",
@@ -1105,13 +1088,11 @@
         "combos": [
           {
             "name": "Jab into a second uppercut",
-            "input": "f,f+2 > 1 > f,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > 1 > f,f+2"
           },
           {
             "name": "Two jabs into uppercut",
-            "input": "f,f+2 > 1,2 > f,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "f,f+2 > 1,2 > f,f+2"
           }
         ]
       },
@@ -1144,8 +1125,7 @@
         "moves": [
           {
             "name": "Standing Uppercut",
-            "input": "df+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2"
           },
           {
             "name": "Sandwich Clap",
@@ -1183,8 +1163,7 @@
           },
           {
             "name": "Triple Uppercut",
-            "input": "FC df+1,2,1",
-            "sourceId": "playstation-moves"
+            "input": "FC df+1,2,1"
           },
           {
             "name": "Triple Windmill Punch",
@@ -1227,18 +1206,15 @@
         "combos": [
           {
             "name": "Uppercut into double uppercut",
-            "input": "df+2 > df+1 > df+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > df+1+2"
           },
           {
             "name": "Uppercut into double punch",
-            "input": "df+2 > df+1 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > f,f+1+2"
           },
           {
             "name": "Extra punch into double punch",
-            "input": "df+2 > df+1 > f+1 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > f+1 > f,f+1+2"
           }
         ]
       },
@@ -1267,8 +1243,7 @@
         "moves": [
           {
             "name": "Standing Uppercut",
-            "input": "df+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2"
           },
           {
             "name": "Tornado Spin",
@@ -1302,8 +1277,7 @@
           },
           {
             "name": "Forward Cartwheel/Diving Corkscrew",
-            "input": "f,f+3+4,1+2",
-            "sourceId": "original-moves"
+            "input": "f,f+3+4,1+2"
           }
         ],
         "strings": [
@@ -1322,18 +1296,24 @@
         "combos": [
           {
             "name": "Uppercut into knee rush",
-            "input": "df+2 > 1 > f,f+4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 1 > f,f+4"
           },
           {
             "name": "Spin, jab and kick finish",
-            "input": "df+2 > b+1 > 1 > 4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > b+1 > 1 > 4"
           },
           {
             "name": "Uppercut into punch and kick",
-            "input": "df+2 > n+2,4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > n+2,4"
+          },
+          {
+            "name": "Uppercut into spinning punches and dive",
+            "input": "df+2 > b+1,1 > b+1 > f,f+3+4,1+2"
+          },
+          {
+            "name": "Sword strike into uppercut and dive",
+            "input": "f+2 > df+2 > b+1,1 > f,f+3+4,1+2",
+            "notes": "The opening sword strike must connect."
           }
         ]
       },
@@ -1497,19 +1477,16 @@
         "combos": [
           {
             "name": "Uppercut into two kicks",
-            "input": "df+2 > df+1 > 4,3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > 4,3"
           },
           {
             "name": "Uppercut into running kick",
-            "input": "df+2 > df+1 > f,f+3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > f,f+3"
           },
           {
             "name": "Uppercut into low kicks",
             "input": "df+2 > ~db+4,4,4",
-            "notes": "Keep down-back held for all three kicks.",
-            "sourceId": "slikatel-combos"
+            "notes": "Keep down-back held for all three kicks."
           }
         ]
       },
@@ -1610,19 +1587,16 @@
         "combos": [
           {
             "name": "Uppercut into two kicks",
-            "input": "df+2 > df+1 > 4,3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > 4,3"
           },
           {
             "name": "Uppercut into punch and kick",
-            "input": "df+2 > 2 > 3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2 > 3"
           },
           {
             "name": "Uppercut into backhand punches",
             "input": "df+2 > df+1 > ~f+2,2,2",
-            "notes": "Keep forward held through the three punches.",
-            "sourceId": "slikatel-combos"
+            "notes": "Keep forward held through the three punches."
           }
         ]
       },
@@ -1763,19 +1737,16 @@
           {
             "name": "Charged uppercut into sweep finish",
             "input": "b,b,~b+1 > d+4,1",
-            "sourceId": "slikatel-combos",
             "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
           },
           {
             "name": "Charged uppercut into jab and kick",
             "input": "b,b,~b+1 > 1 > 4",
-            "sourceId": "slikatel-combos",
             "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
           },
           {
             "name": "Charged uppercut into double palm",
             "input": "b,b,~b+1 > 1 > f,f+1+2",
-            "sourceId": "slikatel-combos",
             "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
           }
         ]
@@ -1926,18 +1897,15 @@
         "combos": [
           {
             "name": "Uppercut into double palm",
-            "input": "df+2 > df+1 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > f,f+1+2"
           },
           {
             "name": "Uppercut into punch and kick",
-            "input": "df+2 > 2,3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2,3"
           },
           {
             "name": "Uppercut into kick and punch",
-            "input": "df+2 > df+3,2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+3,2"
           }
         ],
         "chains": [
@@ -2072,18 +2040,38 @@
           {
             "name": "Hopkick into hammer and power punch",
             "input": "uf+4 > d+1,f+2",
-            "notes": "Tap up-forward for the launcher.",
-            "sourceId": "slikatel-combos"
+            "notes": "Tap up-forward for the launcher."
           },
           {
             "name": "Uppercut into power punch",
-            "input": "df+2 > df+1 > d,df,f+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > d,df,f+2"
           },
           {
             "name": "Uppercut into double jump kick",
-            "input": "df+2 > f,f+3,4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > f,f+3,4"
+          },
+          {
+            "name": "Launcher into death fist and jumping punch",
+            "launchers": [
+              "df+2",
+              "uf+4",
+              "CH 4"
+            ],
+            "input": "~f+1,2 > d,df,f+2 > ~u+2"
+          },
+          {
+            "name": "Delayed hopkick into kick and death fist",
+            "input": "~uf,n+4 > ~f+4 > ~f+1 > d,df,f+2 > ~u+2"
+          },
+          {
+            "name": "Running kicks into hammer punch",
+            "input": "f,f+3,4 > d+1,f+2",
+            "notes": "Small opponents only."
+          },
+          {
+            "name": "Running kicks into death fist",
+            "input": "f,f+3,4 > d,df,f+2 > ~u+2",
+            "notes": "Very strict timing. For an easier finish, use u+2 directly after the launcher."
           }
         ]
       },
@@ -2112,8 +2100,7 @@
         "moves": [
           {
             "name": "Standing Uppercut",
-            "input": "df+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2"
           },
           {
             "name": "Punch/Elbow Rush",
@@ -2159,8 +2146,7 @@
           },
           {
             "name": "Triple Uppercut",
-            "input": "FC df+1,2,1",
-            "sourceId": "playstation-moves"
+            "input": "FC df+1,2,1"
           },
           {
             "name": "Low Double Slap/Uppercut",
@@ -2231,18 +2217,15 @@
         "combos": [
           {
             "name": "Uppercut into kick finish",
-            "input": "df+2 > df+1 > 3",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > 3"
           },
           {
             "name": "Uppercut into double punch",
-            "input": "df+2 > 2 > f,f+1+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 2 > f,f+1+2"
           },
           {
             "name": "Uppercut, hammer and power punch",
-            "input": "df+2 > df+1 > d+1 > f+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > df+1 > d+1 > f+2"
           }
         ]
       },
@@ -2391,18 +2374,15 @@
         "combos": [
           {
             "name": "Double uppercut into three-hit finish",
-            "input": "df+2,1 > 4,d+4,1",
-            "sourceId": "slikatel-combos"
+            "input": "df+2,1 > 4,d+4,1"
           },
           {
             "name": "Double uppercut into power punch",
-            "input": "df+2,1 > 1 > f+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2,1 > 1 > f+2"
           },
           {
             "name": "Double uppercut into sweep finish",
-            "input": "df+2,1 > d+4,1",
-            "sourceId": "slikatel-combos"
+            "input": "df+2,1 > d+4,1"
           }
         ]
       },
@@ -2431,8 +2411,7 @@
         "moves": [
           {
             "name": "Standing Uppercut",
-            "input": "df+2",
-            "sourceId": "slikatel-combos"
+            "input": "df+2"
           },
           {
             "name": "Tornado Spin",
@@ -2496,18 +2475,24 @@
         "combos": [
           {
             "name": "Uppercut into knee rush",
-            "input": "df+2 > 1 > f,f+4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > 1 > f,f+4"
           },
           {
             "name": "Spin, jab and kick finish",
-            "input": "df+2 > b+1 > 1 > 4",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > b+1 > 1 > 4"
           },
           {
             "name": "Uppercut into sword finish",
-            "input": "df+2 > b+1 > db+1",
-            "sourceId": "slikatel-combos"
+            "input": "df+2 > b+1 > db+1"
+          },
+          {
+            "name": "Uppercut into spinning punches and dive",
+            "input": "df+2 > b+1 > b+1 > ~f+1 > f,f+3+4,1+2"
+          },
+          {
+            "name": "Sword strike into uppercut and dive",
+            "input": "f+2 > df+2 > b+1,1 > f,f+3+4,1+2",
+            "notes": "The opening sword strike must connect; it is not a guaranteed approach."
           }
         ]
       },

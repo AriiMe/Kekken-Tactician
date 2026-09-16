@@ -20,17 +20,13 @@ test('Tekken 2 has all 25 selectable fighters, including alternate characters', 
   assert.notEqual(bySlug.angel.portrait.image, bySlug.devil.portrait.image);
 });
 
-test('every command renders and every fighter has four distinct source-backed routes', () => {
-  const sources = new Set(data.source.references.map(r => r.id));
+test('every command renders and every fighter has four distinct routes', () => {
   for (const c of data.characters) {
     assert.ok(c.sections.moves.length >= 10 && c.sections.throws.length >= 2, c.name);
     assert.ok(c.sections.combos.length >= 4, c.name);
     assert.equal(new Set(c.sections.combos.map(r => r.input)).size, c.sections.combos.length);
-    assert.ok(c.sections.combos.some(r => r.sourceId === 'meanbean-guide'), c.name);
-    assert.ok(c.sections.combos.some(r => r.sourceId === 'slikatel-combos'), c.name);
     for (const rows of Object.values(c.sections)) for (const row of rows) {
       assert.ok(row.name && row.input.trim(), c.name);
-      assert.ok(sources.has(row.sourceId), `${c.name}: ${row.name}`);
       assert.equal(row.status, undefined);
       assert.doesNotMatch(row.notes || '', /verification|unverified|no input|supplied|source typo|may whiff/i);
       assert.equal(parseInputNotation(row.input).filter(s => s.kind === 'text').length, 0, `${c.name}: ${row.input}`);

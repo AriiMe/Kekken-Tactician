@@ -16,6 +16,7 @@ const sectionTitles = {
 const rowType = PropTypes.shape({
   name: PropTypes.string.isRequired, input: PropTypes.string.isRequired,
   notes: PropTypes.string,
+  launchers: PropTypes.arrayOf(PropTypes.string),
 });
 
 function Portrait({ character, sheet, gameTitle }) {
@@ -51,6 +52,13 @@ function MoveSection({ title, rows }) {
             <div className="t1-move" key={`${row.name}-${index}`}>
               <dt>{row.name}</dt>
               <dd>
+                {row.launchers?.length > 0 && <>
+                  <span className="t1-combo-label">Launcher (choose one)</span>
+                  <ul className="t1-launchers">
+                    {row.launchers.map(launcher => <li className="t1-input" key={launcher}>{renderInputImage(launcher)}</li>)}
+                  </ul>
+                  <span className="t1-combo-label">Follow-up</span>
+                </>}
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
                 {row.notes && <p>{row.notes}</p>}
               </dd>

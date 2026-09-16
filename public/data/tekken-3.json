@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "gameId": "tekken-3",
+  "title": "Tekken 3",
+  "edition": "PlayStation",
+  "publicationStatus": "draft",
+  "source": {
+    "label": "Tekken 3 move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
+  },
+  "coverage": {
+    "rosterBasis": "Characters with videos in the HISSATSU playlist",
+    "rosterComplete": false
+  },
+  "portraits": {
+    "credit": null,
+    "sourceUrl": null
+  },
+  "characters": [
+    {
+      "slug": "bryan-fury",
+      "name": "Bryan Fury",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [
+          {
+            "name": "Hopkick into punch and kick string",
+            "input": "uf+4 > ~f+2 > ~f+4,3,4"
+          },
+          {
+            "name": "Launch into backfist string",
+            "launchers": [
+              "uf,n+4",
+              "WS 1",
+              "CH b+2,1"
+            ],
+            "input": "b+2,1,4"
+          },
+          {
+            "name": "While-standing launcher into power punch",
+            "input": "WS 1 > b+1+4"
+          },
+          {
+            "name": "Sidestep launcher into low kick and catch",
+            "input": "SS 1 > d+3 > df+1+3"
+          },
+          {
+            "name": "Counter-hit kick into rushing punch",
+            "input": "CH ~f+4 > f,~f+2"
+          },
+          {
+            "name": "Counter-hit string into low kick",
+            "input": "CH b+2,1,u+4 > df+3"
+          },
+          {
+            "name": "Counter-hit rising kick juggle",
+            "input": "CH WS 3 > uf,n+4 > b+2,1,4"
+          }
+        ],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "doctor-bosconovitch",
+      "name": "Doctor Bosconovitch",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "jin-kazama",
+      "name": "Jin Kazama",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [
+          {
+            "name": "Uppercut into wind god fist and laser string",
+            "input": "df+2 > f,n,d,df+2 > b,~f+2,1,2 > f,~f+2"
+          },
+          {
+            "name": "Launcher into laser string",
+            "launchers": [
+              "f,n,d,df+2",
+              "CH df+2"
+            ],
+            "input": "b,~f+2,1,2 > f,~f+2"
+          },
+          {
+            "name": "Rising uppercut into leaping kick",
+            "input": "WS 2 > f,n,d,df+1,3"
+          },
+          {
+            "name": "String-end launcher into leaping kick",
+            "input": "(b,~f+2,1),d+2 > f,n,d,df+1,3",
+            "notes": "The parenthesized first two attacks miss; land the final d+2."
+          },
+          {
+            "name": "Hell sweep into spinning kick",
+            "input": "f,n,d,df+4 > 1+4 > 1+4,2 > 4~3"
+          },
+          {
+            "name": "Sidestep launcher into laser string and kick",
+            "input": "SS 2 > 2 > b,~f+2,1,2 > 4~3"
+          },
+          {
+            "name": "Counter-hit laser starter conversion",
+            "input": "CH b,~f+2 > d+3+4 > 1+4,2 > f,~f+2"
+          }
+        ],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [
+          {
+            "name": "Uppercut into rushing uppercut and sweeps",
+            "input": "df+2 > f,f+2 > df+2 > f,n,d,~df+4,4,1 > d+1"
+          },
+          {
+            "name": "Rushing uppercut into sweeps",
+            "input": "f,f+2 > df+2 > f,n,d,~df+4,4,1 > d+1"
+          },
+          {
+            "name": "Rising uppercut into sweeps",
+            "input": "WS 2 > f,n,d,~df+4,4,1"
+          },
+          {
+            "name": "Launcher into jab and sweeps",
+            "launchers": [
+              "f,n,d,df+2",
+              "CH df+2"
+            ],
+            "input": "df+1 > f,n,d,~df+4,4,1 > d+1"
+          },
+          {
+            "name": "Counter-hit running kick conversion",
+            "input": "CH f,~f+3 > f,n,d,df+2 > df+1 > f,n,d,~df+4,4,1 > d+1"
+          }
+        ],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [
+          {
+            "name": "Uppercut into spinning punches",
+            "launchers": [
+              "df+2",
+              "f+2 > df+2"
+            ],
+            "input": "b+1,(1),1 > b+1,1,(1),1 > ~f+3",
+            "notes": "Parenthesized punches miss deliberately; keep the full string rhythm."
+          },
+          {
+            "name": "Crouching sweep into flying headbutt",
+            "input": "FC df+3 > u+1+2 > f,f",
+            "notes": "Use the forward dash during the airborne follow-up."
+          },
+          {
+            "name": "Crouching sword sweep into running kick",
+            "input": "FC b+1 > f,f+4"
+          }
+        ],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "gon",
+      "name": "Gon",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "eddy-gordo",
+      "name": "Eddy Gordo",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "kuma",
+      "name": "Kuma",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "gun-jack",
+      "name": "Gun Jack",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "hwoarang",
+      "name": "Hwoarang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "true-ogre",
+      "name": "True Ogre",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ogre",
+      "name": "Ogre",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "forest-law",
+      "name": "Forest Law",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    },
+    {
+      "slug": "ling-xiaoyu",
+      "name": "Ling Xiaoyu",
+      "publicationStatus": "draft",
+      "portrait": null,
+      "sections": {
+        "punishers": [],
+        "throws": [],
+        "chains": [],
+        "moves": [],
+        "combos": [],
+        "wallCombos": [],
+        "stances": [],
+        "strings": [],
+        "unblockables": [],
+        "pounces": []
+      },
+      "notes": []
+    }
+  ]
+}

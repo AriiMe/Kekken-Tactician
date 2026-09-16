@@ -35,6 +35,9 @@
 .t1-move p { color: #bcbcc4; font-size: .8rem; line-height: 1.65; margin: 9px 0 0; }
 .t1-input { line-height: 2.2; overflow-wrap: anywhere; --input-icon-size: 26px; }
 .t1-input .others { display: inline; }
+.t1-combo-label { display: block; color: #bcbcc4; font-size: .75rem; font-weight: 700; margin-bottom: 5px; }
+.t1-launchers { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; padding: 0; margin: 0 0 14px; }
+.t1-launchers li { padding: 2px 10px; border: 1px solid #45454c; border-radius: 4px; }
 .t1-input .input-icons { max-width: 32px; max-height: 32px; object-fit: contain; }
 .t1-source-note { color: #aaa; font-size: .85rem; line-height: 1.75; }
 .t1-back { display: inline-block; padding: 18px 0; }
