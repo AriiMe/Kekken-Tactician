@@ -512,6 +512,17 @@
   opacity: 0.72;
 }
 
+.game-card--live .game-card__logo {
+  filter: none;
+  opacity: 1;
+}
+
+.game-card--live .game-card__logo-stage {
+  background:
+    radial-gradient(ellipse at 65% 25%, color-mix(in srgb, var(--game-accent) 45%, transparent), transparent 65%),
+    linear-gradient(135deg, #8a2825, var(--game-surface) 85%);
+}
+
 .game-card__status {
   position: absolute;
   top: 12px;

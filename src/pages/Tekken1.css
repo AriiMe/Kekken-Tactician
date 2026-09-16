@@ -36,7 +36,6 @@
 .t1-input { line-height: 2.2; overflow-wrap: anywhere; --input-icon-size: 26px; }
 .t1-input .others { display: inline; }
 .t1-input .input-icons { max-width: 32px; max-height: 32px; object-fit: contain; }
-.t1-unverified { display: block; color: #edbd77; font-size: .67rem; margin-top: 6px; text-transform: uppercase; letter-spacing: .06em; }
 .t1-source-note { color: #aaa; font-size: .85rem; line-height: 1.75; }
 .t1-back { display: inline-block; padding: 18px 0; }
 .t1-credits { margin-top: 45px; padding-top: 20px; border-top: 1px solid #303037; font-size: .73rem; line-height: 1.8; color: #92929d; }

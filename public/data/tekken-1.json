@@ -4,8 +4,30 @@
   "title": "Tekken 1",
   "edition": "PlayStation",
   "source": {
-    "label": "Community-supplied Tekken 1 move list",
-    "note": "Button notation converted to 1/2/3/4. Historical inputs are preserved; flagged entries need verification."
+    "label": "Tekken 1 PlayStation move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Combo routes start when the launcher connects.",
+    "references": [
+      {
+        "id": "slikatel-combos",
+        "title": "Slikatel — Tekken Combo Guide",
+        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/4252"
+      },
+      {
+        "id": "playstation-moves",
+        "title": "jesus2099 — Tekken PlayStation Move List",
+        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/63721"
+      },
+      {
+        "id": "original-moves",
+        "title": "GKomatsu — Tekken Move List",
+        "url": "https://gamefaqs.gamespot.com/ps/366755-tekken/faqs/4249"
+      },
+      {
+        "id": "ten-hit-demonstration",
+        "title": "Fighting Game Move Lists — Tekken 1 combo demonstration",
+        "url": "https://www.youtube.com/watch?v=LPMmGvQH5TY"
+      }
+    ]
   },
   "portraits": {
     "image": "/characters/tekken-1/portraits.png",
@@ -85,8 +107,7 @@
           },
           {
             "name": "Flip Tumble",
-            "input": "f, f+4",
-            "notes": "Listed as stunning."
+            "input": "f, f+4"
           },
           {
             "name": "5 Punch Combo",
@@ -158,14 +179,14 @@
           },
           {
             "name": "Flying Kick",
-            "input": "f, f, f+3",
-            "notes": "Listed as stunning on block."
+            "input": "f, f, f+3"
           }
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2"
+            "name": "10 Hit Combo",
+            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2",
+            "hits": 10
           }
         ],
         "unblockables": [
@@ -177,9 +198,19 @@
         ],
         "combos": [
           {
-            "name": "Mid punch/Punt kick",
-            "input": "d+1 > 4",
-            "notes": "Tap down for the punch; release down before 4."
+            "name": "Uppercut into double palm",
+            "input": "df+2 > df+1 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into punch and kick",
+            "input": "df+2 > 2,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into kick and punch",
+            "input": "df+2 > df+3,2",
+            "sourceId": "slikatel-combos"
           }
         ],
         "chains": [
@@ -205,9 +236,7 @@
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "armor-king",
@@ -239,8 +268,8 @@
           },
           {
             "name": "Whirlwind Toss",
-            "input": "db, f+1",
-            "notes": "The supplied list also gives b, db, d, df, f+1 as an alternative."
+            "input": "f,b,db,d,df,f+1",
+            "sourceId": "playstation-moves"
           },
           {
             "name": "Scissor Flip",
@@ -260,8 +289,7 @@
           },
           {
             "name": "Hammer Elbow",
-            "input": "df, 1",
-            "notes": "Listed as stunning on block."
+            "input": "df, 1"
           },
           {
             "name": "Double Punch/Uppercut",
@@ -324,27 +352,22 @@
           {
             "name": "Triple Slide Kick",
             "input": "df+4, 4, 4",
-            "notes": "Crouch with df before continuing. Listed as stunning."
-          },
-          {
-            "name": "Multi Slide Kicks",
-            "input": "",
-            "notes": "No input was supplied for this entry.",
-            "status": "unverified"
+            "notes": "Crouch with df before continuing."
           }
         ],
         "strings": [
           {
-            "name": "Attack string",
+            "name": "10 Hit Combo",
             "input": "1, 2, 1, 1, 2, 4, 4, 4, 1, 3",
-            "notes": "Roll quickly into 1."
+            "notes": "Roll quickly into 1.",
+            "hits": 10
           }
         ],
         "pounces": [
           {
             "name": "Elbow Drop",
             "input": "uf+2+4",
-            "notes": "Also listed with u instead of uf."
+            "notes": "Can also use u instead of uf."
           },
           {
             "name": "Knee Drop",
@@ -357,11 +380,26 @@
             "input": "d, d, d+1+2",
             "notes": "During Suplex, enter the follow-up before the opponent passes the vertical position."
           }
+        ],
+        "combos": [
+          {
+            "name": "Jab into a second uppercut",
+            "input": "f,f+2 > 1 > f,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double power uppercut",
+            "input": "f,d,df+2 > 1 > f,d,df+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into power uppercut",
+            "input": "f,f+2 > 1 > f,d,df+2",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "ganryu",
@@ -453,8 +491,7 @@
           },
           {
             "name": "Hundred Hand Slap",
-            "input": "f+1, 2, 1, 2, 1, 2, 1, 2",
-            "notes": "The supplied list also allows starting with 2."
+            "input": "f+1, 2, 1, 2, 1, 2, 1, 2"
           },
           {
             "name": "Mega Crouch Combo",
@@ -471,11 +508,26 @@
             "name": "Low Cannonball",
             "input": "uf, 3+4"
           }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into double palm",
+            "input": "df+2 > df+1 > df+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into two low punches",
+            "input": "df+2 > df+1 > d+2,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Punches into double palm",
+            "input": "df+2 > 2,1 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "heihachi-mishima",
@@ -542,8 +594,7 @@
           },
           {
             "name": "High Uppercut",
-            "input": "df+2",
-            "notes": "Also listed as df+1."
+            "input": "df+2"
           },
           {
             "name": "Power Uppercut",
@@ -568,8 +619,7 @@
           },
           {
             "name": "Jump Kick",
-            "input": "f, f, f+3",
-            "notes": "Listed as stunning on block."
+            "input": "f, f, f+3"
           },
           {
             "name": "Power Mid Kick",
@@ -614,8 +664,9 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1"
+            "name": "10 Hit Combo",
+            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1",
+            "hits": 10
           }
         ],
         "pounces": [
@@ -626,39 +677,24 @@
         ],
         "combos": [
           {
-            "name": "Running Uppercut/Double Upper",
-            "input": "f, f+2 > df+1, 2"
+            "name": "Power uppercut into double axe kick",
+            "input": "f,d,df+2 > f,d,df,n+4,4",
+            "notes": "Release the direction to neutral before 4,4.",
+            "sourceId": "slikatel-combos"
           },
           {
-            "name": "Double Power Uppercut",
-            "input": "f, d, df+2 > f, d, df+2"
+            "name": "Uppercuts into power punch",
+            "input": "f,f+2 > df+1,2 > d,df,f+2",
+            "sourceId": "slikatel-combos"
           },
           {
-            "name": "Power Uppercut/Double Axe Kick",
-            "input": "f, d, df+2 > f, d, f+4, 4",
-            "notes": "The combo listing uses f, d, f+4, 4, while the standalone Double Axe Kick entry uses a crouching input. This mismatch is preserved for verification.",
-            "status": "unverified"
-          },
-          {
-            "name": "Power Uppercut/Power Punch",
-            "input": "f, d, df+2 > d, df, f+2",
-            "notes": "Enter the Power Punch immediately after the launcher."
-          },
-          {
-            "name": "Power Uppercut / Hammer / Power Punch",
-            "input": "f, d, df+2 > d+1 > f+2",
-            "notes": "Wait until the opponent falls to just above shoulder height, then tap d for the hammer. The source typo \"D,D F\" is normalized to d, df."
-          },
-          {
-            "name": "Super Uppercut/Hammer/Power Punch",
-            "input": "f, f+2 > d+1 > f+2",
-            "notes": "Wait until the opponent falls to just above shoulder height, then tap d for the hammer."
+            "name": "Jab, hammer and power punch",
+            "input": "f,f+2 > 1 > d+1,f+2",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "jack",
@@ -690,6 +726,11 @@
           }
         ],
         "moves": [
+          {
+            "name": "Standing Uppercut",
+            "input": "df+2",
+            "sourceId": "slikatel-combos"
+          },
           {
             "name": "Sandwich Clap",
             "input": "f, f+1+2"
@@ -773,15 +814,16 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+            "name": "10 Hit Combo",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2",
+            "hits": 10
           }
         ],
         "unblockables": [
           {
             "name": "Windup Punch",
-            "input": "b, db, d, df > 1",
-            "notes": "Keep rotating counterclockwise until the count reaches five, then tap 1. The supplied list describes the full charge as unblockable and a one-hit finish; earlier releases can be blocked."
+            "input": "b,db,d,df,f > 1",
+            "notes": "Continue counterclockwise rotations until the fifth windup, then press 1."
           }
         ],
         "pounces": [
@@ -790,11 +832,26 @@
             "input": "uf+3+4",
             "notes": "Can continue into Sitting Punches."
           }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into kick finish",
+            "input": "df+2 > df+1 > 3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double punch",
+            "input": "df+2 > 2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double uppercut",
+            "input": "df+2 > df+1 > df+1+2",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "kazuya-mishima",
@@ -859,13 +916,12 @@
           },
           {
             "name": "Axe Kicks",
-            "input": "f, f+3",
-            "notes": "Listed as stunning."
+            "input": "f, f+3"
           },
           {
             "name": "Double Axe Kick",
             "input": "d > 4, 4",
-            "notes": "Crouch or hold down, then release down before the kicks. Listed as stunning."
+            "notes": "Crouch or hold down, then release down before the kicks."
           },
           {
             "name": "Jump Kick",
@@ -886,43 +942,42 @@
           },
           {
             "name": "Axe Kick (forward variation)",
-            "input": "f, 4",
-            "notes": "Listed as stunning. The source separates f and 4 with a comma."
+            "input": "f+4"
           }
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1"
+            "name": "10 Hit Combo",
+            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1",
+            "hits": 10
           }
         ],
         "pounces": [
           {
             "name": "Hopback Punch",
-            "input": "uf+2+4",
-            "notes": "Also listed with ub or u instead of uf."
+            "input": "uf+2+4"
           }
         ],
         "combos": [
           {
-            "name": "Double Walking Uppercut/1/Axe Kick",
-            "input": "df+1, 2 > 1, f+4"
+            "name": "Power uppercut into double axe kick",
+            "input": "f,d,df+2 > f,d,df,n+4,4",
+            "notes": "Release the direction to neutral before 4,4.",
+            "sourceId": "slikatel-combos"
           },
           {
-            "name": "Power Uppercut/Double Axe Kick",
-            "input": "f, d, df+2 > f, d, f+4, 4",
-            "notes": "The combo listing uses f, d, f+4, 4, while the standalone Double Axe Kick entry uses a crouching input. This mismatch is preserved for verification.",
-            "status": "unverified"
+            "name": "Power uppercut into axe kick",
+            "input": "f,d,df+2 > 1 > f+4",
+            "sourceId": "slikatel-combos"
           },
           {
-            "name": "Double Power Uppercut",
-            "input": "f, d, df+2 > f, d, df+2"
+            "name": "Double power uppercut",
+            "input": "f,d,df+2 > 1 > f,d,df+2",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "king",
@@ -953,8 +1008,8 @@
           },
           {
             "name": "Whirlwind Toss",
-            "input": "db, f+1",
-            "notes": "The supplied list also gives b, db, d, df, f+1 as an alternative."
+            "input": "f,b,db,d,df,f+1",
+            "sourceId": "playstation-moves"
           },
           {
             "name": "Scissor Flip",
@@ -975,8 +1030,7 @@
           },
           {
             "name": "Hammer Elbow",
-            "input": "df, 1",
-            "notes": "Listed as stunning."
+            "input": "df, 1"
           },
           {
             "name": "Jumping Hammer",
@@ -1013,13 +1067,11 @@
           },
           {
             "name": "Drop Kick",
-            "input": "f, f+3+4",
-            "notes": "Listed as stunning on block."
+            "input": "f, f+3+4"
           },
           {
             "name": "Spinning Drop Kick",
-            "input": "f, f, f+3+4",
-            "notes": "Listed as stunning on block."
+            "input": "f, f, f+3+4"
           },
           {
             "name": "Spinning Drop Kick/Dive",
@@ -1029,30 +1081,41 @@
           {
             "name": "Triple Slide Kick",
             "input": "df+4, 4, 4",
-            "notes": "Crouch with df before continuing. Listed as stunning."
+            "notes": "Crouch with df before continuing."
           }
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 1, 1, 2, 4, 4, 4, 4, 1, 3"
+            "name": "10 Hit Combo",
+            "input": "1,2,1,1,2,4,4,4,1,3",
+            "hits": 10
           }
         ],
         "pounces": [
           {
             "name": "Elbow Drop",
             "input": "uf+2+4",
-            "notes": "Also listed with u instead of uf."
+            "notes": "Can also use u instead of uf."
           },
           {
             "name": "Knee Drop",
             "input": "uf+3+4"
           }
+        ],
+        "combos": [
+          {
+            "name": "Jab into a second uppercut",
+            "input": "f,f+2 > 1 > f,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Two jabs into uppercut",
+            "input": "f,f+2 > 1,2 > f,f+2",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "kuma",
@@ -1075,11 +1138,15 @@
           },
           {
             "name": "Bear Hug",
-            "input": "2+4",
-            "notes": "The supplied list excludes Kuma mirror matches."
+            "input": "2+4"
           }
         ],
         "moves": [
+          {
+            "name": "Standing Uppercut",
+            "input": "df+2",
+            "sourceId": "slikatel-combos"
+          },
           {
             "name": "Sandwich Clap",
             "input": "f, f+1+2"
@@ -1116,9 +1183,8 @@
           },
           {
             "name": "Triple Uppercut",
-            "input": "~df+1, 4, 1",
-            "notes": "The supplied list specifies 4 here despite naming this an uppercut sequence; verify in-game.",
-            "status": "unverified"
+            "input": "FC df+1,2,1",
+            "sourceId": "playstation-moves"
           },
           {
             "name": "Triple Windmill Punch",
@@ -1153,14 +1219,30 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+            "name": "10 Hit Combo",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2",
+            "hits": 10
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into double uppercut",
+            "input": "df+2 > df+1 > df+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double punch",
+            "input": "df+2 > df+1 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Extra punch into double punch",
+            "input": "df+2 > df+1 > f+1 > f,f+1+2",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "kunimitsu",
@@ -1183,6 +1265,11 @@
           }
         ],
         "moves": [
+          {
+            "name": "Standing Uppercut",
+            "input": "df+2",
+            "sourceId": "slikatel-combos"
+          },
           {
             "name": "Tornado Spin",
             "input": "~b+1",
@@ -1215,13 +1302,15 @@
           },
           {
             "name": "Forward Cartwheel/Diving Corkscrew",
-            "input": "f, f+3+4, f, f+1+2"
+            "input": "f,f+3+4,1+2",
+            "sourceId": "original-moves"
           }
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 1, 4, 4, 4, 1"
+            "name": "7 Hit Combo",
+            "input": "1, 2, 1, 4, 4, 4, 1",
+            "hits": 7
           }
         ],
         "pounces": [
@@ -1232,16 +1321,23 @@
         ],
         "combos": [
           {
-            "name": "Double Power Uppercut",
-            "input": "f, d, df+2 > f, d, df+2",
-            "notes": "This route appears in the supplied Kunimitsu section but duplicates a Mishima route without a matching launcher in her move list. Kept for reference; verify before using.",
-            "status": "unverified"
+            "name": "Uppercut into knee rush",
+            "input": "df+2 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Spin, jab and kick finish",
+            "input": "df+2 > b+1 > 1 > 4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into punch and kick",
+            "input": "df+2 > n+2,4",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "lee-chaolan",
@@ -1347,18 +1443,15 @@
           },
           {
             "name": "Double Jump Kick/Roundhouse",
-            "input": "f, f, 3, 4, 4",
-            "notes": "The supplied list also suggests f, f, f+3 for a more consistent starter."
+            "input": "f, f, 3, 4, 4"
           },
           {
             "name": "Double Jump Kick/Sweep",
-            "input": "f, f, 3, ~d+4, 4",
-            "notes": "The supplied list also suggests f, f, f+3 for a more consistent starter."
+            "input": "f, f, 3, ~d+4, 4"
           },
           {
             "name": "Jump Kick",
-            "input": "f, f, f+3",
-            "notes": "Listed as stunning on block."
+            "input": "f, f, f+3"
           },
           {
             "name": "High Kick/Roundhouse",
@@ -1395,15 +1488,32 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
+            "name": "10 Hit Combo",
             "input": "df+1, 2, 2, 1, 3, 3, 3, 4, 3, 4",
-            "notes": "Tap df."
+            "notes": "Tap df.",
+            "hits": 10
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into two kicks",
+            "input": "df+2 > df+1 > 4,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into running kick",
+            "input": "df+2 > df+1 > f,f+3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into low kicks",
+            "input": "df+2 > ~db+4,4,4",
+            "notes": "Keep down-back held for all three kicks.",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "marshall-law",
@@ -1448,8 +1558,7 @@
           },
           {
             "name": "Jump Kick",
-            "input": "f, f, f+3",
-            "notes": "Listed as stunning on block."
+            "input": "f, f, f+3"
           },
           {
             "name": "Flipkick",
@@ -1485,9 +1594,10 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
+            "name": "10 Hit Combo",
             "input": "df+1, 2, 2, 1, 3, 3, 3, 4, 3, 4",
-            "notes": "Tap df."
+            "notes": "Tap df.",
+            "hits": 10
           }
         ],
         "unblockables": [
@@ -1499,15 +1609,24 @@
         ],
         "combos": [
           {
-            "name": "Flipkick / jab carry / backhand finish",
-            "input": "d, u+4 > 1, 1, 1, 1 > f+2, 2, 2",
-            "notes": "Tap u for the flipkick. The supplied route includes punches that may whiff; it is not an all-hits-connect sequence."
+            "name": "Uppercut into two kicks",
+            "input": "df+2 > df+1 > 4,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into punch and kick",
+            "input": "df+2 > 2 > 3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into backhand punches",
+            "input": "df+2 > df+1 > ~f+2,2,2",
+            "notes": "Keep forward held through the three punches.",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "michelle-chang",
@@ -1547,8 +1666,7 @@
           },
           {
             "name": "Double-Fisted Body Blow",
-            "input": "f, f+1+2",
-            "notes": "Listed as stunning on block."
+            "input": "f, f+1+2"
           },
           {
             "name": "Uppercut",
@@ -1623,8 +1741,9 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "2, 1, 1, 2, 3, 3, 3, 4, 4, 1"
+            "name": "10 Hit Combo",
+            "input": "2, 1, 1, 2, 3, 3, 3, 4, 4, 1",
+            "hits": 10
           }
         ],
         "unblockables": [
@@ -1639,11 +1758,29 @@
             "name": "Hopback Stomp",
             "input": "uf+3+4"
           }
+        ],
+        "combos": [
+          {
+            "name": "Charged uppercut into sweep finish",
+            "input": "b,b,~b+1 > d+4,1",
+            "sourceId": "slikatel-combos",
+            "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
+          },
+          {
+            "name": "Charged uppercut into jab and kick",
+            "input": "b,b,~b+1 > 1 > 4",
+            "sourceId": "slikatel-combos",
+            "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
+          },
+          {
+            "name": "Charged uppercut into double palm",
+            "input": "b,b,~b+1 > 1 > f,f+1+2",
+            "sourceId": "slikatel-combos",
+            "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "nina-williams",
@@ -1701,8 +1838,7 @@
           },
           {
             "name": "Flip Tumble",
-            "input": "f, f+4",
-            "notes": "Listed as stunning."
+            "input": "f, f+4"
           },
           {
             "name": "Double Punch/Roundhouse",
@@ -1775,8 +1911,9 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2"
+            "name": "10 Hit Combo",
+            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2",
+            "hits": 10
           }
         ],
         "unblockables": [
@@ -1788,9 +1925,19 @@
         ],
         "combos": [
           {
-            "name": "Mid punch/Punt kick",
-            "input": "d+1 > 4",
-            "notes": "Tap down for the punch; release down before 4."
+            "name": "Uppercut into double palm",
+            "input": "df+2 > df+1 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into punch and kick",
+            "input": "df+2 > 2,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into kick and punch",
+            "input": "df+2 > df+3,2",
+            "sourceId": "slikatel-combos"
           }
         ],
         "chains": [
@@ -1816,9 +1963,7 @@
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "paul-phoenix",
@@ -1851,8 +1996,7 @@
         "moves": [
           {
             "name": "Hammer Fist",
-            "input": "d+1",
-            "notes": "Listed as stunning."
+            "input": "d+1"
           },
           {
             "name": "Hammer Fist/Power Punch",
@@ -1902,8 +2046,7 @@
           },
           {
             "name": "Forward Flip",
-            "input": "f, f+4",
-            "notes": "Listed as stunning."
+            "input": "f, f+4"
           },
           {
             "name": "Foot Sweep",
@@ -1920,21 +2063,31 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 3, 2, 1, 2, 1, 4, 2, 1"
+            "name": "10 Hit Combo",
+            "input": "1, 2, 3, 2, 1, 2, 1, 4, 2, 1",
+            "hits": 10
           }
         ],
         "combos": [
           {
-            "name": "Small Jumping Kick/Hammer Fist/Power Punch",
-            "input": "uf+4 > d+1 > f+2",
-            "notes": "Tap uf. The supplied list also gives uf+3, 4 as an alternative starter."
+            "name": "Hopkick into hammer and power punch",
+            "input": "uf+4 > d+1,f+2",
+            "notes": "Tap up-forward for the launcher.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into power punch",
+            "input": "df+2 > df+1 > d,df,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double jump kick",
+            "input": "df+2 > f,f+3,4",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "prototype-jack",
@@ -1957,6 +2110,11 @@
           }
         ],
         "moves": [
+          {
+            "name": "Standing Uppercut",
+            "input": "df+2",
+            "sourceId": "slikatel-combos"
+          },
           {
             "name": "Punch/Elbow Rush",
             "input": "2, 1"
@@ -2001,9 +2159,8 @@
           },
           {
             "name": "Triple Uppercut",
-            "input": "~df+1, 4, 1",
-            "notes": "The supplied list specifies 4 here despite naming this an uppercut sequence; verify in-game.",
-            "status": "unverified"
+            "input": "FC df+1,2,1",
+            "sourceId": "playstation-moves"
           },
           {
             "name": "Low Double Slap/Uppercut",
@@ -2052,15 +2209,16 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+            "name": "10 Hit Combo",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2",
+            "hits": 10
           }
         ],
         "unblockables": [
           {
             "name": "Windup Punch",
-            "input": "b, db, d, df > 1",
-            "notes": "Keep rotating counterclockwise until the count reaches five, then tap 1. The supplied list describes the full charge as unblockable and a one-hit finish; earlier releases can be blocked."
+            "input": "b,db,d,df,f > 1",
+            "notes": "Continue counterclockwise rotations until the fifth windup, then press 1."
           }
         ],
         "pounces": [
@@ -2069,11 +2227,26 @@
             "input": "uf, 3+4",
             "notes": "Can continue into Sitting Punches."
           }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into kick finish",
+            "input": "df+2 > df+1 > 3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double punch",
+            "input": "df+2 > 2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut, hammer and power punch",
+            "input": "df+2 > df+1 > d+1 > f+2",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "wang-jinrei",
@@ -2092,8 +2265,7 @@
           },
           {
             "name": "Backlash",
-            "input": "2+4",
-            "notes": "Listed as stunning."
+            "input": "2+4"
           },
           {
             "name": "Reverse Check",
@@ -2205,8 +2377,9 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "2, 1, 1, 2, 3, 3, 3, 3, 4, 4, 1"
+            "name": "10 Hit Combo",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10
           }
         ],
         "pounces": [
@@ -2214,11 +2387,26 @@
             "name": "Hopback Stomp",
             "input": "uf+3+4"
           }
+        ],
+        "combos": [
+          {
+            "name": "Double uppercut into three-hit finish",
+            "input": "df+2,1 > 4,d+4,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut into power punch",
+            "input": "df+2,1 > 1 > f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut into sweep finish",
+            "input": "df+2,1 > d+4,1",
+            "sourceId": "slikatel-combos"
+          }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     },
     {
       "slug": "yoshimitsu",
@@ -2241,6 +2429,11 @@
           }
         ],
         "moves": [
+          {
+            "name": "Standing Uppercut",
+            "input": "df+2",
+            "sourceId": "slikatel-combos"
+          },
           {
             "name": "Tornado Spin",
             "input": "b+1",
@@ -2279,8 +2472,9 @@
         ],
         "strings": [
           {
-            "name": "Attack string",
-            "input": "1, 2, 1, 4, 4, 4, 4, 1, 1, 1"
+            "name": "10 Hit Combo",
+            "input": "1, 2, 1, 4, 4, 4, 4, 1, 1, 1",
+            "hits": 10
           }
         ],
         "unblockables": [
@@ -2301,16 +2495,23 @@
         ],
         "combos": [
           {
-            "name": "Knee rush / jab / kick / pounce / sword",
-            "input": "f, f+4 > 1 > 4 > u+2 > db+1",
-            "notes": "The source describes a timing-sensitive knockdown follow-up, not a guaranteed combo. Its u+2 pounce also differs from the pounce listed separately.",
-            "status": "unverified"
+            "name": "Uppercut into knee rush",
+            "input": "df+2 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Spin, jab and kick finish",
+            "input": "df+2 > b+1 > 1 > 4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into sword finish",
+            "input": "df+2 > b+1 > db+1",
+            "sourceId": "slikatel-combos"
           }
         ]
       },
-      "notes": [
-        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
-      ]
+      "notes": []
     }
   ]
 }

@@ -16,7 +16,9 @@ test('all 17 supplied Tekken 1 fighters have unique routes and populated moves a
     assert.ok(c.sections.moves.length && c.sections.throws.length, c.name);
     for (const rows of Object.values(c.sections)) for (const row of rows) {
       assert.doesNotMatch(row.name + row.input + (row.notes || ''), /\b(?:LP|RP|LK|RK)\b/);
-      assert.ok(row.input || row.status === 'unverified', `${c.name}: ${row.name}`);
+      assert.ok(row.input.trim(), `${c.name}: ${row.name}`);
+      assert.equal(row.status, undefined, `${c.name}: ${row.name}`);
+      assert.doesNotMatch(row.notes || '', /verification|unverified|no input|supplied|source typo|may whiff/i);
       assert.equal(parseInputNotation(row.input).filter(s => s.kind === 'text').length, 0, `${c.name}: ${row.input}`);
     }
   }
@@ -37,13 +39,32 @@ test('button chords, held directions, tap conditions and throw-chain context sur
   assert.match(bySlug['armor-king'].sections.chains[0].notes, /During Suplex/);
 });
 
-test('incomplete or conflicting source entries are marked instead of silently invented', () => {
-  assert.equal(bySlug.kunimitsu.sections.combos[0].status, 'unverified');
-  const missing = bySlug['armor-king'].sections.moves.find(r => r.name === 'Multi Slide Kicks');
-  assert.equal(missing.input, '');
-  assert.equal(missing.status, 'unverified');
+test('questionable entries are corrected from references or removed', () => {
+  assert.ok(bySlug.kunimitsu.sections.combos.every(r => r.input.startsWith('df+2 >')));
+  assert.ok(!bySlug['armor-king'].sections.moves.some(r => r.name === 'Multi Slide Kicks'));
+  for (const slug of ['kuma', 'prototype-jack']) {
+    assert.equal(bySlug[slug].sections.moves.find(r => r.name === 'Triple Uppercut').input, 'FC df+1,2,1');
+  }
   for (const slug of ['kazuya-mishima', 'heihachi-mishima']) {
-    assert.equal(bySlug[slug].sections.combos.find(r => r.name === 'Power Uppercut/Double Axe Kick').status, 'unverified');
+    assert.equal(bySlug[slug].sections.combos.find(r => r.name === 'Power uppercut into double axe kick').input, 'f,d,df+2 > f,d,df,n+4,4');
+  }
+});
+
+test('every fighter has distinct sourced juggle routes and correctly sized long combos', () => {
+  const sources = new Set(data.source.references.map(r => r.id));
+  for (const c of data.characters) {
+    assert.ok(c.sections.combos.length >= 2, c.name);
+    assert.equal(new Set(c.sections.combos.map(r => r.input)).size, c.sections.combos.length);
+    for (const row of c.sections.combos) {
+      assert.ok(sources.has(row.sourceId), `${c.name}: ${row.name}`);
+      assert.ok(row.input.includes(' > '), `${c.name}: ${row.name}`);
+    }
+    for (const row of c.sections.strings || []) {
+      assert.equal(row.hits, c.slug === 'kunimitsu' ? 7 : 10);
+      assert.equal(row.name, `${row.hits} Hit Combo`);
+      const attacks = parseInputNotation(row.input).filter(s => s.kind === 'input' && /^[1-4]/.test(s.normalized));
+      assert.equal(attacks.length, row.hits, c.name);
+    }
   }
 });
 

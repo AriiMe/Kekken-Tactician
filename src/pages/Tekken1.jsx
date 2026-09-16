@@ -10,12 +10,12 @@ import './Tekken1.css';
 
 const sectionTitles = {
   throws: 'Throws', chains: 'Throw Follow-Ups', moves: 'Move List',
-  combos: 'Combo Routes', strings: 'Attack Strings',
+  combos: 'Combo Routes', strings: '10 Hit Combos',
   unblockables: 'Unblockable Attacks', pounces: 'Ground Attacks',
 };
 const rowType = PropTypes.shape({
   name: PropTypes.string.isRequired, input: PropTypes.string.isRequired,
-  notes: PropTypes.string, status: PropTypes.string,
+  notes: PropTypes.string,
 });
 
 function Portrait({ character, sheet }) {
@@ -48,7 +48,7 @@ function MoveSection({ title, rows }) {
         <dl className="t1-moves">
           {rows.map((row, index) => (
             <div className="t1-move" key={`${row.name}-${index}`}>
-              <dt>{row.name}{row.status === 'unverified' && <span className="t1-unverified">Needs verification</span>}</dt>
+              <dt>{row.name}</dt>
               <dd>
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
                 {row.notes && <p>{row.notes}</p>}
@@ -70,7 +70,8 @@ function NotationKey() {
         <strong>3</strong> = LK / × &nbsp; <strong>4</strong> = RK / ○</p>
       <p>Left punch · Right punch · Left kick · Right kick</p>
       <p>f / b / d / u = forward / back / down / up. Diagonals combine letters.
-        A comma means next input; + means together; ~ means hold; &gt; separates combo steps.
+        A comma means next input; + means together; ~ before a direction means hold; &gt; separates combo steps.
+        FC means full crouch; n means return to neutral.
         Tap, crouch, release and timing instructions appear beside the move.</p>
       <p>Use the input display settings in the navigation to switch between icons and notation.</p>
     </Paper>
@@ -98,8 +99,11 @@ export default function Tekken1() {
   const title = missing ? 'Character not found — Tekken 1' : character
     ? `${character.name} — Tekken 1 Moves & Combos` : 'Tekken 1 Character Guides';
   const description = character
-    ? `${character.name}'s Tekken 1 throws, moves and attack strings in familiar 1/2/3/4 notation.`
-    : 'Explore the original Tekken: 17 character move lists, throws, attack strings and combo routes.';
+    ? `${character.name}'s Tekken 1 throws, moves and combos in familiar 1/2/3/4 notation.`
+    : 'Explore the original Tekken: 17 character move lists, throws, 10 hit combos and juggle routes.';
+  const characterSectionTitles = { ...sectionTitles,
+    ...(character?.sections.strings?.every(row => row.hits === 7) ? { strings: '7 Hit Combo' } : {}),
+  };
   const canonical = `https://tekktician.com/games/tekken-1${character ? `/${character.slug}` : ''}`;
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
@@ -127,20 +131,20 @@ export default function Tekken1() {
             {character && <Portrait character={character} sheet={data.portraits} />}
             <div><p className="t1-kicker">Tekken 1 · PlayStation archive</p>
               <h1>{character ? character.name : 'Back to the first fight.'}</h1>
-              <p>{character ? 'Throws, moves and strings. The original game, in familiar notation.'
+              <p>{character ? 'Throws, moves and combos. The original game, in familiar notation.'
                 : '17 fighters. Pick your character and get straight to the inputs.'}</p>
             </div>
           </header>
           <NotationKey />
           {character ? <>
             <nav className="t1-section-links" aria-label="Guide sections">
-              {Object.entries(sectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
+              {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
             </nav>
             <div className="t1-guide" key={character.slug}>
-              {Object.entries(sectionTitles).map(([key,title]) => character.sections[key]?.length ?
+              {Object.entries(characterSectionTitles).map(([key,title]) => character.sections[key]?.length ?
                 <section id={`t1-${key}`} key={key} aria-label={title}><MoveSection title={title} rows={character.sections[key]} /></section> : null)}
             </div>
-            <p className="t1-source-note">{character.notes.join(' ')}</p>
+            {character.notes.length > 0 && <p className="t1-source-note">{character.notes.join(' ')}</p>}
             <Link className="t1-back" to="/games/tekken-1">← Choose another fighter</Link>
           </> : <>
             <label className="t1-search">Find a fighter
