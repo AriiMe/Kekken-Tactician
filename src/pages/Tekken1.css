@@ -1,0 +1,54 @@
+.t1-page { max-width: 1180px; margin: 0 auto; padding: 130px 24px 70px; }
+.t1-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; color: #a6a8b1; font-size: .8rem; margin-bottom: 34px; }
+.t1-breadcrumb a:hover, .t1-credits a, .t1-back { color: #ff596d; }
+.t1-kicker { color: #ff354d; text-transform: uppercase; font-size: .72rem; letter-spacing: .15em; font-weight: 800; }
+.t1-header { margin-bottom: 32px; }
+.t1-header h1 { font-size: clamp(2.2rem, 5.4vw, 4rem); line-height: 1.02; letter-spacing: -.045em; text-transform: uppercase; margin: 12px 0 18px; }
+.t1-header p:not(.t1-kicker) { color: #b7b8c0; line-height: 1.7; }
+.t1-header--character { display: flex; align-items: center; gap: 30px; }
+.t1-header--character > .t1-portrait { width: 145px; flex-shrink: 0; border-radius: 5px; box-shadow: 0 0 15px #d42f2f35; }
+.t1-portrait { display: block; position: relative; overflow: hidden; background: #111; }
+.t1-portrait img { position: absolute; height: auto; }
+.t1-portrait-fallback { display: grid; place-content: center; height: 100%; padding: 15px; }
+.t1-page .t1-notation { padding: 18px 24px; border-left: 3px solid #d42f2f; margin-bottom: 30px; }
+.t1-notation h2 { font-size: 1rem; color: #d42f2f; margin: 0 0 12px; }
+.t1-notation p { font-size: .85rem; color: #bbb; line-height: 1.75; margin: 5px 0; }
+.t1-notation strong { color: #fff; }
+.t1-search { display: flex; flex-direction: column; gap: 10px; max-width: 430px; font-size: .8rem; font-weight: 700; }
+.t1-search input { background: #14151b; border: 1px solid #414149; border-radius: 5px; padding: 14px 16px; color: white; width: 100%; }
+.t1-result-count { color: #aaa; font-size: .8rem; margin: 18px 0; }
+.t1-roster { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 22px; }
+.t1-card { border: 1px solid #303037; background: #15161a; border-radius: 5px; overflow: hidden; transition: border-color .2s, box-shadow .2s; }
+.t1-card:hover { border-color: #d42f2f; box-shadow: 0 0 15px #d42f2f45; }
+.t1-card h2 { font-size: 1rem; margin: 15px 13px 7px; }
+.t1-card > span:last-child { display: block; color: #a8a8b0; margin: 0 13px 16px; font-size: .72rem; }
+.t1-section-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; }
+.t1-section-links a { padding: 8px 12px; border: 1px solid #45454c; border-radius: 4px; font-size: .8rem; }
+.t1-section-links a:hover { border-color: #d42f2f; }
+.t1-guide > section { scroll-margin-top: 110px; margin-bottom: 22px; }
+.t1-page .t1-section { border-radius: 5px; padding: 5px 10px 10px; }
+.t1-section h2 { font-size: 1.35rem; }
+.t1-moves { margin: 0; }
+.t1-move { display: grid; grid-template-columns: minmax(150px, .8fr) minmax(0, 2fr); gap: 20px; padding: 17px 8px; border-top: 1px solid #444; }
+.t1-move dt { font-weight: 700; font-size: .87rem; line-height: 1.6; }
+.t1-move dd { margin: 0; min-width: 0; }
+.t1-move p { color: #bcbcc4; font-size: .8rem; line-height: 1.65; margin: 9px 0 0; }
+.t1-input { line-height: 2.2; overflow-wrap: anywhere; --input-icon-size: 26px; }
+.t1-input .others { display: inline; }
+.t1-input .input-icons { max-width: 32px; max-height: 32px; object-fit: contain; }
+.t1-unverified { display: block; color: #edbd77; font-size: .67rem; margin-top: 6px; text-transform: uppercase; letter-spacing: .06em; }
+.t1-source-note { color: #aaa; font-size: .85rem; line-height: 1.75; }
+.t1-back { display: inline-block; padding: 18px 0; }
+.t1-credits { margin-top: 45px; padding-top: 20px; border-top: 1px solid #303037; font-size: .73rem; line-height: 1.8; color: #92929d; }
+.t1-status { padding: 50px 0; min-height: 40vh; }
+.t1-status button { padding: 12px 20px; background: #d42f2f; color: white; border: 0; border-radius: 4px; }
+@media (max-width: 900px) { .t1-roster { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; } }
+@media (max-width: 650px) {
+  .t1-page { padding: 110px 16px 45px; }
+  .t1-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .t1-header--character { gap: 20px; align-items: flex-start; }
+  .t1-header--character > .t1-portrait { width: 90px; }
+  .t1-header--character h1 { font-size: 1.85rem; }
+  .t1-move { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 16px 2px; }
+  .t1-page .t1-notation { padding: 15px; }
+}

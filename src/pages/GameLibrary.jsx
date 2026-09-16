@@ -10,7 +10,7 @@ import {
   FiLock,
   FiZap,
 } from "react-icons/fi";
-import { gameFilters, games, upcomingGames } from "../data/games";
+import { gameFilters, games, liveGames, upcomingGames } from "../data/games";
 import "./GameLibrary.css";
 
 const FEATURE_ITEMS = [
@@ -215,8 +215,8 @@ export default function GameLibrary() {
           </div>
           <dl className="game-hero__stats" aria-label="Library status">
             <div>
-              <dt>01</dt>
-              <dd>Game live</dd>
+              <dt>{String(liveGames.length).padStart(2, "0")}</dt>
+              <dd>Games live</dd>
             </div>
             <div>
               <dt>{String(upcomingGames.length).padStart(2, "0")}</dt>
@@ -268,7 +268,7 @@ export default function GameLibrary() {
             <p className="game-roadmap__kicker">The roster</p>
             <h2 id="game-roadmap-title">Choose your arena</h2>
             <p>
-              Tekken 8 is ready. Every grey title is queued for a future guide
+              Tekken 8 and Tekken 1 are ready. Every grey title is queued for a future guide
               release.
             </p>
           </div>

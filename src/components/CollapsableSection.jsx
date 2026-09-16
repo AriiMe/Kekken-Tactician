@@ -32,7 +32,8 @@ const CollapsableSection = ({
       <Box sx={{ ...flexBaselineBetween, width: "100%" }}>
         <h2 style={{ color: "#d42f2f" }}>{title}</h2>
         <div style={{ marginBottom: "10px" }}>
-          <IconButton onClick={collapseFn}>
+          <IconButton onClick={collapseFn} aria-expanded={!toggleState}
+            aria-label={`${toggleState ? "Expand" : "Collapse"} ${typeof title === "string" ? title : "section"}`}>
             {toggleState ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </IconButton>
         </div>

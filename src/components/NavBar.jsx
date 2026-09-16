@@ -41,7 +41,7 @@ function PreferenceControls() {
     <div className="nav-preferences">
       <div className="nav-preferences__heading">
         <span>Input display</span>
-        <small>Tekken 8 guides</small>
+        <small>Tekken guides</small>
       </div>
       <div className="nav-preferences__row">
         <span>

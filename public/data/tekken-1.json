@@ -1,0 +1,2316 @@
+{
+  "schemaVersion": 1,
+  "gameId": "tekken-1",
+  "title": "Tekken 1",
+  "edition": "PlayStation",
+  "source": {
+    "label": "Community-supplied Tekken 1 move list",
+    "note": "Button notation converted to 1/2/3/4. Historical inputs are preserved; flagged entries need verification."
+  },
+  "portraits": {
+    "image": "/characters/tekken-1/portraits.png",
+    "width": 492,
+    "height": 520,
+    "sourceUrl": "https://www.spriters-resource.com/playstation/tekken/asset/78298/",
+    "credit": "Original game artwork: Namco. Portrait sheet extracted by Unstabledproton; archived by The Spriters Resource.",
+    "note": "The original game uses the same select portrait for Yoshimitsu and Kunimitsu."
+  },
+  "characters": [
+    {
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "portrait": {
+        "x": 395,
+        "y": 261,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Reverse Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Handstand Toss",
+            "input": "f+1+3"
+          },
+          {
+            "name": "Elbow Strike",
+            "input": "df, df+1"
+          },
+          {
+            "name": "Chin Bash",
+            "input": "d, df, f+1+2",
+            "notes": "Continue into either Leg Scissors Arm Snap or Sidestep Arm Snap."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Knife Strike",
+            "input": "d, f+1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Side Knife Strike",
+            "input": "d, f+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf."
+          },
+          {
+            "name": "Lightning Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf. Tap the upward direction."
+          },
+          {
+            "name": "Chi Release",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Hand Sweep",
+            "input": "df+2",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Triple Slap",
+            "input": "b+1, 1, 1"
+          },
+          {
+            "name": "Flip Tumble",
+            "input": "f, f+4",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "5 Punch Combo",
+            "input": "1, 2, 1, 2, 1"
+          },
+          {
+            "name": "Double Punch/Roundhouse",
+            "input": "1, 2, 4"
+          },
+          {
+            "name": "Double Punch/ High Kick",
+            "input": "1, 2, 3"
+          },
+          {
+            "name": "Mid Kick/Punch",
+            "input": "df+3, 2"
+          },
+          {
+            "name": "Mid Kick/Punch/Roundhouse",
+            "input": "df+3, 2, 4"
+          },
+          {
+            "name": "Mid Kick/Punch/Punch",
+            "input": "df+3, 2, 1"
+          },
+          {
+            "name": "Mid Kick/Punch/High Kick",
+            "input": "df+3, 2, 3"
+          },
+          {
+            "name": "Mid Kick/Punch/Low Sweep",
+            "input": "df+3, 2, d+3"
+          },
+          {
+            "name": "Triple Kick/Punch",
+            "input": "df+3, 3, 3, 2"
+          },
+          {
+            "name": "Mid Kick/Roundhouse",
+            "input": "df+3, 4"
+          },
+          {
+            "name": "Triple Kick/Roundhouse",
+            "input": "df+3, 3, 3, 4"
+          },
+          {
+            "name": "Mid Kick/Spinning Chop",
+            "input": "df+3, 1"
+          },
+          {
+            "name": "Triple Kick/Spinning Chop",
+            "input": "df+3, 3, 3, 1"
+          },
+          {
+            "name": "Punch/Roundhouse",
+            "input": "2, 4"
+          },
+          {
+            "name": "Triple Kick",
+            "input": "df+3, 3, 3"
+          },
+          {
+            "name": "Kick/Spinning Chop/Double Punch",
+            "input": "df+3, 1, 2, 2"
+          },
+          {
+            "name": "Hop Kick/Low Sweep/Kick",
+            "input": "uf+4, 3, 4"
+          },
+          {
+            "name": "Flying Kick",
+            "input": "f, f, f+3",
+            "notes": "Listed as stunning on block."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Crane Chop",
+            "input": "db, 1+2",
+            "notes": "Cancel with two up taps."
+          }
+        ],
+        "combos": [
+          {
+            "name": "Mid punch/Punt kick",
+            "input": "d+1 > 4",
+            "notes": "Tap down for the punch; release down before 4."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Leg Scissors Arm Snap",
+            "input": "3, 4, 3, 1+2",
+            "notes": "During Chin Bash."
+          },
+          {
+            "name": "Sidestep Arm Snap",
+            "input": "1, 3, 2, 1",
+            "notes": "During Chin Bash. Can continue into Falling Arm Snap or Double Arm Snap."
+          },
+          {
+            "name": "Falling Arm Snap",
+            "input": "2, 1, 3, 4, 1+2",
+            "notes": "During Sidestep Arm Snap."
+          },
+          {
+            "name": "Double Arm Snap",
+            "input": "3, 1, 4, 1+2, 1+2",
+            "notes": "During Sidestep Arm Snap."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "armor-king",
+      "name": "Armor King",
+      "portrait": {
+        "x": 1,
+        "y": 261,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Knee Bash",
+            "input": "1+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4",
+            "notes": "Can continue into Aerial Piledriver."
+          },
+          {
+            "name": "Piledriver",
+            "input": "d, df, f+1"
+          },
+          {
+            "name": "Hopping Piledriver",
+            "input": "db, f+1+2"
+          },
+          {
+            "name": "Whirlwind Toss",
+            "input": "db, f+1",
+            "notes": "The supplied list also gives b, db, d, df, f+1 as an alternative."
+          },
+          {
+            "name": "Scissor Flip",
+            "input": "df+3+4",
+            "notes": "Tap df."
+          },
+          {
+            "name": "DDT",
+            "input": "db, db+1+2",
+            "notes": "Tap db."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Kidney Punch",
+            "input": "df, 2"
+          },
+          {
+            "name": "Hammer Elbow",
+            "input": "df, 1",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Double Punch/Uppercut",
+            "input": "1, 2, 1"
+          },
+          {
+            "name": "Bunch'a'Punches",
+            "input": "1, 2, 1, 1, 2"
+          },
+          {
+            "name": "Dragon Punch",
+            "input": "f, d, df+1"
+          },
+          {
+            "name": "High Uppercut",
+            "input": "f, f+2"
+          },
+          {
+            "name": "Low Uppercut",
+            "input": "f, f, 2"
+          },
+          {
+            "name": "Power Uppercut",
+            "input": "f, d, df+2"
+          },
+          {
+            "name": "Crouching Uppercut",
+            "input": "d, f+2"
+          },
+          {
+            "name": "Jumping Hammer",
+            "input": "uf+1+2"
+          },
+          {
+            "name": "Side Body Blow",
+            "input": "df, 2",
+            "notes": "Tap df."
+          },
+          {
+            "name": "Forward Dive",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Big Boot",
+            "input": "f, f+4"
+          },
+          {
+            "name": "Drop Kick",
+            "input": "f, f+3+4"
+          },
+          {
+            "name": "Spinning Drop Kick",
+            "input": "f, f, f+3+4"
+          },
+          {
+            "name": "Spinning Drop Kick/Dive",
+            "input": "f, f, ~f+3+4, 1+2",
+            "notes": "Keep holding forward through the dive follow-up."
+          },
+          {
+            "name": "Triple Slide Kick",
+            "input": "df+4, 4, 4",
+            "notes": "Crouch with df before continuing. Listed as stunning."
+          },
+          {
+            "name": "Multi Slide Kicks",
+            "input": "",
+            "notes": "No input was supplied for this entry.",
+            "status": "unverified"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 1, 2, 4, 4, 4, 1, 3",
+            "notes": "Roll quickly into 1."
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Elbow Drop",
+            "input": "uf+2+4",
+            "notes": "Also listed with u instead of uf."
+          },
+          {
+            "name": "Knee Drop",
+            "input": "uf+3+4"
+          }
+        ],
+        "chains": [
+          {
+            "name": "Aerial Piledriver",
+            "input": "d, d, d+1+2",
+            "notes": "During Suplex, enter the follow-up before the opponent passes the vertical position."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "ganryu",
+      "name": "Ganryu",
+      "portrait": {
+        "x": 296,
+        "y": 261,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Cresent Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Shoulder Throw",
+            "input": "2+4"
+          },
+          {
+            "name": "Reverse Toss",
+            "input": "b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Double Chop",
+            "input": "1, 1"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "df+1+2"
+          },
+          {
+            "name": "Double Chop/Hammer",
+            "input": "1, 1, 1"
+          },
+          {
+            "name": "Reverse Hammer",
+            "input": "d, b+1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Reverse Hammer/Double Hammer",
+            "input": "d, b+1+2, 1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Sandwich Clap",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Punch/Elbow Rush",
+            "input": "2, 1"
+          },
+          {
+            "name": "Double Slap",
+            "input": "~df+1, 2"
+          },
+          {
+            "name": "Triple Slap",
+            "input": "~df+1, 2, 1"
+          },
+          {
+            "name": "Crouch Double Slap/Uppercut",
+            "input": "~d+1, 1, 1"
+          },
+          {
+            "name": "Triple Windmill Punch",
+            "input": "d, f+1, 2, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Power Punch",
+            "input": "b, db, d, df+2"
+          },
+          {
+            "name": "Sumo Palm Rush",
+            "input": "d+2"
+          },
+          {
+            "name": "Double Palm Rush",
+            "input": "d+2, 2"
+          },
+          {
+            "name": "Rising Palm",
+            "input": "df+2"
+          },
+          {
+            "name": "Hundred Hand Slap",
+            "input": "f+1, 2, 1, 2, 1, 2, 1, 2",
+            "notes": "The supplied list also allows starting with 2."
+          },
+          {
+            "name": "Mega Crouch Combo",
+            "input": "d+1, 1, 1, 2, 1, 2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Sumo Foot Stomp",
+            "input": "d+4"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Low Cannonball",
+            "input": "uf, 3+4"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "portrait": {
+        "x": 1,
+        "y": 391,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Noogie Cracker",
+            "input": "1+3"
+          },
+          {
+            "name": "Piledriver",
+            "input": "2+4"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f, f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hammer",
+            "input": "d+1",
+            "notes": "Tap d."
+          },
+          {
+            "name": "Hammer/Power Punch",
+            "input": "d+1, f+2",
+            "notes": "Tap d."
+          },
+          {
+            "name": "Punch/Spinning Backhand",
+            "input": "2, 2"
+          },
+          {
+            "name": "Double Jab",
+            "input": "1, 1"
+          },
+          {
+            "name": "Power Punch",
+            "input": "d, df, f+2"
+          },
+          {
+            "name": "Double Jab/Power Punch",
+            "input": "1, 1, 2"
+          },
+          {
+            "name": "Double Punch",
+            "input": "1, 2"
+          },
+          {
+            "name": "Double Punch/Spinning Backhand",
+            "input": "1, 2, 2"
+          },
+          {
+            "name": "Dragon Punch",
+            "input": "f, d, df+1"
+          },
+          {
+            "name": "High Uppercut",
+            "input": "df+2",
+            "notes": "Also listed as df+1."
+          },
+          {
+            "name": "Power Uppercut",
+            "input": "f, d, df+2"
+          },
+          {
+            "name": "Super Uppercut",
+            "input": "f, f+2"
+          },
+          {
+            "name": "Double Walking Uppercut",
+            "input": "df+1, 2"
+          },
+          {
+            "name": "Back Sidestep Jog",
+            "input": "b, b, b",
+            "notes": "Moves counterclockwise."
+          },
+          {
+            "name": "Somersault",
+            "input": "d, uf+3+4"
+          },
+          {
+            "name": "Jump Kick",
+            "input": "f, f, f+3",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Power Mid Kick",
+            "input": "f, d, df+3"
+          },
+          {
+            "name": "Power Low Kick",
+            "input": "f, d, ~df+3"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f, f+3"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "d, 4, 4",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Sweep, Roundhouse",
+            "input": "d+3, 3",
+            "notes": "Time the second 3 after the first sweep finishes, before Heihachi rises."
+          },
+          {
+            "name": "Triple Sweep",
+            "input": "f, d, ~df+4, 4, 4"
+          },
+          {
+            "name": "Triple Sweep/Axe Kick",
+            "input": "f, d, ~df+4, 4, 4 > 4",
+            "notes": "Release df before the final 4."
+          },
+          {
+            "name": "Jumping Spin Kick/Foot Sweep",
+            "input": "uf, 4, 4",
+            "notes": "Tap uf."
+          },
+          {
+            "name": "Axe Kick (forward variation)",
+            "input": "f+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Punch",
+            "input": "uf+2+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Running Uppercut/Double Upper",
+            "input": "f, f+2 > df+1, 2"
+          },
+          {
+            "name": "Double Power Uppercut",
+            "input": "f, d, df+2 > f, d, df+2"
+          },
+          {
+            "name": "Power Uppercut/Double Axe Kick",
+            "input": "f, d, df+2 > f, d, f+4, 4",
+            "notes": "The combo listing uses f, d, f+4, 4, while the standalone Double Axe Kick entry uses a crouching input. This mismatch is preserved for verification.",
+            "status": "unverified"
+          },
+          {
+            "name": "Power Uppercut/Power Punch",
+            "input": "f, d, df+2 > d, df, f+2",
+            "notes": "Enter the Power Punch immediately after the launcher."
+          },
+          {
+            "name": "Power Uppercut / Hammer / Power Punch",
+            "input": "f, d, df+2 > d+1 > f+2",
+            "notes": "Wait until the opponent falls to just above shoulder height, then tap d for the hammer. The source typo \"D,D F\" is normalized to d, df."
+          },
+          {
+            "name": "Super Uppercut/Hammer/Power Punch",
+            "input": "f, f+2 > d+1 > f+2",
+            "notes": "Wait until the opponent falls to just above shoulder height, then tap d for the hammer."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "jack",
+      "name": "Jack",
+      "portrait": {
+        "x": 395,
+        "y": 131,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Blanket",
+            "input": "1+3"
+          },
+          {
+            "name": "Lifter",
+            "input": "2+4"
+          },
+          {
+            "name": "Backbreaker",
+            "input": "d, db, b+2"
+          },
+          {
+            "name": "Piledriver",
+            "input": "db, f+1",
+            "notes": "Alternative input: d, df, f+1."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Sandwich Clap",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Power Punch",
+            "input": "b, db, d, df+2"
+          },
+          {
+            "name": "Punch/Elbow Rush",
+            "input": "2, 1"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "df+1+2"
+          },
+          {
+            "name": "Reverse Hammer",
+            "input": "d, b+1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Reverse Hammer/Double Hammer",
+            "input": "d, b+1+2, 1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Double Slap",
+            "input": "1, 1"
+          },
+          {
+            "name": "Double Slap/Hammer",
+            "input": "1, 1, 1"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "df+1, 2",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Triple Uppercut",
+            "input": "df+1, 2, 1",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Crouch Double Slap/Uppercut",
+            "input": "~d+1, 1, 1"
+          },
+          {
+            "name": "Triple Windmill Punch",
+            "input": "d, f+1, 2, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Cop a Squat",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Sitting Punches",
+            "input": "1, 2, 1, 2",
+            "notes": "While sitting; up to four punches."
+          },
+          {
+            "name": "Triple Drill Punch",
+            "input": "db+1, 1, 1"
+          },
+          {
+            "name": "Triple Drill Punch/Uppercut",
+            "input": "db+1, 1, 1, 2",
+            "notes": "Time the final hit."
+          },
+          {
+            "name": "Mega Crouch Combo",
+            "input": "d+1, 1, 1, 2, 1, 2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Triple Drill Punch/Power Punch",
+            "input": "db+1, 1, 1, b, db, d, df+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Windup Punch",
+            "input": "b, db, d, df > 1",
+            "notes": "Keep rotating counterclockwise until the count reaches five, then tap 1. The supplied list describes the full charge as unblockable and a one-hit finish; earlier releases can be blocked."
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Cannonball",
+            "input": "uf+3+4",
+            "notes": "Can continue into Sitting Punches."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "portrait": {
+        "x": 395,
+        "y": 391,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Kick hold",
+            "input": "1+3"
+          },
+          {
+            "name": "Hip Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f, f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Dragon Punch",
+            "input": "f, d, df+1"
+          },
+          {
+            "name": "Spinning Backhand",
+            "input": "f+2"
+          },
+          {
+            "name": "Double Punch",
+            "input": "1, 2"
+          },
+          {
+            "name": "Punch, Spinning Backhand",
+            "input": "2, 2"
+          },
+          {
+            "name": "Double Punch Spinning Backhand",
+            "input": "1, 2, 2"
+          },
+          {
+            "name": "Lunging Uppercut",
+            "input": "f, d, df+2"
+          },
+          {
+            "name": "Double Walking Uppercut",
+            "input": "df+1, 2"
+          },
+          {
+            "name": "Double Jab, Power Punch",
+            "input": "1, 1, 2"
+          },
+          {
+            "name": "Somersault",
+            "input": "~uf+4, 3"
+          },
+          {
+            "name": "Axe Kicks",
+            "input": "f, f+3",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "d > 4, 4",
+            "notes": "Crouch or hold down, then release down before the kicks. Listed as stunning."
+          },
+          {
+            "name": "Jump Kick",
+            "input": "f, f, f+3"
+          },
+          {
+            "name": "Foot Sweep",
+            "input": "f, d, df+4"
+          },
+          {
+            "name": "Double Foot Sweep",
+            "input": "f, d, ~df+4, 4"
+          },
+          {
+            "name": "Jumping Roundhouse/Foot Sweep",
+            "input": "uf, 4, 4",
+            "notes": "Tap uf."
+          },
+          {
+            "name": "Axe Kick (forward variation)",
+            "input": "f, 4",
+            "notes": "Listed as stunning. The source separates f and 4 with a comma."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "f, ~f+2, 1, 2, 2, 3, 4, 4, 1, 2, 1"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Punch",
+            "input": "uf+2+4",
+            "notes": "Also listed with ub or u instead of uf."
+          }
+        ],
+        "combos": [
+          {
+            "name": "Double Walking Uppercut/1/Axe Kick",
+            "input": "df+1, 2 > 1, f+4"
+          },
+          {
+            "name": "Power Uppercut/Double Axe Kick",
+            "input": "f, d, df+2 > f, d, f+4, 4",
+            "notes": "The combo listing uses f, d, f+4, 4, while the standalone Double Axe Kick entry uses a crouching input. This mismatch is preserved for verification.",
+            "status": "unverified"
+          },
+          {
+            "name": "Double Power Uppercut",
+            "input": "f, d, df+2 > f, d, df+2"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "portrait": {
+        "x": 100,
+        "y": 131,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Knee Bash",
+            "input": "1+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Piledriver",
+            "input": "d, df, f+1"
+          },
+          {
+            "name": "Hopping Piledriver",
+            "input": "df, f+1+2"
+          },
+          {
+            "name": "Whirlwind Toss",
+            "input": "db, f+1",
+            "notes": "The supplied list also gives b, db, d, df, f+1 as an alternative."
+          },
+          {
+            "name": "Scissor Flip",
+            "input": "df+3+4",
+            "notes": "Tap df."
+          },
+          {
+            "name": "DDT",
+            "input": "db, db+1+2",
+            "notes": "Tap db."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Kidney Punch",
+            "input": "df, 2",
+            "notes": "Tap df."
+          },
+          {
+            "name": "Hammer Elbow",
+            "input": "df, 1",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Jumping Hammer",
+            "input": "uf+1+2"
+          },
+          {
+            "name": "Forward Dive",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Double Punch/Uppercut",
+            "input": "1, 2, 1"
+          },
+          {
+            "name": "Bunch'a'Punches",
+            "input": "1, 2, 1, 1, 2"
+          },
+          {
+            "name": "High Uppercut",
+            "input": "f, f+2"
+          },
+          {
+            "name": "Low Uppercut",
+            "input": "f, f, 2",
+            "notes": "Can hit a grounded opponent."
+          },
+          {
+            "name": "Crouching Uppercut",
+            "input": "d, f+2"
+          },
+          {
+            "name": "Big Boot",
+            "input": "f, f+4"
+          },
+          {
+            "name": "Drop Kick",
+            "input": "f, f+3+4",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Spinning Drop Kick",
+            "input": "f, f, f+3+4",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Spinning Drop Kick/Dive",
+            "input": "f, f, ~f+3+4, 1+2",
+            "notes": "Keep holding forward through the dive follow-up."
+          },
+          {
+            "name": "Triple Slide Kick",
+            "input": "df+4, 4, 4",
+            "notes": "Crouch with df before continuing. Listed as stunning."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 1, 2, 4, 4, 4, 4, 1, 3"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Elbow Drop",
+            "input": "uf+2+4",
+            "notes": "Also listed with u instead of uf."
+          },
+          {
+            "name": "Knee Drop",
+            "input": "uf+3+4"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "kuma",
+      "name": "Kuma",
+      "portrait": {
+        "x": 296,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Blanket",
+            "input": "1+3"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f+2+4"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4",
+            "notes": "The supplied list excludes Kuma mirror matches."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Sandwich Clap",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Punch/Elbow Rush",
+            "input": "2, 1"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "df+1+2"
+          },
+          {
+            "name": "Reverse Hammer",
+            "input": "d, b+1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Reverse Hammer/Double Hammer",
+            "input": "d, b+1+2, 1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Double Slap/Hammer",
+            "input": "1, 1, 1"
+          },
+          {
+            "name": "Low Double Slap/Hammer",
+            "input": "~d+1, 1, 1"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "~df+1, 2"
+          },
+          {
+            "name": "Triple Uppercut",
+            "input": "~df+1, 4, 1",
+            "notes": "The supplied list specifies 4 here despite naming this an uppercut sequence; verify in-game.",
+            "status": "unverified"
+          },
+          {
+            "name": "Triple Windmill Punch",
+            "input": "d, f+1, 2, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Cop a Squat",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Sitting Punches",
+            "input": "1, 2, 1, 2",
+            "notes": "While sitting; up to four punches."
+          },
+          {
+            "name": "Power Punch",
+            "input": "b, db, d, df+2"
+          },
+          {
+            "name": "Mega Crouch Combo",
+            "input": "1, 1, 1, 2, 1, 2",
+            "notes": "While crouching."
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Cannonball",
+            "input": "uf+3+4",
+            "notes": "Can continue into Sitting Punches."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "kunimitsu",
+      "name": "Kunimitsu",
+      "portrait": {
+        "x": 1,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Flying 69 Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Trip Smash",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Tornado Spin",
+            "input": "~b+1",
+            "notes": "Repeat up to five times. The fifth spin causes dizziness."
+          },
+          {
+            "name": "Tornado Sweep",
+            "input": "~db+3",
+            "notes": "Repeat up to five times; the fifth causes dizziness. Spins and sweeps can be mixed by rolling between b and db."
+          },
+          {
+            "name": "Twist Hit",
+            "input": "f+2"
+          },
+          {
+            "name": "Knee Rush",
+            "input": "f, f+4"
+          },
+          {
+            "name": "Roundhouse/Mid Kick",
+            "input": "3, 4"
+          },
+          {
+            "name": "Kick/Double Roundhouse",
+            "input": "4, 4, 4"
+          },
+          {
+            "name": "Forward Cartwheel",
+            "input": "f, f+3+4"
+          },
+          {
+            "name": "Forward Cartwheel/Diving Corkscrew",
+            "input": "f, f+3+4, f, f+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 4, 4, 4, 1"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Stomp",
+            "input": "uf+3+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Double Power Uppercut",
+            "input": "f, d, df+2 > f, d, df+2",
+            "notes": "This route appears in the supplied Kunimitsu section but duplicates a Mishima route without a matching launcher in her move list. Kept for reference; verify before using.",
+            "status": "unverified"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan",
+      "portrait": {
+        "x": 395,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Takedown",
+            "input": "1+3"
+          },
+          {
+            "name": "Face Smash",
+            "input": "2+4"
+          },
+          {
+            "name": "Knee Bash",
+            "input": "f, ~f+3+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Punch/Backhand",
+            "input": "2, 2"
+          },
+          {
+            "name": "Double Punch",
+            "input": "1, 2"
+          },
+          {
+            "name": "Double Punch/Elbow",
+            "input": "~f+1, 2, 2"
+          },
+          {
+            "name": "Double Punch/Elbow/Backhand",
+            "input": "~f+1, 2, 2, 2"
+          },
+          {
+            "name": "Uppercut/Punch/Backhand",
+            "input": "df+1, 2, 2"
+          },
+          {
+            "name": "Backflip",
+            "input": "b, b, b"
+          },
+          {
+            "name": "Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf."
+          },
+          {
+            "name": "Power Flipkick",
+            "input": "d, u+3+4",
+            "notes": "Start crouching. Use ub, u or uf."
+          },
+          {
+            "name": "Lightning Flip",
+            "input": "d, u",
+            "notes": "Start crouching. Use ub, u or uf. Tap the upward direction. Movement only; no attack."
+          },
+          {
+            "name": "Lightning Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf. Tap the upward direction."
+          },
+          {
+            "name": "High Kick/Lightning Flipkick",
+            "input": "4, u+3"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f, f+3"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "d, 3, 3",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Low/High Kick",
+            "input": "d+4, 4"
+          },
+          {
+            "name": "Triple Head Kick",
+            "input": "3, 3, 3"
+          },
+          {
+            "name": "Triple Low/Mid Kick",
+            "input": "d+4, 4, 4, 4"
+          },
+          {
+            "name": "Double Kick/Roundhouse",
+            "input": "d+4, 4, 3"
+          },
+          {
+            "name": "Double Kick/Roundhouse/High Kick",
+            "input": "d+4, 4, 3, 4"
+          },
+          {
+            "name": "Double Jump Kick/Roundhouse",
+            "input": "f, f, 3, 4, 4",
+            "notes": "The supplied list also suggests f, f, f+3 for a more consistent starter."
+          },
+          {
+            "name": "Double Jump Kick/Sweep",
+            "input": "f, f, 3, ~d+4, 4",
+            "notes": "The supplied list also suggests f, f, f+3 for a more consistent starter."
+          },
+          {
+            "name": "Jump Kick",
+            "input": "f, f, f+3",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "High Kick/Roundhouse",
+            "input": "4, 3"
+          },
+          {
+            "name": "High Kick/Roundhouse/High Kick",
+            "input": "4, 3, 4"
+          },
+          {
+            "name": "Low Kick/Triple High kick",
+            "input": "d+3, 3, 3, 3"
+          },
+          {
+            "name": "Low Kick/Head Kick/Body Kick",
+            "input": "d+3, ~f+3, 3"
+          },
+          {
+            "name": "Spinning Slide",
+            "input": "f, f, 3+4"
+          },
+          {
+            "name": "Multikicks",
+            "input": "d, 3, 3, d, 3, 3",
+            "notes": "Start crouching. Quickly repeat 3 with brief down taps to continue. Hold u for the high variation, f or neutral for mid, and d for low."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dashing Fist",
+            "input": "db+1+2",
+            "notes": "Cancel with two up taps."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "df+1, 2, 2, 1, 3, 3, 3, 4, 3, 4",
+            "notes": "Tap df."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "marshall-law",
+      "name": "Marshall Law",
+      "portrait": {
+        "x": 197,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Death From Above",
+            "input": "1+3"
+          },
+          {
+            "name": "Face Smash",
+            "input": "2+4"
+          },
+          {
+            "name": "Knee Bash",
+            "input": "f, f+3+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Punch/Backhand",
+            "input": "2, 2"
+          },
+          {
+            "name": "Punch/Elbow/Backhand",
+            "input": "~f+2, 2, 2"
+          },
+          {
+            "name": "Punch/Punch/Elbow,/Backhand",
+            "input": "~f+1, 2, 2, 2"
+          },
+          {
+            "name": "Triple Head Kick",
+            "input": "3, 3, 3"
+          },
+          {
+            "name": "Jump Kick",
+            "input": "f, f, f+3",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf for the upward input."
+          },
+          {
+            "name": "Power Flipkick",
+            "input": "d, u+3+4",
+            "notes": "Start crouching. Use ub, u or uf for the upward input."
+          },
+          {
+            "name": "Lightning Flipkick",
+            "input": "d, u+4",
+            "notes": "Start crouching. Use ub, u or uf for the upward input. Tap the upward direction."
+          },
+          {
+            "name": "High Kick/Lightning Flipkick",
+            "input": "4, u+3"
+          },
+          {
+            "name": "Triple Roundhouse",
+            "input": "4, 3, 4"
+          },
+          {
+            "name": "Low Kick/Triple High Kick",
+            "input": "d+3, 3, 3, 3"
+          },
+          {
+            "name": "Low Kick/Head Kick/Body Kick",
+            "input": "d+3, ~f+3, 3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "df+1, 2, 2, 1, 3, 3, 3, 4, 3, 4",
+            "notes": "Tap df."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dashing Fist",
+            "input": "db+1+2",
+            "notes": "Cancel with two up taps."
+          }
+        ],
+        "combos": [
+          {
+            "name": "Flipkick / jab carry / backhand finish",
+            "input": "d, u+4 > 1, 1, 1, 1 > f+2, 2, 2",
+            "notes": "Tap u for the flipkick. The supplied route includes punches that may whiff; it is not an all-hits-connect sequence."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "michelle-chang",
+      "name": "Michelle Chang",
+      "portrait": {
+        "x": 197,
+        "y": 131,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Bridge Slammer",
+            "input": "1+3"
+          },
+          {
+            "name": "Hook Slammer",
+            "input": "2+4"
+          },
+          {
+            "name": "Reverse Checklift",
+            "input": "2, b+1+2",
+            "notes": "The initial 2 must connect."
+          },
+          {
+            "name": "Sky Uppercut",
+            "input": "df+2, 1",
+            "notes": "The initial 2 must connect."
+          }
+        ],
+        "moves": [
+          {
+            "name": "5 Punch Attack",
+            "input": "2, 1, 1, 1, 2",
+            "notes": "Roll quickly into 1."
+          },
+          {
+            "name": "Double-Fisted Body Blow",
+            "input": "f, f+1+2",
+            "notes": "Listed as stunning on block."
+          },
+          {
+            "name": "Uppercut",
+            "input": "d, 2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Uppercut/Hammer/Uppercut",
+            "input": "d, 2, 1, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Roundhouse",
+            "input": "d, 3",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Vertical Kick",
+            "input": "df+3"
+          },
+          {
+            "name": "Power Vertical Kick",
+            "input": "d, 4",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Sleep Sweep",
+            "input": "df, 4",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Sleep Sweep/Flying Kick",
+            "input": "df, 4, 3",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Sweep Kick",
+            "input": "d+3"
+          },
+          {
+            "name": "Sweep Kick/Low Kick",
+            "input": "d+4, 4",
+            "notes": "Keep holding down for the final kick."
+          },
+          {
+            "name": "Sweep Kick/High Kick",
+            "input": "d+4, 4",
+            "notes": "Release down before the final kick."
+          },
+          {
+            "name": "Sweep Kick/Uppercut",
+            "input": "d+4, 1"
+          },
+          {
+            "name": "High Kick/Sweep Kick/Uppercut",
+            "input": "f+4, d+4, 1"
+          },
+          {
+            "name": "High Kick/Sweep Kick/Low Kick",
+            "input": "f+4, d+4, 4",
+            "notes": "Keep holding down for the final kick."
+          },
+          {
+            "name": "High Kick/Sweep Kick/High Kick",
+            "input": "f+4, d+4, 4",
+            "notes": "Release down before the final kick."
+          },
+          {
+            "name": "Sweep Kick (right kick)",
+            "input": "d+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "2, 1, 1, 2, 3, 3, 3, 4, 4, 1"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Running Uppercut",
+            "input": "b, b, ~b > 1",
+            "notes": "Hold the final back input until her left leg rises, then tap 1 while it is raised."
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Stomp",
+            "input": "uf+3+4"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "portrait": {
+        "x": 100,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Reverse Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Handstand Toss",
+            "input": "f+1+3"
+          },
+          {
+            "name": "Elbow Strike",
+            "input": "df, df+1"
+          },
+          {
+            "name": "Chin Bash",
+            "input": "d, df, f+1+2",
+            "notes": "Continue into either Leg Scissors Arm Snap or Sidestep Arm Snap."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Chi Release",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Punch/Roundhouse",
+            "input": "2, 4"
+          },
+          {
+            "name": "Punch/High Kick",
+            "input": "2, 3"
+          },
+          {
+            "name": "Punch/Low Sweep",
+            "input": "2, d+3"
+          },
+          {
+            "name": "5 Punch Combo",
+            "input": "1, 2, 1, 2, 1"
+          },
+          {
+            "name": "Flip Tumble",
+            "input": "f, f+4",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Double Punch/Roundhouse",
+            "input": "1, 2, 4"
+          },
+          {
+            "name": "Double Punch/ High Kick",
+            "input": "1, 2, 3"
+          },
+          {
+            "name": "Double Punch/ Low Sweep",
+            "input": "1, 2, d+3"
+          },
+          {
+            "name": "Flying Kick",
+            "input": "f, f, f+3"
+          },
+          {
+            "name": "Triple Kick",
+            "input": "df+3, 3, 3"
+          },
+          {
+            "name": "Mid Kick/Punch",
+            "input": "df+3, 2"
+          },
+          {
+            "name": "Mid Kick/Punch/Punch",
+            "input": "df+3, 2, 1"
+          },
+          {
+            "name": "Mid Kick/Punch/Roundhouse",
+            "input": "df+3, 2, 4"
+          },
+          {
+            "name": "Mid Kick/Punch/High Kick",
+            "input": "df+3, 2, 3"
+          },
+          {
+            "name": "Mid Kick/Punch/Low Sweep",
+            "input": "df+3, 2, d+3"
+          },
+          {
+            "name": "Triple Kick/Punch",
+            "input": "df+3, 3, 3, 2"
+          },
+          {
+            "name": "Mid Kick/Roundhouse",
+            "input": "df+3, 4"
+          },
+          {
+            "name": "Triple Kick/Roundhouse",
+            "input": "df+3, 3, 3, 4"
+          },
+          {
+            "name": "Mid Kick/Spinning Chop",
+            "input": "df+3, 1"
+          },
+          {
+            "name": "Triple Kick/Spinning Chop",
+            "input": "df+3, 3, 3, 1"
+          },
+          {
+            "name": "Kick/Spinning Chop/Double Punch",
+            "input": "df+3, 1, 2, 2"
+          },
+          {
+            "name": "Hop Kick/Low Sweep/High Kick",
+            "input": "uf+4, 3, 4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 2, 3, 3, 2, 1, 2, 2"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Crane Chop",
+            "input": "db, 1+2",
+            "notes": "Cancel with two up taps."
+          }
+        ],
+        "combos": [
+          {
+            "name": "Mid punch/Punt kick",
+            "input": "d+1 > 4",
+            "notes": "Tap down for the punch; release down before 4."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Leg Scissors Arm Snap",
+            "input": "3, 4, 3, 1+2",
+            "notes": "During Chin Bash."
+          },
+          {
+            "name": "Sidestep Arm Snap",
+            "input": "1, 3, 2, 1",
+            "notes": "During Chin Bash. Can continue into Falling Arm Snap or Double Arm Snap."
+          },
+          {
+            "name": "Falling Arm Snap",
+            "input": "2, 1, 3, 4, 1+2",
+            "notes": "During Sidestep Arm Snap."
+          },
+          {
+            "name": "Double Arm Snap",
+            "input": "3, 1, 4, 1+2, 1+2",
+            "notes": "During Sidestep Arm Snap."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "portrait": {
+        "x": 1,
+        "y": 131,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Shoulder Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "T-Flip",
+            "input": "2+4"
+          },
+          {
+            "name": "Rollback Toss",
+            "input": "b+1+3"
+          },
+          {
+            "name": "Forearm Smash",
+            "input": "f, f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hammer Fist",
+            "input": "d+1",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Hammer Fist/Power Punch",
+            "input": "d+1, f+2"
+          },
+          {
+            "name": "Elbow Rush",
+            "input": "d, f+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Ground Punch",
+            "input": "d+2"
+          },
+          {
+            "name": "Punch, Sweep",
+            "input": "2, d+3"
+          },
+          {
+            "name": "Power Punch",
+            "input": "d, df, f+2"
+          },
+          {
+            "name": "Punch/High Kick",
+            "input": "2, 3"
+          },
+          {
+            "name": "Double Jump Kick",
+            "input": "u+3, 4",
+            "notes": "Tap u; uf or ub can be used instead."
+          },
+          {
+            "name": "Lunging Jump Kick",
+            "input": "f, f+3"
+          },
+          {
+            "name": "Lunging Double Jump Kick",
+            "input": "f, f+3, 4"
+          },
+          {
+            "name": "Lunging Double Jump Kick/Roundhouse",
+            "input": "f, f+3, 4, 4"
+          },
+          {
+            "name": "Lunging Double Jump Kick/Sweep",
+            "input": "f, f+3, ~d+4, 4"
+          },
+          {
+            "name": "Forward Flip",
+            "input": "f, f+4",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Foot Sweep",
+            "input": "d+3"
+          },
+          {
+            "name": "Foot Sweep/Elbow Rush",
+            "input": "d+4, 2"
+          },
+          {
+            "name": "Foot Sweep (right kick)",
+            "input": "d+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 3, 2, 1, 2, 1, 4, 2, 1"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Small Jumping Kick/Hammer Fist/Power Punch",
+            "input": "uf+4 > d+1 > f+2",
+            "notes": "Tap uf. The supplied list also gives uf+3, 4 as an alternative starter."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "prototype-jack",
+      "name": "Prototype Jack",
+      "portrait": {
+        "x": 100,
+        "y": 261,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Blanket",
+            "input": "1+3"
+          },
+          {
+            "name": "One Arm Lifter",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Punch/Elbow Rush",
+            "input": "2, 1"
+          },
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1"
+          },
+          {
+            "name": "Lightning Hammer/Power Punch",
+            "input": "d+1, f+2"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "df+1+2"
+          },
+          {
+            "name": "Reverse Hammer",
+            "input": "d, b+1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Reverse Hammer/Double Hammer",
+            "input": "d, b+1+2, 1+2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Sandwich Clap",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Double Slap",
+            "input": "1, 1"
+          },
+          {
+            "name": "Double Slap/Hammer",
+            "input": "1, 1, 1"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "~df+1, 2"
+          },
+          {
+            "name": "Triple Uppercut",
+            "input": "~df+1, 4, 1",
+            "notes": "The supplied list specifies 4 here despite naming this an uppercut sequence; verify in-game.",
+            "status": "unverified"
+          },
+          {
+            "name": "Low Double Slap/Uppercut",
+            "input": "d+1, 1, 1"
+          },
+          {
+            "name": "Triple Windmill Punch",
+            "input": "d, f+1, 2, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Cop a Squat",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Sitting Punches",
+            "input": "1, 2, 1, 2",
+            "notes": "While sitting; up to four punches."
+          },
+          {
+            "name": "Winding Uppercut",
+            "input": "b, db, d, df+1"
+          },
+          {
+            "name": "Power Punch",
+            "input": "b, db, d, df+2"
+          },
+          {
+            "name": "Triple Drill Punch",
+            "input": "db+1, 1, 1"
+          },
+          {
+            "name": "Triple Drill Punch/Uppercut",
+            "input": "db+1, 1, 1, 2",
+            "notes": "Time the final hit."
+          },
+          {
+            "name": "Triple Drill Punch/Power Punch",
+            "input": "db+1, 1, 1, b, db, d, df+2"
+          },
+          {
+            "name": "Mega Crouch Combo",
+            "input": "1, 1, 1, 2, 1, 2",
+            "notes": "While crouching."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "d+2, 1, 1, 1, 2, 1, 2, 1, 1+2, 1+2"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Windup Punch",
+            "input": "b, db, d, df > 1",
+            "notes": "Keep rotating counterclockwise until the count reaches five, then tap 1. The supplied list describes the full charge as unblockable and a one-hit finish; earlier releases can be blocked."
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Low Cannonball",
+            "input": "uf, 3+4",
+            "notes": "Can continue into Sitting Punches."
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "wang-jinrei",
+      "name": "Wang Jinrei",
+      "portrait": {
+        "x": 296,
+        "y": 131,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Spin Toss",
+            "input": "1+3"
+          },
+          {
+            "name": "Backlash",
+            "input": "2+4",
+            "notes": "Listed as stunning."
+          },
+          {
+            "name": "Reverse Check",
+            "input": "2, b, 1+2",
+            "notes": "The initial 2 must connect."
+          },
+          {
+            "name": "Sky Uppercut",
+            "input": "df+2, 1",
+            "notes": "The initial 2 must connect."
+          }
+        ],
+        "moves": [
+          {
+            "name": "Palm Rush",
+            "input": "f+2"
+          },
+          {
+            "name": "Hammer",
+            "input": "df+1"
+          },
+          {
+            "name": "Bolwer Smash",
+            "input": "df+1+2"
+          },
+          {
+            "name": "Chi Release",
+            "input": "f, f+1+2"
+          },
+          {
+            "name": "Strong Uppercut",
+            "input": "d, 2",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "Punch/Hammer",
+            "input": "2, 1"
+          },
+          {
+            "name": "Punch/Hammer/Uppercut",
+            "input": "2, 1, 1"
+          },
+          {
+            "name": "Uppercut/Hammer/Uppercut",
+            "input": "d, 2, 1, 1",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "5 Punch Attack",
+            "input": "2, 1, 1, 1, 2"
+          },
+          {
+            "name": "Sleep Sweep",
+            "input": "df, 4",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Sleep Sweep/Flying Kick",
+            "input": "df, 4, 3",
+            "notes": "Crouch with df before continuing."
+          },
+          {
+            "name": "Sweeping Kick",
+            "input": "d+4"
+          },
+          {
+            "name": "Sweep Kick/Low Kick",
+            "input": "d+4, 4",
+            "notes": "Keep holding down for the final kick."
+          },
+          {
+            "name": "Sweep Kick/High Kick",
+            "input": "d+4, 4",
+            "notes": "Release down before the final kick."
+          },
+          {
+            "name": "Sweep Kick/Uppercut",
+            "input": "d+4, 1"
+          },
+          {
+            "name": "Jumping Foot Dive",
+            "input": "f, f, f, 3",
+            "notes": "Start from at least one backdash or forward dash away."
+          },
+          {
+            "name": "Vertical Kick",
+            "input": "df, 3",
+            "notes": "Tap df."
+          },
+          {
+            "name": "Power Vertical Kick",
+            "input": "d, 4",
+            "notes": "Crouch with d before continuing."
+          },
+          {
+            "name": "High Kick/Sweep Kick/Uppercut",
+            "input": "f+4, d+4, 1"
+          },
+          {
+            "name": "High Kick/Sweep Kick/Low Kick",
+            "input": "f+4, d+4, 4",
+            "notes": "Keep holding down for the final kick."
+          },
+          {
+            "name": "High Kick/Sweep Kick/High Kick",
+            "input": "f+4, d+4, 4",
+            "notes": "Release down before the final kick."
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "2, 1, 1, 2, 3, 3, 3, 3, 4, 4, 1"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Stomp",
+            "input": "uf+3+4"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "portrait": {
+        "x": 1,
+        "y": 1,
+        "width": 96,
+        "height": 129
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Flying 69 Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Trip Smash",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Tornado Spin",
+            "input": "b+1",
+            "notes": "Repeat up to five times. The fifth spin causes dizziness."
+          },
+          {
+            "name": "Tornado Sweep",
+            "input": "~db+3",
+            "notes": "Repeat up to five times; the fifth causes dizziness. Spins and sweeps can be mixed by rolling between b and db."
+          },
+          {
+            "name": "Twist Hit",
+            "input": "f+2"
+          },
+          {
+            "name": "Knee Rush",
+            "input": "f, f+4"
+          },
+          {
+            "name": "Roundhouse/Mid Kick",
+            "input": "3, 4",
+            "notes": "Roll quickly into 4."
+          },
+          {
+            "name": "Kick/Double Roundhouse",
+            "input": "4, 4, 4"
+          },
+          {
+            "name": "Forward Cartwheel",
+            "input": "f, f+3+4"
+          },
+          {
+            "name": "Forward Cartwheel/Diving Corkscrew",
+            "input": "f, ~f+3+4, 1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "Attack string",
+            "input": "1, 2, 1, 4, 4, 4, 4, 1, 1, 1"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Sword Slash",
+            "input": "db+1"
+          },
+          {
+            "name": "Sword Skewer",
+            "input": "b, b+1"
+          }
+        ],
+        "pounces": [
+          {
+            "name": "Hopback Stomp",
+            "input": "uf+3+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Knee rush / jab / kick / pounce / sword",
+            "input": "f, f+4 > 1 > 4 > u+2 > db+1",
+            "notes": "The source describes a timing-sensitive knockdown follow-up, not a guaranteed combo. Its u+2 pounce also differs from the pounce listed separately.",
+            "status": "unverified"
+          }
+        ]
+      },
+      "notes": [
+        "Moves and routes adapted from the supplied historical list. Timing and hit conditions matter; unverified entries are marked individually."
+      ]
+    }
+  ]
+}
