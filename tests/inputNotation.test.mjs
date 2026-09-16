@@ -3,8 +3,24 @@ import assert from 'node:assert/strict';
 import { parseInputNotation } from '../src/utils/inputNotation.js';
 import { getCharacterStances, getStanceLabels } from '../src/data/tekken8Stances.js';
 import { getTekken8Portrait } from '../src/data/tekken8Portraits.js';
+import t8InputToIconMap from '../src/utils/t8InputToIconMap.js';
 
 const inputs = value => parseInputNotation(value).filter(s => s.kind === 'input').map(s => s.normalized);
+
+test('all games reuse the maker icons for combo boundaries and named effects', () => {
+  assert.deepEqual(inputs('df+2 > 1,2 into (screw) > wr 3'), ['df','2','into','1','2','into','screw','into','wr','3']);
+  assert.deepEqual(inputs('(heat) (floor break) (wall break) (power crush) S! T!'), ['heat','fb','wb','pc','screw','t']);
+  assert.equal(t8InputToIconMap.screw, t8InputToIconMap.t);
+  assert.equal(t8InputToIconMap.into, '/icons-t8/into.png');
+  assert.equal(parseInputNotation('1 > (screw) > 2').some(s => s.kind === 'annotation' || s.kind === 'separator'), false);
+  assert.deepEqual(parseInputNotation('df+1,2~1:2').filter(s => s.kind === 'separator').map(s => s.raw), ['+',',','~',':']);
+});
+
+test('structured combo steps get one into icon per boundary without separating a motion or string', () => {
+  assert.deepEqual(inputs(['f n d df 2', '', 'df 1 2 T', null, 'wr 2+4']), ['f','n','d','df','2','into','df','1','2','t','into','wr','2+4']);
+  assert.equal(inputs('f n d df 2').includes('into'), false);
+  assert.equal(inputs(['1']).includes('into'), false);
+});
 
 test('rapid presses produce separate icons while keeping simultaneous button chords', () => {
   assert.deepEqual(inputs('f f f 2~1+2'), ['f','f','f','2','1+2']);

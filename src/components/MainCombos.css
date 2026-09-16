@@ -139,11 +139,11 @@
   }
 
   .arrow-separator {
-    display: none;
+    display: inline;
   }
 
   .arrow-separator-mobile {
-    display: block;
+    display: none;
     margin-left: -4px;
     border-bottom: 1px solid #4f4f4e;
   }

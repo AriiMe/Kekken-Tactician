@@ -13,6 +13,19 @@
   width: 0.38em;
 }
 
+.input-icons.input-icon--into {
+  margin-inline: .35em;
+}
+
+/* Wrap between complete combo steps first; exceptionally long steps can still
+   wrap internally on narrow screens. Keep the into icon with its next step. */
+.input-step {
+  display: inline-block;
+  max-width: 100%;
+  margin-block: .12em;
+  vertical-align: middle;
+}
+
 .input-annotation {
   display: inline-flex;
   align-items: center;

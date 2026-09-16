@@ -63,7 +63,7 @@ const renderInputIcon = (token, sourceToken, colorMode, className = "") => {
       src={src}
       alt={label}
       title={`${sourceToken}: ${label}`}
-      className={["input-icons", sizeClass, className].filter(Boolean).join(" ")}
+      className={["input-icons", sizeClass, token === 'into' ? 'input-icon--into' : '', className].filter(Boolean).join(" ")}
       style={responsiveSize}
       draggable="false"
     />
@@ -186,6 +186,19 @@ const InputNotation = ({ input }) => {
   const { displayMode } = useDisplayMode();
   const { colorMode } = useColorMode();
   const segments = useMemo(() => parseInputNotation(input), [input]);
+  const renderSegment = displayMode === 'notations' ? renderNotationSegment : renderIconSegment;
+  if (segments.some(s => s.normalized === 'into')) {
+    const steps = [[]];
+    for (const segment of segments) {
+      if (segment.normalized === 'into' && steps.at(-1).length) steps.push([]);
+      steps.at(-1).push(segment);
+    }
+    return <span className="others input-route">{steps.map((step, i) => (
+      <span className="input-step" key={i}>{step.map(segment => (
+        <Fragment key={segment.key}>{renderSegment(segment, colorMode)}</Fragment>
+      ))}</span>
+    ))}</span>;
+  }
 
   if (displayMode === "notations") {
     return (
@@ -211,7 +224,7 @@ const InputNotation = ({ input }) => {
 };
 
 InputNotation.propTypes = {
-  input: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  input: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 InputNotation.defaultProps = {

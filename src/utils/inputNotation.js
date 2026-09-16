@@ -14,6 +14,7 @@ export const SPECIAL_INPUT_LABELS = Object.freeze({
   homing: "Homing move",
   pc: "Power crush",
   t: "Tornado",
+  screw: "Screw / spin extender",
   "[": "Opening bracket",
   "]": "Closing bracket",
   chip: "Chip damage",
@@ -70,7 +71,7 @@ const REPEATED_DIRECTION_PATTERN =
 
 const toNotationString = (input) => {
   if (input == null) return "";
-  if (Array.isArray(input)) return input.map(toNotationString).filter(Boolean).join(" ");
+  if (Array.isArray(input)) return input.map(toNotationString).map(s => s.trim()).filter(Boolean).join(" into ");
 
   return typeof input === "string" ? input : String(input);
 };
@@ -78,7 +79,10 @@ const toNotationString = (input) => {
 export const normalizeInputToken = (value) => {
   if (typeof value !== "string") return null;
 
-  const token = value.trim().toLowerCase();
+  const source = value.trim().toLowerCase();
+  const token = ({ '>': 'into', '→': 'into', 's!': 'screw', 't!': 't', tornado: 't',
+    'floor break': 'fb', 'wall break': 'wb', 'power crush': 'pc',
+    'counter hit': 'ch', 'back turned': 'bt' })[source] || source;
   if (!token) return null;
 
   if (token.startsWith("~") && HOLD_DIRECTIONS.has(token.slice(1))) {
@@ -249,6 +253,11 @@ export const parseInputNotation = (input) => {
 
     if (raw.startsWith("(") && raw.endsWith(")") && raw.length > 2) {
       const content = raw.slice(1, -1);
+      const special = normalizeInputToken(content);
+      if (special && isSpecialInput(special)) {
+        segments.push(createSegment("input", raw, start, special));
+        continue;
+      }
       const inner = parseInputNotation(content);
       if (inner.some((s) => s.kind === "input") && inner.every((s) => s.kind !== "text")) {
         segments.push(createSegment("group", "(", start, null));
@@ -260,7 +269,7 @@ export const parseInputNotation = (input) => {
       continue;
     }
 
-    if (["+", ",", ">", ":", "~"].includes(raw)) {
+    if (["+", ",", ":", "~"].includes(raw)) {
       segments.push(createSegment("separator", raw, start, null));
       continue;
     }

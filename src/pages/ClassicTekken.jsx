@@ -71,7 +71,7 @@ function NotationKey() {
         <strong>3</strong> = LK / × &nbsp; <strong>4</strong> = RK / ○</p>
       <p>Left punch · Right punch · Left kick · Right kick</p>
       <p>f / b / d / u = forward / back / down / up. Diagonals combine letters.
-        A comma means next input; + means together; ~ before a direction means hold; &gt; separates combo steps.
+        A comma means next input; + means together; ~ before a direction means hold; {renderInputImage('into')} separates combo steps.
         ~ between buttons means press them in quick succession.
         FC means full crouch; WS means attack while rising from crouch; CH means counter hit; n means return to neutral.
         Tap, crouch, release and timing instructions appear beside the move.</p>

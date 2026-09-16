@@ -132,6 +132,7 @@ const CreatorNotes = ({ creatorNotes, name }) => {
           <Box className="combo-container">
             {creatorNotes.stapleCombo.map((move, index) => (
               <Box key={index} className="combo-move">
+                {index > 0 && renderInputImage('into')}
                 {renderInputImage(move)}
               </Box>
             ))}

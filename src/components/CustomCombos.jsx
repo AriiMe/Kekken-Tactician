@@ -30,6 +30,7 @@ const notations = [
   { key: "ch", label: "CH: Counter Hit" },
   { key: "bt", label: "BT: Back Turned" },
   { key: "t", label: "T: Tornado(spin)" },
+  { key: "into", label: "into / >: Next combo step" },
   { key: "chip", label: "chip: Chip Damage" },
   { key: "heat", label: "heat: Heat" },
   { key: "launch", label: "launch: Launched State" },
@@ -518,13 +519,7 @@ const CustomCombos = () => {
                           >
                             {renderInputImage(item)}
                             {subIndex < followUp.length - 1 && (
-                              <span className="input-gap">
-                                <img
-                                  className="input-icons "
-                                  src="/icons-t8/into.png"
-                                  alt="into"
-                                />
-                              </span>
+                              renderInputImage('into')
                             )}
                           </div>
                         ))}

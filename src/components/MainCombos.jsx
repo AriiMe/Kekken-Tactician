@@ -6,12 +6,10 @@ import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
-import { useDisplayMode } from "../context/DisplayModeContext";
 import CollapsableSection from "./CollapsableSection";
 import PropTypes from "prop-types";
 
 const MainCombos = ({ combos, name, version }) => {
-  const { displayMode } = useDisplayMode();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
   const [playingStatus, setPlayingStatus] = useState({});
@@ -45,33 +43,7 @@ const MainCombos = ({ combos, name, version }) => {
     }
 
     // Generate elements with separators for non-empty simple combos
-    return combo.followUpSimple.map((item, index) => {
-      // For the last element, don't add a separator
-      const separator =
-        index < combo.followUpSimple.length - 1 ? (
-          <>
-            {displayMode === "notations" && (
-              <span className="notation-separator">, </span>
-            )}
-            <span className="arrow-separator">
-              <img
-                className="input-icons "
-                src="/icons-t8/into.png"
-                alt="into"
-              />
-            </span>
-            <span className="arrow-separator-mobile">{""}</span>
-          </>
-        ) : null;
-
-      // Return the image followed by a possible separator
-      return (
-        <React.Fragment key={index}>
-          {renderInputImage(item)}
-          {separator}
-        </React.Fragment>
-      );
-    });
+    return renderInputImage(combo.followUpSimple);
   };
 
   const toggleCollapse = () => {
@@ -150,23 +122,7 @@ const MainCombos = ({ combos, name, version }) => {
                     )}
                   </td>
                   <td>
-                    {combo.followUps.map((followUp, i) => (
-                      <React.Fragment key={i}>
-                        {renderInputImage(followUp)}
-                        {i < combo.followUps.length - 1 && (
-                          <>
-                            <span className="arrow-separator">
-                              <img
-                                className="input-icons"
-                                src="/icons-t8/into.png"
-                                alt="into"
-                              />
-                            </span>
-                            <span className="arrow-separator-mobile">{""}</span>
-                          </>
-                        )}
-                      </React.Fragment>
-                    ))}
+                    {renderInputImage(combo.followUps)}
                   </td>
                   <td>{displaySimpleCombo(combo)}</td>
                 </tr>

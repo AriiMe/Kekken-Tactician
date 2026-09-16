@@ -75,7 +75,7 @@ export default function Tekken7() {
               {throwMove.notes && <p>{throwMove.notes}</p>}</article>)}</div></section>
             <section className="t7-section" id="t7-wall"><h2>Wall Combos</h2>{character.wallCombos.map((combo, i) => <div className="t7-wall" key={i}><div className="t7-input">{renderInputImage(combo.input)}</div>{combo.notes && <p>{combo.notes}</p>}</div>)}</section>
             <details className="t7-key"><summary>Input key & stance abbreviations</summary><p>1 = left punch · 2 = right punch · 3 = left kick · 4 = right kick. + means together; ~ before a direction means hold; ~ between buttons means a quick slide input; : marks strict timing.</p>
-              <p>WS = while rising · FC = full crouch · CH = counter hit · (screw) = Tekken 7’s spin extender. Notes in parentheses describe timing or conditions.</p>
+              <p>WS = while rising · FC = full crouch · CH = counter hit · {renderInputImage('screw')} = Tekken 7’s screw/spin extender · {renderInputImage('into')} = next combo step. Notes in parentheses describe timing or conditions.</p>
               <dl>{stanceLabels.map(([abbreviation, name]) => <div key={abbreviation}><dt>{abbreviation}</dt><dd>{name}</dd></div>)}</dl>
             </details>
           </div><Link className="t7-back" to="/games/tekken-7">← All Tekken 7 fighters</Link></>}
