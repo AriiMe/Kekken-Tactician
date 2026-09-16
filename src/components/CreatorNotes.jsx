@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Box, Typography } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FaTwitch, FaDiscord } from "react-icons/fa";
@@ -50,35 +49,17 @@ const aggregateNotesByTitle = (notes) => {
   return aggregatedNotes;
 };
 
-const CreatorNotes = ({ creatorNotes, name }) => {
+const CreatorNotes = ({ creatorNotes }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const description = `Notes from ${creatorNotes.author} for ${name} in Tekken 8. Learn the best combos, pressure tools, and strategies from experienced players.`;
-  const keywords = [
-    "Tekken 8",
-    `${name} combos`,
-    `${name} pressure tools`,
-    `${creatorNotes.author} notes`,
-    `${creatorNotes.author} combos`,
-    `${creatorNotes.author} Tekken 8`,
-    "Content creator notes",
-    "Tekken 8 strategies",
-    "Tekken 8 tips",
-    "Tekken 8 combos",
-    "Tekken 8 pressure tools",
-  ].join(", ");
   // Aggregate notes by title
   const aggregatedNotes = aggregateNotesByTitle(creatorNotes.notes);
   return (
     <div className="creator-notes">
-      <Helmet>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Helmet>
 
       <CollapsableSection
         title="Creator Notes"

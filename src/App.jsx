@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import PageSeo from './components/PageSeo';
 import GameLibrary from "./pages/GameLibrary";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -37,7 +38,8 @@ function RouteFallback() {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
+      <PageSeo />
       <ScrollToTop />
       <div className="app-shell">
         <Navbar />
@@ -91,7 +93,7 @@ const App = () => {
         <Footer />
         <PrivacyNotice />
       </div>
-    </BrowserRouter>
+    </>
   );
 };
 

@@ -1,17 +1,18 @@
+import { usePageData } from '../context/PageDataContext';
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
-import { Helmet } from "react-helmet";
 import UselessTipps from "../components/UselessTipps";
 import { Box, IconButton, Link } from "@mui/material";
 import { Link as ScrollLink, animateScroll } from "react-scroll";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { getCharacters } from "../utils/apiClient";
+import { characterPath } from '../utils/seo';
 import CharacterPortrait from '../components/CharacterPortrait';
 import { getTekken8Portrait } from '../data/tekken8Portraits';
 
@@ -59,21 +60,22 @@ const paragraphStyle = {
 };
 
 const CharacterSelect = () => {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const initialData = usePageData();
+  const [characters, setCharacters] = useState(initialData || []);
+  const [loading, setLoading] = useState(!initialData);
   const [loadingMessage, setLoadingMessage] = useState(
     "Loading please wait..."
   );
   const [error, setError] = useState("");
   const [requestKey, setRequestKey] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [alphabet, setAlphabet] = useState([]);
+  const [alphabet, setAlphabet] = useState(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ letter, active: (initialData || []).some(c => c.name[0].toUpperCase() === letter) })));
   const navigate = useNavigate();
 
   useEffect(() => {
     const controller = new AbortController();
 
-    setLoading(true);
+    if (!initialData) setLoading(true);
     setError("");
     setLoadingMessage("Loading please wait...");
 
@@ -103,7 +105,7 @@ const CharacterSelect = () => {
     return () => {
       controller.abort();
     };
-  }, [requestKey]);
+  }, [requestKey, initialData]);
 
   useEffect(() => {
     if (!loading) return undefined;
@@ -131,14 +133,6 @@ const CharacterSelect = () => {
     };
   }, []);
 
-  const handleCharacterSelect = (characterName, characterId) => {
-    navigate(
-      `/character/combos/${characterName
-        .split(" ")
-        .join("-")
-        .toLowerCase()}-combos/${characterId}`
-    );
-  };
   if (loading) {
     return (
       <Container
@@ -232,24 +226,6 @@ const CharacterSelect = () => {
         marginBottom: "80px",
       }}
     >
-      <Helmet>
-        <title>Tekken 8 Character Guide</title>
-        <meta
-          name="description"
-          content="Explore and learn about all Tekken 8 characters, their combos, cheat sheets,strategies, and tips to improve your gameplay."
-        />
-        <link rel="canonical" href="https://tekktician.com/games/tekken-8" />
-        <meta property="og:url" content="https://tekktician.com/games/tekken-8" />
-        <meta
-          name="keywords"
-          content={characters
-            .map(
-              (character) =>
-                `${character.name},Tekken 8 ${character.name}, ${character.name} combos, ${character.name} strategy,${character.name} guide,${character.name} cheat sheet, ${character.name} punishers, ${character.name} combos, ${character.name} wall combos, ${character.name} frame data, ${character.name} tier list, Tekken 8 combos, Tekken 8 DLC, How to play Tekken 8`
-            )
-            .join(", ")}
-        />
-      </Helmet>
 
       <h1
         style={{
@@ -261,7 +237,7 @@ const CharacterSelect = () => {
           lineHeight: 1.1,
         }}
       >
-        Pick your Character
+        Tekken 8 Combos & Character Guides
       </h1>
       <Typography variant="body1" sx={paragraphStyle}>
         Let’s help{" "}
@@ -353,9 +329,9 @@ const CharacterSelect = () => {
                     >
                       <ImagePaper
                         elevation={3}
-                        onClick={() =>
-                          handleCharacterSelect(character.name, character._id)
-                        }
+                        component={RouterLink}
+                        to={characterPath(character)}
+                        aria-label={`${character.name} combos and guide`}
                       >
                         {getTekken8Portrait(character.image) ? (
                           <CharacterPortrait portrait={getTekken8Portrait(character.image)} name={character.name} />

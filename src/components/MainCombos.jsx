@@ -3,13 +3,12 @@ import ReactPlayer from "react-player";
 import renderInputImage from "../utils/renderInputImage";
 import IconButton from "@mui/material/IconButton";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
-import { Helmet } from "react-helmet";
 
 import "./MainCombos.css";
 import CollapsableSection from "./CollapsableSection";
 import PropTypes from "prop-types";
 
-const MainCombos = ({ combos, name, version }) => {
+const MainCombos = ({ combos }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
   const [playingStatus, setPlayingStatus] = useState({});
@@ -56,38 +55,9 @@ const MainCombos = ({ combos, name, version }) => {
     setPlayingStatus((prev) => ({ ...prev, [index]: !isExpanded }));
   };
 
-  const patchVersion = version || "source version not specified";
 
-  const description = `All main combos for ${name} in Tekken 8. ${name} patch ${patchVersion} combos. These are the most important combos to learn for ${name}.`;
-  const keywords = [
-    "Tekken 8",
-    `${name} combos`,
-    `${name} Heat dash`,
-    `${name} Heat flop`,
-    `${name} cheat sheets`,
-    `${name} patch ${patchVersion} combos`,
-    `${name} patch ${patchVersion} combo guide`,
-    `${name} patch ${patchVersion} cheat sheets`,
-    "Punishers",
-    "Heat Flop",
-    `Tekken 8 patch ${patchVersion} combos`,
-    `patch ${patchVersion} combo sheets`,
-    `patch ${patchVersion} combo cheat sheets`,
-    `Tekken ${patchVersion} combos`,
-    "Heat Dash",
-    "Frame data",
-    "Character-specific data",
-    "Cheat Sheet",
-    "Tekken 8 Cheat Sheet",
-    `Tekken8 ${name} combos`,
-    `Tekken8 ${name} Cheat Sheet`,
-  ].join(", ");
   return (
     <div className="main-combos">
-      <Helmet>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Helmet>
 
       <CollapsableSection
         title="Main Combos"

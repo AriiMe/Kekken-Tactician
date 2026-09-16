@@ -20,7 +20,6 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
 import renderInputImage from "../utils/renderInputImage";
 import domtoimage from "dom-to-image";
-import { Helmet } from "react-helmet";
 import Link from "@mui/material/Link";
 import CameraEnhanceIcon from "@mui/icons-material/CameraEnhance";
 
@@ -90,7 +89,7 @@ const fontFamily = { fontFamily: "Michroma" };
 
 const CustomCombos = () => {
   const [combos, setCombos] = useState(() => {
-    const savedCombos = localStorage.getItem("customCombos");
+    const savedCombos = typeof localStorage === 'undefined' ? null : localStorage.getItem("customCombos");
     return savedCombos
       ? JSON.parse(savedCombos)
       : [
@@ -239,26 +238,6 @@ const CustomCombos = () => {
     );
   };
 
-  const pageTitle = "Tekken 8 Combo Generator";
-  const pageDescription =
-    "Create and customize your own custom combos for Tekken 8 characters. Learn and store your favorite launchers and follow ups to improve your gameplay. Export and save transparent images of your custom combos.";
-  const keywords = [
-    "Tekken 8 combos",
-    "custom combos",
-    "fighting game strategies",
-    "Tekken 8 customization",
-    "Tekken 8 guides",
-    "combo creation",
-    "video game strategies",
-    "Tekken 8 tips",
-    "gameplay improvement",
-    "combo creator",
-    "combo generator",
-    "tekken combo creator",
-    "tekken combo generator",
-    "tekken 8 combo creator",
-    "tekken 8 combo generator",
-  ].join(", ");
 
   const saveRowAsImage = (rowElement) => {
     // Create a new element
@@ -322,20 +301,6 @@ const CustomCombos = () => {
       className="custom-main-combos"
       style={{ marginTop: "150px" }}
     >
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={keywords} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: pageTitle,
-            description: pageDescription,
-            keywords: keywords.split(", "),
-          })}
-        </script>
-      </Helmet>
       <Typography
         variant="h3"
         component="h1"
@@ -570,7 +535,7 @@ const CustomCombos = () => {
       <div className="instructions">
         <Typography
           variant="h3"
-          component="h1"
+          component="h2"
           gutterBottom
           align="center"
           sx={{

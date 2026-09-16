@@ -1,6 +1,7 @@
+import { usePageData } from '../context/PageDataContext';
 import { Button, Container, Grid, Typography, styled } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getCharacters } from "../utils/apiClient";
 
 const StyledImage = styled("img")({
@@ -17,15 +18,15 @@ const StyledImage = styled("img")({
 });
 
 const AntiGuideSelect = () => {
-  const navigate = useNavigate();
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const initialData = usePageData();
+  const [characters, setCharacters] = useState(initialData || []);
+  const [loading, setLoading] = useState(!initialData);
   const [error, setError] = useState("");
   const [requestKey, setRequestKey] = useState(0);
 
   useEffect(() => {
     const controller = new AbortController();
-    setLoading(true);
+    if (!initialData) setLoading(true);
     setError("");
 
     getCharacters({ view: "summary", signal: controller.signal })
@@ -50,11 +51,7 @@ const AntiGuideSelect = () => {
       });
 
     return () => controller.abort();
-  }, [requestKey]);
-
-  const handleCharacterNavigate = (id) => {
-    navigate(`/anti-guide/character/${id}`);
-  };
+  }, [requestKey, initialData]);
 
   if (loading) {
     return (
@@ -77,7 +74,7 @@ const AntiGuideSelect = () => {
 
   return (
     <Container maxWidth="lg" sx={{ marginTop: "10rem", marginBottom: "5rem" }}>
-      <h2
+      <h1
         style={{
           textAlign: "center",
           width: "100%",
@@ -87,8 +84,8 @@ const AntiGuideSelect = () => {
           fontSize: "3rem",
         }}
       >
-        Choose Your Nemesis
-      </h2>
+        Tekken 8 Matchup Guides
+      </h1>
       <Grid container rowSpacing={2}>
         {characters.map((character) => (
           <Grid
@@ -103,12 +100,11 @@ const AntiGuideSelect = () => {
               alignItems: "center",
             }}
           >
-            <StyledImage
+            <Link to={`/anti-guide/character/${character._id}`} aria-label={`${character.name} matchup guide`}><StyledImage
               src={character.image}
               alt={character.name}
               sx={{ objectPosition: "top" }}
-              onClick={() => handleCharacterNavigate(character._id)}
-            />
+            /></Link>
           </Grid>
         ))}
       </Grid>

@@ -10,7 +10,6 @@ import {
   InputLabel,
   Chip,
 } from "@mui/material";
-import { Helmet } from "react-helmet";
 
 const ContentBox = styled(Box)(({ theme }) => ({
   margin: "2rem auto",
@@ -137,13 +136,6 @@ const StratContent = () => {
         justifyContent: "center",
       }}
     >
-      <Helmet>
-        <title>Content Creator Strategy Selector</title>
-        <meta
-          name="description"
-          content="Select and display strategies for content creation."
-        />
-      </Helmet>
       <Container
         maxWidth="lg"
         sx={{ width: "90%!important", margin: "3rem auto 0" }}
@@ -203,7 +195,7 @@ const StratContent = () => {
           </StratContainer>
         </ContentBox>
         <Typography
-          variant="h1"
+          variant="h1" component="h2"
           gutterBottom
           sx={{ fontSize: "2.6rem", fontFamily: "Michroma" }}
         >

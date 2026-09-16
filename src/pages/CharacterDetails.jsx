@@ -1,3 +1,4 @@
+import { usePageData } from '../context/PageDataContext';
 // CharacterDetails.jsx
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -9,7 +10,6 @@ import MainCombos from "../components/MainCombos";
 import WallCombos from "../components/WallCombos";
 import Punishers from "../components/Punishers";
 import { Grid, Paper, Typography, Box, Container } from "@mui/material";
-import { Helmet } from "react-helmet";
 import styles from "./CharacterDetails.module.css";
 import ComboEnders from "../components/ComboEnders";
 import CharProfile from "../components/CharProfile";
@@ -25,9 +25,10 @@ const boraderRaduisSection = { borderRadius: "5px" };
 const leftColumnMargin = { marginBottom: "0rem" };
 
 const CharacterDetails = () => {
-  const [character, setCharacter] = useState(null);
+  const initialData = usePageData();
+  const [character, setCharacter] = useState(initialData);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!initialData);
 
   const { characterId } = useParams();
 
@@ -36,7 +37,7 @@ const CharacterDetails = () => {
 
     const fetchCharacter = async () => {
       try {
-        setLoading(true);
+        if (!initialData) setLoading(true);
         setError(null);
         const data = await getCharacter(characterId, {
           signal: controller.signal,
@@ -45,7 +46,7 @@ const CharacterDetails = () => {
         setLoading(false);
       } catch (error) {
         if (error.name === "AbortError") return;
-        setError(error);
+        if (!initialData) setError(error);
         setLoading(false);
       }
     };
@@ -53,7 +54,7 @@ const CharacterDetails = () => {
     fetchCharacter();
 
     return () => controller.abort();
-  }, [characterId]);
+  }, [characterId, initialData]);
 
   if (loading) {
     if (characterId === "662bd3e3f1042bb628f57a67") {
@@ -109,70 +110,9 @@ const CharacterDetails = () => {
     return <Box>Character not found...</Box>;
   }
 
+  const characterName = character.name;
   const stances = getCharacterStances(character);
   const stanceLabels = getStanceLabels(stances);
-  const characterName = character.name.split(" ").join("-").toLowerCase();
-
-  // SEO STUFF HERE
-
-  const description = `Everything you need to know about ${characterName} in Tekken 8. Combos, Heat System, Grabs, Punishers, and more. Cheat Sheet for ${characterName} Tekken8.`;
-  const keywords = [
-    "Tekken-8",
-    `${characterName}-combos`,
-    `${characterName}-Heat-dash`,
-    `${characterName}-Heat-flop`,
-    "Tekken-8-Punishers",
-    "Tekken-8-Heat-Flop",
-    "Tekken-8-Heat-Dash",
-    "Tekken-8-frame-data",
-    "Tekken-8-character-specific-data",
-    "Tekken-8-guide",
-    "Tekken-8-tutorial",
-    "Tekken-8-cheat-sheet",
-    `Tekken-8-${characterName}-combos`,
-    `Tekken-8-${characterName}-cheat-sheet`,
-    `Tekken-8-${characterName}-tutorial`,
-    `Tekken-8-${characterName}-guide`,
-    `Tekken-8-${characterName}-wall-combos`,
-    `${characterName}-best-moves`,
-    `${characterName}-top-10-moves`,
-    `Tekken-8-${characterName}-strategy`,
-    `Tekken-8-${characterName}-tips`,
-    `Tekken-8-${characterName}-tricks`,
-    `Tekken-8-${characterName}-matchups`,
-    `Tekken-8-${characterName}-counter`,
-    `Tekken-8-${characterName}-strengths`,
-    `Tekken-8-${characterName}-weaknesses`,
-    `Tekken-8-${characterName}-tier-rank`,
-    `Tekken-8-${characterName}-gameplay`,
-    `Tekken-8-${characterName}-guide-for-beginners`,
-    `Tekken-8-${characterName}-advanced-guide`,
-    `Tekken-8-${characterName}-pro-tips`,
-    `Tekken-8-${characterName}-wall-damage`,
-    `Tekken-8-${characterName}-wall-carry`,
-    `Tekken-8-${characterName}-oki-setup`,
-    `Tekken-8-${characterName}-punishment-guide`,
-    `Tekken-8-${characterName}-frame-traps`,
-    `Tekken-8-${characterName}-mixups`,
-  ].join(", ");
-
-  const characterCombosURL = `https://tekktician.com/character/combos/${characterName}-combos/${characterId}`;
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "VideoGame",
-    name: "Tekken 8",
-    character: {
-      "@type": "GameCharacter",
-      name: `${character.name}`,
-      alternateName: "風間 仁",
-      description: `${character.name} is a key character in the Tekken series, known for his powerful combos and complex storyline.`,
-      gameTip: `Utilize ${character.name}'s key moves to maximize frame advantage against opponents.`,
-      associatedMoves:
-        "Electric Wind Hook Fist, Devil's Beam, Rage Art,Electric Wind God Fist, Heat Smash",
-      isPlayableCharacter: true,
-    },
-  };
 
   return (
     <StanceContext.Provider value={stanceLabels}>
@@ -180,30 +120,6 @@ const CharacterDetails = () => {
       className="character-sheet-container"
       sx={{ pt: 9, pb: 0, minHeight: "100vh", mb: 5 }}
     >
-      <Helmet>
-        <title>
-          Tekken {character.name} - Combos ,Guide and Cheat Sheet - Tekken 8
-        </title>
-        <link rel="canonical" href={characterCombosURL} />
-        <meta property="og:url" content={characterCombosURL} />
-        <meta property="og:image" content={character.image} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content={`Tekken 8 ${character.name} Guide and Cheat Sheet`}
-        />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={`Tekken 8 ${character.name} Guide and Cheat Sheet`}
-        />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={character.image} />
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
       <Container maxWidth="2xl" sx={{}}>
         <Grid container spacing={1} columnSpacing={2}>
           {/* Left column: Heat System, Important Grabs, Mini Combos, Heat Engagers */}

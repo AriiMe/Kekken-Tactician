@@ -11,7 +11,6 @@ import {
   InputLabel,
   Chip,
 } from "@mui/material";
-import { Helmet } from "react-helmet";
 import RankingList from "../components/RankingList";
 
 const ContentBox = styled(Box)(({ theme }) => ({
@@ -205,9 +204,6 @@ const StratRoulette = () => {
     setGameEnded(false);
   };
 
-  const characterNames = Object.keys(strategies.characters)
-    .map((char) => char.charAt(0).toUpperCase() + char.slice(1))
-    .join(", ");
 
   const getPunishment = (points) => {
     if (points >= 600)
@@ -250,19 +246,6 @@ const StratRoulette = () => {
         justifyContent: "center",
       }}
     >
-      <Helmet>
-        <title>
-          Tekken 8 Strategy Roulette - Best Strategies for All Characters
-        </title>
-        <meta
-          name="description"
-          content={`Discover the best strategies for Tekken 8 with our Strategy Roulette. Get random, funny, and useful strategies for your favorite characters including ${characterNames}.`}
-        />
-        <meta
-          name="keywords"
-          content={`Tekken 8, Tekken 8 strategies, Tekken 8 combos, Tekken 8 tips, Kazuya strategies, Jin combos, Paul Phoenix moves, Devil Jin techniques, Tekken 8 tier list, Tekken 8 beginner guide, ${characterNames}.`}
-        />
-      </Helmet>
       <Container
         maxWidth="lg"
         sx={{ width: "90%!important", margin: "3rem auto 0" }}

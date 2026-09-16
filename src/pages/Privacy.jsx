@@ -9,11 +9,11 @@ const StyledPolicyTitle = styled(Typography)(() => ({
 
 const Privacy = () => (
   <Container sx={{ margin: "150px auto 80px" }} maxWidth="md">
-    <StyledPolicyTitle variant="h4" gutterBottom>
+    <StyledPolicyTitle component="h1" variant="h4" gutterBottom>
       Privacy Policy
     </StyledPolicyTitle>
     <Typography variant="body1" paragraph>
-      Last updated September 10, 2026. This page explains the services and local
+      Last updated September 16, 2026. This page explains the services and local
       preferences used when you visit TEKKTICIAN.
     </Typography>
     <StyledPolicyTitle variant="h5" gutterBottom>
@@ -36,23 +36,6 @@ const Privacy = () => (
       analytics products are designed to provide anonymous or aggregated data
       without third-party tracking cookies. Vercel Speed Insights also measures
       page performance so we can find slow or unstable experiences.
-    </Typography>
-    <StyledPolicyTitle variant="h5" gutterBottom>
-      Advertising technology
-    </StyledPolicyTitle>
-    <Typography variant="body1" paragraph>
-      The site includes Google AdSense code. Google states that AdSense may use
-      cookies or similar technology to serve and measure advertising, depending
-      on your region, browser and consent settings. You can review or change
-      personalized-ad choices in{" "}
-      <Link
-        href="https://adssettings.google.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Google Ads Settings
-      </Link>
-      .
     </Typography>
     <StyledPolicyTitle variant="h5" gutterBottom>
       Preferences stored on your device

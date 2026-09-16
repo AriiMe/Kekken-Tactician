@@ -1,10 +1,7 @@
 import { useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import {
-  FiArrowDown,
-  FiArrowUpRight,
   FiBookOpen,
   FiCrosshair,
   FiLock,
@@ -74,11 +71,7 @@ function GameCard({ game }) {
             </>
           )}
         </span>
-        {isLive && (
-          <span className="game-card__open-icon" aria-hidden="true">
-            <FiArrowUpRight />
-          </span>
-        )}
+
       </div>
       <div className="game-card__body">
         <div>
@@ -89,6 +82,7 @@ function GameCard({ game }) {
         </div>
         <span className="game-card__year">{game.year}</span>
       </div>
+      {isLive && <span className="game-card__action">View character guides</span>}
       {isLive && game.description && (
         <p className="game-card__description">{game.description}</p>
       )}
@@ -150,45 +144,6 @@ export default function GameLibrary() {
 
   return (
     <main className="game-library">
-      <Helmet>
-        <title>TEKKTICIAN (formerly Tekken Tactician) — Combos &amp; Guides</title>
-        <meta
-          name="description"
-          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
-        />
-        <link rel="canonical" href="https://tekktician.com/" />
-        <meta property="og:url" content="https://tekktician.com/" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="TEKKTICIAN (formerly Tekken Tactician) — Combos & Guides"
-        />
-        <meta
-          property="og:description"
-          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
-        />
-        <meta
-          property="og:image"
-          content="https://tekktician.com/game-art/tekken-8.jpg"
-        />
-        <meta
-          property="og:image:alt"
-          content="Official Tekken 8 title artwork on TEKKTICIAN"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="TEKKTICIAN (formerly Tekken Tactician) — Combos & Guides"
-        />
-        <meta
-          name="twitter:description"
-          content="TEKKTICIAN, formerly known as Tekken Tactician: the same community project for Tekken 8 combos, punishment, matchup notes and fighting-game guides."
-        />
-        <meta
-          name="twitter:image"
-          content="https://tekktician.com/game-art/tekken-8.jpg"
-        />
-      </Helmet>
 
       <section className="game-hero" aria-labelledby="game-hero-title">
         <div className="game-hero__copy">
@@ -207,10 +162,10 @@ export default function GameLibrary() {
           </p>
           <div className="game-hero__actions">
             <Link className="game-hero__primary" to="/games/tekken-8">
-              Enter Tekken 8 <FiArrowUpRight aria-hidden="true" />
+              Enter Tekken 8
             </Link>
             <a className="game-hero__secondary" href="#game-roadmap">
-              See the full lineup <FiArrowDown aria-hidden="true" />
+              See the full lineup
             </a>
           </div>
           <dl className="game-hero__stats" aria-label="Library status">

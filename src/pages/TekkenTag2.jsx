@@ -1,6 +1,6 @@
+import { usePageData } from '../context/PageDataContext';
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { getTekkenTag2Essentials } from '../utils/apiClient';
 import renderInputImage from '../utils/renderInputImage';
@@ -36,7 +36,8 @@ function TagBasics() {
 export default function TekkenTag2() {
   const { characterSlug } = useParams();
   const { hash } = useLocation();
-  const [data, setData] = useState(null);
+  const [initialData] = useState(usePageData());
+  const [data, setData] = useState(initialData);
   const [error, setError] = useState('');
   const [retry, setRetry] = useState(0);
   const [search, setSearch] = useState('');
@@ -46,10 +47,10 @@ export default function TekkenTag2() {
     getTekkenTag2Essentials({ signal: controller.signal }).then(result => {
       if (!controller.signal.aborted) setData(result);
     }).catch(err => {
-      if (err.name !== 'AbortError' && !controller.signal.aborted) setError('The Tag 2 guides could not be loaded. Please try again.');
+      if (!initialData && err.name !== 'AbortError' && !controller.signal.aborted) setError('The Tag 2 guides could not be loaded. Please try again.');
     });
     return () => controller.abort();
-  }, [retry]);
+  }, [retry, initialData]);
   const character = data?.characters.find(c => c.slug === characterSlug);
   useEffect(() => {
     if (character && /^#tag2-(combos|punish|moves|team)$/.test(hash)) document.getElementById(hash.slice(1))?.scrollIntoView();
@@ -58,27 +59,21 @@ export default function TekkenTag2() {
   const visible = data?.characters.filter(c => c.name.toLowerCase().includes(search.trim().toLowerCase()));
   const nameOf = slug => data.characters.find(c => c.slug === slug)?.name || slug;
   const partnerRoutes = character && data.characters.flatMap(c => c.teamCombos.filter(t => t.partner === character.slug).map(t => ({ lead: c, combo: t })));
-  const title = missing ? 'Character not found' : character ? `${character.name} — Tag 2 Combos & Punishers` : 'Tekken Tag Tournament 2 Character Guides';
   const labels = { ...tekkenTag2StanceLabels, ...Object.fromEntries((character?.stances || []).map(s => [s.abbreviation,s.name])) };
   return <StanceContext.Provider value={labels}><main className="t7-page tag2-page">
-    <Helmet><title>{title} | TEKKTICIAN</title>
-      <meta name="description" content={`${character?.name || 'All 59 fighters'} in Tekken Tag Tournament 2: practical combos, punisher startup frames, bound moves and tag inputs.`} />
-      <link rel="canonical" href={`https://tekktician.com${rosterPath}${character ? `/${character.slug}` : ''}`} />
-      {missing && <meta name="robots" content="noindex" />}
-    </Helmet>
     <nav className="t7-breadcrumb" aria-label="Breadcrumb"><Link to="/">Games</Link><span>/</span>
       {characterSlug ? <><Link to={rosterPath}>Tekken Tag 2</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>Tekken Tag 2</span>}
     </nav>
     {error ? <div className="t7-status" role="alert"><h1>Couldn’t load the guides</h1><p>{error}</p><button onClick={() => setRetry(n => n + 1)}>Try again</button></div>
       : !data ? <p className="t7-status" role="status">Loading Tag 2 guides…</p>
       : missing ? <div className="t7-status"><h1>Character not found</h1><Link to={rosterPath}>Back to the roster →</Link></div>
-      : <><header className="t7-header"><div><p className="t7-kicker">Tekken Tag Tournament 2 · Essentials</p><h1>{character?.name || 'Pick your next tag team.'}</h1>
+      : <><header className="t7-header"><div><p className="t7-kicker">Tekken Tag Tournament 2 · Essentials</p><h1>{character?.name || 'Tekken Tag Tournament 2 Combos & Guides'}</h1>
         <p>{character ? 'Launch. Bound. Tag.' : '59 fighters. Practical combos and the inputs that matter.'}</p></div>
         {character && <img className="tag2-portrait" src={character.image} alt={character.name} width="100" height="106" />}
       </header>
       {!character ? <><TagBasics /><label className="t7-search">Find your fighter<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search characters…" /></label>
         <div className="tag2-roster">{visible.map(c => <Link className="tag2-fighter" key={c.slug} to={`${rosterPath}/${c.slug}`}>
-          <img src={c.image} alt="" loading="lazy" width="100" height="106" /><span>{c.name}{c.mimic && <small>{c.slug === 'mokujin' ? 'Mimic' : 'Custom moveset'}</small>}</span><b aria-hidden="true">↗</b>
+          <img src={c.image} alt="" loading="lazy" width="100" height="106" /><span>{c.name}{c.mimic && <small>{c.slug === 'mokujin' ? 'Mimic' : 'Custom moveset'}</small>}</span><small className="tag2-guide-label">View guide</small>
         </Link>)}</div>{!visible.length && <p role="status">No fighters match that search.</p>}</>
         : <><nav className="t7-sections" aria-label="Guide sections">
           {!character.mimic && <><a href="#tag2-combos">Combos</a><a href="#tag2-punish">Punishers</a><a href="#tag2-moves">Bound & tag</a></>}

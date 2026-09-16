@@ -1,43 +1,19 @@
 import  { useState } from "react";
 import renderInputImage from "../utils/renderInputImage";
 import { v4 as uuidv4 } from "uuid";
-import { Helmet } from "react-helmet";
 import "./Punishers.css";
 import CollapsableSection from "./CollapsableSection";
 import PropTypes from "prop-types";
 
-const Punishers = ({ punishers, name }) => {
+const Punishers = ({ punishers }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const description = `Punishers for ${name} in Tekken 8. These are the most important punishers to learn for ${name}.Punishers and their frames.`;
-  const keywords = [
-    "Tekken 8",
-    `${name} combos`,
-    `${name} Heat dash`,
-    `${name} Heat flop`,
-    "Punishers",
-    "Heat Flop",
-    "Heat Dash",
-    "Frame data",
-    "Character-specific data",
-    "Cheat Sheet",
-    "Tekken 8 Cheat Sheet",
-    `Tekken8 ${name} combos`,
-    `Tekken8 ${name} Cheat Sheet`,
-    `Tekken8 ${name} Punishers`,
-    `Tekken8 ${name} Punish frames`,
-    `Tekken8 ${name} Frame Data`,
-  ].join(", ");
   return (
     <div className="combo-section punishers">
-      <Helmet>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Helmet>
 
       <CollapsableSection
         title="Punishers"

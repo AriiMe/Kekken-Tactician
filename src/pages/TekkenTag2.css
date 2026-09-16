@@ -8,7 +8,8 @@
 .tag2-fighter img { width: 85px; height: 90px; object-fit: contain; object-position: center bottom; flex: 0 0 auto; }
 .tag2-fighter span { min-width: 0; font-weight: 700; font-size: .95rem; }
 .tag2-fighter small { display: block; margin-top: 6px; color: #aeb9c9; font-size: .7rem; font-weight: 400; }
-.tag2-fighter b { margin-left: auto; color: #ff5353; }
+.tag2-fighter .tag2-guide-label { margin-left: auto; white-space: nowrap; }
+.tag2-fighter:hover .tag2-guide-label, .tag2-fighter:focus-visible .tag2-guide-label { text-decoration: underline; text-underline-offset: 3px; }
 .tag2-moves { list-style: none; padding: 0; margin: 0; }
 .tag2-moves li { padding: 12px 0; border-bottom: 1px solid #404040; line-height: 2.2; }
 .tag2-moves li:last-child { border: 0; }
@@ -29,7 +30,7 @@
   .tag2-page .t7-header { display: flex; gap: 15px; }
   .tag2-roster { gap: 10px; }
   .tag2-fighter { flex-direction: column; gap: 10px; padding: 10px; text-align: center; }
-  .tag2-fighter b { display: none; }
+  .tag2-fighter .tag2-guide-label { margin: 0; }
   .tag2-fighter img { width: 85px; height: 90px; }
   .tag2-fighter span { font-size: .8rem; }
   .tag2-controls { grid-template-columns: minmax(0,1fr); gap: 8px; }

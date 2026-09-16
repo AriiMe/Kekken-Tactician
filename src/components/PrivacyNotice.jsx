@@ -31,9 +31,7 @@ export default function PrivacyNotice() {
       <div>
         <p id="privacy-notice-title">Privacy notice</p>
         <span>
-          We use privacy-focused analytics to understand site performance. This
-          site also includes Google advertising code, which may use cookies or
-          similar technology depending on your region and settings.
+          We use privacy-focused analytics to understand site performance and remember your display preferences on this device.
         </span>
       </div>
       <div className="privacy-notice__actions">

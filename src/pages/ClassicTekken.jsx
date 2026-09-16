@@ -1,6 +1,6 @@
+import { usePageData } from '../context/PageDataContext';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Paper } from '@mui/material';
 import CollapsableSection from '../components/CollapsableSection';
@@ -84,48 +84,34 @@ export default function ClassicTekken({ gameId }) {
   const gameTitle = gameId === 'tekken-2' ? 'Tekken 2' : 'Tekken 1';
   const rosterPath = `/games/${gameId}`;
   const { characterSlug } = useParams();
-  const [data, setData] = useState(null);
+  const [initialData] = useState(usePageData());
+  const [data, setData] = useState(initialData);
   const [error, setError] = useState('');
   const [requestKey, setRequestKey] = useState(0);
   const [search, setSearch] = useState('');
   useEffect(() => {
     const controller = new AbortController();
     setError('');
-    setData(null);
+
     getClassicTekkenGuides(gameId, { signal: controller.signal }).then(result => {
       if (!controller.signal.aborted) setData(result);
     }).catch(err => {
-      if (err.name !== 'AbortError' && !controller.signal.aborted) setError(`The ${gameTitle} guides could not be loaded. Please try again.`);
+      if (!initialData && err.name !== 'AbortError' && !controller.signal.aborted) setError(`The ${gameTitle} guides could not be loaded. Please try again.`);
     });
     return () => controller.abort();
-  }, [gameId, gameTitle, requestKey]);
+  }, [gameId, gameTitle, requestKey, initialData]);
   useEffect(() => { setSearch(''); }, [characterSlug]);
 
   const character = data?.characters.find(item => item.slug === characterSlug);
   const missing = Boolean(data && characterSlug && !character);
-  const title = missing ? `Character not found — ${gameTitle}` : character
-    ? `${character.name} — ${gameTitle} Moves & Combos` : `${gameTitle} Character Guides`;
-  const description = character
-    ? `${character.name}'s ${gameTitle} throws, moves and combos in familiar 1/2/3/4 notation.`
-    : `Explore ${gameTitle}: character guides, throws, 10 hit combos and juggle routes.`;
   const characterSectionTitles = { ...sectionTitles,
     ...(gameId === 'tekken-2' ? { moves: 'Key Moves' } : {}),
     ...(character?.sections.strings?.every(row => row.hits === 7) ? { strings: '7 Hit Combo' } : {}),
   };
-  const canonical = `https://tekktician.com${rosterPath}${character ? `/${character.slug}` : ''}`;
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
   return (
     <main className="t1-page">
-      <Helmet>
-        <title>{title} | TEKKTICIAN</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={`${title} | TEKKTICIAN`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonical} />
-        <link rel="canonical" href={canonical} />
-        {missing && <meta name="robots" content="noindex" />}
-      </Helmet>
       <nav className="t1-breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Games</Link><span>/</span>
         {characterSlug ? <><Link to={rosterPath}>{gameTitle}</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>{gameTitle}</span>}
@@ -138,7 +124,7 @@ export default function ClassicTekken({ gameId }) {
           <header className={`t1-header${character ? ' t1-header--character' : ''}`}>
             {character && <Portrait key={character.slug} character={character} sheet={data.portraits} gameTitle={gameTitle} />}
             <div><p className="t1-kicker">{gameTitle} · {data.edition} archive</p>
-              <h1>{character ? character.name : data.tagline || 'Back to the first fight.'}</h1>
+              <h1>{character ? character.name : `${gameTitle} Combos & Character Guides`}</h1>
               <p>{character ? 'Throws, moves and combos, in familiar notation.'
                 : `${data.characters.length} fighters. Pick your character and get straight to the inputs.`}</p>
             </div>
@@ -162,13 +148,13 @@ export default function ClassicTekken({ gameId }) {
             <div className="t1-roster">
               {visibleCharacters.map(item => <Link className="t1-card" key={item.slug}
                 to={`${rosterPath}/${item.slug}`} aria-label={`Open ${item.name} ${gameTitle} guide`}>
-                <Portrait character={item} sheet={data.portraits} gameTitle={gameTitle} /><h2>{item.name}</h2><span>Moves & combos ↗</span>
+                <Portrait character={item} sheet={data.portraits} gameTitle={gameTitle} /><h2>{item.name}</h2><span>Moves & combos</span>
               </Link>)}
             </div>
             {!visibleCharacters.length && <p>No fighters match “{search}”. Try another name.</p>}
           </>}
           <footer className="t1-credits"><p>{data.source.label}. {data.source.note}</p>
-            <p>{data.portraits.credit} <a href={data.portraits.sourceUrl} target="_blank" rel="noopener noreferrer">Portrait source ↗</a></p>
+            <p>{data.portraits.credit} <a href={data.portraits.sourceUrl} target="_blank" rel="noopener noreferrer">Portrait source</a></p>
           </footer>
         </>}
     </main>

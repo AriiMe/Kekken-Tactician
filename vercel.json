@@ -1,5 +1,467 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/tekken-8",
+      "destination": "/games/tekken-8",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-7",
+      "destination": "/games/tekken-7",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-tag-2",
+      "destination": "/games/tekken-tag-2",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-2",
+      "destination": "/games/tekken-2",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-1",
+      "destination": "/games/tekken-1",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/faqu",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!alisa-bosconovitch-combos(?:/|$))[^/]+)/6aaabe169f4790805d93fc0c",
+      "destination": "/character/combos/alisa-bosconovitch-combos/6aaabe169f4790805d93fc0c",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/alisa-bosconovitch",
+      "destination": "/character/combos/alisa-bosconovitch-combos/6aaabe169f4790805d93fc0c",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!anna-williams-combos(?:/|$))[^/]+)/6aaabe169f4790805d93fc4a",
+      "destination": "/character/combos/anna-williams-combos/6aaabe169f4790805d93fc4a",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/anna-williams",
+      "destination": "/character/combos/anna-williams-combos/6aaabe169f4790805d93fc4a",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!armor-king-combos(?:/|$))[^/]+)/68ef0575a2332a789b8473b5",
+      "destination": "/character/combos/armor-king-combos/68ef0575a2332a789b8473b5",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/armor-king",
+      "destination": "/character/combos/armor-king-combos/68ef0575a2332a789b8473b5",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!asuka-kazama-combos(?:/|$))[^/]+)/666333f245e126d76c28f384",
+      "destination": "/character/combos/asuka-kazama-combos/666333f245e126d76c28f384",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/asuka-kazama",
+      "destination": "/character/combos/asuka-kazama-combos/666333f245e126d76c28f384",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!azucena-milagros-combos(?:/|$))[^/]+)/662760f446b1580f1ac8605d",
+      "destination": "/character/combos/azucena-milagros-combos/662760f446b1580f1ac8605d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/azucena-milagros",
+      "destination": "/character/combos/azucena-milagros-combos/662760f446b1580f1ac8605d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!bob-richards-combos(?:/|$))[^/]+)/6aaabe169f4790805d93fc92",
+      "destination": "/character/combos/bob-richards-combos/6aaabe169f4790805d93fc92",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/bob-richards",
+      "destination": "/character/combos/bob-richards-combos/6aaabe169f4790805d93fc92",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!bryan-fury-combos(?:/|$))[^/]+)/6655bdea45e126d76c1644e0",
+      "destination": "/character/combos/bryan-fury-combos/6655bdea45e126d76c1644e0",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/bryan-fury",
+      "destination": "/character/combos/bryan-fury-combos/6655bdea45e126d76c1644e0",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!claudio-serafino-combos(?:/|$))[^/]+)/6aaabe179f4790805d93fcd4",
+      "destination": "/character/combos/claudio-serafino-combos/6aaabe179f4790805d93fcd4",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/claudio-serafino",
+      "destination": "/character/combos/claudio-serafino-combos/6aaabe179f4790805d93fcd4",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!clive-rosfield-combos(?:/|$))[^/]+)/6aaabe179f4790805d93fd0b",
+      "destination": "/character/combos/clive-rosfield-combos/6aaabe179f4790805d93fd0b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/clive-rosfield",
+      "destination": "/character/combos/clive-rosfield-combos/6aaabe179f4790805d93fd0b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!devil-jin-combos(?:/|$))[^/]+)/66797f7b45e126d76c44df52",
+      "destination": "/character/combos/devil-jin-combos/66797f7b45e126d76c44df52",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/devil-jin",
+      "destination": "/character/combos/devil-jin-combos/66797f7b45e126d76c44df52",
+      "permanent": true
+    },
+    {
+      "source": "/anti-guide/character/devil-jin",
+      "destination": "/anti-guide/character/66797f7b45e126d76c44df52",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!eddy-gordo-combos(?:/|$))[^/]+)/662f5d655fdd13172c17446a",
+      "destination": "/character/combos/eddy-gordo-combos/662f5d655fdd13172c17446a",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/eddy-gordo",
+      "destination": "/character/combos/eddy-gordo-combos/662f5d655fdd13172c17446a",
+      "permanent": true
+    },
+    {
+      "source": "/anti-guide/character/eddy-gordo",
+      "destination": "/anti-guide/character/662f5d655fdd13172c17446a",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!fahkumram-combos(?:/|$))[^/]+)/6aaabe179f4790805d93fdc9",
+      "destination": "/character/combos/fahkumram-combos/6aaabe179f4790805d93fdc9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/fahkumram",
+      "destination": "/character/combos/fahkumram-combos/6aaabe179f4790805d93fdc9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!feng-wei-combos(?:/|$))[^/]+)/66bcb6ff5ba0152a5938c04d",
+      "destination": "/character/combos/feng-wei-combos/66bcb6ff5ba0152a5938c04d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/feng-wei",
+      "destination": "/character/combos/feng-wei-combos/66bcb6ff5ba0152a5938c04d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!heihachi-mishima-combos(?:/|$))[^/]+)/66fbe5c55ba0152a59764211",
+      "destination": "/character/combos/heihachi-mishima-combos/66fbe5c55ba0152a59764211",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/heihachi-mishima",
+      "destination": "/character/combos/heihachi-mishima-combos/66fbe5c55ba0152a59764211",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!hwoarang-combos(?:/|$))[^/]+)/6aaabe179f4790805d93fe9b",
+      "destination": "/character/combos/hwoarang-combos/6aaabe179f4790805d93fe9b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/hwoarang",
+      "destination": "/character/combos/hwoarang-combos/6aaabe179f4790805d93fe9b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!jack-8-combos(?:/|$))[^/]+)/6662ec5b45e126d76c28aa07",
+      "destination": "/character/combos/jack-8-combos/6662ec5b45e126d76c28aa07",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/jack-8",
+      "destination": "/character/combos/jack-8-combos/6662ec5b45e126d76c28aa07",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!jin-kazama-combos(?:/|$))[^/]+)/661e8c1811f27e4256619b46",
+      "destination": "/character/combos/jin-kazama-combos/661e8c1811f27e4256619b46",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/jin-kazama",
+      "destination": "/character/combos/jin-kazama-combos/661e8c1811f27e4256619b46",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!jun-kazama-combos(?:/|$))[^/]+)/662a0f47e1042bb628fe4ed6",
+      "destination": "/character/combos/jun-kazama-combos/662a0f47e1042bb628fe4ed6",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/jun-kazama",
+      "destination": "/character/combos/jun-kazama-combos/662a0f47e1042bb628fe4ed6",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!kazuya-mishima-combos(?:/|$))[^/]+)/6655b13b45e126d76c162a29",
+      "destination": "/character/combos/kazuya-mishima-combos/6655b13b45e126d76c162a29",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/kazuya-mishima",
+      "destination": "/character/combos/kazuya-mishima-combos/6655b13b45e126d76c162a29",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!king-ii-combos(?:/|$))[^/]+)/661d95ad6f6ae8dacffe1b3b",
+      "destination": "/character/combos/king-ii-combos/661d95ad6f6ae8dacffe1b3b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/king-ii",
+      "destination": "/character/combos/king-ii-combos/661d95ad6f6ae8dacffe1b3b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!kuma-ii-combos(?:/|$))[^/]+)/6661c55a45e126d76c274aad",
+      "destination": "/character/combos/kuma-ii-combos/6661c55a45e126d76c274aad",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/kuma-ii",
+      "destination": "/character/combos/kuma-ii-combos/6661c55a45e126d76c274aad",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!lars-alexandersson-combos(?:/|$))[^/]+)/661fca8d526957153733d6c9",
+      "destination": "/character/combos/lars-alexandersson-combos/661fca8d526957153733d6c9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/lars-alexandersson",
+      "destination": "/character/combos/lars-alexandersson-combos/661fca8d526957153733d6c9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!lee-chaolan-combos(?:/|$))[^/]+)/6aaabe189f4790805d93ff3d",
+      "destination": "/character/combos/lee-chaolan-combos/6aaabe189f4790805d93ff3d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/lee-chaolan",
+      "destination": "/character/combos/lee-chaolan-combos/6aaabe189f4790805d93ff3d",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!leo-kliesen-combos(?:/|$))[^/]+)/6aaabe189f4790805d93ff77",
+      "destination": "/character/combos/leo-kliesen-combos/6aaabe189f4790805d93ff77",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/leo-kliesen",
+      "destination": "/character/combos/leo-kliesen-combos/6aaabe189f4790805d93ff77",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!leroy-smith-combos(?:/|$))[^/]+)/6aaabe189f4790805d93ffb7",
+      "destination": "/character/combos/leroy-smith-combos/6aaabe189f4790805d93ffb7",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/leroy-smith",
+      "destination": "/character/combos/leroy-smith-combos/6aaabe189f4790805d93ffb7",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!lidia-sobieska-combos(?:/|$))[^/]+)/669f65015ba0152a591582d6",
+      "destination": "/character/combos/lidia-sobieska-combos/669f65015ba0152a591582d6",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/lidia-sobieska",
+      "destination": "/character/combos/lidia-sobieska-combos/669f65015ba0152a591582d6",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!lili-de-rochefort-combos(?:/|$))[^/]+)/6647dee63c6d8f37bb71be1b",
+      "destination": "/character/combos/lili-de-rochefort-combos/6647dee63c6d8f37bb71be1b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/lili-de-rochefort",
+      "destination": "/character/combos/lili-de-rochefort-combos/6647dee63c6d8f37bb71be1b",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!ling-xiaoyu-combos(?:/|$))[^/]+)/6643bcc7ed1a515935d5bff9",
+      "destination": "/character/combos/ling-xiaoyu-combos/6643bcc7ed1a515935d5bff9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/ling-xiaoyu",
+      "destination": "/character/combos/ling-xiaoyu-combos/6643bcc7ed1a515935d5bff9",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!marshall-law-combos(?:/|$))[^/]+)/6aaabe189f4790805d93ffef",
+      "destination": "/character/combos/marshall-law-combos/6aaabe189f4790805d93ffef",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/marshall-law",
+      "destination": "/character/combos/marshall-law-combos/6aaabe189f4790805d93ffef",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!miary-zo-combos(?:/|$))[^/]+)/6aaabe189f4790805d94002f",
+      "destination": "/character/combos/miary-zo-combos/6aaabe189f4790805d94002f",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/miary-zo",
+      "destination": "/character/combos/miary-zo-combos/6aaabe189f4790805d94002f",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!nina-williams-combos(?:/|$))[^/]+)/66548edd45e126d76c14f098",
+      "destination": "/character/combos/nina-williams-combos/66548edd45e126d76c14f098",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/nina-williams",
+      "destination": "/character/combos/nina-williams-combos/66548edd45e126d76c14f098",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!panda-combos(?:/|$))[^/]+)/6aaabe189f4790805d940066",
+      "destination": "/character/combos/panda-combos/6aaabe189f4790805d940066",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/panda",
+      "destination": "/character/combos/panda-combos/6aaabe189f4790805d940066",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!paul-phoenix-combos(?:/|$))[^/]+)/661fa69084b106b76bc32a59",
+      "destination": "/character/combos/paul-phoenix-combos/661fa69084b106b76bc32a59",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/paul-phoenix",
+      "destination": "/character/combos/paul-phoenix-combos/661fa69084b106b76bc32a59",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!raven-combos(?:/|$))[^/]+)/662f6459ed4a0d7241b62868",
+      "destination": "/character/combos/raven-combos/662f6459ed4a0d7241b62868",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/raven",
+      "destination": "/character/combos/raven-combos/662f6459ed4a0d7241b62868",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!reina-mishima-combos(?:/|$))[^/]+)/66223bfdf6b116aa4c2105c8",
+      "destination": "/character/combos/reina-mishima-combos/66223bfdf6b116aa4c2105c8",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/reina-mishima",
+      "destination": "/character/combos/reina-mishima-combos/66223bfdf6b116aa4c2105c8",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!sergei-dragunov-combos(?:/|$))[^/]+)/6aaabe199f4790805d9400a4",
+      "destination": "/character/combos/sergei-dragunov-combos/6aaabe199f4790805d9400a4",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/sergei-dragunov",
+      "destination": "/character/combos/sergei-dragunov-combos/6aaabe199f4790805d9400a4",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!shaheen-combos(?:/|$))[^/]+)/6687ca0e45c9fc0456028a74",
+      "destination": "/character/combos/shaheen-combos/6687ca0e45c9fc0456028a74",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/shaheen",
+      "destination": "/character/combos/shaheen-combos/6687ca0e45c9fc0456028a74",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!steve-fox-combos(?:/|$))[^/]+)/6aaabe199f4790805d9400dd",
+      "destination": "/character/combos/steve-fox-combos/6aaabe199f4790805d9400dd",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/steve-fox",
+      "destination": "/character/combos/steve-fox-combos/6aaabe199f4790805d9400dd",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!victor-chevalier-combos(?:/|$))[^/]+)/663228214b343b0be5c9c4df",
+      "destination": "/character/combos/victor-chevalier-combos/663228214b343b0be5c9c4df",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/victor-chevalier",
+      "destination": "/character/combos/victor-chevalier-combos/663228214b343b0be5c9c4df",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!yoshimitsu-combos(?:/|$))[^/]+)/662bd3e3f1042bb628f57a67",
+      "destination": "/character/combos/yoshimitsu-combos/662bd3e3f1042bb628f57a67",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/yoshimitsu",
+      "destination": "/character/combos/yoshimitsu-combos/662bd3e3f1042bb628f57a67",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name((?!zafina-combos(?:/|$))[^/]+)/6aaabe199f4790805d94011c",
+      "destination": "/character/combos/zafina-combos/6aaabe199f4790805d94011c",
+      "permanent": true
+    },
+    {
+      "source": "/character/combos/:name/zafina",
+      "destination": "/character/combos/zafina-combos/6aaabe199f4790805d94011c",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    }
   ]
 }

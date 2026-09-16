@@ -1,5 +1,6 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
+const useScrollEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 const scrollImmediately = (position) => {
   const root = document.documentElement;
@@ -14,7 +15,7 @@ export default function ScrollToTop() {
   const navigationType = useNavigationType();
   const positions = useRef(new Map());
 
-  useLayoutEffect(() => {
+  useScrollEffect(() => {
     const rememberPosition = () => {
       positions.current.set(key, { left: window.scrollX, top: window.scrollY });
     };
@@ -26,7 +27,7 @@ export default function ScrollToTop() {
     };
   }, [key]);
 
-  useLayoutEffect(() => {
+  useScrollEffect(() => {
     if (hash) {
       requestAnimationFrame(() => {
         document.getElementById(hash.slice(1))?.scrollIntoView();

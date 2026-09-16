@@ -1,6 +1,6 @@
+import { usePageData } from '../context/PageDataContext';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { getTekken7Essentials } from '../utils/apiClient';
 import renderInputImage from '../utils/renderInputImage';
@@ -20,7 +20,8 @@ Punishment.propTypes = { title: PropTypes.string.isRequired, rows: PropTypes.arr
 
 export default function Tekken7() {
   const { characterSlug } = useParams();
-  const [data, setData] = useState(null);
+  const [initialData] = useState(usePageData());
+  const [data, setData] = useState(initialData);
   const [error, setError] = useState('');
   const [retry, setRetry] = useState(0);
   const [search, setSearch] = useState('');
@@ -30,34 +31,28 @@ export default function Tekken7() {
     getTekken7Essentials({ signal: controller.signal }).then(result => {
       if (!controller.signal.aborted) setData(result);
     }).catch(err => {
-      if (err.name !== 'AbortError' && !controller.signal.aborted) setError('The Tekken 7 guides could not be loaded. Please try again.');
+      if (!initialData && err.name !== 'AbortError' && !controller.signal.aborted) setError('The Tekken 7 guides could not be loaded. Please try again.');
     });
     return () => controller.abort();
-  }, [retry]);
+  }, [retry, initialData]);
   const character = data?.characters.find(c => c.slug === characterSlug);
   const missing = Boolean(data && characterSlug && !character);
-  const title = missing ? 'Character not found' : character ? `${character.name} — Tekken 7 Combos & Punishers` : 'Tekken 7 Character Guides';
-  const canonical = `https://tekktician.com/games/tekken-7${character ? `/${character.slug}` : ''}`;
   const stanceLabels = character ? Object.entries(tekken7StanceLabels).filter(([token]) =>
     new RegExp(`\\b${token}\\b`).test(JSON.stringify([character.combos, character.wallCombos, character.punishers]))) : [];
   return <StanceContext.Provider value={tekken7StanceLabels}><main className="t7-page">
-    <Helmet><title>{title} | TEKKTICIAN</title>
-      <meta name="description" content={`${character?.name || 'Every fighter'} in Tekken 7: useful punishers with startup frames, throws with breaks, and practical combos.`} />
-      <link rel="canonical" href={canonical} />{missing && <meta name="robots" content="noindex" />}
-    </Helmet>
     <nav className="t7-breadcrumb" aria-label="Breadcrumb"><Link to="/">Games</Link><span>/</span>
       {characterSlug ? <><Link to="/games/tekken-7">Tekken 7</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>Tekken 7</span>}
     </nav>
     {error ? <div className="t7-status" role="alert"><h1>Couldn’t load the guides</h1><p>{error}</p><button onClick={() => setRetry(n => n + 1)}>Try again</button></div>
       : !data ? <p className="t7-status" role="status">Loading Tekken 7 guides…</p>
       : missing ? <div className="t7-status"><h1>Character not found</h1><Link to="/games/tekken-7">Back to the roster →</Link></div>
-      : <><header className="t7-header"><div><p className="t7-kicker">Tekken 7 · Essentials</p><h1>{character?.name || 'Your next fight starts here.'}</h1>
+      : <><header className="t7-header"><div><p className="t7-kicker">Tekken 7 · Essentials</p><h1>{character?.name || 'Tekken 7 Combos & Character Guides'}</h1>
         <p>{character ? 'Punish. Break. Launch.' : `${data.characters.length} fighters. Punishers, throw breaks and combos—straight to the inputs.`}</p></div>
         {character && <img className="t7-header-art" src={character.image} alt={`${character.name} official Tekken 7 artwork`} />}
       </header>
       {!character ? <><label className="t7-search">Find your fighter<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search characters…" /></label>
         <div className="t7-roster">{data.characters.filter(c => c.name.toLowerCase().includes(search.trim().toLowerCase())).map(c =>
-          <Link className="t7-fighter" key={c.slug} to={`/games/tekken-7/${c.slug}`}><img src={c.image} alt="" loading="lazy" width="506" height="108" /><span>{c.name}<b aria-hidden="true">↗</b></span></Link>)}</div>
+          <Link className="t7-fighter" key={c.slug} to={`/games/tekken-7/${c.slug}`}><img src={c.image} alt="" loading="lazy" width="506" height="108" /><span>{c.name}<small>View guide</small></span></Link>)}</div>
         {!data.characters.some(c => c.name.toLowerCase().includes(search.trim().toLowerCase())) && <p role="status">No fighters match that search.</p>}</>
         : <><nav className="t7-sections" aria-label="Guide sections"><a href="#t7-combos">Combos</a><a href="#t7-punish">Punishers</a><a href="#t7-throws">Throws</a><a href="#t7-wall">Wall combos</a></nav>
           <div className="t7-guide" key={character.slug}>

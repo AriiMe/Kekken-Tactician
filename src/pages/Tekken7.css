@@ -15,7 +15,8 @@
 .t7-fighter:hover { border-color: #d42f2f; }
 .t7-fighter img { width: 100%; height: auto; display: block; object-fit: contain; }
 .t7-fighter span { display: flex; justify-content: space-between; padding: 15px 18px; font-size: 1rem; font-weight: 700; }
-.t7-fighter b { color: #ff5353; }
+.t7-fighter small { color: #c3cad5; font-size: .7rem; font-weight: 500; align-self: center; }
+.t7-fighter:hover small, .t7-fighter:focus-visible small { text-decoration: underline; text-underline-offset: 3px; }
 .t7-sections { margin-bottom: 24px; }
 .t7-sections a { padding: 10px 16px; background: #262626; border: 1px solid #414141; border-radius: 4px; }
 .t7-guide { display: grid; gap: 24px; }
