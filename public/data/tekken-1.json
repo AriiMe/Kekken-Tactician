@@ -367,6 +367,29 @@
           {
             "name": "Uppercut into power uppercut",
             "input": "f,f+2 > 1 > f,d,df+2"
+          },
+          {
+            "name": "Power uppercut into power uppercut",
+            "input": "f,d,df+2 > df+2 > f+1,2 > f,d,df+2"
+          },
+          {
+            "name": "Rising Toe Kick into power uppercut",
+            "input": "uf+4 > f+4 > f+1,2 > f,d,df+2"
+          },
+          {
+            "name": "Guard Break Juggle",
+            "input": "df+1 > df+2 > f+1,2 > f,d,df+2",
+            "notes": "df+1 on block"
+          },
+          {
+            "name": "Guard Break Knockdown",
+            "input": "df+1 > f,d,df+1 > uf 3+4 ",
+            "notes": "df+1 on block"
+          },
+          {
+            "name": "High Uppercut into power uppercut",
+            "launchers": ["f,f+2", "FC f+2"],
+            "input": "f+1 > f+1,2 > f,d,df+2"
           }
         ]
       },
@@ -646,11 +669,7 @@
         "combos": [
           {
             "name": "Uppercut into power punch and kick",
-            "launchers": [
-              "df+2",
-              "df+1,2",
-              "f,n,d,df+2"
-            ],
+            "launchers": ["df+2", "df+1,2", "f,n,d,df+2"],
             "input": "~f+1,2 > d,df,f+2 > f,n,d,~df+3"
           },
           {
@@ -660,6 +679,10 @@
           {
             "name": "Hell sweep into kick",
             "input": "f,n,d,~df+4,4,n,4 > f,n,d,~df+3"
+          },
+          {
+            "name": "Hell sweep into Somersault",
+            "input": "f,n,d,~df+4,n,4,4 > uf [ 4,3 ]"
           },
           {
             "name": "Power uppercut into double axe kick",
@@ -821,11 +844,15 @@
           },
           {
             "name": "Uppercut into double punch",
-            "input": "df+2 > 2 > f,f+1+2"
+            "input": "df+2 > df+1 > f+2 > f,f+1+2"
           },
           {
             "name": "Uppercut into double uppercut",
             "input": "df+2 > df+1 > df+1+2"
+          },
+          {
+            "name": "Uppercut into Cannonball",
+            "input": "df+2 > df+1 > df+1 > qcb,df+2 > uf,3+4"
           }
         ]
       },
@@ -952,12 +979,17 @@
           },
           {
             "name": "Double uppercut into jabs and wind god fist",
-            "input": "df+1,2 > ~f+1 > ~f+1,2 > f,n,d,df+2"
+            "launchers": ["f,d,df+2", "df+2", "df+1,2"],
+            "input": "~f+1 > ~f+1,2 > f,n,d,df+2"
           },
           {
             "name": "Hell sweep into wind god fist",
             "input": "f,n,d,~df+4 > f,n,d,df+2",
             "notes": "Small opponents only."
+          },
+          {
+            "name": "Hell sweep into ground flip",
+            "input": "f,n,d,~df+4 > uf [ 4,3 ]"
           }
         ]
       },
@@ -2052,11 +2084,7 @@
           },
           {
             "name": "Launcher into death fist and jumping punch",
-            "launchers": [
-              "df+2",
-              "uf+4",
-              "CH 4"
-            ],
+            "launchers": ["df+2", "uf+4", "CH 4"],
             "input": "~f+1,2 > d,df,f+2 > ~u+2"
           },
           {
@@ -2226,6 +2254,18 @@
           {
             "name": "Uppercut, hammer and power punch",
             "input": "df+2 > df+1 > d+1 > f+2"
+          },
+          {
+            "name": "Uppercut, hammer and Low Cannonball",
+            "input": "df+2 > df+1 > df+1 > qcb,df+2 > sprint > uf,3+4"
+          },
+          {
+            "name": "Winding Uppercut into Low Cannonball",
+            "input": "qcb,df+1 > d+1 > uf,3+4"
+          },
+          {
+            "name": "Magic Four into Sandwich Clap",
+            "input": "CH 4 > df+1 > f+2 > ff,1+2"
           }
         ]
       },
