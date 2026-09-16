@@ -268,7 +268,7 @@ export default function GameLibrary() {
             <p className="game-roadmap__kicker">The roster</p>
             <h2 id="game-roadmap-title">Choose your arena</h2>
             <p>
-              Tekken 8 and Tekken 1 are ready. Every grey title is queued for a future guide
+              Tekken 8, Tekken 2 and Tekken 1 are ready. Every grey title is queued for a future guide
               release.
             </p>
           </div>

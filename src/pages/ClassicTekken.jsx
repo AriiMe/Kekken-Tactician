@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Paper } from '@mui/material';
 import CollapsableSection from '../components/CollapsableSection';
 import renderInputImage from '../utils/renderInputImage';
-import { getTekken1Guides } from '../utils/tekken1';
+import { getClassicTekkenGuides } from '../utils/classicTekken';
 import './Tekken1.css';
 
 const sectionTitles = {
@@ -18,15 +18,15 @@ const rowType = PropTypes.shape({
   notes: PropTypes.string,
 });
 
-function Portrait({ character, sheet }) {
+function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
-  const { x, y, width, height } = character.portrait;
+  const { x, y, width, height, image, fit } = character.portrait;
   return (
-    <span className="t1-portrait" style={{ aspectRatio: `${width} / ${height}` }}>
+    <span className="t1-portrait" style={{ aspectRatio: image ? '1' : `${width} / ${height}` }}>
       {failed ? <span className="t1-portrait-fallback">{character.name}</span> : (
-        <img src={sheet.image} alt={`${character.name} — Tekken 1 portrait`}
+        <img src={image || sheet.image} alt={`${character.name} — ${gameTitle} portrait`}
           onError={() => setFailed(true)}
-          style={{ width: `${sheet.width / width * 100}%`, maxWidth: 'none',
+          style={image ? { width: '100%', height: '100%', objectFit: fit || 'cover', objectPosition: 'center' } : { width: `${sheet.width / width * 100}%`, maxWidth: 'none',
             left: `${-x / width * 100}%`, top: `${-y / height * 100}%` }} />
       )}
     </span>
@@ -34,9 +34,10 @@ function Portrait({ character, sheet }) {
 }
 Portrait.propTypes = {
   character: PropTypes.shape({ name: PropTypes.string.isRequired,
-    portrait: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number,
+    portrait: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number, image: PropTypes.string, fit: PropTypes.string,
       width: PropTypes.number, height: PropTypes.number }).isRequired }).isRequired,
   sheet: PropTypes.shape({ image: PropTypes.string, width: PropTypes.number }).isRequired,
+  gameTitle: PropTypes.string.isRequired,
 };
 
 function MoveSection({ title, rows }) {
@@ -71,14 +72,17 @@ function NotationKey() {
       <p>Left punch · Right punch · Left kick · Right kick</p>
       <p>f / b / d / u = forward / back / down / up. Diagonals combine letters.
         A comma means next input; + means together; ~ before a direction means hold; &gt; separates combo steps.
-        FC means full crouch; n means return to neutral.
+        ~ between buttons means press them in quick succession.
+        FC means full crouch; WS means attack while rising from crouch; CH means counter hit; n means return to neutral.
         Tap, crouch, release and timing instructions appear beside the move.</p>
       <p>Use the input display settings in the navigation to switch between icons and notation.</p>
     </Paper>
   );
 }
 
-export default function Tekken1() {
+export default function ClassicTekken({ gameId }) {
+  const gameTitle = gameId === 'tekken-2' ? 'Tekken 2' : 'Tekken 1';
+  const rosterPath = `/games/${gameId}`;
   const { characterSlug } = useParams();
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
@@ -87,24 +91,28 @@ export default function Tekken1() {
   useEffect(() => {
     const controller = new AbortController();
     setError('');
-    getTekken1Guides({ signal: controller.signal }).then(setData).catch(err => {
-      if (err.name !== 'AbortError') setError('The Tekken 1 guides could not be loaded. Please try again.');
+    setData(null);
+    getClassicTekkenGuides(gameId, { signal: controller.signal }).then(result => {
+      if (!controller.signal.aborted) setData(result);
+    }).catch(err => {
+      if (err.name !== 'AbortError' && !controller.signal.aborted) setError(`The ${gameTitle} guides could not be loaded. Please try again.`);
     });
     return () => controller.abort();
-  }, [requestKey]);
+  }, [gameId, gameTitle, requestKey]);
   useEffect(() => { setSearch(''); }, [characterSlug]);
 
   const character = data?.characters.find(item => item.slug === characterSlug);
   const missing = Boolean(data && characterSlug && !character);
-  const title = missing ? 'Character not found — Tekken 1' : character
-    ? `${character.name} — Tekken 1 Moves & Combos` : 'Tekken 1 Character Guides';
+  const title = missing ? `Character not found — ${gameTitle}` : character
+    ? `${character.name} — ${gameTitle} Moves & Combos` : `${gameTitle} Character Guides`;
   const description = character
-    ? `${character.name}'s Tekken 1 throws, moves and combos in familiar 1/2/3/4 notation.`
-    : 'Explore the original Tekken: 17 character move lists, throws, 10 hit combos and juggle routes.';
+    ? `${character.name}'s ${gameTitle} throws, moves and combos in familiar 1/2/3/4 notation.`
+    : `Explore ${gameTitle}: character guides, throws, 10 hit combos and juggle routes.`;
   const characterSectionTitles = { ...sectionTitles,
+    ...(gameId === 'tekken-2' ? { moves: 'Key Moves' } : {}),
     ...(character?.sections.strings?.every(row => row.hits === 7) ? { strings: '7 Hit Combo' } : {}),
   };
-  const canonical = `https://tekktician.com/games/tekken-1${character ? `/${character.slug}` : ''}`;
+  const canonical = `https://tekktician.com${rosterPath}${character ? `/${character.slug}` : ''}`;
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
   return (
@@ -120,19 +128,19 @@ export default function Tekken1() {
       </Helmet>
       <nav className="t1-breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Games</Link><span>/</span>
-        {characterSlug ? <><Link to="/games/tekken-1">Tekken 1</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>Tekken 1</span>}
+        {characterSlug ? <><Link to={rosterPath}>{gameTitle}</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>{gameTitle}</span>}
       </nav>
       {error ? <div className="t1-status" role="alert"><h1>Couldn’t load the guides</h1><p>{error}</p>
         <button onClick={() => setRequestKey(key => key + 1)}>Try again</button></div>
-        : !data ? <p className="t1-status" role="status">Loading Tekken 1 guides…</p>
-        : missing ? <div className="t1-status"><h1>Character not found</h1><Link to="/games/tekken-1">Back to the Tekken 1 roster →</Link></div>
+        : !data ? <p className="t1-status" role="status">Loading {gameTitle} guides…</p>
+        : missing ? <div className="t1-status"><h1>Character not found</h1><Link to={rosterPath}>Back to the {gameTitle} roster →</Link></div>
         : <>
           <header className={`t1-header${character ? ' t1-header--character' : ''}`}>
-            {character && <Portrait character={character} sheet={data.portraits} />}
-            <div><p className="t1-kicker">Tekken 1 · PlayStation archive</p>
-              <h1>{character ? character.name : 'Back to the first fight.'}</h1>
-              <p>{character ? 'Throws, moves and combos. The original game, in familiar notation.'
-                : '17 fighters. Pick your character and get straight to the inputs.'}</p>
+            {character && <Portrait key={character.slug} character={character} sheet={data.portraits} gameTitle={gameTitle} />}
+            <div><p className="t1-kicker">{gameTitle} · {data.edition} archive</p>
+              <h1>{character ? character.name : data.tagline || 'Back to the first fight.'}</h1>
+              <p>{character ? 'Throws, moves and combos, in familiar notation.'
+                : `${data.characters.length} fighters. Pick your character and get straight to the inputs.`}</p>
             </div>
           </header>
           <NotationKey />
@@ -145,7 +153,7 @@ export default function Tekken1() {
                 <section id={`t1-${key}`} key={key} aria-label={title}><MoveSection title={title} rows={character.sections[key]} /></section> : null)}
             </div>
             {character.notes.length > 0 && <p className="t1-source-note">{character.notes.join(' ')}</p>}
-            <Link className="t1-back" to="/games/tekken-1">← Choose another fighter</Link>
+            <Link className="t1-back" to={rosterPath}>← Choose another fighter</Link>
           </> : <>
             <label className="t1-search">Find a fighter
               <input type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search the roster…" />
@@ -153,8 +161,8 @@ export default function Tekken1() {
             <p className="t1-result-count" role="status">{visibleCharacters.length} {visibleCharacters.length === 1 ? 'fighter' : 'fighters'}</p>
             <div className="t1-roster">
               {visibleCharacters.map(item => <Link className="t1-card" key={item.slug}
-                to={`/games/tekken-1/${item.slug}`} aria-label={`Open ${item.name} Tekken 1 guide`}>
-                <Portrait character={item} sheet={data.portraits} /><h2>{item.name}</h2><span>Move list & guide ↗</span>
+                to={`${rosterPath}/${item.slug}`} aria-label={`Open ${item.name} ${gameTitle} guide`}>
+                <Portrait character={item} sheet={data.portraits} gameTitle={gameTitle} /><h2>{item.name}</h2><span>Moves & combos ↗</span>
               </Link>)}
             </div>
             {!visibleCharacters.length && <p>No fighters match “{search}”. Try another name.</p>}
@@ -166,3 +174,4 @@ export default function Tekken1() {
     </main>
   );
 }
+ClassicTekken.propTypes = { gameId: PropTypes.oneOf(['tekken-1', 'tekken-2']).isRequired };

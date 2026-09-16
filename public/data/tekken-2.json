@@ -1,0 +1,3631 @@
+{
+  "schemaVersion": 1,
+  "gameId": "tekken-2",
+  "title": "Tekken 2",
+  "edition": "PlayStation",
+  "tagline": "The second round.",
+  "source": {
+    "label": "Tekken 2 move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Land the starting attack before continuing a route. Some endings hit grounded opponents and depend on their recovery; timing, range and opponent size matter. 10 hit combos are preset strings, not guaranteed juggles.",
+    "references": [
+      {
+        "id": "slikatel-combos",
+        "title": "Chin / Slikatel — Tekken 2 Combo Guide",
+        "url": "https://gamefaqs.gamespot.com/arcade/583639-tekken-2/faqs/966"
+      },
+      {
+        "id": "meanbean-guide",
+        "title": "Meanbean — Tekken 2 Move List and Guide",
+        "url": "https://gamefaqs.gamespot.com/ps/198899-tekken-2/faqs/939"
+      }
+    ]
+  },
+  "portraits": {
+    "credit": "Original Tekken 2 character artwork: Namco.",
+    "sourceUrl": "https://www.bandainamcoent.co.jp/cs/list/tekken2/frame.html"
+  },
+  "characters": [
+    {
+      "slug": "alex",
+      "name": "Alex",
+      "portrait": {
+        "image": "/characters/tekken-2/arex-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Headbutt",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Powerbomb",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jaguar Driver",
+            "input": "qcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "DDT",
+            "input": "db,db+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "db,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,hcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "df+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dynamite Uppercut",
+            "input": "FC ~df+2",
+            "notes": "Crouch fully before the uppercut.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer Strike",
+            "input": "df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "df+2",
+            "notes": "This is not the uppercut launcher used by most of the cast.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Middle Smash",
+            "input": "f,f+2",
+            "notes": "Launches on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Stomach Smash",
+            "input": "f,f,n+2",
+            "notes": "Stuns on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jail Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flying Cross Chop",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Animal Uppercut",
+            "input": "f,n,d,~df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tail Cutter",
+            "input": "db+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ali Kicks",
+            "input": "d+3+4,4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Knee Drop",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hopkick into jail kick",
+            "input": "uf+4 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hopkick into middle smash",
+            "input": "uf+4 > 1~2 > f,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Cross chop finish",
+            "input": "uf+4 > 1 > 1~2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Ali kick follow-up",
+            "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
+            "notes": "Finish with the low kicks as the opponent falls.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Wind-up punch",
+            "input": "~b+1",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": [
+        "Roger shares this move set."
+      ]
+    },
+    {
+      "slug": "angel",
+      "name": "Angel",
+      "portrait": {
+        "image": "/characters/tekken-2/angel-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Kick Throw",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shoulder Throw",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Wind God Fist",
+            "input": "f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "df+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thunder God Fist",
+            "input": "f,n,d,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist Combo",
+            "input": "1,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "WS 4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crushing Kick",
+            "input": "4~3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Forward Axe Kick",
+            "input": "f,f+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hell Sweeps",
+            "input": "f,n,d,~df+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jump kick into sweep",
+            "input": "uf+4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Wind god fist into axe kick",
+            "input": "f,n,d,~df+2 > 1 > f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Flash punch finish",
+            "input": "f,n,d,~df+2 > 1 > 1,1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Jab pair into high kick",
+            "input": "f,n,d,~df+2 > 1~2 > 4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut into wind god fist",
+            "input": "df+1,2 > 1 > f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "f,~f+2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Ground Laser",
+            "input": "1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Air Laser",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": [
+        "Devil shares this move set."
+      ]
+    },
+    {
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "portrait": {
+        "image": "/characters/tekken-2/anna-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Turn",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Lifting Toss",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Neck Throw",
+            "input": "~f+1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Embracing Elbow",
+            "input": "df,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Palm Grab",
+            "input": "qcf+1+2 > 1+2",
+            "notes": "Pause before the second 1+2 to catch the grab timing.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flip Kick",
+            "input": "FC uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cold Blade",
+            "input": "FC df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cat Thrust",
+            "input": "FC f+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Right Hand Stab",
+            "input": "FC f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Palm",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cross Cut Saw",
+            "input": "b+1,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Four-punch string",
+            "input": "1,2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kneeling Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Head Ringer",
+            "input": "3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hunting Kicks",
+            "input": "uf+4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Swan string",
+            "input": "df+3,2,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "~b+1+4",
+            "notes": "Time the reversal against an incoming attack.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into punch-kick string",
+            "input": "df+2 > 1 > 1,2,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into swan string",
+            "input": "df+2 > 1 > df+3,2,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double palm finish",
+            "input": "df+2 > 1~2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Head ringer into cold blade",
+            "input": "df+2 > 3,4 > FC df+2",
+            "notes": "Crouch for the low finish after the kicks.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Reaping Arm Bar",
+            "input": "3,4,3,1+2",
+            "notes": "During Palm Grab.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Standing Reverse Arm Lock",
+            "input": "1,3,2,1",
+            "notes": "During Palm Grab.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Falling Reverse Arm Lock",
+            "input": "2,1,3,4,1+2",
+            "notes": "During Standing Reverse Arm Lock.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Hunting Swan",
+            "input": "db+1+2",
+            "notes": "Tap up twice to cancel.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "armor-king",
+      "name": "Armor King",
+      "portrait": {
+        "image": "/characters/tekken-2/armorking-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Coconut Crush",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfall Suplex",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "DDT",
+            "input": "db,db+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "db,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jaguar Driver",
+            "input": "qcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,hcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "df+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Black Smash",
+            "input": "f,n,d,df+2",
+            "notes": "Crouch-dash uppercut launcher.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dark Smash",
+            "input": "f,n,d,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dynamite Uppercut",
+            "input": "FC ~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jail Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Middle Smash",
+            "input": "f,f+2",
+            "notes": "Launches on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Stomach Smash",
+            "input": "f,f,n+2",
+            "notes": "Stuns on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer Strike",
+            "input": "df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "df+2",
+            "notes": "This is not a launcher.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flying Cross Chop",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ali Kicks",
+            "input": "d+3+4,4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Black smash into jail kick",
+            "input": "f,n,d,df+2 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Frankensteiner finish",
+            "input": "f,n,d,df+2 > 1~2 > df+3+4",
+            "notes": "Use the drop on the falling opponent.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Two jab pairs",
+            "input": "f,n,d,df+2 > 1~2 > 1~2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Second black smash",
+            "input": "f,n,d,df+2 > f+1 > f,n,d,df+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,1,2,4,4,4,1,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Steiner Screwdriver",
+            "input": "d,d,d+1+2",
+            "notes": "During Backfall Suplex.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Super Knuckle Bomb",
+            "input": "uf+1+2 > ~d",
+            "notes": "Hold down during the jump.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "baek-doo-san",
+      "name": "Baek Doo San",
+      "portrait": {
+        "image": "/characters/tekken-2/baek-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Hammerhead",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Blue Shark Claw",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cobra Bite",
+            "input": "f,f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Swordfish",
+            "input": "db+1+3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Wing Blade",
+            "input": "f,n,d,df+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f,f+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer Heel",
+            "input": "f,~f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Knife Heel",
+            "input": "f+4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Break Blade",
+            "input": "3,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple Threat",
+            "input": "f+4,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "uf+3,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Albatross",
+            "input": "WS 4,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Wave Needle",
+            "input": "WS 3,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Butterfly Kicks",
+            "input": "3,3,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Low kick rush",
+            "input": "d+4,3,3,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flamingo",
+            "input": "b,b+3,n",
+            "notes": "Return to neutral after entering the stance.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Wing blade into butterfly kicks",
+            "input": "f,n,d,df+3 > 3,3,3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Wing blade into low kick rush",
+            "input": "f,n,d,df+3 > 1 > d+4,3,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hunting hawk into hammer heel",
+            "input": "f,n,d,df+3 > uf+3,4,3 > f,~f+4",
+            "notes": "Use Wing Blade as the launcher; the final heel hits the grounded opponent.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Break blade repeat",
+            "input": "3,4,3 > 3,4,3 > f,~f+4",
+            "notes": "Land the starting string to launch; finish with the grounded heel.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "4,3,3,4,3,3,3,4,3,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "4,3,4,3,3,3,3,3,4,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Heel Explosion",
+            "input": "db+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "bruce-irvin",
+      "name": "Bruce Irvin",
+      "portrait": {
+        "image": "/characters/tekken-2/bruce-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Knee Bash",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ribcrusher",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Embracing Knee",
+            "input": "f,d,~df+1+2+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Elbow Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Facebreaker",
+            "input": "df+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gatling string",
+            "input": "3,2,1,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple Knee",
+            "input": "b+4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cyclone and Tornado",
+            "input": "df+3,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple Sock",
+            "input": "f+1,2,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Southern Cross",
+            "input": "1,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Northern Lights",
+            "input": "1,2,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bazooka Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Slice Knee",
+            "input": "f,f+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple Kick",
+            "input": "f+4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Quick Kicks",
+            "input": "3,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sidestep Sledge",
+            "input": "1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into triple knee",
+            "input": "df+2 > b+4,3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Facebreaker into cyclone",
+            "input": "df+1,2 > df+1 > df+3,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut taps into quick kicks",
+            "input": "df+2 > df+1 > df+1 > 3,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Gatling into triple knee",
+            "input": "3,2,1 > b+4,3,4",
+            "notes": "Stop the opening Gatling string after 1, then go straight into the knees.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "chains": [
+          {
+            "name": "Tumbleweed",
+            "input": "1+2,1+2,1+2",
+            "notes": "During Embracing Knee.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Nightmare Back Knuckle",
+            "input": "b+2+3",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "devil",
+      "name": "Devil",
+      "portrait": {
+        "image": "/characters/tekken-2/devil-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Kick Throw",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shoulder Throw",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Wind God Fist",
+            "input": "f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "df+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thunder God Fist",
+            "input": "f,n,d,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist Combo",
+            "input": "1,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "WS 4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crushing Kick",
+            "input": "4~3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Forward Axe Kick",
+            "input": "f,f+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hell Sweeps",
+            "input": "f,n,d,~df+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jump kick into sweep",
+            "input": "uf+4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Wind god fist into axe kick",
+            "input": "f,n,d,~df+2 > 1 > f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Flash punch finish",
+            "input": "f,n,d,~df+2 > 1 > 1,1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Jab pair into high kick",
+            "input": "f,n,d,~df+2 > 1~2 > 4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut into wind god fist",
+            "input": "df+1,2 > 1 > f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "f,~f+2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Ground Laser",
+            "input": "1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Air Laser",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": [
+        "Angel shares this move set."
+      ]
+    },
+    {
+      "slug": "ganryu",
+      "name": "Ganryu",
+      "portrait": {
+        "image": "/characters/tekken-2/ganryu-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Jizo Hug",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Body Drop",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Lifting Toss",
+            "input": "~f+2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jaw Breaker",
+            "input": "f,~f+2+3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Float",
+            "input": "b,db,d,~df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Palm",
+            "input": "b,db,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thunder Palm",
+            "input": "df+2+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Palm Lift",
+            "input": "FC 1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Power Scissors",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "1+2,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ganryu Combo",
+            "input": "1,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Nodowa",
+            "input": "FC ~df+1,2,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kabuki",
+            "input": "d+2,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Devil Thrusts",
+            "input": "~f+1,2,1,2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thigh Quake",
+            "input": "d+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hip Press",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sit Down",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into double hammer",
+            "input": "df+2 > 1 > 1+2,1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Megaton float into palm",
+            "input": "b,db,d,~df+1 > b,db,d,~df+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Megaton float into double hammer",
+            "input": "b,db,d,~df+1 > 2 > 1+2,1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into alternating punches",
+            "input": "df+2 > 2 > 2~1 > 2~1",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Sumo Charge",
+            "input": "b+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "portrait": {
+        "image": "/characters/tekken-2/heihachi-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Breaker",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Powerbomb",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Wind God Fist",
+            "input": "f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "df+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thunder God Fist",
+            "input": "f,n,d,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist Combo",
+            "input": "1,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "WS 4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crushing Kick",
+            "input": "4~3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Demon God Fist",
+            "input": "f,f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Death Fist",
+            "input": "qcf+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Screw Blade",
+            "input": "uf+3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hell sweep into axe kicks",
+            "input": "f,n,d,~df+4,n+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shadow Foot",
+            "input": "b,b,n+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Wind god fist into flash punches",
+            "input": "f,n,d,~df+2 > 1 > 1,1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Death fist finish",
+            "input": "f,n,d,~df+2 > 1~2 > qcf+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Demon god fist into screw blade",
+            "input": "f,f+2 > 1 > uf+3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut into death fist",
+            "input": "df+1,2 > 1 > qcf+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "f,~f+2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "df+3,2,2,4,4,1,4,1,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "jack-2",
+      "name": "Jack-2",
+      "portrait": {
+        "image": "/characters/tekken-2/jack2-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Hell Press",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gorilla Press",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Piledriver",
+            "input": "db,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backbreaker",
+            "input": "qcb+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Pyramid Driver",
+            "input": "qcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Catapult",
+            "input": "df+2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Modified Catapult",
+            "input": "df,df+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Violent Uppercut",
+            "input": "WS 1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bravo Knuckle",
+            "input": "~d+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Strike",
+            "input": "FC 1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gigaton Punches",
+            "input": "b,b+1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Power Scissors",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Sweep",
+            "input": "b,db,d,~df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Knuckle",
+            "input": "b,db,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer into double uppercut",
+            "input": "1+2,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Punches into uppercut",
+            "input": "2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut rush",
+            "input": "~df+2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cossack Kicks",
+            "input": "~db+3,4,3,4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hip Press",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sit Down",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into hammer pair",
+            "input": "df+2 > 1+2,1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Low punch follow-up",
+            "input": "df+2 > db+1 > ~d+1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Catapult into hammer pair",
+            "input": "df,df+1+2 > ~f+1+2,1+2",
+            "notes": "Start by landing the Modified Catapult throw.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Forward punch into hammer pair",
+            "input": "df+2 > f+2 > f+1+2,1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "~d+2,1,1,1,2,1,2,1,1+2,1+2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "uf+1,1,4,3,4,1,2,1,1+2,1+2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "jun-kazama",
+      "name": "Jun Kazama",
+      "portrait": {
+        "image": "/characters/tekken-2/jun-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Bar",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Serpent Twist",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Striking Oshi Taoshi",
+            "input": "df+2+3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Charging Strike",
+            "input": "~f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Can-Can Kicks",
+            "input": "d+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Middle screw into can-can",
+            "input": "f+1,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Punches into can-can",
+            "input": "1,1,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Cartwheel Kick",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "White Heron string",
+            "input": "1+4,2,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sweeps into cartwheel",
+            "input": "db+4,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backflip into uppercut",
+            "input": "b+3,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backflip sweep string",
+            "input": "b+3,4,4,4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "~b+1+3",
+            "notes": "Time the reversal against an incoming attack.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Charging strike into cartwheel",
+            "input": "~f+2 > 3+4 > 1+4",
+            "notes": "The last kick follows the cartwheel knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Can-can into white heron",
+            "input": "d+3+4 > 1+4,2,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Middle screw into sweep string",
+            "input": "~f+1,4 > 3~4,4,4,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Can-can string into punch-kick finish",
+            "input": "1,1,4 > 1,1,3",
+            "notes": "Land the opening string to launch.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "WS 2,1,1,1,2,1,4,3,3+4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Spinning kick",
+            "input": "~f+3",
+            "notes": "Release forward to execute the attack.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "portrait": {
+        "image": "/characters/tekken-2/kazuya-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Kick Throw",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shoulder Throw",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Wind God Fist",
+            "input": "f,n,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Uppercut",
+            "input": "df+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Thunder God Fist",
+            "input": "f,n,d,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist Combo",
+            "input": "1,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "WS 4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crushing Kick",
+            "input": "4~3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shortcut Wind God Fist",
+            "input": "f,n,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Standing Double Axe Kick",
+            "input": "df+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "WS 2",
+            "notes": "The close counter hit causes the stun used for follow-ups.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hell Sweeps",
+            "input": "f,n,d,~df+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jump kick into sweeps",
+            "input": "uf+4,4,4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Shortcut uppercut into double uppercut",
+            "input": "f,n,~df+2 > 1 > df+1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Flash punch finish",
+            "input": "f,n,~df+2 > 1 > 1,1,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double axe kick finish",
+            "input": "f,n,~df+2 > 1~2 > df+4,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double uppercut repeat",
+            "input": "df+1,2 > df+1,2 > df+4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "f,~f+2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "portrait": {
+        "image": "/characters/tekken-2/king-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Coconut Crush",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfall Suplex",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "DDT",
+            "input": "db,db+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,hcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Figure Four",
+            "input": "db+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "db,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "df+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jaguar Driver",
+            "input": "qcf+1",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dynamite Uppercut",
+            "input": "FC ~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Middle Smash",
+            "input": "f,f+2",
+            "notes": "Launches on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Stomach Smash",
+            "input": "f,f,n+2",
+            "notes": "Stuns on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer Strike",
+            "input": "df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "df+2",
+            "notes": "This is not a launcher.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jail Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ali Kicks",
+            "input": "d+3+4,4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ali kick into middle smash",
+            "input": "d+3+4,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Quick Elbow Drop",
+            "input": "d+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flying Cross Chop",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Drop Kick",
+            "input": "f,f+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Knee Drop",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hopkick into jail kick",
+            "input": "uf+4 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hopkick into middle smash",
+            "input": "uf+4 > 1~2 > f,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Ali kick into smash finish",
+            "input": "uf+4 > 1~2 > d+3+4,2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Ali kick follow-up",
+            "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
+            "notes": "Finish with the low kicks as the opponent falls.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,1,2,4,4,4,1,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,1,1,3,3,4,3,2,1+2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Flying Press",
+            "input": "1+2",
+            "notes": "During Jaguar Driver.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Boston Crab",
+            "input": "1+2,3,4,1+2",
+            "notes": "During Jaguar Driver, just after the top of the lift.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "kuma",
+      "name": "Kuma",
+      "portrait": {
+        "image": "/characters/tekken-2/kuma-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Hell Press",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bear Bites",
+            "input": "~f+2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Headbutt",
+            "input": "~b+2+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bear Heaven Cannon",
+            "input": "f+1~1~1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Elbows into uppercut",
+            "input": "2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut rush",
+            "input": "~df+1,2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crouching bear rush",
+            "input": "FC ~df+1,2,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer into double uppercut",
+            "input": "1+2,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Salmon Hunter",
+            "input": "b,f+2+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Bear Scissors",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Claw",
+            "input": "b,db,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hip Press",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sit Down",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into hammer pair",
+            "input": "df+2 > f+1 > 1+2,1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into bear heaven cannon",
+            "input": "df+2 > f+1 > f+1~1~1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Bear heaven cannon repeat",
+            "input": "f+1~1~1 > f+1~1~1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Right punch into hammer pair",
+            "input": "df+2 > 2 > 1+2,1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "~d+2,1,1,1,2,1,2,1,1+2,1+2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Terrible Claw",
+            "input": "~b+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "kunimitsu",
+      "name": "Kunimitsu",
+      "portrait": {
+        "image": "/characters/tekken-2/kunimitsu-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Flying Press",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jawcrusher",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hip Lock",
+            "input": "db+1+3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Rising Uppercut",
+            "input": "WS 2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist",
+            "input": "~f+2",
+            "notes": "Turns the opponent around on hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Hilt Strikes",
+            "input": "~b+1,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Leg Sweeps",
+            "input": "FC ~db+3,3,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Sweep",
+            "input": "FC df+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jumping Knee",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flipping Stomp",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spiral Launch and Dive",
+            "input": "f,f+3+4,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Lightning Kicks",
+            "input": "3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple High Kick",
+            "input": "4,4,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercuts into hilt and kick",
+            "input": "df+2 > df+1 > ~b+1 > n+2,3",
+            "notes": "Release back before the final punch-kick string.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Two jabs into flipping stomp",
+            "input": "df+2 > 1 > 1 > uf+3+4",
+            "notes": "Use the stomp as the opponent falls.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hilt into four-hit string",
+            "input": "df+2 > ~b+1 > 1,2,1,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Knee into flipping stomp",
+            "input": "df+2 > f+1 > f,f+4 > uf+3+4",
+            "notes": "The stomp follows the knee knockdown.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,4,4,4,1,2,3,2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Kunai Stab",
+            "input": "db+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kunai Murder",
+            "input": "b+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kunai Advance",
+            "input": "f,f,n+2",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan",
+      "portrait": {
+        "image": "/characters/tekken-2/lee-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Fracture",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Chastisement Punch",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Knee Bash",
+            "input": "f,f+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flip Kick",
+            "input": "FC uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Knuckle Combo",
+            "input": "~f+2,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Blazing Kick",
+            "input": "d,db+4",
+            "notes": "Launches on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f,f+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Axe Kick",
+            "input": "WS 3,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Slide Kick",
+            "input": "FC df,d,df+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dropping Slide",
+            "input": "f,f,n+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "High kick into flip",
+            "input": "4,u+3",
+            "notes": "Tap up and 3 immediately after the high kick.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Three-kick string",
+            "input": "4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shredder Kicks",
+            "input": "f,f,n+3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Back Handspring",
+            "input": "b,b,n+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into three kicks",
+            "input": "df+2 > 1 > 4,3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into axe kick",
+            "input": "df+2 > 1 > f,~f+3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Dropping slide finish",
+            "input": "df+2 > 1 > 1~2 > f,f,n+3+4",
+            "notes": "Slide after the punch knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hopkick into triple kick",
+            "input": "uf+4 > 3,3,3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "df+1,2,2,1,3,3,3,4,3,4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Silver Fang",
+            "input": "db+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "portrait": {
+        "image": "/characters/tekken-2/lei-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Jumping Bird",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sleeper Hold",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tai Trip",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Quick Turn",
+            "input": "b+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Quick Drop",
+            "input": "d+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kangaroo Kick",
+            "input": "d+3+4 > 3+4",
+            "notes": "Drop with your head toward the opponent, then kick from the ground.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Punch",
+            "input": "1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Razor Rush",
+            "input": "f,n+1,2,1,2,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kick-punch rush",
+            "input": "f,n+4,1,2,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sweep into jumping kick",
+            "input": "db+4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dropping ankle into rolling kicks",
+            "input": "4~4,3,3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hopkick into razor rush",
+            "input": "uf+4 > 1 > f,n+1,2,1,2,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hopkick into kick-punch rush",
+            "input": "uf+4 > 1 > f,n+4,1,2,3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Spinning punch into low kick",
+            "input": "uf+4 > 1 > 1+2 > ~d+4",
+            "notes": "Use the low kick after the spinning punch knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into rolling kicks",
+            "input": "df+2 > 4~4,3,3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,3+4,2,1,4,1,2,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Phoenix Strike",
+            "input": "~b+1+4",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "marshall-law",
+      "name": "Marshall Law",
+      "portrait": {
+        "image": "/characters/tekken-2/law-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Dragon Dive",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Chastisement Punch",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dragon Knee",
+            "input": "f,f+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flip Kick",
+            "input": "FC u+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Knuckle Combo",
+            "input": "~f+2,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dragon Tail",
+            "input": "db+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dragon Slide",
+            "input": "FC df,d,df+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Three-kick string",
+            "input": "4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kicks into flip",
+            "input": "3,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Flip Kick",
+            "input": "3+4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Front kick into flip",
+            "input": "WS 4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spin kick into flip",
+            "input": "WS 3,4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into three kicks",
+            "input": "df+2 > 1 > 4,3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "High kick into flip",
+            "input": "df+2 > n+4,u+3",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Dragon tail finish",
+            "input": "df+2 > 1~2 > db+4",
+            "notes": "Sweep after the punch knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Rising kick and flip repeat",
+            "input": "WS 4,3 > WS 4,3",
+            "notes": "Return to crouch between the two rising kick strings.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "df+1,2,2,1,3,3,3,4,3,4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "df+1,3,2,2,3,3,3,4,3,4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Dragon Fall",
+            "input": "1,2,1+2",
+            "notes": "During Chastisement Punch.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dragon Fang",
+            "input": "db+1+2",
+            "notes": "Tap up twice to cancel.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "michelle-chang",
+      "name": "Michelle Chang",
+      "portrait": {
+        "image": "/characters/tekken-2/michelle-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Front Suplex",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Fisherman Suplex",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Nelson Suplex",
+            "input": "f,df+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Rushing Uppercut",
+            "input": "f+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sky Uppercut",
+            "input": "df+2,1",
+            "notes": "The first hit must connect against a standing opponent to set up the launch.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Punt into uppercut",
+            "input": "2+3,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Catapult",
+            "input": "df+1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Slice string",
+            "input": "3~2,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Rushing Elbow",
+            "input": "f,f+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crouching Elbow",
+            "input": "FC df+2",
+            "notes": "Stuns on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Elbow into kick",
+            "input": "f,f+1,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Punch",
+            "input": "1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Leg sweep into uppercut",
+            "input": "d+4,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Earthquake Stomp",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Rushing uppercut into punt",
+            "input": "f+1 > 2+3,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Jab into rushing uppercut",
+            "input": "f+1 > 1 > f+1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Heaven cannon into sweep",
+            "input": "f+1+4 > 1 > d+4,1",
+            "notes": "Launch with the unblockable first.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Counter-hit elbow into punt",
+            "input": "CH FC df+2 > 2+3,1",
+            "notes": "Crouch fully; the elbow must counter hit for the stun.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "2,1,1,2,3,3,2,3,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Heaven Cannon",
+            "input": "f+1+4",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "portrait": {
+        "image": "/characters/tekken-2/nina-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Turn",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Neck Throw",
+            "input": "~f+1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Lifting Toss",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Embracing Elbow",
+            "input": "df,df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Palm Grab",
+            "input": "qcf+1+2 > 1+2",
+            "notes": "Pause before the second 1+2 to catch the grab timing.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Rising Spin Kick",
+            "input": "d,db+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Falling ankle into rising spin",
+            "input": "db+4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Palm",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kneeling Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backhand",
+            "input": "b+2",
+            "notes": "The close counter hit causes a stun.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Head Ringer",
+            "input": "3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hunting Kicks",
+            "input": "uf+4,3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Swan string",
+            "input": "df+3,2,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Low kick into chop",
+            "input": "d+4,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "~b+1+4",
+            "notes": "Time the reversal against an incoming attack.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercut into punch-kick string",
+            "input": "df+2 > 1 > 1,2,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Double palm finish",
+            "input": "df+2 > 1~2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Spin kick into low-high kicks",
+            "input": "d,db+3 > uf+3 > d+3,4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into swan variation",
+            "input": "df+2 > 1 > df+3,2,3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,1,2,4,3,4,2,4,3",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Falling Elbow",
+            "input": "1,2,1",
+            "notes": "During Lifting Toss.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Arm Lock",
+            "input": "2,1,3",
+            "notes": "During Falling Elbow.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Reaping Arm Bar",
+            "input": "3,4,3,1+2",
+            "notes": "During Palm Grab.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Standing Reverse Arm Lock",
+            "input": "1,3,2,1",
+            "notes": "During Palm Grab.",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "portrait": {
+        "image": "/characters/tekken-2/paul-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Shoulder Throw",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shoulder Popper",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Stomach Throw",
+            "input": "~b+1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shoulder Ram",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Shiho Nage",
+            "input": "df+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Death Fist",
+            "input": "qcf+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flash Elbow",
+            "input": "f,f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Elbow into leg punch",
+            "input": "FC df+2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Falling Leaf",
+            "input": "d+4,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Jump Kick",
+            "input": "uf+3,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Triple kick string",
+            "input": "f,f+3,4,d+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Somersault",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tile splitter into death fist",
+            "input": "d+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "~b+1+3",
+            "notes": "Time the reversal against an incoming attack.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hopkick into uppercut and death fist",
+            "input": "uf+4 > df+1 > 1 > qcf+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Jab pair into death fist",
+            "input": "uf+4 > 1~2 > qcf+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Triple kick finish",
+            "input": "uf+4 > 1~2 > f,f+3,4,d+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into double jump kick",
+            "input": "df+2 > 1 > uf+3~4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,3,2,1,2,1,4,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,3,1,4,2,1,4,2,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Super Death Fist",
+            "input": "b+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "prototype-jack",
+      "name": "Prototype Jack",
+      "portrait": {
+        "image": "/characters/tekken-2/pjack-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Hell Press",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Punishment Drop",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Slap Down",
+            "input": "~db+2+3",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Exploder",
+            "input": "b,db,d,~df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Megaton Knuckle",
+            "input": "b,db,d,~df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Punches into uppercut",
+            "input": "2,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer into double uppercut",
+            "input": "1+2,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Power Scissors",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Blast string",
+            "input": "d+1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Machine Gun Punches",
+            "input": "db+1,1,1,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Crouching uppercut rush",
+            "input": "FC ~df+1,2,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Head Slide",
+            "input": "f+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hip Press",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Exploder into head slide",
+            "input": "b,db,d,~df+1 > 2 > 2 > f+3+4",
+            "notes": "Slide after the punches knock the opponent away.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Exploder into hammer pair",
+            "input": "b,db,d,~df+1 > 2 > 1+2,1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Exploder into hip press",
+            "input": "b,db,d,~df+1 > 3 > uf+3+4",
+            "notes": "The hip press follows the kick knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into megaton knuckle",
+            "input": "df+2 > b,db,d,~df+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "~d+2,1,1,1,2,1,2,1,1+2,1+2",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "chains": [
+          {
+            "name": "Gigaton follow-up",
+            "input": "b,db,d,~df+2",
+            "notes": "During Punishment Drop.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dive Bomber",
+            "input": "3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dark Cutter",
+            "input": "f+4~1",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "roger",
+      "name": "Roger",
+      "portrait": {
+        "image": "/characters/tekken-2/roger.gif",
+        "fit": "contain",
+        "width": 198,
+        "height": 350
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Headbutt",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Powerbomb",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jaguar Driver",
+            "input": "qcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "DDT",
+            "input": "db,db+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "db,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,hcf+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "df+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Dynamite Uppercut",
+            "input": "FC ~df+2",
+            "notes": "Crouch fully before the uppercut.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hammer Strike",
+            "input": "df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "df+2",
+            "notes": "This is not the uppercut launcher used by most of the cast.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Middle Smash",
+            "input": "f,f+2",
+            "notes": "Launches on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Stomach Smash",
+            "input": "f,f,n+2",
+            "notes": "Stuns on counter hit.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jail Kick",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flying Cross Chop",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Animal Uppercut",
+            "input": "f,n,d,~df+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Tail Cutter",
+            "input": "db+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Ali Kicks",
+            "input": "d+3+4,4,4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Knee Drop",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hopkick into jail kick",
+            "input": "uf+4 > 1 > f,f+4",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Hopkick into middle smash",
+            "input": "uf+4 > 1~2 > f,f+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Cross chop finish",
+            "input": "uf+4 > 1 > 1~2 > f,f+1+2",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Ali kick follow-up",
+            "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
+            "notes": "Finish with the low kicks as the opponent falls.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Wind-up punch",
+            "input": "~b+1",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": [
+        "Alex shares this move set."
+      ]
+    },
+    {
+      "slug": "wang-jinrei",
+      "name": "Wang Jinrei",
+      "portrait": {
+        "image": "/characters/tekken-2/wang-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Throw",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Reaping Throw",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Whirlwind Throw",
+            "input": "df+1+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Waning Moon",
+            "input": "df,df+2+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Catapult",
+            "input": "1~1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Rising slice string",
+            "input": "WS 2,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sky Uppercut",
+            "input": "df+2,1",
+            "notes": "The first hit must connect against a standing opponent to set up the launch.",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Hopkick",
+            "input": "uf+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Death Fist",
+            "input": "qcf+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Front Punch",
+            "input": "f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Double Palm",
+            "input": "f,f+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Low Double Fist",
+            "input": "df+1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Leg sweep into uppercut",
+            "input": "d+4,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kick into sweep and uppercut",
+            "input": "4,d+4,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backsweep into fan kick",
+            "input": "FC df+4,3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Earthquake Stomp",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Catapult into sweep and uppercut",
+            "input": "1~1,1 > 1 > d+4,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Catapult repeat",
+            "input": "1~1,1 > 1~1,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Rising slice into sweep",
+            "input": "WS 2,1,1 > d+4,1",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Sky uppercut into low double fist",
+            "input": "df+2,1 > f,f > d+4,1 > df+1+2",
+            "notes": "Land both starting hits; dash in for the sweep. The double fist finishes low.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "portrait": {
+        "image": "/characters/tekken-2/yoshimitsu-face.gif",
+        "fit": "cover",
+        "width": 110,
+        "height": 122
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Flying Press",
+            "input": "1+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jawcrusher",
+            "input": "2+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Missile Press",
+            "input": "qcb+1+2",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Uppercut",
+            "input": "df+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Kangaroo Kick",
+            "input": "4~3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Backfist",
+            "input": "~f+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Hilt Strikes",
+            "input": "~b+1,1,1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Fist Strikes",
+            "input": "~db+2,2,2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning Sweep",
+            "input": "FC df+3",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Jumping Knee",
+            "input": "f,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Flipping Stomp",
+            "input": "uf+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spiral Launch and Dive",
+            "input": "f,f+3+4,1+2",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Spinning sweeps into falling tree",
+            "input": "~db+3,3,3,3,f+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Teleport",
+            "input": "~b+3+4",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sit Down",
+            "input": "d+3+4",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Uppercuts into hilt and kick",
+            "input": "df+2 > df+1 > ~b+1 > n+2,3",
+            "notes": "Release back before the final punch-kick string.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Two jabs into flipping stomp",
+            "input": "df+2 > 1 > 1 > uf+3+4",
+            "notes": "Use the stomp as the opponent falls.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Kangaroo into knee and stomp",
+            "input": "4~3 > ~b+1 > 1 > f,f+4 > uf+3+4",
+            "notes": "The stomp follows the knee knockdown.",
+            "sourceId": "slikatel-combos"
+          },
+          {
+            "name": "Uppercut into knee and stomp",
+            "input": "df+2 > f+1 > f,f+4 > uf+3+4",
+            "notes": "The stomp follows the knee knockdown.",
+            "sourceId": "meanbean-guide"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,4,4,4,1,1,1,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,1,4,2,2,2,4,1,1",
+            "hits": 10,
+            "sourceId": "meanbean-guide",
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Shoulder Cut",
+            "input": "db+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Sword Thrust",
+            "input": "b,b+1",
+            "sourceId": "meanbean-guide"
+          },
+          {
+            "name": "Saw Blade",
+            "input": "b,b+1,n+1",
+            "sourceId": "meanbean-guide"
+          }
+        ]
+      },
+      "notes": []
+    }
+  ]
+}
