@@ -6,6 +6,7 @@ import { getTekkenTag2Essentials } from '../utils/apiClient';
 import renderInputImage from '../utils/renderInputImage';
 import { StanceContext } from '../context/StanceContext';
 import { tekkenTag2StanceLabels } from '../data/tekkenTag2Notation';
+import { getTag2TeamRoutes } from '../utils/tag2Teams';
 import './Tekken7.css';
 import './TekkenTag2.css';
 
@@ -33,6 +34,32 @@ function TagBasics() {
   </details>;
 }
 
+function InputKey() {
+  return <details className="t7-key"><summary>Input key</summary><p>1 = left punch · 2 = right punch · 3 = left kick · 4 = right kick · {renderInputImage('tag')} = tag button (5).</p>
+    <p>+ = together · ~ between inputs = immediately after · ~ before a direction = hold · : = strict timing. WS = while rising · FC = full crouch · CH = counter hit.</p>
+    <p>{renderInputImage('bound')} = Bound (B!), Tag 2’s juggle extender · {renderInputImage('into')} = next combo step. Commas stay within a move or string.</p>
+  </details>;
+}
+
+function TeamCombos({ character, characters }) {
+  const [partner, setPartner] = useState('all');
+  const routes = getTag2TeamRoutes(characters, character.slug);
+  const fighter = slug => characters.find(c => c.slug === slug);
+  const partners = [...new Set(routes.map(r => r.teammate))].map(fighter).sort((a,b) => a.name.localeCompare(b.name));
+  const visible = routes.filter(r => partner === 'all' || r.teammate === partner);
+  if (!routes.length) return null;
+  return <section className="t7-section" id="tag2-team"><div className="tag2-team-heading"><div><h2>Team Combos</h2><p className="t7-small">{routes.length} routes · {partners.length} partners. Both starting orders included.</p></div>
+    <label className="tag2-partner-select">Choose partner<select value={partner} onChange={e => setPartner(e.target.value)}><option value="all">All partners</option>{partners.map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}</select></label></div>
+    <p className="t7-small" role="status">{visible.length} {visible.length === 1 ? 'combo' : 'combos'}{partner !== 'all' && ` with ${fighter(partner).name}`}</p>
+    {visible.map((combo,i) => <details className="tag2-team" key={`${partner}-${combo.id}`} open={i === 0}>
+      <summary><img src={fighter(combo.teammate).image} width="44" height="47" alt="" loading="lazy" /><span className="tag2-team-title"><strong>{fighter(combo.teammate).name}</strong><small>{fighter(combo.lead).name} starts · {combo.type}{combo.requirement && <em>{combo.requirement}</em>}</small></span><span className="tag2-starter"><small>Starter</small>{renderInputImage(combo.steps[0].input.split(' into ')[0])}</span><span className="tag2-expand" aria-hidden="true">+</span></summary>
+      <div className="tag2-team-body"><ol>{combo.steps.map((step,j) => <li className={step.fighter === combo.lead ? 'tag2-lead-step' : 'tag2-assist-step'} key={j}><strong>{fighter(step.fighter).name}{step.role && <small>{step.role}</small>}</strong><div className="t7-input">{renderInputImage(step.input)}</div></li>)}</ol>{combo.notes && <p className="t7-small">{combo.notes}</p>}
+        <Link className="tag2-partner-guide" to={`${rosterPath}/${combo.teammate}`}>{fighter(combo.teammate).name} guide</Link></div>
+    </details>)}
+  </section>;
+}
+TeamCombos.propTypes = { character: PropTypes.object.isRequired, characters: PropTypes.array.isRequired };
+
 export default function TekkenTag2() {
   const { characterSlug } = useParams();
   const { hash } = useLocation();
@@ -57,9 +84,8 @@ export default function TekkenTag2() {
   }, [character, hash]);
   const missing = Boolean(data && characterSlug && !character);
   const visible = data?.characters.filter(c => c.name.toLowerCase().includes(search.trim().toLowerCase()));
-  const nameOf = slug => data.characters.find(c => c.slug === slug)?.name || slug;
-  const partnerRoutes = character && data.characters.flatMap(c => c.teamCombos.filter(t => t.partner === character.slug).map(t => ({ lead: c, combo: t })));
-  const labels = { ...tekkenTag2StanceLabels, ...Object.fromEntries((character?.stances || []).map(s => [s.abbreviation,s.name])) };
+  const teamRoutes = character ? getTag2TeamRoutes(data.characters, character.slug) : [];
+  const labels = { ...Object.fromEntries((data?.characters || []).flatMap(c => c.stances).map(s => [s.abbreviation,s.name])), ...tekkenTag2StanceLabels };
   return <StanceContext.Provider value={labels}><main className="t7-page tag2-page">
     <nav className="t7-breadcrumb" aria-label="Breadcrumb"><Link to="/">Games</Link><span>/</span>
       {characterSlug ? <><Link to={rosterPath}>Tekken Tag 2</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>Tekken Tag 2</span>}
@@ -68,16 +94,16 @@ export default function TekkenTag2() {
       : !data ? <p className="t7-status" role="status">Loading Tag 2 guides…</p>
       : missing ? <div className="t7-status"><h1>Character not found</h1><Link to={rosterPath}>Back to the roster →</Link></div>
       : <><header className="t7-header"><div><p className="t7-kicker">Tekken Tag Tournament 2 · Essentials</p><h1>{character?.name || 'Tekken Tag Tournament 2 Combos & Guides'}</h1>
-        <p>{character ? 'Launch. Bound. Tag.' : '59 fighters. Practical combos and the inputs that matter.'}</p></div>
+        <p>{character ? 'Launch. Bound. Tag.' : `59 fighters. ${data.characters.reduce((total,c) => total+c.teamCombos.length,0)} team routes. Find your duo.`}</p></div>
         {character && <img className="tag2-portrait" src={character.image} alt={character.name} width="100" height="106" />}
       </header>
-      {!character ? <><TagBasics /><label className="t7-search">Find your fighter<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search characters…" /></label>
+      {!character ? <><label className="t7-search">Find your fighter<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search characters…" /></label>
         <div className="tag2-roster">{visible.map(c => <Link className="tag2-fighter" key={c.slug} to={`${rosterPath}/${c.slug}`}>
-          <img src={c.image} alt="" loading="lazy" width="100" height="106" /><span>{c.name}{c.mimic && <small>{c.slug === 'mokujin' ? 'Mimic' : 'Custom moveset'}</small>}</span><small className="tag2-guide-label">View guide</small>
-        </Link>)}</div>{!visible.length && <p role="status">No fighters match that search.</p>}</>
+          <div className="tag2-card-art"><img src={c.image} alt="" loading="lazy" width="100" height="106" /></div><span>{c.name}</span><small className="tag2-guide-label">{c.mimic ? c.slug === 'mokujin' ? 'Mimic guide' : 'Custom moveset' : 'Combos & guide'}</small>
+        </Link>)}</div>{!visible.length && <p role="status">No fighters match that search.</p>}<div className="tag2-roster-help"><TagBasics /><InputKey /></div></>
         : <><nav className="t7-sections" aria-label="Guide sections">
           {!character.mimic && <><a href="#tag2-combos">Combos</a><a href="#tag2-punish">Punishers</a><a href="#tag2-moves">Bound & tag</a></>}
-          {(character.teamCombos.length > 0 || partnerRoutes.length > 0) && <a href="#tag2-team">Team combos</a>}
+          {teamRoutes.length > 0 && <a href="#tag2-team">Team combos ({teamRoutes.length})</a>}
         </nav><div className="t7-guide" key={character.slug}>
           {character.mimic ? <section className="t7-section"><h2>{character.slug === 'mokujin' ? 'Use the copied fighting style' : 'Build around your equipped moves'}</h2><p>{character.mimic}</p><Link to={rosterPath}>Find the original fighter’s guide →</Link></section>
             : <><section className="t7-section" id="tag2-combos"><h2>Main Combos</h2><div className="t7-combos">
@@ -93,17 +119,8 @@ export default function TekkenTag2() {
               <section className="t7-section"><h2>Tag Launchers</h2><p className="t7-small">Tap TAG during the move when it launches. Your partner takes over; counter-hit and crouch requirements still apply.</p>
                 <ul className="tag2-moves">{character.tagLaunchers.map(m => <li key={m.input}>{renderInputImage(m.input)}</li>)}</ul></section></div>
           </>}
-          {(character.teamCombos.length > 0 || partnerRoutes.length > 0) && <section className="t7-section" id="tag2-team"><h2>Team Combos</h2>
-            {character.teamCombos.map((combo,i) => <article className="t7-combo tag2-team" key={i}><h3>{combo.type} · with <Link to={`${rosterPath}/${combo.partner}`}>{nameOf(combo.partner)}</Link></h3>
-              <ol>{combo.steps.map((step,j) => <li key={j}><strong>{nameOf(step.fighter)}</strong><div className="t7-input">{renderInputImage(step.input)}</div></li>)}</ol><p>{combo.notes}</p></article>)}
-            {partnerRoutes.length > 0 && <div className="tag2-partner-links"><p className="t7-small">With this fighter as the partner:</p>{partnerRoutes.map(({lead,combo},i) => <Link key={i} to={`${rosterPath}/${lead.slug}#tag2-team`}>{lead.name} → {combo.type}</Link>)}</div>}
-          </section>}
+          <TeamCombos key={character.slug} character={character} characters={data.characters} />
           {character.stances.length > 0 && <details className="t7-key"><summary>Stances & entry inputs</summary><dl className="tag2-stances">{character.stances.map(s => <div key={s.abbreviation}><dt>{s.abbreviation}</dt><dd><strong>{s.name}</strong><div className="t7-input">{renderInputImage(s.input)}</div>{s.notes && <small>{s.notes}</small>}</dd></div>)}</dl></details>}
-          <TagBasics />
-          <details className="t7-key"><summary>Input key</summary><p>1 = left punch · 2 = right punch · 3 = left kick · 4 = right kick · {renderInputImage('tag')} = tag button (5).</p>
-            <p>+ = together · ~ between inputs = immediately after · ~ before a direction = hold · : = strict timing. WS = while rising · FC = full crouch · CH = counter hit.</p>
-            <p>{renderInputImage('bound')} = Bound (B!), Tag 2’s juggle extender · {renderInputImage('into')} = next combo step. Commas stay within a move or string.</p>
-          </details>
         </div><Link className="t7-back" to={rosterPath}>← All Tag 2 fighters</Link></>}
       </>}
   </main></StanceContext.Provider>;

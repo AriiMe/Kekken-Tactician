@@ -46,6 +46,36 @@ The backend owns `content/essentials/tekken-tag-2.json`; the frontend requests
   Combot do not receive fabricated fixed combos. Routes are source-checked,
   not claimed to have been replayed in a game emulator.
 
+## Partner combo expansion
+
+The backend now contains 187 team routes (176 additions), alongside the existing
+115 solo routes. All 57 fixed movesets have at least two available team routes
+as a starter or partner. A route is displayed in full on both fighters' pages;
+the partner filter includes both starting orders without duplicating storage.
+
+- [Kage Website community combo database](https://ttt2combo.kagewebsite.com/)
+  and its [input legend](https://ttt2combo.kagewebsite.com/help) were reviewed.
+  Each added route has its original `combo<ID>` URL and a stable ID in the data.
+  The user's [Armor King / King example](https://ttt2combo.kagewebsite.com/searchcombo/armorking-king/)
+  contributes five routes in both directions, including a tag-launch → partner
+  bound → assist → partner finish sequence (#1300).
+- Source commas separate moves; spaces inside a command become our button/string
+  notation. Semicolons specify automatic Tag Assault switches. Where contributors
+  omitted semicolons, tag launchers and bound inputs were inspected individually
+  to assign the active fighter. We do not infer arbitrary partner substitutions.
+- Conditions are retained: #1580 requires a counter-hit starter; #2021 and #2159
+  start against a back-turned opponent; #2269 has tight ender timing. Damage
+  claims, Rage totals and contributor prose are not imported.
+- Excluded incomplete/unclear inputs and mismatched fighters (for example #1139
+  lists Bruce inputs under Eddy), unsupported MUS shorthand (#2613), the floor
+  condition in #2044, and the wall-dependent description of #2412.
+- Added Tag 2 stance labels come from the source's icon legend. The parser keeps
+  attack chords together when TAG is appended (`df+1+2+5` renders a 1+2 chord,
+  not separate 1 and 2 buttons). All imported inputs were checked for unknown
+  notation tokens. These are source-checked routes, not emulator-tested claims.
+- Shared controls and notation explanations live on character select only.
+  Character pages retain their own stance entries and per-route requirements.
+
 ## Artwork
 
 59 Bandai Namco roster portraits preserved on the

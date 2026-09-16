@@ -60,6 +60,7 @@ const Credits = () => {
           Tekken Tag Tournament 2 inputs were curated from <Link href="https://gamefaqs.gamespot.com/ps3/652997-tekken-tag-tournament-2/faqs/64909">Catlord / Hans Poorvin’s move reference</Link>,{' '}
           <Link href="https://tekkendocs.com/tag2/">TekkenDocs / RBNorway frame data</Link> and{' '}
           <Link href="https://gamefaqs.gamespot.com/boards/652997-tekken-tag-tournament-2/64087315">GameFAQs community combo contributions</Link>.
+          {' '}Partner combos also draw on <Link href="https://ttt2combo.kagewebsite.com/">Kage Website’s Tekken Tag 2 Combo community database</Link>, with individual route references retained in our data.
           Special team routes reference <Link href="https://tekken.fandom.com/wiki/Great_Combo">Tekken Wiki’s Great Combo page</Link> (CC BY-SA).
           Tag 2 character portraits are Bandai Namco game artwork preserved by <Link href="https://tekken.fandom.com/wiki/Tekken_Tag_Tournament_2#Characters">Tekken Wiki</Link>.
         </Typography>

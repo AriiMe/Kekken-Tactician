@@ -2,10 +2,38 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { SITE_URL, safeJson, characterPath } from '../src/utils/seo.js';
+import { getTag2TeamRoutes } from '../src/utils/tag2Teams.js';
+import { parseInputNotation } from '../src/utils/inputNotation.js';
+import { tekkenTag2StanceLabels } from '../src/data/tekkenTag2Notation.js';
 
 const pages = JSON.parse(await fs.readFile('src/data/seoCatalog.json', 'utf8'));
 const documentFor = page => fs.readFile(page.path === '/' ? 'dist/index.html' : page.path === '/404' ? 'dist/404.html' : `dist${page.path}/index.html`, 'utf8');
 const decode = s => s.replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&quot;', '"').replaceAll('&#39;', "'");
+
+test('Tag 2 ships the expanded partner routes as HTML with help only on the roster', async () => {
+  for (const page of pages.filter(p=>p.path.startsWith('/games/tekken-tag-2'))) {
+    const html = await documentFor(page);
+    const visible = html.split('<script id="page-data"')[0].split('</head>')[1];
+    const {data} = JSON.parse(html.match(/<script id="page-data" type="application\/json">(.*?)<\/script>/s)[1]);
+    const teams = data.characters.flatMap(c=>c.teamCombos);
+    assert.ok(teams.length>=180,'Do not prerender stale backend data');
+    if(page.collection) {
+      assert.ok(visible.includes('<summary>Input key</summary>'));
+      assert.ok(visible.includes('Tag controls &amp; bound'));
+      for(const route of teams.filter(c=>c.id?.startsWith('kage-'))) for(const step of route.steps) {
+        for(const token of parseInputNotation(step.input)) {
+          assert.notEqual(token.kind,'text',`${route.id}: ${token.raw}`);
+          if(token.kind==='stance' && token.normalized!=='FC') assert.ok(tekkenTag2StanceLabels[token.normalized],`${route.id}: ${token.raw}`);
+        }
+      }
+    } else {
+      assert.ok(!visible.includes('<summary>Input key</summary>'));
+      assert.ok(!visible.includes('Tag controls &amp; bound'));
+      const routes = getTag2TeamRoutes(data.characters,page.path.split('/').at(-1));
+      assert.equal((visible.match(/<details class="tag2-team"/g)||[]).length,routes.length,page.path);
+    }
+  }
+});
 
 test('every route has unique metadata in the initial HTML and one canonical', async () => {
   assert.ok(pages.length > 200);

@@ -228,6 +228,12 @@ const parseCompactLexeme = (raw, start) => {
     const buttons = parts.slice(firstButtonIndex).join("+");
     const prefixesAreKnown = prefixParts.every((part) => normalizeInputToken(part));
 
+    // Keep the attack chord as one controller icon when TAG is appended.
+    const taggedButtons = buttons.match(/^([1-4](?:\+[1-4])*)\+(5|tag)$/i);
+    if (prefixesAreKnown && taggedButtons && BASE_ICON_TOKENS.has(taggedButtons[1])) {
+      return joinCompactParts(raw, start, [...prefixParts, taggedButtons[1], taggedButtons[2]]);
+    }
+
     if (prefixesAreKnown && BASE_ICON_TOKENS.has(buttons.toLowerCase())) {
       return joinCompactParts(raw, start, [...prefixParts, buttons]);
     }

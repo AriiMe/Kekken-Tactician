@@ -2,14 +2,17 @@
 .tag2-portrait { flex: 0 0 auto; width: 100px; height: 106px; object-fit: contain; object-position: center; }
 .tag2-basics { margin-bottom: 26px; }
 .t7-guide .tag2-basics { margin: 0; }
-.tag2-roster { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
-.tag2-fighter { min-width: 0; display: flex; align-items: center; gap: 14px; padding: 8px 15px 0 6px; border: 1px solid #393a3f; border-radius: 5px; background: #202124; }
-.tag2-fighter:hover { border-color: #d42f2f; }
-.tag2-fighter img { width: 85px; height: 90px; object-fit: contain; object-position: center bottom; flex: 0 0 auto; }
-.tag2-fighter span { min-width: 0; font-weight: 700; font-size: .95rem; }
-.tag2-fighter small { display: block; margin-top: 6px; color: #aeb9c9; font-size: .7rem; font-weight: 400; }
-.tag2-fighter .tag2-guide-label { margin-left: auto; white-space: nowrap; }
+.tag2-roster { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 14px; }
+.tag2-fighter { min-width: 0; overflow: hidden; border: 1px solid #343a43; border-radius: 6px; background: #171a20; text-align: center; transition: border-color .18s, background .18s; }
+.tag2-fighter:hover, .tag2-fighter:focus-visible { border-color: #ff4055; background: #25202a; }
+.tag2-fighter:focus-visible { outline: 2px solid #ff4055; outline-offset: 3px; }
+.tag2-card-art { height: 120px; display: flex; align-items: flex-end; justify-content: center; background: radial-gradient(ellipse at 50% 90%, #315169 0%, #19232f 52%, #12171e 85%); border-bottom: 2px solid #455b70; }
+.tag2-fighter:hover .tag2-card-art { border-color: #ff4055; }
+.tag2-fighter img { width: 100px; height: 106px; object-fit: contain; object-position: center bottom; }
+.tag2-fighter > span { display: block; margin: 12px 5px 5px; min-width: 0; font-weight: 700; font-size: .88rem; }
+.tag2-fighter .tag2-guide-label { display: block; margin: 0 5px 12px; color: #aebdce; font-size: .65rem; font-weight: 400; }
 .tag2-fighter:hover .tag2-guide-label, .tag2-fighter:focus-visible .tag2-guide-label { text-decoration: underline; text-underline-offset: 3px; }
+.tag2-roster-help { margin-top: 32px; }
 .tag2-moves { list-style: none; padding: 0; margin: 0; }
 .tag2-moves li { padding: 12px 0; border-bottom: 1px solid #404040; line-height: 2.2; }
 .tag2-moves li:last-child { border: 0; }
@@ -17,22 +20,45 @@
 .tag2-controls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin-top: 22px; }
 .tag2-controls strong { color: #fff; }
 .tag2-controls p { font-size: .85rem; }
-.tag2-team + .tag2-team { margin-top: 16px; }
+.tag2-team-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.tag2-team-heading h2 { margin-top: 0; }
+.tag2-partner-select { display: grid; gap: 8px; min-width: 210px; font-size: .8rem; color: #c3d0df; }
+.tag2-partner-select select { width: 100%; background: #181c22; color: #fff; border: 1px solid #5b6e85; padding: 12px; border-radius: 4px; font: inherit; }
+.tag2-team { background: #20252c; border: 1px solid #3e4a58; border-radius: 5px; overflow: hidden; }
+.tag2-team + .tag2-team { margin-top: 10px; }
+.tag2-team > summary { display: flex; align-items: center; gap: 14px; cursor: pointer; padding: 10px 16px; list-style: none; }
+.tag2-team > summary::-webkit-details-marker { display: none; }
+.tag2-team > summary:hover { background: #2a333f; }
+.tag2-team > summary:focus-visible { outline: 2px solid #54bde5; outline-offset: -3px; }
+.tag2-team > summary img { object-fit: contain; flex: 0 0 auto; }
+.tag2-team > summary strong { display: block; color: #fff; }
+.tag2-team > summary small { display: block; font-size: .75rem; margin-top: 5px; color: #b6c6d9; }
+.tag2-team-title { flex: 1; }
+.tag2-starter { max-width: 40%; line-height: 2; }
+.tag2-starter small { margin-bottom: 4px; }
+.tag2-team .tag2-expand { margin-left: auto; color: #54bde5; font-size: 1.5rem; }
+.tag2-team[open] .tag2-expand { transform: rotate(45deg); }
+.tag2-team-body { padding: 0 20px 18px; border-top: 1px solid #3e4a58; }
 .tag2-team ol { list-style: none; padding: 0; margin: 0; }
 .tag2-team li { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid #414141; }
 .tag2-team li:last-child { border: 0; }
 .tag2-team li > strong { color: #8bddf9; font-size: .8rem; }
-.tag2-partner-links a { display: inline-block; padding: 8px 12px; margin: 0 8px 8px 0; background: #343434; border-radius: 4px; font-size: .85rem; }
+.tag2-team li > strong small { display: block; font-size: .68rem; color: #bdc7d5; font-weight: 400; margin-top: 4px; }
+.tag2-team summary em { display: inline-block; color: #ffd293; font-style: normal; margin-left: 8px; }
+.tag2-team .tag2-assist-step > strong { color: #ffadb5; }
+.tag2-partner-guide { display: inline-block; margin-top: 12px; font-size: .8rem; text-decoration: underline; text-underline-offset: 4px; }
 .t7-key .tag2-stances { display: grid; gap: 16px; }
 .t7-key .tag2-stances > div { display: grid; grid-template-columns: 65px minmax(0,1fr); border-bottom: 1px solid #393a3f; padding-bottom: 12px; }
-@media(max-width: 950px) { .tag2-roster { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width: 1100px) { .tag2-roster { grid-template-columns: repeat(5,minmax(0,1fr)); } }
+@media(max-width: 800px) { .tag2-roster { grid-template-columns: repeat(4,minmax(0,1fr)); } }
 @media(max-width: 650px) {
   .tag2-page .t7-header { display: flex; gap: 15px; }
-  .tag2-roster { gap: 10px; }
-  .tag2-fighter { flex-direction: column; gap: 10px; padding: 10px; text-align: center; }
-  .tag2-fighter .tag2-guide-label { margin: 0; }
-  .tag2-fighter img { width: 85px; height: 90px; }
-  .tag2-fighter span { font-size: .8rem; }
+  .tag2-roster { gap: 12px; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .tag2-team-heading { flex-direction: column; gap: 8px; }
+  .tag2-partner-select { width: 100%; }
+  .tag2-team > summary { flex-wrap: wrap; gap: 8px 12px; padding: 10px 12px; }
+  .tag2-team-title { min-width: calc(100% - 85px); }
+  .tag2-starter { max-width: calc(100% - 35px); }
   .tag2-controls { grid-template-columns: minmax(0,1fr); gap: 8px; }
   .tag2-team li { grid-template-columns: minmax(0,1fr); gap: 2px; }
 }
