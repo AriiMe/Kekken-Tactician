@@ -186,6 +186,25 @@
           {
             "name": "Uppercut into kick and punch",
             "input": "df+2 > df+3,2"
+          },
+          {
+            "name": "Uppercut into flip",
+            "launchers": ["df+2", "CH 4"],
+            "input": "df+1,2 > ~f+1,2 > f,f+4"
+          },
+          {
+            "name": "Backflip into flip",
+            "input": "FC uf+4 > df+1 > df+1 > ~f+1,2 > f,f+4"
+          },
+          {
+            "name": "Nina's Death Combo",
+            "input": "db+1+2 > df+3,1,2 > f,f+1+2",
+            "notes": "First df+3,1,2 near the ground then mini dash and same again."
+          },
+          {
+            "name": "Double Just-Frame Pickup, Very Hard. Death Combo",
+            "input": "FC uf+4 > uf+4 > df+3,1,2 > df+3,1,2 > f,f+1+2",
+            "notes": "First df+3,1,2 near the ground then mini dash and same again."
           }
         ],
         "chains": [
@@ -515,6 +534,18 @@
           {
             "name": "Punches into double palm",
             "input": "df+2 > 2,1 > f,f+1+2"
+          },
+          {
+            "name": "Uppercut into Sandwich Clap",
+            "input": "df+2 > df+1 > f+1,2 > f,~f+1+2"
+          },
+          {
+            "name": "Uppercut into Low Cannonball",
+            "input": "df+2 > f+1,2 > qcb,~df+2 > dash > uf+3+4"
+          },
+          {
+            "name": "Magic Four into Sandwich Clap",
+            "input": "CH 4 > f+1,2 > df+1 > f,~f+1+2"
           }
         ]
       },
@@ -1045,7 +1076,8 @@
           },
           {
             "name": "Hammer Elbow",
-            "input": "df, 1"
+            "input": "df, 1",
+            "notes": "guard break, next hit guaranteed on block"
           },
           {
             "name": "Jumping Hammer",
@@ -1125,6 +1157,17 @@
           {
             "name": "Two jabs into uppercut",
             "input": "f,f+2 > 1,2 > f,f+2"
+          },
+          {
+            "name": "Two jabs into low kick",
+            "launchers": ["f,f+2", "FC f+2", "uf+4", "CH 4"],
+            "input": "~f+1,2 > ~f+1,2 > f,f,f+4",
+            "notes": "Run 4 steps before doing last kick(4)"
+          },
+          {
+            "name": "Guard Break Combo",
+            "input": "df+1 > ~f+1,2 > ~f+1,2 > f,f,f+4",
+            "notes": "df+1 must be on block, run 4 steps for the last kick(4)"
           }
         ]
       },
@@ -1247,6 +1290,19 @@
           {
             "name": "Extra punch into double punch",
             "input": "df+2 > df+1 > f+1 > f,f+1+2"
+          },
+          {
+            "name": "Slap Hammer into Sandwich Clap",
+            "input": "f+1,1,1 > f+1 > f+1 > f,f+1+2"
+          },
+          {
+            "name": "Slap Hammer into Double Hammer",
+            "launchers": ["f+1,1,1", "df+2", "CH f+4"],
+            "input": "f+1 > f+1 > qcb,df+2 > df+1+2"
+          },
+          {
+            "name": "Magic Four into Sandwich Clap",
+            "input": "CH 4 > f+1 > f+1 > f+1 > f,f+1+2"
           }
         ]
       },
@@ -1518,7 +1574,31 @@
           {
             "name": "Uppercut into low kicks",
             "input": "df+2 > ~db+4,4,4",
-            "notes": "Keep down-back held for all three kicks."
+            "notes": "Keep down-back held for all three kicks"
+          },
+          {
+            "name": "Uppercut into low kick",
+            "launchers": ["df+2", "CH 4"],
+            "input": "1,2 > 1,2 > f,f,f+4",
+            "notes": "Run 4 steps before doing last kick(4)"
+          },
+          {
+            "name": "Hopkick into slide kick",
+            "launchers": ["uf+4", "FC uf+4"],
+            "input": "4,u,3 > FC df,d,~df+3",
+            "notes": "Tap forward while holding down for the last part"
+          },
+          {
+            "name": "Excellent Combo 1",
+            "input": "df+2 > f+2 > f+2 ( 2 ) 2 > d+4 n 4 ( 3 ) 4"
+          },
+          {
+            "name": "Excellent Combo 2",
+            "input": "f,f,n,3,4 > d+4 n 4 ( 3 ) 4"
+          },
+          {
+            "name": "Excellent Death Combo",
+            "input": "CH ~f+4,u,3 > 1,2 > d+4 n 4 ( 3 ) 4"
           }
         ]
       },
@@ -1629,6 +1709,22 @@
             "name": "Uppercut into backhand punches",
             "input": "df+2 > df+1 > ~f+2,2,2",
             "notes": "Keep forward held through the three punches."
+          },
+          {
+            "name": "Uppercut into running slide kick",
+            "launchers": ["df+2", "CH 4"],
+            "input": "f+1,2 > f+1,2 > f,f,f+4"
+          },
+          {
+            "name": "Hopkick into slide kick",
+            "launchers": ["uf+4", "FC uf+4"],
+            "input": "4,u,3 > FC,df,d,~df+3",
+            "notes": "tap forward while holding down for the last part"
+          },
+          {
+            "name": "Uppercut into backhand punches",
+            "input": "CH ~f+4,u,3 > ~f+4,u,3 > FC,df,d,~df+3",
+            "notes": "Death Combo HARD"
           }
         ]
       },
@@ -1780,6 +1876,38 @@
             "name": "Charged uppercut into double palm",
             "input": "b,b,~b+1 > 1 > f,f+1+2",
             "notes": "Hold the third back input until her leg rises, then press 1 while still holding back."
+          },
+          {
+            "name": "Light-punch string into Sandwich Clap",
+            "input": "1,1,1 > 1 > 1 > f,f+1+2"
+          },
+          {
+            "name": "Light-punch string into low kick",
+            "input": "1,1,1 > 1 > d+1 > FC df+4,3 > d+1 > d+4",
+            "notes": "Dash once before final kick."
+          },
+          {
+            "name": "Clef Cannon into sandwich clap",
+            "launchers": ["df+1,1", "CH 4"],
+            "input": "1 > 1 > 1 > f,~f+1+2",
+            "notes": "Mini dash on second and third light punch(1)."
+          },
+          {
+            "name": "Sky Uppercutinto sandwich clap",
+            "input": "df+2,1 > 1 > 1 > b,~b+1+2",
+            "notes": "Launcher switches sides. Mini dash light punches(1)."
+          },
+          {
+            "name": "Sweep Kick/Uppercut string into low kick",
+            "input": "d, ( 4 ) ,1 > d+1 > FC df+4,3 > d+1 > d+4"
+          },
+          {
+            "name": "Uppercut/Hammer/Uppercut string into low kick",
+            "input": "WS 2,1,1 > 1 > d+1 > FC df+4,3 > d+1 > d+4"
+          },
+          {
+            "name": "Hard Death Combo",
+            "input": "b,b,~b+1 > FC df+4,3 > 1 > f,f+1+2"
           }
         ]
       },
@@ -1938,6 +2066,20 @@
           {
             "name": "Uppercut into kick and punch",
             "input": "df+2 > df+3,2"
+          },
+          {
+            "name": "Uppercut into flip",
+            "launchers": ["df+2", "CH 4"],
+            "input": "df+1,2 > ~f+1,2 > f,f+4"
+          },
+          {
+            "name": "Crane Chop into Chi Release Death Combo",
+            "input": "db+1+2 > df+3,1,2 > f,f+1+2"
+          },
+          {
+            "name": "Hard Just-Frame pickup Death Combo",
+            "input": "CH 4 > ~f+1,2 > df+3,1,2 > f,f+1+2 > f,f+4",
+            "notes": "df+3,1,2 must connect when enemy is almost on the ground."
           }
         ],
         "chains": [
@@ -2298,7 +2440,7 @@
           {
             "name": "Sky Uppercut",
             "input": "df+2, 1",
-            "notes": "The initial 2 must connect."
+            "notes": "The initial 2 must connect. Switches sides."
           }
         ],
         "moves": [
@@ -2423,6 +2565,22 @@
           {
             "name": "Double uppercut into sweep finish",
             "input": "df+2,1 > d+4,1"
+          },
+          {
+            "name": "Light-punch string into Bolwer Smash",
+            "launchers": ["1,1,1", "df+1,1", "df+2,1", "CH 4"],
+            "input": " 1 > 1 > qcf+2 > df+1+2",
+            "notes": "Run 2 steps for the final hit. DEATH COMBO execpt with df+1,1."
+          },
+          {
+            "name": "Sweep Kick into Chi Release",
+            "input": "d, ( 4 ) 1 > d+1 > FC df+4,3 > 1 > f,f+1+2",
+            "notes": "4 in launcher must whiff."
+          },
+          {
+            "name": "Uppercut into sweep flying stomp",
+            "input": "WS 2,1,1 > 1 > qcf+2 > u+2",
+            "notes": "u+2 flies across the map. Death Combo."
           }
         ]
       },
