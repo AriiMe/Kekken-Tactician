@@ -99,7 +99,7 @@
             "input": "db+3"
           },
           {
-            "name": "Ali Kicks",
+            "name": "Alley Kicks",
             "input": "d+3+4,4,4"
           },
           {
@@ -121,7 +121,7 @@
             "input": "uf+4 > 1 > 1~2 > f,f+1+2"
           },
           {
-            "name": "Ali kick follow-up",
+            "name": "Alley kick follow-up",
             "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
             "notes": "Finish with the low kicks as the opponent falls."
           }
@@ -133,9 +133,7 @@
           }
         ]
       },
-      "notes": [
-        "Roger shares this move set."
-      ]
+      "notes": ["Roger shares this move set."]
     },
     {
       "slug": "angel",
@@ -248,9 +246,7 @@
           }
         ]
       },
-      "notes": [
-        "Devil shares this move set."
-      ]
+      "notes": ["Devil shares this move set."]
     },
     {
       "slug": "anna-williams",
@@ -357,6 +353,23 @@
             "name": "Head ringer into cold blade",
             "input": "df+2 > 3,4 > FC df+2",
             "notes": "Crouch for the low finish after the kicks."
+          },
+          {
+            "name": "Nina Combo",
+            "input": "df+2 > uf+4 > d+3,4 > f,f+4"
+          },
+          {
+            "name": "Nina Combo 2",
+            "launchers": ["FC f+1", "uf+4", "FC ~df+2"],
+            "input": "d+3,4 > d+3,4 > f,f+4"
+          },
+          {
+            "name": "Nina Combo 3",
+            "input": "FC uf+4 > 1 > uf+4 > d+4,1 > f,f+4"
+          },
+          {
+            "name": "Nina Death Combo",
+            "input": "db+1+2 > 4 > d+3,4 > f,f+4"
           }
         ],
         "strings": [
@@ -480,7 +493,7 @@
             "input": "f,f+1+2"
           },
           {
-            "name": "Ali Kicks",
+            "name": "Alley Kicks",
             "input": "d+3+4,4,4"
           }
         ],
@@ -496,11 +509,23 @@
           },
           {
             "name": "Two jab pairs",
-            "input": "f,n,d,df+2 > 1~2 > 1~2"
+            "launchers": ["FC ~df+2", "WS 2"],
+            "input": "~f+1,2 > ~f+1,2 > d+3+4",
+            "notes": "Dash before the last kick."
           },
           {
             "name": "Second black smash",
             "input": "f,n,d,df+2 > f+1 > f,n,d,df+2"
+          },
+          {
+            "name": "Dark Upper into Dark Upper",
+            "launchers": ["uf+4", "f,n,d,df+2", "CH f,~f+2"],
+            "input": "~f+1,2 > f,n,d,df+2 > d+3+4",
+            "notes": "Dash after second Dark Upper."
+          },
+          {
+            "name": "D1ck Punch into Tombstone",
+            "input": "CH f,f,n,2 > db,~f+1+2 > d+3+4"
           }
         ],
         "strings": [
@@ -627,8 +652,19 @@
           },
           {
             "name": "Break blade repeat",
-            "input": "3,4,3 > 3,4,3 > f,~f+4",
+            "launchers": ["uf+3,4,3", "3,4,3"],
+            "input": "3,4,3 > f,~f+4",
             "notes": "Land the starting string to launch; finish with the grounded heel."
+          },
+          {
+            "name": "Style Combo",
+            "launchers": ["WS 2", "df+2"],
+            "input": "f+4,4,3 > f,~f+4"
+          },
+          {
+            "name": "Standing uppercut into hammer heel",
+            "launchers": ["WS 2", "f,n,d,df+3"],
+            "input": "f+3, ( 3 ) ,3,4 > f,~f+4"
           }
         ],
         "strings": [
@@ -750,9 +786,30 @@
             "input": "df+2 > df+1 > df+1 > 3,3"
           },
           {
+            "name": "Uppercut taps low kicks",
+            "input": "df+2 > 4 > b+4,3 > df+3 > df+3"
+          },
+          {
+            "name": "Sledge into knees",
+            "input": "1+2 > b+4,3 > b+4,3,d+4"
+          },
+          {
+            "name": "Pimp slap into knees",
+            "input": "f+1+2 > b+4,3 > b+4,3 > df+3"
+          },
+          {
             "name": "Gatling into triple knee",
             "input": "3,2,1 > b+4,3,4",
             "notes": "Stop the opening Gatling string after 1, then go straight into the knees."
+          },
+          {
+            "name": "Gattling whiff into uppercut",
+            "input": "( 3,2,1 ),4 > df+3,1 > df+3",
+            "notes": "First three hits must whiff."
+          },
+          {
+            "name": "Hopkick into uppercut",
+            "input": "uf+4 > b+4,3 > df+3,1"
           }
         ],
         "chains": [
@@ -843,6 +900,10 @@
           {
             "name": "Jump kick into sweep",
             "input": "uf+4,4"
+          },
+          {
+            "name": "Follow up on grounded opponents",
+            "input": "FC df+3"
           }
         ],
         "combos": [
@@ -861,6 +922,11 @@
           {
             "name": "Double uppercut into wind god fist",
             "input": "df+1,2 > 1 > f,n,d,~df+2"
+          },
+          {
+            "name": "Uppercut into front flip",
+            "launchers": ["f,n,d,~df+2", "1+2", "df+2", "df+1,2", "WS 2"],
+            "input": "~f+1,2 > f,n,d,~df+2 > [ 4 ~ 3 ]"
           }
         ],
         "strings": [
@@ -882,9 +948,7 @@
           }
         ]
       },
-      "notes": [
-        "Angel shares this move set."
-      ]
+      "notes": ["Angel shares this move set."]
     },
     {
       "slug": "ganryu",
@@ -978,8 +1042,12 @@
             "input": "df+2 > 1 > 1+2,1+2"
           },
           {
+            "name": "Uppercut into ground slam",
+            "input": "df+2 > ~f+1,2,1,2 > uf+3+4"
+          },
+          {
             "name": "Megaton float into palm",
-            "input": "b,db,d,~df+1 > b,db,d,~df+2"
+            "input": "b,db,d,~df+1 > b,db,d,~df+2 > uf+3+4"
           },
           {
             "name": "Megaton float into double hammer",
@@ -988,6 +1056,10 @@
           {
             "name": "Uppercut into alternating punches",
             "input": "df+2 > 2 > 2~1 > 2~1"
+          },
+          {
+            "name": "Thunder Palm into double hammer",
+            "input": "df+2+3 > WS 4 > 2+1,2+1"
           }
         ],
         "unblockables": [
@@ -1099,25 +1171,26 @@
             "input": "df+1,2 > 1 > qcf+2"
           },
           {
-            "name": "Uppercut into crushing kick",
-            "launchers": [
-              "f,f+2",
-              "f,n,d,df+2"
-            ],
+            "name": "Double uppercut into flip",
+            "input": "df+1,2 > f,n,d,~df+4,4,n,4 > [ 4 ~ 3 ]"
+          },
+          {
+            "name": "Uppercut into flip",
+            "launchers": ["f,f+2", "df+2", "f,n,d,df+2"],
             "input": "~f+1,2 > f,f+2 > 4~3"
           },
           {
-            "name": "Rising uppercut into crushing kick",
+            "name": "Rising uppercut into flip",
             "input": "WS 2 > ~f+1 > f,f+2 > 4~3"
           },
           {
-            "name": "Hell sweep into crushing kick",
+            "name": "Hell sweep into flip",
             "input": "f,n,d,~df+4,4,n,4 > 4~3"
           },
           {
-            "name": "Hell sweep into uppercut and crushing kick",
+            "name": "Hell sweep into uppercut and flip",
             "input": "f,n,d,~df+4,4,n,4 > f,f+2 > 4~3",
-            "notes": "Demonstrated against Jack-2."
+            "notes": "Against Big Opponents only."
           }
         ],
         "strings": [
@@ -1252,6 +1325,21 @@
           {
             "name": "Forward punch into hammer pair",
             "input": "df+2 > f+2 > f+1+2,1+2"
+          },
+          {
+            "name": "Double whiff into hammer pair",
+            "input": "( 2,1 ),2 > WS 4 > f+1+2,1+2",
+            "notes": "First two hits must whiff."
+          },
+          {
+            "name": "The Kuma two",
+            "launchers": ["df+2 ", "WS 2", "WS 1"],
+            "input": "2 > 2 > uf+3+4",
+            "notes": "Hold forward on both 2's when doing WS 2."
+          },
+          {
+            "name": "Atlas hammer",
+            "input": "d+1+2 > WS 4 > FC 1,2"
           }
         ],
         "strings": [
@@ -1349,6 +1437,10 @@
             "notes": "The last kick follows the cartwheel knockdown."
           },
           {
+            "name": "Charging strike into cartwheel 2",
+            "input": "~f+2 > 3+4 > db+4,3"
+          },
+          {
             "name": "Can-can into white heron",
             "input": "d+3+4 > 1+4,2,4"
           },
@@ -1360,6 +1452,11 @@
             "name": "Can-can string into punch-kick finish",
             "input": "1,1,4 > 1,1,3",
             "notes": "Land the opening string to launch."
+          },
+          {
+            "name": "14 Frame launcher",
+            "input": "2 > 1+4,2,1,4,4,4,1+4,2,1,4",
+            "notes": "Some attacks whiff but don't break the combo. 3+4 second hit can be used as launcher."
           }
         ],
         "strings": [
@@ -1479,6 +1576,15 @@
           {
             "name": "Double uppercut repeat",
             "input": "df+1,2 > df+1,2 > df+4,4"
+          },
+          {
+            "name": "The Devil Combo",
+            "launchers": ["f,n,~df+2", "df+2", "df+1,2", "WS 2"],
+            "input": "~f+1,2 > f,n,~df+2 > [ 4 ~ 3 ]"
+          },
+          {
+            "name": "The Devil Combo again",
+            "input": "WS 2 > f+1 > df+1,2 > ~f+1,2 > f,n,~df+2 > [ 4 ~ 3 ]"
           }
         ],
         "strings": [
@@ -1490,7 +1596,7 @@
           }
         ]
       },
-      "notes": []
+      "notes": ["FC df+3 for grounded opponents after throws or hellsweep."]
     },
     {
       "slug": "king",
@@ -1569,11 +1675,11 @@
             "input": "f,f+4"
           },
           {
-            "name": "Ali Kicks",
+            "name": "Alley Kicks",
             "input": "d+3+4,4,4"
           },
           {
-            "name": "Ali kick into middle smash",
+            "name": "Alley kick into middle smash",
             "input": "d+3+4,2"
           },
           {
@@ -1596,20 +1702,25 @@
         "combos": [
           {
             "name": "Hopkick into jail kick",
-            "input": "uf+4 > 1 > f,f+4"
+            "launchers": ["uf+4", "FC df+2", "CH f,~f+2"],
+            "input": "~f+1,2 > ~f+1,2 > f+1+4"
           },
           {
             "name": "Hopkick into middle smash",
             "input": "uf+4 > 1~2 > f,f+2"
           },
           {
-            "name": "Ali kick into smash finish",
+            "name": "Alley kick into smash finish",
             "input": "uf+4 > 1~2 > d+3+4,2"
           },
           {
-            "name": "Ali kick follow-up",
+            "name": "Alley kick follow-up",
             "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
             "notes": "Finish with the low kicks as the opponent falls."
+          },
+          {
+            "name": "D1ck Punch into Grab",
+            "input": "CH f,f,n,2 > db,~f+1+2 > d+3+4"
           }
         ],
         "strings": [
@@ -1731,6 +1842,22 @@
           {
             "name": "Right punch into hammer pair",
             "input": "df+2 > 2 > 1+2,1+2"
+          },
+          {
+            "name": "Whiff into ground pound",
+            "input": "( 2,1 ),2 > WS 4 > uf+3+4",
+            "notes": "First two hits must whiff."
+          },
+          {
+            "name": "The one",
+            "input": "~f+1,1,1 > ~f+1 > ~f+1 > ~f+1 > uf+3+4",
+            "notes": "No need to dash cause long limbs."
+          },
+          {
+            "name": "The two",
+            "launchers": ["df+2", "WS 2"],
+            "input": "2 > 2 > uf+3+4",
+            "notes": "mini dash before second 2."
           }
         ],
         "strings": [
@@ -1840,6 +1967,40 @@
             "name": "Knee into flipping stomp",
             "input": "df+2 > f+1 > f,f+4 > uf+3+4",
             "notes": "The stomp follows the knee knockdown."
+          },
+          {
+            "name": "Hellsweep into  stomp",
+            "input": "FC df+3 > WS 4 > d+4 > uf+3+4"
+          },
+          {
+            "name": "The yoshi",
+            "input": "( 2 ) 3 > FC db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "First hit must whiff. Run up and do FC db+3,3... on grounded Opponent."
+          },
+          {
+            "name": "The yoshi 2",
+            "input": "df+2 > ~f+1 > b+1,1,1,1 > FC db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "Run up and do FC db+3,3... on grounded Opponent."
+          },
+          {
+            "name": "The yoshi 3",
+            "input": "df+2 > f,f+3+4,1+2 > FC db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "Do FC db+3,3... on grounded Opponent."
+          },
+          {
+            "name": "The yoshi 4",
+            "input": "WS 2 > b+1,1 > b+1,1 > FC db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "Do FC db+3,3... on grounded Opponent."
+          },
+          {
+            "name": "Stabbing beyblade",
+            "launchers": ["f,f,n,2", "CH ~f+4", "CH f,f+4"],
+            "input": "FC db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "Do FC db+3,3... on grounded Opponent."
+          },
+          {
+            "name": "B1tch slap Backshots",
+            "input": "f+2 > df+2 > ~f+1 > b+1,1,1,1 > uf+3+4"
           }
         ],
         "strings": [
@@ -1865,7 +2026,7 @@
           }
         ]
       },
-      "notes": []
+      "notes": ["Use d+3 or db+2 on grounded Opponents after grab."]
     },
     {
       "slug": "lee-chaolan",
@@ -1964,6 +2125,21 @@
           {
             "name": "Hopkick into triple kick",
             "input": "uf+4 > 3,3,3"
+          },
+          {
+            "name": "Uppercut into slide kick",
+            "launchers": ["df+2", "uf+4", "FC uf+4"],
+            "input": "~f+4,u,3 > FC,df,d,~df+3",
+            "notes": "Tap f while holding down for the ender."
+          },
+          {
+            "name": "Can Can into kicks",
+            "input": "f,f,n,3,4 > d+4,n,4"
+          },
+          {
+            "name": "Standing uppercut into slide kick",
+            "input": "WS 2 > ~f+4,3,4 > FC,df,d,~df+3",
+            "notes": "Tap f while holding down for the ender."
           }
         ],
         "strings": [
@@ -1981,7 +2157,7 @@
           }
         ]
       },
-      "notes": []
+      "notes": ["FC,df,d,~df+3 hits grounded opponents."]
     },
     {
       "slug": "lei-wulong",
@@ -2067,6 +2243,21 @@
           {
             "name": "Uppercut into rolling kicks",
             "input": "df+2 > 4~4,3,3"
+          },
+          {
+            "name": "Stun flipper",
+            "input": "( 1,2 ),1 > BT d+1 > BT 3+4,3+4,3+4 > WS 3",
+            "notes": "First two hits must whiff. BT 2 works aswell."
+          },
+          {
+            "name": "Uppercut into juggle",
+            "input": "df+2 > f,n,1,2,1,2,4 > db+4",
+            "notes": "Mini dash before the last grounded kick."
+          },
+          {
+            "name": "Hellsweep into ground kicks",
+            "input": "db+4 > WS 4 > [ 4~4 ] > 3,3",
+            "notes": "Mini dash before the last grounded kick."
           }
         ],
         "strings": [
@@ -2171,9 +2362,35 @@
             "notes": "Sweep after the punch knockdown."
           },
           {
+            "name": "Uppercut into flips n slide",
+            "launchers": ["df+2", "uf+4"],
+            "input": "~f+4,u,3 > FC df,d,~df+3",
+            "notes": "Tap forward while holding down button for the ender."
+          },
+          {
             "name": "Rising kick and flip repeat",
             "input": "WS 4,3 > WS 4,3",
             "notes": "Return to crouch between the two rising kick strings."
+          },
+          {
+            "name": "Backflip into slide",
+            "input": "3+4,~d > FC 3,4 > FC df,d,~df+3",
+            "notes": "Tap forward while holding down button for the ender."
+          },
+          {
+            "name": "Double backflip into slide",
+            "input": "3+4,3+4,~d > FC 3 > FC df,d,~df+3",
+            "notes": "The grab will pick up grounded Opponent for juggle."
+          },
+          {
+            "name": "Standing uppercut into slide kick",
+            "input": "WS 2 > f+1 > d+2,3 > FC df,d,~df+3",
+            "notes": "The grab will pick up grounded Opponent for juggle."
+          },
+          {
+            "name": "Typical Tekken 8 Law",
+            "input": "db+4 > 1+3 > d+4,3 > FC df,d,~df+3",
+            "notes": "Death Combo with db+1+2 launcher."
           }
         ],
         "strings": [
@@ -2282,7 +2499,8 @@
         "combos": [
           {
             "name": "Rushing uppercut into punt",
-            "input": "f+1 > 2+3,1"
+            "launchers": ["f+1", "df+2,1"],
+            "input": "f,~f+1 > 2+3,1"
           },
           {
             "name": "Jab into rushing uppercut",
@@ -2297,6 +2515,19 @@
             "name": "Counter-hit elbow into punt",
             "input": "CH FC df+2 > 2+3,1",
             "notes": "Crouch fully; the elbow must counter hit for the stun."
+          },
+          {
+            "name": "Slow Start",
+            "input": "( 2+3 ) ,1 > f,~f+1 > 2+3,1",
+            "notes": "First hit must whiff."
+          },
+          {
+            "name": "Hopkick into crouching kick",
+            "input": "uf+4 > 1 > FC ~df+4,3 > d+4"
+          },
+          {
+            "name": "Charge combo",
+            "input": "f+1+4 > uf+4 > d+4,1 > d+4"
           }
         ],
         "strings": [
@@ -2409,6 +2640,10 @@
             "input": "df+2 > 1 > 1,2,4"
           },
           {
+            "name": "Kick combo",
+            "input": "uf+4 > d+4,1 > d,~db+3"
+          },
+          {
             "name": "Double palm finish",
             "input": "df+2 > 1~2 > f,f+1+2"
           },
@@ -2419,6 +2654,28 @@
           {
             "name": "Uppercut into swan variation",
             "input": "df+2 > 1 > df+3,2,3"
+          },
+          {
+            "name": "Uppercut into kick flip",
+            "input": "df+2 > uf+4 > d+3,4 > f,f+4"
+          },
+          {
+            "name": "Big Damage",
+            "launchers": ["d,~db+3", "CH db+4,3"],
+            "input": "1 > uf+4 > d+4,1 > f,f+4"
+          },
+          {
+            "name": "B1tch slap",
+            "input": "~b+1 > d+4,1 > d+4,1 > f,f+4"
+          },
+          {
+            "name": "Big Launch",
+            "input": "~b+2 > df+2 > uf+4 > d+3,4 > f,f+4",
+            "notes": "Opponent must be near ground for d+3,4 to connect."
+          },
+          {
+            "name": "Death Combo",
+            "input": "db+1+2 > 4 > d+3,4 > f,f+4"
           }
         ],
         "strings": [
@@ -2557,6 +2814,12 @@
             "input": "df+2 > 1 > uf+3~4"
           },
           {
+            "name": "Uppercut into ground pound",
+            "launchers": ["uf+4", "df+2"],
+            "input": "db+1 > FC ~df+2,1 > d+2",
+            "notes": "Run up to the grounded opponent for last hit."
+          },
+          {
             "name": "Double hopkick into hammer punch",
             "input": "uf+3,4 > d+2"
           },
@@ -2673,6 +2936,10 @@
             "input": "b,db,d,~df+1 > 2 > 1+2,1+2"
           },
           {
+            "name": "Exploder into ground pound",
+            "input": "b,db,d,~df+1 > b,db,d,~df+2 > uf+3+4"
+          },
+          {
             "name": "Exploder into hip press",
             "input": "b,db,d,~df+1 > 3 > uf+3+4",
             "notes": "The hip press follows the kick knockdown."
@@ -2680,6 +2947,19 @@
           {
             "name": "Uppercut into megaton knuckle",
             "input": "df+2 > b,db,d,~df+2"
+          },
+          {
+            "name": "The Kuma",
+            "launchers": ["df+2", "WS 2"],
+            "input": "~f2 > ~f+2 > uf+3+4"
+          },
+          {
+            "name": "Double uppercut into ground pound",
+            "input": "WS 1+2 > db1 > WS 4 > uf+3+4"
+          },
+          {
+            "name": "Death Combo",
+            "input": "f [ 4~1 ] > WS 4 > 1+2,1+2"
           }
         ],
         "strings": [
@@ -2796,7 +3076,7 @@
             "input": "db+3"
           },
           {
-            "name": "Ali Kicks",
+            "name": "Alley Kicks",
             "input": "d+3+4,4,4"
           },
           {
@@ -2807,7 +3087,7 @@
         "combos": [
           {
             "name": "Hopkick into jail kick",
-            "input": "uf+4 > 1 > f,f+4"
+            "input": "uf+4 > ~f+1,2 > f,~f+1,2 > d+3+4"
           },
           {
             "name": "Hopkick into middle smash",
@@ -2818,9 +3098,17 @@
             "input": "uf+4 > 1 > 1~2 > f,f+1+2"
           },
           {
-            "name": "Ali kick follow-up",
+            "name": "Alley kick follow-up",
             "input": "uf+4 > f+1~2 > ~d+3+4,4,4",
             "notes": "Finish with the low kicks as the opponent falls."
+          },
+          {
+            "name": "Hellsweep into alley kick",
+            "input": "db+3 > WS 4 > WS 4 > ~d+3+4"
+          },
+          {
+            "name": "Armor king D1ck punch",
+            "input": "CH f,f,n,2 > db,~f+1+2 > ~d+3+4"
           }
         ],
         "unblockables": [
@@ -2830,9 +3118,7 @@
           }
         ]
       },
-      "notes": [
-        "Alex shares this move set."
-      ]
+      "notes": ["Alex shares this move set."]
     },
     {
       "slug": "wang-jinrei",
@@ -2919,8 +3205,12 @@
             "input": "1~1,1 > 1 > d+4,1"
           },
           {
-            "name": "Catapult repeat",
-            "input": "1~1,1 > 1~1,1"
+            "name": "Catapult into low double fist",
+            "input": "~f+1~1,1 > 2 > FC ~df+4,3 > df+1+2"
+          },
+          {
+            "name": "Catapult into low double fist",
+            "input": "df+2,1 > 1 > FC ~df+4,3 > df+1+2"
           },
           {
             "name": "Rising slice into sweep",
@@ -2930,6 +3220,11 @@
             "name": "Sky uppercut into low double fist",
             "input": "df+2,1 > f,f > d+4,1 > df+1+2",
             "notes": "Land both starting hits; dash in for the sweep. The double fist finishes low."
+          },
+          {
+            "name": "hopkick into low double fist",
+            "input": "uf+4 > 1 > 1 > df+1+2 > df+1+2",
+            "notes": "Do the second low double fist immediately after first one."
           }
         ],
         "strings": [
@@ -3019,6 +3314,11 @@
         ],
         "combos": [
           {
+            "name": "Keep yourself safe",
+            "input": "[ 4 ~ 3 ] , d+1+4",
+            "notes": "Self damage."
+          },
+          {
             "name": "Uppercuts into hilt and kick",
             "input": "df+2 > df+1 > ~b+1 > n+2,3",
             "notes": "Release back before the final punch-kick string."
@@ -3037,6 +3337,24 @@
             "name": "Uppercut into knee and stomp",
             "input": "df+2 > f+1 > f,f+4 > uf+3+4",
             "notes": "The stomp follows the knee knockdown."
+          },
+          {
+            "name": "Hellsweep into knee and stomp",
+            "input": "FC df+3 > WS 4 > d+4 > uf+3+4"
+          },
+          {
+            "name": "B1tch slap Backshots",
+            "input": "f+2 > df+2 > b+1,1 > b+1,1,1,1 > uf+3+4"
+          },
+          {
+            "name": "Beyblade",
+            "input": "df+2 > f+1 > b+1,1,1,1,1 > FC ~db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "Some hits will whiff. db+3,3,3... will pick up grounded opponent."
+          },
+          {
+            "name": "Typical yoshi",
+            "input": "df+2 > f,f+3+4,1+2,3+4 > FC ~db+3,3,3,3,f+4 > FC ~db+3,3,3,3,f+4 > uf+3+4",
+            "notes": "db+3,3,3... will pick up grounded opponent just get close quick."
           }
         ],
         "strings": [
@@ -3068,7 +3386,9 @@
           }
         ]
       },
-      "notes": []
+      "notes": [
+        "db+1 can be used as a followup after every throw or combo ender on groundend opponent."
+      ]
     }
   ]
 }
