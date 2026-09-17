@@ -198,8 +198,7 @@
           },
           {
             "name": "Nina's Death Combo",
-            "input": "db+1+2 > df+3,1,2 > f,f+1+2",
-            "notes": "First df+3,1,2 near the ground then mini dash and same again."
+            "input": "db+1+2 > df+3,1,2 > f,f+1+2"
           },
           {
             "name": "Double Just-Frame Pickup, Very Hard. Death Combo",
