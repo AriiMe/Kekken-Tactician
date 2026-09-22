@@ -82,7 +82,7 @@ const toNotationString = (input) => {
 export const normalizeInputToken = (value) => {
   if (typeof value !== "string") return null;
 
-  const source = value.trim().toLowerCase();
+  const source = value.trim().toLowerCase().replace(/^([du])\/([fb])$/, "$1$2");
   const token = ({ '>': 'into', '→': 'into', 's!': 'screw', 't!': 't', tornado: 't', 'b!': 'bound', '5': 'tag',
     'floor break': 'fb', 'wall break': 'wb', 'power crush': 'pc',
     'counter hit': 'ch', 'back turned': 'bt' })[source] || source;
@@ -174,6 +174,10 @@ const joinCompactParts = (raw, start, parts, separator = "+") => {
 };
 
 const parseCompactLexeme = (raw, start) => {
+  if (/^dash$/i.test(raw)) return [createInputSegment('f', start), createSegment('separator', ',', start, null), createInputSegment('f', start + 1)];
+  if (raw.endsWith('+') && normalizeInputToken(raw.slice(0, -1))) return [createInputSegment(raw.slice(0, -1), start), createSegment('separator', '+', start + raw.length - 1, null)];
+  if (/^sprint$/i.test(raw)) return [createInputSegment('wr', start)];
+  if (/^(f{2,}|b{2,})$/i.test(raw)) return [...raw].flatMap((direction, i) => [...(i ? [createSegment('separator', ',', start + i, null)] : []), createInputSegment(direction, start + i)]);
   const immediateTag = raw.match(/^~(5|tag)$/i);
   if (immediateTag) return [createSegment('separator', '~', start, null), createInputSegment(immediateTag[1], start + 1)];
   const tagChord = raw.match(/^([1-4](?:\+[1-4])*)\+(5|tag)$/i);
@@ -182,8 +186,9 @@ const parseCompactLexeme = (raw, start) => {
   }
   // A leading tilde is this site's held-direction notation. Between inputs it
   // means a rapid succession, so keep that timing marker between separate icons.
-  if (raw.includes("~") && !raw.startsWith("~")) {
-    const parts = raw.split("~");
+  if (raw.slice(1).includes("~")) {
+    const parts = raw.slice(raw.startsWith("~") ? 1 : 0).split("~");
+    if (raw.startsWith("~") && parts.length) parts[0] = `~${parts[0]}`;
     const parsed = parts.map((part) => parseInputNotation(part));
     if (parts.every(Boolean) && parsed.every((part) => part.every((s) => s.kind !== "text"))) {
       let offset = start;

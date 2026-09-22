@@ -2,362 +2,1120 @@
   "schemaVersion": 1,
   "gameId": "tekken-4",
   "title": "Tekken 4",
-  "edition": "PlayStation 2",
-  "publicationStatus": "draft",
+  "edition": "Arcade / PlayStation 2",
+  "tagline": "The King of Iron Fist Tournament returns.",
   "source": {
     "label": "Tekken 4 move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
-  },
-  "coverage": {
-    "rosterBasis": "Characters with videos in the HISSATSU playlist",
-    "rosterComplete": false
+    "note": "Commands use 1/2/3/4 notation. Land the starting attack before continuing a route. Some endings hit grounded opponents and depend on their recovery; timing, range and opponent size matter. 10 hit combos are preset strings, not guaranteed juggles. Data primarily from Tekken Wiki (Fandom) Tekken 4 movelists, cross-checked with contemporary guides."
   },
   "portraits": {
-    "credit": null,
-    "sourceUrl": null
+    "credit": "Original Tekken 4 character artwork: Namco.",
+    "sourceUrl": "https://www.bandainamcoent.co.jp/"
   },
   "characters": [
     {
-      "slug": "king",
-      "name": "King",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
       "slug": "bryan-fury",
       "name": "Bryan Fury",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-bryan-fury-portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Gravity Brain Buster",
+            "input": "1+3"
+          },
+          {
+            "name": "Front Neck Full Swing",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Snake Edge",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Mach Breaker",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Hands of Doom",
+            "input": "b+2,1,2"
+          },
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Snake Edge into Mach Breaker",
+            "input": "d/f+3 > f,f+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Strong mid-range pressure and launchers."
+      ]
     },
     {
       "slug": "christie-monteiro",
       "name": "Christie Monteiro",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-christie-monteiro-portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Rio Deal",
+            "input": "1+3"
+          },
+          {
+            "name": "Rio Special",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Handstand",
+            "input": "3+4"
+          },
+          {
+            "name": "Cartwheel",
+            "input": "f+3+4"
+          },
+          {
+            "name": "One Two Capoeira",
+            "input": "1,2"
+          },
+          {
+            "name": "Negative Edge",
+            "input": "d/f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Capoeira specialist. Eddy is an unlockable costume/variant in the console version."
+      ]
     },
     {
-      "slug": "heihachi-mishima",
-      "name": "Heihachi Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "slug": "combot",
+      "name": "Combot",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-combot-portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
-        "punishers": [],
         "throws": [],
-        "chains": [],
         "moves": [],
         "combos": [],
-        "wallCombos": [],
-        "stances": [],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
       },
-      "notes": []
-    },
-    {
-      "slug": "jin-kazama",
-      "name": "Jin Kazama",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "kazuya-mishima",
-      "name": "Kazuya Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "julia-chang",
-      "name": "Julia Chang",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "nina-williams",
-      "name": "Nina Williams",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
+      "notes": [
+        "Combot copies one randomly selected fighter for the entire match. Use that fighter’s guide for inputs and combos."
+      ],
+      "mimic": true
     },
     {
       "slug": "craig-marduk",
       "name": "Craig Marduk",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-craig-marduk-portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Knee Breaker",
+            "input": "2+4"
+          },
+          {
+            "name": "Around the World",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Power Bomb",
+            "input": "Approach crouching d+1+3"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Ready Position",
+            "input": "3+4"
+          },
+          {
+            "name": "Ironman Tackle",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Battering Ram",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Annihilator Hammer",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Powerful Vale Tudo grappler with strong mid-range tools and Mount game."
+      ]
     },
     {
-      "slug": "kuma",
-      "name": "Kuma",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "eddy-gordo",
+      "name": "Eddy Gordo",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-eddy-gordo-portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Rio Deal",
+            "input": "1+3"
+          },
+          {
+            "name": "Rio Special",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Handstand",
+            "input": "3+4"
+          },
+          {
+            "name": "Cartwheel",
+            "input": "f+3+4"
+          },
+          {
+            "name": "One Two Capoeira",
+            "input": "1,2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Console exclusive unlockable (costume for Christie in some versions). Capoeira specialist."
+      ]
     },
     {
-      "slug": "paul-phoenix",
-      "name": "Paul Phoenix",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-Heihachi-portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
-    },
-    {
-      "slug": "marshall-law",
-      "name": "Marshall Law",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "steve-fox",
-      "name": "Steve Fox",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "yoshimitsu",
-      "name": "Yoshimitsu",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "throws": [
+          {
+            "name": "Jumping Powerbomb",
+            "input": "2+4"
+          },
+          {
+            "name": "Neck Breaker",
+            "input": "f+2+4"
+          },
+          {
+            "name": "Stonehead",
+            "input": "f,F+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Dragon Uppercut",
+            "input": "f,n,d,d/f+1"
+          },
+          {
+            "name": "Rising Uppercut",
+            "input": "f,n,d,D/F+2"
+          },
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Hell Axle",
+            "input": "u/f+3,4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Demon Uppercut into Hell Axle",
+            "input": "f,f+2 > u/f+3,4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "f,f,N,2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          }
+        ]
       },
       "notes": []
     },
     {
       "slug": "hwoarang",
       "name": "Hwoarang",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-hwoarang-portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
+        "throws": [
+          {
+            "name": "Pickpocket",
+            "input": "1+3"
+          },
+          {
+            "name": "Human Cannonball",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Machine Gun Kicks",
+            "input": "3,3,3,3"
+          },
+          {
+            "name": "Flying Eagle",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Sky Rocket",
+            "input": "f,n,d,d/f+4"
+          },
+          {
+            "name": "Left Flamingo",
+            "input": "f+3"
+          },
+          {
+            "name": "Right Flamingo",
+            "input": "f+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Sky Rocket into Hunting Hawk",
+            "input": "f,n,d,d/f+4 > u/f+3,4,3"
+          }
+        ],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
+      },
+      "notes": [
+        "Stance switches (Left/Right Stance, Left/Right Flamingo) are central."
+      ]
+    },
+    {
+      "slug": "jin-kazama",
+      "name": "Jin Kazama",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-jin-kazama-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Over the Shoulder Reverse",
+            "input": "2+4"
+          },
+          {
+            "name": "Tidal Wave",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Complicated Wire",
+            "input": "d,d/b,b+1+3"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Kazama Style 5 Hit Combo",
+            "input": "1,3,2,1,4"
+          },
+          {
+            "name": "Stinger",
+            "input": "f+[3~3]"
+          },
+          {
+            "name": "Blade Kick",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Avenger",
+            "input": "u/b+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Avenger",
+            "input": "u/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Traditional karate style in this game."
+      ]
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-julia-chang-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Death Valley Bomb",
+            "input": "2+4,f"
+          },
+          {
+            "name": "Arm Lock Suplex",
+            "input": "d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "G-Clef Cannon",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Tequila Sunrise",
+            "input": "[3~2]"
+          },
+          {
+            "name": "Palm Explosion",
+            "input": "f+[1~2]"
+          },
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Bow & Arrow Kick",
+            "input": "1+4,3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Tequila into G-Clef",
+            "input": "[3~2] > 1,1"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Shares many tools with Michelle Chang."
+      ]
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-kazuya-mishima-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Hip Throw",
+            "input": "2+4"
+          },
+          {
+            "name": "Stonehead",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "d+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Soul Thrust",
+            "input": "f+2"
+          },
+          {
+            "name": "Abolishing Fist",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Abolishing Fist into Soul Thrust",
+            "input": "d/f+2 > f+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          }
+        ]
       },
       "notes": []
     },
     {
-      "slug": "lee-chaolan",
-      "name": "Lee Chaolan",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "king",
+      "name": "King",
+      "portrait": {
+        "image": "/characters/tekken-4/1752048-king_t4_hd.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Winding Nut",
+            "input": "1+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,b,d/b,d,d/f,f+1"
+          },
+          {
+            "name": "Muscle Buster",
+            "input": "d,d/b,b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Palm Attack",
+            "input": "1,2"
+          },
+          {
+            "name": "Exploder",
+            "input": "3+4"
+          },
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Capital Punishment",
+            "input": "u/f+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Extremely strong throw game."
+      ]
+    },
+    {
+      "slug": "kuma-panda",
+      "name": "Kuma II / Panda",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-kuma-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Bear's Bite",
+            "input": "1+3"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Bear Hammer",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Double Claw",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Kuma and Panda share the exact same moveset."
+      ]
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan / Violet",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-lee-chaolan-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Axle Throw",
+            "input": "2+4"
+          },
+          {
+            "name": "Knee Drive",
+            "input": "f,f+3+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Hitman",
+            "input": "3+4"
+          },
+          {
+            "name": "Silver Cyclone",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Death Touch",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Infinite Kick Chain",
+            "input": "4,4,4"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Silver Cyclone",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Death Touch",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Violet is Lee’s alter-ego / costume. Shares the same moveset."
+      ]
     },
     {
       "slug": "lei-wulong",
       "name": "Lei Wulong",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-lei-wulong-portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
+        "throws": [
+          {
+            "name": "Double Foot Stomp",
+            "input": "1+3"
+          },
+          {
+            "name": "Sleeper Hold",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Five Gates Form - Snake",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Drunken Master Walk",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Phoenix Illusion",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Play Dead",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Razor Rush",
+            "input": "f,n,1,2,1,2"
+          }
+        ],
         "combos": [],
-        "wallCombos": [],
-        "stances": [],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
+      },
+      "notes": [
+        "Five Animal forms + Drunken Master Walk and Play Dead are central."
+      ]
+    },
+    {
+      "slug": "ling-xiaoyu",
+      "name": "Ling Xiaoyu / Miharu",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-ling-xiaoyu-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Jade",
+            "input": "1+3"
+          },
+          {
+            "name": "Ruby",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Art of Phoenix",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Rain Dance",
+            "input": "b+3+4"
+          },
+          {
+            "name": "Hypnotist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "X Marks the Spot",
+            "input": "f,f+1+2,1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Miharu is an unlockable costume for Xiaoyu in the console version. Phoenix and Rain Dance stances are core."
+      ]
+    },
+    {
+      "slug": "marshall-law",
+      "name": "Marshall Law",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken_4_Marshall_Law.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Dragon's Fire",
+            "input": "2+4,f"
+          },
+          {
+            "name": "Hopping Frog",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Machine Gun Arrow",
+            "input": "1,1,1,1,1"
+          },
+          {
+            "name": "Shaolin Spin Kicks",
+            "input": "4,3,4"
+          },
+          {
+            "name": "Poison Arrow",
+            "input": "f+[2~1]"
+          },
+          {
+            "name": "Dragon Tail",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Poison Arrow into Dragon Tail",
+            "input": "f+[2~1] > d/b+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "d/f+1,2,2,1,3,3,3,4,3,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Classic Law moveset."
+      ]
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4_CGI_(5).webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Grab Flip",
+            "input": "1+3"
+          },
+          {
+            "name": "Over The Back Toss",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Biting Snake",
+            "input": "1,2,1,4"
+          },
+          {
+            "name": "Blonde Bomb",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Catapult Kick",
+            "input": "u/f+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Biting Snake into Blonde Bomb",
+            "input": "1,2,1,4 > f+1+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": []
       },
       "notes": []
     },
     {
-      "slug": "ling-xiaoyu",
-      "name": "Ling Xiaoyu",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-paul-phoenix-portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
+        "throws": [
+          {
+            "name": "Shoulder Pop",
+            "input": "2+4"
+          },
+          {
+            "name": "Twist and Shout",
+            "input": "d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Phoenix Smasher",
+            "input": "qcf+2"
+          },
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Neutron Bomb",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Flash Elbow",
+            "input": "f,f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Flash Elbow into Phoenix Smasher",
+            "input": "f,f+2 > qcf+2"
+          }
+        ],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": [
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          }
+        ]
       },
       "notes": []
+    },
+    {
+      "slug": "steve-fox",
+      "name": "Steve Fox",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-steve-fox-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Clinching",
+            "input": "2+4"
+          },
+          {
+            "name": "Gut Wrencher",
+            "input": "During Clinching 1"
+          },
+          {
+            "name": "Brain Pulverizer",
+            "input": "During Clinching 2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Double Jab",
+            "input": "1,1"
+          },
+          {
+            "name": "Left Right",
+            "input": "1,2"
+          },
+          {
+            "name": "Flicker Stance",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Ducking Left",
+            "input": "3"
+          },
+          {
+            "name": "Ducking Right",
+            "input": "4"
+          },
+          {
+            "name": "Sonic Fang",
+            "input": "f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Pure boxer. Excellent pressure, ducking, and Flicker Stance tools."
+      ]
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-yoshimitsu-portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Sword Face Smash",
+            "input": "2+4"
+          },
+          {
+            "name": "Rainbow Drop",
+            "input": "d,d/b,b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Attack",
+            "input": "2,3"
+          },
+          {
+            "name": "Indian Stance / Meditation",
+            "input": "3+4"
+          },
+          {
+            "name": "Harakiri",
+            "input": "During Meditation 1+4"
+          },
+          {
+            "name": "Flea",
+            "input": "1+2"
+          },
+          {
+            "name": "Kangaroo Kick",
+            "input": "[4~3]"
+          }
+        ],
+        "combos": [],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,4,4,4,1,1,1,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Harakiri",
+            "input": "During Meditation 1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Self-damage moves and unique stances (Flea, Meditation) are signature."
+      ]
+    },
+    {
+      "slug": "miharu-hirano",
+      "name": "Miharu Hirano",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-miharu-hirano-portrait.webp",
+        "fit": "cover"
+      },
+      "sharedGuide": "ling-xiaoyu",
+      "sections": {},
+      "notes": [
+        "Miharu Hirano shares Ling Xiaoyu / Miharu's moveset. Use the shared guide for inputs and combo routes."
+      ]
+    },
+    {
+      "slug": "violet",
+      "name": "Violet",
+      "portrait": {
+        "image": "/characters/tekken-4/Tekken-4-violet-portrait.webp",
+        "fit": "cover"
+      },
+      "sharedGuide": "lee-chaolan",
+      "sections": {},
+      "notes": [
+        "Violet shares Lee Chaolan / Violet's moveset. Use the shared guide for inputs and combo routes."
+      ]
     }
   ]
 }

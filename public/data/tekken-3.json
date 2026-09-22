@@ -3,511 +3,3005 @@
   "gameId": "tekken-3",
   "title": "Tekken 3",
   "edition": "PlayStation",
-  "publicationStatus": "draft",
+  "tagline": "The third round.",
   "source": {
     "label": "Tekken 3 move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
-  },
-  "coverage": {
-    "rosterBasis": "Characters with videos in the HISSATSU playlist",
-    "rosterComplete": false
+    "note": "Commands use 1/2/3/4 notation. Land the starting attack before continuing a route. Some endings hit grounded opponents and depend on their recovery; timing, range and opponent size matter. 10 hit combos are preset strings, not guaranteed juggles. Data primarily from Tekken Wiki (Fandom) Tekken 3 movelists, cross-checked with contemporary guides."
   },
   "portraits": {
-    "credit": null,
-    "sourceUrl": null
+    "credit": "Original Tekken 3 character artwork: Namco.",
+    "sourceUrl": "https://www.bandainamcoent.co.jp/"
   },
   "characters": [
     {
-      "slug": "bryan-fury",
-      "name": "Bryan Fury",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [
-          {
-            "name": "Hopkick into punch and kick string",
-            "input": "uf+4 > ~f+2 > ~f+4,3,4"
-          },
-          {
-            "name": "Launch into backfist string",
-            "launchers": [
-              "uf,n+4",
-              "WS 1",
-              "CH b+2,1"
-            ],
-            "input": "b+2,1,4"
-          },
-          {
-            "name": "While-standing launcher into power punch",
-            "input": "WS 1 > b+1+4"
-          },
-          {
-            "name": "Sidestep launcher into low kick and catch",
-            "input": "SS 1 > d+3 > df+1+3"
-          },
-          {
-            "name": "Counter-hit kick into rushing punch",
-            "input": "CH ~f+4 > f,~f+2"
-          },
-          {
-            "name": "Counter-hit string into low kick",
-            "input": "CH b+2,1,u+4 > df+3"
-          },
-          {
-            "name": "Counter-hit rising kick juggle",
-            "input": "CH WS 3 > uf,n+4 > b+2,1,4"
-          }
-        ],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "doctor-bosconovitch",
-      "name": "Doctor Bosconovitch",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
       "slug": "jin-kazama",
       "name": "Jin Kazama",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "portrait": {
+        "image": "/characters/tekken-3/TK3_Jin_Headshot.webp",
+        "fit": "cover"
+      },
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [
+        "throws": [
           {
-            "name": "Uppercut into wind god fist and laser string",
-            "input": "df+2 > f,n,d,df+2 > b,~f+2,1,2 > f,~f+2"
+            "name": "Double High Sweep",
+            "input": "1+3"
           },
           {
-            "name": "Launcher into laser string",
-            "launchers": [
-              "f,n,d,df+2",
-              "CH df+2"
-            ],
-            "input": "b,~f+2,1,2 > f,~f+2"
+            "name": "Over the Shoulder Reverse",
+            "input": "2+4"
           },
           {
-            "name": "Rising uppercut into leaping kick",
-            "input": "WS 2 > f,n,d,df+1,3"
+            "name": "Stonehead",
+            "input": "f,f+1+2"
           },
           {
-            "name": "String-end launcher into leaping kick",
-            "input": "(b,~f+2,1),d+2 > f,n,d,df+1,3",
-            "notes": "The parenthesized first two attacks miss; land the final d+2."
+            "name": "Shoulder Flip",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
           },
           {
-            "name": "Hell sweep into spinning kick",
-            "input": "f,n,d,df+4 > 1+4 > 1+4,2 > 4~3"
+            "name": "Over the Limit",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
           },
           {
-            "name": "Sidestep launcher into laser string and kick",
-            "input": "SS 2 > 2 > b,~f+2,1,2 > 4~3"
+            "name": "Chicken Butcher",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
           },
           {
-            "name": "Counter-hit laser starter conversion",
-            "input": "CH b,~f+2 > d+3+4 > 1+4,2 > f,~f+2"
+            "name": "Wrist Chuck Slam",
+            "input": "d/f+2+3"
+          },
+          {
+            "name": "Complicated Wire",
+            "input": "qcb+1+3"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Ultimate Punch",
+            "input": "During Tackle 2,1,2,1,2"
+          },
+          {
+            "name": "Cross Arm Lock",
+            "input": "During Tackle 1+2"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
           }
         ],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "heihachi-mishima",
-      "name": "Heihachi Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [
+        "moves": [
           {
-            "name": "Uppercut into rushing uppercut and sweeps",
-            "input": "df+2 > f,f+2 > df+2 > f,n,d,~df+4,4,1 > d+1"
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
           },
           {
-            "name": "Rushing uppercut into sweeps",
-            "input": "f,f+2 > df+2 > f,n,d,~df+4,4,1 > d+1"
+            "name": "Left Right Combo",
+            "input": "1,2"
           },
           {
-            "name": "Rising uppercut into sweeps",
-            "input": "WS 2 > f,n,d,~df+4,4,1"
+            "name": "Demon Slayer",
+            "input": "1,2,2"
           },
           {
-            "name": "Launcher into jab and sweeps",
-            "launchers": [
-              "f,n,d,df+2",
-              "CH df+2"
-            ],
-            "input": "df+1 > f,n,d,~df+4,4,1 > d+1"
+            "name": "Shoot the Works",
+            "input": "1,2,3,4"
           },
           {
-            "name": "Counter-hit running kick conversion",
-            "input": "CH f,~f+3 > f,n,d,df+2 > df+1 > f,n,d,~df+4,4,1 > d+1"
+            "name": "One Two Knee",
+            "input": "1,2,4"
+          },
+          {
+            "name": "Demon Backhand Spin",
+            "input": "2,2"
+          },
+          {
+            "name": "Demon Scissors",
+            "input": "[4~3]"
+          },
+          {
+            "name": "Three Ring Circus",
+            "input": "1+4,2,4"
+          },
+          {
+            "name": "893P",
+            "input": "f+2"
+          },
+          {
+            "name": "Spinning High Kick",
+            "input": "f+3"
+          },
+          {
+            "name": "Knee Kick",
+            "input": "f+4"
+          },
+          {
+            "name": "Twin Lancer",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "d/f+4,4"
+          },
+          {
+            "name": "Double Lift Kick",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Hell Scraper",
+            "input": "b+2,4,2,1,2"
+          },
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          },
+          {
+            "name": "Rising Sun",
+            "input": "u/f+4,4"
+          },
+          {
+            "name": "Demon's Paw",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Heavy Body Blow",
+            "input": "b,f+2"
+          },
+          {
+            "name": "Laser Cannon",
+            "input": "b,f+2,1,2"
+          },
+          {
+            "name": "Dragon Uppercut",
+            "input": "f,n,d,d/f+1"
+          },
+          {
+            "name": "Rising Uppercut",
+            "input": "f,n,d,d/f+2"
+          },
+          {
+            "name": "Electric Wind Godfist",
+            "input": "f,n,d,d/f+2",
+            "notes": "Press simultaneously for electric version"
+          },
+          {
+            "name": "Spinning Demon",
+            "input": "f,n,d,d/f+4,4"
+          },
+          {
+            "name": "Leaping Side Kick",
+            "input": "f,f,f+3"
+          },
+          {
+            "name": "Twin Pistons",
+            "input": "WS+1,2"
+          },
+          {
+            "name": "Tooth Fairy",
+            "input": "SS+2"
           }
         ],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "yoshimitsu",
-      "name": "Yoshimitsu",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
         "combos": [
           {
-            "name": "Uppercut into spinning punches",
-            "launchers": [
-              "df+2",
-              "f+2 > df+2"
-            ],
-            "input": "b+1,(1),1 > b+1,1,(1),1 > ~f+3",
-            "notes": "Parenthesized punches miss deliberately; keep the full string rhythm."
+            "name": "Dragon uppercut into laser",
+            "input": "f,n,d,d/f+1 > 1 > b,f+2,1,2"
           },
           {
-            "name": "Crouching sweep into flying headbutt",
-            "input": "FC df+3 > u+1+2 > f,f",
-            "notes": "Use the forward dash during the airborne follow-up."
+            "name": "Rising uppercut into flash punches",
+            "input": "f,n,d,d/f+2 > 1 > 1,1,2"
           },
           {
-            "name": "Crouching sword sweep into running kick",
-            "input": "FC b+1 > f,f+4"
+            "name": "Demon's paw into hell scraper",
+            "input": "f,f+2 > b+2,4,2,1,2"
+          },
+          {
+            "name": "Double lift kick into rising sun",
+            "input": "d+3+4 > u/f+4,4"
+          },
+          {
+            "name": "Electric into twin pistons",
+            "input": "f,n,d,d/f+2 > WS+1,2"
           }
         ],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "gon",
-      "name": "Gon",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "king",
-      "name": "King",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "eddy-gordo",
-      "name": "Eddy Gordo",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "kuma",
-      "name": "Kuma",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "gun-jack",
-      "name": "Gun Jack",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "paul-phoenix",
-      "name": "Paul Phoenix",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "b+2,4,4,4,4,2,1+4,2,1,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "b+2,4,4,4,4,2,1+4,2,1,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 3",
+            "input": "f,f,2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 4",
+            "input": "f,f+2,1,2,2,3,4,4,3,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          }
+        ]
       },
       "notes": []
     },
     {
       "slug": "hwoarang",
       "name": "Hwoarang",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Hwoarang_Portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Pickpocket",
+            "input": "1+3"
+          },
+          {
+            "name": "Human Cannonball",
+            "input": "2+4"
+          },
+          {
+            "name": "Bring It On",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Dead-End",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Slaughterhouse",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Roll and Choke",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Leg Hook Throw",
+            "input": "d,d/b+1+3"
+          },
+          {
+            "name": "Door Mat",
+            "input": "d,d/b,b+3"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d/b+1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Migraine",
+            "input": "1,1"
+          },
+          {
+            "name": "One Two Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Rejector",
+            "input": "1,2,3"
+          },
+          {
+            "name": "Rejection",
+            "input": "1,2,4"
+          },
+          {
+            "name": "Machine Gun Kicks",
+            "input": "3,3,3,3"
+          },
+          {
+            "name": "Flying Eagle",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Axe Murderer",
+            "input": "4,3"
+          },
+          {
+            "name": "Motion Switch",
+            "input": "3+4"
+          },
+          {
+            "name": "Disrespect",
+            "input": "1+2"
+          },
+          {
+            "name": "Rusty Knife",
+            "input": "f+2"
+          },
+          {
+            "name": "Left Flamingo Feint",
+            "input": "f+3"
+          },
+          {
+            "name": "Doggie Lift",
+            "input": "f+4"
+          },
+          {
+            "name": "Public Enemy",
+            "input": "d/f+3,4"
+          },
+          {
+            "name": "Bird Hunter",
+            "input": "d+4,4"
+          },
+          {
+            "name": "Crippler",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Dynamite Heel",
+            "input": "d/b+3+4"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Spiral Tap",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Torpedo Kick",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Sky Rocket",
+            "input": "f,n,d,d/f+4"
+          },
+          {
+            "name": "Iron Heel",
+            "input": "WS+3"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+4,4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Machine gun into hunting hawk",
+            "input": "3,3,3,3 > u/f+3,4,3"
+          },
+          {
+            "name": "Flying eagle into doggie lift",
+            "input": "[3~4] > f+4"
+          },
+          {
+            "name": "Public enemy into bird hunter",
+            "input": "d/f+3,4 > d+4,4"
+          },
+          {
+            "name": "Sky rocket into iron heel",
+            "input": "f,n,d,d/f+4 > WS+3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo Left Flamingo",
+            "input": "During Left Flamingo 2,2,3,4,3,4,4,4,4,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo Right Flamingo",
+            "input": "During Right Flamingo 1,2,3,4,3,4,4,4,4,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dynamite Heel",
+            "input": "d/b+3+4",
+            "notes": "b,b to cancel"
+          },
+          {
+            "name": "Power Blast",
+            "input": "During Left Flamingo 1+4",
+            "notes": "b,b to cancel"
+          }
+        ]
+      },
+      "notes": [
+        "Stance switches (Left/Right Stance, Left/Right Flamingo) are central to the moveset."
+      ]
     },
     {
-      "slug": "true-ogre",
-      "name": "True Ogre",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Paul_Portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
-    },
-    {
-      "slug": "ogre",
-      "name": "Ogre",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "julia-chang",
-      "name": "Julia Chang",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "throws": [
+          {
+            "name": "Over The Shoulder",
+            "input": "1+3"
+          },
+          {
+            "name": "Shoulder Pop",
+            "input": "2+4"
+          },
+          {
+            "name": "Dragon Screw",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Fall Away",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Reverse Neck Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Twist & Shout",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Foot Launch",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Push Away",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Arm Breaker",
+            "input": "During Tackle 1+2"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Reverse PDK Combo",
+            "input": "1,4"
+          },
+          {
+            "name": "Jab Roundhouse",
+            "input": "2,3"
+          },
+          {
+            "name": "Quick PK Combo",
+            "input": "f+2,3"
+          },
+          {
+            "name": "Hammer of the Gods",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Shoulder Tackle",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Body Blow",
+            "input": "d/f+1"
+          },
+          {
+            "name": "Hammer Punch",
+            "input": "d+1"
+          },
+          {
+            "name": "Hammer Punch to Power Punch",
+            "input": "d+1,2"
+          },
+          {
+            "name": "Bone Breaker",
+            "input": "d+4,2"
+          },
+          {
+            "name": "Sweep Kick",
+            "input": "d/b+3"
+          },
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Shredder",
+            "input": "u/f+3,4"
+          },
+          {
+            "name": "Flash Elbow",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Double Hop Kick High",
+            "input": "f,f+3,4,4"
+          },
+          {
+            "name": "Neutron Bomb",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Thruster",
+            "input": "qcf+1"
+          },
+          {
+            "name": "Phoenix Smasher",
+            "input": "qcf+2"
+          },
+          {
+            "name": "Sway",
+            "input": "qcb"
+          },
+          {
+            "name": "God Hammer Punch",
+            "input": "qcb,n,1"
+          },
+          {
+            "name": "Rubberband Attack",
+            "input": "d,d/b,n,2"
+          },
+          {
+            "name": "Jaw Breaker",
+            "input": "FC+d/f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Flash elbow into phoenix smasher",
+            "input": "f,f+2 > qcf+2"
+          },
+          {
+            "name": "Hammer punch into neutron bomb",
+            "input": "d+1,2 > f,f+4"
+          },
+          {
+            "name": "Shredder into burning fist",
+            "input": "u/f+3,4 > b+1+2"
+          },
+          {
+            "name": "Sway into rubberband",
+            "input": "qcb > d,d/b,n,2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,3,2,1,2,1,4,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          }
+        ]
       },
       "notes": []
     },
     {
       "slug": "forest-law",
       "name": "Forest Law",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-3/TK3_forest_headshot.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Dragon's Fire",
+            "input": "1+3"
+          },
+          {
+            "name": "Hopping Frog",
+            "input": "2+4"
+          },
+          {
+            "name": "Headlock Kick",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Ball Breaker",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Dragon Bites",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Run Up to Drop",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Headlock Punch",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Knee Lift",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Parry",
+            "input": "b+1+3 or 2+4"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d/b+1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Machine Gun Arrow",
+            "input": "1,1,1,1,1"
+          },
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Quick Rave War",
+            "input": "2,2"
+          },
+          {
+            "name": "Triple Head Kick",
+            "input": "3,3,3"
+          },
+          {
+            "name": "High Kick to Somersault",
+            "input": "3,4"
+          },
+          {
+            "name": "Shaolin Spin Kicks",
+            "input": "4,3,4"
+          },
+          {
+            "name": "Backflip",
+            "input": "3+4"
+          },
+          {
+            "name": "Poison Arrow",
+            "input": "f+[2~1]"
+          },
+          {
+            "name": "Rave War Combo",
+            "input": "f+2,2,2"
+          },
+          {
+            "name": "Mid Kick",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Right Middle Kick to Somersault",
+            "input": "d/f+4,3"
+          },
+          {
+            "name": "Body Blow to Somersault",
+            "input": "d+2,3"
+          },
+          {
+            "name": "Dragon Low Kick",
+            "input": "d+3"
+          },
+          {
+            "name": "Frogman",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Dragon Whip",
+            "input": "d/b+2"
+          },
+          {
+            "name": "Dragon's Tail",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Triple head into somersault",
+            "input": "3,3,3 > 3,4"
+          },
+          {
+            "name": "Body blow into frogman",
+            "input": "d+2,3 > d+3+4"
+          },
+          {
+            "name": "Poison arrow into dragon tail",
+            "input": "f+[2~1] > d/b+4"
+          },
+          {
+            "name": "Rave war into charge punch",
+            "input": "f+2,2,2 > d/b+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "d/f+1,2,2,1,3,3,3,4,3,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "d/f+1,3,2,2,3,d+3,3,4,3,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 3",
+            "input": "d/f+1,2,2,1,3,d+3,3,4,3,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Shares many moves with Marshall Law from previous games."
+      ]
     },
     {
-      "slug": "anna-williams",
-      "name": "Anna Williams",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Yoshimitsu_Portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Jumping Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Sword Face Smash",
+            "input": "2+4"
+          },
+          {
+            "name": "Wheels of Hell",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Spiritual Division",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Tornado Drop",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Rainbow Throw",
+            "input": "d,d/b,b+1+2"
+          },
+          {
+            "name": "Lower Parry",
+            "input": "d/b+1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Attack",
+            "input": "2,3"
+          },
+          {
+            "name": "Oni Kick",
+            "input": "3"
+          },
+          {
+            "name": "Zig Zag",
+            "input": "3,4"
+          },
+          {
+            "name": "Kangaroo Kick",
+            "input": "[4~3]"
+          },
+          {
+            "name": "Triple Roundhouse Combo",
+            "input": "4,4,4"
+          },
+          {
+            "name": "Manji Backfist",
+            "input": "f+2"
+          },
+          {
+            "name": "Door Knocker",
+            "input": "d/f+1,1,1,1"
+          },
+          {
+            "name": "Basic Uppercut",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Indian Stance",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Harakiri",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Quick Slash",
+            "input": "d/b+1"
+          },
+          {
+            "name": "Death Slash",
+            "input": "d/b+1,n,d/b"
+          },
+          {
+            "name": "Slap-U-Silly",
+            "input": "d/b+2,2,2,2,2,2"
+          },
+          {
+            "name": "Manji Spin Low Kicks",
+            "input": "d/b+3,3,3,3,3,3"
+          },
+          {
+            "name": "Stone Fists",
+            "input": "b+1,1,1,1,1,1"
+          },
+          {
+            "name": "Bad Stomach",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Poison Breath",
+            "input": "During Bad Stomach any button"
+          },
+          {
+            "name": "Meditation",
+            "input": "SS+3+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Kangaroo into door knocker",
+            "input": "[4~3] > d/f+1,1,1,1"
+          },
+          {
+            "name": "Flash attack into harakiri",
+            "input": "2,3 > d+1+4"
+          },
+          {
+            "name": "Uppercut into stone fists",
+            "input": "d/f+2 > b+1,1,1,1"
+          },
+          {
+            "name": "Indian stance into kangaroo",
+            "input": "d+3+4 > 4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,4,4,4,1,1,1,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Harakiri",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Quick Slash",
+            "input": "d/b+1"
+          },
+          {
+            "name": "Death Slash",
+            "input": "d/b+1,n,d/b"
+          },
+          {
+            "name": "Poison Breath",
+            "input": "During Bad Stomach any button"
+          }
+        ]
+      },
+      "notes": [
+        "Self-damage moves like Harakiri are signature. Indian Stance and Meditation provide healing options."
+      ]
     },
     {
-      "slug": "nina-williams",
-      "name": "Nina Williams",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Heihachi_Portrait.webp",
+        "fit": "cover"
       },
-      "notes": []
-    },
-    {
-      "slug": "lei-wulong",
-      "name": "Lei Wulong",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "throws": [
+          {
+            "name": "Neck Breaker",
+            "input": "1+3"
+          },
+          {
+            "name": "Jumping Powerbomb",
+            "input": "2+4"
+          },
+          {
+            "name": "Guillotine Chop",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Freefall",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Atomic Drop",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Stonehead",
+            "input": "f,F+1+2"
+          },
+          {
+            "name": "Headbutt Carnival",
+            "input": "f,f+1+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Demon Executioner",
+            "input": "1,2,[2~1+2]"
+          },
+          {
+            "name": "Demon Backhand Spin",
+            "input": "2,2"
+          },
+          {
+            "name": "Demon Scissors",
+            "input": "4~3"
+          },
+          {
+            "name": "Demon Breath",
+            "input": "1+2"
+          },
+          {
+            "name": "Demon Massacre",
+            "input": "f+1,b+2,1"
+          },
+          {
+            "name": "Demon Lair",
+            "input": "f+1,b+2,4"
+          },
+          {
+            "name": "Demon Shout",
+            "input": "f+[2~1+2]"
+          },
+          {
+            "name": "Right Splits Kick",
+            "input": "f+4"
+          },
+          {
+            "name": "Twin Pistons",
+            "input": "WS+1,2"
+          },
+          {
+            "name": "Hammer Punch",
+            "input": "d+1"
+          },
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Demon's Boar",
+            "input": "b+2"
+          },
+          {
+            "name": "Hell Axle",
+            "input": "u/f+3,4"
+          },
+          {
+            "name": "Rising Sun",
+            "input": "u/f+4,4"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Left Splits Kick",
+            "input": "f,f,n,3"
+          },
+          {
+            "name": "Dragon Uppercut",
+            "input": "f,n,d,d/f+1"
+          },
+          {
+            "name": "Rising Uppercut",
+            "input": "f,n,d,D/F+2"
+          },
+          {
+            "name": "Spinning Demon",
+            "input": "f,n,d,D/F+4,4,4"
+          },
+          {
+            "name": "Heavy Power Punch",
+            "input": "qcf+2"
+          },
+          {
+            "name": "Leaping Side Kick",
+            "input": "f,f,f+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Demon uppercut into hell axle",
+            "input": "f,f+2 > u/f+3,4"
+          },
+          {
+            "name": "Dragon uppercut into twin pistons",
+            "input": "f,n,d,d/f+1 > WS+1,2"
+          },
+          {
+            "name": "Rising uppercut into demon scissors",
+            "input": "f,n,d,D/F+2 > 4~3"
+          },
+          {
+            "name": "Lightning hammer into demon breath",
+            "input": "d+1+4 > 1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "f,f,n,2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "d/f+3,2,2,4,4,1,4,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 3",
+            "input": "d/f+3,2,2,4,4,1,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          }
+        ]
       },
       "notes": []
     },
     {
       "slug": "ling-xiaoyu",
       "name": "Ling Xiaoyu",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-3/Xiaoyu_T3.webp",
+        "fit": "cover"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Jade",
+            "input": "1+3"
+          },
+          {
+            "name": "Ruby",
+            "input": "2+4"
+          },
+          {
+            "name": "Arm Flip",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Dump the Bucket",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Crank Up",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Dislocator",
+            "input": "d,d/b,b+2"
+          },
+          {
+            "name": "So Shoe Me",
+            "input": "f+[2~1]"
+          },
+          {
+            "name": "Cradle Throw",
+            "input": "During Phoenix 1+3 or 2+4"
+          },
+          {
+            "name": "Upper Parry",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d or d/b+1+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Bayonet",
+            "input": "1,2"
+          },
+          {
+            "name": "April Showers",
+            "input": "2,1"
+          },
+          {
+            "name": "Cloud Kick",
+            "input": "f+3"
+          },
+          {
+            "name": "Belly Chop",
+            "input": "D/F+1"
+          },
+          {
+            "name": "Butter the Bread",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Storming Flower",
+            "input": "d/b+1"
+          },
+          {
+            "name": "Knee Cracker",
+            "input": "d/b+3"
+          },
+          {
+            "name": "Nutcracker",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Hypnotist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Thunder Strike",
+            "input": "During Hypnotist 1+2"
+          },
+          {
+            "name": "Cyanide",
+            "input": "u/f+4"
+          },
+          {
+            "name": "X Marks the Spot",
+            "input": "f,f+1+2,1+2"
+          },
+          {
+            "name": "Front Layout",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Art of Phoenix",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Rain Dance",
+            "input": "b+3+4"
+          },
+          {
+            "name": "Mistrust",
+            "input": "Back to opponent 4"
+          },
+          {
+            "name": "Dark & Stormy",
+            "input": "Back to opponent 2,1,4"
+          },
+          {
+            "name": "Wave Crest Power",
+            "input": "During Phoenix 1+2"
+          },
+          {
+            "name": "Flower Power",
+            "input": "During Phoenix u/f+4,4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Phoenix into Wave Crest",
+            "input": "d+1+2 > 1+2"
+          },
+          {
+            "name": "Cyanide into Rain Dance tools",
+            "input": "u/f+4 > b+3+4 > 4"
+          },
+          {
+            "name": "Storming Flower into Phoenix",
+            "input": "d/b+1 > d+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "u+4,1,2,1+2,1,3,4,4,4,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "u+4,1,2,4,4,2,1+2,1,4,2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Thunder Strike",
+            "input": "During Hypnotist 1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Phoenix and Rain Dance stances are core to her game."
+      ]
+    },
+    {
+      "slug": "eddy-gordo",
+      "name": "Eddy Gordo / Tiger Jackson",
+      "portrait": {
+        "image": "/characters/tekken-3/EddyfpT3.JPG.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Rio Deal",
+            "input": "1+3"
+          },
+          {
+            "name": "Rio Special",
+            "input": "2+4"
+          },
+          {
+            "name": "Missile Launcher",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Shadow Dancer",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Air Mail",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Rodeo Spin",
+            "input": "b,d/b,d,d/f,f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "One Two Elbows",
+            "input": "1,2"
+          },
+          {
+            "name": "Slippery Kick",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Satellite Moon",
+            "input": "[4~3]"
+          },
+          {
+            "name": "Handstand Kick",
+            "input": "f+3"
+          },
+          {
+            "name": "Samba",
+            "input": "f+4"
+          },
+          {
+            "name": "Elbow Uppercut",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Freak Show",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Thong Bikini",
+            "input": "d/b+3"
+          },
+          {
+            "name": "Fruit Picker",
+            "input": "d/b+3+4",
+            "notes": "b,b to cancel"
+          },
+          {
+            "name": "Firekick",
+            "input": "u+3+4"
+          },
+          {
+            "name": "Lunging Brush Fire",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Boomerang",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Handstand",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Helicopter",
+            "input": "During Handstand 4"
+          },
+          {
+            "name": "Perch Flop Kick",
+            "input": "During Handstand d+3+4"
+          },
+          {
+            "name": "Hot Plate Special",
+            "input": "SS+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Satellite into Samba",
+            "input": "[4~3] > f+4"
+          },
+          {
+            "name": "Handstand into Helicopter",
+            "input": "f+1+2 > 4"
+          },
+          {
+            "name": "Thong Bikini into Hot Plate",
+            "input": "d/b+3 > SS+3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "[4~3],4,2,4,4,3+4,3+4,3+4,d/b+3+4,u/f+3+4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Fruit Picker",
+            "input": "d/b+3+4",
+            "notes": "b,b to cancel"
+          }
+        ]
+      },
+      "notes": [
+        "Handstand and Negativa (Relaxed) stances are central. Tiger Jackson is a palette swap with the same moveset.",
+        "Tiger Jackson is Eddy’s alternate costume and uses the same moveset."
+      ]
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Nina_Portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Grab Flip",
+            "input": "1+3"
+          },
+          {
+            "name": "Over the Back Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Triangle Hold",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Hammer Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Leaping Triangle Hold",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Jumping Flip",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Elbow Smash",
+            "input": "d/f,d/f+1"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          },
+          {
+            "name": "Backhand Slap",
+            "input": "qcf+1+2"
+          },
+          {
+            "name": "Crab Hold",
+            "input": "qcf+3+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Biting Snake",
+            "input": "1,2,1,4"
+          },
+          {
+            "name": "Bermuda Triangle",
+            "input": "1,2,4"
+          },
+          {
+            "name": "Double Smash",
+            "input": "2,3"
+          },
+          {
+            "name": "Head Ringer",
+            "input": "3,4"
+          },
+          {
+            "name": "Blonde Bomb",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Creeping Snake",
+            "input": "d/f+3,2,1,4"
+          },
+          {
+            "name": "Geyser Cannon",
+            "input": "d/b+3+4"
+          },
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2",
+            "notes": "u,u to cancel"
+          },
+          {
+            "name": "Catapult Kick",
+            "input": "u/f+3"
+          },
+          {
+            "name": "Bad Habit",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Shut Up",
+            "input": "d,d/f+2"
+          },
+          {
+            "name": "Assassin Dagger",
+            "input": "f,f+1"
+          },
+          {
+            "name": "Panther Claw",
+            "input": "f,F+2"
+          },
+          {
+            "name": "Evil Mist",
+            "input": "qcf,D/B+2+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Creeping Snake into Blonde Bomb",
+            "input": "d/f+3,2,1 > f+1+2"
+          },
+          {
+            "name": "Geyser into Shut Up",
+            "input": "d/b+3+4 > d,d/f+2"
+          },
+          {
+            "name": "Bad Habit into Catapult",
+            "input": "f,f+3 > u/f+3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "d/f+1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2",
+            "notes": "u,u to cancel"
+          },
+          {
+            "name": "Evil Mist",
+            "input": "qcf,D/B+2+3"
+          }
+        ]
+      },
+      "notes": [
+        "Strong throw game and mix-ups with Backhand Slap / Crab Hold sequences."
+      ]
+    },
+    {
+      "slug": "bryan-fury",
+      "name": "Bryan Fury",
+      "portrait": {
+        "image": "/characters/tekken-3/TK3_bryan_headshot.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Gravity Brain Buster",
+            "input": "1+3"
+          },
+          {
+            "name": "Front Neck Full Swing",
+            "input": "2+4"
+          },
+          {
+            "name": "Gravity Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Knee Blast",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Neck Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Chains of Misery",
+            "input": "d/f,d,d/f+1+2"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d/b or d+1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Lair's Dance",
+            "input": "1,4,2,1,2"
+          },
+          {
+            "name": "Whipping Fury",
+            "input": "1,4,2,4"
+          },
+          {
+            "name": "Mid Kick to Rush",
+            "input": "3,2,1,2"
+          },
+          {
+            "name": "Hammer Driver",
+            "input": "1+2"
+          },
+          {
+            "name": "Bruce Rush",
+            "input": "f+1,2,1,2"
+          },
+          {
+            "name": "Backspin Middle Kick",
+            "input": "f+3"
+          },
+          {
+            "name": "Gravity Blow",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Snake Edge",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Broad Axe",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Hands of Doom",
+            "input": "b+2,1,2"
+          },
+          {
+            "name": "Wolf Call",
+            "input": "b+2,4"
+          },
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Mach Breaker",
+            "input": "f,f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Snake Edge into Bruce Rush",
+            "input": "d/f+3 > f+1,2,1,2"
+          },
+          {
+            "name": "Hands of Doom into Wolf Call",
+            "input": "b+2,1,2 > 4"
+          },
+          {
+            "name": "Gravity Blow into Meteor",
+            "input": "f+1+4 > b+1+4"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Gravity Blow",
+            "input": "f+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Strong mid-range pressure and launchers."
+      ]
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "portrait": {
+        "image": "/characters/tekken-3/Tk3_julia.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Death Valley Bomb",
+            "input": "1+3"
+          },
+          {
+            "name": "Knee Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Headlock Back Crusher",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Twisted Sister",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Calf Branding",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Arm Lock Suplex",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Mad Axes",
+            "input": "d,d/b,b,f+2"
+          },
+          {
+            "name": "Cross Arm Suplex",
+            "input": "d,d/b,d,d/b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "G-Clef Cannon",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Machine Gun Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Tequila Sunrise",
+            "input": "[3~2]"
+          },
+          {
+            "name": "Twin Arrow",
+            "input": "1+2"
+          },
+          {
+            "name": "Flash Uppercut",
+            "input": "f+1"
+          },
+          {
+            "name": "Palm Explosion",
+            "input": "f+[1~2]"
+          },
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Wind Roll",
+            "input": "3+4"
+          },
+          {
+            "name": "Bow & Arrow Kick",
+            "input": "1+4,3"
+          },
+          {
+            "name": "Ultimate Cannon",
+            "input": "2+3,1"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Tequila into G-Clef",
+            "input": "[3~2] > 1,1"
+          },
+          {
+            "name": "Flash Upper into Twin Arrow",
+            "input": "f+1 > 1+2"
+          },
+          {
+            "name": "Palm Explosion into Bow & Arrow",
+            "input": "f+[1~2] > 1+4,3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Shares many tools with Michelle Chang from previous games."
+      ]
+    },
+    {
+      "slug": "kuma-panda",
+      "name": "Kuma II / Panda",
+      "portrait": {
+        "image": "/characters/tekken-3/TK3_kuma_headshot.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Bear's Bite",
+            "input": "1+3"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4"
+          },
+          {
+            "name": "Bear Slam",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Choke Slam",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Swing Swung",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+4"
+          },
+          {
+            "name": "Rock 'N' Roll Circus",
+            "input": "hcb,f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Bear Hammer",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Jab Elbow Smash",
+            "input": "2,1,2"
+          },
+          {
+            "name": "Overhead Smash",
+            "input": "1+2"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "1+2,1+2"
+          },
+          {
+            "name": "Sit",
+            "input": "3+4 or d+3+4"
+          },
+          {
+            "name": "G-Clef Cannon",
+            "input": "f+1,1,1"
+          },
+          {
+            "name": "Double Claw",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Salmon Hunting",
+            "input": "b,f+2+3"
+          },
+          {
+            "name": "Fatal Wind",
+            "input": "b,b+2+3+4"
+          },
+          {
+            "name": "Pancake Press",
+            "input": "u/f+3+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Bear Hammer into Double Claw",
+            "input": "1,1,1 > f,f+1+2"
+          },
+          {
+            "name": "Deadly Claw into Sit punches",
+            "input": "b+1+2 > 3+4 > 1,2,1,2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Fatal Wind",
+            "input": "b,b+2+3+4"
+          },
+          {
+            "name": "Salmon Hunting",
+            "input": "b,f+2+3"
+          }
+        ]
+      },
+      "notes": [
+        "Kuma and Panda share the exact same moveset."
+      ]
+    },
+    {
+      "slug": "gun-jack",
+      "name": "Gun Jack",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_GunJack_Portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Lift Up Slam",
+            "input": "2+4"
+          },
+          {
+            "name": "Side Left Bomb",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Hanging Neck Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Spinal Crush",
+            "input": "1+3",
+            "notes": "Back"
+          },
+          {
+            "name": "Pile Driver",
+            "input": "d/b,f+1+2"
+          },
+          {
+            "name": "Pyramid Driver",
+            "input": "qcf+1"
+          },
+          {
+            "name": "Ground Zero",
+            "input": "u/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Jack Hammer",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Jab Elbow Smash",
+            "input": "2,1,2"
+          },
+          {
+            "name": "Overhead Smash",
+            "input": "1+2"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "1+2,1+2"
+          },
+          {
+            "name": "Giant Foot Stomp",
+            "input": "3+4"
+          },
+          {
+            "name": "Dark Greeting",
+            "input": "f+4~1"
+          },
+          {
+            "name": "Cut Saw",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Megaton Punch",
+            "input": "d/f+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Jack Hammer into Double Hammer",
+            "input": "1,1,1 > 1+2,1+2"
+          },
+          {
+            "name": "Cut Saw into Giant Foot Stomp",
+            "input": "f+1+2 > 3+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "d+2,1,1,1,2,1,2,1,1+2,1+2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Giant Foot Stomp",
+            "input": "3+4"
+          },
+          {
+            "name": "Dark Greeting",
+            "input": "f+4~1"
+          }
+        ]
+      },
+      "notes": [
+        "Powerful but slow. Strong grounded game."
+      ]
+    },
+    {
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Anna_Portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Grab Flip",
+            "input": "1+3"
+          },
+          {
+            "name": "Over The Back Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Torso Splitter",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Serpentine Arm Break",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Overhead Triangle Lock",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Overhead Toss",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Elbow Face Smash",
+            "input": "d/f,d/f+1"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          },
+          {
+            "name": "Back Hand Slap",
+            "input": "qcf+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Biting Snake",
+            "input": "1,2,1,4"
+          },
+          {
+            "name": "Head Ringer",
+            "input": "3,4"
+          },
+          {
+            "name": "Double Explosion",
+            "input": "1,2,f+1+2"
+          },
+          {
+            "name": "Blonde Bomb",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Geyser Cannon",
+            "input": "d/b+3+4"
+          },
+          {
+            "name": "Catapult Kick",
+            "input": "u/f+3"
+          },
+          {
+            "name": "Bad Habit",
+            "input": "f,f+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Biting Snake into Blonde Bomb",
+            "input": "1,2,1,4 > f+1+2"
+          },
+          {
+            "name": "Geyser into Catapult",
+            "input": "d/b+3+4 > u/f+3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Very similar to Nina but with some unique strings and stronger mix-up potential in places."
+      ]
+    },
+    {
+      "slug": "ogre",
+      "name": "Ogre",
+      "portrait": {
+        "image": "/characters/tekken-3/Ogre_-_Closeup_-_Tekken_3.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4"
+          },
+          {
+            "name": "Ankle Slam",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Hanging Neck Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Swing Swung",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Spin Behind Elbow Smash",
+            "input": "d/f,d/f+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Scissors",
+            "input": "[4~3]"
+          },
+          {
+            "name": "Power Punch",
+            "input": "f+2"
+          },
+          {
+            "name": "Right Splits Kick",
+            "input": "f+4"
+          },
+          {
+            "name": "Shoulder Tackle",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Bloody Scissors",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Deadly Slice",
+            "input": "b+2"
+          },
+          {
+            "name": "Killing Blow",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Double Knuckle",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Serpent's Venom",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Demon Scissors into Hunting Hawk",
+            "input": "[4~3] > u/f+3,4,3"
+          },
+          {
+            "name": "Power Punch into Double Knuckle",
+            "input": "f+2 > u/f+1+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Bloody Scissors",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Deadly Slice",
+            "input": "b+2"
+          },
+          {
+            "name": "Killing Blow",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Boss character. Many stolen moves from other fighters."
+      ]
+    },
+    {
+      "slug": "true-ogre",
+      "name": "True Ogre",
+      "portrait": {
+        "image": "/characters/tekken-3/True_ogre_headshot_tk3.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4"
+          },
+          {
+            "name": "Ankle Slam",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Hanging Neck Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Swing Swung",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Spin Behind Elbow Smash",
+            "input": "d/f,d/f+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Scissors",
+            "input": "4~3"
+          },
+          {
+            "name": "Hell's Flame",
+            "input": "1+2"
+          },
+          {
+            "name": "Power Punch",
+            "input": "f+2"
+          },
+          {
+            "name": "Bloody Scissors",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Deadly Slice",
+            "input": "b+2"
+          },
+          {
+            "name": "Killing Blow",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Blazing Inferno",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Serpent's Venom",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          },
+          {
+            "name": "Infinite Kick Chain",
+            "input": "WS+3,3,d/f+3,3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Hell's Flame into Bloody Scissors",
+            "input": "1+2 > d/b+1+2"
+          },
+          {
+            "name": "Serpent's Venom into Dragon Power",
+            "input": "f,f+2 > b,b+1+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Hell's Flame",
+            "input": "1+2"
+          },
+          {
+            "name": "Bloody Scissors",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Deadly Slice",
+            "input": "b+2"
+          },
+          {
+            "name": "Killing Blow",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Blazing Inferno",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Final boss form. Extremely strong unblockables and fire breath."
+      ]
+    },
+    {
+      "slug": "doctor-bosconovitch",
+      "name": "Doctor Bosconovitch",
+      "portrait": {
+        "image": "/characters/tekken-3/Drbcharacterphoto.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Whippersnapper",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Stonehead",
+            "input": "On ground f,f or b,b,b+1+2"
+          },
+          {
+            "name": "Rolling Powerbomb",
+            "input": "1+2 (parry),3+4"
+          },
+          {
+            "name": "Arm Takedown",
+            "input": "During Bad Stomach 1+2",
+            "notes": "Left"
+          },
+          {
+            "name": "Trip Up",
+            "input": "During Bad Stomach 1+2",
+            "notes": "Right"
+          },
+          {
+            "name": "Atomic Drop",
+            "input": "During Bad Stomach 1+2",
+            "notes": "Back"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Doc's One-Two",
+            "input": "1,2"
+          },
+          {
+            "name": "Low Spin Kick - Shin Kick",
+            "input": "3,4"
+          },
+          {
+            "name": "Panik Charge",
+            "input": "3+4"
+          },
+          {
+            "name": "Bad Stomach",
+            "input": "1+4"
+          },
+          {
+            "name": "Twin Pistons",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Senior Fist",
+            "input": "u/f+1"
+          },
+          {
+            "name": "Wisdom Fist",
+            "input": "u/f+2"
+          },
+          {
+            "name": "Escapism Bomb",
+            "input": "b+3+4,U"
+          },
+          {
+            "name": "Gene Bank Combo",
+            "input": "f,f+1,4,3,2,1"
+          },
+          {
+            "name": "Leaping Sidekick",
+            "input": "f,f+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Panik Charge into Senior Fist",
+            "input": "3+4 > u/f+1"
+          },
+          {
+            "name": "Twin Pistons into Wisdom Fist",
+            "input": "d/f+1,2 > u/f+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Escapism Bomb",
+            "input": "b+3+4,U"
+          }
+        ]
+      },
+      "notes": [
+        "PS exclusive unlockable. Very unique and gimmicky moveset."
+      ]
+    },
+    {
+      "slug": "gon",
+      "name": "Gon",
+      "portrait": {
+        "image": "/characters/tekken-3/Tk3_gon_headshot.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Gon Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Gon Special",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Headbutt",
+            "input": "1"
+          },
+          {
+            "name": "Tail Whip",
+            "input": "2"
+          },
+          {
+            "name": "Jump Attack",
+            "input": "u+3+4"
+          },
+          {
+            "name": "Rolling Attack",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Bite",
+            "input": "d/f+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "PS exclusive guest character (from the manga). Extremely limited moveset. Unlocked via Tekken Ball or specific conditions."
+      ]
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_King_Portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Winding Nut",
+            "input": "1+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Argentina Backbreaker",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Knee Crusher",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Cobra Twist",
+            "input": "2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Half Boston Crab",
+            "input": "1+3",
+            "notes": "Back"
+          },
+          {
+            "name": "Stretch Buster",
+            "input": "b,f+1+2",
+            "notes": "Back"
+          },
+          {
+            "name": "Knee Bash",
+            "input": "d/f+2+3"
+          },
+          {
+            "name": "Figure Four Leg Lock",
+            "input": "d/b+1+2"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "d/b,f+2"
+          },
+          {
+            "name": "Pile Driver",
+            "input": "d,d/f,f+1"
+          },
+          {
+            "name": "Muscle Buster",
+            "input": "d,d/b,b+1+2"
+          },
+          {
+            "name": "Spinning Throw",
+            "input": "f,b,d/b,d,d/f,f+1"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "FC+1+2"
+          },
+          {
+            "name": "Ultimate Punch",
+            "input": "During Tackle 2,1,2,1,2"
+          },
+          {
+            "name": "Cross Arm Lock",
+            "input": "During Tackle 1+2"
+          },
+          {
+            "name": "Standing Heel Hold",
+            "input": "f,n,d,d/f+2+3"
+          },
+          {
+            "name": "Arm Breaker",
+            "input": "f,n,d,d/f+1+4"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d/b+1+4 or 2+3"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Palm Attack",
+            "input": "1,2"
+          },
+          {
+            "name": "Palm Attack to Uppercut",
+            "input": "1,2,1"
+          },
+          {
+            "name": "Jab Uppercut",
+            "input": "2,1"
+          },
+          {
+            "name": "Exploder",
+            "input": "3+4"
+          },
+          {
+            "name": "Moonsault Body Press",
+            "input": "1+4"
+          },
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Shoulder Tackle",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Stagger Kick",
+            "input": "d+3+4,4,4"
+          },
+          {
+            "name": "Capital Punishment",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "K's Flicker",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Konvict Kick",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Flying Cross Chop",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Black Bomb",
+            "input": "f,n,d,d/f+1+2"
+          },
+          {
+            "name": "Running Exploder",
+            "input": "f,f,f+3+4"
+          },
+          {
+            "name": "Knockout Punch",
+            "input": "SS+2"
+          },
+          {
+            "name": "Deadly Boomerang",
+            "input": "SS+3+4"
+          },
+          {
+            "name": "Atomic Blaster",
+            "input": "Back to opponent 1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Palm attack into K's Flicker",
+            "input": "1,2 > f,f+2"
+          },
+          {
+            "name": "Frankensteiner into Capital Punishment",
+            "input": "d/f+3+4 > u/f+1+2"
+          },
+          {
+            "name": "Stagger Kick into uppercut",
+            "input": "d+3+4,4,4 > 2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,1,2,4,4,4,1,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,1,1,2,4,4,4,1,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 3",
+            "input": "1,2,1,1,3,3,4,4,1,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Moonsault Body Press",
+            "input": "1+4"
+          },
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Atomic Blaster",
+            "input": "Back to opponent 1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Extremely strong throw game with many multi-part throw sequences."
+      ]
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "portrait": {
+        "image": "/characters/tekken-3/Tekken3_Lei_Portrait.webp",
+        "fit": "cover"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Foot Stomp",
+            "input": "1+3"
+          },
+          {
+            "name": "Sleeper Hold",
+            "input": "2+4"
+          },
+          {
+            "name": "Sailboat Stretch",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Closing Fan",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Booby Trap",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Dragon Falls",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Tripping",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Out of Control",
+            "input": "During Dragon 1 or During Snake 1+3"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d/b+1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "High and Low Kicks",
+            "input": "3,3"
+          },
+          {
+            "name": "Tornado Kick",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Clean Sweep",
+            "input": "[4~3]"
+          },
+          {
+            "name": "Lift Up Cannon",
+            "input": "[4~4],3,3"
+          },
+          {
+            "name": "Hook Punch to Spiral Upper",
+            "input": "1+2,2"
+          },
+          {
+            "name": "Axis Shifting Tornado Kick",
+            "input": "f+[3~4]"
+          },
+          {
+            "name": "Beating Kick Mid Combo",
+            "input": "f+4,2,1,2,4"
+          },
+          {
+            "name": "Rave Spin",
+            "input": "d/b+4,4"
+          },
+          {
+            "name": "Cannonball",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Razor Rush",
+            "input": "f,n,1,2,1,2"
+          },
+          {
+            "name": "Five Gates Form - Snake",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Drunken Master Walk",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Phoenix Illusion",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Back Turn",
+            "input": "b+3+4"
+          },
+          {
+            "name": "Sidewind",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Play Dead",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Phoenix Strike",
+            "input": "During Phoenix Illusion 4"
+          },
+          {
+            "name": "Crane Dance",
+            "input": "During Crane 3,4,2,3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Tornado into Razor Rush",
+            "input": "[3~4] > f,n,1,2,1,2"
+          },
+          {
+            "name": "Snake into Dragon tools",
+            "input": "f+2+3 > u > 2"
+          },
+          {
+            "name": "Play Dead into Spring Kick",
+            "input": "d+3+4 > 3+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,3+4,2,1,4,1,2,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 2",
+            "input": "1,2,1,3+4,2,1,4,1,4,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          },
+          {
+            "name": "10 Hit Combo 3",
+            "input": "1,2,1,3+4,3+4,3+4,1,1,2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Phoenix Strike",
+            "input": "During Phoenix Illusion 4"
+          }
+        ]
+      },
+      "notes": [
+        "Five Animal forms (Snake, Dragon, Panther, Tiger, Crane) plus Drunken Master Walk and Play Dead are central to his stance-heavy game."
+      ]
+    },
+    {
+      "slug": "mokujin",
+      "name": "Mokujin",
+      "portrait": {
+        "image": "/characters/tekken-3/TK3_moku_headshot.webp",
+        "fit": "cover"
+      },
+      "mimic": true,
+      "sections": {},
+      "notes": [
+        "Mokujin copies a randomly selected fighter each round. Use the guide for the copied fighter; reach can differ."
+      ]
     }
   ]
 }

@@ -2,655 +2,2348 @@
   "schemaVersion": 1,
   "gameId": "tekken-5",
   "title": "Tekken 5 / Dark Resurrection",
-  "edition": "Tekken 5 (PlayStation 2) / Dark Resurrection (PlayStation 3)",
-  "publicationStatus": "draft",
+  "edition": "Tekken 5 · Dark Resurrection",
+  "tagline": "The fifth King of Iron Fist Tournament returns.",
   "source": {
-    "label": "Tekken 5 / Dark Resurrection move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Choose one launcher before its shared follow-up."
-  },
-  "coverage": {
-    "rosterBasis": "Tekken 5 playlist characters plus the four Dark Resurrection playlist additions",
-    "rosterComplete": false
+    "label": "Tekken 5: Dark Resurrection move and combo archive",
+    "note": "Commands use 1/2/3/4 notation. Tekken 5 and Dark Resurrection share this archive, but move properties and combo timing can differ between versions. 10 hit combos are preset strings, not guaranteed juggles."
   },
   "portraits": {
-    "credit": null,
-    "sourceUrl": null
+    "credit": "Original character artwork: Namco / Bandai Namco.",
+    "sourceUrl": "https://www.fightersgeneration.com/games/tekken5-dr-p2.html"
   },
   "characters": [
     {
-      "slug": "bruce-irvin",
-      "name": "Bruce Irvin",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "anna-williams",
+      "name": "Anna Williams",
+      "portrait": {
+        "image": "/characters/tekken-5/anna-williams.jpg",
+        "fit": "contain"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Grab Flip",
+            "input": "1+3"
+          },
+          {
+            "name": "Over The Back Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Torso Splitter",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Serpentine Arm Break",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Overhead Triangle Lock",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Overhead Toss",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Biting Snake",
+            "input": "1,2,1,4"
+          },
+          {
+            "name": "Head Ringer",
+            "input": "3,4"
+          },
+          {
+            "name": "Blonde Bomb",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Catapult Kick",
+            "input": "u/f+3"
+          },
+          {
+            "name": "Bad Habit",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Biting Snake into Blonde Bomb",
+            "input": "1,2,1,4 > f+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Power Charge",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Strong mix-up character with good mid/low options."
+      ]
     },
     {
-      "slug": "bryan-fury",
-      "name": "Bryan Fury",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "armor-king",
+      "name": "Armor King",
+      "portrait": {
+        "image": "/characters/tekken-5/armor-king.jpg",
+        "fit": "contain"
       },
-      "notes": []
-    },
-    {
-      "slug": "steve-fox",
-      "name": "Steve Fox",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "throws": [
+          {
+            "name": "Knee Bash",
+            "input": "d/f+2+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Jaguar Screwdriver",
+            "input": "During Suplex d,d,d+1+2"
+          },
+          {
+            "name": "Reverse Death Valley Bomb",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Heavy Fall Reverse DDT",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Reverse DDT",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Tombstone Piledriver",
+            "input": "d/b,f+2"
+          },
+          {
+            "name": "Double Arm Swing",
+            "input": "f,b,d/b,d,d/f,f+1"
+          },
+          {
+            "name": "Armor King Driver",
+            "input": "FC+d/b,d,d/b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "One Two Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Dark Cyclone",
+            "input": "1+2,2"
+          },
+          {
+            "name": "Round Out Kick",
+            "input": "3+4"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Dark Destroyer",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Capital Punishment",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Burning Knuckle",
+            "input": "u/f+1+2,D"
+          },
+          {
+            "name": "Dark Inferno",
+            "input": "f,n,d,d/f+3"
+          },
+          {
+            "name": "Poison Mist",
+            "input": "f,n,d,d/f+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Frankensteiner into Capital Punishment",
+            "input": "d/f+3+4 > u/f+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "d/f+2,1,3,2,2,4,2,1,3+4,2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Dark Destroyer",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Burning Knuckle",
+            "input": "u/f+1+2,D"
+          },
+          {
+            "name": "Dark Inferno",
+            "input": "f,n,d,d/f+3"
+          },
+          {
+            "name": "Poison Mist",
+            "input": "f,n,d,d/f+1+2"
+          }
+        ]
       },
-      "notes": []
-    },
-    {
-      "slug": "jack-5",
-      "name": "Jack-5",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "craig-marduk",
-      "name": "Craig Marduk",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "heihachi-mishima",
-      "name": "Heihachi Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "kazuya-mishima",
-      "name": "Kazuya Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "devil-jin",
-      "name": "Devil Jin",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "raven",
-      "name": "Raven",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "jin-kazama",
-      "name": "Jin Kazama",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
+      "notes": [
+        "Strong throw game and several powerful unblockables. Shares wrestling theme with King but has unique tools.",
+        "Dark Resurrection only."
+      ]
     },
     {
       "slug": "asuka-kazama",
       "name": "Asuka Kazama",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-5/asuka-kazama.jpg",
+        "fit": "contain"
       },
-      "notes": []
-    },
-    {
-      "slug": "ganryu",
-      "name": "Ganryu",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
+        "throws": [
+          {
+            "name": "Aiki Nage",
+            "input": "1+3"
+          },
+          {
+            "name": "Katanuki",
+            "input": "2+4"
+          },
+          {
+            "name": "Cloud Taste",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Wind Wheel",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Twisted Limbs",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "White Mountain",
+            "input": "d/f+2+3"
+          },
+          {
+            "name": "Cherry Blossom",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Whiplash",
+            "input": "1,1"
+          },
+          {
+            "name": "Jab Uppercut",
+            "input": "1,2"
+          },
+          {
+            "name": "Sacred Blade",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Spinning Heel Drop",
+            "input": "f+3"
+          },
+          {
+            "name": "Lunging Mist Thrust",
+            "input": "f+1"
+          },
+          {
+            "name": "Thunder Fall Kick",
+            "input": "3+4"
+          },
+          {
+            "name": "Destabilizer",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Whiplash into Sacred Blade",
+            "input": "1,1 > [3~4]"
+          }
+        ],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": [
+          {
+            "name": "Spinning Heel Drop (charged)",
+            "input": "f+3 (hold)"
+          }
+        ]
       },
-      "notes": []
-    },
-    {
-      "slug": "kuma",
-      "name": "Kuma",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "king",
-      "name": "King",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "roger-jr",
-      "name": "Roger Jr.",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "paul-phoenix",
-      "name": "Paul Phoenix",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "wang-jinrei",
-      "name": "Wang Jinrei",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "julia-chang",
-      "name": "Julia Chang",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "lee-chaolan",
-      "name": "Lee Chaolan",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "feng-wei",
-      "name": "Feng Wei",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "christie-monteiro",
-      "name": "Christie Monteiro",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
-    },
-    {
-      "slug": "yoshimitsu",
-      "name": "Yoshimitsu",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
+      "notes": [
+        "Excellent parries and counter tools. Strong defensive character."
+      ]
     },
     {
       "slug": "baek-doo-san",
       "name": "Baek Doo San",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-5/baek-doo-san.jpg",
+        "fit": "contain"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Knee Smash",
+            "input": "1+3"
+          },
+          {
+            "name": "Back Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Left Side Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Right Side Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Back Throw",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Sky Rocket",
+            "input": "f,n,d,d/f+4"
+          },
+          {
+            "name": "Machine Gun Kicks",
+            "input": "3,3,3,3"
+          },
+          {
+            "name": "Flying Eagle",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Crippler",
+            "input": "d/b+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Sky Rocket into Hunting Hawk",
+            "input": "f,n,d,d/f+4 > u/f+3,4,3"
+          }
+        ],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Tae Kwon Do specialist. Shares many tools with Hwoarang."
+      ]
     },
     {
-      "slug": "marshall-law",
-      "name": "Marshall Law",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "slug": "bruce-irvin",
+      "name": "Bruce Irvin",
+      "portrait": {
+        "image": "/characters/tekken-5/bruce-irvin.jpg",
+        "fit": "contain"
+      },
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
+        "throws": [
+          {
+            "name": "Shoulder Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Back Drop",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Sonic Fang",
+            "input": "f+2"
+          },
+          {
+            "name": "Double Jump Kick",
+            "input": "u/f+3,4"
+          },
+          {
+            "name": "Knee Bash",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Bruce Special",
+            "input": "f,f+2"
+          }
+        ],
         "combos": [],
-        "wallCombos": [],
-        "stances": [],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
+      },
+      "notes": [
+        "Kickboxer with strong mid-range tools."
+      ]
+    },
+    {
+      "slug": "bryan-fury",
+      "name": "Bryan Fury",
+      "portrait": {
+        "image": "/characters/tekken-5/bryan-fury.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Gravity Brain Buster",
+            "input": "1+3"
+          },
+          {
+            "name": "Front Neck Full Swing",
+            "input": "2+4"
+          },
+          {
+            "name": "Chains of Misery",
+            "input": "d/f,d,d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Snake Edge",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Mach Breaker",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Hands of Doom",
+            "input": "b+2,1,2"
+          },
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Gravity Blow",
+            "input": "f+1+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Snake Edge into Mach Breaker",
+            "input": "d/f+3 > f,f+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Meteor Smash",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Gravity Blow",
+            "input": "f+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Strong mid-range pressure and excellent launchers."
+      ]
+    },
+    {
+      "slug": "christie-monteiro",
+      "name": "Christie Monteiro",
+      "portrait": {
+        "image": "/characters/tekken-5/christie-monteiro.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Rio Deal",
+            "input": "1+3"
+          },
+          {
+            "name": "Rio Special",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Handstand",
+            "input": "3+4"
+          },
+          {
+            "name": "Cartwheel",
+            "input": "f+3+4"
+          },
+          {
+            "name": "One Two Capoeira",
+            "input": "1,2"
+          },
+          {
+            "name": "Negative Edge",
+            "input": "d/f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Capoeira specialist. Shares many tools with Eddy."
+      ]
+    },
+    {
+      "slug": "devil-jin",
+      "name": "Devil Jin",
+      "portrait": {
+        "image": "/characters/tekken-5/devil-jin.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Face Kick",
+            "input": "1+3"
+          },
+          {
+            "name": "Over the Shoulder Reverse",
+            "input": "2+4"
+          },
+          {
+            "name": "Tidal Wave",
+            "input": "u/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Laser Cannon",
+            "input": "b,f+2,1,2"
+          },
+          {
+            "name": "Electric Wind Godfist",
+            "input": "f,n,d,d/f+2"
+          },
+          {
+            "name": "Hell Sweep",
+            "input": "f,n,d,d/f+4,4"
+          },
+          {
+            "name": "Demon's Paw",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Devil Beam",
+            "input": "1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Electric into Laser Cannon",
+            "input": "f,n,d,d/f+2 > b,f+2,1,2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Devil Beam",
+            "input": "1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Boss character with strong Mishima tools plus unique laser and flight options."
+      ]
+    },
+    {
+      "slug": "dragunov",
+      "name": "Sergei Dragunov",
+      "portrait": {
+        "image": "/characters/tekken-5/dragunov.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Volk Clutch",
+            "input": "1+3"
+          },
+          {
+            "name": "Purge Slam",
+            "input": "2+4"
+          },
+          {
+            "name": "Tarantula Sting",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Reverse Fracture",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Absolute Silence",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Victor Clutch",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Blizzard Rush",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Ambush Tackle",
+            "input": "d/b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Salvo",
+            "input": "1,2,1"
+          },
+          {
+            "name": "Stun Gun",
+            "input": "f+2,4"
+          },
+          {
+            "name": "Mantis Heel",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Death's Door",
+            "input": "d/b+2,1,2"
+          },
+          {
+            "name": "Blizzard Hammer",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Sub-Zero",
+            "input": "b+2+3"
+          },
+          {
+            "name": "Russian Sickle",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Spetsnaz Assault",
+            "input": "f,f,f+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Mantis Heel into Russian Sickle",
+            "input": "d/f+3 > f,f+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,3,1,2,1,1,4,1,3,2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Sub-Zero",
+            "input": "b+2+3"
+          }
+        ]
+      },
+      "notes": [
+        "Sambo specialist. Excellent mix-ups and strong throw game.",
+        "Dark Resurrection only."
+      ]
+    },
+    {
+      "slug": "eddy-gordo",
+      "name": "Eddy Gordo",
+      "portrait": {
+        "image": "/characters/tekken-5/eddy-gordo.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Rio Deal",
+            "input": "1+3"
+          },
+          {
+            "name": "Rio Special",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Handstand",
+            "input": "3+4"
+          },
+          {
+            "name": "Cartwheel",
+            "input": "f+3+4"
+          },
+          {
+            "name": "One Two Capoeira",
+            "input": "1,2"
+          },
+          {
+            "name": "Negative Edge",
+            "input": "d/f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Capoeira specialist. Now has his own character slot separate from Christie."
+      ]
+    },
+    {
+      "slug": "feng-wei",
+      "name": "Feng Wei",
+      "portrait": {
+        "image": "/characters/tekken-5/feng-wei.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Twister",
+            "input": "1+3"
+          },
+          {
+            "name": "Serpent Slayer",
+            "input": "2+4"
+          },
+          {
+            "name": "Avalanche",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Jab Spear Fist",
+            "input": "1,1"
+          },
+          {
+            "name": "Firestorm",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Boar's Tusk",
+            "input": "f+2,1,2"
+          },
+          {
+            "name": "Iron Shield",
+            "input": "1+2"
+          },
+          {
+            "name": "God Fist",
+            "input": "d/f+2,2"
+          },
+          {
+            "name": "Death Palm",
+            "input": "u/b+1+2"
+          },
+          {
+            "name": "Exploding Dagger",
+            "input": "f,f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "God Fist into Exploding Dagger",
+            "input": "d/f+2,2 > f,f+2"
+          }
+        ],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Death Palm",
+            "input": "u/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Strong pressure character with excellent mid tools and good mix-ups."
+      ]
+    },
+    {
+      "slug": "ganryu",
+      "name": "Ganryu",
+      "portrait": {
+        "image": "/characters/tekken-5/ganryu.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Sumo Scoop",
+            "input": "2+4"
+          },
+          {
+            "name": "Choke Slam",
+            "input": "f,f+2+3"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Open Palm Combo",
+            "input": "1,2,1,2,1,2,1,2"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "1+2,1+2"
+          },
+          {
+            "name": "Sit",
+            "input": "3+4"
+          },
+          {
+            "name": "Thunder Clap",
+            "input": "d/f+2,1,2,1,2,1,2,1,2"
+          },
+          {
+            "name": "Sumo Rush",
+            "input": "f+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Double Hammer Sumo Charge",
+            "input": "1+2,b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Sumo wrestler. Strong grounded game and unique sit stance."
+      ]
+    },
+    {
+      "slug": "heihachi-mishima",
+      "name": "Heihachi Mishima",
+      "portrait": {
+        "image": "/characters/tekken-5/heihachi-mishima.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Neck Breaker",
+            "input": "1+3"
+          },
+          {
+            "name": "Jumping Powerbomb",
+            "input": "2+4"
+          },
+          {
+            "name": "Stonehead",
+            "input": "f,F+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Dragon Uppercut",
+            "input": "f,n,d,d/f+1"
+          },
+          {
+            "name": "Rising Uppercut",
+            "input": "f,n,d,D/F+2"
+          },
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Hell Axle",
+            "input": "u/f+3,4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Demon Uppercut into Hell Axle",
+            "input": "f,f+2 > u/f+3,4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "f,f,n,2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Lightning Hammer",
+            "input": "d+1+4"
+          }
+        ]
       },
       "notes": []
     },
     {
       "slug": "hwoarang",
       "name": "Hwoarang",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-5/hwoarang.jpg",
+        "fit": "contain"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Pickpocket",
+            "input": "1+3"
+          },
+          {
+            "name": "Human Cannonball",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Machine Gun Kicks",
+            "input": "3,3,3,3"
+          },
+          {
+            "name": "Flying Eagle",
+            "input": "[3~4]"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Sky Rocket",
+            "input": "f,n,d,d/f+4"
+          },
+          {
+            "name": "Left Flamingo",
+            "input": "f+3"
+          },
+          {
+            "name": "Right Flamingo",
+            "input": "f+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Sky Rocket into Hunting Hawk",
+            "input": "f,n,d,d/f+4 > u/f+3,4,3"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo Left Flamingo",
+            "input": "During Left Flamingo 2,2,3,4,3,4,4,4,4,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": []
+      },
+      "notes": [
+        "Stance switches (Left/Right Stance, Left/Right Flamingo) are central to the moveset."
+      ]
     },
     {
-      "slug": "nina-williams",
-      "name": "Nina Williams",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "jack-5",
+      "name": "Jack-5",
+      "portrait": {
+        "image": "/characters/tekken-5/jack-5.jpg",
+        "fit": "contain"
       },
-      "notes": []
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Lift Up Slam",
+            "input": "2+4"
+          },
+          {
+            "name": "Pile Driver",
+            "input": "d/b,f+1+2"
+          },
+          {
+            "name": "Ground Zero",
+            "input": "u/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Jack Hammer",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Double Hammer",
+            "input": "1+2,1+2"
+          },
+          {
+            "name": "Giant Foot Stomp",
+            "input": "3+4"
+          },
+          {
+            "name": "Megaton Punch",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Dark Greeting",
+            "input": "f+4~1"
+          }
+        ],
+        "combos": [],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "d+2,1,1,1,2,1,2,1,1+2,1+2",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Giant Foot Stomp",
+            "input": "3+4"
+          },
+          {
+            "name": "Dark Greeting",
+            "input": "f+4~1"
+          }
+        ]
+      },
+      "notes": [
+        "Powerful but slow. Strong grounded game."
+      ]
     },
     {
-      "slug": "anna-williams",
-      "name": "Anna Williams",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "jin-kazama",
+      "name": "Jin Kazama",
+      "portrait": {
+        "image": "/characters/tekken-5/jin-kazama.jpg",
+        "fit": "contain"
       },
-      "notes": []
-    },
-    {
-      "slug": "ling-xiaoyu",
-      "name": "Ling Xiaoyu",
-      "publicationStatus": "draft",
-      "portrait": null,
       "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
+        "throws": [
+          {
+            "name": "Double Face Kick",
+            "input": "1+3"
+          },
+          {
+            "name": "Over the Shoulder Reverse",
+            "input": "2+4"
+          },
+          {
+            "name": "Tidal Wave",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "Complicated Wire",
+            "input": "d,d/b,b+1+3"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Kazama Style 5 Hit Combo",
+            "input": "1,3,2,1,4"
+          },
+          {
+            "name": "Stinger",
+            "input": "f+[3~3]"
+          },
+          {
+            "name": "Median Line Destruction",
+            "input": "1+2"
+          },
+          {
+            "name": "Blade Kick",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Electric Wind Godfist",
+            "input": "f,n,d,d/f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Stinger into Blade Kick",
+            "input": "f+[3~3] > d/f+4"
+          }
+        ],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
       },
-      "notes": []
-    },
-    {
-      "slug": "lei-wulong",
-      "name": "Lei Wulong",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
-      },
-      "notes": []
+      "notes": [
+        "Traditional karate style. Strong mid-range game."
+      ]
     },
     {
       "slug": "jinpachi-mishima",
       "name": "Jinpachi Mishima",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-5/jinpachi-mishima.jpg",
+        "fit": "contain"
       },
-      "notes": [],
-      "sourceVersion": "tekken-5-dr"
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Back Drop",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Demon Breath",
+            "input": "1+2"
+          },
+          {
+            "name": "Fireball",
+            "input": "qcf+1+2"
+          },
+          {
+            "name": "Spinning Demon",
+            "input": "f,n,d,d/f+4"
+          },
+          {
+            "name": "Hell Sweep",
+            "input": "f,n,d,d/f+3"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Demon Breath",
+            "input": "1+2"
+          },
+          {
+            "name": "Fireball",
+            "input": "qcf+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Final boss. Playable in PS3 version (and PSP with CFW). Extremely strong.",
+        "Playable in Dark Resurrection on PlayStation 3; a non-playable boss in the original Tekken 5 and the arcade/PSP versions of DR."
+      ]
+    },
+    {
+      "slug": "julia-chang",
+      "name": "Julia Chang",
+      "portrait": {
+        "image": "/characters/tekken-5/julia-chang.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Death Valley Bomb",
+            "input": "1+3"
+          },
+          {
+            "name": "Knee Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Arm Lock Suplex",
+            "input": "d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "G-Clef Cannon",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Tequila Sunrise",
+            "input": "[3~2]"
+          },
+          {
+            "name": "Palm Explosion",
+            "input": "f+[1~2]"
+          },
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Bow & Arrow Kick",
+            "input": "1+4,3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Tequila into G-Clef",
+            "input": "[3~2] > 1,1"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "2,1,1,2,3,3,3,4,4,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Shares many tools with Michelle Chang."
+      ]
+    },
+    {
+      "slug": "kazuya-mishima",
+      "name": "Kazuya Mishima",
+      "portrait": {
+        "image": "/characters/tekken-5/kazuya-mishima.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Face Kick",
+            "input": "1+3"
+          },
+          {
+            "name": "Hip Throw",
+            "input": "2+4"
+          },
+          {
+            "name": "Stonehead",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "d+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Punch Combo",
+            "input": "1,1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Soul Thrust",
+            "input": "f+2"
+          },
+          {
+            "name": "Abolishing Fist",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Devil Blaster",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Abolishing Fist into Soul Thrust",
+            "input": "d/f+2 > f+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "f,f,N,2,1,2,2,3,4,4,1,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Lightning Uppercut",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Lightning Screw Uppercut",
+            "input": "B+1+4"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "king",
+      "name": "King",
+      "portrait": {
+        "image": "/characters/tekken-5/king.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Winding Nut",
+            "input": "1+3"
+          },
+          {
+            "name": "Suplex",
+            "input": "2+4"
+          },
+          {
+            "name": "Giant Swing",
+            "input": "f,b,d/b,d,d/f,f+1"
+          },
+          {
+            "name": "Muscle Buster",
+            "input": "d,d/b,b+1+2"
+          },
+          {
+            "name": "Standing Heel Hold",
+            "input": "f,n,d,d/f+2+3"
+          },
+          {
+            "name": "Ultimate Tackle",
+            "input": "FC+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Palm Attack",
+            "input": "1,2"
+          },
+          {
+            "name": "Exploder",
+            "input": "3+4"
+          },
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Capital Punishment",
+            "input": "u/f+1+2"
+          },
+          {
+            "name": "K's Flicker",
+            "input": "f,f+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Palm Attack into K's Flicker",
+            "input": "1,2 > f,f+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,1,2,4,4,4,1,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Jaguar Lariat",
+            "input": "f+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Extremely strong throw game with many multi-part throw sequences."
+      ]
+    },
+    {
+      "slug": "kuma-panda",
+      "name": "Kuma II / Panda",
+      "portrait": {
+        "image": "/characters/tekken-5/kuma-panda.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Bear's Bite",
+            "input": "1+3"
+          },
+          {
+            "name": "Bear Hug",
+            "input": "2+4"
+          },
+          {
+            "name": "Headbutt",
+            "input": "f,f+1+4"
+          },
+          {
+            "name": "Rock'n Roll Circus",
+            "input": "f,d/f,d,d/b,b,f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Bear Hammer",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Double Claw",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Hunting",
+            "input": "3+4"
+          },
+          {
+            "name": "Demon Uppercut",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Salmon Hunter",
+            "input": "b,f+2+3"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Deadly Claw",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Salmon Hunter (charged)",
+            "input": "b,f+2+3 hold"
+          }
+        ]
+      },
+      "notes": [
+        "Kuma and Panda share the exact same moveset."
+      ]
+    },
+    {
+      "slug": "lee-chaolan",
+      "name": "Lee Chaolan",
+      "portrait": {
+        "image": "/characters/tekken-5/lee-chaolan.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Over The Shoulder",
+            "input": "1+3"
+          },
+          {
+            "name": "Shoulder Pop",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Infinite Kick Chain",
+            "input": "3,3,3,3"
+          },
+          {
+            "name": "Silver Combo",
+            "input": "1,2,4"
+          },
+          {
+            "name": "Hitman Stance",
+            "input": "3+4"
+          },
+          {
+            "name": "Laser Slice",
+            "input": "f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Stylish fighter with strong mix-ups and Hitman stance."
+      ]
+    },
+    {
+      "slug": "lei-wulong",
+      "name": "Lei Wulong",
+      "portrait": {
+        "image": "/characters/tekken-5/lei-wulong.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Double Foot Stomp",
+            "input": "1+3"
+          },
+          {
+            "name": "Sleeper Hold",
+            "input": "2+4"
+          },
+          {
+            "name": "Dragon Falls",
+            "input": "u/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Five Gates Form - Snake",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Drunken Master Walk",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Phoenix Illusion",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Play Dead",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Razor Rush",
+            "input": "f,n,1,2,1,2"
+          },
+          {
+            "name": "Phoenix Strike",
+            "input": "During Phoenix Illusion 4"
+          }
+        ],
+        "combos": [],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "1,2,1,3+4,2,1,4,1,2,3",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Phoenix Strike",
+            "input": "During Phoenix Illusion 4"
+          }
+        ]
+      },
+      "notes": [
+        "Five Animal forms + Drunken Master Walk and Play Dead are central to his stance-heavy game."
+      ]
     },
     {
       "slug": "lili",
       "name": "Lili",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "portrait": {
+        "image": "/characters/tekken-5/lili.jpg",
+        "fit": "contain"
       },
-      "notes": [],
-      "sourceVersion": "tekken-5-dr"
+      "sections": {
+        "throws": [
+          {
+            "name": "Kiss of Devotion",
+            "input": "1+3"
+          },
+          {
+            "name": "Femme Fatale",
+            "input": "2+4"
+          },
+          {
+            "name": "Soleil",
+            "input": "1+3 or 2+4",
+            "notes": "Left side"
+          },
+          {
+            "name": "Monaco Mixer",
+            "input": "1+3 or 2+4",
+            "notes": "Right side"
+          },
+          {
+            "name": "Ravaging Beauty",
+            "input": "1+3 or 2+4",
+            "notes": "Back"
+          },
+          {
+            "name": "Rafflesia",
+            "input": "d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Piercing Thorn",
+            "input": "1,2,4"
+          },
+          {
+            "name": "Circle Knee",
+            "input": "f+3"
+          },
+          {
+            "name": "Ivory Revolver",
+            "input": "f+4"
+          },
+          {
+            "name": "Dew Glide",
+            "input": "qcf"
+          },
+          {
+            "name": "Angel Heart",
+            "input": "qcf+2"
+          },
+          {
+            "name": "Piercing Thorn Fortissimo",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Sunflower Lance",
+            "input": "u/f+4,3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Circle Knee into Angel Heart",
+            "input": "f+3 > qcf+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "4,1,3,4,4,3,4,4,3+4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Piercing Thorn Fortissimo",
+            "input": "b+1+4"
+          }
+        ]
+      },
+      "notes": [
+        "Elegant street fighter with strong pokes and Dew Glide stance.",
+        "Dark Resurrection only."
+      ]
     },
     {
-      "slug": "sergei-dragunov",
-      "name": "Sergei Dragunov",
-      "publicationStatus": "draft",
-      "portrait": null,
-      "sections": {
-        "punishers": [],
-        "throws": [],
-        "chains": [],
-        "moves": [],
-        "combos": [],
-        "wallCombos": [],
-        "stances": [],
-        "strings": [],
-        "unblockables": [],
-        "pounces": []
+      "slug": "ling-xiaoyu",
+      "name": "Ling Xiaoyu",
+      "portrait": {
+        "image": "/characters/tekken-5/ling-xiaoyu.jpg",
+        "fit": "contain"
       },
-      "notes": [],
-      "sourceVersion": "tekken-5-dr"
+      "sections": {
+        "throws": [
+          {
+            "name": "Jade",
+            "input": "1+3"
+          },
+          {
+            "name": "Ruby",
+            "input": "2+4"
+          },
+          {
+            "name": "Cradle Throw",
+            "input": "During Phoenix 1+3 or 2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Art of Phoenix",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Rain Dance",
+            "input": "b+3+4"
+          },
+          {
+            "name": "Hypnotist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Thunder Strike",
+            "input": "During Hypnotist 1+2"
+          },
+          {
+            "name": "X Marks the Spot",
+            "input": "f,f+1+2,1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Phoenix into Wave Crest",
+            "input": "d+1+2 > 1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "u+4,1,2,1+2,1,3,4,4,4,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Thunder Strike",
+            "input": "During Hypnotist 1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Phoenix and Rain Dance stances are core to her game."
+      ]
     },
     {
-      "slug": "armor-king",
-      "name": "Armor King",
-      "publicationStatus": "draft",
-      "portrait": null,
+      "slug": "marshall-law",
+      "name": "Marshall Law",
+      "portrait": {
+        "image": "/characters/tekken-5/marshall-law.jpg",
+        "fit": "contain"
+      },
       "sections": {
-        "punishers": [],
+        "throws": [
+          {
+            "name": "Dragon's Fire",
+            "input": "1+3"
+          },
+          {
+            "name": "Hopping Frog",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Machine Gun Arrow",
+            "input": "1,1,1,1,1"
+          },
+          {
+            "name": "Shaolin Spin Kicks",
+            "input": "4,3,4"
+          },
+          {
+            "name": "Poison Arrow",
+            "input": "f+[2~1]"
+          },
+          {
+            "name": "Dragon Tail",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Poison Arrow into Dragon Tail",
+            "input": "f+[2~1] > d/b+4"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo 1",
+            "input": "d/f+1,2,2,1,3,3,3,4,3,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Charge Power Punch",
+            "input": "d/b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Classic Law moveset."
+      ]
+    },
+    {
+      "slug": "craig-marduk",
+      "name": "Craig Marduk",
+      "portrait": {
+        "image": "/characters/tekken-5/craig-marduk.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Power Bomb",
+            "input": "2+4"
+          },
+          {
+            "name": "Catch and Shoot",
+            "input": "f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Mount",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Leg Breaker",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Tornado Hook",
+            "input": "f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Powerful grappler with strong mid-range tools."
+      ]
+    },
+    {
+      "slug": "mokujin",
+      "name": "Mokujin",
+      "portrait": {
+        "image": "/characters/tekken-5/mokujin.jpg",
+        "fit": "contain"
+      },
+      "sections": {
         "throws": [],
-        "chains": [],
         "moves": [],
         "combos": [],
-        "wallCombos": [],
-        "stances": [],
         "strings": [],
-        "unblockables": [],
-        "pounces": []
+        "unblockables": []
       },
-      "notes": [],
-      "sourceVersion": "tekken-5-dr"
+      "notes": [
+        "Mimic character. Copies the moveset of a random character each round. No fixed moveset."
+      ],
+      "mimic": true
+    },
+    {
+      "slug": "nina-williams",
+      "name": "Nina Williams",
+      "portrait": {
+        "image": "/characters/tekken-5/nina-williams.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Arm Grab Flip",
+            "input": "1+3"
+          },
+          {
+            "name": "Over The Back Toss",
+            "input": "2+4"
+          },
+          {
+            "name": "Attack Reversal",
+            "input": "b+1+3 or b+2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Biting Snake",
+            "input": "1,2,1,4"
+          },
+          {
+            "name": "Blonde Bomb",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Geyser Cannon",
+            "input": "d/b+3+4"
+          },
+          {
+            "name": "Catapult Kick",
+            "input": "u/f+3"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Biting Snake into Blonde Bomb",
+            "input": "1,2,1,4 > f+1+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,2,3,3,2,1,2,4",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": []
+      },
+      "notes": [
+        "Very similar to Anna but with slightly different timing and options."
+      ]
+    },
+    {
+      "slug": "paul-phoenix",
+      "name": "Paul Phoenix",
+      "portrait": {
+        "image": "/characters/tekken-5/paul-phoenix.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Over The Shoulder",
+            "input": "1+3"
+          },
+          {
+            "name": "Shoulder Pop",
+            "input": "2+4"
+          },
+          {
+            "name": "Twist and Shout",
+            "input": "d/f+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Left Right Combo",
+            "input": "1,2"
+          },
+          {
+            "name": "Phoenix Smasher",
+            "input": "qcf+2"
+          },
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Neutron Bomb",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Flash Elbow",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Shredder",
+            "input": "u/f+3,4"
+          }
+        ],
+        "combos": [
+          {
+            "name": "Flash Elbow into Phoenix Smasher",
+            "input": "f,f+2 > qcf+2"
+          }
+        ],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,3,2,1,2,1,4,2,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Burning Fist",
+            "input": "b+1+2"
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "slug": "raven",
+      "name": "Raven",
+      "portrait": {
+        "image": "/characters/tekken-5/raven.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Shadow Catch",
+            "input": "1+3"
+          },
+          {
+            "name": "Back Drop",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Shadow Sprint",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Windmill",
+            "input": "3+4"
+          },
+          {
+            "name": "Rainbow Kick",
+            "input": "u/f+4"
+          },
+          {
+            "name": "Soul Fist",
+            "input": "f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Ninja with strong mobility and mix-ups."
+      ]
+    },
+    {
+      "slug": "roger-jr",
+      "name": "Roger Jr.",
+      "portrait": {
+        "image": "/characters/tekken-5/roger-jr.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Animal Throw",
+            "input": "1+3"
+          },
+          {
+            "name": "Kangaroo Kick",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Rabbit Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Spinning Kick",
+            "input": "3,4"
+          },
+          {
+            "name": "Animal Uppercut",
+            "input": "d/f+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Animal character. Shares moves with Roger from previous games."
+      ]
+    },
+    {
+      "slug": "steve-fox",
+      "name": "Steve Fox",
+      "portrait": {
+        "image": "/characters/tekken-5/steve-fox.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Duck and Weave",
+            "input": "1+3"
+          },
+          {
+            "name": "Liver Blow",
+            "input": "2+4"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flicker Jab",
+            "input": "1"
+          },
+          {
+            "name": "Sonic Fang",
+            "input": "f+2"
+          },
+          {
+            "name": "Left Hook",
+            "input": "d/f+1"
+          },
+          {
+            "name": "Peekaboo Stance",
+            "input": "3+4"
+          },
+          {
+            "name": "Lion Heart",
+            "input": "b+1+2"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": []
+      },
+      "notes": [
+        "Pure boxer. Excellent pressure and counter-hit tools."
+      ]
+    },
+    {
+      "slug": "wang-jinrei",
+      "name": "Wang Jinrei",
+      "portrait": {
+        "image": "/characters/tekken-5/wang-jinrei.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Headlock Toss",
+            "input": "1+3"
+          },
+          {
+            "name": "Body Slam",
+            "input": "2+4"
+          },
+          {
+            "name": "Waning Moon",
+            "input": "d/f,d/f+2+4"
+          },
+          {
+            "name": "Neutralizer",
+            "input": "b+1"
+          }
+        ],
+        "moves": [
+          {
+            "name": "G-Clef Cannon",
+            "input": "1,1,1"
+          },
+          {
+            "name": "Mountain Splitter",
+            "input": "1+2"
+          },
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          },
+          {
+            "name": "Pearly Gates",
+            "input": "d/f+1,1"
+          }
+        ],
+        "combos": [],
+        "strings": [],
+        "unblockables": [
+          {
+            "name": "Heavy Uppercut",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Dragon Power Punch",
+            "input": "b,b+1+2"
+          }
+        ]
+      },
+      "notes": [
+        "Xing Yi master. Strong mid tools and Neutralizer parry."
+      ]
+    },
+    {
+      "slug": "yoshimitsu",
+      "name": "Yoshimitsu",
+      "portrait": {
+        "image": "/characters/tekken-5/yoshimitsu.jpg",
+        "fit": "contain"
+      },
+      "sections": {
+        "throws": [
+          {
+            "name": "Jumping Body Slam",
+            "input": "1+3"
+          },
+          {
+            "name": "Sword Face Smash",
+            "input": "2+4"
+          },
+          {
+            "name": "Rainbow Throw",
+            "input": "d,d/b,b+1+2"
+          }
+        ],
+        "moves": [
+          {
+            "name": "Flash Attack",
+            "input": "2,3"
+          },
+          {
+            "name": "Indian Stance",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Harakiri",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Death Slash",
+            "input": "d/b+1,n,d/b"
+          },
+          {
+            "name": "Poison Breath",
+            "input": "During Bad Stomach any button"
+          },
+          {
+            "name": "Meditation",
+            "input": "SS+3+4"
+          }
+        ],
+        "combos": [],
+        "strings": [
+          {
+            "name": "10 Hit Combo",
+            "input": "1,2,1,4,4,4,1,1,1,1",
+            "hits": 10,
+            "notes": "Use the string’s rhythm; these ten attacks are not all guaranteed on hit."
+          }
+        ],
+        "unblockables": [
+          {
+            "name": "Harakiri",
+            "input": "d+1+4"
+          },
+          {
+            "name": "Death Slash",
+            "input": "d/b+1,n,d/b"
+          },
+          {
+            "name": "Poison Breath",
+            "input": "During Bad Stomach any button"
+          }
+        ]
+      },
+      "notes": [
+        "Self-damage moves like Harakiri are signature. Indian Stance and Meditation provide healing options."
+      ]
     }
-  ],
-  "versions": [
-    "tekken-5",
-    "tekken-5-dr"
   ]
 }

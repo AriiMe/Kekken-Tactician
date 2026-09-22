@@ -14,6 +14,7 @@ const [tekken8, tekken7, tag2, tekken1, tekken2] = await Promise.all([
 ]);
 if (tekken8.length < 30) throw new Error('Incomplete Tekken 8 roster');
 const datasets = { 'tekken-8': tekken8, 'tekken-7': tekken7, 'tekken-tag-2': tag2, 'tekken-1': tekken1, 'tekken-2': tekken2 };
+for (const id of ['tekken-3', 'tekken-4', 'tekken-5']) datasets[id] = JSON.parse(await fs.readFile(`public/data/${id}.json`, 'utf8'));
 const catalog = [];
 const seeds = {};
 const rosterEntry = c => ({ id: c.id, _id: c._id, name: c.name, image: c.image, slug: c.slug, gameId: c.gameId, hasCounterGuide: Boolean(c.counterSchema?.length) });
@@ -21,8 +22,11 @@ const add = (path, title, description, options = {}, data = null) => {
   catalog.push({ path, title: `${title} | TEKKTICIAN`, description, ...options });
   if (data) seeds[path] = data;
 };
-add('/', 'Tekken Combos & Character Guides', 'Tekken 8, Tekken 7, Tag Tournament 2, Tekken 2 and Tekken 1 combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.', { collection: true });
+add('/', 'Tekken Combos & Character Guides', 'Tekken 1–5, Dark Resurrection, Tekken 7, Tekken 8 and Tag Tournament 2 combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.', { collection: true });
 const features = {
+  'tekken-3': 'classic combo routes, moves, throws and 10 hit combos',
+  'tekken-4': 'combo routes, moves, throws and 10 hit combos',
+  'tekken-5': 'Tekken 5 and Dark Resurrection moves, throws and combo routes',
   'tekken-8': 'combo routes, wall combos, Heat moves, punishers and throw breaks',
   'tekken-7': 'combo routes, wall combos, punishment frames and throw breaks',
   'tekken-tag-2': 'solo and team combos, punishment frames, bound moves and tag launchers',

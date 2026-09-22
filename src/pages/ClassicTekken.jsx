@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 import { Paper } from '@mui/material';
 import CollapsableSection from '../components/CollapsableSection';
 import renderInputImage from '../utils/renderInputImage';
-import { getClassicTekkenGuides } from '../utils/classicTekken';
+import { getClassicTekkenGuides, gameTitles } from '../utils/classicTekken';
 import './Tekken1.css';
 
 const sectionTitles = {
   throws: 'Throws', chains: 'Throw Follow-Ups', moves: 'Move List',
+  punishers: 'Punishers', stances: 'Stances', wallCombos: 'Wall Combos',
   combos: 'Combo Routes', strings: '10 Hit Combos',
   unblockables: 'Unblockable Attacks', pounces: 'Ground Attacks',
 };
@@ -21,13 +22,13 @@ const rowType = PropTypes.shape({
 
 function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
-  const { x, y, width, height, image, fit } = character.portrait;
+  const { x, y, width, height, image, fit } = character.portrait || {};
   return (
     <span className="t1-portrait" style={{ aspectRatio: image ? '1' : `${width} / ${height}` }}>
-      {failed ? <span className="t1-portrait-fallback">{character.name}</span> : (
+      {failed || (!image && !sheet.image) ? <span className="t1-portrait-fallback">{character.name}</span> : (
         <img src={image || sheet.image} alt={`${character.name} — ${gameTitle} portrait`}
           onError={() => setFailed(true)}
-          style={image ? { width: '100%', height: '100%', objectFit: fit || 'cover', objectPosition: 'center' } : { width: `${sheet.width / width * 100}%`, maxWidth: 'none',
+          style={image ? { width: '100%', height: '100%', objectFit: fit || 'cover', objectPosition: character.portrait.position || 'center' } : { width: `${sheet.width / width * 100}%`, maxWidth: 'none',
             left: `${-x / width * 100}%`, top: `${-y / height * 100}%` }} />
       )}
     </span>
@@ -35,7 +36,7 @@ function Portrait({ character, sheet, gameTitle }) {
 }
 Portrait.propTypes = {
   character: PropTypes.shape({ name: PropTypes.string.isRequired,
-    portrait: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number, image: PropTypes.string, fit: PropTypes.string,
+    portrait: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number, image: PropTypes.string, fit: PropTypes.string, position: PropTypes.string,
       width: PropTypes.number, height: PropTypes.number }).isRequired }).isRequired,
   sheet: PropTypes.shape({ image: PropTypes.string, width: PropTypes.number }).isRequired,
   gameTitle: PropTypes.string.isRequired,
@@ -50,7 +51,7 @@ function MoveSection({ title, rows }) {
         <dl className="t1-moves">
           {rows.map((row, index) => (
             <div className="t1-move" key={`${row.name}-${index}`}>
-              <dt>{row.name}</dt>
+              <dt>{row.abbreviation ? `${row.abbreviation} — ${row.name}` : row.name}</dt>
               <dd>
                 {row.launchers?.length > 0 && <>
                   <span className="t1-combo-label">Launcher (choose one)</span>
@@ -60,6 +61,9 @@ function MoveSection({ title, rows }) {
                   <span className="t1-combo-label">Follow-up</span>
                 </>}
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
+                {row.startupFrames && <p>{row.startupFrames} frames{row.position ? ` · ${row.position}` : ''}</p>}
+                {row.breakInput && <p>Throw break: {renderInputImage(row.breakInput)}</p>}
+                {row.unbreakable && <p>Unbreakable</p>}
                 {row.notes && <p>{row.notes}</p>}
               </dd>
             </div>
@@ -89,10 +93,11 @@ function NotationKey() {
 }
 
 export default function ClassicTekken({ gameId }) {
-  const gameTitle = gameId === 'tekken-2' ? 'Tekken 2' : 'Tekken 1';
+  const gameTitle = gameTitles[gameId];
   const rosterPath = `/games/${gameId}`;
   const { characterSlug } = useParams();
-  const [initialData] = useState(usePageData());
+  const pageData = usePageData();
+  const [initialData] = useState(() => { const seed = pageData; return seed?.gameId === gameId ? seed : null; });
   const [data, setData] = useState(initialData);
   const [error, setError] = useState('');
   const [requestKey, setRequestKey] = useState(0);
@@ -137,7 +142,7 @@ export default function ClassicTekken({ gameId }) {
                 : `${data.characters.length} fighters. Pick your character and get straight to the inputs.`}</p>
             </div>
           </header>
-          <NotationKey />
+          {!character && <NotationKey />}
           {character ? <>
             <nav className="t1-section-links" aria-label="Guide sections">
               {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
@@ -146,7 +151,8 @@ export default function ClassicTekken({ gameId }) {
               {Object.entries(characterSectionTitles).map(([key,title]) => character.sections[key]?.length ?
                 <section id={`t1-${key}`} key={key} aria-label={title}><MoveSection title={title} rows={character.sections[key]} /></section> : null)}
             </div>
-            {character.notes.length > 0 && <p className="t1-source-note">{character.notes.join(' ')}</p>}
+            {character.sharedGuide && <Link className="t1-back" to={`${rosterPath}/${character.sharedGuide}`}>Open shared moves &amp; combos</Link>}
+            {character.notes?.length > 0 && <p className="t1-source-note">{character.notes.join(' ')}</p>}
             <Link className="t1-back" to={rosterPath}>← Choose another fighter</Link>
           </> : <>
             <label className="t1-search">Find a fighter
@@ -168,4 +174,4 @@ export default function ClassicTekken({ gameId }) {
     </main>
   );
 }
-ClassicTekken.propTypes = { gameId: PropTypes.oneOf(['tekken-1', 'tekken-2']).isRequired };
+ClassicTekken.propTypes = { gameId: PropTypes.oneOf(Object.keys(gameTitles)).isRequired };

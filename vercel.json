@@ -18,6 +18,21 @@
       "permanent": true
     },
     {
+      "source": "/tekken-5",
+      "destination": "/games/tekken-5",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-4",
+      "destination": "/games/tekken-4",
+      "permanent": true
+    },
+    {
+      "source": "/tekken-3",
+      "destination": "/games/tekken-3",
+      "permanent": true
+    },
+    {
       "source": "/tekken-2",
       "destination": "/games/tekken-2",
       "permanent": true

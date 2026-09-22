@@ -2,7 +2,7 @@
   {
     "path": "/",
     "title": "Tekken Combos & Character Guides | TEKKTICIAN",
-    "description": "Tekken 8, Tekken 7, Tag Tournament 2, Tekken 2 and Tekken 1 combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.",
+    "description": "Tekken 1–5, Dark Resurrection, Tekken 7, Tekken 8 and Tag Tournament 2 combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.",
     "collection": true
   },
   {
@@ -3227,6 +3227,1698 @@
       {
         "name": "Zafina",
         "path": "/games/tekken-tag-2/zafina"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5",
+    "title": "Tekken 5 / Dark Resurrection Combos & Character Guides | TEKKTICIAN",
+    "description": "Find Tekken 5 / Dark Resurrection Tekken 5 and Dark Resurrection moves, throws and combo routes. Choose a character and practice with readable inputs on TEKKTICIAN.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      }
+    ],
+    "collection": true
+  },
+  {
+    "path": "/games/tekken-5/anna-williams",
+    "title": "Tekken 5 / Dark Resurrection Anna Williams Combos & Guide | TEKKTICIAN",
+    "description": "Anna Williams in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Anna Williams",
+        "path": "/games/tekken-5/anna-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/armor-king",
+    "title": "Tekken 5 / Dark Resurrection Armor King Combos & Guide | TEKKTICIAN",
+    "description": "Armor King in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Armor King",
+        "path": "/games/tekken-5/armor-king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/asuka-kazama",
+    "title": "Tekken 5 / Dark Resurrection Asuka Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Asuka Kazama in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Asuka Kazama",
+        "path": "/games/tekken-5/asuka-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/baek-doo-san",
+    "title": "Tekken 5 / Dark Resurrection Baek Doo San Combos & Guide | TEKKTICIAN",
+    "description": "Baek Doo San in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Baek Doo San",
+        "path": "/games/tekken-5/baek-doo-san"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/bruce-irvin",
+    "title": "Tekken 5 / Dark Resurrection Bruce Irvin Combos & Guide | TEKKTICIAN",
+    "description": "Bruce Irvin in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Bruce Irvin",
+        "path": "/games/tekken-5/bruce-irvin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/bryan-fury",
+    "title": "Tekken 5 / Dark Resurrection Bryan Fury Combos & Guide | TEKKTICIAN",
+    "description": "Bryan Fury in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Bryan Fury",
+        "path": "/games/tekken-5/bryan-fury"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/christie-monteiro",
+    "title": "Tekken 5 / Dark Resurrection Christie Monteiro Combos & Guide | TEKKTICIAN",
+    "description": "Christie Monteiro in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Christie Monteiro",
+        "path": "/games/tekken-5/christie-monteiro"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/devil-jin",
+    "title": "Tekken 5 / Dark Resurrection Devil Jin Combos & Guide | TEKKTICIAN",
+    "description": "Devil Jin in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Devil Jin",
+        "path": "/games/tekken-5/devil-jin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/dragunov",
+    "title": "Tekken 5 / Dark Resurrection Sergei Dragunov Combos & Guide | TEKKTICIAN",
+    "description": "Sergei Dragunov in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Sergei Dragunov",
+        "path": "/games/tekken-5/dragunov"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/eddy-gordo",
+    "title": "Tekken 5 / Dark Resurrection Eddy Gordo Combos & Guide | TEKKTICIAN",
+    "description": "Eddy Gordo in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Eddy Gordo",
+        "path": "/games/tekken-5/eddy-gordo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/feng-wei",
+    "title": "Tekken 5 / Dark Resurrection Feng Wei Combos & Guide | TEKKTICIAN",
+    "description": "Feng Wei in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Feng Wei",
+        "path": "/games/tekken-5/feng-wei"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/ganryu",
+    "title": "Tekken 5 / Dark Resurrection Ganryu Combos & Guide | TEKKTICIAN",
+    "description": "Ganryu in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Ganryu",
+        "path": "/games/tekken-5/ganryu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/heihachi-mishima",
+    "title": "Tekken 5 / Dark Resurrection Heihachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Heihachi Mishima in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Heihachi Mishima",
+        "path": "/games/tekken-5/heihachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/hwoarang",
+    "title": "Tekken 5 / Dark Resurrection Hwoarang Combos & Guide | TEKKTICIAN",
+    "description": "Hwoarang in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Hwoarang",
+        "path": "/games/tekken-5/hwoarang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/jack-5",
+    "title": "Tekken 5 / Dark Resurrection Jack-5 Combos & Guide | TEKKTICIAN",
+    "description": "Jack-5 in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Jack-5",
+        "path": "/games/tekken-5/jack-5"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/jin-kazama",
+    "title": "Tekken 5 / Dark Resurrection Jin Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jin Kazama in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Jin Kazama",
+        "path": "/games/tekken-5/jin-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/jinpachi-mishima",
+    "title": "Tekken 5 / Dark Resurrection Jinpachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Jinpachi Mishima in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Jinpachi Mishima",
+        "path": "/games/tekken-5/jinpachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/julia-chang",
+    "title": "Tekken 5 / Dark Resurrection Julia Chang Combos & Guide | TEKKTICIAN",
+    "description": "Julia Chang in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Julia Chang",
+        "path": "/games/tekken-5/julia-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/kazuya-mishima",
+    "title": "Tekken 5 / Dark Resurrection Kazuya Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Kazuya Mishima in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Kazuya Mishima",
+        "path": "/games/tekken-5/kazuya-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/king",
+    "title": "Tekken 5 / Dark Resurrection King Combos & Guide | TEKKTICIAN",
+    "description": "King in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "King",
+        "path": "/games/tekken-5/king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/kuma-panda",
+    "title": "Tekken 5 / Dark Resurrection Kuma II / Panda Combos & Guide | TEKKTICIAN",
+    "description": "Kuma II / Panda in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Kuma II / Panda",
+        "path": "/games/tekken-5/kuma-panda"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/lee-chaolan",
+    "title": "Tekken 5 / Dark Resurrection Lee Chaolan Combos & Guide | TEKKTICIAN",
+    "description": "Lee Chaolan in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Lee Chaolan",
+        "path": "/games/tekken-5/lee-chaolan"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/lei-wulong",
+    "title": "Tekken 5 / Dark Resurrection Lei Wulong Combos & Guide | TEKKTICIAN",
+    "description": "Lei Wulong in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Lei Wulong",
+        "path": "/games/tekken-5/lei-wulong"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/lili",
+    "title": "Tekken 5 / Dark Resurrection Lili Combos & Guide | TEKKTICIAN",
+    "description": "Lili in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Lili",
+        "path": "/games/tekken-5/lili"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/ling-xiaoyu",
+    "title": "Tekken 5 / Dark Resurrection Ling Xiaoyu Combos & Guide | TEKKTICIAN",
+    "description": "Ling Xiaoyu in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Ling Xiaoyu",
+        "path": "/games/tekken-5/ling-xiaoyu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/marshall-law",
+    "title": "Tekken 5 / Dark Resurrection Marshall Law Combos & Guide | TEKKTICIAN",
+    "description": "Marshall Law in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Marshall Law",
+        "path": "/games/tekken-5/marshall-law"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/craig-marduk",
+    "title": "Tekken 5 / Dark Resurrection Craig Marduk Combos & Guide | TEKKTICIAN",
+    "description": "Craig Marduk in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Craig Marduk",
+        "path": "/games/tekken-5/craig-marduk"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/mokujin",
+    "title": "Tekken 5 / Dark Resurrection Mokujin Combos & Guide | TEKKTICIAN",
+    "description": "Mokujin in Tekken 5 / Dark Resurrection: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Mokujin",
+        "path": "/games/tekken-5/mokujin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/nina-williams",
+    "title": "Tekken 5 / Dark Resurrection Nina Williams Combos & Guide | TEKKTICIAN",
+    "description": "Nina Williams in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Nina Williams",
+        "path": "/games/tekken-5/nina-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/paul-phoenix",
+    "title": "Tekken 5 / Dark Resurrection Paul Phoenix Combos & Guide | TEKKTICIAN",
+    "description": "Paul Phoenix in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Paul Phoenix",
+        "path": "/games/tekken-5/paul-phoenix"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/raven",
+    "title": "Tekken 5 / Dark Resurrection Raven Combos & Guide | TEKKTICIAN",
+    "description": "Raven in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Raven",
+        "path": "/games/tekken-5/raven"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/roger-jr",
+    "title": "Tekken 5 / Dark Resurrection Roger Jr. Combos & Guide | TEKKTICIAN",
+    "description": "Roger Jr. in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Roger Jr.",
+        "path": "/games/tekken-5/roger-jr"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/steve-fox",
+    "title": "Tekken 5 / Dark Resurrection Steve Fox Combos & Guide | TEKKTICIAN",
+    "description": "Steve Fox in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Steve Fox",
+        "path": "/games/tekken-5/steve-fox"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/wang-jinrei",
+    "title": "Tekken 5 / Dark Resurrection Wang Jinrei Combos & Guide | TEKKTICIAN",
+    "description": "Wang Jinrei in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Wang Jinrei",
+        "path": "/games/tekken-5/wang-jinrei"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-5/yoshimitsu",
+    "title": "Tekken 5 / Dark Resurrection Yoshimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Yoshimitsu in Tekken 5 / Dark Resurrection: Learn Tekken 5 and Dark Resurrection moves, throws and combo routes with readable inputs.",
+    "game": "Tekken 5 / Dark Resurrection",
+    "image": "/game-art/tekken-5.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 5 / Dark Resurrection",
+        "path": "/games/tekken-5"
+      },
+      {
+        "name": "Yoshimitsu",
+        "path": "/games/tekken-5/yoshimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4",
+    "title": "Tekken 4 Combos & Character Guides | TEKKTICIAN",
+    "description": "Find Tekken 4 combo routes, moves, throws and 10 hit combos. Choose a character and practice with readable inputs on TEKKTICIAN.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      }
+    ],
+    "collection": true
+  },
+  {
+    "path": "/games/tekken-4/bryan-fury",
+    "title": "Tekken 4 Bryan Fury Combos & Guide | TEKKTICIAN",
+    "description": "Bryan Fury in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Bryan Fury",
+        "path": "/games/tekken-4/bryan-fury"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/christie-monteiro",
+    "title": "Tekken 4 Christie Monteiro Combos & Guide | TEKKTICIAN",
+    "description": "Christie Monteiro in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Christie Monteiro",
+        "path": "/games/tekken-4/christie-monteiro"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/combot",
+    "title": "Tekken 4 Combot Combos & Guide | TEKKTICIAN",
+    "description": "Combot in Tekken 4: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Combot",
+        "path": "/games/tekken-4/combot"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/craig-marduk",
+    "title": "Tekken 4 Craig Marduk Combos & Guide | TEKKTICIAN",
+    "description": "Craig Marduk in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Craig Marduk",
+        "path": "/games/tekken-4/craig-marduk"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/eddy-gordo",
+    "title": "Tekken 4 Eddy Gordo Combos & Guide | TEKKTICIAN",
+    "description": "Eddy Gordo in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Eddy Gordo",
+        "path": "/games/tekken-4/eddy-gordo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/heihachi-mishima",
+    "title": "Tekken 4 Heihachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Heihachi Mishima in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Heihachi Mishima",
+        "path": "/games/tekken-4/heihachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/hwoarang",
+    "title": "Tekken 4 Hwoarang Combos & Guide | TEKKTICIAN",
+    "description": "Hwoarang in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Hwoarang",
+        "path": "/games/tekken-4/hwoarang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/jin-kazama",
+    "title": "Tekken 4 Jin Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jin Kazama in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Jin Kazama",
+        "path": "/games/tekken-4/jin-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/julia-chang",
+    "title": "Tekken 4 Julia Chang Combos & Guide | TEKKTICIAN",
+    "description": "Julia Chang in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Julia Chang",
+        "path": "/games/tekken-4/julia-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/kazuya-mishima",
+    "title": "Tekken 4 Kazuya Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Kazuya Mishima in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Kazuya Mishima",
+        "path": "/games/tekken-4/kazuya-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/king",
+    "title": "Tekken 4 King Combos & Guide | TEKKTICIAN",
+    "description": "King in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "King",
+        "path": "/games/tekken-4/king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/kuma-panda",
+    "title": "Tekken 4 Kuma II / Panda Combos & Guide | TEKKTICIAN",
+    "description": "Kuma II / Panda in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Kuma II / Panda",
+        "path": "/games/tekken-4/kuma-panda"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/lee-chaolan",
+    "title": "Tekken 4 Lee Chaolan / Violet Combos & Guide | TEKKTICIAN",
+    "description": "Lee Chaolan / Violet in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Lee Chaolan / Violet",
+        "path": "/games/tekken-4/lee-chaolan"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/lei-wulong",
+    "title": "Tekken 4 Lei Wulong Combos & Guide | TEKKTICIAN",
+    "description": "Lei Wulong in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Lei Wulong",
+        "path": "/games/tekken-4/lei-wulong"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/ling-xiaoyu",
+    "title": "Tekken 4 Ling Xiaoyu / Miharu Combos & Guide | TEKKTICIAN",
+    "description": "Ling Xiaoyu / Miharu in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Ling Xiaoyu / Miharu",
+        "path": "/games/tekken-4/ling-xiaoyu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/marshall-law",
+    "title": "Tekken 4 Marshall Law Combos & Guide | TEKKTICIAN",
+    "description": "Marshall Law in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Marshall Law",
+        "path": "/games/tekken-4/marshall-law"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/nina-williams",
+    "title": "Tekken 4 Nina Williams Combos & Guide | TEKKTICIAN",
+    "description": "Nina Williams in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Nina Williams",
+        "path": "/games/tekken-4/nina-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/paul-phoenix",
+    "title": "Tekken 4 Paul Phoenix Combos & Guide | TEKKTICIAN",
+    "description": "Paul Phoenix in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Paul Phoenix",
+        "path": "/games/tekken-4/paul-phoenix"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/steve-fox",
+    "title": "Tekken 4 Steve Fox Combos & Guide | TEKKTICIAN",
+    "description": "Steve Fox in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Steve Fox",
+        "path": "/games/tekken-4/steve-fox"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/yoshimitsu",
+    "title": "Tekken 4 Yoshimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Yoshimitsu in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Yoshimitsu",
+        "path": "/games/tekken-4/yoshimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/miharu-hirano",
+    "title": "Tekken 4 Miharu Hirano Combos & Guide | TEKKTICIAN",
+    "description": "Miharu Hirano in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Miharu Hirano",
+        "path": "/games/tekken-4/miharu-hirano"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-4/violet",
+    "title": "Tekken 4 Violet Combos & Guide | TEKKTICIAN",
+    "description": "Violet in Tekken 4: Learn combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 4",
+    "image": "/game-art/tekken-4.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 4",
+        "path": "/games/tekken-4"
+      },
+      {
+        "name": "Violet",
+        "path": "/games/tekken-4/violet"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3",
+    "title": "Tekken 3 Combos & Character Guides | TEKKTICIAN",
+    "description": "Find Tekken 3 classic combo routes, moves, throws and 10 hit combos. Choose a character and practice with readable inputs on TEKKTICIAN.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      }
+    ],
+    "collection": true
+  },
+  {
+    "path": "/games/tekken-3/jin-kazama",
+    "title": "Tekken 3 Jin Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jin Kazama in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Jin Kazama",
+        "path": "/games/tekken-3/jin-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/hwoarang",
+    "title": "Tekken 3 Hwoarang Combos & Guide | TEKKTICIAN",
+    "description": "Hwoarang in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Hwoarang",
+        "path": "/games/tekken-3/hwoarang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/paul-phoenix",
+    "title": "Tekken 3 Paul Phoenix Combos & Guide | TEKKTICIAN",
+    "description": "Paul Phoenix in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Paul Phoenix",
+        "path": "/games/tekken-3/paul-phoenix"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/forest-law",
+    "title": "Tekken 3 Forest Law Combos & Guide | TEKKTICIAN",
+    "description": "Forest Law in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Forest Law",
+        "path": "/games/tekken-3/forest-law"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/yoshimitsu",
+    "title": "Tekken 3 Yoshimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Yoshimitsu in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Yoshimitsu",
+        "path": "/games/tekken-3/yoshimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/heihachi-mishima",
+    "title": "Tekken 3 Heihachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Heihachi Mishima in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Heihachi Mishima",
+        "path": "/games/tekken-3/heihachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/ling-xiaoyu",
+    "title": "Tekken 3 Ling Xiaoyu Combos & Guide | TEKKTICIAN",
+    "description": "Ling Xiaoyu in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Ling Xiaoyu",
+        "path": "/games/tekken-3/ling-xiaoyu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/eddy-gordo",
+    "title": "Tekken 3 Eddy Gordo / Tiger Jackson Combos & Guide | TEKKTICIAN",
+    "description": "Eddy Gordo / Tiger Jackson in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Eddy Gordo / Tiger Jackson",
+        "path": "/games/tekken-3/eddy-gordo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/nina-williams",
+    "title": "Tekken 3 Nina Williams Combos & Guide | TEKKTICIAN",
+    "description": "Nina Williams in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Nina Williams",
+        "path": "/games/tekken-3/nina-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/bryan-fury",
+    "title": "Tekken 3 Bryan Fury Combos & Guide | TEKKTICIAN",
+    "description": "Bryan Fury in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Bryan Fury",
+        "path": "/games/tekken-3/bryan-fury"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/julia-chang",
+    "title": "Tekken 3 Julia Chang Combos & Guide | TEKKTICIAN",
+    "description": "Julia Chang in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Julia Chang",
+        "path": "/games/tekken-3/julia-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/kuma-panda",
+    "title": "Tekken 3 Kuma II / Panda Combos & Guide | TEKKTICIAN",
+    "description": "Kuma II / Panda in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Kuma II / Panda",
+        "path": "/games/tekken-3/kuma-panda"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/gun-jack",
+    "title": "Tekken 3 Gun Jack Combos & Guide | TEKKTICIAN",
+    "description": "Gun Jack in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Gun Jack",
+        "path": "/games/tekken-3/gun-jack"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/anna-williams",
+    "title": "Tekken 3 Anna Williams Combos & Guide | TEKKTICIAN",
+    "description": "Anna Williams in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Anna Williams",
+        "path": "/games/tekken-3/anna-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/ogre",
+    "title": "Tekken 3 Ogre Combos & Guide | TEKKTICIAN",
+    "description": "Ogre in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Ogre",
+        "path": "/games/tekken-3/ogre"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/true-ogre",
+    "title": "Tekken 3 True Ogre Combos & Guide | TEKKTICIAN",
+    "description": "True Ogre in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "True Ogre",
+        "path": "/games/tekken-3/true-ogre"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/doctor-bosconovitch",
+    "title": "Tekken 3 Doctor Bosconovitch Combos & Guide | TEKKTICIAN",
+    "description": "Doctor Bosconovitch in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Doctor Bosconovitch",
+        "path": "/games/tekken-3/doctor-bosconovitch"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/gon",
+    "title": "Tekken 3 Gon Combos & Guide | TEKKTICIAN",
+    "description": "Gon in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Gon",
+        "path": "/games/tekken-3/gon"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/king",
+    "title": "Tekken 3 King Combos & Guide | TEKKTICIAN",
+    "description": "King in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "King",
+        "path": "/games/tekken-3/king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/lei-wulong",
+    "title": "Tekken 3 Lei Wulong Combos & Guide | TEKKTICIAN",
+    "description": "Lei Wulong in Tekken 3: Learn classic combo routes, moves, throws and 10 hit combos with readable inputs.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Lei Wulong",
+        "path": "/games/tekken-3/lei-wulong"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-3/mokujin",
+    "title": "Tekken 3 Mokujin Combos & Guide | TEKKTICIAN",
+    "description": "Mokujin in Tekken 3: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken 3",
+    "image": "/game-art/tekken-3.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 3",
+        "path": "/games/tekken-3"
+      },
+      {
+        "name": "Mokujin",
+        "path": "/games/tekken-3/mokujin"
       }
     ]
   },
