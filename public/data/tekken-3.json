@@ -6,7 +6,7 @@
   "tagline": "The third round.",
   "source": {
     "label": "Tekken 3 move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Land the starting attack before continuing a route. Some endings hit grounded opponents and depend on their recovery; timing, range and opponent size matter. 10 hit combos are preset strings, not guaranteed juggles. Data primarily from Tekken Wiki (Fandom) Tekken 3 movelists, cross-checked with contemporary guides."
+    "note": "Commands use 1/2/3/4 notation. Land the starting attack before continuing a route. Timing, range, opponent size and recovery matter; restrictions are listed beside each route. 10 hit combos are preset strings, not guaranteed juggles. Movelists and selected community routes are drawn from Tekken Wiki and the Tekken Zaibatsu Tekken 3 archive."
   },
   "portraits": {
     "credit": "Original Tekken 3 character artwork: Namco.",
@@ -101,7 +101,8 @@
           },
           {
             "name": "Demon Scissors",
-            "input": "[4~3]"
+            "input": "[4~3]",
+            "notes": "Alternate input: u/f+4~3."
           },
           {
             "name": "Three Ring Circus",
@@ -136,14 +137,6 @@
             "input": "b+2,4,2,1,2"
           },
           {
-            "name": "Lightning Uppercut",
-            "input": "b+1+4"
-          },
-          {
-            "name": "Lightning Screw Uppercut",
-            "input": "B+1+4"
-          },
-          {
             "name": "Rising Sun",
             "input": "u/f+4,4"
           },
@@ -169,8 +162,8 @@
           },
           {
             "name": "Electric Wind Godfist",
-            "input": "f,n,d,d/f+2",
-            "notes": "Press simultaneously for electric version"
+            "input": "f,n,d~d/f+2",
+            "notes": "Press down-forward and 2 together for the electric version."
           },
           {
             "name": "Spinning Demon",
@@ -187,6 +180,55 @@
           {
             "name": "Tooth Fairy",
             "input": "SS+2"
+          },
+          {
+            "name": "White Heron",
+            "input": "1+4,2"
+          },
+          {
+            "name": "Upper",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Demon Backhand",
+            "input": "b+2"
+          },
+          {
+            "name": "Uppercut",
+            "input": "WS+2"
+          },
+          {
+            "name": "Stagger Wind Godfist",
+            "input": "f,n,d,d/f,2"
+          },
+          {
+            "name": "Laser Scraper",
+            "input": "b,f+2,1,d+2",
+            "notes": "The string can be delayed."
+          },
+          {
+            "name": "Split Axe Kick",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Crouch Dash Slash Kick",
+            "input": "f,n,d,d/f,f,u/f+3"
+          },
+          {
+            "name": "Spinning Demon",
+            "input": "u/f+4,4,4,4"
+          },
+          {
+            "name": "Lightning Force",
+            "input": "b+1+2"
+          },
+          {
+            "name": "White Heron to Crescent Sweep",
+            "input": "1+4,2,d+4"
+          },
+          {
+            "name": "Tsunami Kick from crouch",
+            "input": "WS+4,4"
           }
         ],
         "combos": [
@@ -209,6 +251,24 @@
           {
             "name": "Electric into twin pistons",
             "input": "f,n,d,d/f+2 > WS+1,2"
+          },
+          {
+            "name": "Can Can to White Heron",
+            "input": "d+3+4 > 1+4,2 > f,f+2"
+          },
+          {
+            "name": "Electric juggle",
+            "input": "f,n,d~d/f+2 > f,n,d~d/f+2 > f,f,n,d~d/f+2",
+            "notes": "Electric timing on all three uppercuts; dash into the last one."
+          },
+          {
+            "name": "Counter-hit Laser Scraper",
+            "input": "CH b,f+2,1,d+2 > b,f+2,1,d+2 > f,f+2"
+          },
+          {
+            "name": "Rising uppercut to Tsunami Kick",
+            "input": "WS+2 > U/F,n,4 > d/f+4,4",
+            "notes": "Jump forward, release to neutral, then press 4."
           }
         ],
         "strings": [
@@ -301,10 +361,6 @@
         ],
         "moves": [
           {
-            "name": "Migraine",
-            "input": "1,1"
-          },
-          {
             "name": "One Two Punch",
             "input": "1,2"
           },
@@ -361,12 +417,9 @@
             "input": "d/b+4"
           },
           {
-            "name": "Dynamite Heel",
-            "input": "d/b+3+4"
-          },
-          {
             "name": "Hunting Hawk",
-            "input": "u/f+3,4,3"
+            "input": "u/f+3,4,3",
+            "notes": "Enter the final 3 to obtain the full block advantage."
           },
           {
             "name": "Spiral Tap",
@@ -387,6 +440,146 @@
           {
             "name": "Tsunami Kick",
             "input": "WS+4,4"
+          },
+          {
+            "name": "Body Blow",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Lifting Uppercut",
+            "input": "f,n,d,d/f+2"
+          },
+          {
+            "name": "Uppercut",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Ecoli",
+            "input": "f,n,d,d/f+3~3"
+          },
+          {
+            "name": "Flamingo Kick",
+            "input": "u+3"
+          },
+          {
+            "name": "Repeater",
+            "input": "d/b+4~4"
+          },
+          {
+            "name": "Rejection",
+            "input": "u/f+4"
+          },
+          {
+            "name": "Migrane",
+            "input": "RFF 1,1"
+          },
+          {
+            "name": "Big Fists",
+            "input": "RFF 2,1,1"
+          },
+          {
+            "name": "Teaser Trip",
+            "input": "RFF 3"
+          },
+          {
+            "name": "Teaser Trip - Wild Roundhouse",
+            "input": "RFF 3,3"
+          },
+          {
+            "name": "Backlash",
+            "input": "RFF 3~4"
+          },
+          {
+            "name": "Cheap Shot",
+            "input": "RFF f+3"
+          },
+          {
+            "name": "Ripoff",
+            "input": "RFF f,f+3"
+          },
+          {
+            "name": "Misdemeanor",
+            "input": "RFF b+3"
+          },
+          {
+            "name": "Snap Spin Kick",
+            "input": "RFF b+4"
+          },
+          {
+            "name": "Chainsaw Flamingo",
+            "input": "RFF 4~f"
+          },
+          {
+            "name": "Double Hook",
+            "input": "RFF 4,4"
+          },
+          {
+            "name": "Grand Theft",
+            "input": "RFF f+4~4"
+          },
+          {
+            "name": "Pirouette Kick",
+            "input": "RFF f,f+4"
+          },
+          {
+            "name": "Screw Pirouette Kick",
+            "input": "RFF f,f+4,3"
+          },
+          {
+            "name": "Left Jab",
+            "input": "LFS 1"
+          },
+          {
+            "name": "Right Back Hand",
+            "input": "LFS 2"
+          },
+          {
+            "name": "Left Snap Kick",
+            "input": "LFS f+3"
+          },
+          {
+            "name": "Snap Spin Kick",
+            "input": "LFS b+3"
+          },
+          {
+            "name": "Machine Gun Kicks",
+            "input": "LFS 3,3,3"
+          },
+          {
+            "name": "Menace to Society",
+            "input": "LFS 3,3,4"
+          },
+          {
+            "name": "Bad Menace",
+            "input": "LFS 3,3,4,4"
+          },
+          {
+            "name": "Famingo Hop Kick",
+            "input": "LFS 4"
+          },
+          {
+            "name": "Spin Back Fist",
+            "input": "RFS 1"
+          },
+          {
+            "name": "Right Jab",
+            "input": "RFS 2"
+          },
+          {
+            "name": "Flamingo Hop Kick",
+            "input": "RFS 3"
+          },
+          {
+            "name": "Super Right",
+            "input": "RFS 4"
+          },
+          {
+            "name": "Right Snap Kick",
+            "input": "RFS f+4"
+          },
+          {
+            "name": "Snap Spin Kick",
+            "input": "RFS b+4"
           }
         ],
         "combos": [
@@ -405,6 +598,24 @@
           {
             "name": "Sky rocket into iron heel",
             "input": "f,n,d,d/f+4 > WS+3"
+          },
+          {
+            "name": "Grand Theft to Hunting Hawk",
+            "input": "RFF f+4~4 > d/f+1 > u/f+3,4,3",
+            "notes": "Large opponents only."
+          },
+          {
+            "name": "Grand Theft to Flying Eagle",
+            "input": "RFF f+4~4 > f+3 > LFS 1 > LFF 3~4",
+            "notes": "Time the flamingo jab carefully on normal-sized opponents."
+          },
+          {
+            "name": "Counter-hit uppercut",
+            "input": "CH d/f+2 > 1,2 > 1,2,4"
+          },
+          {
+            "name": "Flamingo counter hit",
+            "input": "CH RFS 4 > RFF f+3 > LFS 1 > LFF 1,2,4"
           }
         ],
         "strings": [
@@ -541,10 +752,6 @@
             "input": "d/b+3"
           },
           {
-            "name": "Burning Fist",
-            "input": "b+1+2"
-          },
-          {
             "name": "Shredder",
             "input": "u/f+3,4"
           },
@@ -582,7 +789,39 @@
           },
           {
             "name": "Jaw Breaker",
-            "input": "FC+d/f+2"
+            "input": "FC d/f+2"
+          },
+          {
+            "name": "PDK Combo",
+            "input": "2,d+3"
+          },
+          {
+            "name": "Upper",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Rising Upper",
+            "input": "WS+2"
+          },
+          {
+            "name": "Shredder",
+            "input": "f,f+3,4"
+          },
+          {
+            "name": "Incomplete Somersault",
+            "input": "FC u+2+3+4"
+          },
+          {
+            "name": "Falling Leaf",
+            "input": "d+1,4,2"
+          },
+          {
+            "name": "Jaw Breaker to Gut Buster",
+            "input": "FC d/f+2,1"
+          },
+          {
+            "name": "Jaw Breaker to Stone Breaker",
+            "input": "FC d/f+2,2"
           }
         ],
         "combos": [
@@ -601,6 +840,26 @@
           {
             "name": "Sway into rubberband",
             "input": "qcb > d,d/b,n,2"
+          },
+          {
+            "name": "Hop kick, jab carry",
+            "input": "u/f+4 > f+1 > f+1 > f+1 > qcf+2"
+          },
+          {
+            "name": "Hop kick, body blow carry",
+            "input": "u/f+4 > d/f+1 > d/f+1 > qcf+2"
+          },
+          {
+            "name": "Hop kick to Shredder",
+            "input": "u/f+4 > 1,2 > u/f+3,4"
+          },
+          {
+            "name": "Hop kick, high kick extension",
+            "input": "u/f+4 > d/f+1 > 4 > qcf+2"
+          },
+          {
+            "name": "Hop kick to triple kicks",
+            "input": "u/f+4 > 1 > f,f+3,4,4"
           }
         ],
         "strings": [
@@ -739,8 +998,65 @@
             "input": "d/b+4"
           },
           {
-            "name": "Charge Power Punch",
-            "input": "d/b+1+2"
+            "name": "Power Jab",
+            "input": "qcf+1"
+          },
+          {
+            "name": "Dragon Storm",
+            "input": "b+1,2,1",
+            "notes": "The string can be delayed."
+          },
+          {
+            "name": "Junkyard Combo",
+            "input": "b+2,3,4"
+          },
+          {
+            "name": "Double Kick - Somersault",
+            "input": "3,3,4"
+          },
+          {
+            "name": "Double Kick - Step In Kick",
+            "input": "3,3,f+3"
+          },
+          {
+            "name": "Triple Kick - Roundhouse",
+            "input": "3,3,3,4"
+          },
+          {
+            "name": "Rave Kicks",
+            "input": "d+3,3"
+          },
+          {
+            "name": "Dragon Slide",
+            "input": "FC d/f,d,d/f+3"
+          },
+          {
+            "name": "Crouch Kick - Somersault",
+            "input": "FC 3,4"
+          },
+          {
+            "name": "Twist Kick - Somersault",
+            "input": "WS+3,4"
+          },
+          {
+            "name": "Double Dragon",
+            "input": "SS+3+4"
+          },
+          {
+            "name": "Face Kick - Somersault",
+            "input": "WS+4,3"
+          },
+          {
+            "name": "Tricky Step",
+            "input": "b+1+2"
+          },
+          {
+            "name": "Tricky Fist",
+            "input": "b+1+2 > 2"
+          },
+          {
+            "name": "Tricky Low Kick",
+            "input": "b+1+2 > 4"
           }
         ],
         "combos": [
@@ -759,6 +1075,22 @@
           {
             "name": "Rave war into charge punch",
             "input": "f+2,2,2 > d/b+1+2"
+          },
+          {
+            "name": "Hop kick to Junkyard",
+            "input": "u/f+4 > 4,u+3 > b+2,3,4"
+          },
+          {
+            "name": "Somersault to Junkyard",
+            "input": "3,4 > 4 > b+2,3,4"
+          },
+          {
+            "name": "Uppercut to somersault kick",
+            "input": "d/f+2 > d/f+1 > f+2,2 > d+2~3"
+          },
+          {
+            "name": "Dragon Storm to catapult",
+            "input": "b+1,2,1 > U/F+4,3"
           }
         ],
         "strings": [
@@ -871,18 +1203,6 @@
             "input": "d+3+4"
           },
           {
-            "name": "Harakiri",
-            "input": "d+1+4"
-          },
-          {
-            "name": "Quick Slash",
-            "input": "d/b+1"
-          },
-          {
-            "name": "Death Slash",
-            "input": "d/b+1,n,d/b"
-          },
-          {
             "name": "Slap-U-Silly",
             "input": "d/b+2,2,2,2,2,2"
           },
@@ -899,12 +1219,69 @@
             "input": "b+1+2"
           },
           {
-            "name": "Poison Breath",
-            "input": "During Bad Stomach any button"
-          },
-          {
             "name": "Meditation",
             "input": "SS+3+4"
+          },
+          {
+            "name": "Jab - Uppercut",
+            "input": "1,2"
+          },
+          {
+            "name": "Jab - Double Uppercut",
+            "input": "1,2,1"
+          },
+          {
+            "name": "Hilt Strike - Backfist",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Quick Upper",
+            "input": "WS+1+2"
+          },
+          {
+            "name": "Dive Bomb",
+            "input": "f,f+1+2",
+            "notes": "Can flow into d+3+4 or D/B+2,2,2,2,2 while retaining the backward-facing movement."
+          },
+          {
+            "name": "Low Flash Attack",
+            "input": "2,d+3"
+          },
+          {
+            "name": "Ninja Blade Smash",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Lunging Sweep",
+            "input": "FC d/f+3"
+          },
+          {
+            "name": "Shark Attack",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Poison Wind",
+            "input": "u/f+3+4"
+          },
+          {
+            "name": "Side Kick",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Fubuki",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Fake Suicide",
+            "input": "f,f+1+4"
+          },
+          {
+            "name": "Shark Attack to Dive Bomb",
+            "input": "f,f+3+4,1+2"
+          },
+          {
+            "name": "Shark Attack to Kangaroo Kick",
+            "input": "f,f+3+4,3+4"
           }
         ],
         "combos": [
@@ -923,6 +1300,27 @@
           {
             "name": "Indian stance into kangaroo",
             "input": "d+3+4 > 4"
+          },
+          {
+            "name": "Uppercut, short carry",
+            "input": "d/f+2 > d/f+2 > f,f+3,1"
+          },
+          {
+            "name": "Uppercut to rising kick",
+            "input": "d/f+2 > d/f+2 > f,f+3 > WS+4"
+          },
+          {
+            "name": "Kangaroo to Fubuki",
+            "input": "4~3 > U,n,4 > f,f+4",
+            "notes": "Jump straight up, release to neutral, then press 4."
+          },
+          {
+            "name": "Lunging Sweep follow-up",
+            "input": "FC d/f+3 > WS+4 > d/f+4"
+          },
+          {
+            "name": "Kangaroo to Bad Stomach",
+            "input": "4~3 > b+1+2,1+2"
           }
         ],
         "strings": [
@@ -1020,7 +1418,8 @@
           },
           {
             "name": "Demon Scissors",
-            "input": "4~3"
+            "input": "4~3",
+            "notes": "Alternate input: u/f+4~3. Whiffing this version causes self-damage."
           },
           {
             "name": "Demon Breath",
@@ -1043,16 +1442,8 @@
             "input": "f+4"
           },
           {
-            "name": "Twin Pistons",
-            "input": "WS+1,2"
-          },
-          {
             "name": "Hammer Punch",
             "input": "d+1"
-          },
-          {
-            "name": "Lightning Hammer",
-            "input": "d+1+4"
           },
           {
             "name": "Demon's Boar",
@@ -1093,6 +1484,42 @@
           {
             "name": "Leaping Side Kick",
             "input": "f,f,f+3"
+          },
+          {
+            "name": "Twin Pistons",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Uppercut",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Demon Backhand",
+            "input": "f+2"
+          },
+          {
+            "name": "Split Axe Kick",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Demon Gut Kick",
+            "input": "f,n,d,d/f+3"
+          },
+          {
+            "name": "Demon Slice Kick",
+            "input": "f,n,d,D/F+3"
+          },
+          {
+            "name": "Hop Kick",
+            "input": "u+4"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+4,4"
+          },
+          {
+            "name": "Shadow Step",
+            "input": "b,b,n+3+4"
           }
         ],
         "combos": [
@@ -1111,6 +1538,15 @@
           {
             "name": "Lightning hammer into demon breath",
             "input": "d+1+4 > 1+2"
+          },
+          {
+            "name": "Counter-hit Split Axe Kick",
+            "input": "CH f,f+3 > f,n,d,d/f+2 > f,n,d,d/f+1",
+            "notes": "Requires the counter-hit stun."
+          },
+          {
+            "name": "Counter-hit Twin Pistons juggle",
+            "input": "CH f,f+3 > d/f+1,2 > f+1 > f+1,b+2,1"
           }
         ],
         "strings": [
@@ -1233,10 +1669,6 @@
             "input": "b+1+2"
           },
           {
-            "name": "Thunder Strike",
-            "input": "During Hypnotist 1+2"
-          },
-          {
             "name": "Cyanide",
             "input": "u/f+4"
           },
@@ -1271,6 +1703,130 @@
           {
             "name": "Flower Power",
             "input": "During Phoenix u/f+4,4"
+          },
+          {
+            "name": "Bayonet Mc Twist",
+            "input": "1,d+2"
+          },
+          {
+            "name": "Belly Chop",
+            "input": "d/f+1"
+          },
+          {
+            "name": "Single Fan",
+            "input": "u+1"
+          },
+          {
+            "name": "Double Fan",
+            "input": "u+1+2"
+          },
+          {
+            "name": "Sun Flower [tag]",
+            "input": "WS+2"
+          },
+          {
+            "name": "Sun Flower",
+            "input": "WS+2~F"
+          },
+          {
+            "name": "Shady Lotus",
+            "input": "FC D/F+2"
+          },
+          {
+            "name": "Lotus Twist",
+            "input": "FC d/f+2,1"
+          },
+          {
+            "name": "Punt Kick",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Raccoon Swing",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Fire Dance",
+            "input": "D+3,2,1,4"
+          },
+          {
+            "name": "Dive Roll",
+            "input": "f+3+4"
+          },
+          {
+            "name": "High Parry",
+            "input": "1+4"
+          },
+          {
+            "name": "Crouching Rain Dance Starter",
+            "input": "FC d/b+3+4"
+          },
+          {
+            "name": "Step Kick",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Toe Kick",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Sky Scraper Kick",
+            "input": "WS+4"
+          },
+          {
+            "name": "Flower Bed",
+            "input": "FC d/f+4"
+          },
+          {
+            "name": "Flower Garden",
+            "input": "FC d/f+4,4"
+          },
+          {
+            "name": "Reverse Slap",
+            "input": "RDS 2"
+          },
+          {
+            "name": "Pig Leg",
+            "input": "RDS f,f+3"
+          },
+          {
+            "name": "Back Circle Breaker",
+            "input": "RDS d+3"
+          },
+          {
+            "name": "Reverse Front Layout",
+            "input": "RDS f,f+3+4"
+          },
+          {
+            "name": "False Salute Taunt",
+            "input": "RDS 1+3+4"
+          },
+          {
+            "name": "Handfull",
+            "input": "AOP 1"
+          },
+          {
+            "name": "Handfull",
+            "input": "AOP 2"
+          },
+          {
+            "name": "Heavy Wave Crest",
+            "input": "AOP d+1+2"
+          },
+          {
+            "name": "Knee Stabber",
+            "input": "AOP 3"
+          },
+          {
+            "name": "Flower Bed",
+            "input": "AOP f+4"
+          },
+          {
+            "name": "Flower Garden",
+            "input": "AOP f+4,4"
+          },
+          {
+            "name": "Flower Power",
+            "input": "AOP u+4,4"
           }
         ],
         "combos": [
@@ -1285,6 +1841,33 @@
           {
             "name": "Storming Flower into Phoenix",
             "input": "d/b+1 > d+1+2"
+          },
+          {
+            "name": "Sun Flower juggle",
+            "input": "WS+2 > RDS 2 > RDS 2 > RDS 2,1 > f,f+1+2,1+2"
+          },
+          {
+            "name": "Phoenix launch to X Marks the Spot",
+            "input": "d/f+1 > RDS 2 > RDS 2,1 > f,f+1+2,1+2",
+            "launchers": [
+              "AOP u/f+3",
+              "AOP 1+2",
+              "AOP~1+2",
+              "RDS u/f+4"
+            ],
+            "notes": "Quick Wave Crest requires a standing opponent."
+          },
+          {
+            "name": "Heavy Wave Crest juggle",
+            "input": "AOP d+1+2 > f,f+3 > RDS 2 > RDS 2,1 > f,f+1+2,1+2"
+          },
+          {
+            "name": "Mistrust juggle",
+            "input": "RDS 4 > d/f+1 > RDS 2 > RDS 2,1 > f,f+1+2,1+2"
+          },
+          {
+            "name": "Counter-hit Dark and Stormy",
+            "input": "CH RDS 2,1,4 > d/f+1 > RDS 2 > RDS 2,1 > f,f+1+2,1+2"
           }
         ],
         "strings": [
@@ -1383,11 +1966,6 @@
             "input": "d/b+3"
           },
           {
-            "name": "Fruit Picker",
-            "input": "d/b+3+4",
-            "notes": "b,b to cancel"
-          },
-          {
             "name": "Firekick",
             "input": "u+3+4"
           },
@@ -1414,6 +1992,43 @@
           {
             "name": "Hot Plate Special",
             "input": "SS+3"
+          },
+          {
+            "name": "Crying Needle",
+            "input": "RLX 1+2"
+          },
+          {
+            "name": "Headlong Dive",
+            "input": "RLX f,f+1+2"
+          },
+          {
+            "name": "Rio Delight",
+            "input": "RLX 3,4"
+          },
+          {
+            "name": "Scoop Up Kick",
+            "input": "RLX 3~4"
+          },
+          {
+            "name": "Rising Feet Lunge",
+            "input": "RLX b,b+3+4"
+          },
+          {
+            "name": "Flare",
+            "input": "RLX 4~3"
+          },
+          {
+            "name": "Handstand to Relax",
+            "input": "HSP D/F",
+            "notes": "Hold down-forward to roll into Relax."
+          },
+          {
+            "name": "Handstand Scoot Kick",
+            "input": "HSP 3"
+          },
+          {
+            "name": "Handstand Hot Plate",
+            "input": "HSP b+3"
           }
         ],
         "combos": [
@@ -1428,6 +2043,30 @@
           {
             "name": "Thong Bikini into Hot Plate",
             "input": "d/b+3 > SS+3"
+          },
+          {
+            "name": "Freak Show, punch extension",
+            "input": "d/f+3+4 > f+1,2 > d/f+2"
+          },
+          {
+            "name": "Freak Show, handstand finish",
+            "input": "d/f+3+4 > f+1 > f+1 > d/f+3"
+          },
+          {
+            "name": "Handstand launcher",
+            "input": "HSP d+3+4 > HSP 4 > HSP d+4"
+          },
+          {
+            "name": "Counter-hit sidestep punch",
+            "input": "CH SS+2 > b+4,4,3+4"
+          },
+          {
+            "name": "Slippery Kick extension",
+            "input": "3~4,4,1+2"
+          },
+          {
+            "name": "Counter-hit kick",
+            "input": "CH 4 > d/f+3"
           }
         ],
         "strings": [
@@ -1538,11 +2177,6 @@
             "input": "d/b+3+4"
           },
           {
-            "name": "Power Charge",
-            "input": "d/b+1+2",
-            "notes": "u,u to cancel"
-          },
-          {
             "name": "Catapult Kick",
             "input": "u/f+3"
           },
@@ -1564,7 +2198,100 @@
           },
           {
             "name": "Evil Mist",
-            "input": "qcf,D/B+2+3"
+            "input": "hcf,D/B+2+3"
+          },
+          {
+            "name": "Killing Blade",
+            "input": "b+1"
+          },
+          {
+            "name": "Helping Hand",
+            "input": "d/b+1"
+          },
+          {
+            "name": "Snake Shot",
+            "input": "SS+1"
+          },
+          {
+            "name": "Low Jab - Rising Kick",
+            "input": "d+1,n+4"
+          },
+          {
+            "name": "Spiral Explosion",
+            "input": "SS+1+2"
+          },
+          {
+            "name": "Twin Jab - Low Kick",
+            "input": "2,1,4"
+          },
+          {
+            "name": "Jab - Jail Crucher Upper",
+            "input": "2,d+3,2"
+          },
+          {
+            "name": "Jab - Jail Crucher",
+            "input": "2,d+3,4"
+          },
+          {
+            "name": "Jab - Roundhouse",
+            "input": "2,4"
+          },
+          {
+            "name": "Double Slap",
+            "input": "b+2,2"
+          },
+          {
+            "name": "Backhand Body Blow",
+            "input": "d/b+2"
+          },
+          {
+            "name": "Quick Panther Claw",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Lift Shot",
+            "input": "SS+2"
+          },
+          {
+            "name": "Spike Combo",
+            "input": "3,3"
+          },
+          {
+            "name": "Assault - Blonde Bomb",
+            "input": "d/f+3,1,2,f+1+2"
+          },
+          {
+            "name": "Flash Kicks",
+            "input": "d/f+3,3,3"
+          },
+          {
+            "name": "Mid Kick - Roundhouse",
+            "input": "d/f+3,4"
+          },
+          {
+            "name": "Heel Slicer",
+            "input": "SS+4"
+          },
+          {
+            "name": "Wipe the Floor",
+            "input": "d,d/f+4"
+          },
+          {
+            "name": "Blonde Attack",
+            "input": "4,3"
+          },
+          {
+            "name": "Can Opener",
+            "input": "u/f+4,3,4"
+          },
+          {
+            "name": "Slicer - FCD",
+            "input": "d/b+4"
+          },
+          {
+            "name": "Slicer - Divine Cannon",
+            "input": "d/b+4,3",
+            "notes": "The second hit launches monster opponents without requiring counter hit."
           }
         ],
         "combos": [
@@ -1579,6 +2306,23 @@
           {
             "name": "Bad Habit into Catapult",
             "input": "f,f+3 > u/f+3"
+          },
+          {
+            "name": "Counter-hit Slicer juggle",
+            "input": "CH d/b+4,3 > d/b+1 > u/f+4 > d+4,1 > f+1+2",
+            "notes": "Normal-sized opponents; large bodies have a lower launch."
+          },
+          {
+            "name": "Divine Cannon follow-up",
+            "input": "d/b+3+4 > u/f+3 > d+1~n+4 > f+1+2"
+          },
+          {
+            "name": "Killing Blade to Blonde Bomb",
+            "input": "b+1 > d+4,1 > d/f+3,1,2,f+1+2"
+          },
+          {
+            "name": "Sidestep counter-hit juggle",
+            "input": "CH SS+2 > d/f+1,2 > d/f+3,1,2,f+1+2"
           }
         ],
         "strings": [
@@ -1682,12 +2426,9 @@
             "input": "f+3"
           },
           {
-            "name": "Gravity Blow",
-            "input": "f+1+4"
-          },
-          {
             "name": "Snake Edge",
-            "input": "d/f+3"
+            "input": "d/f+3",
+            "notes": "Launches only at clean-hit range; farther hits do not launch."
           },
           {
             "name": "Broad Axe",
@@ -1702,12 +2443,91 @@
             "input": "b+2,4"
           },
           {
-            "name": "Meteor Smash",
-            "input": "b+1+4"
-          },
-          {
             "name": "Mach Breaker",
             "input": "f,f+2"
+          },
+          {
+            "name": "Double Body Blow",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Headhunter",
+            "input": "SS+1"
+          },
+          {
+            "name": "Cheap Trick",
+            "input": "SS+1~2"
+          },
+          {
+            "name": "Side Step Elbow",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Punch Kick Cross",
+            "input": "1~4"
+          },
+          {
+            "name": "Short Upper",
+            "input": "WS+1+2"
+          },
+          {
+            "name": "Shell Shock",
+            "input": "SS+2"
+          },
+          {
+            "name": "Vulcan Punch",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Sway",
+            "input": "qcb"
+          },
+          {
+            "name": "Slash Kick",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Bruce Special",
+            "input": "3,2,1,4"
+          },
+          {
+            "name": "Quick Spin Kicks",
+            "input": "3,3"
+          },
+          {
+            "name": "Thin Low Kick",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Spin Kick",
+            "input": "WS+3+4"
+          },
+          {
+            "name": "Quick Knee",
+            "input": "b+4"
+          },
+          {
+            "name": "Running Blind",
+            "input": "f+4,3,4"
+          },
+          {
+            "name": "Orbital Flip Drop",
+            "input": "b,b+4"
+          },
+          {
+            "name": "Snake Upper",
+            "input": "WS+1",
+            "notes": "Also qcf+1."
+          },
+          {
+            "name": "Orbital Heel",
+            "input": "u/f+4",
+            "notes": "Also u+4."
+          },
+          {
+            "name": "Hammer Knee",
+            "input": "WS+3",
+            "notes": "Also qcf+3."
           }
         ],
         "combos": [
@@ -1811,10 +2631,6 @@
             "input": "f+[1~2]"
           },
           {
-            "name": "Heavy Uppercut",
-            "input": "f+1+4"
-          },
-          {
             "name": "Wind Roll",
             "input": "3+4"
           },
@@ -1825,6 +2641,54 @@
           {
             "name": "Ultimate Cannon",
             "input": "2+3,1"
+          },
+          {
+            "name": "Club Fist",
+            "input": "d/f+1"
+          },
+          {
+            "name": "Party Crasher",
+            "input": "f,f+1"
+          },
+          {
+            "name": "Gut Punch",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Earthquale Stomp",
+            "input": "u/f+3+4"
+          },
+          {
+            "name": "Razor Sweep",
+            "input": "d+4"
+          },
+          {
+            "name": "Spinning Razor Kicks",
+            "input": "4,4"
+          },
+          {
+            "name": "Skyscraper Kick",
+            "input": "WS+4"
+          },
+          {
+            "name": "Bow & Arrow",
+            "input": "FC d/f+4,3"
+          },
+          {
+            "name": "Shotgun",
+            "input": "d,d/f+1,2"
+          },
+          {
+            "name": "Party Crasher to Skyscraper Kick",
+            "input": "f,f+1,4"
+          },
+          {
+            "name": "Skyscraper Cannon",
+            "input": "d/f+2,1"
+          },
+          {
+            "name": "Club Fist to Flash Uppercut",
+            "input": "d/f+1,1"
           }
         ],
         "combos": [
@@ -1839,6 +2703,35 @@
           {
             "name": "Palm Explosion into Bow & Arrow",
             "input": "f+[1~2] > 1+4,3"
+          },
+          {
+            "name": "Launcher to Party Crasher",
+            "input": "f,f+1 > f,f+1 > f,f+1,4",
+            "launchers": [
+              "d/f+2,1",
+              "CH 1~2~1"
+            ]
+          },
+          {
+            "name": "Hop kick to Shotgun",
+            "input": "u/f+4 > f+2 > d,d/f+1,2 > f,f+1,4"
+          },
+          {
+            "name": "Hop kick, simple carry",
+            "input": "u/f+4 > f+2 > f+2 > f,f+1,4"
+          },
+          {
+            "name": "Razor sweep to Shotgun",
+            "input": "d+4,1 > 1 > d,d/f+1,2 > f,f+1,4"
+          },
+          {
+            "name": "Counter-hit kick",
+            "input": "CH 4 > d,d/f+1,2 > f,f+1,4"
+          },
+          {
+            "name": "Heavy uppercut, True Ogre",
+            "input": "f+1+4 > U/F,n,4 > d,d/f+1,2 > d,d/f+1,2",
+            "notes": "True Ogre only; jump forward, release, then press 4."
           }
         ],
         "strings": [
@@ -1931,24 +2824,36 @@
             "input": "f,f+1+2"
           },
           {
-            "name": "Deadly Claw",
-            "input": "b+1+2"
-          },
-          {
             "name": "Demon Uppercut",
             "input": "f,f+2"
           },
           {
-            "name": "Salmon Hunting",
-            "input": "b,f+2+3"
-          },
-          {
-            "name": "Fatal Wind",
-            "input": "b,b+2+3+4"
-          },
-          {
             "name": "Pancake Press",
             "input": "u/f+3+4"
+          },
+          {
+            "name": "Grizzly Upper - Grizzly Claw",
+            "input": "WS+1,2"
+          },
+          {
+            "name": "Grizzly Windmill",
+            "input": "FC d/f+1,2,1"
+          },
+          {
+            "name": "Bear Rush",
+            "input": "FC 1,1,1,2"
+          },
+          {
+            "name": "Claw Upper - Bear Knuckle",
+            "input": "WS+1+2,1+2"
+          },
+          {
+            "name": "Grizzly Scissors",
+            "input": "f+1+2"
+          },
+          {
+            "name": "Grizzly Claw",
+            "input": "b,d/b,d,D/F+2"
           }
         ],
         "combos": [
@@ -1959,6 +2864,10 @@
           {
             "name": "Deadly Claw into Sit punches",
             "input": "b+1+2 > 3+4 > 1,2,1,2"
+          },
+          {
+            "name": "Rising uppercut juggle",
+            "input": "WS+2 > f+2 > f+2 > f+1+2"
           }
         ],
         "strings": [],
@@ -2044,20 +2953,84 @@
             "input": "1+2,1+2"
           },
           {
-            "name": "Giant Foot Stomp",
-            "input": "3+4"
-          },
-          {
-            "name": "Dark Greeting",
-            "input": "f+4~1"
-          },
-          {
             "name": "Cut Saw",
             "input": "f+1+2"
           },
           {
             "name": "Megaton Punch",
             "input": "d/f+1+2"
+          },
+          {
+            "name": "Violent Uppercut",
+            "input": "WS+1"
+          },
+          {
+            "name": "Gigaton Punch",
+            "input": "hcf+1"
+          },
+          {
+            "name": "Megaton Uppercut",
+            "input": "hcf,D/F+1"
+          },
+          {
+            "name": "Windmill",
+            "input": "FC d/f+1,2,1"
+          },
+          {
+            "name": "Revolving Knuckles - Megaton Punch",
+            "input": "FC d/b+1,1,1,2"
+          },
+          {
+            "name": "Hammer Rush",
+            "input": "FC 1,1,1,2"
+          },
+          {
+            "name": "Low Punch - Megaton Punch",
+            "input": "FC 1,2"
+          },
+          {
+            "name": "Double Uppercut - Hammer Knuckle",
+            "input": "WS+1+2,1+2"
+          },
+          {
+            "name": "Bravo Knuckle",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Low Palm Lift",
+            "input": "FC 1+2"
+          },
+          {
+            "name": "Body Press",
+            "input": "d/f+1+3"
+          },
+          {
+            "name": "Megaton Punch",
+            "input": "b,d/b,d,D/F+2"
+          },
+          {
+            "name": "Low Ankle Swipe",
+            "input": "d/f+2+3"
+          },
+          {
+            "name": "Cossack Kicks",
+            "input": "D/B+3,4,3,4,3,4"
+          },
+          {
+            "name": "Digital Hans Headslide",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Hip Press",
+            "input": "u/f+3+4"
+          },
+          {
+            "name": "Sit Down",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Ganny Stomp",
+            "input": "d+4"
           }
         ],
         "combos": [
@@ -2068,6 +3041,16 @@
           {
             "name": "Cut Saw into Giant Foot Stomp",
             "input": "f+1+2 > 3+4"
+          },
+          {
+            "name": "Low sweep juggle",
+            "input": "FC d/f+1+2 > WS+4 > d/b+1",
+            "notes": "Large opponents only."
+          },
+          {
+            "name": "Side uppercut juggle",
+            "input": "WS+1 > 2 > f+1+2,1+2",
+            "notes": "Launch from the side; the 2 flips the opponent."
           }
         ],
         "strings": [
@@ -2160,12 +3143,9 @@
             "input": "1,2,f+1+2"
           },
           {
-            "name": "Blonde Bomb",
-            "input": "f+1+2"
-          },
-          {
-            "name": "Power Charge",
-            "input": "d/b+1+2"
+            "name": "Offensive Push",
+            "input": "f+1+2",
+            "notes": "Offensive Push: hitting a crouching opponent allows f,f+1+2 or f,f+2 afterward."
           },
           {
             "name": "Geyser Cannon",
@@ -2178,6 +3158,94 @@
           {
             "name": "Bad Habit",
             "input": "f,f+3"
+          },
+          {
+            "name": "Cat Thrust",
+            "input": "FC f+1"
+          },
+          {
+            "name": "Scarlet Bomb",
+            "input": "WS+1+2"
+          },
+          {
+            "name": "Delayed Scarlet Bomb",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Bloody Chaos",
+            "input": "SS+1+2"
+          },
+          {
+            "name": "Scarlet Windmill",
+            "input": "FC f+2"
+          },
+          {
+            "name": "Scarlet Sweep",
+            "input": "FC d/f+2"
+          },
+          {
+            "name": "Executioner",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Double Slaps",
+            "input": "b+2,n+2"
+          },
+          {
+            "name": "Double Slaps",
+            "input": "b+2,f+2"
+          },
+          {
+            "name": "Chaos Tail",
+            "input": "SS+2"
+          },
+          {
+            "name": "Assault",
+            "input": "d/f+3,1"
+          },
+          {
+            "name": "Creeping Snake",
+            "input": "d/f+3,2"
+          },
+          {
+            "name": "Spike Combo",
+            "input": "d/f+3,3,3"
+          },
+          {
+            "name": "Cross Cut Saw",
+            "input": "b+1,1,1",
+            "notes": "Female opponents can return the second slap with 2; continuing with the third slap counter-hits that response."
+          },
+          {
+            "name": "Scarlet Attack",
+            "input": "4,3"
+          },
+          {
+            "name": "Falling Heel",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Front Kick",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Rising Palm",
+            "input": "WS+2",
+            "notes": "Also qcf+2."
+          },
+          {
+            "name": "Shin Kick to Spin Punch",
+            "input": "d+4,1",
+            "notes": "Can sidestep after the punch with u or d."
+          },
+          {
+            "name": "Low Spin Kick to Upper",
+            "input": "d+3,2"
+          },
+          {
+            "name": "Can Opener",
+            "input": "u/f+4,3,4",
+            "notes": "Can sidestep after the final kick with u or d."
           }
         ],
         "combos": [
@@ -2188,6 +3256,40 @@
           {
             "name": "Geyser into Catapult",
             "input": "d/b+3+4 > u/f+3"
+          },
+          {
+            "name": "Cat Thrust to Scarlet Bomb",
+            "input": "FC 4,1 > d/f+1,2 > f,f+1+2",
+            "launchers": [
+              "FC f+1",
+              "d+1+2"
+            ]
+          },
+          {
+            "name": "Uppercut juggle",
+            "input": "d/f+2 > u/f+4 > d+4,1 > d/f+3,1,4",
+            "notes": "Standing, normal-sized opponents only; d/f+2 does not launch crouching or monster opponents."
+          },
+          {
+            "name": "Crouching sweep juggle",
+            "input": "FC d/f+2 > d+4,1 > d/f+3,1,4"
+          },
+          {
+            "name": "Counter-hit Rising Palm",
+            "input": "CH WS+2 > d/f+1,2 > d/f+3,1,4"
+          },
+          {
+            "name": "Low kick launcher",
+            "input": "d+3,2 > d/f+3,1 > d/f+3,1,4"
+          },
+          {
+            "name": "Hop kick juggle",
+            "input": "u/f+4 > d+4,1 > d/f+3,1,4"
+          },
+          {
+            "name": "Offensive Push follow-up",
+            "input": "f+1+2 > f,f+1+2",
+            "notes": "The push must hit a crouching opponent."
           }
         ],
         "strings": [
@@ -2268,18 +3370,6 @@
             "input": "f+1+4"
           },
           {
-            "name": "Bloody Scissors",
-            "input": "d/b+1+2"
-          },
-          {
-            "name": "Deadly Slice",
-            "input": "b+2"
-          },
-          {
-            "name": "Killing Blow",
-            "input": "b+2+3"
-          },
-          {
             "name": "Hunting Hawk",
             "input": "u/f+3,4,3"
           },
@@ -2292,8 +3382,100 @@
             "input": "f,f+2"
           },
           {
-            "name": "Dragon Power Punch",
-            "input": "b,b+1+2"
+            "name": "Double Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Double Face Buster",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Cat Thrust",
+            "input": "D,f+1"
+          },
+          {
+            "name": "Lunging Double Fist",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Demon Backhand Spin",
+            "input": "2,2"
+          },
+          {
+            "name": "Demon Gut Punch",
+            "input": "WS+2"
+          },
+          {
+            "name": "Upper",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Scarlett Windmill",
+            "input": "D,f+2"
+          },
+          {
+            "name": "Scarlet Sweep",
+            "input": "D,d/f+2"
+          },
+          {
+            "name": "Split Axe Kick",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Back Flip Kick",
+            "input": "u/b+3"
+          },
+          {
+            "name": "Snake Creep",
+            "input": "FC 3,3,d+3"
+          },
+          {
+            "name": "Snake Blade",
+            "input": "FC 3,3,n+3"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+3,3"
+          },
+          {
+            "name": "Exploder",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Delayed Dragon Slide",
+            "input": "f,f,n+3+4"
+          },
+          {
+            "name": "Spin Kick",
+            "input": "WS+3+4"
+          },
+          {
+            "name": "Blazing Kick",
+            "input": "d,d/b+4"
+          },
+          {
+            "name": "Laser Edge - Machine Gun Kick",
+            "input": "d+4,n+4"
+          },
+          {
+            "name": "Bazooka Kick",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Hammer Heel",
+            "input": "f,f,n+4"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+4,4"
+          },
+          {
+            "name": "Ancient Power",
+            "input": "b+1+2"
           }
         ],
         "combos": [
@@ -2304,6 +3486,16 @@
           {
             "name": "Power Punch into Double Knuckle",
             "input": "f+2 > u/f+1+2"
+          },
+          {
+            "name": "Serpent launch to flash punches",
+            "input": "f,f+2 > WS+4 > 1,1,2",
+            "notes": "Use an instant while-standing 4."
+          },
+          {
+            "name": "Serpent launch, large opponents",
+            "input": "f,f+2 > WS+4 > d+1 > FC f+2",
+            "notes": "Large opponents only; use an instant while-standing 4."
           }
         ],
         "strings": [],
@@ -2377,40 +3569,145 @@
             "input": "4~3"
           },
           {
-            "name": "Hell's Flame",
-            "input": "1+2"
-          },
-          {
             "name": "Power Punch",
             "input": "f+2"
-          },
-          {
-            "name": "Bloody Scissors",
-            "input": "d/b+1+2"
-          },
-          {
-            "name": "Deadly Slice",
-            "input": "b+2"
-          },
-          {
-            "name": "Killing Blow",
-            "input": "b+2+3"
-          },
-          {
-            "name": "Blazing Inferno",
-            "input": "d+1+2"
           },
           {
             "name": "Serpent's Venom",
             "input": "f,f+2"
           },
           {
-            "name": "Dragon Power Punch",
-            "input": "b,b+1+2"
-          },
-          {
             "name": "Infinite Kick Chain",
             "input": "WS+3,3,d/f+3,3"
+          },
+          {
+            "name": "Double Punch",
+            "input": "1,2"
+          },
+          {
+            "name": "Demon Slayer",
+            "input": "1,2,2"
+          },
+          {
+            "name": "Double Face Buster",
+            "input": "d/f+1,2"
+          },
+          {
+            "name": "Cat Thrust",
+            "input": "D,f+1"
+          },
+          {
+            "name": "Lunging Double Fist",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Buffalo Horn",
+            "input": "d/f+1+2"
+          },
+          {
+            "name": "Black Shoulder",
+            "input": "f+1+4"
+          },
+          {
+            "name": "Demon Backhand Spin",
+            "input": "2,2"
+          },
+          {
+            "name": "Demon Gut Punch",
+            "input": "WS+2"
+          },
+          {
+            "name": "Upper",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Scarlett Windmill",
+            "input": "D,f+2"
+          },
+          {
+            "name": "Scarlet Sweep",
+            "input": "D,d/f+2"
+          },
+          {
+            "name": "Split Axe Kick",
+            "input": "f,f+3"
+          },
+          {
+            "name": "Back Flip Kick",
+            "input": "u/b+3"
+          },
+          {
+            "name": "Hunting Hawk",
+            "input": "u/f+3,4,3"
+          },
+          {
+            "name": "Snake Creep",
+            "input": "FC 3,3,d+3"
+          },
+          {
+            "name": "Snake Blade",
+            "input": "FC 3,3,n+3"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+3,3"
+          },
+          {
+            "name": "Exploder",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Delayed Dragon Slide",
+            "input": "f,f,n+3+4"
+          },
+          {
+            "name": "Spin Kick",
+            "input": "WS+3+4"
+          },
+          {
+            "name": "Evil Wheel",
+            "input": "u+3+4"
+          },
+          {
+            "name": "Demon Tail",
+            "input": "d+3+4"
+          },
+          {
+            "name": "Tail Spin",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Axe Kick",
+            "input": "f+4"
+          },
+          {
+            "name": "Blazing Kick",
+            "input": "d,d/b+4"
+          },
+          {
+            "name": "Laser Edge - Machine Gun Kick",
+            "input": "d+4,n+4"
+          },
+          {
+            "name": "Bazooka Kick",
+            "input": "f,f+4"
+          },
+          {
+            "name": "Hammer Heel",
+            "input": "f,f,n+4"
+          },
+          {
+            "name": "Tsunami Kick",
+            "input": "WS+4,4"
+          },
+          {
+            "name": "Tail Spin to back turned",
+            "input": "d/f+3+4~D/F",
+            "notes": "Hold down-forward after Tail Spin to finish back turned."
+          },
+          {
+            "name": "Double Tail Spin",
+            "input": "d/f+3+4,3+4"
           }
         ],
         "combos": [
@@ -2421,6 +3718,11 @@
           {
             "name": "Serpent's Venom into Dragon Power",
             "input": "f,f+2 > b,b+1+2"
+          },
+          {
+            "name": "Buffalo Horn, large opponents",
+            "input": "d/f+1+2 > d/f+3+4~D/F > BT d+2 > FC f+2",
+            "notes": "Large opponents only; hold down-forward after Tail Spin to turn around."
           }
         ],
         "strings": [],
@@ -2522,16 +3824,74 @@
             "input": "u/f+2"
           },
           {
-            "name": "Escapism Bomb",
-            "input": "b+3+4,U"
-          },
-          {
             "name": "Gene Bank Combo",
             "input": "f,f+1,4,3,2,1"
           },
           {
             "name": "Leaping Sidekick",
             "input": "f,f+3"
+          },
+          {
+            "name": "Panik Jab",
+            "input": "f,f+1"
+          },
+          {
+            "name": "Panik Jam Combo",
+            "input": "f,f+1,4,3,3,3,2,1",
+            "notes": "The 4, first 3, and final 1 can be delayed."
+          },
+          {
+            "name": "Steel Dive",
+            "input": "f,f+1+2"
+          },
+          {
+            "name": "Jack Tamer",
+            "input": "f,f+2"
+          },
+          {
+            "name": "Elbow Rush",
+            "input": "f,f,n+2"
+          },
+          {
+            "name": "Gut Stun Punch",
+            "input": "SS+2"
+          },
+          {
+            "name": "Gut Stun to Spinning Old Fist",
+            "input": "SS+2,1"
+          },
+          {
+            "name": "Paniksmoka",
+            "input": "f,f,n+3"
+          },
+          {
+            "name": "Trip Slide",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Belly Flop",
+            "input": "f,f+3+4"
+          },
+          {
+            "name": "Slicer",
+            "input": "d+4"
+          },
+          {
+            "name": "Punch Parry",
+            "input": "1+2"
+          },
+          {
+            "name": "Low Parry",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Guard Breaker",
+            "input": "b+1+4"
+          },
+          {
+            "name": "Resting Doctor",
+            "input": "d+3+4",
+            "notes": "Press 3 or 4 to scoot; u, b or f to stand up."
           }
         ],
         "combos": [
@@ -2542,6 +3902,11 @@
           {
             "name": "Twin Pistons into Wisdom Fist",
             "input": "d/f+1,2 > u/f+2"
+          },
+          {
+            "name": "Counter-hit Jack Tamer",
+            "input": "CH f,f+2 > f,f,n,3",
+            "notes": "Kuma only."
           }
         ],
         "strings": [],
@@ -2572,6 +3937,11 @@
           {
             "name": "Gon Special",
             "input": "2+4"
+          },
+          {
+            "name": "Ground Throw",
+            "input": "D/B+1+3",
+            "notes": "Opponent grounded; stand extremely close. Alternate input: D/B+2+4."
           }
         ],
         "moves": [
@@ -2592,11 +3962,139 @@
             "input": "f,f+1+2"
           },
           {
-            "name": "Bite",
-            "input": "d/f+1+2"
+            "name": "Guard Break",
+            "input": "d/f+1+2",
+            "notes": "Zero-damage guard break."
+          },
+          {
+            "name": "Advancing Punches",
+            "input": "1,1,1,1,1"
+          },
+          {
+            "name": "Roger Punch",
+            "input": "b+1",
+            "notes": "On block, the guard break allows f+1+2 to start a juggle."
+          },
+          {
+            "name": "Rushing Dino Head",
+            "input": "F+1+2,1+2,1+2"
+          },
+          {
+            "name": "Saw Blade - Mini Gonfist",
+            "input": "f,f+1+2,1+2"
+          },
+          {
+            "name": "Dino Shoulder",
+            "input": "f,n,d,d/f+1+2"
+          },
+          {
+            "name": "Helicopter",
+            "input": "f+2+3"
+          },
+          {
+            "name": "Trip Sweeps",
+            "input": "f+3,3",
+            "notes": "The second sweep can launch, but the result depends on position."
+          },
+          {
+            "name": "Dino Headbutt",
+            "input": "3+4"
+          },
+          {
+            "name": "Mini Exploder",
+            "input": "f+3+4"
+          },
+          {
+            "name": "Frankensteiner",
+            "input": "d/f+3+4"
+          },
+          {
+            "name": "Low Shin Charge",
+            "input": "FC d/f+3+4"
+          },
+          {
+            "name": "Roll Back Roo",
+            "input": "FC d/b+3+4"
+          },
+          {
+            "name": "Tail Smack",
+            "input": "d+4"
+          },
+          {
+            "name": "Tail Spins - Dino Gonfist",
+            "input": "4,4,4,4,4,3+4"
+          },
+          {
+            "name": "Butt Flop",
+            "input": "u+4"
+          },
+          {
+            "name": "Sit",
+            "input": "d/b+3+4"
+          },
+          {
+            "name": "Dino Belly Slide",
+            "input": "WR f+1+2"
+          },
+          {
+            "name": "Headdive",
+            "input": "WR f+3+4"
+          },
+          {
+            "name": "Dino Gonfist",
+            "input": "u/f+1",
+            "notes": "Also works with u+1 or u/b+1."
+          },
+          {
+            "name": "Mini Upper",
+            "input": "WS+1",
+            "notes": "Also WS+2, or f,n,d,d/f+1 / +2."
+          },
+          {
+            "name": "Hop Kick",
+            "input": "u/f+3",
+            "notes": "Right-kick version: u/f+4."
+          },
+          {
+            "name": "Elbow Drop",
+            "input": "u/f+1+2"
           }
         ],
-        "combos": [],
+        "combos": [
+          {
+            "name": "Gonfist juggle",
+            "input": "u/f+1 > u+1"
+          },
+          {
+            "name": "Hop kick to Gonfist",
+            "input": "u/f+1",
+            "launchers": [
+              "u/f+3",
+              "u/f+4"
+            ]
+          },
+          {
+            "name": "Helicopter juggle",
+            "input": "u+3+4 > u/f+1 > u+1",
+            "notes": "All four hits of the helicopter must connect."
+          },
+          {
+            "name": "Roll Back Roo follow-up",
+            "input": "FC d/b+3+4 > BT 4"
+          },
+          {
+            "name": "Dino Shoulder juggle",
+            "input": "f,n,d,d/f+1+2 > u/f+1"
+          },
+          {
+            "name": "Rising uppercut follow-up",
+            "input": "u/f+4",
+            "launchers": [
+              "WS+1",
+              "WS+2"
+            ]
+          }
+        ],
         "strings": [],
         "unblockables": []
       },
@@ -2672,7 +4170,7 @@
           },
           {
             "name": "Ultimate Tackle",
-            "input": "FC+1+2"
+            "input": "FC 1+2"
           },
           {
             "name": "Ultimate Punch",
@@ -2711,14 +4209,6 @@
           {
             "name": "Exploder",
             "input": "3+4"
-          },
-          {
-            "name": "Moonsault Body Press",
-            "input": "1+4"
-          },
-          {
-            "name": "Jaguar Lariat",
-            "input": "f+1+2"
           },
           {
             "name": "Shoulder Tackle",
@@ -2765,8 +4255,66 @@
             "input": "SS+3+4"
           },
           {
-            "name": "Atomic Blaster",
-            "input": "Back to opponent 1+2"
+            "name": "Elbow Sting",
+            "input": "d/f+1"
+          },
+          {
+            "name": "Low Jab - Upper",
+            "input": "d+1,n+2"
+          },
+          {
+            "name": "Ankle Smash",
+            "input": "FC d/f+1"
+          },
+          {
+            "name": "Head Spinner",
+            "input": "1+2"
+          },
+          {
+            "name": "Lay Off Push",
+            "input": "f,f,n+1+2",
+            "notes": "On hit, follow with d/f+3."
+          },
+          {
+            "name": "Elbow Drop",
+            "input": "d+1+2"
+          },
+          {
+            "name": "Upper",
+            "input": "WS+2"
+          },
+          {
+            "name": "Side Swipe",
+            "input": "d/f+2"
+          },
+          {
+            "name": "Dynamite Upper",
+            "input": "FC d/f+2"
+          },
+          {
+            "name": "Counter Hit Stomach Smash",
+            "input": "f,f,n+2"
+          },
+          {
+            "name": "Diving Body Press",
+            "input": "f,f+2+3"
+          },
+          {
+            "name": "Rib Buster",
+            "input": "d/f+3"
+          },
+          {
+            "name": "Knee Buster",
+            "input": "d/f+4"
+          },
+          {
+            "name": "Disgrace Kick",
+            "input": "b+4",
+            "notes": "Close hits cause an untechable knockdown; close blocks cause a guard break. These properties do not apply at long range."
+          },
+          {
+            "name": "Head Spinner to Hand Knife",
+            "input": "1+2,1"
           }
         ],
         "combos": [
@@ -2781,6 +4329,30 @@
           {
             "name": "Stagger Kick into uppercut",
             "input": "d+3+4,4,4 > 2"
+          },
+          {
+            "name": "Ankle Smash, large opponents",
+            "input": "FC d/f+1 > WS+1 > 2 > 1+2,1",
+            "notes": "Large opponents only."
+          },
+          {
+            "name": "Hop kick to Hand Knife",
+            "input": "u/f+4 > 1 > 2,1 > 1+2,1",
+            "notes": "Reported against Nina; delay the final 1."
+          },
+          {
+            "name": "Hop kick to Ali Kick",
+            "input": "u/f+4 > f,n > 2,1 > d/f+2 > d+3+4,2"
+          },
+          {
+            "name": "Ankle Smash against True Ogre",
+            "input": "FC d/f+1 > WS+4 > d/f+2 > d+3+4,2",
+            "notes": "True Ogre only."
+          },
+          {
+            "name": "Crouch-walk Ankle Smash",
+            "input": "FC d/f+1~D/F > WS+4 > d+1 > FC d/f+3+4,2",
+            "notes": "Crouch-walk forward after the launcher before WS+4."
           }
         ],
         "strings": [
@@ -2937,12 +4509,88 @@
             "input": "d+3+4"
           },
           {
-            "name": "Phoenix Strike",
-            "input": "During Phoenix Illusion 4"
-          },
-          {
             "name": "Crane Dance",
             "input": "During Crane 3,4,2,3"
+          },
+          {
+            "name": "Razor Kick - Mid Stun Kick",
+            "input": "f,n+3,4"
+          },
+          {
+            "name": "Razor Kick - Trip Kick",
+            "input": "f,n+3,d+4"
+          },
+          {
+            "name": "Rush Combo - Razor Kick",
+            "input": "f,n+4,1,2,3"
+          },
+          {
+            "name": "Beating Kick",
+            "input": "f+4"
+          },
+          {
+            "name": "Tiger Strike",
+            "input": "(Tiger stance) 1"
+          },
+          {
+            "name": "Tiger Claw",
+            "input": "(Tiger stance) 2"
+          },
+          {
+            "name": "Tiger Kick",
+            "input": "(Tiger stance) 3"
+          },
+          {
+            "name": "Tiger Tail",
+            "input": "(Tiger stance) 4"
+          },
+          {
+            "name": "Panther Paw",
+            "input": "(Panther stance) 2"
+          },
+          {
+            "name": "Guard Melting Punches",
+            "input": "(Panther stance) 2,1,2,1"
+          },
+          {
+            "name": "Beating Kick",
+            "input": "(Panther stance) 4"
+          },
+          {
+            "name": "Crescent Trip",
+            "input": "(Dragon stance) 3,3"
+          },
+          {
+            "name": "Rush Combo - Razor Kick",
+            "input": "(Dragon stance) 4,1,2,3"
+          },
+          {
+            "name": "Rattle Snake",
+            "input": "(Snake stance) 3"
+          },
+          {
+            "name": "Snake Kick",
+            "input": "(Snake stance) 4"
+          },
+          {
+            "name": "Spinning Back Blow",
+            "input": "BT 1"
+          },
+          {
+            "name": "Spiral Upper",
+            "input": "BT 2"
+          },
+          {
+            "name": "Flip Flop",
+            "input": "BT 3+4,3+4,3+4"
+          },
+          {
+            "name": "Reverse Kick",
+            "input": "BT 4"
+          },
+          {
+            "name": "Reverse Hop Kick",
+            "input": "BT u/f+4"
           }
         ],
         "combos": [
@@ -2957,6 +4605,19 @@
           {
             "name": "Play Dead into Spring Kick",
             "input": "d+3+4 > 3+4"
+          },
+          {
+            "name": "Back-turned low juggle",
+            "input": "BT d+1 > BT 1 > BT d+1 > BT d+1 > BT f+3"
+          },
+          {
+            "name": "Hop kick to Razor Rush",
+            "input": "u/f+4 > d/f+1 > f,n,1 > f,n,1,2,1,2,4",
+            "notes": "Delay the final 4."
+          },
+          {
+            "name": "Hop kick to back-turned kick",
+            "input": "u/f+4 > 1+2~1 > BT 3"
           }
         ],
         "strings": [
