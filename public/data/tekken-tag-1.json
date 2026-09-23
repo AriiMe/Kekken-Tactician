@@ -19,7 +19,10 @@
     {
       "slug": "jun-kazama",
       "name": "Jun Kazama",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Jun_portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -204,9 +207,7 @@
               "hit": "+1",
               "counterHit": "+1"
             },
-            "alternateInputs": [
-              "SS+2"
-            ]
+            "alternateInputs": ["SS+2"]
           },
           {
             "name": "Sweeping Sparrow",
@@ -217,9 +218,7 @@
               "hit": "0",
               "counterHit": "+20"
             },
-            "alternateInputs": [
-              "~df+2"
-            ]
+            "alternateInputs": ["~df+2"]
           },
           {
             "name": "Sparrow Pirouette",
@@ -252,9 +251,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC b+3"
-            ]
+            "alternateInputs": ["FC b+3"]
           },
           {
             "name": "Spinning Roudhouse",
@@ -275,9 +272,7 @@
               "hit": "-1",
               "counterHit": "-1"
             },
-            "alternateInputs": [
-              "3~4"
-            ]
+            "alternateInputs": ["3~4"]
           },
           {
             "name": "Crescent Kick",
@@ -328,16 +323,12 @@
               "hit": "+3 +3",
               "counterHit": "+3 +3"
             },
-            "alternateInputs": [
-              "WS 3+4,3+4"
-            ]
+            "alternateInputs": ["WS 3+4,3+4"]
           },
           {
             "name": "High & Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Evasive Backflip",
@@ -362,10 +353,7 @@
           {
             "name": "Demon Slayer Cancel",
             "input": "f+2,d",
-            "alternateInputs": [
-              "f+2,d/f",
-              "f+2,d/b"
-            ]
+            "alternateInputs": ["f+2,d/f", "f+2,d/b"]
           },
           {
             "name": "Launcher",
@@ -382,30 +370,22 @@
           {
             "name": "Spinning Heel Drop Cancel",
             "input": "f+3,b",
-            "alternateInputs": [
-              "f+3,d"
-            ]
+            "alternateInputs": ["f+3,d"]
           },
           {
             "name": "Swallow Mallet to Double Sweep",
             "input": "b+2,4,4",
-            "alternateInputs": [
-              "SS+2,4,4"
-            ]
+            "alternateInputs": ["SS+2,4,4"]
           },
           {
             "name": "Swallow Mallet to Lunging Mist Thrust Double Lift Kick",
             "input": "b+2,1,4",
-            "alternateInputs": [
-              "SS+2,1,4"
-            ]
+            "alternateInputs": ["SS+2,1,4"]
           },
           {
             "name": "Swallow Mallet to Lunging Mist Thrust Toe Kick",
             "input": "b+2,1,3",
-            "alternateInputs": [
-              "SS+2,1,3"
-            ]
+            "alternateInputs": ["SS+2,1,3"]
           },
           {
             "name": "Sweeps",
@@ -449,25 +429,17 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+3+4",
-              "1+2"
-            ],
+            "launchers": ["d+3+4", "1+2"],
             "input": "b+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+3+4",
-              "1+2"
-            ],
+            "launchers": ["d+3+4", "1+2"],
             "input": "d+1,cc,1,f+2"
           },
           {
             "name": "White Heron follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "1+4,2,4",
             "notes": "Wait until the airborne opponent drops close to the ground before starting White Heron."
           }
@@ -476,11 +448,7 @@
           {
             "name": "Cherry Blossom tag throw",
             "input": "b+1+2,5",
-            "partners": [
-              "Jin Kazama",
-              "Kazuya Mishima",
-              "Heihachi Mishima"
-            ],
+            "partners": ["Jin Kazama", "Kazuya Mishima", "Heihachi Mishima"],
             "notes": "Tag after the throw connects."
           }
         ]
@@ -490,7 +458,10 @@
     {
       "slug": "bruce-irvin",
       "name": "Bruce Irvin",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Bruce_portrait.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -678,9 +649,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Cyclone Edge",
@@ -909,80 +878,52 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["d/f+2", "u/f+4", "u/f,n+4"],
             "input": "1,1,1,1,2,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["d/f+2", "u/f+4", "u/f,n+4"],
             "input": "1,1,3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+1",
-              "CH (b+3),4"
-            ],
+            "launchers": ["CH b+1", "CH (b+3),4"],
             "input": "1,1,2,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+1",
-              "CH (b+3),4"
-            ],
+            "launchers": ["CH b+1", "CH (b+3),4"],
             "input": "1,2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+1"
-            ],
+            "launchers": ["CH SS+1"],
             "input": "d/f+3,b+4,3,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+1"
-            ],
+            "launchers": ["CH SS+1"],
             "input": "d/f+3,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH (b+3),4"
-            ],
+            "launchers": ["CH (b+3),4"],
             "input": "1,b+3,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH (b+3),4"
-            ],
+            "launchers": ["CH (b+3),4"],
             "input": "1,b,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3,2,1",
-              "CH WS 2"
-            ],
+            "launchers": ["3,2,1", "CH WS 2"],
             "input": "1,2,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3,2,1",
-              "CH WS 2"
-            ],
+            "launchers": ["3,2,1", "CH WS 2"],
             "input": "1,b+4,3,4"
           }
         ],
@@ -1003,7 +944,10 @@
     {
       "slug": "bryan-fury",
       "name": "Bryan Fury",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/BryanPortraitTT.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -1082,11 +1026,7 @@
               "hit": "x +7",
               "counterHit": "x KD"
             },
-            "alternateInputs": [
-              "d+1+2",
-              "n+1+2",
-              "SS+1+2"
-            ]
+            "alternateInputs": ["d+1+2", "n+1+2", "SS+1+2"]
           },
           {
             "name": "Side Step Elbow",
@@ -1192,9 +1132,7 @@
               "hit": "+5",
               "counterHit": "+5"
             },
-            "alternateInputs": [
-              "d/b+2"
-            ]
+            "alternateInputs": ["d/b+2"]
           },
           {
             "name": "Vulcan Punch",
@@ -1221,9 +1159,7 @@
             "name": "Doom Knuckles - Side Step",
             "input": "b+2,1~u",
             "notes": "The follow-up can be delayed.",
-            "alternateInputs": [
-              "b+2,1~d"
-            ]
+            "alternateInputs": ["b+2,1~d"]
           },
           {
             "name": "Doom Knuckles - Wolf Bite",
@@ -1265,9 +1201,7 @@
               "hit": "+3",
               "counterHit": "+1"
             },
-            "alternateInputs": [
-              "qcf+2"
-            ]
+            "alternateInputs": ["qcf+2"]
           },
           {
             "name": "Slash Kick",
@@ -1318,9 +1252,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+3"
-            ]
+            "alternateInputs": ["u/f+3"]
           },
           {
             "name": "Leaping Slash Kick",
@@ -1331,9 +1263,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Snake Edge",
@@ -1353,9 +1283,7 @@
               "hit": "+4",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "qcf+3"
-            ]
+            "alternateInputs": ["qcf+3"]
           },
           {
             "name": "Front Kick",
@@ -1400,9 +1328,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+4"
-            ]
+            "alternateInputs": ["u/f+4"]
           },
           {
             "name": "Power Axe",
@@ -1450,11 +1376,7 @@
           {
             "name": "Low Parry",
             "input": "d/b+1+3",
-            "alternateInputs": [
-              "d/b+2+4",
-              "d+1+3",
-              "d+2+4"
-            ]
+            "alternateInputs": ["d/b+2+4", "d+1+3", "d+2+4"]
           },
           {
             "name": "Taunt",
@@ -1477,44 +1399,32 @@
           {
             "name": "Cremation Fakeout Punch Mist Step",
             "input": "1~4,2~f+1,u",
-            "alternateInputs": [
-              "1~4,2~f+1,d"
-            ]
+            "alternateInputs": ["1~4,2~f+1,d"]
           },
           {
             "name": "Cremation Fakeout Punch Mist Step Wolf's Tail",
             "input": "1~4,2~f+1,u,4",
-            "alternateInputs": [
-              "1~4,2~f+1,d,4"
-            ]
+            "alternateInputs": ["1~4,2~f+1,d,4"]
           },
           {
             "name": "Destructive Back Knuckle Mist Step Fakeout",
             "input": "1~4,2,1,u",
-            "alternateInputs": [
-              "1~4,2,1,d"
-            ]
+            "alternateInputs": ["1~4,2,1,d"]
           },
           {
             "name": "Destructive Back Knuckle Mist Step Wolf's Tail",
             "input": "1~4,2,1,u,4",
-            "alternateInputs": [
-              "1~4,2,1,d,4"
-            ]
+            "alternateInputs": ["1~4,2,1,d,4"]
           },
           {
             "name": "Double Back Knuckle Mist Step Fakeout",
             "input": "b+2,1,u",
-            "alternateInputs": [
-              "b+2,1,d"
-            ]
+            "alternateInputs": ["b+2,1,d"]
           },
           {
             "name": "Double Back Knuckle Mist Step Wolf's Tail",
             "input": "b+2,1,u,4",
-            "alternateInputs": [
-              "b+2,1,d,4"
-            ]
+            "alternateInputs": ["b+2,1,d,4"]
           },
           {
             "name": "Fisherman's Slam",
@@ -1555,16 +1465,12 @@
           {
             "name": "Wolf Bite Fakeout Punch Mist Step",
             "input": "b+2~f+1,u",
-            "alternateInputs": [
-              "b+2~f+1,d"
-            ]
+            "alternateInputs": ["b+2~f+1,d"]
           },
           {
             "name": "Wolf Bite Fakeout Punch Wolf's Tail",
             "input": "b+2~f+1,u,4",
-            "alternateInputs": [
-              "b+2~f+1,d,4"
-            ]
+            "alternateInputs": ["b+2~f+1,d,4"]
           }
         ],
         "combos": [
@@ -1612,62 +1518,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["u/f+4", "u/f,n+4"],
             "input": "1,1,1,1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["u/f+4", "u/f,n+4"],
             "input": "1,1,1,WS 3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "qcb,n+2"
-            ],
+            "launchers": ["qcb,n+2"],
             "input": "1,1,2,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "qcb,n+2"
-            ],
+            "launchers": ["qcb,n+2"],
             "input": "1,d+2,1,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2,b+2",
-              "qcf+2,b+2"
-            ],
+            "launchers": ["WS 2,b+2", "qcf+2,b+2"],
             "input": "1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2,b+2",
-              "qcf+2,b+2"
-            ],
+            "launchers": ["WS 2,b+2", "qcf+2,b+2"],
             "input": "1,4,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+3"
-            ],
+            "launchers": ["d/f+3"],
             "input": "cc,1+3+4,f,1+3+4,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+3"
-            ],
+            "launchers": ["d/f+3"],
             "input": "cc,1+3+4,u/f+3,1,4"
           }
         ],
@@ -1695,18 +1581,14 @@
           {
             "name": "Tag juggle",
             "input": "b+1~5 > d/f+3,1",
-            "partners": [
-              "Bruce Irvin"
-            ],
+            "partners": ["Bruce Irvin"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 49
           },
           {
             "name": "Tag juggle",
             "input": "b+1~5 > b+4,3,4",
-            "partners": [
-              "Bruce Irvin"
-            ],
+            "partners": ["Bruce Irvin"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 57
           }
@@ -1725,7 +1607,10 @@
     {
       "slug": "kunimitsu",
       "name": "Kunimitsu",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/Kunitttrender.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -1830,9 +1715,7 @@
               "hit": "+17",
               "counterHit": "+17"
             },
-            "alternateInputs": [
-              "BT 2"
-            ]
+            "alternateInputs": ["BT 2"]
           },
           {
             "name": "Step In Upper",
@@ -1945,9 +1828,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "d+3+4"
-            ]
+            "alternateInputs": ["d+3+4"]
           },
           {
             "name": "Kunai Dragon Tail",
@@ -1992,10 +1873,7 @@
           {
             "name": "Avoiding the Puddle",
             "input": "u/b+4",
-            "alternateInputs": [
-              "u+4",
-              "u/f+4"
-            ]
+            "alternateInputs": ["u+4", "u/f+4"]
           },
           {
             "name": "Hop Spin",
@@ -2016,10 +1894,7 @@
           {
             "name": "Jumping Oni Kick",
             "input": "u/f+3",
-            "alternateInputs": [
-              "u+3",
-              "u/b+3"
-            ]
+            "alternateInputs": ["u+3", "u/b+3"]
           },
           {
             "name": "Running Fubuki",
@@ -2034,76 +1909,52 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "f,f+2"
-            ],
+            "launchers": ["d/f+2", "f,f+2"],
             "input": "1,1,1,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "f,f+2"
-            ],
+            "launchers": ["d/f+2", "f,f+2"],
             "input": "1,1,1,1,d/b+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+3"
-            ],
+            "launchers": ["FC d/f+3"],
             "input": "d+1,cc,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+3"
-            ],
+            "launchers": ["FC d/f+3"],
             "input": "d+1,d+1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "BT 3"
-            ],
+            "launchers": ["BT 3"],
             "input": "4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "BT 3"
-            ],
+            "launchers": ["BT 3"],
             "input": "d+1,cc,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+2",
-              "BT 2"
-            ],
+            "launchers": ["f+2", "BT 2"],
             "input": "d/f+2,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+2",
-              "BT 2"
-            ],
+            "launchers": ["f+2", "BT 2"],
             "input": "d/f+2,1,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u+1+2"
-            ],
+            "launchers": ["u+1+2"],
             "input": "f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u+1+2"
-            ],
+            "launchers": ["u+1+2"],
             "input": "FC d/f+3"
           }
         ],
@@ -2151,7 +2002,10 @@
     {
       "slug": "yoshimitsu",
       "name": "Yoshimitsu",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/Yoshimitsu_29.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -2459,10 +2313,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u+4",
-              "u/b+4"
-            ]
+            "alternateInputs": ["u+4", "u/b+4"]
           },
           {
             "name": "Fake Suicide",
@@ -2485,11 +2336,7 @@
           {
             "name": "Low Parry",
             "input": "d+1+3",
-            "alternateInputs": [
-              "d+2+4",
-              "d/b+1+3",
-              "d/b+2+4"
-            ]
+            "alternateInputs": ["d+2+4", "d/b+1+3", "d/b+2+4"]
           },
           {
             "name": "Evasive Side Spin",
@@ -2498,19 +2345,12 @@
           {
             "name": "Bad Stomach Cancel",
             "input": "~b+1+2,u",
-            "alternateInputs": [
-              "~b+1+2,d",
-              "~b+1+2,f"
-            ]
+            "alternateInputs": ["~b+1+2,d", "~b+1+2,f"]
           },
           {
             "name": "Confused Suicide",
             "input": "f,f+1+4,u",
-            "alternateInputs": [
-              "f,f+1+4,d",
-              "f,f+1+4,f",
-              "f,f+1+4,b"
-            ]
+            "alternateInputs": ["f,f+1+4,d", "f,f+1+4,f", "f,f+1+4,b"]
           },
           {
             "name": "Crouching to Indian Stance",
@@ -2519,18 +2359,12 @@
           {
             "name": "Indian Stance Cancel",
             "input": "d+3+4,u",
-            "alternateInputs": [
-              "d+3+4,d",
-              "d+3+4,f",
-              "d+3+4,b"
-            ]
+            "alternateInputs": ["d+3+4,d", "d+3+4,f", "d+3+4,b"]
           },
           {
             "name": "Indian Stance Healing Cancel",
             "input": "IND u",
-            "alternateInputs": [
-              "IND d"
-            ]
+            "alternateInputs": ["IND d"]
           },
           {
             "name": "Indian Stance Multiple Stone Fists",
@@ -2539,17 +2373,12 @@
           {
             "name": "Jumping Flea",
             "input": "FLE u/f",
-            "alternateInputs": [
-              "FLE u/b"
-            ]
+            "alternateInputs": ["FLE u/b"]
           },
           {
             "name": "Jumping Oni Kick",
             "input": "u/f+3",
-            "alternateInputs": [
-              "u+3",
-              "u/b+3"
-            ]
+            "alternateInputs": ["u+3", "u/b+3"]
           },
           {
             "name": "Meditation Cancel",
@@ -2558,9 +2387,7 @@
           {
             "name": "Meditation Healing",
             "input": "MED d",
-            "alternateInputs": [
-              "MED u"
-            ]
+            "alternateInputs": ["MED u"]
           },
           {
             "name": "Meditation High Punch",
@@ -2569,23 +2396,17 @@
           {
             "name": "Meditation Low Kick",
             "input": "MED d/b+3",
-            "alternateInputs": [
-              "MED d/b+4"
-            ]
+            "alternateInputs": ["MED d/b+4"]
           },
           {
             "name": "Meditation Manji Backfist 2",
             "input": "MED f+2",
-            "alternateInputs": [
-              "MED b+2"
-            ]
+            "alternateInputs": ["MED b+2"]
           },
           {
             "name": "Meditation Sidekick",
             "input": "MED b+3",
-            "alternateInputs": [
-              "MED b+4"
-            ]
+            "alternateInputs": ["MED b+4"]
           },
           {
             "name": "Meditation Soul Siphon",
@@ -2602,9 +2423,7 @@
           {
             "name": "Reverse Indian Stance Vacuum Dance",
             "input": "BT IND f",
-            "alternateInputs": [
-              "BT IND b"
-            ]
+            "alternateInputs": ["BT IND b"]
           },
           {
             "name": "Reverse Stone Fists",
@@ -2641,9 +2460,7 @@
           {
             "name": "Tackle Sword Stab",
             "input": "(During tackle) 1",
-            "alternateInputs": [
-              "(During tackle) 2"
-            ]
+            "alternateInputs": ["(During tackle) 2"]
           },
           {
             "name": "Yoga Stillness",
@@ -2673,133 +2490,87 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "CH SS+1",
-              "CH 1+2,1+2",
-              "CH u+1+2,1+2"
-            ],
+            "launchers": ["d/f+2", "CH SS+1", "CH 1+2,1+2", "CH u+1+2,1+2"],
             "input": "1,1,1,d+1,FC d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+1",
-              "CH 1+2,1+2",
-              "CH u+1+2,1+2"
-            ],
+            "launchers": ["CH SS+1", "CH 1+2,1+2", "CH u+1+2,1+2"],
             "input": "1,1,b+1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+1",
-              "CH 1+2,1+2",
-              "CH u+1+2,1+2"
-            ],
+            "launchers": ["CH SS+1", "CH 1+2,1+2", "CH u+1+2,1+2"],
             "input": "1,1,b+1,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+4"
-            ],
+            "launchers": ["CH SS+4"],
             "input": "b+1+4,d+1,FC d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+4",
-              "b+1+4"
-            ],
+            "launchers": ["CH SS+4", "b+1+4"],
             "input": "d+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 1+2,1+2",
-              "CH u+1+2,1+2"
-            ],
+            "launchers": ["CH 1+2,1+2", "CH u+1+2,1+2"],
             "input": "1,1,b+1,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 1+2,1+2",
-              "CH u+1+2,1+2"
-            ],
+            "launchers": ["CH 1+2,1+2", "CH u+1+2,1+2"],
             "input": "1,4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+3",
-              "b+1+4"
-            ],
+            "launchers": ["FC d/f+3", "b+1+4"],
             "input": "d+1,b+1+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+3",
-              "b+1+4"
-            ],
+            "launchers": ["FC d/f+3", "b+1+4"],
             "input": "d+1,cc,1,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+2"
-            ],
+            "launchers": ["SS+2"],
             "input": "1,1,1,1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+2"
-            ],
+            "launchers": ["SS+2"],
             "input": "1,1,1,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1+4"
-            ],
+            "launchers": ["b+1+4"],
             "input": "d+1,cc,1,1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1+4"
-            ],
+            "launchers": ["b+1+4"],
             "input": "d+1,cc,1,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+2"
-            ],
+            "launchers": ["f+2"],
             "input": "d/f+2,1,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+2"
-            ],
+            "launchers": ["f+2"],
             "input": "d/f+2,1,1,d+1,FC d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "4~3"
-            ],
+            "launchers": ["4~3"],
             "input": "4,4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "4~3"
-            ],
+            "launchers": ["4~3"],
             "input": "b+1+2~1,f,f+4"
           }
         ],
@@ -2821,10 +2592,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u+1+2",
-              "SS+1+2"
-            ]
+            "alternateInputs": ["u+1+2", "SS+1+2"]
           },
           {
             "name": "Death Pose",
@@ -2915,18 +2683,14 @@
           {
             "name": "Tag juggle",
             "input": "IND 4,5 > b+1,1,1,1,1,1",
-            "partners": [
-              "Kunimitsu"
-            ],
+            "partners": ["Kunimitsu"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 53
           },
           {
             "name": "Tag juggle",
             "input": "4~3,5 > b+1,1 > b+1,1,1,1,1,1",
-            "partners": [
-              "Kunimitsu"
-            ],
+            "partners": ["Kunimitsu"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 63
           }
@@ -2937,7 +2701,10 @@
     {
       "slug": "true-ogre",
       "name": "True Ogre",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_True_Ogre.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -3370,57 +3137,37 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "CH d/f+2",
-              "u/b+3,2",
-              "CH d,d/b+4"
-            ],
+            "launchers": ["u/f+4", "CH d/f+2", "u/b+3,2", "CH d,d/b+4"],
             "input": "1,1,1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "CH d/f+2",
-              "u/b+3,2",
-              "CH d,d/b+4"
-            ],
+            "launchers": ["u/f+4", "CH d/f+2", "u/b+3,2", "CH d,d/b+4"],
             "input": "1,1,2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~d,~f+2"
-            ],
+            "launchers": ["CH~d,~f+2"],
             "input": "f,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~d,~f+2"
-            ],
+            "launchers": ["CH~d,~f+2"],
             "input": "FC 3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+2"
-            ],
+            "launchers": ["f,f+2"],
             "input": "d+1,WS 2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+2"
-            ],
+            "launchers": ["f,f+2"],
             "input": "d+1,WS 3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+1+2"
-            ],
+            "launchers": ["d+1+2"],
             "input": "b,b+1+2"
           }
         ],
@@ -3460,9 +3207,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+1+2~d"
-            ]
+            "alternateInputs": ["u/f+1+2~d"]
           },
           {
             "name": "Jump In Burning Knuckle Bomb",
@@ -3472,9 +3217,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f,n+1+2~d"
-            ]
+            "alternateInputs": ["u/f,n+1+2~d"]
           },
           {
             "name": "Indigo Punch",
@@ -3528,7 +3271,10 @@
     {
       "slug": "ogre",
       "name": "Ogre",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Ogre.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -3888,51 +3634,32 @@
         "combos": [
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/b+3,2",
-              "CH d/f+2",
-              "CH d,d/b+4"
-            ],
+            "launchers": ["u/f+4", "u/b+3,2", "CH d/f+2", "CH d,d/b+4"],
             "input": "1,1,1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/b+3,2",
-              "CH d/f+2",
-              "CH d,d/b+4"
-            ],
+            "launchers": ["u/f+4", "u/b+3,2", "CH d/f+2", "CH d,d/b+4"],
             "input": "1,1,2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~d,~f+2",
-              "f,f+2"
-            ],
+            "launchers": ["CH~d,~f+2", "f,f+2"],
             "input": "f,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~d,~f+2"
-            ],
+            "launchers": ["CH~d,~f+2"],
             "input": "FC 3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+2"
-            ],
+            "launchers": ["f,f+2"],
             "input": "d+1,WS 3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+2"
-            ],
+            "launchers": ["f,f+2"],
             "input": "FC 3,3,n+3"
           }
         ],
@@ -3954,9 +3681,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+1+2~d"
-            ]
+            "alternateInputs": ["u/f+1+2~d"]
           },
           {
             "name": "Jump In Burning Knuckle Bomb",
@@ -3966,9 +3691,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f,n+1+2~d"
-            ]
+            "alternateInputs": ["u/f,n+1+2~d"]
           },
           {
             "name": "Indigo Punch",
@@ -4022,7 +3745,10 @@
     {
       "slug": "devil",
       "name": "Devil",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Devil.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -4168,9 +3894,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Axe Kick",
@@ -4191,9 +3915,7 @@
               "hit": "+8 -4",
               "counterHit": "+8 -4"
             },
-            "alternateInputs": [
-              "f,n,d,d/f,f+4,4"
-            ]
+            "alternateInputs": ["f,n,d,d/f,f+4,4"]
           },
           {
             "name": "Hell Sweeps",
@@ -4248,63 +3970,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2",
-              "WS 1,2",
-              "1+2"
-            ],
+            "launchers": ["f,n,d,d/f+2", "WS 1,2", "1+2"],
             "input": "1,1,1,1,f,n,d,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2",
-              "WS 1,2",
-              "CH f,n,d,d/f+2",
-              "1+2"
-            ],
+            "launchers": ["f,n,d,d/f+2", "WS 1,2", "CH f,n,d,d/f+2", "1+2"],
             "input": "1,1,1,1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,d/f+2"
-            ],
+            "launchers": ["CH f,n,d,d/f+2"],
             "input": "1,1,1,f,n,d,d/f+2,4~3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,d/f+2"
-            ],
+            "launchers": ["CH f,n,d,d/f+2"],
             "input": "1,1,1,2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,d/f+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,d/f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2"
-            ],
+            "launchers": ["1+2"],
             "input": "1,1,1,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2"
-            ],
+            "launchers": ["1+2"],
             "input": "1,1,1,d/f+4"
           },
           {
@@ -4369,7 +4070,10 @@
     {
       "slug": "kazuya-mishima",
       "name": "Kazuya Mishima",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Kaz.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -4399,10 +4103,7 @@
           {
             "name": "Ultimate Tackle",
             "input": "FC 1+2",
-            "alternateInputs": [
-              "d+1+2",
-              "d/b+1+2"
-            ]
+            "alternateInputs": ["d+1+2", "d/b+1+2"]
           }
         ],
         "moves": [
@@ -4554,9 +4255,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Axe Kick",
@@ -4618,9 +4317,7 @@
               "hit": "KD KD KD KD",
               "counterHit": "KD KD KD KD"
             },
-            "alternateInputs": [
-              "u/f+4,4,4,4"
-            ]
+            "alternateInputs": ["u/f+4,4,4,4"]
           },
           {
             "name": "Demon Scissor",
@@ -4630,9 +4327,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "4~3"
-            ]
+            "alternateInputs": ["4~3"]
           },
           {
             "name": "Stature Kick",
@@ -4695,69 +4390,47 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2",
-              "u/f,n+4",
-              "WS 1,2"
-            ],
+            "launchers": ["f,n,d,d/f+2", "u/f,n+4", "WS 1,2"],
             "input": "1,1,1,1,f,n,d,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2",
-              "u/f,n+4",
-              "WS 1,2"
-            ],
+            "launchers": ["f,n,d,d/f+2", "u/f,n+4", "WS 1,2"],
             "input": "1,1,1,1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,d/f+2"
-            ],
+            "launchers": ["CH f,n,d,d/f+2"],
             "input": "1,1,1,1,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,d/f+2"
-            ],
+            "launchers": ["CH f,n,d,d/f+2"],
             "input": "1,1,1,1,d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH d/f+2"
-            ],
+            "launchers": ["CH d/f+2"],
             "input": "d+1,cc,1,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,d/f+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,d/f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "4~3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "d/f+4,4"
           }
         ],
@@ -4785,9 +4458,7 @@
           {
             "name": "Stone Head tag throw",
             "input": "f,f+1+2,5",
-            "partners": [
-              "Jun Kazama"
-            ],
+            "partners": ["Jun Kazama"],
             "notes": "Tag after the throw connects."
           }
         ],
@@ -4814,7 +4485,10 @@
     {
       "slug": "heihachi-mishima",
       "name": "Heihachi Mishima",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Hei.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -5062,9 +4736,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Demon Gut Kick",
@@ -5120,10 +4792,7 @@
               "hit": "+6 -4",
               "counterHit": "+6 -4"
             },
-            "alternateInputs": [
-              "f,n,d,d/f,f+4,4",
-              "WS 4,4"
-            ]
+            "alternateInputs": ["f,n,d,d/f,f+4,4", "WS 4,4"]
           },
           {
             "name": "Hell Sweep",
@@ -5153,9 +4822,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "4~3"
-            ]
+            "alternateInputs": ["4~3"]
           },
           {
             "name": "Geta Stomp",
@@ -5208,9 +4875,7 @@
           {
             "name": "Fake Executioner",
             "input": "1,2,2,1,u",
-            "alternateInputs": [
-              "1,2,2,1,d"
-            ]
+            "alternateInputs": ["1,2,2,1,d"]
           },
           {
             "name": "Mist Step",
@@ -5263,98 +4928,62 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+1,2",
-              "f,n,d,d/f+2"
-            ],
+            "launchers": ["d/f+1,2", "f,n,d,d/f+2"],
             "input": "1+2,d+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+1,2",
-              "f,n,d,d/f+2",
-              "CH WS 2",
-              "CH d/f+2"
-            ],
+            "launchers": ["d/f+1,2", "f,n,d,d/f+2", "CH WS 2", "CH d/f+2"],
             "input": "1,1,1,1,f,n,d,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 4"
-            ],
+            "launchers": ["CH 4"],
             "input": "4~3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 4"
-            ],
+            "launchers": ["CH 4"],
             "input": "d/f+1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH WS 2",
-              "CH d/f+2"
-            ],
+            "launchers": ["CH WS 2", "CH d/f+2"],
             "input": "1,1,1,b+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH WS 2",
-              "CH d/f+2"
-            ],
+            "launchers": ["CH WS 2", "CH d/f+2"],
             "input": "1,1,1,d+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,~df+4,4,n+4,qcf+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f+4"
-            ],
+            "launchers": ["CH f+4"],
             "input": "f,n,d,~df+4,4,n+4,f,n,d,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2",
-              "1,2,2~1+2",
-              "f+2~1+2"
-            ],
+            "launchers": ["1+2", "1,2,2~1+2", "f+2~1+2"],
             "input": "f,n,d,~df+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2",
-              "1,2,2~1+2",
-              "f+2~1+2"
-            ],
+            "launchers": ["1+2", "1,2,2~1+2", "f+2~1+2"],
             "input": "f,n,d,~df+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,~df+4",
-              "f,n,d,~df+4,4"
-            ],
+            "launchers": ["CH f,n,d,~df+4", "f,n,d,~df+4,4"],
             "input": "d+1,cc,1,f,n,d,~df+4,4,n+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,n,d,~df+4",
-              "f,n,d,~df+4,4"
-            ],
+            "launchers": ["CH f,n,d,~df+4", "f,n,d,~df+4,4"],
             "input": "d+1,cc,1,qcf+2"
           }
         ],
@@ -5373,9 +5002,7 @@
           {
             "name": "Stone Head tag throw",
             "input": "f,f+1+2,5",
-            "partners": [
-              "Jun Kazama"
-            ],
+            "partners": ["Jun Kazama"],
             "notes": "Tag after the throw connects."
           }
         ],
@@ -5383,9 +5010,7 @@
           {
             "name": "Tag juggle",
             "input": "f,~f+2,5 > f+1,1,1,2,2",
-            "partners": [
-              "Lee Chaolan"
-            ],
+            "partners": ["Lee Chaolan"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 47
           }
@@ -5421,7 +5046,10 @@
     {
       "slug": "jin-kazama",
       "name": "Jin Kazama",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Jin.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -5467,9 +5095,7 @@
           {
             "name": "Ultimate Tackle",
             "input": "FC 1+2",
-            "alternateInputs": [
-              "d/b+1+2"
-            ]
+            "alternateInputs": ["d/b+1+2"]
           }
         ],
         "moves": [
@@ -5515,10 +5141,7 @@
               "hit": "+9 +6",
               "counterHit": "+9 +6"
             },
-            "alternateInputs": [
-              "f+1+2,2",
-              "WR+1+2,2"
-            ]
+            "alternateInputs": ["f+1+2,2", "WR+1+2,2"]
           },
           {
             "name": "Thunder Godfist",
@@ -5693,9 +5316,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Can Can",
@@ -5785,31 +5406,22 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+4~3"
-            ]
+            "alternateInputs": ["u/f+4~3"]
           },
           {
             "name": "Lightning Force",
             "input": "b+1+2",
-            "alternateInputs": [
-              "(Devil Jin possession) b+1+2"
-            ]
+            "alternateInputs": ["(Devil Jin possession) b+1+2"]
           },
           {
             "name": "High and Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Corpse Splitter",
             "input": "u/b+2+4",
-            "alternateInputs": [
-              "u+2+4",
-              "u/f+2+4"
-            ]
+            "alternateInputs": ["u+2+4", "u/f+2+4"]
           },
           {
             "name": "Devil Stone Head",
@@ -5921,17 +5533,12 @@
           {
             "name": "Left Jump Kick",
             "input": "u/b+3",
-            "alternateInputs": [
-              "u+3",
-              "u/f+3"
-            ]
+            "alternateInputs": ["u+3", "u/f+3"]
           },
           {
             "name": "One Two Knee Cancel to Three Ring Circus Combo",
             "input": "1,2,4~1+4,2,4",
-            "alternateInputs": [
-              "1,2,4~1+4,2,d+4"
-            ]
+            "alternateInputs": ["1,2,4~1+4,2,d+4"]
           },
           {
             "name": "Parting Wave Dragon Uppercut",
@@ -5984,9 +5591,7 @@
           {
             "name": "Ultimate Tackle",
             "input": "~db+1+2",
-            "alternateInputs": [
-              "~df+1+2"
-            ]
+            "alternateInputs": ["~df+1+2"]
           }
         ],
         "combos": [
@@ -6015,65 +5620,37 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+2",
-              "WS 1,2",
-              "f,n,d,d/f+2",
-              "WS 2",
-              "CH d/f+2"
-            ],
+            "launchers": ["SS+2", "WS 1,2", "f,n,d,d/f+2", "WS 2", "CH d/f+2"],
             "input": "1+4,1+4,2,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4",
-              "d+3+4"
-            ],
+            "launchers": ["CH b+4", "d+3+4"],
             "input": "1+4,b+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4",
-              "d+3+4",
-              "f,n,d,~df+4",
-              "f,f+3"
-            ],
+            "launchers": ["CH b+4", "d+3+4", "f,n,d,~df+4", "f,f+3"],
             "input": "1+4,2,d/f+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+3+4",
-              "f,n,d,~df+4",
-              "f,f+3"
-            ],
+            "launchers": ["d+3+4", "f,n,d,~df+4", "f,f+3"],
             "input": "1+4,2,f,n,d~d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+3+4",
-              "f,n,d,~df+4",
-              "f,f+3"
-            ],
+            "launchers": ["d+3+4", "f,n,d,~df+4", "f,f+3"],
             "input": "1+4,2,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,~df+4",
-              "f,f+3"
-            ],
+            "launchers": ["f,n,d,~df+4", "f,f+3"],
             "input": "1+4,2,b+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,~df+4",
-              "f,f+3"
-            ],
+            "launchers": ["f,n,d,~df+4", "f,f+3"],
             "input": "1+4,2,4"
           }
         ],
@@ -6101,17 +5678,13 @@
           {
             "name": "Stone Head tag throw",
             "input": "f,f+1+2,5",
-            "partners": [
-              "Jun Kazama"
-            ],
+            "partners": ["Jun Kazama"],
             "notes": "Tag after the throw connects."
           },
           {
             "name": "Lightning Force possession cancel",
             "input": "b+1+2~2~2~3",
-            "partners": [
-              "Heihachi Mishima"
-            ],
+            "partners": ["Heihachi Mishima"],
             "notes": "Requires Heihachi as partner; enters Devil Jin possession."
           }
         ],
@@ -6156,7 +5729,10 @@
     {
       "slug": "wang-jinrei",
       "name": "Wang Jinrei",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Wang.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -6228,10 +5804,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f+1+2",
-              "~f+1+2"
-            ]
+            "alternateInputs": ["f,f+1+2", "~f+1+2"]
           },
           {
             "name": "Lunging Double Fist",
@@ -6304,9 +5877,7 @@
               "hit": "-1",
               "counterHit": "-1"
             },
-            "alternateInputs": [
-              "2~b"
-            ]
+            "alternateInputs": ["2~b"]
           },
           {
             "name": "Tequila Sunrise",
@@ -6425,16 +5996,12 @@
           {
             "name": "High & Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Heavy Uppercut Cancel",
             "input": "b,~b+1,b,b",
-            "alternateInputs": [
-              "b,~b+1,~b"
-            ]
+            "alternateInputs": ["b,~b+1,~b"]
           },
           {
             "name": "Sweep Low Kick",
@@ -6477,72 +6044,47 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "f+4",
-              "d/f+1,1",
-              "d+4,2"
-            ],
+            "launchers": ["u/f+4", "f+4", "d/f+1,1", "d+4,2"],
             "input": "1,1,1,1,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+4"
-            ],
+            "launchers": ["CH SS+4"],
             "input": "d+1,cc,1,f,f,1,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+4"
-            ],
+            "launchers": ["CH SS+4"],
             "input": "d+1,cc,1,qcf+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2,1",
-              "d/b+2",
-              "d/b+4,2"
-            ],
+            "launchers": ["d/f+2,1", "d/b+2", "d/b+4,2"],
             "input": "1,1,1,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2,1"
-            ],
+            "launchers": ["d/f+2,1"],
             "input": "1,1,1,qcf+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+2",
-              "d/b+4,2"
-            ],
+            "launchers": ["d/b+2", "d/b+4,2"],
             "input": "1,1,d+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+2",
-              "d/b+4,2"
-            ],
+            "launchers": ["d/b+2", "d/b+4,2"],
             "input": "1,1,d/b+4,2,d/f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b,b+1"
-            ],
+            "launchers": ["b,b+1"],
             "input": "BT 4,BT 4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b,b+1"
-            ],
+            "launchers": ["b,b+1"],
             "input": "d/b+4,2,1,f+1+2"
           }
         ],
@@ -6570,36 +6112,28 @@
           {
             "name": "Tag juggle",
             "input": "d/f+1,1,5 > d+4,1",
-            "partners": [
-              "Julia Chang"
-            ],
+            "partners": ["Julia Chang"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 47
           },
           {
             "name": "Tag juggle",
             "input": "d/f+1,1,5 > d+1 > FC d/f+4,3",
-            "partners": [
-              "Michelle Chang"
-            ],
+            "partners": ["Michelle Chang"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 46
           },
           {
             "name": "Tag juggle",
             "input": "d/b+2,5 > f,~f+1,4",
-            "partners": [
-              "Julia Chang"
-            ],
+            "partners": ["Julia Chang"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 36
           },
           {
             "name": "Tag juggle",
             "input": "d/b+2,5 > f,~f+2",
-            "partners": [
-              "Michelle Chang"
-            ],
+            "partners": ["Michelle Chang"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 41
           }
@@ -6618,7 +6152,10 @@
     {
       "slug": "julia-chang",
       "name": "Julia Chang",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Julia.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -6712,9 +6249,7 @@
               "hit": "-2",
               "counterHit": "+3"
             },
-            "alternateInputs": [
-              "d,d/f+1"
-            ]
+            "alternateInputs": ["d,d/f+1"]
           },
           {
             "name": "G-Clef - Club Fist",
@@ -6829,9 +6364,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC d/f+2"
-            ]
+            "alternateInputs": ["FC d/f+2"]
           },
           {
             "name": "Parting Fist",
@@ -6862,9 +6395,7 @@
               "hit": "0",
               "counterHit": "-6"
             },
-            "alternateInputs": [
-              "3~2"
-            ]
+            "alternateInputs": ["3~2"]
           },
           {
             "name": "Liquid Sweep",
@@ -6954,11 +6485,7 @@
           {
             "name": "Low Parry",
             "input": "FC 1+3",
-            "alternateInputs": [
-              "FC 2+4",
-              "d+1+3",
-              "d+2+4"
-            ]
+            "alternateInputs": ["FC 2+4", "d+1+3", "d+2+4"]
           },
           {
             "name": "Wave Taunt",
@@ -7030,58 +6557,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4"
-            ],
+            "launchers": ["CH b+4"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4"
-            ],
+            "launchers": ["CH b+4"],
             "input": "b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+3"
-            ],
+            "launchers": ["CH b+3"],
             "input": "d+1,cc,1,f,f+1,d,d/f+1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+3"
-            ],
+            "launchers": ["CH b+3"],
             "input": "d+1,f,f+1,d+4,n+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+(1),4"
-            ],
+            "launchers": ["f,f+(1),4"],
             "input": "d+4,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+(1),4"
-            ],
+            "launchers": ["f,f+(1),4"],
             "input": "~d+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+4"
-            ],
+            "launchers": ["f+1+4"],
             "input": "b+4,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+4"
-            ],
+            "launchers": ["f+1+4"],
             "input": "b+4,b+4"
           }
         ],
@@ -7100,9 +6611,7 @@
           {
             "name": "Spin Behind tag throw",
             "input": "2,b,5",
-            "partners": [
-              "Michelle Chang"
-            ],
+            "partners": ["Michelle Chang"],
             "notes": "The standing 2 must hit before b,5."
           }
         ]
@@ -7112,7 +6621,10 @@
     {
       "slug": "michelle-chang",
       "name": "Michelle Chang",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Michelle.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -7343,9 +6855,7 @@
               "hit": "0",
               "counterHit": "0"
             },
-            "alternateInputs": [
-              "3~2"
-            ]
+            "alternateInputs": ["3~2"]
           },
           {
             "name": "Scissor Cut",
@@ -7497,30 +7007,22 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+1,4"
-            ],
+            "launchers": ["f,f+1,4"],
             "input": "d+4,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+1,4"
-            ],
+            "launchers": ["f,f+1,4"],
             "input": "~d+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+4"
-            ],
+            "launchers": ["f+1+4"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+4"
-            ],
+            "launchers": ["f+1+4"],
             "input": "f,f+2"
           }
         ],
@@ -7539,9 +7041,7 @@
           {
             "name": "Spin Behind tag throw",
             "input": "2,b,5",
-            "partners": [
-              "Julia Chang"
-            ],
+            "partners": ["Julia Chang"],
             "notes": "The standing 2 must hit before b,5."
           }
         ]
@@ -7551,7 +7051,10 @@
     {
       "slug": "anna-williams",
       "name": "Anna Williams",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Anna.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -7625,9 +7128,7 @@
               "hit": "+3 +7",
               "counterHit": "+3 +7"
             },
-            "alternateInputs": [
-              "BT 2,2"
-            ]
+            "alternateInputs": ["BT 2,2"]
           },
           {
             "name": "PDK Combo",
@@ -7659,9 +7160,7 @@
               "hit": "+9 +4",
               "counterHit": "+9 +4"
             },
-            "alternateInputs": [
-              "d+1,n+4"
-            ]
+            "alternateInputs": ["d+1,n+4"]
           },
           {
             "name": "Cross Cut Saw",
@@ -7691,9 +7190,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+1+2"
-            ]
+            "alternateInputs": ["f+1+2"]
           },
           {
             "name": "Delayed Scarlet Bomb",
@@ -7790,9 +7287,7 @@
               "hit": "+9 +6",
               "counterHit": "+9 +6"
             },
-            "alternateInputs": [
-              "d+2,n+4"
-            ]
+            "alternateInputs": ["d+2,n+4"]
           },
           {
             "name": "Scarlet Windmill",
@@ -7827,9 +7322,7 @@
               "hit": "0",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "qcf+2"
-            ]
+            "alternateInputs": ["qcf+2"]
           },
           {
             "name": "Double Slaps",
@@ -7903,9 +7396,7 @@
               "hit": "-3 +5",
               "counterHit": "-3 +26"
             },
-            "alternateInputs": [
-              "d+3,n+4"
-            ]
+            "alternateInputs": ["d+3,n+4"]
           },
           {
             "name": "Low Spin Kick - Shin Kick",
@@ -7960,9 +7451,7 @@
               "hit": "+3",
               "counterHit": "-6"
             },
-            "alternateInputs": [
-              "d/f+3+4"
-            ]
+            "alternateInputs": ["d/f+3+4"]
           },
           {
             "name": "Cat Stance",
@@ -7995,9 +7484,7 @@
               "counterHit": "KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "~u+4"
-            ]
+            "alternateInputs": ["~u+4"]
           },
           {
             "name": "Flip Kick",
@@ -8020,10 +7507,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC~u+4",
-              "FC~uf+4"
-            ]
+            "alternateInputs": ["FC~u+4", "FC~uf+4"]
           },
           {
             "name": "Wine Opener",
@@ -8038,9 +7522,7 @@
           {
             "name": "High & Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Basic Kick Knockdown",
@@ -8081,9 +7563,7 @@
           {
             "name": "Jab Combo High Kick Backhand Sidestep",
             "input": "1,2,1,4,2,u",
-            "alternateInputs": [
-              "1,2,1,4,2,d"
-            ]
+            "alternateInputs": ["1,2,1,4,2,d"]
           },
           {
             "name": "Jab Combo High Kick Backhand Sidestep Attack",
@@ -8101,9 +7581,7 @@
           {
             "name": "Leg Slicer High Kick Backhand Sidestep",
             "input": "d/f+3,1,4,2,u",
-            "alternateInputs": [
-              "d/f+3,1,4,2,d"
-            ]
+            "alternateInputs": ["d/f+3,1,4,2,d"]
           },
           {
             "name": "Leg Slicer High Kick Backhand Sidestep Attack",
@@ -8125,23 +7603,17 @@
           {
             "name": "Reverse 10 Hit Combo 1",
             "input": "BT 1,2,1,2,3,3,2,1,2,4",
-            "alternateInputs": [
-              "BT 2,2,1,2,3,3,2,1,2,4"
-            ]
+            "alternateInputs": ["BT 2,2,1,2,3,3,2,1,2,4"]
           },
           {
             "name": "Reverse Bermuda Triangle",
             "input": "BT 1,2,4",
-            "alternateInputs": [
-              "BT 2,2,4"
-            ]
+            "alternateInputs": ["BT 2,2,4"]
           },
           {
             "name": "Reverse Rapid Fire Punches",
             "input": "BT 1,2,1,2",
-            "alternateInputs": [
-              "BT 2,2,1,2"
-            ]
+            "alternateInputs": ["BT 2,2,1,2"]
           },
           {
             "name": "Right High Low Spin Kick (Extra Damage)",
@@ -8154,18 +7626,12 @@
           {
             "name": "Right Low Kick to Back Spin Chop Side Step",
             "input": "d+4,1,u",
-            "alternateInputs": [
-              "d+4,1,d"
-            ]
+            "alternateInputs": ["d+4,1,d"]
           },
           {
             "name": "Right Low Kick to Back Spin Chop Side Step Attack",
             "input": "d+4,1,u,2",
-            "alternateInputs": [
-              "d+4,1,u,1+2",
-              "d+4,1,d,2",
-              "d+4,1,d,1+2"
-            ]
+            "alternateInputs": ["d+4,1,u,1+2", "d+4,1,d,2", "d+4,1,d,1+2"]
           },
           {
             "name": "Rising Basic Uppercut",
@@ -8178,18 +7644,12 @@
           {
             "name": "Sidekick Jab Combo Sidestep",
             "input": "d/f+3,2,u",
-            "alternateInputs": [
-              "d/f+3,2,d"
-            ]
+            "alternateInputs": ["d/f+3,2,d"]
           },
           {
             "name": "Sidekick Jab Combo Sidestep Attack",
             "input": "d/f+3,2,u,2",
-            "alternateInputs": [
-              "d/f+3,2,u,1+2",
-              "d/f+3,2,d,2",
-              "d/f+3,2,d,1+2"
-            ]
+            "alternateInputs": ["d/f+3,2,u,1+2", "d/f+3,2,d,2", "d/f+3,2,d,1+2"]
           },
           {
             "name": "Special Mid Kick",
@@ -8230,66 +7690,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~uf+4",
-              "d/f+2",
-              "CH WS 2",
-              "CH SS+1+2"
-            ],
+            "launchers": ["~uf+4", "d/f+2", "CH WS 2", "CH SS+1+2"],
             "input": "1,1,1,1,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~uf+4",
-              "d/f+2",
-              "CH WS 2",
-              "CH SS+1+2"
-            ],
+            "launchers": ["~uf+4", "d/f+2", "CH WS 2", "CH SS+1+2"],
             "input": "1,1,1,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+2"
-            ],
+            "launchers": ["CH SS+2"],
             "input": "d+1,cc,1,qcf+1,d+1,n+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+2"
-            ],
+            "launchers": ["CH SS+2"],
             "input": "d+1,d+1,d+1,n+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+1+2 (Non CH)"
-            ],
+            "launchers": ["SS+1+2 (Non CH)"],
             "input": "1,d/f+1+2,d+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+1+2 (Non CH)"
-            ],
+            "launchers": ["SS+1+2 (Non CH)"],
             "input": "d+4,1,d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+1",
-              "d+1+2"
-            ],
+            "launchers": ["FC d/f+1", "d+1+2"],
             "input": "d+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+1",
-              "d+1+2"
-            ],
+            "launchers": ["FC d/f+1", "d+1+2"],
             "input": "d+4,1,d+1,n+4"
           }
         ],
@@ -8317,9 +7753,7 @@
           {
             "name": "Chin Bash tag throw",
             "input": "qcf+1+2,5",
-            "partners": [
-              "Nina Williams"
-            ],
+            "partners": ["Nina Williams"],
             "notes": "Tag after the throw connects."
           }
         ],
@@ -8327,9 +7761,7 @@
           {
             "name": "Tag juggle",
             "input": "~uf+4,5 > d/f+1,2,1,2,f+1+2",
-            "partners": [
-              "Nina Williams"
-            ],
+            "partners": ["Nina Williams"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 50
           }
@@ -8340,7 +7772,10 @@
     {
       "slug": "nina-williams",
       "name": "Nina Williams",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Nina.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -8486,10 +7921,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+1+2",
-              "f,f+1+2"
-            ]
+            "alternateInputs": ["f+1+2", "f,f+1+2"]
           },
           {
             "name": "Spiral Explosion",
@@ -8566,9 +7998,7 @@
           {
             "name": "Low Jab - Toe Kick",
             "input": "FC 2,4",
-            "alternateInputs": [
-              "d+2,4"
-            ]
+            "alternateInputs": ["d+2,4"]
           },
           {
             "name": "Double Slap",
@@ -8650,9 +8080,7 @@
               "hit": "+11",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f+3"
-            ]
+            "alternateInputs": ["f,f+3"]
           },
           {
             "name": "Leaping Slash Kick",
@@ -8660,9 +8088,7 @@
             "frameData": {
               "startup": "22"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Spike Combo",
@@ -8706,9 +8132,7 @@
               "hit": "-3 +5",
               "counterHit": "-3 +5"
             },
-            "alternateInputs": [
-              "d+3,n+4"
-            ]
+            "alternateInputs": ["d+3,n+4"]
           },
           {
             "name": "Low Spin Kick - Shin Kick",
@@ -8719,9 +8143,7 @@
               "hit": "-3 0",
               "counterHit": "-3 0"
             },
-            "alternateInputs": [
-              "~d+3,4"
-            ]
+            "alternateInputs": ["~d+3,4"]
           },
           {
             "name": "Hop - Low Spin Kick - Upper",
@@ -8733,10 +8155,7 @@
               "counterHit": "KD KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "u/f,n,d/b+3,2",
-              "u/f,n,d/f+3,2"
-            ]
+            "alternateInputs": ["u/f,n,d/b+3,2", "u/f,n,d/f+3,2"]
           },
           {
             "name": "Hop - Low Spin Kick - Front Kick",
@@ -8747,10 +8166,7 @@
               "hit": "KD +5",
               "counterHit": "KD +28"
             },
-            "alternateInputs": [
-              "u/f,n,d/b+3,3",
-              "u/f,n,d/f+3,3"
-            ]
+            "alternateInputs": ["u/f,n,d/b+3,3", "u/f,n,d/f+3,3"]
           },
           {
             "name": "Hop - Low Spin Kick - High Kick",
@@ -8761,10 +8177,7 @@
               "hit": "-24 -3",
               "counterHit": "-24 -3"
             },
-            "alternateInputs": [
-              "u/f,n,d/b+3,4",
-              "u/f,n,d/f+3,4"
-            ]
+            "alternateInputs": ["u/f,n,d/b+3,4", "u/f,n,d/f+3,4"]
           },
           {
             "name": "Assault - Blonde Bomb",
@@ -8825,9 +8238,7 @@
             "frameData": {
               "startup": "17"
             },
-            "alternateInputs": [
-              "d/f+3+4"
-            ]
+            "alternateInputs": ["d/f+3+4"]
           },
           {
             "name": "Spider Knee",
@@ -8855,9 +8266,7 @@
             "frameData": {
               "startup": "28"
             },
-            "alternateInputs": [
-              "f,f+4"
-            ]
+            "alternateInputs": ["f,f+4"]
           },
           {
             "name": "Wipe the Floor",
@@ -8908,16 +8317,12 @@
           {
             "name": "High and Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Low Parry",
             "input": "d+1+3",
-            "alternateInputs": [
-              "d+2+4"
-            ]
+            "alternateInputs": ["d+2+4"]
           },
           {
             "name": "Evasive Backflip",
@@ -9046,51 +8451,37 @@
           {
             "name": "Reverse 10 Hit Combo 1",
             "input": "BT 1,2,1,2,3,3,2,1,2,4",
-            "alternateInputs": [
-              "BT 2,2,1,2,3,3,2,1,2,4"
-            ]
+            "alternateInputs": ["BT 2,2,1,2,3,3,2,1,2,4"]
           },
           {
             "name": "Reverse 10 Hit Combo 3",
             "input": "BT 1,2,1,2,3,3,2,1,4,3",
-            "alternateInputs": [
-              "BT 2,2,1,2,3,3,2,1,4,3"
-            ]
+            "alternateInputs": ["BT 2,2,1,2,3,3,2,1,4,3"]
           },
           {
             "name": "Reverse 10 Hit Combo 5",
             "input": "BT 1,2,1,2,4,3,4,2,4,3",
-            "alternateInputs": [
-              "BT 2,2,1,2,4,3,4,2,4,3"
-            ]
+            "alternateInputs": ["BT 2,2,1,2,4,3,4,2,4,3"]
           },
           {
             "name": "Reverse Bermuda Triangle",
             "input": "BT 1,2,4",
-            "alternateInputs": [
-              "BT 2,2,4"
-            ]
+            "alternateInputs": ["BT 2,2,4"]
           },
           {
             "name": "Reverse Biting Snake",
             "input": "BT 1,2,1,4",
-            "alternateInputs": [
-              "BT 2,2,1,4"
-            ]
+            "alternateInputs": ["BT 2,2,1,4"]
           },
           {
             "name": "Reverse Double Explosion 1",
             "input": "BT 1,2,f+1+2",
-            "alternateInputs": [
-              "BT 2,2,f+1+2"
-            ]
+            "alternateInputs": ["BT 2,2,f+1+2"]
           },
           {
             "name": "Reverse Double Explosion 2",
             "input": "BT 1,2,1,2,f+1+2",
-            "alternateInputs": [
-              "BT 2,2,1,2,f+1+2"
-            ]
+            "alternateInputs": ["BT 2,2,1,2,f+1+2"]
           },
           {
             "name": "Reverse Mist Step",
@@ -9103,16 +8494,12 @@
           {
             "name": "Right Low Kick to Back Spin Chop Side Step",
             "input": "d+4,1,u",
-            "alternateInputs": [
-              "d+4,1,d"
-            ]
+            "alternateInputs": ["d+4,1,d"]
           },
           {
             "name": "Right Low Kick to Back Spin Chop Side Step to Lift Shot",
             "input": "d+4,1,u,2",
-            "alternateInputs": [
-              "d+4,1,d,2"
-            ]
+            "alternateInputs": ["d+4,1,d,2"]
           },
           {
             "name": "Rising 10 Hit Combo 2",
@@ -9145,23 +8532,17 @@
           {
             "name": "Sidekick Jab Combo Sidestep",
             "input": "d/f+3,2,~u",
-            "alternateInputs": [
-              "d/f+3,2,~d"
-            ]
+            "alternateInputs": ["d/f+3,2,~d"]
           },
           {
             "name": "Sidekick Jab Combo Sidestep Lift Shot",
             "input": "d/f+3,2,~u,2",
-            "alternateInputs": [
-              "d/f+3,2,~d,2"
-            ]
+            "alternateInputs": ["d/f+3,2,~d,2"]
           },
           {
             "name": "Snakeshot Reverse Rolling Dash to Attack Reversal",
             "input": "SS+1,~b,b+2+4",
-            "alternateInputs": [
-              "SS+1,~b,2+4"
-            ]
+            "alternateInputs": ["SS+1,~b,2+4"]
           },
           {
             "name": "Snakeshot Reverse Rolling Dash to Betrayer",
@@ -9226,16 +8607,12 @@
           {
             "name": "Ultimate Punch to Arm Breaker",
             "input": "(During tackle) 1,2,1,1+2",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,1+2"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,1+2"]
           },
           {
             "name": "Ultimate Punch to Leg Cross Hold",
             "input": "(During tackle) 1,2,1,3+4",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,3+4"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,3+4"]
           }
         ],
         "combos": [
@@ -9279,109 +8656,72 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH qcf+3",
-              "CH f,f+3"
-            ],
+            "launchers": ["CH qcf+3", "CH f,f+3"],
             "input": "d+3,2,d+4,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH qcf+3",
-              "CH f,f+3",
-              "b+1",
-              "d/b+1+2"
-            ],
+            "launchers": ["CH qcf+3", "CH f,f+3", "b+1", "d/b+1+2"],
             "input": "d+4,1,1,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 3",
-              "CH SS+2",
-              "d,d/f+2 (Face Down)"
-            ],
+            "launchers": ["WS 3", "CH SS+2", "d,d/f+2 (Face Down)"],
             "input": "1,1,1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 3"
-            ],
+            "launchers": ["WS 3"],
             "input": "1,1,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+2",
-              "d,d/f+2 (Face Down)"
-            ],
+            "launchers": ["CH SS+2", "d,d/f+2 (Face Down)"],
             "input": "1,1,1,2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH SS+2",
-              "d,d/f+2 (Face Down)"
-            ],
+            "launchers": ["CH SS+2", "d,d/f+2 (Face Down)"],
             "input": "1,1,d+1,n+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1",
-              "d/b+1+2"
-            ],
+            "launchers": ["b+1", "d/b+1+2"],
             "input": "d+4,1,1,2,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1"
-            ],
+            "launchers": ["b+1"],
             "input": "d+4,1,d+4,1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4"
-            ],
+            "launchers": ["u/f+4"],
             "input": "d+4,1,d+4,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4"
-            ],
+            "launchers": ["u/f+4"],
             "input": "d+4,1,d/b+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+4,3"
-            ],
+            "launchers": ["d/b+4,3"],
             "input": "d/b+1,4,d+4,1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+4,3"
-            ],
+            "launchers": ["d/b+4,3"],
             "input": "d/b+1,d/b+1,d/b+1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+1+2"
-            ],
+            "launchers": ["d/b+1+2"],
             "input": "d+4,1,d+1,FC d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+1+2"
-            ],
+            "launchers": ["d/b+1+2"],
             "input": "d+4,1,d+1,n+4"
           }
         ],
@@ -9409,9 +8749,7 @@
           {
             "name": "Chin Bash tag throw",
             "input": "qcf+1+2,5",
-            "partners": [
-              "Anna Williams"
-            ],
+            "partners": ["Anna Williams"],
             "notes": "Tag after the throw connects."
           }
         ]
@@ -9421,7 +8759,10 @@
     {
       "slug": "armor-king",
       "name": "Armor King",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_AK.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -9474,9 +8815,7 @@
           {
             "name": "Ultimate Tackle",
             "input": "FC 1+2",
-            "alternateInputs": [
-              "~db+1+2"
-            ]
+            "alternateInputs": ["~db+1+2"]
           },
           {
             "name": "Tombstone Piledriver",
@@ -9493,9 +8832,7 @@
             "frameData": {
               "startup": "12"
             },
-            "alternateInputs": [
-              "~db+2+4"
-            ]
+            "alternateInputs": ["~db+2+4"]
           },
           {
             "name": "Frankensteiner",
@@ -9545,9 +8882,7 @@
               "hit": "+9 +2",
               "counterHit": "+9 +2"
             },
-            "alternateInputs": [
-              "d+1,n+2"
-            ]
+            "alternateInputs": ["d+1,n+2"]
           },
           {
             "name": "Double Punch",
@@ -9617,11 +8952,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "~f+1+2",
-              "WR,~f+1+2",
-              "u/f+1+2"
-            ]
+            "alternateInputs": ["~f+1+2", "WR,~f+1+2", "u/f+1+2"]
           },
           {
             "name": "Jump In Knuckle Bomb",
@@ -9726,10 +9057,7 @@
           {
             "name": "Elbow Drop",
             "input": "u/b+2+4",
-            "alternateInputs": [
-              "u+2+4",
-              "u/f+2+4"
-            ]
+            "alternateInputs": ["u+2+4", "u/f+2+4"]
           },
           {
             "name": "Toll Kick",
@@ -9768,9 +9096,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3+4"
-            ]
+            "alternateInputs": ["f,f,f+3+4"]
           },
           {
             "name": "Ali Kicks",
@@ -9781,9 +9107,7 @@
               "hit": "-13 -19 +6",
               "counterHit": "-13 -19 +6"
             },
-            "alternateInputs": [
-              "~d,d/f+4,4,4"
-            ]
+            "alternateInputs": ["~d,d/f+4,4,4"]
           },
           {
             "name": "Jump In Ali Kicks",
@@ -9876,49 +9200,32 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2",
-              "f,n,d,d/f+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2", "f,n,d,d/f+2"],
             "input": "1,1,1,1,b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2"],
             "input": "1,1,1,1,f,n,d,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 1"
-            ],
+            "launchers": ["WS 1"],
             "input": "b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 1"
-            ],
+            "launchers": ["WS 1"],
             "input": "d+1,cc,1,1,b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2"
-            ],
+            "launchers": ["f,n,d,d/f+2"],
             "input": "1,1,1,d+1,n+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,n,d,d/f+2"
-            ],
+            "launchers": ["f,n,d,d/f+2"],
             "input": "1,1,1,d+3+4"
           }
         ],
@@ -9946,9 +9253,7 @@
           {
             "name": "Doomsday Device",
             "input": "~d,d/b+2+4,5",
-            "partners": [
-              "King"
-            ],
+            "partners": ["King"],
             "notes": "Tag after the throw connects."
           }
         ],
@@ -9965,7 +9270,10 @@
     {
       "slug": "roger",
       "name": "Roger",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Roger.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -10122,10 +9430,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+1+2",
-              "u/f+1+2"
-            ]
+            "alternateInputs": ["f+1+2", "u/f+1+2"]
           },
           {
             "name": "Animal Smash",
@@ -10197,10 +9502,7 @@
             "frameData": {
               "startup": "23"
             },
-            "alternateInputs": [
-              "u+2+4",
-              "u/f+2+4"
-            ]
+            "alternateInputs": ["u+2+4", "u/f+2+4"]
           },
           {
             "name": "Tail Cutter",
@@ -10247,9 +9549,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3+4"
-            ]
+            "alternateInputs": ["f,f,f+3+4"]
           },
           {
             "name": "Ali Kicks",
@@ -10260,9 +9560,7 @@
               "hit": "-13 -19 +6",
               "counterHit": "-13 -19 +6"
             },
-            "alternateInputs": [
-              "~d,d/f+4,4,4"
-            ]
+            "alternateInputs": ["~d,d/f+4,4,4"]
           },
           {
             "name": "Lunge Animal Kick",
@@ -10341,63 +9639,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2"],
             "input": "1,1,1,d+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2"],
             "input": "1,1,1,f,f,n+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+4",
-              "d/b+3"
-            ],
+            "launchers": ["SS+4", "d/b+3"],
             "input": "d+1,cc,1,d+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+4"
-            ],
+            "launchers": ["SS+4"],
             "input": "d+1,cc,1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+3"
-            ],
+            "launchers": ["d/b+3"],
             "input": "b+3,d+1,FC d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+3"
-            ],
+            "launchers": ["d/b+3"],
             "input": "d+1,FC 1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "d+3+4,4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "d/b+3"
           }
         ],
@@ -10418,7 +9695,10 @@
     {
       "slug": "king",
       "name": "King",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_King.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -10518,9 +9798,7 @@
           {
             "name": "Turn Over",
             "input": "(Grounded opponent) d/b+1+3",
-            "alternateInputs": [
-              "(Grounded opponent) d/b+2+4"
-            ]
+            "alternateInputs": ["(Grounded opponent) d/b+2+4"]
           },
           {
             "name": "Figure 4 Lock",
@@ -10715,10 +9993,7 @@
             "frameData": {
               "startup": "23"
             },
-            "alternateInputs": [
-              "u+2+4",
-              "u/f+2+4"
-            ]
+            "alternateInputs": ["u+2+4", "u/f+2+4"]
           },
           {
             "name": "Diving Body Press",
@@ -10757,9 +10032,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+3+4"
-            ]
+            "alternateInputs": ["f+3+4"]
           },
           {
             "name": "Satellite Exploder",
@@ -10769,9 +10042,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3+4"
-            ]
+            "alternateInputs": ["f,f,f+3+4"]
           },
           {
             "name": "Deadly Boomerang",
@@ -10791,9 +10062,7 @@
               "hit": "-13",
               "counterHit": "-13"
             },
-            "alternateInputs": [
-              "d+3+4"
-            ]
+            "alternateInputs": ["d+3+4"]
           },
           {
             "name": "Knee Buster",
@@ -10838,16 +10107,12 @@
           {
             "name": "Leg Screw Right Kick Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Low Parry",
             "input": "d+1+4",
-            "alternateInputs": [
-              "d+2+3"
-            ]
+            "alternateInputs": ["d+2+3"]
           },
           {
             "name": "9 Hit Combo 1",
@@ -10933,30 +10198,22 @@
           {
             "name": "Ultimate Punch to Arm Twist",
             "input": "(During tackle) 1,2,1,1+2,1+2",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,1+2,1+2"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,1+2,1+2"]
           },
           {
             "name": "Ultimate Punch to Cross Arm Lock",
             "input": "(During tackle) 1,2,1,1+2",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,1+2"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,1+2"]
           },
           {
             "name": "Ultimate Punch to Leg Cross Hold",
             "input": "(During tackle) 1,2,1,3+4",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,3+4"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,3+4"]
           },
           {
             "name": "Ultimate Punch to Stretch Combo",
             "input": "(During tackle) 1,2,1,3+4 : 1+2",
-            "alternateInputs": [
-              "(During tackle) 2,1,2,3+4 : 1+2"
-            ]
+            "alternateInputs": ["(During tackle) 2,1,2,3+4 : 1+2"]
           }
         ],
         "combos": [
@@ -10967,50 +10224,32 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2",
-              "CH f,n,d,d/f+1+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2", "CH f,n,d,d/f+1+2"],
             "input": "1,1+2,1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "FC d/f+2",
-              "CH f,f+2",
-              "CH f,n,d,d/f+1+2"
-            ],
+            "launchers": ["u/f+4", "FC d/f+2", "CH f,f+2", "CH f,n,d,d/f+1+2"],
             "input": "1,1,1,d/f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f,n+2"
-            ],
+            "launchers": ["f,f,n+2"],
             "input": "1,2,d+3+4,n+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f,n+2"
-            ],
+            "launchers": ["f,f,n+2"],
             "input": "1,2,d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~d,d/f+1"
-            ],
+            "launchers": ["~d,d/f+1"],
             "input": "d+1,cc,1,2,d+3+4,n+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~d,d/f+1"
-            ],
+            "launchers": ["~d,d/f+1"],
             "input": "d+1,WS 1,d+3+4,n+2"
           }
         ],
@@ -11041,18 +10280,14 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+1+4"
-            ]
+            "alternateInputs": ["f+1+4"]
           }
         ],
         "tagMoves": [
           {
             "name": "Throw Away tag throw",
             "input": "b+1+2,5",
-            "partners": [
-              "Armor King"
-            ],
+            "partners": ["Armor King"],
             "notes": "Tag after the throw connects."
           }
         ]
@@ -11062,7 +10297,10 @@
     {
       "slug": "paul-phoenix",
       "name": "Paul Phoenix",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_PAUL.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -11108,9 +10346,7 @@
           {
             "name": "Ultimate Tackle",
             "input": "FC 1+2",
-            "alternateInputs": [
-              "d/b+1+2"
-            ]
+            "alternateInputs": ["d/b+1+2"]
           }
         ],
         "moves": [
@@ -11265,9 +10501,7 @@
               "hit": "-6",
               "counterHit": "-6"
             },
-            "alternateInputs": [
-              "~df+2"
-            ]
+            "alternateInputs": ["~df+2"]
           },
           {
             "name": "Sway",
@@ -11353,9 +10587,7 @@
           {
             "name": "High and Mid Attack Reversal",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Body Blow",
@@ -11380,9 +10612,7 @@
           {
             "name": "Shredder",
             "input": "u+3,4",
-            "alternateInputs": [
-              "u/b+3,4"
-            ]
+            "alternateInputs": ["u/b+3,4"]
           },
           {
             "name": "Ultimate Punch 2 to Arm Breaker",
@@ -11397,52 +10627,32 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "qcf+1",
-              "u/f,4",
-              "f,f+3"
-            ],
+            "launchers": ["u/f+4", "qcf+1", "u/f,4", "f,f+3"],
             "input": "1,1,1,1,f,f+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "qcf+1",
-              "u/f,4",
-              "f,f+3"
-            ],
+            "launchers": ["u/f+4", "qcf+1", "u/f,4", "f,f+3"],
             "input": "1,1,1,1,qcf+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+2,2",
-              "qcb+3,2,2"
-            ],
+            "launchers": ["FC d/f+2,2", "qcb+3,2,2"],
             "input": "d+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC d/f+2,2",
-              "qcb+3,2,2"
-            ],
+            "launchers": ["FC d/f+2,2", "qcb+3,2,2"],
             "input": "d+4,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2"
-            ],
+            "launchers": ["WS 2"],
             "input": "1,1,1,d+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2"
-            ],
+            "launchers": ["WS 2"],
             "input": "1,1,1,f+1+2"
           }
         ],
@@ -11461,9 +10671,7 @@
           {
             "name": "Rainbow Kick",
             "input": "FC~d >~uf+3+4",
-            "partners": [
-              "Forest Law"
-            ],
+            "partners": ["Forest Law"],
             "notes": "Hold down for one second before the jump input; requires Law as partner."
           }
         ],
@@ -11487,7 +10695,10 @@
     {
       "slug": "ganryu",
       "name": "Ganryu",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Ganryu.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -11587,9 +10798,7 @@
             "frameData": {
               "startup": "14"
             },
-            "alternateInputs": [
-              "2,1,2,1,2,1,2,1"
-            ]
+            "alternateInputs": ["2,1,2,1,2,1,2,1"]
           },
           {
             "name": "Sumo Mega Upper",
@@ -11644,9 +10853,7 @@
               "hit": "+3",
               "counterHit": "+3"
             },
-            "alternateInputs": [
-              "d+1+2"
-            ]
+            "alternateInputs": ["d+1+2"]
           },
           {
             "name": "Sumo Charge",
@@ -11667,9 +10874,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "~f+1+2"
-            ]
+            "alternateInputs": ["~f+1+2"]
           },
           {
             "name": "Palm Upper",
@@ -11690,9 +10895,7 @@
               "hit": "+7 +2",
               "counterHit": "+11 +2"
             },
-            "alternateInputs": [
-              "~f+2,1"
-            ]
+            "alternateInputs": ["~f+2,1"]
           },
           {
             "name": "Megaton Palm",
@@ -11753,9 +10956,7 @@
           {
             "name": "Sumo Sit",
             "input": "3+4",
-            "alternateInputs": [
-              "d+3+4"
-            ]
+            "alternateInputs": ["d+3+4"]
           },
           {
             "name": "Sumo Squash - Sumo Sit",
@@ -11770,9 +10971,7 @@
           {
             "name": "High & Mid Punch Parry",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "LA-Z-Boy",
@@ -11811,58 +11010,42 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "f,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+2"
-            ],
+            "launchers": ["b+2"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+2"
-            ],
+            "launchers": ["b+2"],
             "input": "d+1,FC 1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1+2,2"
-            ],
+            "launchers": ["b+1+2,2"],
             "input": "2,1,2,d+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+1+2,2"
-            ],
+            "launchers": ["b+1+2,2"],
             "input": "2,1,2,d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2+3"
-            ],
+            "launchers": ["d/f+2+3"],
             "input": "WS 2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2+3"
-            ],
+            "launchers": ["d/f+2+3"],
             "input": "WS 2,d+1,WS 2,d+1"
           }
         ],
@@ -11883,7 +11066,10 @@
     {
       "slug": "kuma",
       "name": "Kuma",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Kuma.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -11965,9 +11151,7 @@
               "hit": "+5 +2 +9",
               "counterHit": "+5 +2 +9"
             },
-            "alternateInputs": [
-              "FC~df+1,2,1"
-            ]
+            "alternateInputs": ["FC~df+1,2,1"]
           },
           {
             "name": "Grizzly Upper - Grizzly Claw",
@@ -12008,9 +11192,7 @@
               "hit": "+5 +3",
               "counterHit": "+5 +3"
             },
-            "alternateInputs": [
-              "FC~df+1,2"
-            ]
+            "alternateInputs": ["FC~df+1,2"]
           },
           {
             "name": "Bear Knuckle",
@@ -12116,9 +11298,7 @@
               "hit": "-2",
               "counterHit": "-2"
             },
-            "alternateInputs": [
-              "FC d/f+2"
-            ]
+            "alternateInputs": ["FC d/f+2"]
           },
           {
             "name": "Quick Uppercut Rush",
@@ -12129,9 +11309,7 @@
               "hit": "-2 +10 +2",
               "counterHit": "-2 +10 +2"
             },
-            "alternateInputs": [
-              "FC~df+2,1,2"
-            ]
+            "alternateInputs": ["FC~df+2,1,2"]
           },
           {
             "name": "Grizzly Claw",
@@ -12337,36 +11515,22 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "f+1,1,1",
-              "WS 1+2",
-              "CH WS 2"
-            ],
+            "launchers": ["d/f+2", "f+1,1,1", "WS 1+2", "CH WS 2"],
             "input": "2,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "f+1,1,1",
-              "WS 1+2",
-              "CH WS 2"
-            ],
+            "launchers": ["d/f+2", "f+1,1,1", "WS 1+2", "CH WS 2"],
             "input": "d/f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4"
-            ],
+            "launchers": ["u/f+4"],
             "input": "4,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4"
-            ],
+            "launchers": ["u/f+4"],
             "input": "4,f+1,f+1+2"
           }
         ],
@@ -12394,9 +11558,7 @@
           {
             "name": "Demon’s Boar",
             "input": "b+2",
-            "partners": [
-              "Heihachi Mishima"
-            ],
+            "partners": ["Heihachi Mishima"],
             "notes": "Available with Heihachi as partner."
           }
         ]
@@ -12406,7 +11568,10 @@
     {
       "slug": "gun-jack",
       "name": "Gun Jack",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Gun_Jack.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -12560,9 +11725,7 @@
               "hit": "+5 +2 +9",
               "counterHit": "+5 +2 +9"
             },
-            "alternateInputs": [
-              "FC~df+1,2,1"
-            ]
+            "alternateInputs": ["FC~df+1,2,1"]
           },
           {
             "name": "Megaton Uppercut",
@@ -12595,9 +11758,7 @@
               "hit": "+5 +2",
               "counterHit": "+5 +2"
             },
-            "alternateInputs": [
-              "FC~df+1,2"
-            ]
+            "alternateInputs": ["FC~df+1,2"]
           },
           {
             "name": "Revolving Knuckles - Megaton",
@@ -12660,9 +11821,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f+1+2"
-            ]
+            "alternateInputs": ["f+1+2"]
           },
           {
             "name": "Bravo Knuckle",
@@ -12695,9 +11854,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "~df,1+2"
-            ]
+            "alternateInputs": ["~df,1+2"]
           },
           {
             "name": "Piston Gun",
@@ -12729,9 +11886,7 @@
               "hit": "-2",
               "counterHit": "-2"
             },
-            "alternateInputs": [
-              "FC d/f+2"
-            ]
+            "alternateInputs": ["FC d/f+2"]
           },
           {
             "name": "Hammer Uppercut Rush",
@@ -12752,9 +11907,7 @@
               "hit": "-2 +10 +2",
               "counterHit": "-2 +10 +2"
             },
-            "alternateInputs": [
-              "FC~df+2,1,2"
-            ]
+            "alternateInputs": ["FC~df+2,1,2"]
           },
           {
             "name": "Megaton Breaker",
@@ -12878,9 +12031,7 @@
           {
             "name": "Sit Pancake Press Puches",
             "input": "d+3+4~3+4,1,2,1,2",
-            "alternateInputs": [
-              "d+3+4~3+4,2,1,2,1"
-            ]
+            "alternateInputs": ["d+3+4~3+4,2,1,2,1"]
           }
         ],
         "combos": [
@@ -12901,159 +12052,102 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "CH WS 2"
-            ],
+            "launchers": ["d/f+2", "CH WS 2"],
             "input": "2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "CH WS 2",
-              "d+1+2",
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["d/f+2", "CH WS 2", "d+1+2", "CH~df,1,2,1"],
             "input": "2,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~df+2,1",
-              "~df+2,1,2"
-            ],
+            "launchers": ["~df+2,1", "~df+2,1,2"],
             "input": "FC 1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~df+2,1",
-              "~df+2,1,2"
-            ],
+            "launchers": ["~df+2,1", "~df+2,1,2"],
             "input": "FC d/f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 1",
-              "d+1+2",
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["WS 1", "d+1+2", "CH~df,1,2,1"],
             "input": "2,2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 1",
-              "d+1+2",
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["WS 1", "d+1+2", "CH~df,1,2,1"],
             "input": "2,2,d/f+2+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+1+2",
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["d+1+2", "CH~df,1,2,1"],
             "input": "2,b+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+1+2",
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["d+1+2", "CH~df,1,2,1"],
             "input": "2,d+1,FC 1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f,d/f+2+4",
-              "d/f+2+4"
-            ],
+            "launchers": ["d/f,d/f+2+4", "d/f+2+4"],
             "input": "b+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f,d/f+2+4",
-              "d/f+2+4",
-              "f+4~1",
-              "hcf,~df+1"
-            ],
+            "launchers": ["d/f,d/f+2+4", "d/f+2+4", "f+4~1", "hcf,~df+1"],
             "input": "b,d/b,d,~df+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2+3"
-            ],
+            "launchers": ["d/f+2+3"],
             "input": "d+2,WS 1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2+3"
-            ],
+            "launchers": ["d/f+2+3"],
             "input": "d+2,WS 4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["CH~df,1,2,1"],
             "input": "2,d+1,WS 1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["CH~df,1,2,1"],
             "input": "2,d+2,FC 1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+4~1",
-              "f+1+2"
-            ],
+            "launchers": ["f+4~1", "f+1+2"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+4~1"
-            ],
+            "launchers": ["f+4~1"],
             "input": "d+1,FC 2,FC 1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "d/f+2+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "input": "f+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "hcf,~df+1"
-            ],
+            "launchers": ["hcf,~df+1"],
             "input": "b+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "hcf,~df+1"
-            ],
+            "launchers": ["hcf,~df+1"],
             "input": "b,d/b,d,~df+2"
           }
         ],
@@ -13103,17 +12197,13 @@
           {
             "name": "Body Slam tag throw",
             "input": "2+4,5",
-            "partners": [
-              "Jack-2"
-            ],
+            "partners": ["Jack-2"],
             "notes": "Tag after the throw connects."
           },
           {
             "name": "Bravo Knuckle to Fisherman’s Slam",
             "input": "d+1+2~5 > 2",
-            "partners": [
-              "Bryan Fury"
-            ],
+            "partners": ["Bryan Fury"],
             "notes": "Bryan performs the final 2 after the launcher connects."
           }
         ],
@@ -13137,7 +12227,10 @@
     {
       "slug": "jack-2",
       "name": "Jack-2",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Jack2.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -13233,9 +12326,7 @@
           {
             "name": "Wind Up",
             "input": "hcf",
-            "alternateInputs": [
-              "b,b+1"
-            ]
+            "alternateInputs": ["b,b+1"]
           },
           {
             "name": "Uppercut Rush",
@@ -13256,9 +12347,7 @@
               "hit": "+5 +2 +9",
               "counterHit": "+5 +2 +9"
             },
-            "alternateInputs": [
-              "FC~df+1,2,1"
-            ]
+            "alternateInputs": ["FC~df+1,2,1"]
           },
           {
             "name": "Windmill",
@@ -13279,9 +12368,7 @@
               "hit": "+5 +2",
               "counterHit": "+5 +2"
             },
-            "alternateInputs": [
-              "FC~df+1,2"
-            ]
+            "alternateInputs": ["FC~df+1,2"]
           },
           {
             "name": "Hammer Rush",
@@ -13388,9 +12475,7 @@
               "hit": "-2 +10 +2",
               "counterHit": "-2 +10 +2"
             },
-            "alternateInputs": [
-              "FC~df+2,1,2"
-            ]
+            "alternateInputs": ["FC~df+2,1,2"]
           },
           {
             "name": "Hammer Uppercut Rush",
@@ -13432,9 +12517,7 @@
               "hit": "-2",
               "counterHit": "-2"
             },
-            "alternateInputs": [
-              "FC d/f+2"
-            ]
+            "alternateInputs": ["FC d/f+2"]
           },
           {
             "name": "Megaton Punch",
@@ -13465,9 +12548,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC d/f+3+4"
-            ]
+            "alternateInputs": ["FC d/f+3+4"]
           },
           {
             "name": "Cossack Kicks",
@@ -13563,105 +12644,72 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "WS 2"
-            ],
+            "launchers": ["d/f+2", "WS 2"],
             "input": "2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "WS 2",
-              "d+1+2"
-            ],
+            "launchers": ["d/f+2", "WS 2", "d+1+2"],
             "input": "2,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~df+2,1"
-            ],
+            "launchers": ["~df+2,1"],
             "input": "FC 1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~df+2,1"
-            ],
+            "launchers": ["~df+2,1"],
             "input": "WS 1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2"
-            ],
+            "launchers": ["WS 2"],
             "input": "2,f+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "WS 2"
-            ],
+            "launchers": ["WS 2"],
             "input": "4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+1+2"
-            ],
+            "launchers": ["d+1+2"],
             "input": "2,2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+1+2"
-            ],
+            "launchers": ["d+1+2"],
             "input": "2,d/b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f,d/f+1",
-              "d/f+2+4"
-            ],
+            "launchers": ["d/f,d/f+1", "d/f+2+4"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f,d/f+1",
-              "d/f+2+4"
-            ],
+            "launchers": ["d/f,d/f+1", "d/f+2+4"],
             "input": "b,d/b,d,~df+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+1"
-            ],
+            "launchers": ["SS+1"],
             "input": ",d/b,d,~df+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "SS+1"
-            ],
+            "launchers": ["SS+1"],
             "input": "1+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["CH~df,1,2,1"],
             "input": "cc,1,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH~df,1,2,1"
-            ],
+            "launchers": ["CH~df,1,2,1"],
             "input": "cc,1,f+1+2"
           }
         ],
@@ -13669,17 +12717,13 @@
           {
             "name": "Body Slam tag throw",
             "input": "2+4,5",
-            "partners": [
-              "Gun Jack"
-            ],
+            "partners": ["Gun Jack"],
             "notes": "Tag after the throw connects."
           },
           {
             "name": "Bravo Knuckle to Fisherman’s Slam",
             "input": "d+1+2~5 > 2",
-            "partners": [
-              "Bryan Fury"
-            ],
+            "partners": ["Bryan Fury"],
             "notes": "Bryan performs the final 2 after the launcher connects."
           }
         ],
@@ -13715,7 +12759,10 @@
     {
       "slug": "prototype-jack",
       "name": "Prototype Jack",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Pjack.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -13804,9 +12851,7 @@
               "hit": "+5 +2 +9",
               "counterHit": "+5 +2 +9"
             },
-            "alternateInputs": [
-              "FC~df+1,2,1"
-            ]
+            "alternateInputs": ["FC~df+1,2,1"]
           },
           {
             "name": "Windmill",
@@ -13827,9 +12872,7 @@
               "hit": "+5 +2",
               "counterHit": "+5 +2"
             },
-            "alternateInputs": [
-              "FC~df+1,2"
-            ]
+            "alternateInputs": ["FC~df+1,2"]
           },
           {
             "name": "Hammer Rush",
@@ -13948,9 +12991,7 @@
               "hit": "-2 +10 +2",
               "counterHit": "-2 +10 +2"
             },
-            "alternateInputs": [
-              "FC~df+2,1,2"
-            ]
+            "alternateInputs": ["FC~df+2,1,2"]
           },
           {
             "name": "Punch - Elbow - Uppercut",
@@ -13973,9 +13014,7 @@
               "hit": "-2",
               "counterHit": "-2"
             },
-            "alternateInputs": [
-              "FC d/f+2"
-            ]
+            "alternateInputs": ["FC d/f+2"]
           },
           {
             "name": "Hammer Uppercut Rush",
@@ -14098,30 +13137,22 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "2,2,f+1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b,d/b,d,~df+1"
-            ],
+            "launchers": ["b,d/b,d,~df+1"],
             "input": "b+1+2,2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b,d/b,d,~df+1"
-            ],
+            "launchers": ["b,d/b,d,~df+1"],
             "input": "b+1+2,2,2,f+1+2"
           }
         ],
@@ -14181,7 +13212,10 @@
     {
       "slug": "ling-xiaoyu",
       "name": "Ling Xiaoyu",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Xiaoyu.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -14297,9 +13331,7 @@
               "hit": "+1",
               "counterHit": "+1"
             },
-            "alternateInputs": [
-              "b+2"
-            ]
+            "alternateInputs": ["b+2"]
           },
           {
             "name": "Alternate Great Wall",
@@ -14310,9 +13342,7 @@
               "hit": "-3",
               "counterHit": "-3"
             },
-            "alternateInputs": [
-              "~b+2"
-            ]
+            "alternateInputs": ["~b+2"]
           },
           {
             "name": "Flappng Wings",
@@ -14501,11 +13531,7 @@
           {
             "name": "Spinner Dodge",
             "input": "3+4",
-            "alternateInputs": [
-              "d+3+4",
-              "RDS 3+4",
-              "RDS d+3+4"
-            ]
+            "alternateInputs": ["d+3+4", "RDS 3+4", "RDS d+3+4"]
           },
           {
             "name": "Dive Roll",
@@ -14574,9 +13600,7 @@
           {
             "name": "Flower Bed",
             "input": "FC d/f+4",
-            "alternateInputs": [
-              "AOP f+4"
-            ]
+            "alternateInputs": ["AOP f+4"]
           },
           {
             "name": "Flower Garden",
@@ -14615,16 +13639,12 @@
           {
             "name": "Low Parry",
             "input": "d+1+4",
-            "alternateInputs": [
-              "d/b+1+4"
-            ]
+            "alternateInputs": ["d/b+1+4"]
           },
           {
             "name": "False Salute Taunt",
             "input": "1+3+4",
-            "alternateInputs": [
-              "RDS 1+3+4"
-            ]
+            "alternateInputs": ["RDS 1+3+4"]
           },
           {
             "name": "Greetings Taunt",
@@ -14798,10 +13818,7 @@
           {
             "name": "Barrel Shotgun",
             "input": "AOP u/b+3",
-            "alternateInputs": [
-              "AOP u+3",
-              "AOP u/f+3"
-            ]
+            "alternateInputs": ["AOP u+3", "AOP u/f+3"]
           },
           {
             "name": "Double Barrel Shotgun",
@@ -14812,10 +13829,7 @@
               "hit": "KD 0",
               "counterHit": "KD 0"
             },
-            "alternateInputs": [
-              "AOP u+3,3",
-              "AOP u/f+3,3"
-            ]
+            "alternateInputs": ["AOP u+3,3", "AOP u/f+3,3"]
           },
           {
             "name": "Scissors Kick",
@@ -14826,10 +13840,7 @@
               "hit": "KD 0",
               "counterHit": "KD 0"
             },
-            "alternateInputs": [
-              "AOP u+3,4",
-              "AOP u/f+3,4"
-            ]
+            "alternateInputs": ["AOP u+3,4", "AOP u/f+3,4"]
           },
           {
             "name": "Phoenix Trip",
@@ -14840,10 +13851,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "AOP u,3",
-              "AOP u/f,3"
-            ]
+            "alternateInputs": ["AOP u,3", "AOP u/f,3"]
           },
           {
             "name": "Pirouette Kick",
@@ -14854,10 +13862,7 @@
               "hit": "+7",
               "counterHit": "+7"
             },
-            "alternateInputs": [
-              "AOP~u+3",
-              "AOP~uf+3"
-            ]
+            "alternateInputs": ["AOP~u+3", "AOP~uf+3"]
           },
           {
             "name": "Roll Out",
@@ -14882,10 +13887,7 @@
               "hit": "+6",
               "counterHit": "+6"
             },
-            "alternateInputs": [
-              "AOP u,4",
-              "AOP u/f,4"
-            ]
+            "alternateInputs": ["AOP u,4", "AOP u/f,4"]
           },
           {
             "name": "Flying Crane Kick",
@@ -14896,10 +13898,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "AOP~u+4",
-              "AOP~uf+4"
-            ]
+            "alternateInputs": ["AOP~u+4", "AOP~uf+4"]
           },
           {
             "name": "Flower Power",
@@ -14971,24 +13970,17 @@
           {
             "name": "Firecracker Roll Low Kick",
             "input": "AOP 4~3,f,3",
-            "alternateInputs": [
-              "AOP 4~3,b,3"
-            ]
+            "alternateInputs": ["AOP 4~3,b,3"]
           },
           {
             "name": "Firecracker Roll Mid Kick",
             "input": "AOP 4~3,f,4",
-            "alternateInputs": [
-              "AOP 4~3,b,4"
-            ]
+            "alternateInputs": ["AOP 4~3,b,4"]
           },
           {
             "name": "Left Jump Kick",
             "input": "u/f+3",
-            "alternateInputs": [
-              "u+3",
-              "u/b+3"
-            ]
+            "alternateInputs": ["u+3", "u/b+3"]
           },
           {
             "name": "Phoenix Advance",
@@ -15001,10 +13993,7 @@
           {
             "name": "Phoenix Jump",
             "input": "AOP~ub",
-            "alternateInputs": [
-              "AOP~u",
-              "AOP~uf"
-            ]
+            "alternateInputs": ["AOP~u", "AOP~uf"]
           },
           {
             "name": "Phoenix Quick Advance",
@@ -15041,16 +14030,12 @@
           {
             "name": "Rain Dance Sidestep",
             "input": "RDS u",
-            "alternateInputs": [
-              "RDS d"
-            ]
+            "alternateInputs": ["RDS d"]
           },
           {
             "name": "Reverse Phoenix Correction",
             "input": "AOP BT f",
-            "alternateInputs": [
-              "AOP BT b"
-            ]
+            "alternateInputs": ["AOP BT b"]
           },
           {
             "name": "Reverse Phoenix Dark & Stormy",
@@ -15079,11 +14064,7 @@
           {
             "name": "Single Fan Forward",
             "input": "u+1,f",
-            "alternateInputs": [
-              "u+1,b",
-              "u+1,u",
-              "u+1,d"
-            ]
+            "alternateInputs": ["u+1,b", "u+1,u", "u+1,d"]
           },
           {
             "name": "Single Map Sweep to Phoenix",
@@ -15120,12 +14101,7 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "RDS 4",
-              "RDS 2,1,2",
-              "FC 3,2,1,4",
-              "RDS u/f+4"
-            ],
+            "launchers": ["RDS 4", "RDS 2,1,2", "FC 3,2,1,4", "RDS u/f+4"],
             "input": "1+2"
           },
           {
@@ -15142,118 +14118,82 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2,1"
-            ],
+            "launchers": ["d/f+2,1"],
             "input": "1,d/b+3,d/b+3,d/b+3,d/b+3,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2,1"
-            ],
+            "launchers": ["d/f+2,1"],
             "input": "1,d/b+3,d/b+3,d/b+3,d/b+3,d+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "AOP~1+2",
-              "AOP 1+2"
-            ],
+            "launchers": ["AOP~1+2", "AOP 1+2"],
             "input": "1,1,1,1,f,f+1+2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "AOP~1+2",
-              "AOP 1+2"
-            ],
+            "launchers": ["AOP~1+2", "AOP 1+2"],
             "input": "1,1,1,1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH WS 2",
-              "RDS f+3+4~3+4"
-            ],
+            "launchers": ["CH WS 2", "RDS f+3+4~3+4"],
             "input": "2,2,2,2,2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH WS 2",
-              "RDS f+3+4~3+4"
-            ],
+            "launchers": ["CH WS 2", "RDS f+3+4~3+4"],
             "input": "2,2,2,2,2,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH u/f+4"
-            ],
+            "launchers": ["CH u/f+4"],
             "input": "d+1,cc,1,1,d/b+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH u/f+4"
-            ],
+            "launchers": ["CH u/f+4"],
             "input": "d+1,cc,1,f,f+1+2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH RDS d+3"
-            ],
+            "launchers": ["CH RDS d+3"],
             "input": "d+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH RDS d+3"
-            ],
+            "launchers": ["CH RDS d+3"],
             "input": "d+4,d/f+2~1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH d/b+4"
-            ],
+            "launchers": ["CH d/b+4"],
             "input": "d/b+3,1,f,f+1+2,1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH d/b+4"
-            ],
+            "launchers": ["CH d/b+4"],
             "input": "d/b+3,1,f,f+3,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "RDS f+3+4~3+4"
-            ],
+            "launchers": ["RDS f+3+4~3+4"],
             "input": "2,2,2,2,2,f+3+4~3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "RDS f+3+4~3+4"
-            ],
+            "launchers": ["RDS f+3+4~3+4"],
             "input": "2,2,2,2,2,1,f,f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "AOP u/f,3"
-            ],
+            "launchers": ["AOP u/f,3"],
             "input": "AOP 3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "AOP u/f,3"
-            ],
+            "launchers": ["AOP u/f,3"],
             "input": "AOP 4~3"
           }
         ],
@@ -15273,18 +14213,13 @@
           {
             "name": "So Shoe Me to Stone Head",
             "input": "f+2~1,5",
-            "partners": [
-              "Jin Kazama",
-              "Heihachi Mishima"
-            ],
+            "partners": ["Jin Kazama", "Heihachi Mishima"],
             "notes": "Tag after the throw connects."
           },
           {
             "name": "So Shoe Me to Bear Hug",
             "input": "f+2~1,5",
-            "partners": [
-              "Panda"
-            ],
+            "partners": ["Panda"],
             "notes": "Tag after the throw connects."
           }
         ]
@@ -15294,7 +14229,10 @@
     {
       "slug": "lee-chaolan",
       "name": "Lee Chaolan",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Lee.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -15396,9 +14334,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "SSL+4"
-            ]
+            "alternateInputs": ["SSL+4"]
           },
           {
             "name": "Slice Kick",
@@ -15499,9 +14435,7 @@
               "hit": "KD KD",
               "counterHit": "KD KD"
             },
-            "alternateInputs": [
-              "WR+3+4,4"
-            ]
+            "alternateInputs": ["WR+3+4,4"]
           },
           {
             "name": "Silver Sting",
@@ -15546,9 +14480,7 @@
               "counterHit": "KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "FC u+4"
-            ]
+            "alternateInputs": ["FC u+4"]
           },
           {
             "name": "Quick Catapult",
@@ -15571,10 +14503,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC~u+4",
-              "FC~uf+4"
-            ]
+            "alternateInputs": ["FC~u+4", "FC~uf+4"]
           },
           {
             "name": "Rainbow Kick",
@@ -15584,18 +14513,12 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC~u+3+4",
-              "FC~uf+3+4"
-            ]
+            "alternateInputs": ["FC~u+3+4", "FC~uf+3+4"]
           },
           {
             "name": "Fake Somersault",
             "input": "FC u/b",
-            "alternateInputs": [
-              "FC u",
-              "FC u/f"
-            ]
+            "alternateInputs": ["FC u", "FC u/f"]
           },
           {
             "name": "Silver Tail",
@@ -15661,9 +14584,7 @@
           {
             "name": "Hit Man Stance",
             "input": "3+4",
-            "alternateInputs": [
-              "3~4"
-            ]
+            "alternateInputs": ["3~4"]
           },
           {
             "name": "Mist Step",
@@ -15707,18 +14628,12 @@
           {
             "name": "Hit Man Cancel",
             "input": "HMS f",
-            "alternateInputs": [
-              "HMS b",
-              "HMS~u",
-              "HMS~d"
-            ]
+            "alternateInputs": ["HMS b", "HMS~u", "HMS~d"]
           },
           {
             "name": "Predator Step",
             "input": "HMS u",
-            "alternateInputs": [
-              "HMS d"
-            ]
+            "alternateInputs": ["HMS d"]
           },
           {
             "name": "Double Fang to Hitman",
@@ -15771,26 +14686,17 @@
           {
             "name": "Rising Catapult Drop",
             "input": "WS u/f+3+4",
-            "alternateInputs": [
-              "WS u+3+4",
-              "WS u/b+3+4"
-            ]
+            "alternateInputs": ["WS u+3+4", "WS u/b+3+4"]
           },
           {
             "name": "Rising Catapult Kick High",
             "input": "WS~uf+4",
-            "alternateInputs": [
-              "WS~u+4",
-              "WS~ub+4"
-            ]
+            "alternateInputs": ["WS~u+4", "WS~ub+4"]
           },
           {
             "name": "Rising Catapult Kick Low",
             "input": "WS u/f+4",
-            "alternateInputs": [
-              "WS u+4",
-              "WS u/b+4"
-            ]
+            "alternateInputs": ["WS u+4", "WS u/b+4"]
           },
           {
             "name": "Running Shredder Kick Combo High",
@@ -15835,93 +14741,62 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "u/f+4",
-              "f,f,n+3",
-              "f,f,n+(3),4"
-            ],
+            "launchers": ["d/f+2", "u/f+4", "f,f,n+3", "f,f,n+(3),4"],
             "input": "1,1,1,d,d/b+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "u/f+4",
-              "f,f,n+3",
-              "f,f,n+(3),4",
-              "HMS 4"
-            ],
+            "launchers": ["d/f+2", "u/f+4", "f,f,n+3", "f,f,n+(3),4", "HMS 4"],
             "input": "1,1,1,d,d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+3"
-            ],
+            "launchers": ["f,f+3"],
             "input": "d+3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "f,f+3"
-            ],
+            "launchers": ["f,f+3"],
             "input": "d+4,n+4,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC u/f+4"
-            ],
+            "launchers": ["FC u/f+4"],
             "input": "1,4,u/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC u/f+4"
-            ],
+            "launchers": ["FC u/f+4"],
             "input": "1,b+1,b+1,b+1,1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HMS 2"
-            ],
+            "launchers": ["HMS 2"],
             "input": "cc,1,1,1,d,d/f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HMS 2"
-            ],
+            "launchers": ["HMS 2"],
             "input": "cc,1,1,1,~f+2,2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HMS 4"
-            ],
+            "launchers": ["HMS 4"],
             "input": "1,1,1,~f+2,2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HMS 4"
-            ],
+            "launchers": ["HMS 4"],
             "input": "1,1,b+1,1,b+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d,d/b+4"
-            ],
+            "launchers": ["d,d/b+4"],
             "input": "d+1,cc,1,d+1,FC d/f,d,d/f+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d,d/b+4"
-            ],
+            "launchers": ["d,d/b+4"],
             "input": "d+1,d+1,FC d/f+4"
           }
         ],
@@ -15953,9 +14828,7 @@
           {
             "name": "Silver Tail extension",
             "input": "FC d/f+4,2~2~1",
-            "partners": [
-              "Kazuya Mishima"
-            ],
+            "partners": ["Kazuya Mishima"],
             "notes": "Available with Kazuya as partner."
           }
         ]
@@ -15965,7 +14838,10 @@
     {
       "slug": "forest-law",
       "name": "Forest Law",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Forest.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -16062,9 +14938,7 @@
               "hit": "+18",
               "counterHit": "+18"
             },
-            "alternateInputs": [
-              "BT 2"
-            ]
+            "alternateInputs": ["BT 2"]
           },
           {
             "name": "Dragon Hammer",
@@ -16139,9 +15013,7 @@
               "hit": "+9 KD",
               "counterHit": "+9 KD"
             },
-            "alternateInputs": [
-              "d+2,3"
-            ]
+            "alternateInputs": ["d+2,3"]
           },
           {
             "name": "Dragon Upper",
@@ -16249,9 +15121,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Dragon Slide",
@@ -16294,10 +15164,7 @@
               "counterHit": "KD KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "u+3,4",
-              "u/f+3,4"
-            ]
+            "alternateInputs": ["u+3,4", "u/f+3,4"]
           },
           {
             "name": "Double Dragon",
@@ -16334,10 +15201,7 @@
             "name": "Quick Catapult",
             "input": "FC u/b+4",
             "taggable": true,
-            "alternateInputs": [
-              "FC u+4",
-              "FC u/f+4"
-            ]
+            "alternateInputs": ["FC u+4", "FC u/f+4"]
           },
           {
             "name": "Fake Somersault - Sky Kick",
@@ -16349,10 +15213,7 @@
               "counterHit": "KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "FC u,4",
-              "FC u/f,4"
-            ]
+            "alternateInputs": ["FC u,4", "FC u/f,4"]
           },
           {
             "name": "High Catapult Kick",
@@ -16363,10 +15224,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC~u+4",
-              "FC~uf+4"
-            ]
+            "alternateInputs": ["FC~u+4", "FC~uf+4"]
           },
           {
             "name": "Rainbow Kick",
@@ -16376,10 +15234,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "FC~u+3+4",
-              "FC~uf+3+4"
-            ]
+            "alternateInputs": ["FC~u+3+4", "FC~uf+3+4"]
           },
           {
             "name": "Roundhouse - Somersault",
@@ -16390,9 +15245,7 @@
               "hit": "+5 KD",
               "counterHit": "KD KD"
             },
-            "alternateInputs": [
-              "4,uf+3"
-            ]
+            "alternateInputs": ["4,uf+3"]
           },
           {
             "name": "Side Kick - Somersault",
@@ -16403,9 +15256,7 @@
               "hit": "+3 KD",
               "counterHit": "+3 KD"
             },
-            "alternateInputs": [
-              "d+4,3"
-            ]
+            "alternateInputs": ["d+4,3"]
           },
           {
             "name": "Front Kick - Somersault",
@@ -16431,10 +15282,7 @@
               "counterHit": "KD"
             },
             "taggable": true,
-            "alternateInputs": [
-              "~u",
-              "~uf+4"
-            ]
+            "alternateInputs": ["~u", "~uf+4"]
           },
           {
             "name": "Dragon Tail",
@@ -16467,32 +15315,22 @@
           {
             "name": "High Parry",
             "input": "b+1+3",
-            "alternateInputs": [
-              "b+2+4"
-            ]
+            "alternateInputs": ["b+2+4"]
           },
           {
             "name": "Low Parry",
             "input": "d+1+3",
-            "alternateInputs": [
-              "d+2+4",
-              "d/b+1+3",
-              "d/b+2+4"
-            ]
+            "alternateInputs": ["d+2+4", "d/b+1+3", "d/b+2+4"]
           },
           {
             "name": "Backflip",
             "input": "f+3+4",
-            "alternateInputs": [
-              "b+3+4"
-            ]
+            "alternateInputs": ["b+3+4"]
           },
           {
             "name": "Backflipper",
             "input": "f+3+4,3",
-            "alternateInputs": [
-              "b+3+4,3"
-            ]
+            "alternateInputs": ["b+3+4,3"]
           },
           {
             "name": "Basic Left Kick Less Damage",
@@ -16501,10 +15339,7 @@
           {
             "name": "Crouching Dragon Somersault Kicks",
             "input": "FC u/f+4,3",
-            "alternateInputs": [
-              "FC u+4,3",
-              "FC u/b+4,3"
-            ]
+            "alternateInputs": ["FC u+4,3", "FC u/b+4,3"]
           },
           {
             "name": "Dragon Low Triple Head Kick",
@@ -16533,10 +15368,7 @@
           {
             "name": "Left Jump Kick",
             "input": "u/f+3",
-            "alternateInputs": [
-              "u+3",
-              "u/b+3"
-            ]
+            "alternateInputs": ["u+3", "u/b+3"]
           },
           {
             "name": "PK Combo",
@@ -16557,33 +15389,22 @@
           {
             "name": "Rising Catapult Kick",
             "input": "WS~uf+4",
-            "alternateInputs": [
-              "WS~u+4",
-              "WS~ub+4"
-            ]
+            "alternateInputs": ["WS~u+4", "WS~ub+4"]
           },
           {
             "name": "Rising Rainbow Kick",
             "input": "WS u/f+3+4",
-            "alternateInputs": [
-              "WS u+3+4",
-              "WS u/b+3+4"
-            ]
+            "alternateInputs": ["WS u+3+4", "WS u/b+3+4"]
           },
           {
             "name": "Rising Somersault Kick",
             "input": "WS u/f+4",
-            "alternateInputs": [
-              "WS u+4",
-              "WS u/b+4"
-            ]
+            "alternateInputs": ["WS u+4", "WS u/b+4"]
           },
           {
             "name": "Somersault Kick",
             "input": "~u+4",
-            "alternateInputs": [
-              "~ub+4"
-            ]
+            "alternateInputs": ["~ub+4"]
           }
         ],
         "combos": [
@@ -16609,84 +15430,52 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "FC u,4",
-              "d+2,3",
-              "WS (3),4"
-            ],
+            "launchers": ["d/f+2", "FC u,4", "d+2,3", "WS (3),4"],
             "input": "1,1,1,b+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "FC u,4",
-              "d+2,3",
-              "WS (3),4"
-            ],
+            "launchers": ["d/f+2", "FC u,4", "d+2,3", "WS (3),4"],
             "input": "1,1,1,b+2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["u/f+4", "u/f,n+4"],
             "input": "4,1,b+2,3,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "u/f+4",
-              "u/f,n+4"
-            ],
+            "launchers": ["u/f+4", "u/f,n+4"],
             "input": "4,1,2,b+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+2,3,4"
-            ],
+            "launchers": ["b+2,3,4"],
             "input": "1,1,1,b+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "b+2,3,4"
-            ],
+            "launchers": ["b+2,3,4"],
             "input": "1,1,b+2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC u,4",
-              "d+2,3",
-              "WS (3),4"
-            ],
+            "launchers": ["FC u,4", "d+2,3", "WS (3),4"],
             "input": "1,1,d+3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "FC u,4",
-              "d+2,3",
-              "WS (3),4"
-            ],
+            "launchers": ["FC u,4", "d+2,3", "WS (3),4"],
             "input": "1,1,d/f+3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~uf+4,3"
-            ],
+            "launchers": ["~uf+4,3"],
             "input": "1,b+2,d+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~uf+4,3"
-            ],
+            "launchers": ["~uf+4,3"],
             "input": "1,b+2,3,4"
           }
         ],
@@ -16705,25 +15494,19 @@
           {
             "name": "Poison Arrow to Thruster",
             "input": "f+2~1~5 > 1",
-            "partners": [
-              "Paul Phoenix"
-            ],
+            "partners": ["Paul Phoenix"],
             "notes": "Paul performs the final 1."
           },
           {
             "name": "Poison Arrow relay",
             "input": "f+2~1~5 > 2,2 > 1",
-            "partners": [
-              "Paul Phoenix"
-            ],
+            "partners": ["Paul Phoenix"],
             "notes": "Paul performs 2,2; Law returns automatically and performs the final 1."
           },
           {
             "name": "Poison Arrow to Burning Knuckle",
             "input": "f+2~1~5 >~d",
-            "partners": [
-              "Armor King"
-            ],
+            "partners": ["Armor King"],
             "notes": "Hold down for Armor King’s unblockable follow-up."
           }
         ],
@@ -16731,9 +15514,7 @@
           {
             "name": "Tag juggle",
             "input": "~uf+4~5 > qcf+2",
-            "partners": [
-              "Paul Phoenix"
-            ],
+            "partners": ["Paul Phoenix"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 51
           }
@@ -16744,7 +15525,10 @@
     {
       "slug": "baek-doo-san",
       "name": "Baek Doo San",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Baek.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -16942,9 +15726,7 @@
           {
             "name": "Leaping Slash Kick",
             "input": "WR+3",
-            "alternateInputs": [
-              "f,f,f+3"
-            ]
+            "alternateInputs": ["f,f,f+3"]
           },
           {
             "name": "Baek Hop",
@@ -16959,9 +15741,7 @@
               "hit": "-3 -9 -3",
               "counterHit": "-3 -9 -3"
             },
-            "alternateInputs": [
-              "d+3,3,d+3"
-            ]
+            "alternateInputs": ["d+3,3,d+3"]
           },
           {
             "name": "Snake Blade",
@@ -17082,9 +15862,7 @@
               "hit": "-3 -3 -20 -14",
               "counterHit": "-3 -3 -20 -14"
             },
-            "alternateInputs": [
-              "d+4,3,3,d+3"
-            ]
+            "alternateInputs": ["d+4,3,3,d+3"]
           },
           {
             "name": "Flamingo Stance",
@@ -17101,9 +15879,7 @@
           {
             "name": "Flamingo Side Step",
             "input": "(Flamingo) u",
-            "alternateInputs": [
-              "(Flamingo) d"
-            ]
+            "alternateInputs": ["(Flamingo) d"]
           },
           {
             "name": "Human Cannonball",
@@ -17129,10 +15905,7 @@
               "hit": "-3",
               "counterHit": "-3"
             },
-            "alternateInputs": [
-              "(Flamingo) d+3",
-              "(Flamingo) d/f+3"
-            ]
+            "alternateInputs": ["(Flamingo) d+3", "(Flamingo) d/f+3"]
           },
           {
             "name": "Flamingo Wave Needle",
@@ -17167,50 +15940,32 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "1,1,1,1,3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2"
-            ],
+            "launchers": ["d/f+2"],
             "input": "1,1,1,1,f,f+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 1,2,3,3,3,4",
-              "CH 3,3,3,4",
-              "CH u/f,n+3,3,3,4"
-            ],
+            "launchers": ["CH 1,2,3,3,3,4", "CH 3,3,3,4", "CH u/f,n+3,3,3,4"],
             "input": "3,3,3,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 1,2,3,3,3,4",
-              "CH 3,3,3,4",
-              "CH u/f,n+3,3,3,4"
-            ],
+            "launchers": ["CH 1,2,3,3,3,4", "CH 3,3,3,4", "CH u/f,n+3,3,3,4"],
             "input": "3,4,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+2",
-              "f,f+3"
-            ],
+            "launchers": ["CH b+2", "f,f+3"],
             "input": "d+3,3,n+3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+2",
-              "f,f+3"
-            ],
+            "launchers": ["CH b+2", "f,f+3"],
             "input": "d+4,3,3"
           }
         ],
@@ -17229,9 +15984,7 @@
           {
             "name": "Human Cannonball tag throw",
             "input": "f+2+3,5",
-            "partners": [
-              "Hwoarang"
-            ],
+            "partners": ["Hwoarang"],
             "notes": "Tag after the throw connects."
           }
         ],
@@ -17239,9 +15992,7 @@
           {
             "name": "Tag juggle",
             "input": "3,4,3,5 > 1,2,4",
-            "partners": [
-              "Hwoarang"
-            ],
+            "partners": ["Hwoarang"],
             "notes": "After tagging, pause before Hwoarang performs 1,2,4.",
             "reportedDamage": 75
           }
@@ -17259,7 +16010,10 @@
     {
       "slug": "hwoarang",
       "name": "Hwoarang",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Hwo.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -17359,9 +16113,7 @@
               "hit": "-5",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "LFF f+3~3"
-            ]
+            "alternateInputs": ["LFF f+3~3"]
           },
           {
             "name": "Flamingo Kick",
@@ -17475,11 +16227,7 @@
           {
             "name": "Low Parry",
             "input": "d+1+3",
-            "alternateInputs": [
-              "d+2+4",
-              "d/b+1+3",
-              "d/b+2+4"
-            ]
+            "alternateInputs": ["d+2+4", "d/b+1+3", "d/b+2+4"]
           },
           {
             "name": "Double Punch",
@@ -17755,10 +16503,7 @@
           {
             "name": "Lefty",
             "input": "RFF~f",
-            "alternateInputs": [
-              "RFF~b",
-              "LFS n"
-            ]
+            "alternateInputs": ["RFF~b", "LFS n"]
           },
           {
             "name": "Migrane",
@@ -17984,33 +16729,22 @@
           {
             "name": "Right Foot Forward Cancel",
             "input": "RFF d/f,n",
-            "alternateInputs": [
-              "RFF d/b,n",
-              "RFF u/b,n"
-            ]
+            "alternateInputs": ["RFF d/b,n", "RFF u/b,n"]
           },
           {
             "name": "Side Step",
             "input": "LFS u",
-            "alternateInputs": [
-              "LFS d",
-              "RFS u",
-              "RFS d"
-            ]
+            "alternateInputs": ["LFS d", "RFS u", "RFS d"]
           },
           {
             "name": "Flamingo Steppin'",
             "input": "LFS f",
-            "alternateInputs": [
-              "RFS f"
-            ]
+            "alternateInputs": ["RFS f"]
           },
           {
             "name": "Flamingo Back Dash",
             "input": "LFS b",
-            "alternateInputs": [
-              "RFS b"
-            ]
+            "alternateInputs": ["RFS b"]
           },
           {
             "name": "Left Jab",
@@ -18063,9 +16797,7 @@
               "hit": "-11",
               "counterHit": "-11"
             },
-            "alternateInputs": [
-              "LFS d/b+3"
-            ]
+            "alternateInputs": ["LFS d/b+3"]
           },
           {
             "name": "Machine Gun Kicks",
@@ -18134,11 +16866,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "LFS d/b+4",
-              "RFS d+3",
-              "RFS d/b+3"
-            ]
+            "alternateInputs": ["LFS d/b+4", "RFS d+3", "RFS d/b+3"]
           },
           {
             "name": "Righty",
@@ -18226,9 +16954,7 @@
               "hit": "-8",
               "counterHit": "-8"
             },
-            "alternateInputs": [
-              "RFS d/b+4"
-            ]
+            "alternateInputs": ["RFS d/b+4"]
           },
           {
             "name": "Back Turned High Kick (LFF)",
@@ -18299,16 +17025,12 @@
           {
             "name": "Roundhouse Jump Kick",
             "input": "u+4",
-            "alternateInputs": [
-              "u/b+4"
-            ]
+            "alternateInputs": ["u/b+4"]
           },
           {
             "name": "Smash Low Right Mid Combo",
             "input": "RFF d+3,4,4",
-            "alternateInputs": [
-              "LFF d+3,4,4"
-            ]
+            "alternateInputs": ["LFF d+3,4,4"]
           }
         ],
         "combos": [
@@ -18324,48 +17046,32 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH d/f+2",
-              "CH WS 2",
-              "BT RFF 3"
-            ],
+            "launchers": ["CH d/f+2", "CH WS 2", "BT RFF 3"],
             "input": "1,1,1,d+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH d/f+2",
-              "CH WS 2",
-              "BT RFF 3"
-            ],
+            "launchers": ["CH d/f+2", "CH WS 2", "BT RFF 3"],
             "input": "1,1,2,d+4,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+4,4"
-            ],
+            "launchers": ["d+4,4"],
             "input": "1,1,1,2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d+4,4"
-            ],
+            "launchers": ["d+4,4"],
             "input": "1,1,1,2,4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 4~f"
-            ],
+            "launchers": ["CH 4~f"],
             "input": "2,2,2,2,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH 4~f"
-            ],
+            "launchers": ["CH 4~f"],
             "input": "2,2,2,2,4,3"
           }
         ],
@@ -18393,9 +17099,7 @@
           {
             "name": "Human Cannonball tag throw",
             "input": "f+2+3,5",
-            "partners": [
-              "Baek Doo San"
-            ],
+            "partners": ["Baek Doo San"],
             "notes": "Tag after the throw connects."
           }
         ]
@@ -18405,7 +17109,10 @@
     {
       "slug": "eddy-gordo",
       "name": "Eddy Gordo",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Eddy.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -18483,10 +17190,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u+1+2",
-              "u/f+1+2"
-            ]
+            "alternateInputs": ["u+1+2", "u/f+1+2"]
           },
           {
             "name": "Asfixiante",
@@ -18636,9 +17340,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "u/f+4"
-            ]
+            "alternateInputs": ["u/f+4"]
           },
           {
             "name": "Satellite Moon",
@@ -18667,17 +17369,12 @@
           {
             "name": "Rewinder",
             "input": "1+2",
-            "alternateInputs": [
-              "d+1+2",
-              "SS"
-            ]
+            "alternateInputs": ["d+1+2", "SS"]
           },
           {
             "name": "Handstand Sidestep",
             "input": "HSP u",
-            "alternateInputs": [
-              "HSP d"
-            ]
+            "alternateInputs": ["HSP d"]
           },
           {
             "name": "Handstand Walk",
@@ -18690,9 +17387,7 @@
           {
             "name": "Stand Up",
             "input": "HSP b",
-            "alternateInputs": [
-              "HSP n"
-            ]
+            "alternateInputs": ["HSP n"]
           },
           {
             "name": "Handstand Roll",
@@ -18751,11 +17446,7 @@
               "hit": "-6",
               "counterHit": "-6"
             },
-            "alternateInputs": [
-              "HSP u~4",
-              "HSP d~3",
-              "HSP d~4"
-            ]
+            "alternateInputs": ["HSP u~4", "HSP d~3", "HSP d~4"]
           },
           {
             "name": "Perch Flop Kick",
@@ -18884,16 +17575,12 @@
           {
             "name": "10 Hit Combo 2.5",
             "input": "4~3,4,2,4,3,4,1+2,1+2",
-            "alternateInputs": [
-              "4~3,4,2,4,3,4,1+2,1"
-            ]
+            "alternateInputs": ["4~3,4,2,4,3,4,1+2,1"]
           },
           {
             "name": "10 Hit Combo 2.51",
             "input": "4~3,4,2,4,3,4,1+2,1+2,2",
-            "alternateInputs": [
-              "4~3,4,2,4,3,4,1+2,1,2"
-            ]
+            "alternateInputs": ["4~3,4,2,4,3,4,1+2,1,2"]
           },
           {
             "name": "Back Handspring Halt",
@@ -18922,9 +17609,7 @@
           {
             "name": "Firekick",
             "input": "u+3+4",
-            "alternateInputs": [
-              "u/b+3+4"
-            ]
+            "alternateInputs": ["u/b+3+4"]
           },
           {
             "name": "Firekick to Relax",
@@ -18953,16 +17638,12 @@
           {
             "name": "Leg Whip Mars Attack to Hammer Head",
             "input": "b+4,3,4,1+2,1+2",
-            "alternateInputs": [
-              "b+4,3,4,1+2,1"
-            ]
+            "alternateInputs": ["b+4,3,4,1+2,1"]
           },
           {
             "name": "Leg Whip Mars Attack to Screw Driver",
             "input": "b+4,3,4,1+2,1+2,2",
-            "alternateInputs": [
-              "b+4,3,4,1+2,1,2"
-            ]
+            "alternateInputs": ["b+4,3,4,1+2,1,2"]
           },
           {
             "name": "Low Front Stinger Halt",
@@ -18999,16 +17680,12 @@
           {
             "name": "Samba Slippery Kick to Hammer Head",
             "input": "f+4,3+4,4,1+2,1+2",
-            "alternateInputs": [
-              "f+4,3+4,4,1+2,1"
-            ]
+            "alternateInputs": ["f+4,3+4,4,1+2,1"]
           },
           {
             "name": "Samba Slippery Kick to Screw Driver",
             "input": "f+4,3+4,4,1+2,1+2,2",
-            "alternateInputs": [
-              "f+4,3+4,4,1+2,1,2"
-            ]
+            "alternateInputs": ["f+4,3+4,4,1+2,1,2"]
           },
           {
             "name": "Samba Slippery Kick to Handstand",
@@ -19021,41 +17698,27 @@
           {
             "name": "Screw Driver",
             "input": "FC 1+2,1+2,2",
-            "alternateInputs": [
-              "FC 1+2,1,2"
-            ]
+            "alternateInputs": ["FC 1+2,1,2"]
           },
           {
             "name": "Sidestep to Jumping Jacks",
             "input": "SS,u+3",
-            "alternateInputs": [
-              "SS,u/b+3",
-              "SS,u/f+3"
-            ]
+            "alternateInputs": ["SS,u/b+3", "SS,u/f+3"]
           },
           {
             "name": "Sidestep to Jumping Jacks Evil Stinger",
             "input": "SS,u+3,3+4",
-            "alternateInputs": [
-              "SS,u/b+3,3+4",
-              "SS,u/f+3,3+4"
-            ]
+            "alternateInputs": ["SS,u/b+3,3+4", "SS,u/f+3,3+4"]
           },
           {
             "name": "Sidestep to Jumping Jacks Mirage",
             "input": "SS,u+3,3",
-            "alternateInputs": [
-              "SS,u/b+3,3",
-              "SS,u/f+3,3"
-            ]
+            "alternateInputs": ["SS,u/b+3,3", "SS,u/f+3,3"]
           },
           {
             "name": "Sidestep to Jumping Jacks Negativa",
             "input": "SS,u+3,~d",
-            "alternateInputs": [
-              "SS,u/b+3,~d",
-              "SS,u/f+3,~d"
-            ]
+            "alternateInputs": ["SS,u/b+3,~d", "SS,u/f+3,~d"]
           },
           {
             "name": "Slippery Kick to Crying Needle",
@@ -19064,30 +17727,22 @@
           {
             "name": "Slippery Kick to Hammer Head",
             "input": "3~4,4,1+2,1+2",
-            "alternateInputs": [
-              "3~4,4,1+2,1"
-            ]
+            "alternateInputs": ["3~4,4,1+2,1"]
           },
           {
             "name": "Slippery Kick to Screw Driver",
             "input": "3~4,4,1+2,1+2,2",
-            "alternateInputs": [
-              "3~4,4,1+2,1,2"
-            ]
+            "alternateInputs": ["3~4,4,1+2,1,2"]
           },
           {
             "name": "Thong Bikini to Hammer Head",
             "input": "d/b+3~4,1+2,1+2",
-            "alternateInputs": [
-              "d/b+3~4,1+2,1"
-            ]
+            "alternateInputs": ["d/b+3~4,1+2,1"]
           },
           {
             "name": "Thong Bikini to Screw Driver",
             "input": "d/b+3~4,1+2,1+2,2",
-            "alternateInputs": [
-              "d/b+3~4,1+2,1,2"
-            ]
+            "alternateInputs": ["d/b+3~4,1+2,1,2"]
           },
           {
             "name": "Twister Front Stinger to Handstand",
@@ -19104,9 +17759,7 @@
           {
             "name": "Wheel Kicks Sao Paulo Special to Rexlaxed Position",
             "input": "SS+3+4,3+4,3+4,u/f+3+4,~b",
-            "alternateInputs": [
-              "SS+3+4,3+4,3+4,u/f+3+4,~d"
-            ]
+            "alternateInputs": ["SS+3+4,3+4,3+4,u/f+3+4,~d"]
           }
         ],
         "combos": [
@@ -19117,74 +17770,52 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4"
-            ],
+            "launchers": ["CH b+4"],
             "input": "1,2,4~4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH b+4"
-            ],
+            "launchers": ["CH b+4"],
             "input": "3~3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,f+3+4"
-            ],
+            "launchers": ["CH f,f+3+4"],
             "input": "1,1,1,1,2,4~4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CH f,f+3+4"
-            ],
+            "launchers": ["CH f,f+3+4"],
             "input": "1,1,1,d/f+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HSP d+3+4"
-            ],
+            "launchers": ["HSP d+3+4"],
             "input": "1,cc,1,1,2,4~4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "HSP d+3+4"
-            ],
+            "launchers": ["HSP d+3+4"],
             "input": "1,cc,1,d/f+3+4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3~4",
-              "3~3"
-            ],
+            "launchers": ["3~4", "3~3"],
             "input": "3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3~4",
-              "3~3"
-            ],
+            "launchers": ["3~4", "3~3"],
             "input": "3~4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3~3"
-            ],
+            "launchers": ["3~3"],
             "input": "1+2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "3~3"
-            ],
+            "launchers": ["3~3"],
             "input": "4"
           }
         ],
@@ -19205,7 +17836,10 @@
     {
       "slug": "lei-wulong",
       "name": "Lei Wulong",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Lei.webp",
+        "fit": "cover"
+      },
       "sections": {
         "throws": [
           {
@@ -19244,9 +17878,7 @@
             "name": "Out of Control",
             "input": "(Dragon stance) 1",
             "breakInput": "1",
-            "alternateInputs": [
-              "(Snake stance) 1+3"
-            ]
+            "alternateInputs": ["(Snake stance) 1+3"]
           }
         ],
         "moves": [
@@ -19276,9 +17908,7 @@
             "frameData": {
               "startup": "35"
             },
-            "alternateInputs": [
-              "u/f+2"
-            ]
+            "alternateInputs": ["u/f+2"]
           },
           {
             "name": "Guard Melting Punches",
@@ -19289,9 +17919,7 @@
               "hit": "x +2 -17 KD",
               "counterHit": "x +2 KD KD"
             },
-            "alternateInputs": [
-              "(Panther stance) 2,1,2,1"
-            ]
+            "alternateInputs": ["(Panther stance) 2,1,2,1"]
           },
           {
             "name": "Breaking Rush",
@@ -19370,9 +17998,7 @@
               "hit": "-11 +10 -1 KD",
               "counterHit": "-11 +10 -1 KD"
             },
-            "alternateInputs": [
-              "(Dragon stance) 4,1,2,3"
-            ]
+            "alternateInputs": ["(Dragon stance) 4,1,2,3"]
           },
           {
             "name": "Beating Kick",
@@ -19391,11 +18017,7 @@
           {
             "name": "Art of Snake Stance",
             "input": "SS+1+4",
-            "alternateInputs": [
-              "SS+2+3",
-              "f+1+4",
-              "f+2+3"
-            ]
+            "alternateInputs": ["SS+2+3", "f+1+4", "f+2+3"]
           },
           {
             "name": "Drunken Master Parry",
@@ -19416,11 +18038,7 @@
           {
             "name": "Low Parry",
             "input": "d+1+3",
-            "alternateInputs": [
-              "d+2+4",
-              "d/b+1+3",
-              "d/b+2+4"
-            ]
+            "alternateInputs": ["d+2+4", "d/b+1+3", "d/b+2+4"]
           },
           {
             "name": "Spinning Back Blow",
@@ -19441,9 +18059,7 @@
               "hit": "KD",
               "counterHit": "KD"
             },
-            "alternateInputs": [
-              "BT d+1"
-            ]
+            "alternateInputs": ["BT d+1"]
           },
           {
             "name": "Spiral Upper",
@@ -19463,9 +18079,7 @@
             "frameData": {
               "startup": "33"
             },
-            "alternateInputs": [
-              "BT u/f+2"
-            ]
+            "alternateInputs": ["BT u/f+2"]
           },
           {
             "name": "Flip Flop",
@@ -19535,9 +18149,7 @@
           {
             "name": "Art of Panther",
             "input": "CRA SSL",
-            "alternateInputs": [
-              "(Snake stance) SSR"
-            ]
+            "alternateInputs": ["(Snake stance) SSR"]
           },
           {
             "name": "Art of Snake",
@@ -19597,9 +18209,7 @@
           {
             "name": "Art of Dragon",
             "input": "(Tiger stance) SSR",
-            "alternateInputs": [
-              "(Snake stance) SSL"
-            ]
+            "alternateInputs": ["(Snake stance) SSL"]
           },
           {
             "name": "Automatic Low Parry",
@@ -19718,9 +18328,7 @@
           {
             "name": "Crouching Low Kick to Snake",
             "input": "BT FC~d+4,d",
-            "alternateInputs": [
-              "BT FC~d+4,u"
-            ]
+            "alternateInputs": ["BT FC~d+4,u"]
           },
           {
             "name": "Dragon to Snake Stance",
@@ -19757,17 +18365,12 @@
           {
             "name": "Left Jump Kick",
             "input": "u/f+3",
-            "alternateInputs": [
-              "u+3",
-              "u/b+3"
-            ]
+            "alternateInputs": ["u+3", "u/b+3"]
           },
           {
             "name": "Low Kick to Snake Stance",
             "input": "d/b+4~u",
-            "alternateInputs": [
-              "d/b+4~d"
-            ]
+            "alternateInputs": ["d/b+4~d"]
           },
           {
             "name": "Panther to Snake Stance",
@@ -19784,16 +18387,12 @@
           {
             "name": "Phoenix Illusion Cancel",
             "input": "AOP u",
-            "alternateInputs": [
-              "AOP d"
-            ]
+            "alternateInputs": ["AOP d"]
           },
           {
             "name": "Phoenix Strike Triple Tornado Kicks",
             "input": "AOP b+4,u,u",
-            "alternateInputs": [
-              "AOP b+4,~u"
-            ]
+            "alternateInputs": ["AOP b+4,~u"]
           },
           {
             "name": "Retreating High and Low Kicks",
@@ -19806,9 +18405,7 @@
           {
             "name": "Reverse Low Kick to Snake Stance",
             "input": "BT d+4~u",
-            "alternateInputs": [
-              "BT d+4~d"
-            ]
+            "alternateInputs": ["BT d+4~d"]
           },
           {
             "name": "Snake Bites Lift Cannon",
@@ -19821,9 +18418,7 @@
           {
             "name": "Snake Palm Fist to Dragon Stance",
             "input": "SS+1,~u",
-            "alternateInputs": [
-              "SS+1,~d"
-            ]
+            "alternateInputs": ["SS+1,~d"]
           },
           {
             "name": "Snake Palm Fist to Tiger Stance",
@@ -19850,9 +18445,7 @@
           {
             "name": "Stance Mid/High Auto-guard",
             "input": "(Snake stance) n",
-            "alternateInputs": [
-              "(Tiger stance) n"
-            ]
+            "alternateInputs": ["(Tiger stance) n"]
           },
           {
             "name": "Stance Retreat",
@@ -19866,37 +18459,27 @@
           {
             "name": "Tiger Razor Rush Crane",
             "input": "(Tiger stance) 3,1,2,1,2,4,u",
-            "alternateInputs": [
-              "(Tiger stance) 3,1,2,1,2,4,d"
-            ]
+            "alternateInputs": ["(Tiger stance) 3,1,2,1,2,4,d"]
           },
           {
             "name": "Tiger Razor Rush Dragon",
             "input": "(Tiger stance) 3,1,2,u",
-            "alternateInputs": [
-              "(Tiger stance) 3,1,2,d"
-            ]
+            "alternateInputs": ["(Tiger stance) 3,1,2,d"]
           },
           {
             "name": "Tiger Razor Rush Panther",
             "input": "(Tiger stance) 3,1,2,1,u",
-            "alternateInputs": [
-              "(Tiger stance) 3,1,2,1,d"
-            ]
+            "alternateInputs": ["(Tiger stance) 3,1,2,1,d"]
           },
           {
             "name": "Tiger Razor Rush Snake",
             "input": "(Tiger stance) 3,1,u",
-            "alternateInputs": [
-              "(Tiger stance) 3,1,d"
-            ]
+            "alternateInputs": ["(Tiger stance) 3,1,d"]
           },
           {
             "name": "Tiger Razor Rush Tiger",
             "input": "(Tiger stance) 3,1,2,1,2,u",
-            "alternateInputs": [
-              "(Tiger stance) 3,1,2,1,2,d"
-            ]
+            "alternateInputs": ["(Tiger stance) 3,1,2,1,2,d"]
           },
           {
             "name": "Tiger to Dragon Stance",
@@ -19905,40 +18488,28 @@
           {
             "name": "Triple Axis Shifting Tornado Kick",
             "input": "f+3~4,u,u",
-            "alternateInputs": [
-              "f+3~4,~u"
-            ]
+            "alternateInputs": ["f+3~4,~u"]
           },
           {
             "name": "Triple Tornado Kick",
             "input": "3~4,u,u",
-            "alternateInputs": [
-              "3~4,~u"
-            ]
+            "alternateInputs": ["3~4,~u"]
           },
           {
             "name": "Twin Snake Strikes to Crane Stance",
             "input": "f+1+2,~f",
-            "alternateInputs": [
-              "~f+1+2"
-            ]
+            "alternateInputs": ["~f+1+2"]
           },
           {
             "name": "Twin Snake Strikes to Panther Stance",
             "input": "f+1+2,~u",
-            "alternateInputs": [
-              "f+1+2,~d"
-            ]
+            "alternateInputs": ["f+1+2,~d"]
           }
         ],
         "combos": [
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/f+2",
-              "f+4",
-              "(Panther stance) 4"
-            ],
+            "launchers": ["d/f+2", "f+4", "(Panther stance) 4"],
             "input": "1+2,2,d+3"
           },
           {
@@ -19956,9 +18527,7 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "(Dragon stance) 2"
-            ],
+            "launchers": ["(Dragon stance) 2"],
             "input": "1,1+2,BT 3"
           },
           {
@@ -19984,82 +18553,57 @@
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "CRA 3,4,2,3",
-              "BT 2",
-              "(Tiger stance) 1"
-            ],
+            "launchers": ["CRA 3,4,2,3", "BT 2", "(Tiger stance) 1"],
             "input": "1,1,f,n+1,f,n+1,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "(Tiger stance) 4"
-            ],
+            "launchers": ["(Tiger stance) 4"],
             "input": "WS 1,1,4~4,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "(Tiger stance) 4"
-            ],
+            "launchers": ["(Tiger stance) 4"],
             "input": "WS 4,4~4,3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "(Tiger stance) 1"
-            ],
+            "launchers": ["(Tiger stance) 1"],
             "input": "1,2,f,n+1,4~4"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "(Tiger stance) 1",
-              "~db+3+4,3"
-            ],
+            "launchers": ["(Tiger stance) 1", "~db+3+4,3"],
             "input": "1,4~4,3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2~2"
-            ],
+            "launchers": ["1+2~2"],
             "input": "BT d+1,BT d+1,BT 1,BT d+1"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "1+2~2"
-            ],
+            "launchers": ["1+2~2"],
             "input": "BT d+1,BT d+1,BT 3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+4"
-            ],
+            "launchers": ["d/b+4"],
             "input": "d/f+1,1+2,2"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "d/b+4"
-            ],
+            "launchers": ["d/b+4"],
             "input": "d/f+1,4~4,3,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~db+3+4,3"
-            ],
+            "launchers": ["~db+3+4,3"],
             "input": "1,f,n+1,3"
           },
           {
             "name": "Juggle follow-up",
-            "launchers": [
-              "~db+3+4,3"
-            ],
+            "launchers": ["~db+3+4,3"],
             "input": "1,f,n+1,f,n+1,4~4,3"
           }
         ],
@@ -20067,9 +18611,7 @@
           {
             "name": "Tag juggle",
             "input": "4~4,3,3,5 > f,~f+2",
-            "partners": [
-              "Bryan Fury"
-            ],
+            "partners": ["Bryan Fury"],
             "notes": "After 5, the named partner performs the remaining inputs.",
             "reportedDamage": 59
           }
@@ -20080,47 +18622,54 @@
     {
       "slug": "panda",
       "name": "Panda",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Panda.webp",
+        "fit": "cover"
+      },
       "sharedGuide": "kuma",
       "sections": {},
-      "notes": [
-        "Uses Kuma's shared move and combo guide."
-      ]
+      "notes": ["Uses Kuma's shared move and combo guide."]
     },
     {
       "slug": "angel",
       "name": "Angel",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Angel.webp",
+        "fit": "cover"
+      },
       "sharedGuide": "devil",
       "sections": {},
-      "notes": [
-        "Uses Devil's shared move and combo guide."
-      ]
+      "notes": ["Uses Devil's shared move and combo guide."]
     },
     {
       "slug": "alex",
       "name": "Alex",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Alex.webp",
+        "fit": "cover"
+      },
       "sharedGuide": "roger",
       "sections": {},
-      "notes": [
-        "Uses Roger's shared move and combo guide."
-      ]
+      "notes": ["Uses Roger's shared move and combo guide."]
     },
     {
       "slug": "tiger-jackson",
       "name": "Tiger Jackson",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Tiger.webp",
+        "fit": "cover"
+      },
       "sharedGuide": "eddy-gordo",
       "sections": {},
-      "notes": [
-        "Uses Eddy Gordo's shared move and combo guide."
-      ]
+      "notes": ["Uses Eddy Gordo's shared move and combo guide."]
     },
     {
       "slug": "mokujin",
       "name": "Mokujin",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Mokujin.webp",
+        "fit": "cover"
+      },
       "mimic": true,
       "sections": {},
       "notes": [
@@ -20130,7 +18679,10 @@
     {
       "slug": "tetsujin",
       "name": "Tetsujin",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Tetsujin.webp",
+        "fit": "cover"
+      },
       "mimic": true,
       "sections": {},
       "notes": [
@@ -20140,7 +18692,10 @@
     {
       "slug": "unknown",
       "name": "Unknown",
-      "portrait": {},
+      "portrait": {
+        "image": "/characters/tekken-tag/TTT_Unknow.webp",
+        "fit": "cover"
+      },
       "mimic": true,
       "sections": {},
       "notes": [
