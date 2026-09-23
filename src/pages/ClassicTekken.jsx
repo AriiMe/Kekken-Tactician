@@ -13,12 +13,14 @@ const sectionTitles = {
   punishers: 'Punishers', stances: 'Stances', wallCombos: 'Wall Combos',
   combos: 'Combo Routes', strings: '10 Hit Combos',
   setups: 'Recovery Setups',
+  tagMoves: 'Team Moves', teamCombos: 'Tag Combos', techniques: 'Advanced Techniques',
   unblockables: 'Unblockable Attacks', pounces: 'Ground Attacks',
 };
 const rowType = PropTypes.shape({
   name: PropTypes.string.isRequired, input: PropTypes.string.isRequired,
   notes: PropTypes.string,
   launchers: PropTypes.arrayOf(PropTypes.string),
+  alternateInputs: PropTypes.arrayOf(PropTypes.string),
   frameData: PropTypes.objectOf(PropTypes.string),
 });
 
@@ -31,7 +33,7 @@ function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
   const { x, y, width, height, image, fit } = character.portrait || {};
   return (
-    <span className="t1-portrait" style={{ aspectRatio: image ? '1' : `${width} / ${height}` }}>
+    <span className="t1-portrait" style={{ aspectRatio: image || !width || !height ? '1' : `${width} / ${height}` }}>
       {failed || (!image && !sheet.image) ? <span className="t1-portrait-fallback">{character.name}</span> : (
         <img src={image || sheet.image} alt={`${character.name} — ${gameTitle} portrait`}
           onError={() => setFailed(true)}
@@ -60,19 +62,23 @@ function MoveSection({ title, rows }) {
             <div className="t1-move" key={`${row.name}-${index}`}>
               <dt>{row.abbreviation ? `${row.abbreviation} — ${row.name}` : row.name}</dt>
               <dd>
+                {row.partners?.length > 0 && <p>Partner: {row.partners.join(' / ')}</p>}
                 {row.launchers?.length > 0 && <>
-                  <span className="t1-combo-label">Launcher (choose one)</span>
+                  <span className="t1-combo-label">{row.launchers.length > 1 ? 'Launcher (choose one)' : 'Launcher'}</span>
                   <ul className="t1-launchers">
                     {row.launchers.map(launcher => <li className="t1-input" key={launcher}>{renderInputImage(launcher)}</li>)}
                   </ul>
                   <span className="t1-combo-label">Follow-up</span>
                 </>}
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
+                {row.alternateInputs?.map(input => <div className="t1-input" key={input}><span className="t1-combo-label">Or</span>{renderInputImage(input)}</div>)}
                 {row.startupFrames && <p>{row.startupFrames} frames{row.position ? ` · ${row.position}` : ''}</p>}
-                {row.frameData && <dl className="t1-frame-data" aria-label="Frame data">
-                  {Object.entries(frameLabels).filter(([key]) => row.frameData[key]).map(([key, label]) =>
-                    <div key={key}><dt>{label}</dt><dd>{row.frameData[key].split(/\s+/).map(value => value === 'x' ? '—' : value).join(' / ')}{key === 'startup' ? 'f' : ''}</dd></div>)}
+                {(row.frameData || row.referenceFrameData) && <dl className="t1-frame-data" aria-label="Frame data">
+                  {Object.entries(frameLabels).filter(([key]) => (row.frameData || row.referenceFrameData)[key]).map(([key, label]) =>
+                    <div key={key}><dt>{label}</dt><dd>{(row.frameData || row.referenceFrameData)[key].split(/\s+/).map(value => value === 'x' ? '—' : value).join(' / ')}{key === 'startup' ? 'f' : ''}</dd></div>)}
                 </dl>}
+                {row.reportedDamage && <p>Guide damage: {row.reportedDamage}</p>}
+                {row.taggable && <p>Tag available: append {renderInputImage('~5')}{row.tagClass ? ` · Class ${row.tagClass}` : ''}.{row.tagCondition ? ` ${row.tagCondition}` : ''}{row.tagClass === 5 ? ' No guaranteed follow-up in general.' : ''}</p>}
                 {row.breakInput && <p>Throw break: {renderInputImage(row.breakInput)}</p>}
                 {row.unbreakable && <p>Unbreakable</p>}
                 {row.notes && <p>{row.notes}</p>}
@@ -159,6 +165,7 @@ export default function ClassicTekken({ gameId }) {
             {data.mechanics.map(item => <p key={item.title}><strong>{item.title}:</strong> {item.text}</p>)}
           </Paper>}
           {character ? <>
+            {Object.values(character.sections).flat().some(row => row.referenceFrameData) && <p className="t1-source-note">Frame values shown below are Tag Tournament references, not verified Tekken 3 measurements.</p>}
             <nav className="t1-section-links" aria-label="Guide sections">
               {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
             </nav>
@@ -183,7 +190,7 @@ export default function ClassicTekken({ gameId }) {
             {!visibleCharacters.length && <p>No fighters match “{search}”. Try another name.</p>}
           </>}
           <footer className="t1-credits"><p>{data.source.label}. {data.source.note}</p>
-            <p>{data.portraits.credit} <a href={data.portraits.sourceUrl} target="_blank" rel="noopener noreferrer">Portrait source</a></p>
+            {data.portraits.sourceUrl && <p>{data.portraits.credit} <a href={data.portraits.sourceUrl} target="_blank" rel="noopener noreferrer">Portrait source</a></p>}
           </footer>
         </>}
     </main>

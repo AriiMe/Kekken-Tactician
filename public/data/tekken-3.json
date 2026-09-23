@@ -24,15 +24,24 @@
         "throws": [
           {
             "name": "Double High Sweep",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Over the Shoulder Reverse",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Stonehead",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Shoulder Flip",
@@ -51,11 +60,17 @@
           },
           {
             "name": "Wrist Chuck Slam",
-            "input": "d/f+2+3"
+            "input": "d/f+2+3",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Complicated Wire",
-            "input": "qcb+1+3"
+            "input": "qcb+1+3",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Ultimate Tackle",
@@ -77,15 +92,33 @@
         "moves": [
           {
             "name": "Flash Punch Combo",
-            "input": "1,1,2"
+            "input": "1,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+3 +1 -17",
+              "hit": "+9 +1 KD",
+              "counterHit": "+9 +9 KD"
+            }
           },
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-3 -5",
+              "hit": "+9 +10",
+              "counterHit": "+9 +10"
+            }
           },
           {
             "name": "Demon Slayer",
-            "input": "1,2,2"
+            "input": "1,2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-3 -5 -12",
+              "hit": "+9 +10 +1",
+              "counterHit": "+9 +10 +1"
+            }
           },
           {
             "name": "Shoot the Works",
@@ -97,12 +130,23 @@
           },
           {
             "name": "Demon Backhand Spin",
-            "input": "2,2"
+            "input": "2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -13",
+              "hit": "+9 -2",
+              "counterHit": "+9 -2"
+            }
           },
           {
             "name": "Demon Scissors",
             "input": "[4~3]",
-            "notes": "Alternate input: u/f+4~3."
+            "notes": "Alternate input: u/f+4~3.",
+            "referenceFrameData": {
+              "startup": "37",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Three Ring Circus",
@@ -110,27 +154,63 @@
           },
           {
             "name": "893P",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-2",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Spinning High Kick",
-            "input": "f+3"
+            "input": "f+3",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-4",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Knee Kick",
-            "input": "f+4"
+            "input": "f+4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-7",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Twin Lancer",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-2 -5",
+              "hit": "+9 +6",
+              "counterHit": "+9 +6"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "d/f+4,4"
+            "input": "d/f+4,4",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-9 -15",
+              "hit": "+2 -4",
+              "counterHit": "+2 -4"
+            }
           },
           {
             "name": "Double Lift Kick",
-            "input": "d+3+4"
+            "input": "d+3+4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-31 -10",
+              "hit": "-19 KD",
+              "counterHit": "-19 KD"
+            }
           },
           {
             "name": "Hell Scraper",
@@ -142,7 +222,13 @@
           },
           {
             "name": "Demon's Paw",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Heavy Body Blow",
@@ -150,11 +236,21 @@
           },
           {
             "name": "Laser Cannon",
-            "input": "b,f+2,1,2"
+            "input": "b,f+2,1,2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-7 -3 -5",
+              "hit": "-5 -1 KD",
+              "counterHit": "KD KD KD"
+            }
           },
           {
             "name": "Dragon Uppercut",
-            "input": "f,n,d,d/f+1"
+            "input": "f,n,d,d/f+1",
+            "referenceFrameData": {
+              "startup": "23",
+              "block": "-14"
+            }
           },
           {
             "name": "Rising Uppercut",
@@ -171,7 +267,13 @@
           },
           {
             "name": "Leaping Side Kick",
-            "input": "f,f,f+3"
+            "input": "f,f,f+3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "+17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Twin Pistons",
@@ -183,15 +285,33 @@
           },
           {
             "name": "White Heron",
-            "input": "1+4,2"
+            "input": "1+4,2",
+            "referenceFrameData": {
+              "startup": "12 x",
+              "block": "x -6 0",
+              "hit": "x +3 +11",
+              "counterHit": "x +3 +11"
+            }
           },
           {
             "name": "Upper",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-2",
+              "hit": "+9",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Backhand",
-            "input": "b+2"
+            "input": "b+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-13",
+              "hit": "-2",
+              "counterHit": "-2"
+            }
           },
           {
             "name": "Uppercut",
@@ -199,7 +319,13 @@
           },
           {
             "name": "Stagger Wind Godfist",
-            "input": "f,n,d,d/f,2"
+            "input": "f,n,d,d/f,2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-4",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Laser Scraper",
@@ -208,15 +334,33 @@
           },
           {
             "name": "Split Axe Kick",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Crouch Dash Slash Kick",
-            "input": "f,n,d,d/f,f,u/f+3"
+            "input": "f,n,d,d/f,f,u/f+3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "+17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Spinning Demon",
-            "input": "u/f+4,4,4,4"
+            "input": "u/f+4,4,4,4",
+            "referenceFrameData": {
+              "startup": "15 x",
+              "block": "-24 -26 -26 -10",
+              "hit": "KD KD KD KD",
+              "counterHit": "KD KD KD KD"
+            }
           },
           {
             "name": "Lightning Force",
@@ -228,7 +372,13 @@
           },
           {
             "name": "Tsunami Kick from crouch",
-            "input": "WS+4,4"
+            "input": "WS+4,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3 -15",
+              "hit": "+8 -4",
+              "counterHit": "+8 -4"
+            }
           }
         ],
         "combos": [
@@ -300,11 +450,21 @@
         "unblockables": [
           {
             "name": "Lightning Uppercut",
-            "input": "b+1+4"
+            "input": "b+1+4",
+            "referenceFrameData": {
+              "startup": "43",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Lightning Screw Uppercut",
-            "input": "B+1+4"
+            "input": "B+1+4",
+            "referenceFrameData": {
+              "startup": "63",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -321,11 +481,17 @@
         "throws": [
           {
             "name": "Pickpocket",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Human Cannonball",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Bring It On",
@@ -344,15 +510,24 @@
           },
           {
             "name": "Roll and Choke",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Leg Hook Throw",
-            "input": "d,d/b+1+3"
+            "input": "d,d/b+1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Door Mat",
-            "input": "d,d/b,b+3"
+            "input": "d,d/b,b+3",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Low Parry",
@@ -362,7 +537,13 @@
         "moves": [
           {
             "name": "One Two Punch",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 0",
+              "hit": "+9 +11",
+              "counterHit": "+9 +11"
+            }
           },
           {
             "name": "Rejector",
@@ -374,15 +555,33 @@
           },
           {
             "name": "Machine Gun Kicks",
-            "input": "3,3,3,3"
+            "input": "3,3,3,3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-7 -14 -14 -2",
+              "hit": "+4 -3 -3 KD",
+              "counterHit": "+4 -3 -3 KD"
+            }
           },
           {
             "name": "Flying Eagle",
-            "input": "[3~4]"
+            "input": "[3~4]",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-9",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Axe Murderer",
-            "input": "4,3"
+            "input": "4,3",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-4 -10",
+              "hit": "+7 +1",
+              "counterHit": "+28 +1"
+            }
           },
           {
             "name": "Motion Switch",
@@ -394,7 +593,13 @@
           },
           {
             "name": "Rusty Knife",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-6",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Left Flamingo Feint",
@@ -406,64 +611,154 @@
           },
           {
             "name": "Public Enemy",
-            "input": "d/f+3,4"
+            "input": "d/f+3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -11",
+              "hit": "-3 0",
+              "counterHit": "-3 0"
+            }
           },
           {
             "name": "Bird Hunter",
-            "input": "d+4,4"
+            "input": "d+4,4",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17 +8",
+              "hit": "-6 KD",
+              "counterHit": "-6 KD"
+            }
           },
           {
             "name": "Crippler",
-            "input": "d/b+4"
+            "input": "d/b+4",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-14",
+              "hit": "+3",
+              "counterHit": "+12"
+            }
           },
           {
             "name": "Hunting Hawk",
             "input": "u/f+3,4,3",
-            "notes": "Enter the final 3 to obtain the full block advantage."
+            "notes": "Enter the final 3 to obtain the full block advantage.",
+            "referenceFrameData": {
+              "startup": "28",
+              "block": "-6 +17 x",
+              "hit": "KD KD KD",
+              "counterHit": "KD KD KD"
+            }
           },
           {
             "name": "Spiral Tap",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "+3",
+              "hit": "+2",
+              "counterHit": "+2"
+            }
           },
           {
             "name": "Torpedo Kick",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-13",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Sky Rocket",
-            "input": "f,n,d,d/f+4"
+            "input": "f,n,d,d/f+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-19",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Iron Heel",
-            "input": "WS+3"
+            "input": "WS+3",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+4,4"
+            "input": "WS+4,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3 -4",
+              "hit": "+8 +7",
+              "counterHit": "+8 +7"
+            }
           },
           {
             "name": "Body Blow",
-            "input": "d/f+1+2"
+            "input": "d/f+1+2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "0",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Lifting Uppercut",
-            "input": "f,n,d,d/f+2"
+            "input": "f,n,d,d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-7",
+              "hit": "+25",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Uppercut",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-7",
+              "hit": "+25",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Ecoli",
-            "input": "f,n,d,d/f+3~3"
+            "input": "f,n,d,d/f+3~3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-21",
+              "hit": "-5",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Flamingo Kick",
-            "input": "u+3"
+            "input": "u+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "+3",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Repeater",
-            "input": "d/b+4~4"
+            "input": "d/b+4~4",
+            "referenceFrameData": {
+              "startup": "31",
+              "block": "0",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rejection",
@@ -471,11 +766,23 @@
           },
           {
             "name": "Migrane",
-            "input": "RFF 1,1"
+            "input": "RFF 1,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -7",
+              "hit": "+9 +4",
+              "counterHit": "+10 +4"
+            }
           },
           {
             "name": "Big Fists",
-            "input": "RFF 2,1,1"
+            "input": "RFF 2,1,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+4 +1 -7",
+              "hit": "+15 +12 +4",
+              "counterHit": "+15 +12 +4"
+            }
           },
           {
             "name": "Teaser Trip",
@@ -483,43 +790,103 @@
           },
           {
             "name": "Teaser Trip - Wild Roundhouse",
-            "input": "RFF 3,3"
+            "input": "RFF 3,3",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-13 -2",
+              "hit": "-2 KD",
+              "counterHit": "-2 KD"
+            }
           },
           {
             "name": "Backlash",
-            "input": "RFF 3~4"
+            "input": "RFF 3~4",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Cheap Shot",
-            "input": "RFF f+3"
+            "input": "RFF f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "+12",
+              "hit": "+23",
+              "counterHit": "+23"
+            }
           },
           {
             "name": "Ripoff",
-            "input": "RFF f,f+3"
+            "input": "RFF f,f+3",
+            "referenceFrameData": {
+              "startup": "28",
+              "block": "0",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Misdemeanor",
-            "input": "RFF b+3"
+            "input": "RFF b+3",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-7",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Snap Spin Kick",
-            "input": "RFF b+4"
+            "input": "RFF b+4",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Chainsaw Flamingo",
-            "input": "RFF 4~f"
+            "input": "RFF 4~f",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "+6",
+              "hit": "+17",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Double Hook",
-            "input": "RFF 4,4"
+            "input": "RFF 4,4",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-8 -9",
+              "hit": "+3 KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Grand Theft",
-            "input": "RFF f+4~4"
+            "input": "RFF f+4~4",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Pirouette Kick",
-            "input": "RFF f,f+4"
+            "input": "RFF f,f+4",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-17",
+              "hit": "-8",
+              "counterHit": "-6"
+            }
           },
           {
             "name": "Screw Pirouette Kick",
@@ -527,23 +894,53 @@
           },
           {
             "name": "Left Jab",
-            "input": "LFS 1"
+            "input": "LFS 1",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "+5",
+              "hit": "+9",
+              "counterHit": "+9"
+            }
           },
           {
             "name": "Right Back Hand",
-            "input": "LFS 2"
+            "input": "LFS 2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Left Snap Kick",
-            "input": "LFS f+3"
+            "input": "LFS f+3",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Snap Spin Kick",
-            "input": "LFS b+3"
+            "input": "LFS b+3",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "+5",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Machine Gun Kicks",
-            "input": "LFS 3,3,3"
+            "input": "LFS 3,3,3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-15 -14 -2",
+              "hit": "-4 -3 KD",
+              "counterHit": "-4 -3 KD"
+            }
           },
           {
             "name": "Menace to Society",
@@ -551,35 +948,83 @@
           },
           {
             "name": "Bad Menace",
-            "input": "LFS 3,3,4,4"
+            "input": "LFS 3,3,4,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-15 -14 -7 -7",
+              "hit": "-4 -3 +2 +2",
+              "counterHit": "-4 -3 +2 KD"
+            }
           },
           {
             "name": "Famingo Hop Kick",
-            "input": "LFS 4"
+            "input": "LFS 4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-2",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Spin Back Fist",
-            "input": "RFS 1"
+            "input": "RFS 1",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Right Jab",
-            "input": "RFS 2"
+            "input": "RFS 2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "+5",
+              "hit": "+9",
+              "counterHit": "+9"
+            }
           },
           {
             "name": "Flamingo Hop Kick",
-            "input": "RFS 3"
+            "input": "RFS 3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-7",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Super Right",
-            "input": "RFS 4"
+            "input": "RFS 4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Right Snap Kick",
-            "input": "RFS f+4"
+            "input": "RFS f+4",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "+2",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Snap Spin Kick",
-            "input": "RFS b+4"
+            "input": "RFS b+4",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ],
         "combos": [
@@ -636,7 +1081,12 @@
           {
             "name": "Dynamite Heel",
             "input": "d/b+3+4",
-            "notes": "b,b to cancel"
+            "notes": "b,b to cancel",
+            "referenceFrameData": {
+              "startup": "61",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Power Blast",
@@ -660,11 +1110,17 @@
         "throws": [
           {
             "name": "Over The Shoulder",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Shoulder Pop",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Dragon Screw",
@@ -683,15 +1139,24 @@
           },
           {
             "name": "Twist & Shout",
-            "input": "d/f+1+2"
+            "input": "d/f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Foot Launch",
-            "input": "b+2+3"
+            "input": "b+2+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Push Away",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Ultimate Tackle",
@@ -709,27 +1174,63 @@
         "moves": [
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+2 0",
+              "hit": "+5 +6",
+              "counterHit": "+5 +6"
+            }
           },
           {
             "name": "Reverse PDK Combo",
-            "input": "1,4"
+            "input": "1,4",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+2 -10",
+              "hit": "+5 +1",
+              "counterHit": "+5 +1"
+            }
           },
           {
             "name": "Jab Roundhouse",
-            "input": "2,3"
+            "input": "2,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -12",
+              "hit": "+6 KD",
+              "counterHit": "+6 KD"
+            }
           },
           {
             "name": "Quick PK Combo",
-            "input": "f+2,3"
+            "input": "f+2,3",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "0 -26",
+              "hit": "+6 -12",
+              "counterHit": "+6 -12"
+            }
           },
           {
             "name": "Hammer of the Gods",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "+3",
+              "hit": "0",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shoulder Tackle",
-            "input": "f+1+4"
+            "input": "f+1+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-19",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Body Blow",
@@ -737,7 +1238,13 @@
           },
           {
             "name": "Hammer Punch",
-            "input": "d+1"
+            "input": "d+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-8",
+              "hit": "-8",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Hammer Punch to Power Punch",
@@ -745,7 +1252,13 @@
           },
           {
             "name": "Bone Breaker",
-            "input": "d+4,2"
+            "input": "d+4,2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-31 -29",
+              "hit": "-22 KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Sweep Kick",
@@ -753,11 +1266,23 @@
           },
           {
             "name": "Shredder",
-            "input": "u/f+3,4"
+            "input": "u/f+3,4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-17 -13",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Flash Elbow",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Double Hop Kick High",
@@ -765,15 +1290,33 @@
           },
           {
             "name": "Neutron Bomb",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "26",
+              "block": "-2",
+              "hit": "-2",
+              "counterHit": "-2"
+            }
           },
           {
             "name": "Thruster",
-            "input": "qcf+1"
+            "input": "qcf+1",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-8",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Phoenix Smasher",
-            "input": "qcf+2"
+            "input": "qcf+2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Sway",
@@ -789,27 +1332,60 @@
           },
           {
             "name": "Jaw Breaker",
-            "input": "FC d/f+2"
+            "input": "FC d/f+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-19",
+              "hit": "-6",
+              "counterHit": "-6"
+            }
           },
           {
             "name": "PDK Combo",
-            "input": "2,d+3"
+            "input": "2,d+3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -15",
+              "hit": "+6 -1",
+              "counterHit": "+6 -1"
+            }
           },
           {
             "name": "Upper",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-7",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rising Upper",
-            "input": "WS+2"
+            "input": "WS+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shredder",
-            "input": "f,f+3,4"
+            "input": "f,f+3,4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-7 -13",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Incomplete Somersault",
-            "input": "FC u+2+3+4"
+            "input": "FC u+2+3+4",
+            "referenceFrameData": {
+              "startup": "13"
+            }
           },
           {
             "name": "Falling Leaf",
@@ -873,7 +1449,12 @@
         "unblockables": [
           {
             "name": "Burning Fist",
-            "input": "b+1+2"
+            "input": "b+1+2",
+            "referenceFrameData": {
+              "startup": "100",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -890,11 +1471,17 @@
         "throws": [
           {
             "name": "Dragon's Fire",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Hopping Frog",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Headlock Kick",
@@ -913,15 +1500,24 @@
           },
           {
             "name": "Run Up to Drop",
-            "input": "f+2+3"
+            "input": "f+2+3",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Headlock Punch",
-            "input": "d/f+1+2"
+            "input": "d/f+1+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Knee Lift",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Parry",
@@ -935,15 +1531,33 @@
         "moves": [
           {
             "name": "Machine Gun Arrow",
-            "input": "1,1,1,1,1"
+            "input": "1,1,1,1,1",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 -9 -9 -9 -9",
+              "hit": "+7 -12 -12 -12 +23",
+              "counterHit": "+7 -12 -12 -12 +23"
+            }
           },
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 0",
+              "hit": "+7 +6",
+              "counterHit": "+7 +6"
+            }
           },
           {
             "name": "Quick Rave War",
-            "input": "2,2"
+            "input": "2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -7",
+              "hit": "+7 +9",
+              "counterHit": "+7 +9"
+            }
           },
           {
             "name": "Triple Head Kick",
@@ -951,19 +1565,43 @@
           },
           {
             "name": "High Kick to Somersault",
-            "input": "3,4"
+            "input": "3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -17",
+              "hit": "-3 KD",
+              "counterHit": "-3 KD"
+            }
           },
           {
             "name": "Shaolin Spin Kicks",
-            "input": "4,3,4"
+            "input": "4,3,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-4 -14 -6",
+              "hit": "+5 -17 -1",
+              "counterHit": "KD -17 KD"
+            }
           },
           {
             "name": "Backflip",
-            "input": "3+4"
+            "input": "3+4",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Poison Arrow",
-            "input": "f+[2~1]"
+            "input": "f+[2~1]",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-19",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rave War Combo",
@@ -971,7 +1609,13 @@
           },
           {
             "name": "Mid Kick",
-            "input": "d/f+3"
+            "input": "d/f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "-3"
+            }
           },
           {
             "name": "Right Middle Kick to Somersault",
@@ -979,7 +1623,13 @@
           },
           {
             "name": "Body Blow to Somersault",
-            "input": "d+2,3"
+            "input": "d+2,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-2 -15",
+              "hit": "+9 KD",
+              "counterHit": "+9 KD"
+            }
           },
           {
             "name": "Dragon Low Kick",
@@ -991,60 +1641,143 @@
           },
           {
             "name": "Dragon Whip",
-            "input": "d/b+2"
+            "input": "d/b+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-4",
+              "hit": "+7",
+              "counterHit": "+7"
+            }
           },
           {
             "name": "Dragon's Tail",
-            "input": "d/b+4"
+            "input": "d/b+4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-40",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Power Jab",
-            "input": "qcf+1"
+            "input": "qcf+1",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1",
+              "hit": "+7",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Dragon Storm",
             "input": "b+1,2,1",
-            "notes": "The string can be delayed."
+            "notes": "The string can be delayed.",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-7 -9 -16",
+              "hit": "+4 +2 KD",
+              "counterHit": "+4 +3 KD"
+            }
           },
           {
             "name": "Junkyard Combo",
-            "input": "b+2,3,4"
+            "input": "b+2,3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-7 -11 -7",
+              "hit": "+4 0 KD",
+              "counterHit": "+4 0 KD"
+            }
           },
           {
             "name": "Double Kick - Somersault",
-            "input": "3,3,4"
+            "input": "3,3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -14 -17",
+              "hit": "-3 -3 KD",
+              "counterHit": "-3 -3 KD"
+            }
           },
           {
             "name": "Double Kick - Step In Kick",
-            "input": "3,3,f+3"
+            "input": "3,3,f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -14 -14",
+              "hit": "-3 -3 -3",
+              "counterHit": "-3 -3 -3"
+            }
           },
           {
             "name": "Triple Kick - Roundhouse",
-            "input": "3,3,3,4"
+            "input": "3,3,3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -14 -14 -17",
+              "hit": "-3 -3 KD KD",
+              "counterHit": "-3 -3 KD KD"
+            }
           },
           {
             "name": "Rave Kicks",
-            "input": "d+3,3"
+            "input": "d+3,3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -14",
+              "hit": "-3 -3",
+              "counterHit": "-3 -3"
+            }
           },
           {
             "name": "Dragon Slide",
-            "input": "FC d/f,d,d/f+3"
+            "input": "FC d/f,d,d/f+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Crouch Kick - Somersault",
-            "input": "FC 3,4"
+            "input": "FC 3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -17",
+              "hit": "-3 KD",
+              "counterHit": "-3 KD"
+            }
           },
           {
             "name": "Twist Kick - Somersault",
-            "input": "WS+3,4"
+            "input": "WS+3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-16 -13",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Double Dragon",
-            "input": "SS+3+4"
+            "input": "SS+3+4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-23 -15",
+              "hit": "-12 KD",
+              "counterHit": "-12 KD"
+            }
           },
           {
             "name": "Face Kick - Somersault",
-            "input": "WS+4,3"
+            "input": "WS+4,3",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3 -17",
+              "hit": "+8 KD",
+              "counterHit": "+8 KD"
+            }
           },
           {
             "name": "Tricky Step",
@@ -1116,7 +1849,12 @@
         "unblockables": [
           {
             "name": "Charge Power Punch",
-            "input": "d/b+1+2"
+            "input": "d/b+1+2",
+            "referenceFrameData": {
+              "startup": "78",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -1135,11 +1873,17 @@
         "throws": [
           {
             "name": "Jumping Body Slam",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Sword Face Smash",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Wheels of Hell",
@@ -1158,7 +1902,10 @@
           },
           {
             "name": "Rainbow Throw",
-            "input": "d,d/b,b+1+2"
+            "input": "d,d/b,b+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Lower Parry",
@@ -1168,7 +1915,13 @@
         "moves": [
           {
             "name": "Flash Attack",
-            "input": "2,3"
+            "input": "2,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -12",
+              "hit": "+6 KD",
+              "counterHit": "+6 KD"
+            }
           },
           {
             "name": "Oni Kick",
@@ -1176,27 +1929,63 @@
           },
           {
             "name": "Zig Zag",
-            "input": "3,4"
+            "input": "3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-8 -14",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Kangaroo Kick",
-            "input": "[4~3]"
+            "input": "[4~3]",
+            "referenceFrameData": {
+              "startup": "36",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Triple Roundhouse Combo",
-            "input": "4,4,4"
+            "input": "4,4,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -5 -8",
+              "hit": "-3 -3 -3",
+              "counterHit": "-3 -3 -4"
+            }
           },
           {
             "name": "Manji Backfist",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-13",
+              "hit": "+17",
+              "counterHit": "+17"
+            }
           },
           {
             "name": "Door Knocker",
-            "input": "d/f+1,1,1,1"
+            "input": "d/f+1,1,1,1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-10 -6 -5 +2",
+              "hit": "+5 +5 +6 +4",
+              "counterHit": "+1 +5 +6 +4"
+            }
           },
           {
             "name": "Basic Uppercut",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Indian Stance",
@@ -1212,7 +2001,13 @@
           },
           {
             "name": "Stone Fists",
-            "input": "b+1,1,1,1,1,1"
+            "input": "b+1,1,1,1,1,1",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "+1 +6 +6 +6 +6 x",
+              "hit": "+12 +7 +7 +7 +7 x",
+              "counterHit": "+12 +7 +7 +7 +7 x"
+            }
           },
           {
             "name": "Bad Stomach",
@@ -1228,48 +2023,114 @@
           },
           {
             "name": "Jab - Double Uppercut",
-            "input": "1,2,1"
+            "input": "1,2,1",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+2 -13 -12",
+              "hit": "+7 -2 -1",
+              "counterHit": "+7 -2 -1"
+            }
           },
           {
             "name": "Hilt Strike - Backfist",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-10 -9",
+              "hit": "+5 +21",
+              "counterHit": "+1 +21"
+            }
           },
           {
             "name": "Quick Upper",
-            "input": "WS+1+2"
+            "input": "WS+1+2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-3",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Dive Bomb",
             "input": "f,f+1+2",
-            "notes": "Can flow into d+3+4 or D/B+2,2,2,2,2 while retaining the backward-facing movement."
+            "notes": "Can flow into d+3+4 or D/B+2,2,2,2,2 while retaining the backward-facing movement.",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-8",
+              "hit": "+3",
+              "counterHit": "+3"
+            }
           },
           {
             "name": "Low Flash Attack",
-            "input": "2,d+3"
+            "input": "2,d+3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -15",
+              "hit": "+6 -1",
+              "counterHit": "+6 -1"
+            }
           },
           {
             "name": "Ninja Blade Smash",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-10",
+              "hit": "+1",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Lunging Sweep",
-            "input": "FC d/f+3"
+            "input": "FC d/f+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shark Attack",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-20",
+              "hit": "-9",
+              "counterHit": "-9"
+            }
           },
           {
             "name": "Poison Wind",
-            "input": "u/f+3+4"
+            "input": "u/f+3+4",
+            "referenceFrameData": {
+              "startup": "31",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Side Kick",
-            "input": "d/f+4"
+            "input": "d/f+4",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-7",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Fubuki",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "7",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Fake Suicide",
@@ -1334,11 +2195,21 @@
         "unblockables": [
           {
             "name": "Harakiri",
-            "input": "d+1+4"
+            "input": "d+1+4",
+            "referenceFrameData": {
+              "startup": "29",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Quick Slash",
-            "input": "d/b+1"
+            "input": "d/b+1",
+            "referenceFrameData": {
+              "startup": "24",
+              "hit": "-5",
+              "counterHit": "-5"
+            }
           },
           {
             "name": "Death Slash",
@@ -1365,11 +2236,17 @@
         "throws": [
           {
             "name": "Neck Breaker",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Jumping Powerbomb",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Guillotine Chop",
@@ -1392,21 +2269,42 @@
           },
           {
             "name": "Headbutt Carnival",
-            "input": "f,f+1+4"
+            "input": "f,f+1+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           }
         ],
         "moves": [
           {
             "name": "Flash Punch Combo",
-            "input": "1,1,2"
+            "input": "1,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 +1 -17",
+              "hit": "+9 +9 KD",
+              "counterHit": "+9 +9 KD"
+            }
           },
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 0",
+              "hit": "+9 +8",
+              "counterHit": "+9 +8"
+            }
           },
           {
             "name": "Demon Slayer",
-            "input": "1,2,2"
+            "input": "1,2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 0 -12",
+              "hit": "+9 +8 +1",
+              "counterHit": "+9 +8 +1"
+            }
           },
           {
             "name": "Demon Executioner",
@@ -1414,24 +2312,53 @@
           },
           {
             "name": "Demon Backhand Spin",
-            "input": "2,2"
+            "input": "2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 -13",
+              "hit": "+9 -2",
+              "counterHit": "+9 -2"
+            }
           },
           {
             "name": "Demon Scissors",
             "input": "4~3",
-            "notes": "Alternate input: u/f+4~3. Whiffing this version causes self-damage."
+            "notes": "Alternate input: u/f+4~3. Whiffing this version causes self-damage.",
+            "referenceFrameData": {
+              "startup": "25",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Breath",
-            "input": "1+2"
+            "input": "1+2",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-3",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Massacre",
-            "input": "f+1,b+2,1"
+            "input": "f+1,b+2,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+3 -1 -28",
+              "hit": "+9 +5 KD",
+              "counterHit": "+9 +5 KD"
+            }
           },
           {
             "name": "Demon Lair",
-            "input": "f+1,b+2,4"
+            "input": "f+1,b+2,4",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+3 -1 +3",
+              "hit": "+3 +5 KD",
+              "counterHit": "+3 +5 KD"
+            }
           },
           {
             "name": "Demon Shout",
@@ -1439,27 +2366,63 @@
           },
           {
             "name": "Right Splits Kick",
-            "input": "f+4"
+            "input": "f+4",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "+11",
+              "hit": "+8",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hammer Punch",
-            "input": "d+1"
+            "input": "d+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-8",
+              "hit": "-8",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Demon's Boar",
-            "input": "b+2"
+            "input": "b+2",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "0",
+              "hit": "+5",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hell Axle",
-            "input": "u/f+3,4"
+            "input": "u/f+3,4",
+            "referenceFrameData": {
+              "startup": "28",
+              "block": "-6 +7",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Rising Sun",
-            "input": "u/f+4,4"
+            "input": "u/f+4,4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-26 -6",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Demon Uppercut",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Left Splits Kick",
@@ -1467,7 +2430,13 @@
           },
           {
             "name": "Dragon Uppercut",
-            "input": "f,n,d,d/f+1"
+            "input": "f,n,d,d/f+1",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-15",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rising Uppercut",
@@ -1479,15 +2448,33 @@
           },
           {
             "name": "Heavy Power Punch",
-            "input": "qcf+2"
+            "input": "qcf+2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Leaping Side Kick",
-            "input": "f,f,f+3"
+            "input": "f,f,f+3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "+17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Twin Pistons",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-1 -27",
+              "hit": "+9 KD",
+              "counterHit": "+9 KD"
+            }
           },
           {
             "name": "Uppercut",
@@ -1495,19 +2482,43 @@
           },
           {
             "name": "Demon Backhand",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-13",
+              "hit": "-2",
+              "counterHit": "-2"
+            }
           },
           {
             "name": "Split Axe Kick",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Gut Kick",
-            "input": "f,n,d,d/f+3"
+            "input": "f,n,d,d/f+3",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "+14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Slice Kick",
-            "input": "f,n,d,D/F+3"
+            "input": "f,n,d,D/F+3",
+            "referenceFrameData": {
+              "startup": "33",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hop Kick",
@@ -1515,7 +2526,13 @@
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+4,4"
+            "input": "WS+4,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-5 -15",
+              "hit": "+6 -4",
+              "counterHit": "+6 -4"
+            }
           },
           {
             "name": "Shadow Step",
@@ -1572,7 +2589,12 @@
         "unblockables": [
           {
             "name": "Lightning Hammer",
-            "input": "d+1+4"
+            "input": "d+1+4",
+            "referenceFrameData": {
+              "startup": "60",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -1589,11 +2611,17 @@
         "throws": [
           {
             "name": "Jade",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Ruby",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Arm Flip",
@@ -1612,11 +2640,17 @@
           },
           {
             "name": "Dislocator",
-            "input": "d,d/b,b+2"
+            "input": "d,d/b,b+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "So Shoe Me",
-            "input": "f+[2~1]"
+            "input": "f+[2~1]",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Cradle Throw",
@@ -1634,35 +2668,83 @@
         "moves": [
           {
             "name": "Bayonet",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 0",
+              "hit": "+7 +6",
+              "counterHit": "+7 +5"
+            }
           },
           {
             "name": "April Showers",
-            "input": "2,1"
+            "input": "2,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-2 -5",
+              "hit": "+9 +6",
+              "counterHit": "+9 +6"
+            }
           },
           {
             "name": "Cloud Kick",
-            "input": "f+3"
+            "input": "f+3",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-15",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Belly Chop",
-            "input": "D/F+1"
+            "input": "D/F+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Butter the Bread",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-8",
+              "hit": "+24",
+              "counterHit": "+24"
+            }
           },
           {
             "name": "Storming Flower",
-            "input": "d/b+1"
+            "input": "d/b+1",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-8",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Knee Cracker",
-            "input": "d/b+3"
+            "input": "d/b+3",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "+13",
+              "hit": "+13",
+              "counterHit": "+13"
+            }
           },
           {
             "name": "Nutcracker",
-            "input": "d/b+4"
+            "input": "d/b+4",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-12",
+              "hit": "+7",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hypnotist",
@@ -1670,15 +2752,33 @@
           },
           {
             "name": "Cyanide",
-            "input": "u/f+4"
+            "input": "u/f+4",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "X Marks the Spot",
-            "input": "f,f+1+2,1+2"
+            "input": "f,f+1+2,1+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-2 -2",
+              "hit": "+5 +3",
+              "counterHit": "+6 KD"
+            }
           },
           {
             "name": "Front Layout",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "41",
+              "block": "-3",
+              "hit": "+13",
+              "counterHit": "+13"
+            }
           },
           {
             "name": "Art of Phoenix",
@@ -1706,27 +2806,63 @@
           },
           {
             "name": "Bayonet Mc Twist",
-            "input": "1,d+2"
+            "input": "1,d+2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 -3",
+              "hit": "+7 +8",
+              "counterHit": "+7 +8"
+            }
           },
           {
             "name": "Belly Chop",
-            "input": "d/f+1"
+            "input": "d/f+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-1",
+              "hit": "+10",
+              "counterHit": "+10"
+            }
           },
           {
             "name": "Single Fan",
-            "input": "u+1"
+            "input": "u+1",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-3",
+              "hit": "-3",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Double Fan",
-            "input": "u+1+2"
+            "input": "u+1+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "x -2",
+              "hit": "x -6",
+              "counterHit": "x -6"
+            }
           },
           {
             "name": "Sun Flower [tag]",
-            "input": "WS+2"
+            "input": "WS+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3",
+              "hit": "+8",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Sun Flower",
-            "input": "WS+2~F"
+            "input": "WS+2~F",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3",
+              "hit": "+8",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shady Lotus",
@@ -1734,19 +2870,43 @@
           },
           {
             "name": "Lotus Twist",
-            "input": "FC d/f+2,1"
+            "input": "FC d/f+2,1",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-22 -10",
+              "hit": "-11 +6",
+              "counterHit": "-11 +6"
+            }
           },
           {
             "name": "Punt Kick",
-            "input": "d/f+3"
+            "input": "d/f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-10",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Raccoon Swing",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "+12"
+            }
           },
           {
             "name": "Fire Dance",
-            "input": "D+3,2,1,4"
+            "input": "D+3,2,1,4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "0 0 0 -18",
+              "hit": "+4 +8 +5 KD",
+              "counterHit": "+4 +8 +5 KD"
+            }
           },
           {
             "name": "Dive Roll",
@@ -1762,15 +2922,33 @@
           },
           {
             "name": "Step Kick",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "+1",
+              "hit": "KD",
+              "counterHit": "+13"
+            }
           },
           {
             "name": "Toe Kick",
-            "input": "d/f+4"
+            "input": "d/f+4",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-4",
+              "hit": "+7",
+              "counterHit": "+7"
+            }
           },
           {
             "name": "Sky Scraper Kick",
-            "input": "WS+4"
+            "input": "WS+4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Flower Bed",
@@ -1778,7 +2956,13 @@
           },
           {
             "name": "Flower Garden",
-            "input": "FC d/f+4,4"
+            "input": "FC d/f+4,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-7 -6",
+              "hit": "+4 +6",
+              "counterHit": "+4 +6"
+            }
           },
           {
             "name": "Reverse Slap",
@@ -1786,15 +2970,33 @@
           },
           {
             "name": "Pig Leg",
-            "input": "RDS f,f+3"
+            "input": "RDS f,f+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-5",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Back Circle Breaker",
-            "input": "RDS d+3"
+            "input": "RDS d+3",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-12",
+              "hit": "+7",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Reverse Front Layout",
-            "input": "RDS f,f+3+4"
+            "input": "RDS f,f+3+4",
+            "referenceFrameData": {
+              "startup": "42",
+              "block": "-2",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "False Salute Taunt",
@@ -1802,19 +3004,43 @@
           },
           {
             "name": "Handfull",
-            "input": "AOP 1"
+            "input": "AOP 1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-5",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Handfull",
-            "input": "AOP 2"
+            "input": "AOP 2",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "-3"
+            }
           },
           {
             "name": "Heavy Wave Crest",
-            "input": "AOP d+1+2"
+            "input": "AOP d+1+2",
+            "referenceFrameData": {
+              "startup": "26",
+              "block": "-4",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Knee Stabber",
-            "input": "AOP 3"
+            "input": "AOP 3",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "-3"
+            }
           },
           {
             "name": "Flower Bed",
@@ -1822,11 +3048,23 @@
           },
           {
             "name": "Flower Garden",
-            "input": "AOP f+4,4"
+            "input": "AOP f+4,4",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-7 -5",
+              "hit": "+5 +6",
+              "counterHit": "+5 +6"
+            }
           },
           {
             "name": "Flower Power",
-            "input": "AOP u+4,4"
+            "input": "AOP u+4,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-10 -11",
+              "hit": "-1 -3",
+              "counterHit": "-1 -3"
+            }
           }
         ],
         "combos": [
@@ -1906,11 +3144,17 @@
         "throws": [
           {
             "name": "Rio Deal",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Rio Special",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Missile Launcher",
@@ -1929,13 +3173,22 @@
           },
           {
             "name": "Rodeo Spin",
-            "input": "b,d/b,d,d/f,f+1+2"
+            "input": "b,d/b,d,d/f,f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           }
         ],
         "moves": [
           {
             "name": "One Two Elbows",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-1 -4",
+              "hit": "+7 +4",
+              "counterHit": "+8 +4"
+            }
           },
           {
             "name": "Slippery Kick",
@@ -1943,11 +3196,23 @@
           },
           {
             "name": "Satellite Moon",
-            "input": "[4~3]"
+            "input": "[4~3]",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-108",
+              "hit": "-104",
+              "counterHit": "-104"
+            }
           },
           {
             "name": "Handstand Kick",
-            "input": "f+3"
+            "input": "f+3",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-6",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Samba",
@@ -1955,11 +3220,23 @@
           },
           {
             "name": "Elbow Uppercut",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-5",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Freak Show",
-            "input": "d/f+3+4"
+            "input": "d/f+3+4",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-22",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Thong Bikini",
@@ -1975,7 +3252,13 @@
           },
           {
             "name": "Boomerang",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "34",
+              "block": "-2",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Handstand",
@@ -1995,7 +3278,13 @@
           },
           {
             "name": "Crying Needle",
-            "input": "RLX 1+2"
+            "input": "RLX 1+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-37",
+              "hit": "-21",
+              "counterHit": "-21"
+            }
           },
           {
             "name": "Headlong Dive",
@@ -2003,11 +3292,23 @@
           },
           {
             "name": "Rio Delight",
-            "input": "RLX 3,4"
+            "input": "RLX 3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-15 -1",
+              "hit": "+1 KD",
+              "counterHit": "+1 KD"
+            }
           },
           {
             "name": "Scoop Up Kick",
-            "input": "RLX 3~4"
+            "input": "RLX 3~4",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-24",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rising Feet Lunge",
@@ -2024,11 +3325,23 @@
           },
           {
             "name": "Handstand Scoot Kick",
-            "input": "HSP 3"
+            "input": "HSP 3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-14",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Handstand Hot Plate",
-            "input": "HSP b+3"
+            "input": "HSP b+3",
+            "referenceFrameData": {
+              "startup": "32",
+              "block": "-28",
+              "hit": "-3",
+              "counterHit": "KD"
+            }
           }
         ],
         "combos": [
@@ -2081,7 +3394,12 @@
           {
             "name": "Fruit Picker",
             "input": "d/b+3+4",
-            "notes": "b,b to cancel"
+            "notes": "b,b to cancel",
+            "referenceFrameData": {
+              "startup": "77",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -2101,11 +3419,17 @@
         "throws": [
           {
             "name": "Arm Grab Flip",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Over the Back Toss",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Triangle Hold",
@@ -2124,11 +3448,17 @@
           },
           {
             "name": "Jumping Flip",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "16"
+            }
           },
           {
             "name": "Elbow Smash",
-            "input": "d/f,d/f+1"
+            "input": "d/f,d/f+1",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Attack Reversal",
@@ -2146,7 +3476,13 @@
         "moves": [
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 -5",
+              "hit": "+7 +7",
+              "counterHit": "+7 +7"
+            }
           },
           {
             "name": "Biting Snake",
@@ -2162,11 +3498,23 @@
           },
           {
             "name": "Head Ringer",
-            "input": "3,4"
+            "input": "3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-16 -14",
+              "hit": "-5 KD",
+              "counterHit": "-5 KD"
+            }
           },
           {
             "name": "Blonde Bomb",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Creeping Snake",
@@ -2174,7 +3522,13 @@
           },
           {
             "name": "Geyser Cannon",
-            "input": "d/b+3+4"
+            "input": "d/b+3+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-19",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Catapult Kick",
@@ -2182,19 +3536,43 @@
           },
           {
             "name": "Bad Habit",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-16",
+              "hit": "+11",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shut Up",
-            "input": "d,d/f+2"
+            "input": "d,d/f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Assassin Dagger",
-            "input": "f,f+1"
+            "input": "f,f+1",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-7",
+              "hit": "+3",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Panther Claw",
-            "input": "f,F+2"
+            "input": "f,F+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-10",
+              "hit": "+22",
+              "counterHit": "+22"
+            }
           },
           {
             "name": "Evil Mist",
@@ -2202,87 +3580,213 @@
           },
           {
             "name": "Killing Blade",
-            "input": "b+1"
+            "input": "b+1",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Helping Hand",
-            "input": "d/b+1"
+            "input": "d/b+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3",
+              "hit": "+4",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Snake Shot",
-            "input": "SS+1"
+            "input": "SS+1",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "+7",
+              "hit": "+3",
+              "counterHit": "+3"
+            }
           },
           {
             "name": "Low Jab - Rising Kick",
-            "input": "d+1,n+4"
+            "input": "d+1,n+4",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "-2 -8",
+              "hit": "-9 +3",
+              "counterHit": "-9 +3"
+            }
           },
           {
             "name": "Spiral Explosion",
-            "input": "SS+1+2"
+            "input": "SS+1+2",
+            "referenceFrameData": {
+              "startup": "23",
+              "block": "-10",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Twin Jab - Low Kick",
-            "input": "2,1,4"
+            "input": "2,1,4",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -5 -10",
+              "hit": "+7 +7 +1",
+              "counterHit": "+7 +7 +1"
+            }
           },
           {
             "name": "Jab - Jail Crucher Upper",
-            "input": "2,d+3,2"
+            "input": "2,d+3,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -14 -8",
+              "hit": "+7 -3 KD",
+              "counterHit": "+7 -3 KD"
+            }
           },
           {
             "name": "Jab - Jail Crucher",
-            "input": "2,d+3,4"
+            "input": "2,d+3,4",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -14 -6",
+              "hit": "+7 -3 +5",
+              "counterHit": "+7 -3 +26"
+            }
           },
           {
             "name": "Jab - Roundhouse",
-            "input": "2,4"
+            "input": "2,4",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 -19",
+              "hit": "+7 KD",
+              "counterHit": "+7 KD"
+            }
           },
           {
             "name": "Double Slap",
-            "input": "b+2,2"
+            "input": "b+2,2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-13 -13",
+              "hit": "-3 KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Backhand Body Blow",
-            "input": "d/b+2"
+            "input": "d/b+2",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-17",
+              "hit": "-6",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Quick Panther Claw",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-10",
+              "hit": "+22",
+              "counterHit": "+22"
+            }
           },
           {
             "name": "Lift Shot",
-            "input": "SS+2"
+            "input": "SS+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-16",
+              "hit": "0",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Spike Combo",
-            "input": "3,3"
+            "input": "3,3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-16 -25",
+              "hit": "-5 -14",
+              "counterHit": "-5 -14"
+            }
           },
           {
             "name": "Assault - Blonde Bomb",
-            "input": "d/f+3,1,2,f+1+2"
+            "input": "d/f+3,1,2,f+1+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -8 -10 -17",
+              "hit": "-3 +3 +1 KD",
+              "counterHit": "-3 +3 +1 KD"
+            }
           },
           {
             "name": "Flash Kicks",
-            "input": "d/f+3,3,3"
+            "input": "d/f+3,3,3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -14 -8",
+              "hit": "-3 -3 +3",
+              "counterHit": "-3 -3 +3"
+            }
           },
           {
             "name": "Mid Kick - Roundhouse",
-            "input": "d/f+3,4"
+            "input": "d/f+3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -14",
+              "hit": "-3 KD",
+              "counterHit": "-3 KD"
+            }
           },
           {
             "name": "Heel Slicer",
-            "input": "SS+4"
+            "input": "SS+4",
+            "referenceFrameData": {
+              "startup": "26",
+              "block": "-23",
+              "hit": "+6",
+              "counterHit": "+6"
+            }
           },
           {
             "name": "Wipe the Floor",
-            "input": "d,d/f+4"
+            "input": "d,d/f+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-40",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Blonde Attack",
-            "input": "4,3"
+            "input": "4,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-4 -14",
+              "hit": "+7 -3",
+              "counterHit": "+28 -3"
+            }
           },
           {
             "name": "Can Opener",
-            "input": "u/f+4,3,4"
+            "input": "u/f+4,3,4",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-17 -19 -6",
+              "hit": "KD -8 +5",
+              "counterHit": "KD -8 KD"
+            }
           },
           {
             "name": "Slicer - FCD",
@@ -2291,7 +3795,13 @@
           {
             "name": "Slicer - Divine Cannon",
             "input": "d/b+4,3",
-            "notes": "The second hit launches monster opponents without requiring counter hit."
+            "notes": "The second hit launches monster opponents without requiring counter hit.",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "x -14",
+              "hit": "x KD",
+              "counterHit": "x KD"
+            }
           }
         ],
         "combos": [
@@ -2343,11 +3853,21 @@
           {
             "name": "Power Charge",
             "input": "d/b+1+2",
-            "notes": "u,u to cancel"
+            "notes": "u,u to cancel",
+            "referenceFrameData": {
+              "startup": "71",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Evil Mist",
-            "input": "qcf,D/B+2+3"
+            "input": "qcf,D/B+2+3",
+            "referenceFrameData": {
+              "startup": "31",
+              "hit": "+39",
+              "counterHit": "+39"
+            }
           }
         ]
       },
@@ -2366,11 +3886,17 @@
         "throws": [
           {
             "name": "Gravity Brain Buster",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Front Neck Full Swing",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Gravity Throw",
@@ -2399,7 +3925,13 @@
         "moves": [
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "-1 -1",
+              "hit": "+7 +10",
+              "counterHit": "+7 +10"
+            }
           },
           {
             "name": "Lair's Dance",
@@ -2411,7 +3943,13 @@
           },
           {
             "name": "Mid Kick to Rush",
-            "input": "3,2,1,2"
+            "input": "3,2,1,2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-4 +10 -16 -7",
+              "hit": "+7 +1 0 KD",
+              "counterHit": "+7 +1 0 KD"
+            }
           },
           {
             "name": "Hammer Driver",
@@ -2428,55 +3966,132 @@
           {
             "name": "Snake Edge",
             "input": "d/f+3",
-            "notes": "Launches only at clean-hit range; farther hits do not launch."
+            "notes": "Launches only at clean-hit range; farther hits do not launch.",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-29",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Broad Axe",
-            "input": "d/f+4"
+            "input": "d/f+4",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-5",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hands of Doom",
-            "input": "b+2,1,2"
+            "input": "b+2,1,2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-10 -6 -20",
+              "hit": "+1 KD KD",
+              "counterHit": "KD KD KD"
+            }
           },
           {
             "name": "Wolf Call",
-            "input": "b+2,4"
+            "input": "b+2,4",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-10 -5",
+              "hit": "+1 KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Mach Breaker",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-20",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Double Body Blow",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-4 -3",
+              "hit": "+2 +4",
+              "counterHit": "+2 +9"
+            }
           },
           {
             "name": "Headhunter",
-            "input": "SS+1"
+            "input": "SS+1",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Cheap Trick",
-            "input": "SS+1~2"
+            "input": "SS+1~2",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Side Step Elbow",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Punch Kick Cross",
-            "input": "1~4"
+            "input": "1~4",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "-1 -9",
+              "hit": "+7 +2",
+              "counterHit": "+7 KD"
+            }
           },
           {
             "name": "Short Upper",
-            "input": "WS+1+2"
+            "input": "WS+1+2",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3",
+              "hit": "+8",
+              "counterHit": "+8"
+            }
           },
           {
             "name": "Shell Shock",
-            "input": "SS+2"
+            "input": "SS+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-8",
+              "hit": "+2",
+              "counterHit": "+2"
+            }
           },
           {
             "name": "Vulcan Punch",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-5",
+              "hit": "+2",
+              "counterHit": "+7"
+            }
           },
           {
             "name": "Sway",
@@ -2484,19 +4099,43 @@
           },
           {
             "name": "Slash Kick",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Bruce Special",
-            "input": "3,2,1,4"
+            "input": "3,2,1,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-4 +10 -16 -9",
+              "hit": "+7 +1 0 +2",
+              "counterHit": "+7 +1 0 +2"
+            }
           },
           {
             "name": "Quick Spin Kicks",
-            "input": "3,3"
+            "input": "3,3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-4 -6",
+              "hit": "+7 +5",
+              "counterHit": "+7 +5"
+            }
           },
           {
             "name": "Thin Low Kick",
-            "input": "d+3+4"
+            "input": "d+3+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "-3"
+            }
           },
           {
             "name": "Spin Kick",
@@ -2504,30 +4143,65 @@
           },
           {
             "name": "Quick Knee",
-            "input": "b+4"
+            "input": "b+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-9",
+              "hit": "+2",
+              "counterHit": "+2"
+            }
           },
           {
             "name": "Running Blind",
-            "input": "f+4,3,4"
+            "input": "f+4,3,4",
+            "referenceFrameData": {
+              "startup": "23",
+              "block": "-4 -7 -12",
+              "hit": "+7 +4 -3",
+              "counterHit": "KD +4 KD"
+            }
           },
           {
             "name": "Orbital Flip Drop",
-            "input": "b,b+4"
+            "input": "b,b+4",
+            "referenceFrameData": {
+              "startup": "23",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Snake Upper",
             "input": "WS+1",
-            "notes": "Also qcf+1."
+            "notes": "Also qcf+1.",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Orbital Heel",
             "input": "u/f+4",
-            "notes": "Also u+4."
+            "notes": "Also u+4.",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "0",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hammer Knee",
             "input": "WS+3",
-            "notes": "Also qcf+3."
+            "notes": "Also qcf+3.",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-7",
+              "hit": "+4",
+              "counterHit": "KD"
+            }
           }
         ],
         "combos": [
@@ -2548,11 +4222,21 @@
         "unblockables": [
           {
             "name": "Meteor Smash",
-            "input": "b+1+4"
+            "input": "b+1+4",
+            "referenceFrameData": {
+              "startup": "53",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Gravity Blow",
-            "input": "f+1+4"
+            "input": "f+1+4",
+            "referenceFrameData": {
+              "startup": "28",
+              "hit": "-12",
+              "counterHit": "-12"
+            }
           }
         ]
       },
@@ -2571,11 +4255,17 @@
         "throws": [
           {
             "name": "Death Valley Bomb",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Knee Suplex",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Headlock Back Crusher",
@@ -2594,11 +4284,17 @@
           },
           {
             "name": "Arm Lock Suplex",
-            "input": "d/f+1+2"
+            "input": "d/f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Mad Axes",
-            "input": "d,d/b,b,f+2"
+            "input": "d,d/b,b,f+2",
+            "referenceFrameData": {
+              "startup": "10"
+            }
           },
           {
             "name": "Cross Arm Suplex",
@@ -2616,19 +4312,43 @@
           },
           {
             "name": "Tequila Sunrise",
-            "input": "[3~2]"
+            "input": "[3~2]",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-11",
+              "hit": "0",
+              "counterHit": "-6"
+            }
           },
           {
             "name": "Twin Arrow",
-            "input": "1+2"
+            "input": "1+2",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "+3",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Flash Uppercut",
-            "input": "f+1"
+            "input": "f+1",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-15",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Palm Explosion",
-            "input": "f+[1~2]"
+            "input": "f+[1~2]",
+            "referenceFrameData": {
+              "startup": "30",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Wind Roll",
@@ -2636,43 +4356,103 @@
           },
           {
             "name": "Bow & Arrow Kick",
-            "input": "1+4,3"
+            "input": "1+4,3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "x -13 12",
+              "hit": "x -2 KD",
+              "counterHit": "x -2 KD"
+            }
           },
           {
             "name": "Ultimate Cannon",
-            "input": "2+3,1"
+            "input": "2+3,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "x -11 -8",
+              "hit": "x 0 KD",
+              "counterHit": "x 0 KD"
+            }
           },
           {
             "name": "Club Fist",
-            "input": "d/f+1"
+            "input": "d/f+1",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-15",
+              "hit": "-4",
+              "counterHit": "-4"
+            }
           },
           {
             "name": "Party Crasher",
-            "input": "f,f+1"
+            "input": "f,f+1",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-2",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Gut Punch",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-6",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Earthquale Stomp",
-            "input": "u/f+3+4"
+            "input": "u/f+3+4",
+            "referenceFrameData": {
+              "startup": "48",
+              "block": "-32",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Razor Sweep",
-            "input": "d+4"
+            "input": "d+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-9",
+              "hit": "-10",
+              "counterHit": "-10"
+            }
           },
           {
             "name": "Spinning Razor Kicks",
-            "input": "4,4"
+            "input": "4,4",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-7 -7",
+              "hit": "-7 +4",
+              "counterHit": "KD +4"
+            }
           },
           {
             "name": "Skyscraper Kick",
-            "input": "WS+4"
+            "input": "WS+4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Bow & Arrow",
-            "input": "FC d/f+4,3"
+            "input": "FC d/f+4,3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -14",
+              "hit": "-3 KD",
+              "counterHit": "-3 KD"
+            }
           },
           {
             "name": "Shotgun",
@@ -2745,7 +4525,12 @@
         "unblockables": [
           {
             "name": "Heavy Uppercut",
-            "input": "f+1+4"
+            "input": "f+1+4",
+            "referenceFrameData": {
+              "startup": "67",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -2764,11 +4549,17 @@
         "throws": [
           {
             "name": "Bear's Bite",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Bear Hug",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Bear Slam",
@@ -2787,25 +4578,49 @@
           },
           {
             "name": "Headbutt",
-            "input": "f,f+1+4"
+            "input": "f,f+1+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Rock 'N' Roll Circus",
-            "input": "hcb,f+1+2"
+            "input": "hcb,f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           }
         ],
         "moves": [
           {
             "name": "Bear Hammer",
-            "input": "1,1,1"
+            "input": "1,1,1",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-7 -9 -13",
+              "hit": "+4 0 KD",
+              "counterHit": "+4 0 KD"
+            }
           },
           {
             "name": "Jab Elbow Smash",
-            "input": "2,1,2"
+            "input": "2,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 0 -15",
+              "hit": "-7 +2 KD",
+              "counterHit": "-7 +2 KD"
+            }
           },
           {
             "name": "Overhead Smash",
-            "input": "1+2"
+            "input": "1+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-15",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Double Hammer",
@@ -2817,7 +4632,13 @@
           },
           {
             "name": "G-Clef Cannon",
-            "input": "f+1,1,1"
+            "input": "f+1,1,1",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 -15 -14",
+              "hit": "+12 -3 KD",
+              "counterHit": "+12 -4 KD"
+            }
           },
           {
             "name": "Double Claw",
@@ -2825,35 +4646,83 @@
           },
           {
             "name": "Demon Uppercut",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Pancake Press",
-            "input": "u/f+3+4"
+            "input": "u/f+3+4",
+            "referenceFrameData": {
+              "startup": "33",
+              "block": "-1",
+              "hit": "-40",
+              "counterHit": "-40"
+            }
           },
           {
             "name": "Grizzly Upper - Grizzly Claw",
-            "input": "WS+1,2"
+            "input": "WS+1,2",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-15 -17",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Grizzly Windmill",
-            "input": "FC d/f+1,2,1"
+            "input": "FC d/f+1,2,1",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-22 -22 -2",
+              "hit": "-12 -12 -12",
+              "counterHit": "-12 -12 -12"
+            }
           },
           {
             "name": "Bear Rush",
-            "input": "FC 1,1,1,2"
+            "input": "FC 1,1,1,2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-8 +2 -2 +3",
+              "hit": "+2 +12 -2 +3",
+              "counterHit": "+2 +12 -2 +3"
+            }
           },
           {
             "name": "Claw Upper - Bear Knuckle",
-            "input": "WS+1+2,1+2"
+            "input": "WS+1+2,1+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-16 -15",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Grizzly Scissors",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-9",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Grizzly Claw",
-            "input": "b,d/b,d,D/F+2"
+            "input": "b,d/b,d,D/F+2",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ],
         "combos": [
@@ -2874,15 +4743,31 @@
         "unblockables": [
           {
             "name": "Deadly Claw",
-            "input": "b+1+2"
+            "input": "b+1+2",
+            "referenceFrameData": {
+              "startup": "60",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Fatal Wind",
-            "input": "b,b+2+3+4"
+            "input": "b,b+2+3+4",
+            "referenceFrameData": {
+              "startup": "100",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Salmon Hunting",
-            "input": "b,f+2+3"
+            "input": "b,f+2+3",
+            "referenceFrameData": {
+              "startup": "60",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -2901,11 +4786,17 @@
         "throws": [
           {
             "name": "Body Slam",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Lift Up Slam",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Side Left Bomb",
@@ -2920,7 +4811,10 @@
           {
             "name": "Spinal Crush",
             "input": "1+3",
-            "notes": "Back"
+            "notes": "Back",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Pile Driver",
@@ -2928,21 +4822,39 @@
           },
           {
             "name": "Pyramid Driver",
-            "input": "qcf+1"
+            "input": "qcf+1",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Ground Zero",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           }
         ],
         "moves": [
           {
             "name": "Jack Hammer",
-            "input": "1,1,1"
+            "input": "1,1,1",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-7 -9 -13",
+              "hit": "+4 0 KD",
+              "counterHit": "+4 0 KD"
+            }
           },
           {
             "name": "Jab Elbow Smash",
-            "input": "2,1,2"
+            "input": "2,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "0 0 -15",
+              "hit": "+7 +2 KD",
+              "counterHit": "+7 +2 KD"
+            }
           },
           {
             "name": "Overhead Smash",
@@ -2950,11 +4862,23 @@
           },
           {
             "name": "Double Hammer",
-            "input": "1+2,1+2"
+            "input": "1+2,1+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-15 -22",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Cut Saw",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-10",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Megaton Punch",
@@ -2962,67 +4886,157 @@
           },
           {
             "name": "Violent Uppercut",
-            "input": "WS+1"
+            "input": "WS+1",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Gigaton Punch",
-            "input": "hcf+1"
+            "input": "hcf+1",
+            "referenceFrameData": {
+              "startup": "42",
+              "block": "+21",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Megaton Uppercut",
-            "input": "hcf,D/F+1"
+            "input": "hcf,D/F+1",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Windmill",
-            "input": "FC d/f+1,2,1"
+            "input": "FC d/f+1,2,1",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-22 -22 -2",
+              "hit": "-12 -12 -12",
+              "counterHit": "-12 -12 -12"
+            }
           },
           {
             "name": "Revolving Knuckles - Megaton Punch",
-            "input": "FC d/b+1,1,1,2"
+            "input": "FC d/b+1,1,1,2",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-1 +1 +1 -20",
+              "hit": "+10 +12 +12 KD",
+              "counterHit": "+10 +12 +12 KD"
+            }
           },
           {
             "name": "Hammer Rush",
-            "input": "FC 1,1,1,2"
+            "input": "FC 1,1,1,2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-8 +1 -12 -8",
+              "hit": "+2 +12 -2 +1",
+              "counterHit": "+2 +12 -2 +1"
+            }
           },
           {
             "name": "Low Punch - Megaton Punch",
-            "input": "FC 1,2"
+            "input": "FC 1,2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-8 -14",
+              "hit": "+2 KD",
+              "counterHit": "+2 KD"
+            }
           },
           {
             "name": "Double Uppercut - Hammer Knuckle",
-            "input": "WS+1+2,1+2"
+            "input": "WS+1+2,1+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-16 -15",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Bravo Knuckle",
-            "input": "d+1+2"
+            "input": "d+1+2",
+            "referenceFrameData": {
+              "startup": "30",
+              "block": "-23",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Low Palm Lift",
-            "input": "FC 1+2"
+            "input": "FC 1+2",
+            "referenceFrameData": {
+              "startup": "23",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Body Press",
-            "input": "d/f+1+3"
+            "input": "d/f+1+3",
+            "referenceFrameData": {
+              "startup": "20"
+            }
           },
           {
             "name": "Megaton Punch",
-            "input": "b,d/b,d,D/F+2"
+            "input": "b,d/b,d,D/F+2",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Low Ankle Swipe",
-            "input": "d/f+2+3"
+            "input": "d/f+2+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Cossack Kicks",
-            "input": "D/B+3,4,3,4,3,4"
+            "input": "D/B+3,4,3,4,3,4",
+            "referenceFrameData": {
+              "startup": "21"
+            }
           },
           {
             "name": "Digital Hans Headslide",
-            "input": "f+3+4"
+            "input": "f+3+4",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-110",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hip Press",
-            "input": "u/f+3+4"
+            "input": "u/f+3+4",
+            "referenceFrameData": {
+              "startup": "33",
+              "block": "-1",
+              "hit": "-40",
+              "counterHit": "-40"
+            }
           },
           {
             "name": "Sit Down",
@@ -3064,11 +5078,21 @@
         "unblockables": [
           {
             "name": "Giant Foot Stomp",
-            "input": "3+4"
+            "input": "3+4",
+            "referenceFrameData": {
+              "startup": "94",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Dark Greeting",
-            "input": "f+4~1"
+            "input": "f+4~1",
+            "referenceFrameData": {
+              "startup": "65",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -3087,11 +5111,17 @@
         "throws": [
           {
             "name": "Arm Grab Flip",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Over The Back Toss",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Torso Splitter",
@@ -3110,11 +5140,17 @@
           },
           {
             "name": "Overhead Toss",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Elbow Face Smash",
-            "input": "d/f,d/f+1"
+            "input": "d/f,d/f+1",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Attack Reversal",
@@ -3128,7 +5164,13 @@
         "moves": [
           {
             "name": "Left Right Combo",
-            "input": "1,2"
+            "input": "1,2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+1 -5",
+              "hit": "+7 +7",
+              "counterHit": "+7 +7"
+            }
           },
           {
             "name": "Biting Snake",
@@ -3136,7 +5178,13 @@
           },
           {
             "name": "Head Ringer",
-            "input": "3,4"
+            "input": "3,4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-16 -14",
+              "hit": "-5 KD",
+              "counterHit": "-5 KD"
+            }
           },
           {
             "name": "Double Explosion",
@@ -3145,7 +5193,13 @@
           {
             "name": "Offensive Push",
             "input": "f+1+2",
-            "notes": "Offensive Push: hitting a crouching opponent allows f,f+1+2 or f,f+2 afterward."
+            "notes": "Offensive Push: hitting a crouching opponent allows f,f+1+2 or f,f+2 afterward.",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Geyser Cannon",
@@ -3153,7 +5207,10 @@
           },
           {
             "name": "Catapult Kick",
-            "input": "u/f+3"
+            "input": "u/f+3",
+            "referenceFrameData": {
+              "startup": "23"
+            }
           },
           {
             "name": "Bad Habit",
@@ -3161,27 +5218,63 @@
           },
           {
             "name": "Cat Thrust",
-            "input": "FC f+1"
+            "input": "FC f+1",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-6",
+              "hit": "-7",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Scarlet Bomb",
-            "input": "WS+1+2"
+            "input": "WS+1+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Delayed Scarlet Bomb",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Bloody Chaos",
-            "input": "SS+1+2"
+            "input": "SS+1+2",
+            "referenceFrameData": {
+              "startup": "26",
+              "block": "-15 0",
+              "hit": "0 KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Scarlet Windmill",
-            "input": "FC f+2"
+            "input": "FC f+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-6",
+              "hit": "-7",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Scarlet Sweep",
-            "input": "FC d/f+2"
+            "input": "FC d/f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-27",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Executioner",
@@ -3197,11 +5290,23 @@
           },
           {
             "name": "Chaos Tail",
-            "input": "SS+2"
+            "input": "SS+2",
+            "referenceFrameData": {
+              "startup": "26",
+              "block": "-18",
+              "hit": "+1",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Assault",
-            "input": "d/f+3,1"
+            "input": "d/f+3,1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -3",
+              "hit": "-3 +8",
+              "counterHit": "-3 +8"
+            }
           },
           {
             "name": "Creeping Snake",
@@ -3214,24 +5319,50 @@
           {
             "name": "Cross Cut Saw",
             "input": "b+1,1,1",
-            "notes": "Female opponents can return the second slap with 2; continuing with the third slap counter-hits that response."
+            "notes": "Female opponents can return the second slap with 2; continuing with the third slap counter-hits that response.",
+            "referenceFrameData": {
+              "block": "-7 -10 -13",
+              "hit": "+4 +1 KD",
+              "counterHit": "+4 KD KD"
+            }
           },
           {
             "name": "Scarlet Attack",
-            "input": "4,3"
+            "input": "4,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-4 -14",
+              "hit": "+7 -3",
+              "counterHit": "+28 -3"
+            }
           },
           {
             "name": "Falling Heel",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "23"
+            }
           },
           {
             "name": "Front Kick",
-            "input": "d/f+4"
+            "input": "d/f+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-15",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Rising Palm",
             "input": "WS+2",
-            "notes": "Also qcf+2."
+            "notes": "Also qcf+2.",
+            "referenceFrameData": {
+              "startup": "13",
+              "block": "-16",
+              "hit": "0",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shin Kick to Spin Punch",
@@ -3240,7 +5371,13 @@
           },
           {
             "name": "Low Spin Kick to Upper",
-            "input": "d+3,2"
+            "input": "d+3,2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -10",
+              "hit": "-3 KD",
+              "counterHit": "-3 KD"
+            }
           },
           {
             "name": "Can Opener",
@@ -3303,7 +5440,12 @@
         "unblockables": [
           {
             "name": "Power Charge",
-            "input": "d/b+1+2"
+            "input": "d/b+1+2",
+            "referenceFrameData": {
+              "startup": "81",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -3322,11 +5464,17 @@
         "throws": [
           {
             "name": "Body Slam",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Bear Hug",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Ankle Slam",
@@ -3351,35 +5499,81 @@
         "moves": [
           {
             "name": "Flash Punch Combo",
-            "input": "1,1,2"
+            "input": "1,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-5 -6 -14",
+              "hit": "+3 +2 KD",
+              "counterHit": "+6 +2 KD"
+            }
           },
           {
             "name": "Demon Scissors",
-            "input": "[4~3]"
+            "input": "[4~3]",
+            "referenceFrameData": {
+              "startup": "26",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Power Punch",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Right Splits Kick",
-            "input": "f+4"
+            "input": "f+4",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "+11",
+              "hit": "+8",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shoulder Tackle",
-            "input": "f+1+4"
+            "input": "f+1+4",
+            "referenceFrameData": {
+              "startup": "29",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hunting Hawk",
-            "input": "u/f+3,4,3"
+            "input": "u/f+3,4,3",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-6 +7 x",
+              "hit": "KD KD KD",
+              "counterHit": "KD KD KD"
+            }
           },
           {
             "name": "Double Knuckle",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "35",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Serpent's Venom",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Double Punch",
@@ -3387,75 +5581,181 @@
           },
           {
             "name": "Demon Slayer",
-            "input": "1,2,2"
+            "input": "1,2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-5 -6 -8",
+              "hit": "+3 +3 +1",
+              "counterHit": "+6 +3 +1"
+            }
           },
           {
             "name": "Double Face Buster",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3 -6",
+              "hit": "+8 +5",
+              "counterHit": "+8 +5"
+            }
           },
           {
             "name": "Cat Thrust",
-            "input": "D,f+1"
+            "input": "D,f+1",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Lunging Double Fist",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "28",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Backhand Spin",
-            "input": "2,2"
+            "input": "2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-2 -13",
+              "hit": "+7 +2",
+              "counterHit": "+7 +2"
+            }
           },
           {
             "name": "Demon Gut Punch",
-            "input": "WS+2"
+            "input": "WS+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Upper",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-6",
+              "hit": "+24",
+              "counterHit": "+24"
+            }
           },
           {
             "name": "Scarlett Windmill",
-            "input": "D,f+2"
+            "input": "D,f+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-26",
+              "hit": "-15",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Scarlet Sweep",
-            "input": "D,d/f+2"
+            "input": "D,d/f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-30",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Split Axe Kick",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Back Flip Kick",
-            "input": "u/b+3"
+            "input": "u/b+3",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-22",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Snake Creep",
-            "input": "FC 3,3,d+3"
+            "input": "FC 3,3,d+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -19 -17",
+              "hit": "-3 -9 -3",
+              "counterHit": "-3 -9 -3"
+            }
           },
           {
             "name": "Snake Blade",
-            "input": "FC 3,3,n+3"
+            "input": "FC 3,3,n+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -19 -15",
+              "hit": "-3 -9 KD",
+              "counterHit": "-3 -9 KD"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+3,3"
+            "input": "WS+3,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-19 -19",
+              "hit": "-8 -8",
+              "counterHit": "-8 -8"
+            }
           },
           {
             "name": "Exploder",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "23",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Delayed Dragon Slide",
-            "input": "f,f,n+3+4"
+            "input": "f,f,n+3+4",
+            "referenceFrameData": {
+              "startup": "29",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Spin Kick",
-            "input": "WS+3+4"
+            "input": "WS+3+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-6",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Blazing Kick",
-            "input": "d,d/b+4"
+            "input": "d,d/b+4",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Laser Edge - Machine Gun Kick",
@@ -3463,15 +5763,33 @@
           },
           {
             "name": "Bazooka Kick",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "0",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hammer Heel",
-            "input": "f,f,n+4"
+            "input": "f,f,n+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+4,4"
+            "input": "WS+4,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3 -15",
+              "hit": "+8 -4",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Ancient Power",
@@ -3502,19 +5820,39 @@
         "unblockables": [
           {
             "name": "Bloody Scissors",
-            "input": "d/b+1+2"
+            "input": "d/b+1+2",
+            "referenceFrameData": {
+              "startup": "60",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Deadly Slice",
-            "input": "b+2"
+            "input": "b+2",
+            "referenceFrameData": {
+              "startup": "34",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Killing Blow",
-            "input": "b+2+3"
+            "input": "b+2+3",
+            "referenceFrameData": {
+              "startup": "56",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Dragon Power Punch",
-            "input": "b,b+1+2"
+            "input": "b,b+1+2",
+            "referenceFrameData": {
+              "startup": "73",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -3533,11 +5871,17 @@
         "throws": [
           {
             "name": "Body Slam",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Bear Hug",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Ankle Slam",
@@ -3562,19 +5906,41 @@
         "moves": [
           {
             "name": "Flash Punch Combo",
-            "input": "1,1,2"
+            "input": "1,1,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-5 -6 -14",
+              "hit": "+3 +2 KD",
+              "counterHit": "+6 +2 KD"
+            }
           },
           {
             "name": "Demon Scissors",
-            "input": "4~3"
+            "input": "4~3",
+            "referenceFrameData": {
+              "startup": "26",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Power Punch",
-            "input": "f+2"
+            "input": "f+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Serpent's Venom",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Infinite Kick Chain",
@@ -3586,119 +5952,291 @@
           },
           {
             "name": "Demon Slayer",
-            "input": "1,2,2"
+            "input": "1,2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-5 -6 -8",
+              "hit": "+3 +3 +1",
+              "counterHit": "+6 +3 +1"
+            }
           },
           {
             "name": "Double Face Buster",
-            "input": "d/f+1,2"
+            "input": "d/f+1,2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-3 -6",
+              "hit": "+8 +5",
+              "counterHit": "+8 +5"
+            }
           },
           {
             "name": "Cat Thrust",
-            "input": "D,f+1"
+            "input": "D,f+1",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Lunging Double Fist",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "28",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Buffalo Horn",
-            "input": "d/f+1+2"
+            "input": "d/f+1+2",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-8",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Black Shoulder",
-            "input": "f+1+4"
+            "input": "f+1+4",
+            "referenceFrameData": {
+              "startup": "29",
+              "block": "-1",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Demon Backhand Spin",
-            "input": "2,2"
+            "input": "2,2",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-2 -13",
+              "hit": "+7 +2",
+              "counterHit": "+7 +2"
+            }
           },
           {
             "name": "Demon Gut Punch",
-            "input": "WS+2"
+            "input": "WS+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Upper",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-6",
+              "hit": "+24",
+              "counterHit": "+24"
+            }
           },
           {
             "name": "Scarlett Windmill",
-            "input": "D,f+2"
+            "input": "D,f+2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-26",
+              "hit": "-15",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Scarlet Sweep",
-            "input": "D,d/f+2"
+            "input": "D,d/f+2",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-30",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Split Axe Kick",
-            "input": "f,f+3"
+            "input": "f,f+3",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Back Flip Kick",
-            "input": "u/b+3"
+            "input": "u/b+3",
+            "referenceFrameData": {
+              "startup": "17",
+              "block": "-22",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hunting Hawk",
-            "input": "u/f+3,4,3"
+            "input": "u/f+3,4,3",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-6 +7 x",
+              "hit": "KD KD KD",
+              "counterHit": "x KD KD"
+            }
           },
           {
             "name": "Snake Creep",
-            "input": "FC 3,3,d+3"
+            "input": "FC 3,3,d+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -19 -17",
+              "hit": "-3 -9 -3",
+              "counterHit": "-3 -9 -3"
+            }
           },
           {
             "name": "Snake Blade",
-            "input": "FC 3,3,n+3"
+            "input": "FC 3,3,n+3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14 -19 -15",
+              "hit": "-3 -9 KD",
+              "counterHit": "-3 -9 KD"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+3,3"
+            "input": "WS+3,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-19 -19",
+              "hit": "-8 -8",
+              "counterHit": "-8 -8"
+            }
           },
           {
             "name": "Exploder",
-            "input": "f,f+3+4"
+            "input": "f,f+3+4",
+            "referenceFrameData": {
+              "startup": "23",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Delayed Dragon Slide",
-            "input": "f,f,n+3+4"
+            "input": "f,f,n+3+4",
+            "referenceFrameData": {
+              "startup": "29",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Spin Kick",
-            "input": "WS+3+4"
+            "input": "WS+3+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-16",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Evil Wheel",
-            "input": "u+3+4"
+            "input": "u+3+4",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "+3",
+              "hit": "+1",
+              "counterHit": "+1"
+            }
           },
           {
             "name": "Demon Tail",
-            "input": "d+3+4"
+            "input": "d+3+4",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-20",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tail Spin",
-            "input": "d/f+3+4"
+            "input": "d/f+3+4",
+            "referenceFrameData": {
+              "startup": "21",
+              "block": "-7",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Axe Kick",
-            "input": "f+4"
+            "input": "f+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Blazing Kick",
-            "input": "d,d/b+4"
+            "input": "d,d/b+4",
+            "referenceFrameData": {
+              "startup": "22",
+              "block": "-14",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Laser Edge - Machine Gun Kick",
-            "input": "d+4,n+4"
+            "input": "d+4,n+4",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-11 -9",
+              "hit": "-12 0",
+              "counterHit": "0 KD"
+            }
           },
           {
             "name": "Bazooka Kick",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "0",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Hammer Heel",
-            "input": "f,f,n+4"
+            "input": "f,f,n+4",
+            "referenceFrameData": {
+              "startup": "20",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tsunami Kick",
-            "input": "WS+4,4"
+            "input": "WS+4,4",
+            "referenceFrameData": {
+              "startup": "11",
+              "block": "-3 -15",
+              "hit": "+8 -4",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Tail Spin to back turned",
@@ -3729,27 +6267,57 @@
         "unblockables": [
           {
             "name": "Hell's Flame",
-            "input": "1+2"
+            "input": "1+2",
+            "referenceFrameData": {
+              "startup": "58",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Bloody Scissors",
-            "input": "d/b+1+2"
+            "input": "d/b+1+2",
+            "referenceFrameData": {
+              "startup": "60",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Deadly Slice",
-            "input": "b+2"
+            "input": "b+2",
+            "referenceFrameData": {
+              "startup": "34",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Killing Blow",
-            "input": "b+2+3"
+            "input": "b+2+3",
+            "referenceFrameData": {
+              "startup": "56",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Blazing Inferno",
-            "input": "d+1+2"
+            "input": "d+1+2",
+            "referenceFrameData": {
+              "startup": "25",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Dragon Power Punch",
-            "input": "b,b+1+2"
+            "input": "b,b+1+2",
+            "referenceFrameData": {
+              "startup": "73",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           }
         ]
       },
@@ -4113,11 +6681,17 @@
         "throws": [
           {
             "name": "Winding Nut",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Suplex",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Argentina Backbreaker",
@@ -4132,12 +6706,18 @@
           {
             "name": "Cobra Twist",
             "input": "2+4",
-            "notes": "Back"
+            "notes": "Back",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Half Boston Crab",
             "input": "1+3",
-            "notes": "Back"
+            "notes": "Back",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Stretch Buster",
@@ -4146,15 +6726,24 @@
           },
           {
             "name": "Knee Bash",
-            "input": "d/f+2+3"
+            "input": "d/f+2+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Figure Four Leg Lock",
-            "input": "d/b+1+2"
+            "input": "d/b+1+2",
+            "referenceFrameData": {
+              "startup": "13"
+            }
           },
           {
             "name": "Tombstone Piledriver",
-            "input": "d/b,f+2"
+            "input": "d/b,f+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Pile Driver",
@@ -4162,11 +6751,17 @@
           },
           {
             "name": "Muscle Buster",
-            "input": "d,d/b,b+1+2"
+            "input": "d,d/b,b+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Spinning Throw",
-            "input": "f,b,d/b,d,d/f,f+1"
+            "input": "f,b,d/b,d,d/f,f+1",
+            "referenceFrameData": {
+              "startup": "10"
+            }
           },
           {
             "name": "Ultimate Tackle",
@@ -4200,23 +6795,49 @@
           },
           {
             "name": "Palm Attack to Uppercut",
-            "input": "1,2,1"
+            "input": "1,2,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 0 -1",
+              "hit": "+9 +6 +10",
+              "counterHit": "+9 +6 +10"
+            }
           },
           {
             "name": "Jab Uppercut",
-            "input": "2,1"
+            "input": "2,1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "+1 0",
+              "hit": "+7 +6",
+              "counterHit": "+7 +6"
+            }
           },
           {
             "name": "Exploder",
-            "input": "3+4"
+            "input": "3+4",
+            "referenceFrameData": {
+              "startup": "28",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Shoulder Tackle",
-            "input": "f+2+3"
+            "input": "f+2+3",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Frankensteiner",
-            "input": "d/f+3+4"
+            "input": "d/f+3+4",
+            "referenceFrameData": {
+              "startup": "28"
+            }
           },
           {
             "name": "Stagger Kick",
@@ -4224,51 +6845,121 @@
           },
           {
             "name": "Capital Punishment",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "34",
+              "block": "+2",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "K's Flicker",
-            "input": "f,f+2"
+            "input": "f,f+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Konvict Kick",
-            "input": "f,f+4"
+            "input": "f,f+4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Flying Cross Chop",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "+5",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Black Bomb",
-            "input": "f,n,d,d/f+1+2"
+            "input": "f,n,d,d/f+1+2",
+            "referenceFrameData": {
+              "startup": "27",
+              "block": "-15",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Running Exploder",
-            "input": "f,f,f+3+4"
+            "input": "f,f,f+3+4",
+            "referenceFrameData": {
+              "startup": "28",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Knockout Punch",
-            "input": "SS+2"
+            "input": "SS+2",
+            "referenceFrameData": {
+              "startup": "41",
+              "block": "-10",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Deadly Boomerang",
-            "input": "SS+3+4"
+            "input": "SS+3+4",
+            "referenceFrameData": {
+              "startup": "27",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Elbow Sting",
-            "input": "d/f+1"
+            "input": "d/f+1",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-1",
+              "hit": "+1",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Low Jab - Upper",
-            "input": "d+1,n+2"
+            "input": "d+1,n+2",
+            "referenceFrameData": {
+              "startup": "8",
+              "block": "-2 -9",
+              "hit": "+9 +2",
+              "counterHit": "+9 +2"
+            }
           },
           {
             "name": "Ankle Smash",
-            "input": "FC d/f+1"
+            "input": "FC d/f+1",
+            "referenceFrameData": {
+              "startup": "30",
+              "block": "-9",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Head Spinner",
-            "input": "1+2"
+            "input": "1+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-14",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Lay Off Push",
@@ -4277,40 +6968,90 @@
           },
           {
             "name": "Elbow Drop",
-            "input": "d+1+2"
+            "input": "d+1+2",
+            "referenceFrameData": {
+              "startup": "27"
+            }
           },
           {
             "name": "Upper",
-            "input": "WS+2"
+            "input": "WS+2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-13",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Side Swipe",
-            "input": "d/f+2"
+            "input": "d/f+2",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-10",
+              "hit": "+1",
+              "counterHit": "+1"
+            }
           },
           {
             "name": "Dynamite Upper",
-            "input": "FC d/f+2"
+            "input": "FC d/f+2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-12",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Counter Hit Stomach Smash",
-            "input": "f,f,n+2"
+            "input": "f,f,n+2",
+            "referenceFrameData": {
+              "startup": "18",
+              "block": "-17",
+              "hit": "-6",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Diving Body Press",
-            "input": "f,f+2+3"
+            "input": "f,f+2+3",
+            "referenceFrameData": {
+              "startup": "21",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Rib Buster",
-            "input": "d/f+3"
+            "input": "d/f+3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-9",
+              "hit": "+2",
+              "counterHit": "+2"
+            }
           },
           {
             "name": "Knee Buster",
-            "input": "d/f+4"
+            "input": "d/f+4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-9",
+              "hit": "+2",
+              "counterHit": "+2"
+            }
           },
           {
             "name": "Disgrace Kick",
             "input": "b+4",
-            "notes": "Close hits cause an untechable knockdown; close blocks cause a guard break. These properties do not apply at long range."
+            "notes": "Close hits cause an untechable knockdown; close blocks cause a guard break. These properties do not apply at long range.",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-18",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Head Spinner to Hand Knife",
@@ -4378,11 +7119,21 @@
         "unblockables": [
           {
             "name": "Moonsault Body Press",
-            "input": "1+4"
+            "input": "1+4",
+            "referenceFrameData": {
+              "startup": "51",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Jaguar Lariat",
-            "input": "f+1+2"
+            "input": "f+1+2",
+            "referenceFrameData": {
+              "startup": "33",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Atomic Blaster",
@@ -4405,11 +7156,17 @@
         "throws": [
           {
             "name": "Double Foot Stomp",
-            "input": "1+3"
+            "input": "1+3",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Sleeper Hold",
-            "input": "2+4"
+            "input": "2+4",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Sailboat Stretch",
@@ -4428,11 +7185,17 @@
           },
           {
             "name": "Dragon Falls",
-            "input": "u/f+1+2"
+            "input": "u/f+1+2",
+            "referenceFrameData": {
+              "startup": "11"
+            }
           },
           {
             "name": "Tripping",
-            "input": "f,f+1+2"
+            "input": "f,f+1+2",
+            "referenceFrameData": {
+              "startup": "12"
+            }
           },
           {
             "name": "Out of Control",
@@ -4446,7 +7209,13 @@
         "moves": [
           {
             "name": "High and Low Kicks",
-            "input": "3,3"
+            "input": "3,3",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14 -19",
+              "hit": "-4 KD",
+              "counterHit": "-4 KD"
+            }
           },
           {
             "name": "Tornado Kick",
@@ -4454,7 +7223,12 @@
           },
           {
             "name": "Clean Sweep",
-            "input": "[4~3]"
+            "input": "[4~3]",
+            "referenceFrameData": {
+              "startup": "34",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Lift Up Cannon",
@@ -4478,7 +7252,13 @@
           },
           {
             "name": "Cannonball",
-            "input": "b+1+2"
+            "input": "b+1+2",
+            "referenceFrameData": {
+              "startup": "25",
+              "block": "-7",
+              "hit": "+5",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Razor Rush",
@@ -4514,79 +7294,192 @@
           },
           {
             "name": "Razor Kick - Mid Stun Kick",
-            "input": "f,n+3,4"
+            "input": "f,n+3,4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "+1 +4",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Razor Kick - Trip Kick",
-            "input": "f,n+3,d+4"
+            "input": "f,n+3,d+4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "+1 -8",
+              "hit": "KD KD",
+              "counterHit": "KD KD"
+            }
           },
           {
             "name": "Rush Combo - Razor Kick",
-            "input": "f,n+4,1,2,3"
+            "input": "f,n+4,1,2,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-22 -1 -10 +2",
+              "hit": "-11 +10 -1 KD",
+              "counterHit": "-11 +10 -1 KD"
+            }
           },
           {
             "name": "Beating Kick",
-            "input": "f+4"
+            "input": "f+4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-17",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tiger Strike",
-            "input": "(Tiger stance) 1"
+            "input": "(Tiger stance) 1",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "+8",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tiger Claw",
-            "input": "(Tiger stance) 2"
+            "input": "(Tiger stance) 2",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "+7",
+              "hit": "+4",
+              "counterHit": "+4"
+            }
           },
           {
             "name": "Tiger Kick",
-            "input": "(Tiger stance) 3"
+            "input": "(Tiger stance) 3",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "-28",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Tiger Tail",
-            "input": "(Tiger stance) 4"
+            "input": "(Tiger stance) 4",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-30",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Panther Paw",
-            "input": "(Panther stance) 2"
+            "input": "(Panther stance) 2",
+            "referenceFrameData": {
+              "startup": "15",
+              "block": "-9",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Guard Melting Punches",
-            "input": "(Panther stance) 2,1,2,1"
+            "input": "(Panther stance) 2,1,2,1",
+            "referenceFrameData": {
+              "startup": "12",
+              "block": "+2 0 -17 +9",
+              "hit": "x +2 -17 KD",
+              "counterHit": "x +2 KD KD"
+            }
           },
           {
             "name": "Beating Kick",
-            "input": "(Panther stance) 4"
+            "input": "(Panther stance) 4",
+            "referenceFrameData": {
+              "startup": "24",
+              "block": "-19",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Crescent Trip",
-            "input": "(Dragon stance) 3,3"
+            "input": "(Dragon stance) 3,3",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-15 -10",
+              "hit": "+5 +5",
+              "counterHit": "+3 +15"
+            }
           },
           {
             "name": "Rush Combo - Razor Kick",
-            "input": "(Dragon stance) 4,1,2,3"
+            "input": "(Dragon stance) 4,1,2,3",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-22 -1 -10 +2",
+              "hit": "-11 +10 -1 KD",
+              "counterHit": "-11 +10 -1 KD"
+            }
           },
           {
             "name": "Rattle Snake",
-            "input": "(Snake stance) 3"
+            "input": "(Snake stance) 3",
+            "referenceFrameData": {
+              "startup": "28",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Snake Kick",
-            "input": "(Snake stance) 4"
+            "input": "(Snake stance) 4",
+            "referenceFrameData": {
+              "startup": "16",
+              "block": "-5",
+              "hit": "-6",
+              "counterHit": "-6"
+            }
           },
           {
             "name": "Spinning Back Blow",
-            "input": "BT 1"
+            "input": "BT 1",
+            "referenceFrameData": {
+              "startup": "10",
+              "block": "-6",
+              "hit": "+5",
+              "counterHit": "+5"
+            }
           },
           {
             "name": "Spiral Upper",
-            "input": "BT 2"
+            "input": "BT 2",
+            "referenceFrameData": {
+              "startup": "19",
+              "block": "-11",
+              "hit": "KD",
+              "counterHit": "KD"
+            }
           },
           {
             "name": "Flip Flop",
-            "input": "BT 3+4,3+4,3+4"
+            "input": "BT 3+4,3+4,3+4",
+            "referenceFrameData": {
+              "startup": "32",
+              "block": "-4 -10 -10",
+              "hit": "KD KD KD",
+              "counterHit": "KD KD KD"
+            }
           },
           {
             "name": "Reverse Kick",
-            "input": "BT 4"
+            "input": "BT 4",
+            "referenceFrameData": {
+              "startup": "14",
+              "block": "-14",
+              "hit": "-3",
+              "counterHit": "-3"
+            }
           },
           {
             "name": "Reverse Hop Kick",

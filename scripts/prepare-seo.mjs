@@ -14,7 +14,7 @@ const [tekken8, tekken7, tag2, tekken1, tekken2] = await Promise.all([
 ]);
 if (tekken8.length < 30) throw new Error('Incomplete Tekken 8 roster');
 const datasets = { 'tekken-8': tekken8, 'tekken-7': tekken7, 'tekken-tag-2': tag2, 'tekken-1': tekken1, 'tekken-2': tekken2 };
-for (const id of ['tekken-3', 'tekken-4', 'tekken-5']) datasets[id] = JSON.parse(await fs.readFile(`public/data/${id}.json`, 'utf8'));
+for (const id of ['tekken-3', 'tekken-tag-1', 'tekken-4', 'tekken-5']) datasets[id] = JSON.parse(await fs.readFile(`public/data/${id}.json`, 'utf8'));
 const catalog = [];
 const seeds = {};
 const rosterEntry = c => ({ id: c.id, _id: c._id, name: c.name, image: c.image, slug: c.slug, gameId: c.gameId, hasCounterGuide: Boolean(c.counterSchema?.length) });
@@ -26,6 +26,7 @@ add('/', 'Tekken Combos & Character Guides', 'Tekken 1–5, Dark Resurrection, T
 const features = {
   'tekken-3': 'classic combo routes, moves, throws and 10 hit combos',
   'tekken-4': 'combo routes, moves, throws and 10 hit combos',
+  'tekken-tag-1': 'moves, frame data, high-damage juggles and tag combos',
   'tekken-5': 'Tekken 5 and Dark Resurrection moves, throws and combo routes',
   'tekken-8': 'combo routes, wall combos, Heat moves, punishers and throw breaks',
   'tekken-7': 'combo routes, wall combos, punishment frames and throw breaks',

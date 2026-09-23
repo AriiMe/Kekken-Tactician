@@ -28,6 +28,11 @@
       "permanent": true
     },
     {
+      "source": "/tekken-tag-1",
+      "destination": "/games/tekken-tag-1",
+      "permanent": true
+    },
+    {
       "source": "/tekken-3",
       "destination": "/games/tekken-3",
       "permanent": true

@@ -4464,6 +4464,843 @@
     ]
   },
   {
+    "path": "/games/tekken-tag-1",
+    "title": "Tekken Tag Tournament Combos & Character Guides | TEKKTICIAN",
+    "description": "Find Tekken Tag Tournament moves, frame data, high-damage juggles and tag combos. Choose a character and practice with readable inputs on TEKKTICIAN.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      }
+    ],
+    "collection": true
+  },
+  {
+    "path": "/games/tekken-tag-1/jun-kazama",
+    "title": "Tekken Tag Tournament Jun Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jun Kazama in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Jun Kazama",
+        "path": "/games/tekken-tag-1/jun-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/bruce-irvin",
+    "title": "Tekken Tag Tournament Bruce Irvin Combos & Guide | TEKKTICIAN",
+    "description": "Bruce Irvin in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Bruce Irvin",
+        "path": "/games/tekken-tag-1/bruce-irvin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/bryan-fury",
+    "title": "Tekken Tag Tournament Bryan Fury Combos & Guide | TEKKTICIAN",
+    "description": "Bryan Fury in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Bryan Fury",
+        "path": "/games/tekken-tag-1/bryan-fury"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/kunimitsu",
+    "title": "Tekken Tag Tournament Kunimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Kunimitsu in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Kunimitsu",
+        "path": "/games/tekken-tag-1/kunimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/yoshimitsu",
+    "title": "Tekken Tag Tournament Yoshimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Yoshimitsu in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Yoshimitsu",
+        "path": "/games/tekken-tag-1/yoshimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/true-ogre",
+    "title": "Tekken Tag Tournament True Ogre Combos & Guide | TEKKTICIAN",
+    "description": "True Ogre in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "True Ogre",
+        "path": "/games/tekken-tag-1/true-ogre"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/ogre",
+    "title": "Tekken Tag Tournament Ogre Combos & Guide | TEKKTICIAN",
+    "description": "Ogre in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Ogre",
+        "path": "/games/tekken-tag-1/ogre"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/devil",
+    "title": "Tekken Tag Tournament Devil Combos & Guide | TEKKTICIAN",
+    "description": "Devil in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Devil",
+        "path": "/games/tekken-tag-1/devil"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/kazuya-mishima",
+    "title": "Tekken Tag Tournament Kazuya Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Kazuya Mishima in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Kazuya Mishima",
+        "path": "/games/tekken-tag-1/kazuya-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/heihachi-mishima",
+    "title": "Tekken Tag Tournament Heihachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Heihachi Mishima in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Heihachi Mishima",
+        "path": "/games/tekken-tag-1/heihachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/jin-kazama",
+    "title": "Tekken Tag Tournament Jin Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jin Kazama in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Jin Kazama",
+        "path": "/games/tekken-tag-1/jin-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/wang-jinrei",
+    "title": "Tekken Tag Tournament Wang Jinrei Combos & Guide | TEKKTICIAN",
+    "description": "Wang Jinrei in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Wang Jinrei",
+        "path": "/games/tekken-tag-1/wang-jinrei"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/julia-chang",
+    "title": "Tekken Tag Tournament Julia Chang Combos & Guide | TEKKTICIAN",
+    "description": "Julia Chang in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Julia Chang",
+        "path": "/games/tekken-tag-1/julia-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/michelle-chang",
+    "title": "Tekken Tag Tournament Michelle Chang Combos & Guide | TEKKTICIAN",
+    "description": "Michelle Chang in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Michelle Chang",
+        "path": "/games/tekken-tag-1/michelle-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/anna-williams",
+    "title": "Tekken Tag Tournament Anna Williams Combos & Guide | TEKKTICIAN",
+    "description": "Anna Williams in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Anna Williams",
+        "path": "/games/tekken-tag-1/anna-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/nina-williams",
+    "title": "Tekken Tag Tournament Nina Williams Combos & Guide | TEKKTICIAN",
+    "description": "Nina Williams in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Nina Williams",
+        "path": "/games/tekken-tag-1/nina-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/armor-king",
+    "title": "Tekken Tag Tournament Armor King Combos & Guide | TEKKTICIAN",
+    "description": "Armor King in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Armor King",
+        "path": "/games/tekken-tag-1/armor-king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/roger",
+    "title": "Tekken Tag Tournament Roger Combos & Guide | TEKKTICIAN",
+    "description": "Roger in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Roger",
+        "path": "/games/tekken-tag-1/roger"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/king",
+    "title": "Tekken Tag Tournament King Combos & Guide | TEKKTICIAN",
+    "description": "King in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "King",
+        "path": "/games/tekken-tag-1/king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/paul-phoenix",
+    "title": "Tekken Tag Tournament Paul Phoenix Combos & Guide | TEKKTICIAN",
+    "description": "Paul Phoenix in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Paul Phoenix",
+        "path": "/games/tekken-tag-1/paul-phoenix"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/ganryu",
+    "title": "Tekken Tag Tournament Ganryu Combos & Guide | TEKKTICIAN",
+    "description": "Ganryu in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Ganryu",
+        "path": "/games/tekken-tag-1/ganryu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/kuma",
+    "title": "Tekken Tag Tournament Kuma Combos & Guide | TEKKTICIAN",
+    "description": "Kuma in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Kuma",
+        "path": "/games/tekken-tag-1/kuma"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/gun-jack",
+    "title": "Tekken Tag Tournament Gun Jack Combos & Guide | TEKKTICIAN",
+    "description": "Gun Jack in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Gun Jack",
+        "path": "/games/tekken-tag-1/gun-jack"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/jack-2",
+    "title": "Tekken Tag Tournament Jack-2 Combos & Guide | TEKKTICIAN",
+    "description": "Jack-2 in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Jack-2",
+        "path": "/games/tekken-tag-1/jack-2"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/prototype-jack",
+    "title": "Tekken Tag Tournament Prototype Jack Combos & Guide | TEKKTICIAN",
+    "description": "Prototype Jack in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Prototype Jack",
+        "path": "/games/tekken-tag-1/prototype-jack"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/ling-xiaoyu",
+    "title": "Tekken Tag Tournament Ling Xiaoyu Combos & Guide | TEKKTICIAN",
+    "description": "Ling Xiaoyu in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Ling Xiaoyu",
+        "path": "/games/tekken-tag-1/ling-xiaoyu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/lee-chaolan",
+    "title": "Tekken Tag Tournament Lee Chaolan Combos & Guide | TEKKTICIAN",
+    "description": "Lee Chaolan in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Lee Chaolan",
+        "path": "/games/tekken-tag-1/lee-chaolan"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/forest-law",
+    "title": "Tekken Tag Tournament Forest Law Combos & Guide | TEKKTICIAN",
+    "description": "Forest Law in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Forest Law",
+        "path": "/games/tekken-tag-1/forest-law"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/baek-doo-san",
+    "title": "Tekken Tag Tournament Baek Doo San Combos & Guide | TEKKTICIAN",
+    "description": "Baek Doo San in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Baek Doo San",
+        "path": "/games/tekken-tag-1/baek-doo-san"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/hwoarang",
+    "title": "Tekken Tag Tournament Hwoarang Combos & Guide | TEKKTICIAN",
+    "description": "Hwoarang in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Hwoarang",
+        "path": "/games/tekken-tag-1/hwoarang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/eddy-gordo",
+    "title": "Tekken Tag Tournament Eddy Gordo Combos & Guide | TEKKTICIAN",
+    "description": "Eddy Gordo in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Eddy Gordo",
+        "path": "/games/tekken-tag-1/eddy-gordo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/lei-wulong",
+    "title": "Tekken Tag Tournament Lei Wulong Combos & Guide | TEKKTICIAN",
+    "description": "Lei Wulong in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Lei Wulong",
+        "path": "/games/tekken-tag-1/lei-wulong"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/panda",
+    "title": "Tekken Tag Tournament Panda Combos & Guide | TEKKTICIAN",
+    "description": "Panda in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Panda",
+        "path": "/games/tekken-tag-1/panda"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/angel",
+    "title": "Tekken Tag Tournament Angel Combos & Guide | TEKKTICIAN",
+    "description": "Angel in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Angel",
+        "path": "/games/tekken-tag-1/angel"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/alex",
+    "title": "Tekken Tag Tournament Alex Combos & Guide | TEKKTICIAN",
+    "description": "Alex in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Alex",
+        "path": "/games/tekken-tag-1/alex"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/tiger-jackson",
+    "title": "Tekken Tag Tournament Tiger Jackson Combos & Guide | TEKKTICIAN",
+    "description": "Tiger Jackson in Tekken Tag Tournament: Learn moves, frame data, high-damage juggles and tag combos with readable inputs.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Tiger Jackson",
+        "path": "/games/tekken-tag-1/tiger-jackson"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/mokujin",
+    "title": "Tekken Tag Tournament Mokujin Combos & Guide | TEKKTICIAN",
+    "description": "Mokujin in Tekken Tag Tournament: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Mokujin",
+        "path": "/games/tekken-tag-1/mokujin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/tetsujin",
+    "title": "Tekken Tag Tournament Tetsujin Combos & Guide | TEKKTICIAN",
+    "description": "Tetsujin in Tekken Tag Tournament: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Tetsujin",
+        "path": "/games/tekken-tag-1/tetsujin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-tag-1/unknown",
+    "title": "Tekken Tag Tournament Unknown Combos & Guide | TEKKTICIAN",
+    "description": "Unknown in Tekken Tag Tournament: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken Tag Tournament",
+    "image": "/game-art/tekken-tag.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken Tag Tournament",
+        "path": "/games/tekken-tag-1"
+      },
+      {
+        "name": "Unknown",
+        "path": "/games/tekken-tag-1/unknown"
+      }
+    ]
+  },
+  {
     "path": "/games/tekken-3",
     "title": "Tekken 3 Combos & Character Guides | TEKKTICIAN",
     "description": "Find Tekken 3 classic combo routes, moves, throws and 10 hit combos. Choose a character and practice with readable inputs on TEKKTICIAN.",
