@@ -5,7 +5,7 @@
   "edition": "Arcade / PlayStation 2",
   "source": {
     "label": "Tekken Tag Tournament move and combo archive",
-    "note": "5 is Tag. Frame results are listed per hit; KD means knockdown and — means not applicable. Damage figures are guide-reported and depend on the stated conditions. Recovery setups are escapable. Selected archive coverage; routes have not been independently tested in-game. Startup counts begin after command entry. Stagger advantage does not equal guaranteed time unable to block."
+    "note": "Frame results are listed per hit, KD means knockdown and means not applicable. Damage figures are guide-reported and depend on the stated conditions. Recovery setups are escapable. Selected archive coverage, routes have not been independently tested in-game. Startup counts begin after command entry. Stagger advantage does not equal guaranteed time unable to block."
   },
   "coverage": {
     "rosterBasis": "Arcade / PlayStation 2 roster, including shared costumes and mimics",

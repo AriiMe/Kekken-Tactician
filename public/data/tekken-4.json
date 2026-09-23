@@ -6,7 +6,7 @@
   "tagline": "The King of Iron Fist Tournament returns.",
   "source": {
     "label": "Tekken 4 move and combo archive",
-    "note": "Commands use 1/2/3/4 notation. Frame results are listed per hit; KD means knockdown and — means not applicable. Stagger advantage does not always equal time unable to block. Combo restrictions appear beside each route; recovery setups are not guaranteed. Data combines Tekken Wiki with Tekken Zaibatsu movelists, frame tables and community guides."
+    "note": "Commands use 1/2/3/4 notation. Frame results are listed per hit, KD means knockdown and means not applicable. Stagger advantage does not always equal time unable to block. Combo restrictions appear beside each route, recovery setups are not guaranteed. Data combines Tekken Wiki with Tekken Zaibatsu movelists, frame tables and community guides."
   },
   "portraits": {
     "credit": "Original Tekken 4 character artwork: Namco.",
@@ -407,65 +407,42 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,1,f,f+2",
-            "launchers": [
-              "u/f+4",
-              "b,b+1",
-              "WS+1",
-              "qcf+1"
-            ]
+            "launchers": ["u/f+4", "b,b+1", "WS+1", "qcf+1"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,b+2,1,2",
-            "launchers": [
-              "u/f+4",
-              "b,b+1"
-            ]
+            "launchers": ["u/f+4", "b,b+1"]
           },
           {
             "name": "Delayed Hop Kick follow-up",
             "input": "b+2,1,2",
-            "launchers": [
-              "u/f,n+4"
-            ]
+            "launchers": ["u/f,n+4"]
           },
           {
             "name": "Chin Bash follow-up",
             "input": "1,d+2,1,f,f+2",
-            "launchers": [
-              "qcb,n+2"
-            ]
+            "launchers": ["qcb,n+2"]
           },
           {
             "name": "Fisherman Slam follow-up",
             "input": "1,1,1,1,f,f+2",
-            "launchers": [
-              "WS+2,b+2",
-              "qcf+2,b+2"
-            ]
+            "launchers": ["WS+2,b+2", "qcf+2,b+2"]
           },
           {
             "name": "Snake Edge follow-up",
             "input": "1+3+4,b,b+4",
-            "launchers": [
-              "d/f+3"
-            ]
+            "launchers": ["d/f+3"]
           },
           {
             "name": "Hammer Knee follow-up",
             "input": "f+2,1,4",
-            "launchers": [
-              "CH WS+3",
-              "CH qcf+3"
-            ]
+            "launchers": ["CH WS+3", "CH qcf+3"]
           },
           {
             "name": "Snake Upper, short carry",
             "input": "d+2,1,2,f,f+2",
-            "launchers": [
-              "WS+1",
-              "qcf+1"
-            ]
+            "launchers": ["WS+1", "qcf+1"]
           }
         ],
         "strings": [],
@@ -497,9 +474,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Close wall push."
           },
           {
@@ -509,9 +484,7 @@
           }
         ]
       },
-      "notes": [
-        "Strong mid-range pressure and launchers."
-      ]
+      "notes": ["Strong mid-range pressure and launchers."]
     },
     {
       "slug": "christie-monteiro",
@@ -1014,70 +987,43 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,2,4~4",
-            "launchers": [
-              "d/f+3+4",
-              "RLX 3~4",
-              "u/f+3~3",
-              "1+2~3"
-            ]
+            "launchers": ["d/f+3+4", "RLX 3~4", "u/f+3~3", "1+2~3"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,2,4~4",
-            "launchers": [
-              "d/f+3+4",
-              "RLX 3~4",
-              "u/f+3~3",
-              "1+2~3",
-              "CH b+4"
-            ]
+            "launchers": ["d/f+3+4", "RLX 3~4", "u/f+3~3", "1+2~3", "CH b+4"]
           },
           {
             "name": "Martelo follow-up",
             "input": "1+2,d+4",
-            "launchers": [
-              "qcf+3",
-              "FC f+3"
-            ]
+            "launchers": ["qcf+3", "FC f+3"]
           },
           {
             "name": "Rising Batida follow-up",
             "input": "b+1+2,1+2~3",
-            "launchers": [
-              "CH WS+2",
-              "CH qcf+2"
-            ]
+            "launchers": ["CH WS+2", "CH qcf+2"]
           },
           {
             "name": "Heran Bago follow-up",
             "input": "1,4,4,3+4,d+3",
-            "launchers": [
-              "3~3",
-              "qcf+1,3"
-            ]
+            "launchers": ["3~3", "qcf+1,3"]
           },
           {
             "name": "Boomerang follow-up",
             "input": "3~3,3",
-            "launchers": [
-              "f,f+3+4"
-            ],
+            "launchers": ["f,f+3+4"],
             "notes": "Cancel f,f+3+4 recovery."
           },
           {
             "name": "Cruncher & Counter Boomerang follow-up",
             "input": "b+3+4",
-            "launchers": [
-              "SS+2",
-              "CH f,f+3+4"
-            ]
+            "launchers": ["SS+2", "CH f,f+3+4"]
           },
           {
             "name": "Freak Show, short finish",
             "input": "1,2,4~4",
-            "launchers": [
-              "1+2~3"
-            ]
+            "launchers": ["1+2~3"]
           }
         ],
         "strings": [],
@@ -1098,9 +1044,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
@@ -1512,52 +1456,33 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,b+1",
-            "launchers": [
-              "d+1+2",
-              "d/f+1",
-              "2,d+1+2",
-              "u/f,n+4"
-            ]
+            "launchers": ["d+1+2", "d/f+1", "2,d+1+2", "u/f,n+4"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,b+4",
-            "launchers": [
-              "d+1+2",
-              "d/f+1",
-              "2,d+1+2",
-              "u/f,n+4"
-            ]
+            "launchers": ["d+1+2", "d/f+1", "2,d+1+2", "u/f,n+4"]
           },
           {
             "name": "Sway Power Hammer follow-up",
             "input": "1,1,1,1+2",
-            "launchers": [
-              "d/b+1+2"
-            ]
+            "launchers": ["d/b+1+2"]
           },
           {
             "name": "Atomic Buster follow-up",
             "input": "1,1,1,1,f+1+2",
-            "launchers": [
-              "f,f+1+2"
-            ],
+            "launchers": ["f,f+1+2"],
             "notes": "Wait for the bounce."
           },
           {
             "name": "Rolling Back Chop follow-up",
             "input": "1+2",
-            "launchers": [
-              "CH b+2",
-              "CH WS+3"
-            ]
+            "launchers": ["CH b+2", "CH WS+3"]
           },
           {
             "name": "Uppercut, short finish",
             "input": "1,1,b+4",
-            "launchers": [
-              "d/f+1"
-            ]
+            "launchers": ["d/f+1"]
           }
         ],
         "strings": [],
@@ -1577,9 +1502,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
@@ -1601,9 +1524,7 @@
         "fit": "cover"
       },
       "sections": {},
-      "notes": [
-        "Eddy uses Christie’s shared move and combo guide."
-      ],
+      "notes": ["Eddy uses Christie’s shared move and combo guide."],
       "sharedGuide": "christie-monteiro"
     },
     {
@@ -2033,70 +1954,48 @@
           {
             "name": "Standard follow-up",
             "input": "1+2",
-            "launchers": [
-              "d/f+1,2",
-              "CH u+4"
-            ]
+            "launchers": ["d/f+1,2", "CH u+4"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,1,b+1",
-            "launchers": [
-              "d/f+1,2",
-              "CH u+4"
-            ]
+            "launchers": ["d/f+1,2", "CH u+4"]
           },
           {
             "name": "Wind Godfist follow-up",
             "input": "1,1,1+2",
-            "launchers": [
-              "CH f,n,d,d/f+2",
-              "CH f,n,d~d/f+2",
-              "CH d/f+2"
-            ]
+            "launchers": ["CH f,n,d,d/f+2", "CH f,n,d~d/f+2", "CH d/f+2"]
           },
           {
             "name": "Demon Godfist follow-up",
             "input": "1,2,2",
-            "launchers": [
-              "f,f+2"
-            ]
+            "launchers": ["f,f+2"]
           },
           {
             "name": "Delay Thunder Godfist follow-up",
             "input": "d:~u+3,4",
-            "launchers": [
-              "f,n,d,~df,1"
-            ]
+            "launchers": ["f,n,d,~df,1"]
           },
           {
             "name": "Demon Boar follow-up",
             "input": "b+2",
-            "launchers": [
-              "CH b+2"
-            ]
+            "launchers": ["CH b+2"]
           },
           {
             "name": "Roundhouse follow-up",
             "input": "d+1,d+1",
-            "launchers": [
-              "CH 4"
-            ]
+            "launchers": ["CH 4"]
           },
           {
             "name": "Dark Thrust follow-up",
             "input": "1,1,1,1,b+2",
-            "launchers": [
-              "CH WS+2"
-            ],
+            "launchers": ["CH WS+2"],
             "notes": "Opponent face down after jab."
           },
           {
             "name": "Counter-hit uppercut to Deathfist",
             "input": "qcf+2",
-            "launchers": [
-              "CH d/f+2"
-            ]
+            "launchers": ["CH d/f+2"]
           }
         ],
         "strings": [
@@ -2124,9 +2023,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1+2,d+1,d+1",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -3060,66 +2957,45 @@
           {
             "name": "Right Snap Kick follow-up",
             "input": "1,2,3,1,2,4,3",
-            "launchers": [
-              "CH RFS d/f+4"
-            ]
+            "launchers": ["CH RFS d/f+4"]
           },
           {
             "name": "Right Snap Kick follow-up",
             "input": "1,2,3,1,2,4,f+4",
-            "launchers": [
-              "CH RFS d/f+4"
-            ]
+            "launchers": ["CH RFS d/f+4"]
           },
           {
             "name": "Uppercut & Machine Gun Kick follow-up",
             "input": "1,2,3,1,WS+4,4",
-            "launchers": [
-              "CH d/f+2",
-              "CH WS+2",
-              "3,3,3,3",
-              "LFS 3,3,3"
-            ],
+            "launchers": ["CH d/f+2", "CH WS+2", "3,3,3,3", "LFS 3,3,3"],
             "notes": "Use an instant while-standing input."
           },
           {
             "name": "Fire Cracker follow-up",
             "input": "2,4,1,2,4,d/f+4",
-            "launchers": [
-              "d+4,4"
-            ]
+            "launchers": ["d+4,4"]
           },
           {
             "name": "Lefty Grand Theft & Plasma Blade follow-up",
             "input": "1,2,3,1,1,2,3,4",
-            "launchers": [
-              "b+3",
-              "RFF BT 3"
-            ]
+            "launchers": ["b+3", "RFF BT 3"]
           },
           {
             "name": "Righty Grand Theft & Plasma Blade follow-up",
             "input": "2,3,2,3,1,f,f+4",
-            "launchers": [
-              "RFF f+4~4",
-              "LFF BT 4"
-            ],
+            "launchers": ["RFF f+4~4", "LFF BT 4"],
             "notes": "Step in before 2,3."
           },
           {
             "name": "Right Heel Lance follow-up",
             "input": "f+3,1,2,3,1,f,f+4",
-            "launchers": [
-              "LFS b+4"
-            ],
+            "launchers": ["LFS b+4"],
             "notes": "Back combo."
           },
           {
             "name": "Sky Rocket follow-up",
             "input": "1,2,3,1,f,f+4",
-            "launchers": [
-              "f,n,d/f+4"
-            ],
+            "launchers": ["f,n,d/f+4"],
             "notes": "Just-frame Sky Rocket; run underneath the opponent before the follow-up."
           }
         ],
@@ -3152,9 +3028,7 @@
           {
             "name": "Position-change follow-up",
             "input": "b+3,f+1+2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -3654,59 +3528,37 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,f,f+2",
-            "launchers": [
-              "WS+2",
-              "CH d/f+2",
-              "d+3+4"
-            ]
+            "launchers": ["WS+2", "CH d/f+2", "d+3+4"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,3~3,d+4",
-            "launchers": [
-              "WS+2",
-              "CH d/f+2",
-              "d+3+4"
-            ]
+            "launchers": ["WS+2", "CH d/f+2", "d+3+4"]
           },
           {
             "name": "Axe Kick follow-up",
             "input": "d/f+1,1,f,f+2",
-            "launchers": [
-              "f,f+3",
-              "1,2,3"
-            ]
+            "launchers": ["f,f+3", "1,2,3"]
           },
           {
             "name": "Axe Kick Fury follow-up",
             "input": "1,1,d+1",
-            "launchers": [
-              "f,f+3,1"
-            ]
+            "launchers": ["f,f+3,1"]
           },
           {
             "name": "Blade Kick follow-up",
             "input": "4~3",
-            "launchers": [
-              "CH f+3~3,3",
-              "CH 1,3~3,3",
-              "CH f+4"
-            ]
+            "launchers": ["CH f+3~3,3", "CH 1,3~3,3", "CH f+4"]
           },
           {
             "name": "Stature Sweep follow-up",
             "input": "3+4",
-            "launchers": [
-              "f,n,d,~df+4"
-            ]
+            "launchers": ["f,n,d,~df+4"]
           },
           {
             "name": "Uppercut, short finish",
             "input": "1+2",
-            "launchers": [
-              "CH d/f+2",
-              "WS+2"
-            ]
+            "launchers": ["CH d/f+2", "WS+2"]
           },
           {
             "name": "Counter-hit Laser Scraper finish",
@@ -3742,9 +3594,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1+2,d/f+4",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -3754,9 +3604,7 @@
           }
         ]
       },
-      "notes": [
-        "Traditional karate style in this game."
-      ]
+      "notes": ["Traditional karate style in this game."]
     },
     {
       "slug": "julia-chang",
@@ -4087,77 +3935,48 @@
           {
             "name": "Standard follow-up",
             "input": "1,b+1+2",
-            "launchers": [
-              "f+1",
-              "d+4,1",
-              "4,4,1",
-              "WS+2,4,1"
-            ]
+            "launchers": ["f+1", "d+4,1", "4,4,1", "WS+2,4,1"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,f,f+1,d/f+1,2",
-            "launchers": [
-              "f+1",
-              "d+4,1",
-              "4,4,1",
-              "WS+2,4,1"
-            ]
+            "launchers": ["f+1", "d+4,1", "4,4,1", "WS+2,4,1"]
           },
           {
             "name": "Flash Uppercut & Hop Kick follow-up",
             "input": "1+2",
-            "launchers": [
-              "d/f+1,1",
-              "1~1,1",
-              "2+3,1",
-              "u/f+4"
-            ],
+            "launchers": ["d/f+1,1", "1~1,1", "2+3,1", "u/f+4"],
             "notes": "One step away for u/f+4 starter."
           },
           {
             "name": "Twin Waking Kick follow-up",
             "input": "1+2,f,f+1,f,f+1,4",
-            "launchers": [
-              "SS+3~4"
-            ]
+            "launchers": ["SS+3~4"]
           },
           {
             "name": "Skyscraper Cannon follow-up",
             "input": "f,f+1,d/f+4,2,b,f+1",
-            "launchers": [
-              "CH 1,2,1",
-              "d/f+2,1"
-            ]
+            "launchers": ["CH 1,2,1", "d/f+2,1"]
           },
           {
             "name": "Shove It Up follow-up",
             "input": "3",
-            "launchers": [
-              "CH f+1+2"
-            ]
+            "launchers": ["CH f+1+2"]
           },
           {
             "name": "Palm Explosion follow-up",
             "input": "1+2,d,d/f+1,2",
-            "launchers": [
-              "CH f+1~2",
-              "CH 1~1,2"
-            ]
+            "launchers": ["CH f+1~2", "CH 1~1,2"]
           },
           {
             "name": "Flash Elbow follow-up",
             "input": "1~1,1",
-            "launchers": [
-              "CH FC d/f+2"
-            ]
+            "launchers": ["CH FC d/f+2"]
           },
           {
             "name": "Flash Uppercut carry",
             "input": "d/f+4,2,b,f+1",
-            "launchers": [
-              "f+1"
-            ]
+            "launchers": ["f+1"]
           }
         ],
         "strings": [
@@ -4185,9 +4004,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1~1",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Close wall push."
           },
           {
@@ -4197,9 +4014,7 @@
           }
         ]
       },
-      "notes": [
-        "Shares many tools with Michelle Chang."
-      ]
+      "notes": ["Shares many tools with Michelle Chang."]
     },
     {
       "slug": "kazuya-mishima",
@@ -4577,63 +4392,43 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,f,n,d~d/f+2",
-            "launchers": [
-              "WS+1,2",
-              "u/f,n+4"
-            ]
+            "launchers": ["WS+1,2", "u/f,n+4"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,1,2",
-            "launchers": [
-              "WS+1,2",
-              "u/f,n+4"
-            ]
+            "launchers": ["WS+1,2", "u/f,n+4"]
           },
           {
             "name": "Wind Godfist follow-up",
             "input": "1,f,n,d~d/f+2,d/f+4,4",
-            "launchers": [
-              "CH f,n,d~d/f+2",
-              "CH f,n,d,d/f+2",
-              "WS+1,2"
-            ]
+            "launchers": ["CH f,n,d~d/f+2", "CH f,n,d,d/f+2", "WS+1,2"]
           },
           {
             "name": "Glorious Demon Fist follow-up",
             "input": "d/b+4,d/f+4,4",
-            "launchers": [
-              "f+1+2"
-            ],
+            "launchers": ["f+1+2"],
             "notes": "Dash after f+1+2."
           },
           {
             "name": "Gut Punch follow-up",
             "input": "3,1,1,f,n,d~d/f+2",
-            "launchers": [
-              "CH d/f+2"
-            ]
+            "launchers": ["CH d/f+2"]
           },
           {
             "name": "Demon Gut Punch follow-up",
             "input": "1,SS+1+2,d/f+4,4",
-            "launchers": [
-              "WS+2"
-            ]
+            "launchers": ["WS+2"]
           },
           {
             "name": "Spiral Backfist follow-up",
             "input": "d+1,WS+1,2",
-            "launchers": [
-              "CH b,b+2"
-            ]
+            "launchers": ["CH b,b+2"]
           },
           {
             "name": "Blazing Demon Fire Rush follow-up",
             "input": "4~3",
-            "launchers": [
-              "b+3,1,4,1"
-            ]
+            "launchers": ["b+3,1,4,1"]
           }
         ],
         "strings": [],
@@ -4665,9 +4460,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,1,2,4",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Close wall push."
           },
           {
@@ -5177,44 +4970,32 @@
           {
             "name": "Ankle Smash follow-up",
             "input": "d+1,CC,1,d+3+4,2",
-            "launchers": [
-              "FC d/f+1"
-            ]
+            "launchers": ["FC d/f+1"]
           },
           {
             "name": "Knuckle Bomb follow-up",
             "input": "4,b+3",
-            "launchers": [
-              "CH u/f+1+2"
-            ]
+            "launchers": ["CH u/f+1+2"]
           },
           {
             "name": "Elbow Knife follow-up",
             "input": "b+4",
-            "launchers": [
-              "CH WS+1+2"
-            ]
+            "launchers": ["CH WS+1+2"]
           },
           {
             "name": "Stomach Smash follow-up",
             "input": "d/b+4",
-            "launchers": [
-              "CH f,f,n+2"
-            ]
+            "launchers": ["CH f,f,n+2"]
           },
           {
             "name": "Blind Kick follow-up",
             "input": "d+1+2",
-            "launchers": [
-              "CH BT 3"
-            ]
+            "launchers": ["CH BT 3"]
           },
           {
             "name": "Hop kick, short carry",
             "input": "1,1,f+4",
-            "launchers": [
-              "u/f+4"
-            ]
+            "launchers": ["u/f+4"]
           }
         ],
         "strings": [],
@@ -5252,9 +5033,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
@@ -5264,9 +5043,7 @@
           }
         ]
       },
-      "notes": [
-        "Extremely strong throw game."
-      ]
+      "notes": ["Extremely strong throw game."]
     },
     {
       "slug": "kuma-panda",
@@ -5605,51 +5382,32 @@
           {
             "name": "Standard follow-up",
             "input": "f+1,f+1+2",
-            "launchers": [
-              "f+1,1,1",
-              "d/f+2",
-              "WS+1",
-              "WS+1+2"
-            ]
+            "launchers": ["f+1,1,1", "d/f+2", "WS+1", "WS+1+2"]
           },
           {
             "name": "Standard follow-up",
             "input": "f+2,f+1+2",
-            "launchers": [
-              "f+1,1,1",
-              "d/f+2",
-              "WS+1",
-              "WS+1+2"
-            ]
+            "launchers": ["f+1,1,1", "d/f+2", "WS+1", "WS+1+2"]
           },
           {
             "name": "Hop Kick & Rising Upper follow-up",
             "input": "f+1,1,1",
-            "launchers": [
-              "u/f+4",
-              "WS+2"
-            ]
+            "launchers": ["u/f+4", "WS+2"]
           },
           {
             "name": "Bear Upper Rush follow-up",
             "input": "WS+1+2,1+2",
-            "launchers": [
-              "CH ~df,1,2,1"
-            ]
+            "launchers": ["CH ~df,1,2,1"]
           },
           {
             "name": "Grizzly Scissors follow-up",
             "input": "1+2",
-            "launchers": [
-              "f+1+2"
-            ]
+            "launchers": ["f+1+2"]
           },
           {
             "name": "Demon Bear Fist follow-up",
             "input": "1,1,1",
-            "launchers": [
-              "f,f+2"
-            ]
+            "launchers": ["f,f+2"]
           }
         ],
         "strings": [],
@@ -5681,9 +5439,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1+2,1+2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -5693,9 +5449,7 @@
           }
         ]
       },
-      "notes": [
-        "Kuma and Panda share the exact same moveset."
-      ]
+      "notes": ["Kuma and Panda share the exact same moveset."]
     },
     {
       "slug": "lee-chaolan",
@@ -6103,56 +5857,37 @@
           {
             "name": "Soviet Kick follow-up",
             "input": "1,1,b+1,1,2",
-            "launchers": [
-              "f,n+3,4"
-            ]
+            "launchers": ["f,n+3,4"]
           },
           {
             "name": "Soviet Kick follow-up",
             "input": "1,1,f,n+3,4",
-            "launchers": [
-              "f,n+3,4"
-            ]
+            "launchers": ["f,n+3,4"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,u/f+4,1,2~f,n+3",
-            "launchers": [
-              "u/f+4",
-              "~uf+4",
-              "CH d/f+2",
-              "u/f,n+4"
-            ]
+            "launchers": ["u/f+4", "~uf+4", "CH d/f+2", "u/f,n+4"]
           },
           {
             "name": "Acid Rain follow-up",
             "input": "1,2~f,n,1,2~f,n,1,2~f,n+3,4",
-            "launchers": [
-              "f+3:3:3"
-            ]
+            "launchers": ["f+3:3:3"]
           },
           {
             "name": "Quick Catapult follow-up",
             "input": "FC ~uf+4",
-            "launchers": [
-              "FC u/f+4"
-            ]
+            "launchers": ["FC u/f+4"]
           },
           {
             "name": "Silver Heel & Split Axe Kick follow-up",
             "input": "1,2~f,n,4,u+3",
-            "launchers": [
-              "CH b+4",
-              "CH f,f+3",
-              "HMS 2"
-            ]
+            "launchers": ["CH b+4", "CH f,f+3", "HMS 2"]
           },
           {
             "name": "Ship Slicer follow-up",
             "input": "d+1,CC,1,2~f,n,1,2~f,n+3,4",
-            "launchers": [
-              "HMS 4"
-            ]
+            "launchers": ["HMS 4"]
           }
         ],
         "strings": [],
@@ -6183,9 +5918,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2,4:4",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
@@ -6195,9 +5928,7 @@
           }
         ]
       },
-      "notes": [
-        "Violet is Lee’s alter-ego / costume. Shares the same moveset."
-      ]
+      "notes": ["Violet is Lee’s alter-ego / costume. Shares the same moveset."]
     },
     {
       "slug": "lei-wulong",
@@ -6696,16 +6427,12 @@
           {
             "name": "Spiral Upper follow-up",
             "input": "1,2,f+3",
-            "launchers": [
-              "BT 2"
-            ]
+            "launchers": ["BT 2"]
           },
           {
             "name": "Spiral Upper follow-up",
             "input": "2,1,2,f+3",
-            "launchers": [
-              "BT 2"
-            ]
+            "launchers": ["BT 2"]
           },
           {
             "name": "Standard follow-up",
@@ -6724,37 +6451,27 @@
           {
             "name": "Soaring Crane Wing follow-up",
             "input": "CRA 1",
-            "launchers": [
-              "u/f+3"
-            ]
+            "launchers": ["u/f+3"]
           },
           {
             "name": "Low Back Spin follow-up",
             "input": "3",
-            "launchers": [
-              "BT d+1"
-            ]
+            "launchers": ["BT d+1"]
           },
           {
             "name": "Turn Over Kicks follow-up",
             "input": "1,3",
-            "launchers": [
-              "u/f+3+4"
-            ]
+            "launchers": ["u/f+3+4"]
           },
           {
             "name": "Tiger Strike follow-up",
             "input": "2,1+2~2",
-            "launchers": [
-              "CH (Tiger stance) 1"
-            ]
+            "launchers": ["CH (Tiger stance) 1"]
           },
           {
             "name": "Snake Bite follow-up",
             "input": "d/b+4,f,n+4~1,f,n+4~1,2,3",
-            "launchers": [
-              "CH (Snake stance) 2"
-            ]
+            "launchers": ["CH (Snake stance) 2"]
           }
         ],
         "strings": [],
@@ -6763,9 +6480,7 @@
           {
             "name": "Position-change follow-up",
             "input": "d/f+2,b+1+2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -7546,52 +7261,37 @@
           {
             "name": "Cross Lifting Palms follow-up",
             "input": "1,d/b+4",
-            "launchers": [
-              "d/f+2~1"
-            ]
+            "launchers": ["d/f+2~1"]
           },
           {
             "name": "Sun Flower follow-up",
             "input": "2,2,2,2,1",
-            "launchers": [
-              "CH WS+2"
-            ]
+            "launchers": ["CH WS+2"]
           },
           {
             "name": "Reverse Kangaroo Kick follow-up",
             "input": "f+3+4~3+4,d+1",
-            "launchers": [
-              "RDS f+3+4~3+4"
-            ]
+            "launchers": ["RDS f+3+4~3+4"]
           },
           {
             "name": "Wave Crest follow-up",
             "input": "4~3,ws+2,2,1",
-            "launchers": [
-              "AOP d+1+2"
-            ]
+            "launchers": ["AOP d+1+2"]
           },
           {
             "name": "Parting Sweep  & Scissor Kick follow-up",
             "input": "~d+3,2,2,1",
-            "launchers": [
-              "CH SS+4",
-              "CH 4~3"
-            ]
+            "launchers": ["CH SS+4", "CH 4~3"]
           },
           {
             "name": "Cyanide follow-up",
             "input": "2,1,1,f,f+3",
-            "launchers": [
-              "CH u/f+4"
-            ]
+            "launchers": ["CH u/f+4"]
           },
           {
             "name": "Cross Lifting Palms to Scissors",
             "input": "1,4~3",
-            "launchers": [
-              "d/f+2~1"
-            ]
+            "launchers": ["d/f+2~1"]
           }
         ],
         "strings": [],
@@ -7613,9 +7313,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,d+2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
@@ -8038,23 +7736,17 @@
           {
             "name": "Dragon Storm follow-up",
             "input": "f+2~1",
-            "launchers": [
-              "b+1,2,1"
-            ]
+            "launchers": ["b+1,2,1"]
           },
           {
             "name": "Junkyard follow-up",
             "input": "3,4,b,f,b,f,3",
-            "launchers": [
-              "b+2,3,4"
-            ]
+            "launchers": ["b+2,3,4"]
           },
           {
             "name": "Dragon Knee follow-up",
             "input": "3,4",
-            "launchers": [
-              "f,f+3+4"
-            ]
+            "launchers": ["f,f+3+4"]
           },
           {
             "name": "Somersault follow-up",
@@ -8071,23 +7763,17 @@
           {
             "name": "Poison Arrow follow-up",
             "input": "d+4,3",
-            "launchers": [
-              "f+2~1"
-            ]
+            "launchers": ["f+2~1"]
           },
           {
             "name": "Dragon Hammer follow-up",
             "input": "d+1+2,4,3",
-            "launchers": [
-              "CH f+1+2"
-            ]
+            "launchers": ["CH f+1+2"]
           },
           {
             "name": "Uppercut to Junkyard",
             "input": "1,b+2,3,4",
-            "launchers": [
-              "d/f+2"
-            ]
+            "launchers": ["d/f+2"]
           }
         ],
         "strings": [
@@ -8115,9 +7801,7 @@
           {
             "name": "Position-change follow-up",
             "input": "d/f+2,d/b+4",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -8134,9 +7818,7 @@
           }
         ]
       },
-      "notes": [
-        "Classic Law moveset."
-      ]
+      "notes": ["Classic Law moveset."]
     },
     {
       "slug": "nina-williams",
@@ -8619,54 +8301,37 @@
           {
             "name": "Uppercut follow-up",
             "input": "u/f+4,1,1+4",
-            "launchers": [
-              "d/f+2",
-              "d+3,2"
-            ]
+            "launchers": ["d/f+2", "d+3,2"]
           },
           {
             "name": "Divine Cannon follow-up",
             "input": "1,u/f+4,1,f+1+2",
-            "launchers": [
-              "d/b+3+4",
-              "d/f+3,2,3",
-              "d,~db+3"
-            ]
+            "launchers": ["d/b+3+4", "d/f+3,2,3", "d,~db+3"]
           },
           {
             "name": "Slicer Divine Cannon follow-up",
             "input": "b+4,1,2,f+1+2",
-            "launchers": [
-              "d/b+4,3"
-            ]
+            "launchers": ["d/b+4,3"]
           },
           {
             "name": "Shut Up follow-up",
             "input": "1,1,1,1+4",
-            "launchers": [
-              "d,d/f+2"
-            ]
+            "launchers": ["d,d/f+2"]
           },
           {
             "name": "Cross Blade follow-up",
             "input": "d/f+3,3,3,4",
-            "launchers": [
-              "CH d/f+1+2"
-            ]
+            "launchers": ["CH d/f+1+2"]
           },
           {
             "name": "Body Blow follow-up",
             "input": "3,4",
-            "launchers": [
-              "d/b+2"
-            ]
+            "launchers": ["d/b+2"]
           },
           {
             "name": "Uppercut to Ivory Cutter",
             "input": "d/f+1,1+4",
-            "launchers": [
-              "d/f+2"
-            ]
+            "launchers": ["d/f+2"]
           }
         ],
         "strings": [],
@@ -8697,9 +8362,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1+4",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far wall push."
           },
           {
@@ -9062,70 +8725,48 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,f,f+2,1",
-            "launchers": [
-              "f,f+3",
-              "u/f+3"
-            ]
+            "launchers": ["f,f+3", "u/f+3"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,1,1,1,f,f+2,2",
-            "launchers": [
-              "f,f+3",
-              "u/f+3"
-            ]
+            "launchers": ["f,f+3", "u/f+3"]
           },
           {
             "name": "Thruster follow-up",
             "input": "2,1,f+1+2,d+1",
-            "launchers": [
-              "qcf+1"
-            ]
+            "launchers": ["qcf+1"]
           },
           {
             "name": "Hop Kick & Upper follow-up",
             "input": "1,2,1,2,qcf+2",
-            "launchers": [
-              "u/f+4",
-              "d/f+2",
-              "u/f,n+4"
-            ]
+            "launchers": ["u/f+4", "d/f+2", "u/f,n+4"]
           },
           {
             "name": "Thunder Palm follow-up",
             "input": "1,1,1,1,f,f+2:1",
-            "launchers": [
-              "WS+2"
-            ]
+            "launchers": ["WS+2"]
           },
           {
             "name": "Sway Tile Splitter follow-up",
             "input": "d+2",
-            "launchers": [
-              "CH qcb+1"
-            ]
+            "launchers": ["CH qcb+1"]
           },
           {
             "name": "Neutron Bomb follow-up",
             "input": "CC,d+4:2:1+2",
-            "launchers": [
-              "f,f+4"
-            ],
+            "launchers": ["f,f+4"],
             "notes": "Starter must hit a crouching opponent."
           },
           {
             "name": "Counter Thruster follow-up",
             "input": "b,f+1",
-            "launchers": [
-              "CH qcf+1"
-            ]
+            "launchers": ["CH qcf+1"]
           },
           {
             "name": "Thunder Palm, short finish",
             "input": "1,f+1+2",
-            "launchers": [
-              "WS+2"
-            ]
+            "launchers": ["WS+2"]
           }
         ],
         "strings": [],
@@ -9146,9 +8787,7 @@
           {
             "name": "Position-change follow-up",
             "input": "d+1+2,d+1+2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Far or side wall push."
           },
           {
@@ -9718,44 +9357,29 @@
           {
             "name": "Standard follow-up",
             "input": "1+2,1,1,1+2,1,d+1",
-            "launchers": [
-              "2,1,2",
-              "1,2,1,2",
-              "CH f+3,1"
-            ]
+            "launchers": ["2,1,2", "1,2,1,2", "CH f+3,1"]
           },
           {
             "name": "Standard follow-up",
             "input": "1+2,1,1,1+2,1,f+1,d+1",
-            "launchers": [
-              "2,1,2",
-              "1,2,1,2"
-            ]
+            "launchers": ["2,1,2", "1,2,1,2"]
           },
           {
             "name": "Quick Hook follow-up",
             "input": "3,1,1,d/f+1+2",
-            "launchers": [
-              "CH d+1",
-              "CH d/f+1,2,1"
-            ],
+            "launchers": ["CH d+1", "CH d/f+1,2,1"],
             "notes": "One hit d/f+1+2."
           },
           {
             "name": "Sea Hawk Upper & Rising Upper follow-up",
             "input": "f+3,f+2,d/f+1+2",
-            "launchers": [
-              "f+3,2",
-              "WS+2"
-            ],
+            "launchers": ["f+3,2", "WS+2"],
             "notes": "WS+2 must hit a crouching opponent."
           },
           {
             "name": "Counter-hit rising uppercut",
             "input": "1,2,d/f+1+2",
-            "launchers": [
-              "CH WS+2"
-            ]
+            "launchers": ["CH WS+2"]
           }
         ],
         "strings": [],
@@ -9776,9 +9400,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall. Close wall push."
           },
           {
@@ -10301,49 +9923,33 @@
           {
             "name": "Standard follow-up",
             "input": "1,1,1,f,f+4",
-            "launchers": [
-              "u/f+3",
-              "CH 1+2,1+2"
-            ]
+            "launchers": ["u/f+3", "CH 1+2,1+2"]
           },
           {
             "name": "Standard follow-up",
             "input": "1,b+1,d/f+1,1,~db+3",
-            "launchers": [
-              "u/f+3",
-              "CH 1+2,1+2"
-            ],
+            "launchers": ["u/f+3", "CH 1+2,1+2"],
             "notes": "Sweep kick, not manji spin."
           },
           {
             "name": "Uppercut follow-up",
             "input": "b+1,1,2,1,4",
-            "launchers": [
-              "d/f+2"
-            ]
+            "launchers": ["d/f+2"]
           },
           {
             "name": "Shrine Lift follow-up",
             "input": "1,d/f+3,1",
-            "launchers": [
-              "SS+2"
-            ]
+            "launchers": ["SS+2"]
           },
           {
             "name": "Inner Palm & Cyclone Lift follow-up",
             "input": "1,b+1,d/f+3,1",
-            "launchers": [
-              "CH SS+1",
-              "d+1+2"
-            ]
+            "launchers": ["CH SS+1", "d+1+2"]
           },
           {
             "name": "Lunging Sweep follow-up",
             "input": "1+2,u/f",
-            "launchers": [
-              "FC d/f+3",
-              "3,3"
-            ]
+            "launchers": ["FC d/f+3", "3,3"]
           },
           {
             "name": "Kangaroo Kick follow-up",
@@ -10359,16 +9965,12 @@
           {
             "name": "Whirlwind follow-up",
             "input": "1+2,1+2,f,f+4",
-            "launchers": [
-              "CH SS+4"
-            ]
+            "launchers": ["CH SS+4"]
           },
           {
             "name": "Uppercut, jab carry",
             "input": "1,1,1,f,f+2",
-            "launchers": [
-              "d/f+2"
-            ]
+            "launchers": ["d/f+2"]
           }
         ],
         "strings": [
@@ -10491,9 +10093,7 @@
           {
             "name": "Position-change follow-up",
             "input": "1,2,1",
-            "launchers": [
-              "1+3"
-            ],
+            "launchers": ["1+3"],
             "notes": "Use position change to push the opponent into the wall."
           },
           {
