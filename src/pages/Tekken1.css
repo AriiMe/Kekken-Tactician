@@ -34,6 +34,10 @@
 .t1-move dd { margin: 0; min-width: 0; }
 .t1-move p { color: #bcbcc4; font-size: .8rem; line-height: 1.65; margin: 9px 0 0; }
 .t1-input { line-height: 2.2; overflow-wrap: anywhere; --input-icon-size: 26px; }
+.t1-frame-data { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 12px 0 0; }
+.t1-frame-data > div { min-width: 70px; max-width: 100%; }
+.t1-frame-data dt { color: #aaa; font-size: .68rem; font-weight: 400; }
+.t1-frame-data dd { color: #e1e1e7; font-size: .8rem; overflow-wrap: anywhere; }
 .t1-input .others { display: inline; }
 .t1-combo-label { display: block; color: #bcbcc4; font-size: .75rem; font-weight: 700; margin-bottom: 5px; }
 .t1-launchers { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; padding: 0; margin: 0 0 14px; }

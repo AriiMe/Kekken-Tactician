@@ -12,13 +12,20 @@ const sectionTitles = {
   throws: 'Throws', chains: 'Throw Follow-Ups', moves: 'Move List',
   punishers: 'Punishers', stances: 'Stances', wallCombos: 'Wall Combos',
   combos: 'Combo Routes', strings: '10 Hit Combos',
+  setups: 'Recovery Setups',
   unblockables: 'Unblockable Attacks', pounces: 'Ground Attacks',
 };
 const rowType = PropTypes.shape({
   name: PropTypes.string.isRequired, input: PropTypes.string.isRequired,
   notes: PropTypes.string,
   launchers: PropTypes.arrayOf(PropTypes.string),
+  frameData: PropTypes.objectOf(PropTypes.string),
 });
+
+const frameLabels = {
+  startup: 'Startup', block: 'On block', hit: 'On hit',
+  crouchingHit: 'Crouching hit', counterHit: 'Counter hit',
+};
 
 function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
@@ -62,6 +69,10 @@ function MoveSection({ title, rows }) {
                 </>}
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
                 {row.startupFrames && <p>{row.startupFrames} frames{row.position ? ` · ${row.position}` : ''}</p>}
+                {row.frameData && <dl className="t1-frame-data" aria-label="Frame data">
+                  {Object.entries(frameLabels).filter(([key]) => row.frameData[key]).map(([key, label]) =>
+                    <div key={key}><dt>{label}</dt><dd>{row.frameData[key].split(/\s+/).map(value => value === 'x' ? '—' : value).join(' / ')}{key === 'startup' ? 'f' : ''}</dd></div>)}
+                </dl>}
                 {row.breakInput && <p>Throw break: {renderInputImage(row.breakInput)}</p>}
                 {row.unbreakable && <p>Unbreakable</p>}
                 {row.notes && <p>{row.notes}</p>}
@@ -143,6 +154,10 @@ export default function ClassicTekken({ gameId }) {
             </div>
           </header>
           {!character && <NotationKey />}
+          {!character && data.mechanics?.length > 0 && <Paper className="t1-notation">
+            <h2>{gameTitle} essentials</h2>
+            {data.mechanics.map(item => <p key={item.title}><strong>{item.title}:</strong> {item.text}</p>)}
+          </Paper>}
           {character ? <>
             <nav className="t1-section-links" aria-label="Guide sections">
               {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
