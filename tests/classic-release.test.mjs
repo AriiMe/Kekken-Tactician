@@ -5,7 +5,7 @@ import { liveGames } from '../src/data/games.js';
 import { parseInputNotation } from '../src/utils/inputNotation.js';
 
 test('released classic rosters have local artwork, working shared guides and readable combo inputs', async () => {
-  for (const id of ['tekken-3', 'tekken-4', 'tekken-5']) {
+  for (const id of ['tekken-3', 'tekken-4', 'tekken-5', 'tekken-6']) {
     const data = JSON.parse(await fs.readFile(`public/data/${id}.json`, 'utf8'));
     assert.equal(data.gameId, id);
     assert.ok(liveGames.some(game => game.id === id));

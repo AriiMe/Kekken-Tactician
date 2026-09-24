@@ -53,8 +53,22 @@ const Credits = () => {
           Tekken 7 essentials and additional Tekken 8 references draw on <Link href="https://tekkendocs.com/">TekkenDocs</Link>,
           its guide contributors and <Link href="https://rbnorway.org/">RBNorway</Link>.
           Throw inputs and breaks were cross-checked with <Link href="https://geppopotamus.info/game/tekken7fr/index_en.htm">Geppopotamus / IGNIS</Link> and{' '}
-          <Link href="https://wavu.wiki/">Wavu Wiki</Link> (CC BY-SA 4.0).
+          <Link href="https://wavu.wiki/">Wavu Wiki</Link>.
           Official Tekken 7 artwork is from <Link href="https://tk7.tekken-official.jp/chara/">Bandai Namco’s character gallery</Link>.
+        </Typography>
+        <Typography variant="body1" sx={paragraphStyle}>
+          Additional Tekken 5: Dark Resurrection, Tekken 7 and Tekken 8 move lists, punishment and combo references come from{' '}
+          <Link href="https://wavu.wiki/t/Main_Page">Wavu Wiki contributors</Link>, whose current text license is CC0.
+          Game versions and source revisions are retained with the imported data.
+          Tekken 6 / Bloodline Rebellion references draw on{' '}
+          <Link href="https://web.archive.org/web/20201206040751/http://www.tekkenzaibatsu.com/tekken6/_movelist.php">Tekken Zaibatsu</Link>,{' '}
+          <Link href="https://www.avoidingthepuddle.com/tekken-6-frame-data/">Avoiding the Puddle</Link> and{' '}
+          <Link href="https://sdtekken.com/tekken-6/frame-data/">SDTekken</Link>.
+          Additional Bloodline Rebellion combo routes and execution notes come from{' '}
+          <Link href="https://game.watch.impress.co.jp/docs/20090311/tk6_br.htm">GAME Watch’s character guides</Link>, with punishment references from{' '}
+          <Link href="https://www.tekkenzone.net/tekken6/punishers/">TekkenZone</Link>.
+          Tekken 6 character artwork is by Bandai Namco, preserved by{' '}
+          <Link href="https://www.creativeuncut.com/art_tekken-6_a.html">Creative Uncut</Link>.
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>
           Tekken Tag Tournament 2 inputs were curated from <Link href="https://gamefaqs.gamespot.com/ps3/652997-tekken-tag-tournament-2/faqs/64909">Catlord / Hans Poorvin’s move reference</Link>,{' '}

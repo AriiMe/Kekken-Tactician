@@ -7,6 +7,9 @@ import CollapsableSection from '../components/CollapsableSection';
 import renderInputImage from '../utils/renderInputImage';
 import { getClassicTekkenGuides, gameTitles } from '../utils/classicTekken';
 import { classicSectionTitles as sectionTitles, getClassicPunishers } from '../utils/classicGuideLayout';
+import { StanceContext } from '../context/StanceContext';
+import { tekken6StanceLabels } from '../data/tekken6Notation';
+import { tekkenTag2StanceLabels } from '../data/tekkenTag2Notation';
 import './Tekken1.css';
 
 const rowType = PropTypes.shape({
@@ -127,12 +130,13 @@ function Punishment({ rows }) {
               <EditionBadge edition={row.edition} availability={row.availability} />
               {row.launcher && <span className="t1-edition">Launcher</span>}
               {row.motion && <small className="t1-combo-label">+ command entry</small>}
+              {row.notes && <p className="t1-punisher-note">{row.notes}</p>}
             </div>)}</dd>
           </div>)}</dl>
           {!moves.length && <p className="t1-source-note">No startup data available for this position.</p>}
         </Paper>)}
       </div>
-      <p className="t1-source-note">Startup reference: check range and recovery position. String entries show only the opening hit; follow-ups are in the move list. Motion launchers need additional command-entry time. Stance-only attacks are excluded.</p>
+      <p className="t1-source-note">Check range and recovery position. {Object.values(rows).flat().some(row => !row.curated) && 'Frame-derived string entries show only the opening hit; follow-ups are in the move list. '}Motion launchers need additional command-entry time.</p>
     </> : <Paper className="t1-punishment-panel"><h2>Punishers</h2><p className="t1-source-note">Startup data is not available for this character yet.</p></Paper>}
   </section>;
 }
@@ -188,7 +192,7 @@ export default function ClassicTekken({ gameId }) {
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
   return (
-    <main className="t1-page">
+    <StanceContext.Provider value={{ ...tekkenTag2StanceLabels, ...tekken6StanceLabels }}><main className="t1-page">
       <nav className="t1-breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Games</Link><span>/</span>
         {characterSlug ? <><Link to={rosterPath}>{gameTitle}</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>{gameTitle}</span>}
@@ -245,7 +249,7 @@ export default function ClassicTekken({ gameId }) {
             {data.portraits.sourceUrl && <p>{data.portraits.credit} <a href={data.portraits.sourceUrl} target="_blank" rel="noopener noreferrer">Portrait source</a></p>}
           </footer>
         </>}
-    </main>
+    </main></StanceContext.Provider>
   );
 }
 ClassicTekken.propTypes = { gameId: PropTypes.oneOf(Object.keys(gameTitles)).isRequired };

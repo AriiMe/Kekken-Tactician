@@ -66,6 +66,9 @@ const App = () => {
               <Route path="/games/tekken-5" element={<ClassicTekken key="tekken-5" gameId="tekken-5" />} />
               <Route path="/games/tekken-5/:characterSlug" element={<ClassicTekken key="tekken-5" gameId="tekken-5" />} />
               <Route path="/tekken-5" element={<Navigate to="/games/tekken-5" replace />} />
+              <Route path="/games/tekken-6" element={<ClassicTekken key="tekken-6" gameId="tekken-6" />} />
+              <Route path="/games/tekken-6/:characterSlug" element={<ClassicTekken key="tekken-6" gameId="tekken-6" />} />
+              <Route path="/tekken-6" element={<Navigate to="/games/tekken-6" replace />} />
               <Route path="/games/tekken-1" element={<ClassicTekken key="tekken-1" gameId="tekken-1" />} />
               <Route path="/games/tekken-1/:characterSlug" element={<ClassicTekken key="tekken-1" gameId="tekken-1" />} />
               <Route path="/tekken-1" element={<Navigate to="/games/tekken-1" replace />} />

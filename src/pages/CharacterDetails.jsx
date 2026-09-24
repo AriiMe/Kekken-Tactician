@@ -1,3 +1,4 @@
+import GuideSupplement from '../components/GuideSupplement';
 import { usePageData } from '../context/PageDataContext';
 // CharacterDetails.jsx
 import { useEffect, useState } from "react";
@@ -237,6 +238,7 @@ const CharacterDetails = () => {
                     <ComboEnders enders={character.comboEnders} />
                   </Paper>
                 </Grid>
+                {character.sections?.wavu && <Grid item xs={12}><GuideSupplement guide={character.sections.wavu} /></Grid>}
               </Grid>
             </Paper>
           </Grid>

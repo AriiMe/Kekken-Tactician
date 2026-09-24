@@ -30,9 +30,9 @@ test('frame measurements stay scoped to their edition and follow-up', () => {
   assert.equal(steve.frameData, undefined);
   assert.equal(steve.versions[0].frameData.startup, '15');
   assert.match(steve.versions[1].notes, /only on counter hit/);
-  assert.equal(steve.versions[1].frameData, undefined);
+  assert.deepEqual(steve.versions[1].frameData, { startup: '15', block: '-8', hit: '+2' });
   const raven = move('raven', 'd/f+2');
-  assert.deepEqual(raven.versions[1].frameData, { startup: '16' });
+  assert.deepEqual(raven.versions[1].frameData, { startup: '16', block: '-10' });
   assert.equal(raven.versions[0].frameData.block, '-5');
   assert.equal(move('anna-williams', 'd/f+3,2,1,4').versions[0].frameScope, 'Follow-up only');
   assert.equal(move('anna-williams', '1,2,1,4').damage, '4,10,6,21');

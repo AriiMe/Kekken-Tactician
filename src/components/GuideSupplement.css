@@ -1,0 +1,29 @@
+.guide-supplement { display: grid; gap: 24px; min-width: 0; }
+.guide-source-input { font-family: ui-monospace, monospace; font-size: .85rem; line-height: 1.9; overflow-wrap: anywhere; }
+.guide-extra-version { color: #bcbcc4; font-size: .8rem; line-height: 1.6; margin: 0; }
+.guide-extra-section { scroll-margin-top: 110px; }
+.guide-extra-section { min-width: 0; background: #262626; padding: 22px; border-radius: 5px; }
+.guide-extra-section h2 { color: #d42f2f; font-size: 1.3rem; margin: 0 0 22px; }
+.guide-extra-section h3 { color: #f27777; font-size: .9rem; }
+.guide-extra-section p { color: #bcbcc4; font-size: .8rem; line-height: 1.7; margin: 8px 0; }
+.guide-extra-input { --input-icon-size: 26px; line-height: 2.2; overflow-wrap: anywhere; }
+.guide-extra-input .input-icons { width: 26px; height: 26px; object-fit: contain; }
+.guide-extra-combos { display: grid; gap: 16px; }
+.guide-extra-combos article { padding: 18px; border: 1px solid #414141; background: #2d2d2d; border-radius: 5px; }
+.guide-extra-label { display: block; color: #f27777; font-size: .8rem; margin: 14px 0 8px; }
+.guide-extra-launchers { display: flex; flex-wrap: wrap; gap: 10px; }
+.guide-extra-launchers > div { background: #202124; padding: 5px 10px; border-radius: 4px; }
+.guide-extra-punishment { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.guide-extra-punisher { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 15px; padding: 12px 0; border-bottom: 1px solid #444; }
+.guide-extra-punisher dt { color: #ffcf79; font-weight: 700; }
+.guide-extra-punisher dd, .guide-extra-move dd { margin: 0; min-width: 0; }
+.guide-extra-search { display: grid; gap: 8px; max-width: 400px; font-size: .8rem; }
+.guide-extra-search input { width: 100%; min-width: 0; padding: 12px; background: #17181c; border: 1px solid #555; border-radius: 4px; color: white; }
+.guide-extra-moves { margin: 0; }
+.guide-extra-move { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px; border-top: 1px solid #444; padding: 18px 0; }
+.guide-extra-move > dt > strong { display: block; font-size: .85rem; overflow-wrap: anywhere; }
+.guide-extra-frames { display: flex; flex-wrap: wrap; gap: 12px 20px; margin: 10px 0; }
+.guide-extra-frames dt { color: #aaa; font-size: .7rem; }
+.guide-extra-frames dd { font-size: .8rem; overflow-wrap: anywhere; }
+.guide-extra-technique { border-top: 1px solid #444; padding: 12px 0; }
+@media (max-width: 650px) { .guide-extra-punishment, .guide-extra-move { grid-template-columns: minmax(0, 1fr); } .guide-extra-section { padding: 18px; } }

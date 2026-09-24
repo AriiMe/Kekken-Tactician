@@ -14,7 +14,7 @@ const manifest = JSON.parse(await fs.readFile('dist/.vite/manifest.json', 'utf8'
 const staticPages = { '/about': 'About', '/credits': 'Credits', '/privacy-policy': 'Privacy', '/faqu': 'FAQ', '/update-request': 'UpdateRequest', '/combo-generator': 'CustomComboPage', '/strat-roulette': 'StratRoulette', '/strat-content': 'StratConent', '/stats': 'StatsPage', '/nothing-here/for-sure/no-easter-egg': 'KomradEasterEgg', '/404': 'NotFoundPage', '/anti-guide': 'AntiGuideSelect' };
 function routeAssets(url) {
   let component = staticPages[url];
-  if (/^\/games\/tekken-(?:[1-5]|tag-1)(?:\/|$)/.test(url)) component = 'ClassicTekken';
+  if (/^\/games\/tekken-(?:[1-6]|tag-1)(?:\/|$)/.test(url)) component = 'ClassicTekken';
   if (url.startsWith('/games/tekken-7')) component = 'Tekken7';
   if (url.startsWith('/games/tekken-tag-2')) component = 'TekkenTag2';
   if (url === '/games/tekken-8') component = 'CharacterSelect';

@@ -35,8 +35,16 @@ test('reference frames remain labeled and absent frames remain absent', () => {
   assert.equal(getClassicPunishers(character([{ name: 'Jab', input: '1', referenceFrameData: { startup: '10' } }])).standing[0].reference, true);
   assert.deepEqual(getClassicPunishers(character([{ name: 'Jab', input: '1' }])), { standing: [], crouching: [] });
 });
+test('sourced DR punishers replace inferred DR candidates without removing vanilla timings', () => {
+  const fighter = character([{ name: 'Jab string', input: '1,2', versions: [
+    { edition: 'tekken5', frameData: { startup: '8' } }, { edition: 'dr', frameData: { startup: '10' } },
+  ] }]);
+  fighter.sections.punishers = [{ name: 'Jab punish', input: '1,2', startupFrames: 10, position: 'standing', edition: 'dr', notes: 'Guaranteed string.' }];
+  assert.deepEqual(getClassicPunishers(fighter).standing.map(r => [r.input, r.frames, r.edition]), [['1', 8, 'tekken5'], ['1,2', 10, 'dr']]);
+  assert.equal(getClassicPunishers(fighter).standing[1].notes, 'Guaranteed string.');
+});
 test('all classic roster results are ordered and retain only slower launchers', () => {
-  for (const id of ['1', '2', '3', '4', '5', 'tag-1']) {
+  for (const id of ['1', '2', '3', '4', '5', '6', 'tag-1']) {
     const data = JSON.parse(fs.readFileSync(`public/data/tekken-${id}.json`));
     for (const fighter of data.characters) for (const rows of Object.values(getClassicPunishers(fighter))) {
       assert.ok(rows.every((r, i) => !i || rows[i - 1].frames <= r.frames));

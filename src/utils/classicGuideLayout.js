@@ -13,6 +13,17 @@ const directAttack = /^(?:(WS|FC)\s*\+?\s*)?(?:(?:d\/f|d\/b|u\/f|u\/b|f|b|d|u)\+
 export function getClassicPunishers(character) {
   const result = { standing: [], crouching: [] };
   const seen = new Set();
+  const curatedGroups = new Set();
+  for (const row of character?.sections.punishers || []) {
+    const frames = Number(row.startupFrames);
+    if (!Number.isFinite(frames) || frames <= 0 || (frames > 18 && !row.launcher)) continue;
+    const position = row.position === 'crouching' ? 'crouching' : 'standing';
+    const key = `${position}:${row.input}:${row.edition}:${frames}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    curatedGroups.add(`${position}:${row.edition || ''}`);
+    result[position].push({ ...row, frames, curated: true });
+  }
   for (const row of character?.sections.moves || []) {
     if (/parry|reversal|taunt|(?:^|\s)stance|offensive push/i.test(row.name)) continue;
     const variants = row.versions?.length ? row.versions : [row];
@@ -37,6 +48,7 @@ export function getClassicPunishers(character) {
       if (frames > 18 && !launcher) continue;
       const position = match?.[1] ? 'crouching' : 'standing';
       const edition = variant.edition || row.edition;
+      if (curatedGroups.has(`${position}:${edition || ''}`)) continue;
       const reference = Boolean(row.referenceFrameData && !row.frameData);
       const key = `${position}:${input}:${edition}:${frames}`;
       if (seen.has(key)) continue;

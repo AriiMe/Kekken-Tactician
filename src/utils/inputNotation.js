@@ -3,6 +3,7 @@ import t8InputToIconMap from "./t8InputToIconMap.js";
 import { stanceTokens } from "../data/tekken8Stances.js";
 import { tekken7StanceLabels } from "../data/tekken7Notation.js";
 import { tekkenTag2StanceLabels } from "../data/tekkenTag2Notation.js";
+import { tekken6StanceLabels } from "../data/tekken6Notation.js";
 
 export const MOTION_SEQUENCES = Object.freeze({
   qcf: ["d", "df", "f"],
@@ -300,7 +301,7 @@ export const parseInputNotation = (input) => {
       continue;
     }
 
-    if (stanceTokens.has(raw.toUpperCase()) || Object.hasOwn(tekken7StanceLabels, raw.toUpperCase()) || Object.hasOwn(tekkenTag2StanceLabels, raw.toUpperCase()) || raw.toUpperCase() === "FC") {
+    if (stanceTokens.has(raw.toUpperCase()) || Object.hasOwn(tekken7StanceLabels, raw.toUpperCase()) || Object.hasOwn(tekkenTag2StanceLabels, raw.toUpperCase()) || Object.hasOwn(tekken6StanceLabels, raw.toUpperCase()) || raw.toUpperCase() === "FC") {
       segments.push(createSegment("stance", raw, start, raw.toUpperCase()));
       continue;
     }

@@ -1,0 +1,1879 @@
+{
+  "edition": "Tekken 5: Dark Resurrection",
+  "characters": [
+    {
+      "character": "anna-williams",
+      "newMoves": 35,
+      "enrichedFrames": 102,
+      "punishers": 22,
+      "combos": 74,
+      "skippedMoves": [
+        "Anna-qcf",
+        "Anna-CJM.~f",
+        "Anna-Left Throw",
+        "Anna-Right Throw",
+        "Anna-Back Throw",
+        "Anna-CBC1.3,4,3,1+2",
+        "Anna-CBC1.1,3,2,1",
+        "Anna-CBC2b.3,1,4,1+2,1+2",
+        "Anna-CBC2b.2,1,3,4,1+2",
+        "Anna-CBC2b.2,3,1+2,3+4,1+2",
+        "Anna-CBC1.1+3,4,1+2",
+        "Anna-CBC2c.4,3,4,3+4,1+2",
+        "Anna-CBC2c1+2,4,3,1+2,1+2,1+2"
+      ],
+      "sources": [
+        {
+          "title": "Anna (Tekken 5)",
+          "revision": 57276,
+          "available": true,
+          "url": "https://wavu.wiki/t/Anna_(Tekken_5)"
+        },
+        {
+          "title": "Anna movelist (Tekken 5)",
+          "revision": 55117,
+          "available": true,
+          "url": "https://wavu.wiki/t/Anna_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Anna punishers (Tekken 5)",
+          "revision": 57076,
+          "available": true,
+          "url": "https://wavu.wiki/t/Anna_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Anna combos (Tekken 5)",
+          "revision": 57086,
+          "available": true,
+          "url": "https://wavu.wiki/t/Anna_combos_(Tekken_5)"
+        },
+        {
+          "title": "Anna tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Anna_tech"
+        },
+        {
+          "title": "Anna strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Anna_strategy"
+        }
+      ]
+    },
+    {
+      "character": "armor-king",
+      "newMoves": 23,
+      "enrichedFrames": 78,
+      "punishers": 17,
+      "combos": 54,
+      "skippedMoves": [
+        "Armor King-f,n,d,df",
+        "Armor King-Left Throw",
+        "Armor King-Right Throw",
+        "Armor King-Back Throw",
+        "Armor King-MMD1.2+4,1+2,1+2",
+        "Armor King-MMD1.3+4,3+4,1+2",
+        "Armor King-MMD1.2,1,1+2",
+        "Armor King-MMD2.1,1,1+2",
+        "Armor King-MMD2.3,4,1+2,3+4",
+        "Armor King-MMD3.4,3,3+4,1+2",
+        "Armor King-MMD3.3+4,2,1,1,1+2"
+      ],
+      "sources": [
+        {
+          "title": "Armor King (Tekken 5)",
+          "revision": 57277,
+          "available": true,
+          "url": "https://wavu.wiki/t/Armor_King_(Tekken_5)"
+        },
+        {
+          "title": "Armor King movelist (Tekken 5)",
+          "revision": 55116,
+          "available": true,
+          "url": "https://wavu.wiki/t/Armor_King_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Armor King punishers (Tekken 5)",
+          "revision": 53685,
+          "available": true,
+          "url": "https://wavu.wiki/t/Armor_King_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Armor King combos (Tekken 5)",
+          "revision": 57087,
+          "available": true,
+          "url": "https://wavu.wiki/t/Armor_King_combos_(Tekken_5)"
+        },
+        {
+          "title": "Armor King tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Armor_King_tech"
+        },
+        {
+          "title": "Armor King strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Armor_King_strategy"
+        }
+      ]
+    },
+    {
+      "character": "asuka-kazama",
+      "newMoves": 24,
+      "enrichedFrames": 73,
+      "punishers": 18,
+      "combos": 56,
+      "skippedMoves": [
+        "Asuka-Left Throw",
+        "Asuka-Right Throw",
+        "Asuka-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Asuka (Tekken 5)",
+          "revision": 57278,
+          "available": true,
+          "url": "https://wavu.wiki/t/Asuka_(Tekken_5)"
+        },
+        {
+          "title": "Asuka movelist (Tekken 5)",
+          "revision": 54963,
+          "available": true,
+          "url": "https://wavu.wiki/t/Asuka_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Asuka punishers (Tekken 5)",
+          "revision": 57071,
+          "available": true,
+          "url": "https://wavu.wiki/t/Asuka_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Asuka combos (Tekken 5)",
+          "revision": 57080,
+          "available": true,
+          "url": "https://wavu.wiki/t/Asuka_combos_(Tekken_5)"
+        },
+        {
+          "title": "Asuka tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Asuka_tech"
+        },
+        {
+          "title": "Asuka strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Asuka_strategy"
+        }
+      ]
+    },
+    {
+      "character": "baek-doo-san",
+      "newMoves": 46,
+      "enrichedFrames": 89,
+      "punishers": 17,
+      "combos": 37,
+      "skippedMoves": [
+        "Baek-f,n,d,df",
+        "Baek-Left Throw",
+        "Baek-Right Throw",
+        "Baek-Back Throw",
+        "Baek-1,2,3~f/b/u/d",
+        "Baek-ws4,4,3~f/b"
+      ],
+      "sources": [
+        {
+          "title": "Baek",
+          "revision": 57279,
+          "available": true,
+          "url": "https://wavu.wiki/t/Baek"
+        },
+        {
+          "title": "Baek movelist",
+          "revision": 57081,
+          "available": true,
+          "url": "https://wavu.wiki/t/Baek_movelist"
+        },
+        {
+          "title": "Baek punishers",
+          "revision": 52582,
+          "available": true,
+          "url": "https://wavu.wiki/t/Baek_punishers"
+        },
+        {
+          "title": "Baek combos",
+          "revision": 59382,
+          "available": true,
+          "url": "https://wavu.wiki/t/Baek_combos"
+        },
+        {
+          "title": "Baek tech",
+          "revision": 45644,
+          "available": true,
+          "url": "https://wavu.wiki/t/Baek_tech"
+        },
+        {
+          "title": "Baek strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Baek_strategy"
+        }
+      ],
+      "techniques": 2
+    },
+    {
+      "character": "bruce-irvin",
+      "newMoves": 36,
+      "enrichedFrames": 71,
+      "punishers": 24,
+      "combos": 60,
+      "skippedMoves": [
+        "Bruce-f,n,d,df",
+        "Bruce-Left Throw",
+        "Bruce-Right Throw",
+        "Bruce-Back Throw",
+        "Bruce-RKKa.3+4,3+4",
+        "Bruce-CD.2+3,4,3,4,1+2+3",
+        "Bruce-CD.1+4,1+2,1+2,1+2",
+        "Bruce-CD.1+4,3,1+2+3",
+        "Bruce-CD.1+4,3,1+2+3,1,3,1+2+4",
+        "Bruce-CD.1+4,3,1+2+3,1,3,1+2+4,2,4,1,1+2+3"
+      ],
+      "sources": [
+        {
+          "title": "Bruce",
+          "revision": 57280,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bruce"
+        },
+        {
+          "title": "Bruce movelist",
+          "revision": 59556,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bruce_movelist"
+        },
+        {
+          "title": "Bruce punishers",
+          "revision": 53877,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bruce_punishers"
+        },
+        {
+          "title": "Bruce combos",
+          "revision": 57083,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bruce_combos"
+        },
+        {
+          "title": "Bruce tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Bruce_tech"
+        },
+        {
+          "title": "Bruce strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Bruce_strategy"
+        }
+      ]
+    },
+    {
+      "character": "bryan-fury",
+      "newMoves": 54,
+      "enrichedFrames": 73,
+      "punishers": 19,
+      "combos": 63,
+      "skippedMoves": [
+        "Bryan-d,db,b",
+        "Bryan-b+1~2,(1,2(x18)),1,2",
+        "Bryan-qcf",
+        "Bryan-Left Throw",
+        "Bryan-Right Throw",
+        "Bryan-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Bryan (Tekken 5)",
+          "revision": 57281,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bryan_(Tekken_5)"
+        },
+        {
+          "title": "Bryan movelist (Tekken 5)",
+          "revision": 55112,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bryan_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Bryan punishers (Tekken 5)",
+          "revision": 53929,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bryan_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Bryan combos (Tekken 5)",
+          "revision": 57085,
+          "available": true,
+          "url": "https://wavu.wiki/t/Bryan_combos_(Tekken_5)"
+        },
+        {
+          "title": "Bryan tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Bryan_tech"
+        },
+        {
+          "title": "Bryan strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Bryan_strategy"
+        }
+      ]
+    },
+    {
+      "character": "christie-monteiro",
+      "newMoves": 45,
+      "enrichedFrames": 105,
+      "punishers": 15,
+      "combos": 58,
+      "skippedMoves": [
+        "Eddy-db+4,4...",
+        "Eddy-HSP.d",
+        "Eddy-HSP.d,n+3",
+        "Eddy-HSP.d+3",
+        "Eddy-HSP.D",
+        "Eddy-Left Throw",
+        "Eddy-Right Throw",
+        "Eddy-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Eddy (Tekken 5)",
+          "revision": 57284,
+          "available": true,
+          "url": "https://wavu.wiki/t/Eddy_(Tekken_5)"
+        },
+        {
+          "title": "Eddy movelist (Tekken 5)",
+          "revision": 57243,
+          "available": true,
+          "url": "https://wavu.wiki/t/Eddy_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Eddy punishers (Tekken 5)",
+          "revision": 54649,
+          "available": true,
+          "url": "https://wavu.wiki/t/Eddy_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Eddy combos (Tekken 5)",
+          "revision": 57091,
+          "available": true,
+          "url": "https://wavu.wiki/t/Eddy_combos_(Tekken_5)"
+        },
+        {
+          "title": "Eddy tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Eddy_tech"
+        },
+        {
+          "title": "Eddy strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Eddy_strategy"
+        }
+      ]
+    },
+    {
+      "character": "devil-jin",
+      "newMoves": 41,
+      "enrichedFrames": 69,
+      "punishers": 16,
+      "combos": 61,
+      "skippedMoves": [
+        "Devil Jin-f,n,d,df",
+        "Devil Jin-Left Throw",
+        "Devil Jin-Right Throw",
+        "Devil Jin-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Devil Jin (Tekken 5)",
+          "revision": 57282,
+          "available": true,
+          "url": "https://wavu.wiki/t/Devil_Jin_(Tekken_5)"
+        },
+        {
+          "title": "Devil Jin movelist (Tekken 5)",
+          "revision": 55111,
+          "available": true,
+          "url": "https://wavu.wiki/t/Devil_Jin_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Devil Jin punishers (Tekken 5)",
+          "revision": 52593,
+          "available": true,
+          "url": "https://wavu.wiki/t/Devil_Jin_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Devil Jin combos (Tekken 5)",
+          "revision": 57088,
+          "available": true,
+          "url": "https://wavu.wiki/t/Devil_Jin_combos_(Tekken_5)"
+        },
+        {
+          "title": "Devil Jin tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Devil_Jin_tech"
+        },
+        {
+          "title": "Devil Jin strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Devil_Jin_strategy"
+        }
+      ]
+    },
+    {
+      "character": "dragunov",
+      "newMoves": 28,
+      "enrichedFrames": 72,
+      "punishers": 17,
+      "combos": 52,
+      "skippedMoves": [
+        "Dragunov-qcf",
+        "Dragunov-Left Throw",
+        "Dragunov-Right Throw",
+        "Dragunov-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Dragunov (Tekken 5)",
+          "revision": 57283,
+          "available": true,
+          "url": "https://wavu.wiki/t/Dragunov_(Tekken_5)"
+        },
+        {
+          "title": "Dragunov movelist (Tekken 5)",
+          "revision": 55110,
+          "available": true,
+          "url": "https://wavu.wiki/t/Dragunov_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Dragunov punishers (Tekken 5)",
+          "revision": 52594,
+          "available": true,
+          "url": "https://wavu.wiki/t/Dragunov_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Dragunov combos (Tekken 5)",
+          "revision": 57089,
+          "available": true,
+          "url": "https://wavu.wiki/t/Dragunov_combos_(Tekken_5)"
+        },
+        {
+          "title": "Dragunov tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Dragunov_tech"
+        },
+        {
+          "title": "Dragunov strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Dragunov_strategy"
+        }
+      ]
+    },
+    {
+      "character": "feng-wei",
+      "newMoves": 25,
+      "enrichedFrames": 74,
+      "punishers": 18,
+      "combos": 83,
+      "skippedMoves": [
+        "Feng-qcf",
+        "Feng-Left Throw",
+        "Feng-Right Throw",
+        "Feng-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Feng (Tekken 5)",
+          "revision": 57285,
+          "available": true,
+          "url": "https://wavu.wiki/t/Feng_(Tekken_5)"
+        },
+        {
+          "title": "Feng movelist (Tekken 5)",
+          "revision": 57268,
+          "available": true,
+          "url": "https://wavu.wiki/t/Feng_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Feng punishers (Tekken 5)",
+          "revision": 52637,
+          "available": true,
+          "url": "https://wavu.wiki/t/Feng_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Feng combos (Tekken 5)",
+          "revision": 57092,
+          "available": true,
+          "url": "https://wavu.wiki/t/Feng_combos_(Tekken_5)"
+        },
+        {
+          "title": "Feng tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Feng_tech"
+        },
+        {
+          "title": "Feng strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Feng_strategy"
+        }
+      ]
+    },
+    {
+      "character": "ganryu",
+      "newMoves": 54,
+      "enrichedFrames": 58,
+      "punishers": 13,
+      "combos": 43,
+      "skippedMoves": [
+        "Ganryu-2,1...",
+        "Ganryu-3,4,3,4...",
+        "Ganryu-4,3",
+        "Ganryu-d+2,2,2...",
+        "Ganryu-SIT.d",
+        "Ganryu-SIT.d~F",
+        "Ganryu-SIT.d~D",
+        "Ganryu-Left Throw",
+        "Ganryu-Right Throw",
+        "Ganryu-Back Throw",
+        "Ganryu-Back Throw.f+1+3",
+        "Ganryu-Back Throw.d+1+2"
+      ],
+      "sources": [
+        {
+          "title": "Ganryu (Tekken 5)",
+          "revision": 57286,
+          "available": true,
+          "url": "https://wavu.wiki/t/Ganryu_(Tekken_5)"
+        },
+        {
+          "title": "Ganryu movelist (Tekken 5)",
+          "revision": 55140,
+          "available": true,
+          "url": "https://wavu.wiki/t/Ganryu_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Ganryu punishers (Tekken 5)",
+          "revision": 53012,
+          "available": true,
+          "url": "https://wavu.wiki/t/Ganryu_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Ganryu combos (Tekken 5)",
+          "revision": 57093,
+          "available": true,
+          "url": "https://wavu.wiki/t/Ganryu_combos_(Tekken_5)"
+        },
+        {
+          "title": "Ganryu tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Ganryu_tech"
+        },
+        {
+          "title": "Ganryu strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Ganryu_strategy"
+        }
+      ]
+    },
+    {
+      "character": "heihachi-mishima",
+      "newMoves": 32,
+      "enrichedFrames": 65,
+      "punishers": 17,
+      "combos": 50,
+      "skippedMoves": [
+        "Heihachi-f,n,d,df",
+        "Heihachi-Left Throw",
+        "Heihachi-Right Throw",
+        "Heihachi-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Heihachi (Tekken 5)",
+          "revision": 57287,
+          "available": true,
+          "url": "https://wavu.wiki/t/Heihachi_(Tekken_5)"
+        },
+        {
+          "title": "Heihachi movelist (Tekken 5)",
+          "revision": 54982,
+          "available": true,
+          "url": "https://wavu.wiki/t/Heihachi_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Heihachi punishers (Tekken 5)",
+          "revision": 52643,
+          "available": true,
+          "url": "https://wavu.wiki/t/Heihachi_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Heihachi combos (Tekken 5)",
+          "revision": 59386,
+          "available": true,
+          "url": "https://wavu.wiki/t/Heihachi_combos_(Tekken_5)"
+        },
+        {
+          "title": "Heihachi tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Heihachi_tech"
+        },
+        {
+          "title": "Heihachi strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Heihachi_strategy"
+        }
+      ]
+    },
+    {
+      "character": "hwoarang",
+      "newMoves": 81,
+      "enrichedFrames": 104,
+      "punishers": 14,
+      "combos": 85,
+      "skippedMoves": [
+        "Hwoarang-f,n,d,df",
+        "Hwoarang-Left Throw",
+        "Hwoarang-Right Throw",
+        "Hwoarang-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Hwoarang (Tekken 5)",
+          "revision": 57288,
+          "available": true,
+          "url": "https://wavu.wiki/t/Hwoarang_(Tekken_5)"
+        },
+        {
+          "title": "Hwoarang movelist (Tekken 5)",
+          "revision": 56307,
+          "available": true,
+          "url": "https://wavu.wiki/t/Hwoarang_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Hwoarang punishers (Tekken 5)",
+          "revision": 52646,
+          "available": true,
+          "url": "https://wavu.wiki/t/Hwoarang_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Hwoarang combos (Tekken 5)",
+          "revision": 57096,
+          "available": true,
+          "url": "https://wavu.wiki/t/Hwoarang_combos_(Tekken_5)"
+        },
+        {
+          "title": "Hwoarang tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Hwoarang_tech"
+        },
+        {
+          "title": "Hwoarang strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Hwoarang_strategy"
+        }
+      ]
+    },
+    {
+      "character": "jack-5",
+      "newMoves": 62,
+      "enrichedFrames": 70,
+      "punishers": 11,
+      "combos": 51,
+      "skippedMoves": [
+        "Jack-5-hcf",
+        "Jack-5-hcf+1,360",
+        "Jack-5-hcf,360,360+1",
+        "Jack-5-hcf,360,360,360+1",
+        "Jack-5-hcf,360,360,360,360+1",
+        "Jack-5-ws.f+1",
+        "Jack-5-ws.f+1,2",
+        "Jack-5-ws.f+1,2,f+1",
+        "Jack-5-ws.f+1,2,df+1",
+        "Jack-5-ws.f+1,2,d+1",
+        "Jack-5-Left Throw",
+        "Jack-5-Right Throw",
+        "Jack-5-Back Throw (1+3)",
+        "Jack-5-Back Throw (2+4)"
+      ],
+      "sources": [
+        {
+          "title": "Jack-5",
+          "revision": 59379,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jack-5"
+        },
+        {
+          "title": "Jack-5 movelist",
+          "revision": 55152,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jack-5_movelist"
+        },
+        {
+          "title": "Jack-5 punishers",
+          "revision": 52649,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jack-5_punishers"
+        },
+        {
+          "title": "Jack-5 combos",
+          "revision": 57097,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jack-5_combos"
+        },
+        {
+          "title": "Jack-5 tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jack-5_tech"
+        },
+        {
+          "title": "Jack-5 strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jack-5_strategy"
+        }
+      ]
+    },
+    {
+      "character": "jin-kazama",
+      "newMoves": 33,
+      "enrichedFrames": 66,
+      "punishers": 22,
+      "combos": 62,
+      "skippedMoves": [
+        "Jin-f,n,d,df",
+        "Jin-Left Throw",
+        "Jin-Right Throw",
+        "Jin-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Jin (Tekken 5)",
+          "revision": 59357,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jin_(Tekken_5)"
+        },
+        {
+          "title": "Jin movelist (Tekken 5)",
+          "revision": 55798,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jin_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Jin punishers (Tekken 5)",
+          "revision": 52651,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jin_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Jin combos (Tekken 5)",
+          "revision": 57098,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jin_combos_(Tekken_5)"
+        },
+        {
+          "title": "Jin tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jin_tech"
+        },
+        {
+          "title": "Jin strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jin_strategy"
+        }
+      ]
+    },
+    {
+      "character": "jinpachi-mishima",
+      "newMoves": 18,
+      "enrichedFrames": 46,
+      "punishers": 17,
+      "combos": 52,
+      "skippedMoves": [
+        "Jinpachi-Left Throw",
+        "Jinpachi-Right Throw",
+        "Jinpachi-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Jinpachi",
+          "revision": 57291,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jinpachi"
+        },
+        {
+          "title": "Jinpachi movelist",
+          "revision": 54701,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jinpachi_movelist"
+        },
+        {
+          "title": "Jinpachi punishers",
+          "revision": 52654,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jinpachi_punishers"
+        },
+        {
+          "title": "Jinpachi combos",
+          "revision": 57099,
+          "available": true,
+          "url": "https://wavu.wiki/t/Jinpachi_combos"
+        },
+        {
+          "title": "Jinpachi tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jinpachi_tech"
+        },
+        {
+          "title": "Jinpachi strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Jinpachi_strategy"
+        }
+      ]
+    },
+    {
+      "character": "julia-chang",
+      "newMoves": 37,
+      "enrichedFrames": 73,
+      "punishers": 23,
+      "combos": 48,
+      "skippedMoves": [
+        "Julia-Left Throw",
+        "Julia-Right Throw",
+        "Julia-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Julia (Tekken 5)",
+          "revision": 57292,
+          "available": true,
+          "url": "https://wavu.wiki/t/Julia_(Tekken_5)"
+        },
+        {
+          "title": "Julia movelist (Tekken 5)",
+          "revision": 55007,
+          "available": true,
+          "url": "https://wavu.wiki/t/Julia_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Julia punishers (Tekken 5)",
+          "revision": 53061,
+          "available": true,
+          "url": "https://wavu.wiki/t/Julia_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Julia combos (Tekken 5)",
+          "revision": 57100,
+          "available": true,
+          "url": "https://wavu.wiki/t/Julia_combos_(Tekken_5)"
+        },
+        {
+          "title": "Julia tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Julia_tech"
+        },
+        {
+          "title": "Julia strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Julia_strategy"
+        }
+      ]
+    },
+    {
+      "character": "kazuya-mishima",
+      "newMoves": 24,
+      "enrichedFrames": 63,
+      "punishers": 22,
+      "combos": 52,
+      "skippedMoves": [
+        "Kazuya-f,n,d,df",
+        "Kazuya-f,n",
+        "Kazuya-MS.df",
+        "Kazuya-Left Throw",
+        "Kazuya-Right Throw",
+        "Kazuya-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Kazuya (Tekken 5)",
+          "revision": 57293,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kazuya_(Tekken_5)"
+        },
+        {
+          "title": "Kazuya movelist (Tekken 5)",
+          "revision": 55105,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kazuya_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Kazuya punishers (Tekken 5)",
+          "revision": 52661,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kazuya_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Kazuya combos (Tekken 5)",
+          "revision": 57102,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kazuya_combos_(Tekken_5)"
+        },
+        {
+          "title": "Kazuya tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Kazuya_tech"
+        },
+        {
+          "title": "Kazuya strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Kazuya_strategy"
+        }
+      ]
+    },
+    {
+      "character": "king",
+      "newMoves": 61,
+      "enrichedFrames": 82,
+      "punishers": 21,
+      "combos": 60,
+      "skippedMoves": [
+        "King-f,n,d,df",
+        "King-Left Throw",
+        "King-Right Throw",
+        "King-Back Throw.1+3",
+        "King-Back Throw.2+4",
+        "King-Back Throw.b,f+1+2",
+        "King-PD.1+2,1+2",
+        "King-PD.1+2,3,4,1+2",
+        "King-FUFL.db+1+3_db+2+4",
+        "King-DHH.1+2,1+2",
+        "King-DHH.2,1,3,4",
+        "King-RAS1.2,1,1+2",
+        "King-RAS2.3+4,1+2",
+        "King-RAS3.1,2,3+4",
+        "King-RAS4.2,1,3,4",
+        "King-RAS4.3,1,2,3+4,1+2+3+4",
+        "King-RSSB1.2,2,1+2",
+        "King-RSSB2.3+4,1+2,1+2+4",
+        "King-RSSB3.1,2,3+4,1+2",
+        "King-RSSB4.2,1,3,4",
+        "King-RSSB4.3,1,2,3+4,1+2+3+4",
+        "King-SHH1.1,2,3,1+2",
+        "King-SHH1.1+2,3,1,1+3",
+        "King-SHH1.1+2,1,3,1+2",
+        "King-SHH2c.1,3,4,1+2,3+4",
+        "King-AB1.1+2,1+2",
+        "King-AB1.1+2,4,2+4",
+        "King-AB2b.4,3,4,3+4,1+2",
+        "King-AB1.2,1,1+2+3",
+        "King-AB2c.2,1,3,1+2+4,1+2+4",
+        "King-AB2c.1+3,3+4,2+4,1+2,1+2+3",
+        "King-MMD1.1,4,2,3",
+        "King-MMD2a.2,1,1+3",
+        "King-MMD3.1+2,1,2,1+2+3",
+        "King-MMD3.2,3,1,1+2",
+        "King-MMD4.3+4,1+2",
+        "King-MMD5.1+2,4,1+2,1+2+3",
+        "King-MMD5.1+2,3,4,1+3",
+        "King-MMD6a.2+4,3+4,1+3,1+2,1+2+3",
+        "King-MMD1.2+4,1+2,1+2",
+        "King-MMD1.3+4,3+4,1+2",
+        "King-MMD2c.1,1,1+2",
+        "King-MMD2c.3,4,1+2,3+4"
+      ],
+      "sources": [
+        {
+          "title": "King (Tekken 5)",
+          "revision": 57294,
+          "available": true,
+          "url": "https://wavu.wiki/t/King_(Tekken_5)"
+        },
+        {
+          "title": "King movelist (Tekken 5)",
+          "revision": 55104,
+          "available": true,
+          "url": "https://wavu.wiki/t/King_movelist_(Tekken_5)"
+        },
+        {
+          "title": "King punishers (Tekken 5)",
+          "revision": 52665,
+          "available": true,
+          "url": "https://wavu.wiki/t/King_punishers_(Tekken_5)"
+        },
+        {
+          "title": "King combos (Tekken 5)",
+          "revision": 57103,
+          "available": true,
+          "url": "https://wavu.wiki/t/King_combos_(Tekken_5)"
+        },
+        {
+          "title": "King tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/King_tech"
+        },
+        {
+          "title": "King strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/King_strategy"
+        }
+      ]
+    },
+    {
+      "character": "kuma-panda",
+      "newMoves": 45,
+      "enrichedFrames": 74,
+      "punishers": 19,
+      "combos": 62,
+      "skippedMoves": [
+        "Kuma-Left Throw",
+        "Kuma-Right Throw",
+        "Kuma-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Kuma (Tekken 5)",
+          "revision": 57295,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kuma_(Tekken_5)"
+        },
+        {
+          "title": "Kuma movelist (Tekken 5)",
+          "revision": 55016,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kuma_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Kuma punishers (Tekken 5)",
+          "revision": 53077,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kuma_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Kuma combos (Tekken 5)",
+          "revision": 57104,
+          "available": true,
+          "url": "https://wavu.wiki/t/Kuma_combos_(Tekken_5)"
+        },
+        {
+          "title": "Kuma tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Kuma_tech"
+        },
+        {
+          "title": "Kuma strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Kuma_strategy"
+        }
+      ]
+    },
+    {
+      "character": "lee-chaolan",
+      "newMoves": 45,
+      "enrichedFrames": 72,
+      "punishers": 36,
+      "combos": 76,
+      "skippedMoves": [
+        "Lee-ws3,3,DF+3,3",
+        "Lee-ws3,3,D+3,3",
+        "Lee-INF.3",
+        "Lee-INF.3,3",
+        "Lee-INF.3,3,3",
+        "Lee-INF.3,3,3,3",
+        "Lee-INF.D+3",
+        "Lee-INF.D+3,3",
+        "Lee-INF.D+3,3,3",
+        "Lee-INF.U+3",
+        "Lee-INF.U+3,3",
+        "Lee-INF.U+3,3,3",
+        "Lee-f,n",
+        "Lee-f,n,b",
+        "Lee-Left Throw",
+        "Lee-Right Throw",
+        "Lee-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Lee (Tekken 5)",
+          "revision": 57297,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lee_(Tekken_5)"
+        },
+        {
+          "title": "Lee movelist (Tekken 5)",
+          "revision": 55103,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lee_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Lee punishers (Tekken 5)",
+          "revision": 53095,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lee_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Lee combos (Tekken 5)",
+          "revision": 57106,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lee_combos_(Tekken_5)"
+        },
+        {
+          "title": "Lee tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lee_tech"
+        },
+        {
+          "title": "Lee strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lee_strategy"
+        }
+      ]
+    },
+    {
+      "character": "lei-wulong",
+      "newMoves": 48,
+      "enrichedFrames": 154,
+      "punishers": 26,
+      "combos": 91,
+      "skippedMoves": [
+        "Lei-(f,n+2,1),2",
+        "Lei-(f,n+2,1,2),1",
+        "Lei-SNA.SSL",
+        "Lei-SNA.SSR",
+        "Lei-(PAN.2),1",
+        "Lei-(PAN.2,1),2",
+        "Lei-(PAN.2,1,2),1",
+        "Lei-DRG.SSL",
+        "Lei-PAN.SSR",
+        "Lei-PHX.b+3,3",
+        "Lei-Left Throw",
+        "Lei-Right Throw",
+        "Lei-Back Throw",
+        "Lei-f,n+1,2~u/d"
+      ],
+      "sources": [
+        {
+          "title": "Lei (Tekken 5)",
+          "revision": 57298,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lei_(Tekken_5)"
+        },
+        {
+          "title": "Lei movelist (Tekken 5)",
+          "revision": 55044,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lei_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Lei punishers (Tekken 5)",
+          "revision": 52702,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lei_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Lei combos (Tekken 5)",
+          "revision": 57108,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lei_combos_(Tekken_5)"
+        },
+        {
+          "title": "Lei tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lei_tech"
+        },
+        {
+          "title": "Lei strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lei_strategy"
+        }
+      ]
+    },
+    {
+      "character": "lili",
+      "newMoves": 16,
+      "enrichedFrames": 67,
+      "punishers": 17,
+      "combos": 71,
+      "skippedMoves": [
+        "Lili-qcf",
+        "Lili-Left Throw",
+        "Lili-Right Throw",
+        "Lili-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Lili (Tekken 5)",
+          "revision": 57299,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lili_(Tekken_5)"
+        },
+        {
+          "title": "Lili movelist (Tekken 5)",
+          "revision": 56312,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lili_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Lili punishers (Tekken 5)",
+          "revision": 53110,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lili_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Lili combos (Tekken 5)",
+          "revision": 57109,
+          "available": true,
+          "url": "https://wavu.wiki/t/Lili_combos_(Tekken_5)"
+        },
+        {
+          "title": "Lili tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lili_tech"
+        },
+        {
+          "title": "Lili strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Lili_strategy"
+        }
+      ]
+    },
+    {
+      "character": "ling-xiaoyu",
+      "newMoves": 51,
+      "enrichedFrames": 84,
+      "punishers": 30,
+      "combos": 72,
+      "skippedMoves": [
+        "Xiaoyu-AOP.~1+2",
+        "Xiaoyu-Left Throw",
+        "Xiaoyu-Right Throw",
+        "Xiaoyu-Back Throw",
+        "Xiaoyu-1,d+2~f/b/u/d",
+        "Xiaoyu-f+1,d+2~f/b/u/d"
+      ],
+      "sources": [
+        {
+          "title": "Xiaoyu (Tekken 5)",
+          "revision": 57308,
+          "available": true,
+          "url": "https://wavu.wiki/t/Xiaoyu_(Tekken_5)"
+        },
+        {
+          "title": "Xiaoyu movelist (Tekken 5)",
+          "revision": 56310,
+          "available": true,
+          "url": "https://wavu.wiki/t/Xiaoyu_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Xiaoyu punishers (Tekken 5)",
+          "revision": 53504,
+          "available": true,
+          "url": "https://wavu.wiki/t/Xiaoyu_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Xiaoyu combos (Tekken 5)",
+          "revision": 57123,
+          "available": true,
+          "url": "https://wavu.wiki/t/Xiaoyu_combos_(Tekken_5)"
+        },
+        {
+          "title": "Xiaoyu tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Xiaoyu_tech"
+        },
+        {
+          "title": "Xiaoyu strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Xiaoyu_strategy"
+        }
+      ]
+    },
+    {
+      "character": "marshall-law",
+      "newMoves": 86,
+      "enrichedFrames": 79,
+      "punishers": 26,
+      "combos": 56,
+      "skippedMoves": [
+        "Law-DFS.b,f",
+        "Law-Left Throw",
+        "Law-Right Throw",
+        "Law-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Law (Tekken 5)",
+          "revision": 57296,
+          "available": true,
+          "url": "https://wavu.wiki/t/Law_(Tekken_5)"
+        },
+        {
+          "title": "Law movelist (Tekken 5)",
+          "revision": 55024,
+          "available": true,
+          "url": "https://wavu.wiki/t/Law_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Law punishers (Tekken 5)",
+          "revision": 53316,
+          "available": true,
+          "url": "https://wavu.wiki/t/Law_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Law combos (Tekken 5)",
+          "revision": 57105,
+          "available": true,
+          "url": "https://wavu.wiki/t/Law_combos_(Tekken_5)"
+        },
+        {
+          "title": "Law tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Law_tech"
+        },
+        {
+          "title": "Law strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Law_strategy"
+        }
+      ]
+    },
+    {
+      "character": "craig-marduk",
+      "newMoves": 29,
+      "enrichedFrames": 71,
+      "punishers": 29,
+      "combos": 55,
+      "skippedMoves": [
+        "Marduk-SLD.2",
+        "Marduk-SLD.d+2",
+        "Marduk-Left Throw",
+        "Marduk-Right Throw",
+        "Marduk-Back Throw.1+3",
+        "Marduk-Back Throw.2+4"
+      ],
+      "sources": [
+        {
+          "title": "Marduk (Tekken 5)",
+          "revision": 57300,
+          "available": true,
+          "url": "https://wavu.wiki/t/Marduk_(Tekken_5)"
+        },
+        {
+          "title": "Marduk movelist (Tekken 5)",
+          "revision": 55049,
+          "available": true,
+          "url": "https://wavu.wiki/t/Marduk_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Marduk punishers (Tekken 5)",
+          "revision": 57110,
+          "available": true,
+          "url": "https://wavu.wiki/t/Marduk_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Marduk combos (Tekken 5)",
+          "revision": 57111,
+          "available": true,
+          "url": "https://wavu.wiki/t/Marduk_combos_(Tekken_5)"
+        },
+        {
+          "title": "Marduk tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Marduk_tech"
+        },
+        {
+          "title": "Marduk strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Marduk_strategy"
+        }
+      ]
+    },
+    {
+      "character": "mokujin",
+      "newMoves": 0,
+      "enrichedFrames": 0,
+      "punishers": 0,
+      "combos": 0,
+      "skippedMoves": [],
+      "sources": [
+        {
+          "title": "Mokujin",
+          "revision": 57301,
+          "available": true,
+          "url": "https://wavu.wiki/t/Mokujin"
+        },
+        {
+          "title": "Mokujin movelist",
+          "revision": 44061,
+          "available": true,
+          "url": "https://wavu.wiki/t/Mokujin_movelist"
+        },
+        {
+          "title": "Mokujin punishers",
+          "revision": 43204,
+          "available": true,
+          "url": "https://wavu.wiki/t/Mokujin_punishers"
+        },
+        {
+          "title": "Mokujin combos",
+          "revision": 44230,
+          "available": true,
+          "url": "https://wavu.wiki/t/Mokujin_combos"
+        },
+        {
+          "title": "Mokujin tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Mokujin_tech"
+        },
+        {
+          "title": "Mokujin strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Mokujin_strategy"
+        }
+      ]
+    },
+    {
+      "character": "nina-williams",
+      "newMoves": 47,
+      "enrichedFrames": 97,
+      "punishers": 22,
+      "combos": 69,
+      "skippedMoves": [
+        "Nina-qcf",
+        "Nina-qcb",
+        "Nina-Left Throw",
+        "Nina-Right Throw",
+        "Nina-Back Throw",
+        "Nina-OTB.2,1,3",
+        "Nina-BHS1.3,4,3,1+2",
+        "Nina-BHS1.2,3,4,2,2",
+        "Nina-BHS2b.1,3+4,1,2,1+2",
+        "Nina-BHS2b.1,2,4,3,1+2+3",
+        "Nina-BTR1.2,1,1+2,1+2+3",
+        "Nina-BTR2a.1,3+4,1,2,1+2",
+        "Nina-BTR2a.1,2,4,3,1+2+3",
+        "Nina-BTR1.1,3,2,1",
+        "Nina-BTR2b.3,1,4,1+2,1+2",
+        "Nina-BTR2b.2,1,3,4,1+2",
+        "Nina-CBH1.3+4,3,4,1+2",
+        "Nina-CBH2b.3,1,4,2+4",
+        "Nina-CBH2b.1,3,2+4,3+4,1+2"
+      ],
+      "sources": [
+        {
+          "title": "Nina (Tekken 5)",
+          "revision": 57302,
+          "available": true,
+          "url": "https://wavu.wiki/t/Nina_(Tekken_5)"
+        },
+        {
+          "title": "Nina movelist (Tekken 5)",
+          "revision": 55097,
+          "available": true,
+          "url": "https://wavu.wiki/t/Nina_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Nina punishers (Tekken 5)",
+          "revision": 52781,
+          "available": true,
+          "url": "https://wavu.wiki/t/Nina_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Nina combos (Tekken 5)",
+          "revision": 57112,
+          "available": true,
+          "url": "https://wavu.wiki/t/Nina_combos_(Tekken_5)"
+        },
+        {
+          "title": "Nina tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Nina_tech"
+        },
+        {
+          "title": "Nina strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Nina_strategy"
+        }
+      ]
+    },
+    {
+      "character": "paul-phoenix",
+      "newMoves": 29,
+      "enrichedFrames": 63,
+      "punishers": 22,
+      "combos": 47,
+      "skippedMoves": [
+        "Paul-qcf",
+        "Paul-qcb",
+        "Paul-Left Throw",
+        "Paul-Right Throw",
+        "Paul-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Paul (Tekken 5)",
+          "revision": 57303,
+          "available": true,
+          "url": "https://wavu.wiki/t/Paul_(Tekken_5)"
+        },
+        {
+          "title": "Paul movelist (Tekken 5)",
+          "revision": 57113,
+          "available": true,
+          "url": "https://wavu.wiki/t/Paul_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Paul punishers (Tekken 5)",
+          "revision": 57115,
+          "available": true,
+          "url": "https://wavu.wiki/t/Paul_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Paul combos (Tekken 5)",
+          "revision": 57118,
+          "available": true,
+          "url": "https://wavu.wiki/t/Paul_combos_(Tekken_5)"
+        },
+        {
+          "title": "Paul tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Paul_tech"
+        },
+        {
+          "title": "Paul strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Paul_strategy"
+        }
+      ]
+    },
+    {
+      "character": "raven",
+      "newMoves": 45,
+      "enrichedFrames": 78,
+      "punishers": 23,
+      "combos": 82,
+      "skippedMoves": [
+        "Raven-FC.df,d,DF",
+        "Raven-qcf",
+        "Raven-BT.f,f,F",
+        "Raven-ub,b",
+        "Raven-Left throw",
+        "Raven-Right throw",
+        "Raven-Back throw"
+      ],
+      "sources": [
+        {
+          "title": "Raven (Tekken 5)",
+          "revision": 57304,
+          "available": true,
+          "url": "https://wavu.wiki/t/Raven_(Tekken_5)"
+        },
+        {
+          "title": "Raven movelist (Tekken 5)",
+          "revision": 56311,
+          "available": true,
+          "url": "https://wavu.wiki/t/Raven_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Raven punishers (Tekken 5)",
+          "revision": 52787,
+          "available": true,
+          "url": "https://wavu.wiki/t/Raven_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Raven combos (Tekken 5)",
+          "revision": 59250,
+          "available": true,
+          "url": "https://wavu.wiki/t/Raven_combos_(Tekken_5)"
+        },
+        {
+          "title": "Raven tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Raven_tech"
+        },
+        {
+          "title": "Raven strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Raven_strategy"
+        }
+      ]
+    },
+    {
+      "character": "roger-jr",
+      "newMoves": 22,
+      "enrichedFrames": 75,
+      "punishers": 22,
+      "combos": 60,
+      "skippedMoves": [
+        "Roger Jr-f,n,d,df",
+        "Roger Jr-ROC.~f",
+        "Roger Jr-Left Throw",
+        "Roger Jr-Right Throw",
+        "Roger Jr-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Roger Jr.",
+          "revision": 57305,
+          "available": true,
+          "url": "https://wavu.wiki/t/Roger_Jr."
+        },
+        {
+          "title": "Roger Jr. movelist",
+          "revision": 55090,
+          "available": true,
+          "url": "https://wavu.wiki/t/Roger_Jr._movelist"
+        },
+        {
+          "title": "Roger Jr. punishers",
+          "revision": 52792,
+          "available": true,
+          "url": "https://wavu.wiki/t/Roger_Jr._punishers"
+        },
+        {
+          "title": "Roger Jr. combos",
+          "revision": 57120,
+          "available": true,
+          "url": "https://wavu.wiki/t/Roger_Jr._combos"
+        },
+        {
+          "title": "Roger Jr. tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Roger_Jr._tech"
+        },
+        {
+          "title": "Roger Jr. strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Roger_Jr._strategy"
+        }
+      ]
+    },
+    {
+      "character": "steve-fox",
+      "newMoves": 61,
+      "enrichedFrames": 53,
+      "punishers": 16,
+      "combos": 64,
+      "skippedMoves": [
+        "Steve-LWV.4~F+2,1...",
+        "Steve-RWV.3~F+2,1...",
+        "Steve-ALB.d",
+        "Steve-DCK.f",
+        "Steve-DCK.f",
+        "Steve-Left Throw",
+        "Steve-Right Throw",
+        "Steve-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Steve (Tekken 5)",
+          "revision": 57306,
+          "available": true,
+          "url": "https://wavu.wiki/t/Steve_(Tekken_5)"
+        },
+        {
+          "title": "Steve movelist (Tekken 5)",
+          "revision": 55162,
+          "available": true,
+          "url": "https://wavu.wiki/t/Steve_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Steve punishers (Tekken 5)",
+          "revision": 53412,
+          "available": true,
+          "url": "https://wavu.wiki/t/Steve_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Steve combos (Tekken 5)",
+          "revision": 57121,
+          "available": true,
+          "url": "https://wavu.wiki/t/Steve_combos_(Tekken_5)"
+        },
+        {
+          "title": "Steve tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Steve_tech"
+        },
+        {
+          "title": "Steve strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Steve_strategy"
+        }
+      ]
+    },
+    {
+      "character": "wang-jinrei",
+      "newMoves": 19,
+      "enrichedFrames": 60,
+      "punishers": 23,
+      "combos": 58,
+      "skippedMoves": [
+        "Wang-qcf",
+        "Wang-Left Throw",
+        "Wang-Right Throw",
+        "Wang-Back Throw"
+      ],
+      "sources": [
+        {
+          "title": "Wang",
+          "revision": 57307,
+          "available": true,
+          "url": "https://wavu.wiki/t/Wang"
+        },
+        {
+          "title": "Wang movelist",
+          "revision": 55096,
+          "available": true,
+          "url": "https://wavu.wiki/t/Wang_movelist"
+        },
+        {
+          "title": "Wang punishers",
+          "revision": 52795,
+          "available": true,
+          "url": "https://wavu.wiki/t/Wang_punishers"
+        },
+        {
+          "title": "Wang combos",
+          "revision": 57122,
+          "available": true,
+          "url": "https://wavu.wiki/t/Wang_combos"
+        },
+        {
+          "title": "Wang tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Wang_tech"
+        },
+        {
+          "title": "Wang strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Wang_strategy"
+        }
+      ]
+    },
+    {
+      "character": "yoshimitsu",
+      "newMoves": 84,
+      "enrichedFrames": 92,
+      "punishers": 20,
+      "combos": 77,
+      "skippedMoves": [
+        "Yoshimitsu-uf+1+2~d(2)",
+        "Yoshimitsu-FLE.n",
+        "Yoshimitsu-FLE.d",
+        "Yoshimitsu-FLE.ds",
+        "Yoshimitsu-FLE.u",
+        "Yoshimitsu-FLE.f,F",
+        "Yoshimitsu-IND.n",
+        "Yoshimitsu-IND.b",
+        "Yoshimitsu-MED.n",
+        "Yoshimitsu-Left throw",
+        "Yoshimitsu-Right throw",
+        "Yoshimitsu-Back throw"
+      ],
+      "sources": [
+        {
+          "title": "Yoshimitsu (Tekken 5)",
+          "revision": 57309,
+          "available": true,
+          "url": "https://wavu.wiki/t/Yoshimitsu_(Tekken_5)"
+        },
+        {
+          "title": "Yoshimitsu movelist (Tekken 5)",
+          "revision": 59255,
+          "available": true,
+          "url": "https://wavu.wiki/t/Yoshimitsu_movelist_(Tekken_5)"
+        },
+        {
+          "title": "Yoshimitsu punishers (Tekken 5)",
+          "revision": 59253,
+          "available": true,
+          "url": "https://wavu.wiki/t/Yoshimitsu_punishers_(Tekken_5)"
+        },
+        {
+          "title": "Yoshimitsu combos (Tekken 5)",
+          "revision": 59380,
+          "available": true,
+          "url": "https://wavu.wiki/t/Yoshimitsu_combos_(Tekken_5)"
+        },
+        {
+          "title": "Yoshimitsu tech",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Yoshimitsu_tech"
+        },
+        {
+          "title": "Yoshimitsu strategy",
+          "revision": null,
+          "available": false,
+          "url": "https://wavu.wiki/t/Yoshimitsu_strategy"
+        }
+      ]
+    }
+  ]
+}

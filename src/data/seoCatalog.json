@@ -2,7 +2,7 @@
   {
     "path": "/",
     "title": "Tekken Combos & Character Guides | TEKKTICIAN",
-    "description": "Tekken 1–5, Dark Resurrection, Tekken 7, Tekken 8 and Tag Tournament 2 combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.",
+    "description": "Tekken 1–8, Dark Resurrection and Tag Tournament combos and character guides. TEKKTICIAN, formerly known as Tekken Tactician.",
     "collection": true
   },
   {
@@ -3227,6 +3227,885 @@
       {
         "name": "Zafina",
         "path": "/games/tekken-tag-2/zafina"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6",
+    "title": "Tekken 6 Combos & Character Guides | TEKKTICIAN",
+    "description": "Find Tekken 6 Bloodline Rebellion moves, frame data, punishers and bound combo routes. Choose a character and practice with readable inputs on TEKKTICIAN.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      }
+    ],
+    "collection": true
+  },
+  {
+    "path": "/games/tekken-6/alisa-bosconovitch",
+    "title": "Tekken 6 Alisa Bosconovitch Combos & Guide | TEKKTICIAN",
+    "description": "Alisa Bosconovitch in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Alisa Bosconovitch",
+        "path": "/games/tekken-6/alisa-bosconovitch"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/anna-williams",
+    "title": "Tekken 6 Anna Williams Combos & Guide | TEKKTICIAN",
+    "description": "Anna Williams in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Anna Williams",
+        "path": "/games/tekken-6/anna-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/armor-king",
+    "title": "Tekken 6 Armor King Combos & Guide | TEKKTICIAN",
+    "description": "Armor King in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Armor King",
+        "path": "/games/tekken-6/armor-king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/asuka-kazama",
+    "title": "Tekken 6 Asuka Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Asuka Kazama in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Asuka Kazama",
+        "path": "/games/tekken-6/asuka-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/baek-doo-san",
+    "title": "Tekken 6 Baek Doo San Combos & Guide | TEKKTICIAN",
+    "description": "Baek Doo San in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Baek Doo San",
+        "path": "/games/tekken-6/baek-doo-san"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/bob",
+    "title": "Tekken 6 Bob Combos & Guide | TEKKTICIAN",
+    "description": "Bob in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Bob",
+        "path": "/games/tekken-6/bob"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/bruce-irvin",
+    "title": "Tekken 6 Bruce Irvin Combos & Guide | TEKKTICIAN",
+    "description": "Bruce Irvin in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Bruce Irvin",
+        "path": "/games/tekken-6/bruce-irvin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/bryan-fury",
+    "title": "Tekken 6 Bryan Fury Combos & Guide | TEKKTICIAN",
+    "description": "Bryan Fury in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Bryan Fury",
+        "path": "/games/tekken-6/bryan-fury"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/christie-monteiro",
+    "title": "Tekken 6 Christie Monteiro Combos & Guide | TEKKTICIAN",
+    "description": "Christie Monteiro in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Christie Monteiro",
+        "path": "/games/tekken-6/christie-monteiro"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/craig-marduk",
+    "title": "Tekken 6 Craig Marduk Combos & Guide | TEKKTICIAN",
+    "description": "Craig Marduk in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Craig Marduk",
+        "path": "/games/tekken-6/craig-marduk"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/devil-jin",
+    "title": "Tekken 6 Devil Jin Combos & Guide | TEKKTICIAN",
+    "description": "Devil Jin in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Devil Jin",
+        "path": "/games/tekken-6/devil-jin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/eddy-gordo",
+    "title": "Tekken 6 Eddy Gordo Combos & Guide | TEKKTICIAN",
+    "description": "Eddy Gordo in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Eddy Gordo",
+        "path": "/games/tekken-6/eddy-gordo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/feng-wei",
+    "title": "Tekken 6 Feng Wei Combos & Guide | TEKKTICIAN",
+    "description": "Feng Wei in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Feng Wei",
+        "path": "/games/tekken-6/feng-wei"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/ganryu",
+    "title": "Tekken 6 Ganryu Combos & Guide | TEKKTICIAN",
+    "description": "Ganryu in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Ganryu",
+        "path": "/games/tekken-6/ganryu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/heihachi-mishima",
+    "title": "Tekken 6 Heihachi Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Heihachi Mishima in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Heihachi Mishima",
+        "path": "/games/tekken-6/heihachi-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/hwoarang",
+    "title": "Tekken 6 Hwoarang Combos & Guide | TEKKTICIAN",
+    "description": "Hwoarang in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Hwoarang",
+        "path": "/games/tekken-6/hwoarang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/jack-6",
+    "title": "Tekken 6 Jack-6 Combos & Guide | TEKKTICIAN",
+    "description": "Jack-6 in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Jack-6",
+        "path": "/games/tekken-6/jack-6"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/jin-kazama",
+    "title": "Tekken 6 Jin Kazama Combos & Guide | TEKKTICIAN",
+    "description": "Jin Kazama in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Jin Kazama",
+        "path": "/games/tekken-6/jin-kazama"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/julia-chang",
+    "title": "Tekken 6 Julia Chang Combos & Guide | TEKKTICIAN",
+    "description": "Julia Chang in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Julia Chang",
+        "path": "/games/tekken-6/julia-chang"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/kazuya-mishima",
+    "title": "Tekken 6 Kazuya Mishima Combos & Guide | TEKKTICIAN",
+    "description": "Kazuya Mishima in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Kazuya Mishima",
+        "path": "/games/tekken-6/kazuya-mishima"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/king",
+    "title": "Tekken 6 King Combos & Guide | TEKKTICIAN",
+    "description": "King in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "King",
+        "path": "/games/tekken-6/king"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/kuma",
+    "title": "Tekken 6 Kuma Combos & Guide | TEKKTICIAN",
+    "description": "Kuma in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Kuma",
+        "path": "/games/tekken-6/kuma"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/lars-alexandersson",
+    "title": "Tekken 6 Lars Alexandersson Combos & Guide | TEKKTICIAN",
+    "description": "Lars Alexandersson in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Lars Alexandersson",
+        "path": "/games/tekken-6/lars-alexandersson"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/lee-chaolan",
+    "title": "Tekken 6 Lee Chaolan Combos & Guide | TEKKTICIAN",
+    "description": "Lee Chaolan in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Lee Chaolan",
+        "path": "/games/tekken-6/lee-chaolan"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/lei-wulong",
+    "title": "Tekken 6 Lei Wulong Combos & Guide | TEKKTICIAN",
+    "description": "Lei Wulong in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Lei Wulong",
+        "path": "/games/tekken-6/lei-wulong"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/leo",
+    "title": "Tekken 6 Leo Combos & Guide | TEKKTICIAN",
+    "description": "Leo in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Leo",
+        "path": "/games/tekken-6/leo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/lili",
+    "title": "Tekken 6 Lili Rochefort Combos & Guide | TEKKTICIAN",
+    "description": "Lili Rochefort in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Lili Rochefort",
+        "path": "/games/tekken-6/lili"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/ling-xiaoyu",
+    "title": "Tekken 6 Ling Xiaoyu Combos & Guide | TEKKTICIAN",
+    "description": "Ling Xiaoyu in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Ling Xiaoyu",
+        "path": "/games/tekken-6/ling-xiaoyu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/marshall-law",
+    "title": "Tekken 6 Marshall Law Combos & Guide | TEKKTICIAN",
+    "description": "Marshall Law in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Marshall Law",
+        "path": "/games/tekken-6/marshall-law"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/miguel-caballero-rojo",
+    "title": "Tekken 6 Miguel Caballero Rojo Combos & Guide | TEKKTICIAN",
+    "description": "Miguel Caballero Rojo in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Miguel Caballero Rojo",
+        "path": "/games/tekken-6/miguel-caballero-rojo"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/mokujin",
+    "title": "Tekken 6 Mokujin Combos & Guide | TEKKTICIAN",
+    "description": "Mokujin in Tekken 6: Learn how this fighter’s copied or equipped moveset works and find the original character guides.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Mokujin",
+        "path": "/games/tekken-6/mokujin"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/nina-williams",
+    "title": "Tekken 6 Nina Williams Combos & Guide | TEKKTICIAN",
+    "description": "Nina Williams in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Nina Williams",
+        "path": "/games/tekken-6/nina-williams"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/panda",
+    "title": "Tekken 6 Panda Combos & Guide | TEKKTICIAN",
+    "description": "Panda in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Panda",
+        "path": "/games/tekken-6/panda"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/paul-phoenix",
+    "title": "Tekken 6 Paul Phoenix Combos & Guide | TEKKTICIAN",
+    "description": "Paul Phoenix in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Paul Phoenix",
+        "path": "/games/tekken-6/paul-phoenix"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/raven",
+    "title": "Tekken 6 Raven Combos & Guide | TEKKTICIAN",
+    "description": "Raven in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Raven",
+        "path": "/games/tekken-6/raven"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/roger-jr",
+    "title": "Tekken 6 Roger Jr. Combos & Guide | TEKKTICIAN",
+    "description": "Roger Jr. in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Roger Jr.",
+        "path": "/games/tekken-6/roger-jr"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/dragunov",
+    "title": "Tekken 6 Sergei Dragunov Combos & Guide | TEKKTICIAN",
+    "description": "Sergei Dragunov in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Sergei Dragunov",
+        "path": "/games/tekken-6/dragunov"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/steve-fox",
+    "title": "Tekken 6 Steve Fox Combos & Guide | TEKKTICIAN",
+    "description": "Steve Fox in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Steve Fox",
+        "path": "/games/tekken-6/steve-fox"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/wang-jinrei",
+    "title": "Tekken 6 Wang Jinrei Combos & Guide | TEKKTICIAN",
+    "description": "Wang Jinrei in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Wang Jinrei",
+        "path": "/games/tekken-6/wang-jinrei"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/yoshimitsu",
+    "title": "Tekken 6 Yoshimitsu Combos & Guide | TEKKTICIAN",
+    "description": "Yoshimitsu in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Yoshimitsu",
+        "path": "/games/tekken-6/yoshimitsu"
+      }
+    ]
+  },
+  {
+    "path": "/games/tekken-6/zafina",
+    "title": "Tekken 6 Zafina Combos & Guide | TEKKTICIAN",
+    "description": "Zafina in Tekken 6: Learn Bloodline Rebellion moves, frame data, punishers and bound combo routes with readable inputs.",
+    "game": "Tekken 6",
+    "image": "/game-art/tekken-6.png",
+    "breadcrumbs": [
+      {
+        "name": "Games",
+        "path": "/"
+      },
+      {
+        "name": "Tekken 6",
+        "path": "/games/tekken-6"
+      },
+      {
+        "name": "Zafina",
+        "path": "/games/tekken-6/zafina"
       }
     ]
   },
