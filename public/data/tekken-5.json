@@ -18,7 +18,12 @@
       "name": "Anna Williams",
       "portrait": {
         "image": "/characters/tekken-5/anna-williams.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -2646,7 +2651,12 @@
       "name": "Armor King",
       "portrait": {
         "image": "/characters/tekken-5/armor-king.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -3703,7 +3713,12 @@
       "name": "Asuka Kazama",
       "portrait": {
         "image": "/characters/tekken-5/asuka-kazama.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 15,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [
@@ -5508,7 +5523,12 @@
       "name": "Baek Doo San",
       "portrait": {
         "image": "/characters/tekken-5/baek-doo-san.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 15,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [
@@ -7347,7 +7367,12 @@
       "name": "Bruce Irvin",
       "portrait": {
         "image": "/characters/tekken-5/bruce-irvin.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -8779,7 +8804,12 @@
       "name": "Bryan Fury",
       "portrait": {
         "image": "/characters/tekken-5/bryan-fury.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 0.9
+        }
       },
       "sections": {
         "throws": [
@@ -10802,7 +10832,12 @@
       "name": "Christie Monteiro",
       "portrait": {
         "image": "/characters/tekken-5/christie-monteiro.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 45,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -13720,7 +13755,12 @@
       "name": "Devil Jin",
       "portrait": {
         "image": "/characters/tekken-5/devil-jin.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 19,
+          "y": 10,
+          "size": 0.33
+        }
       },
       "sections": {
         "throws": [
@@ -15730,7 +15770,12 @@
       "name": "Sergei Dragunov",
       "portrait": {
         "image": "/characters/tekken-5/dragunov.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -16636,7 +16681,12 @@
       "name": "Eddy Gordo",
       "portrait": {
         "image": "/characters/tekken-5/eddy-gordo.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {},
       "notes": [
@@ -16649,7 +16699,12 @@
       "name": "Feng Wei",
       "portrait": {
         "image": "/characters/tekken-5/feng-wei.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 20,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -18315,7 +18370,12 @@
       "name": "Ganryu",
       "portrait": {
         "image": "/characters/tekken-5/ganryu.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 30,
+          "y": 0,
+          "size": 0.7
+        }
       },
       "sections": {
         "throws": [
@@ -19762,7 +19822,12 @@
       "name": "Heihachi Mishima",
       "portrait": {
         "image": "/characters/tekken-5/heihachi-mishima.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -21599,7 +21664,12 @@
       "name": "Hwoarang",
       "portrait": {
         "image": "/characters/tekken-5/hwoarang.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -24536,7 +24606,12 @@
       "name": "Jack-5",
       "portrait": {
         "image": "/characters/tekken-5/jack-5.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 15,
+          "y": 0,
+          "size": 0.7
+        }
       },
       "sections": {
         "throws": [
@@ -26422,7 +26497,12 @@
       "name": "Jin Kazama",
       "portrait": {
         "image": "/characters/tekken-5/jin-kazama.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [
@@ -27995,7 +28075,12 @@
       "name": "Jinpachi Mishima",
       "portrait": {
         "image": "/characters/tekken-5/jinpachi-mishima.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 27,
+          "y": 12,
+          "size": 0.55
+        }
       },
       "sections": {
         "throws": [
@@ -28823,7 +28908,12 @@
       "name": "Julia Chang",
       "portrait": {
         "image": "/characters/tekken-5/julia-chang.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.75
+        }
       },
       "sections": {
         "throws": [
@@ -30827,7 +30917,12 @@
       "name": "Kazuya Mishima",
       "portrait": {
         "image": "/characters/tekken-5/kazuya-mishima.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -32277,7 +32372,12 @@
       "name": "King",
       "portrait": {
         "image": "/characters/tekken-5/king.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 20,
+          "y": 0,
+          "size": 0.8
+        }
       },
       "sections": {
         "throws": [
@@ -34059,7 +34159,12 @@
       "name": "Kuma II / Panda",
       "portrait": {
         "image": "/characters/tekken-5/kuma-panda.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 35,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -35849,7 +35954,12 @@
       "name": "Lee Chaolan",
       "portrait": {
         "image": "/characters/tekken-5/lee-chaolan.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [
@@ -38001,7 +38111,12 @@
       "name": "Lei Wulong",
       "portrait": {
         "image": "/characters/tekken-5/lei-wulong.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 3,
+          "y": 0,
+          "size": 0.7
+        }
       },
       "sections": {
         "throws": [
@@ -41954,7 +42069,12 @@
       "name": "Lili",
       "portrait": {
         "image": "/characters/tekken-5/lili.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -42864,7 +42984,12 @@
       "name": "Ling Xiaoyu",
       "portrait": {
         "image": "/characters/tekken-5/ling-xiaoyu.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 25,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -45442,7 +45567,12 @@
       "name": "Marshall Law",
       "portrait": {
         "image": "/characters/tekken-5/marshall-law.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 25,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -48005,7 +48135,12 @@
       "name": "Craig Marduk",
       "portrait": {
         "image": "/characters/tekken-5/craig-marduk.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 20,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -49668,7 +49803,12 @@
       "name": "Mokujin",
       "portrait": {
         "image": "/characters/tekken-5/mokujin.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 15,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [],
@@ -49687,7 +49827,12 @@
       "name": "Nina Williams",
       "portrait": {
         "image": "/characters/tekken-5/nina-williams.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 1
+        }
       },
       "sections": {
         "throws": [
@@ -52532,7 +52677,12 @@
       "name": "Paul Phoenix",
       "portrait": {
         "image": "/characters/tekken-5/paul-phoenix.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 25,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -54138,7 +54288,12 @@
       "name": "Raven",
       "portrait": {
         "image": "/characters/tekken-5/raven.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -56312,7 +56467,12 @@
       "name": "Roger Jr.",
       "portrait": {
         "image": "/characters/tekken-5/roger-jr.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 0,
+          "y": 0,
+          "size": 0.65
+        }
       },
       "sections": {
         "throws": [
@@ -57913,7 +58073,12 @@
       "name": "Steve Fox",
       "portrait": {
         "image": "/characters/tekken-5/steve-fox.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.85
+        }
       },
       "sections": {
         "throws": [
@@ -59777,7 +59942,12 @@
       "name": "Wang Jinrei",
       "portrait": {
         "image": "/characters/tekken-5/wang-jinrei.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 10,
+          "y": 0,
+          "size": 0.7
+        }
       },
       "sections": {
         "throws": [
@@ -61168,7 +61338,12 @@
       "name": "Yoshimitsu",
       "portrait": {
         "image": "/characters/tekken-5/yoshimitsu.jpg",
-        "fit": "contain"
+        "fit": "contain",
+        "framing": {
+          "x": 15,
+          "y": 0,
+          "size": 0.7
+        }
       },
       "sections": {
         "throws": [

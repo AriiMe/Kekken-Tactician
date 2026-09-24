@@ -6,16 +6,9 @@ import { Paper } from '@mui/material';
 import CollapsableSection from '../components/CollapsableSection';
 import renderInputImage from '../utils/renderInputImage';
 import { getClassicTekkenGuides, gameTitles } from '../utils/classicTekken';
+import { classicSectionTitles as sectionTitles, getClassicPunishers } from '../utils/classicGuideLayout';
 import './Tekken1.css';
 
-const sectionTitles = {
-  throws: 'Throws', chains: 'Throw Follow-Ups', moves: 'Move List',
-  punishers: 'Punishers', stances: 'Stances', wallCombos: 'Wall Combos',
-  combos: 'Combo Routes', strings: '10 Hit Combos',
-  setups: 'Recovery Setups',
-  tagMoves: 'Team Moves', teamCombos: 'Tag Combos', techniques: 'Advanced Techniques',
-  unblockables: 'Unblockable Attacks', pounces: 'Ground Attacks',
-};
 const rowType = PropTypes.shape({
   name: PropTypes.string.isRequired, input: PropTypes.string.isRequired,
   notes: PropTypes.string,
@@ -59,13 +52,13 @@ MoveFacts.propTypes = { row: PropTypes.object.isRequired };
 
 function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
-  const { x, y, width, height, image, fit } = character.portrait || {};
+  const { x, y, width, height, image, fit, framing } = character.portrait || {};
   return (
     <span className="t1-portrait" style={{ aspectRatio: image || !width || !height ? '1' : `${width} / ${height}` }}>
       {failed || (!image && !sheet.image) ? <span className="t1-portrait-fallback">{character.name}</span> : (
         <img src={image || sheet.image} alt={`${character.name} — ${gameTitle} portrait`}
           onError={() => setFailed(true)}
-          style={image ? { width: '100%', height: '100%', objectFit: fit || 'cover', objectPosition: character.portrait.position || 'center' } : { width: `${sheet.width / width * 100}%`, maxWidth: 'none',
+          style={framing ? { width: `${100 / framing.size}%`, height: 'auto', maxWidth: 'none', left: `${-framing.x / framing.size}%`, top: `${-framing.y / framing.size}%` } : image ? { width: '100%', height: '100%', objectFit: fit || 'cover', objectPosition: character.portrait.position || 'center' } : { width: `${sheet.width / width * 100}%`, maxWidth: 'none',
             left: `${-x / width * 100}%`, top: `${-y / height * 100}%` }} />
       )}
     </span>
@@ -74,15 +67,15 @@ function Portrait({ character, sheet, gameTitle }) {
 Portrait.propTypes = {
   character: PropTypes.shape({ name: PropTypes.string.isRequired,
     portrait: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number, image: PropTypes.string, fit: PropTypes.string, position: PropTypes.string,
-      width: PropTypes.number, height: PropTypes.number }).isRequired }).isRequired,
+      width: PropTypes.number, height: PropTypes.number, framing: PropTypes.shape({ x: PropTypes.number, y: PropTypes.number, size: PropTypes.number }) }).isRequired }).isRequired,
   sheet: PropTypes.shape({ image: PropTypes.string, width: PropTypes.number }).isRequired,
   gameTitle: PropTypes.string.isRequired,
 };
 
-function MoveSection({ title, rows }) {
+function MoveSection({ title, rows, combo = false }) {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Paper className="t1-section">
+    <Paper className={`t1-section${combo ? ' t1-section--combos' : ''}`}>
       <CollapsableSection title={title} toggleState={collapsed}
         collapseFn={() => setCollapsed(value => !value)}>
         <dl className="t1-moves">
@@ -118,7 +111,32 @@ function MoveSection({ title, rows }) {
     </Paper>
   );
 }
-MoveSection.propTypes = { title: PropTypes.string.isRequired, rows: PropTypes.arrayOf(rowType).isRequired };
+MoveSection.propTypes = { title: PropTypes.string.isRequired, rows: PropTypes.arrayOf(rowType).isRequired, combo: PropTypes.bool };
+
+function Punishment({ rows }) {
+  const hasFrames = rows.standing.length + rows.crouching.length > 0;
+  return <section id="t1-punishers" aria-label="Punishers">
+    {hasFrames ? <>
+      <div className="t1-punishment">
+        {Object.entries(rows).map(([position, moves]) => <Paper className="t1-punishment-panel" key={position}>
+          <h2>{position === 'standing' ? 'Standing Punishers' : 'While Rising / Crouching Punishers'}</h2>
+          <dl>{[...new Set(moves.map(row => row.frames))].map(frames => <div className="t1-punisher" key={frames}>
+            <dt><strong>i{frames}</strong><small>{moves.some(row => row.frames === frames && row.reference) ? 'Tag reference' : 'Startup'}</small></dt>
+            <dd className="t1-punisher-options">{moves.filter(row => row.frames === frames).map((row, index) => <div key={index}>
+              <div className="t1-input">{renderInputImage(row.input)}</div>
+              <EditionBadge edition={row.edition} availability={row.availability} />
+              {row.launcher && <span className="t1-edition">Launcher</span>}
+              {row.motion && <small className="t1-combo-label">+ command entry</small>}
+            </div>)}</dd>
+          </div>)}</dl>
+          {!moves.length && <p className="t1-source-note">No startup data available for this position.</p>}
+        </Paper>)}
+      </div>
+      <p className="t1-source-note">Startup reference: check range and recovery position. String entries show only the opening hit; follow-ups are in the move list. Motion launchers need additional command-entry time. Stance-only attacks are excluded.</p>
+    </> : <Paper className="t1-punishment-panel"><h2>Punishers</h2><p className="t1-source-note">Startup data is not available for this character yet.</p></Paper>}
+  </section>;
+}
+Punishment.propTypes = { rows: PropTypes.shape({ standing: PropTypes.array.isRequired, crouching: PropTypes.array.isRequired }).isRequired };
 
 function NotationKey() {
   return (
@@ -163,10 +181,10 @@ export default function ClassicTekken({ gameId }) {
   const character = data?.characters.find(item => item.slug === characterSlug);
   const missing = Boolean(data && characterSlug && !character);
   const characterSectionTitles = { ...sectionTitles,
-    ...(gameId === 'tekken-2' ? { moves: 'Key Moves' } : {}),
     ...(gameId === 'tekken-5' ? { strings: 'Preset Strings' } : {}),
     ...(character?.sections.strings?.every(row => row.hits === 7) ? { strings: '7 Hit Combo' } : {}),
   };
+  const punishment = getClassicPunishers(character);
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
   return (
@@ -198,13 +216,13 @@ export default function ClassicTekken({ gameId }) {
             {data.versionNote && <p className="t1-source-note">{data.versionNote}</p>}
             {Object.values(character.sections).flat().some(row => row.referenceFrameData) && <p className="t1-source-note">Frame values shown below are Tag Tournament references, not verified Tekken 3 measurements.</p>}
             <nav className="t1-section-links" aria-label="Guide sections">
-              {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
+              {Object.entries(characterSectionTitles).filter(([key]) => key === 'punishers' || character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
             </nav>
             <div className="t1-guide" key={character.slug}>
-              {Object.entries(characterSectionTitles).map(([key,title]) => character.sections[key]?.length ?
+              {Object.entries(characterSectionTitles).map(([key,title]) => key === 'punishers' ? <Punishment key={key} rows={punishment} /> : character.sections[key]?.length ?
                 <section id={`t1-${key}`} key={key} aria-label={title}>
                   {key === 'combos' && data.comboNote && <p className="t1-source-note">{data.comboNote}</p>}
-                  <MoveSection title={title} rows={character.sections[key]} />
+                  <MoveSection title={title} rows={character.sections[key]} combo={['combos', 'wallCombos', 'teamCombos'].includes(key)} />
                 </section> : null)}
             </div>
             {character.sharedGuide && <Link className="t1-back" to={`${rosterPath}/${character.sharedGuide}`}>Open shared moves &amp; combos</Link>}

@@ -52,8 +52,27 @@
 .t1-credits { margin-top: 45px; padding-top: 20px; border-top: 1px solid #303037; font-size: .73rem; line-height: 1.8; color: #92929d; }
 .t1-status { padding: 50px 0; min-height: 40vh; }
 .t1-status button { padding: 12px 20px; background: #d42f2f; color: white; border: 0; border-radius: 4px; }
+.t1-section--combos .t1-moves { display: grid; gap: 16px; padding-bottom: 12px; }
+.t1-section--combos .t1-move { display: block; padding: 18px; background: #2d2d2d; border: 1px solid #414141; border-radius: 5px; }
+.t1-section--combos .t1-move > dt { margin-bottom: 14px; color: #eee; }
+.t1-section--combos .t1-combo-label { color: #f27777; font-size: .9rem; }
+.t1-section--combos .t1-launchers li { background: #202124; border: 0; padding: 5px 10px; }
+.t1-punishment { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.t1-page .t1-punishment-panel { padding: 22px; border-radius: 5px; background: #262626; }
+.t1-punishment-panel h2 { font-size: 1.3rem; color: #d42f2f; margin: 0 0 20px; }
+.t1-punishment-panel dl { margin: 0; }
+.t1-punisher { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; border-bottom: 1px solid #404040; padding: 12px 0; }
+.t1-punisher:last-child { border-bottom: 0; }
+.t1-punisher dt strong { color: #ffcf79; }
+.t1-punisher dt small { display: block; color: #bcbcc4; font-size: .72rem; margin-top: 5px; }
+.t1-punisher dd { margin: 0; min-width: 0; }
+.t1-punisher-options { display: flex; flex-wrap: wrap; gap: 14px 24px; }
+.t1-punisher-options > div { min-width: 0; max-width: 100%; }
+.t1-punisher .t1-edition { margin-left: 0; margin-right: 8px; }
 @media (max-width: 900px) { .t1-roster { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; } }
 @media (max-width: 650px) {
+  .t1-punishment { grid-template-columns: minmax(0, 1fr); }
+  .t1-punisher { grid-template-columns: 90px minmax(0, 1fr); }
   .t1-page { padding: 110px 16px 45px; }
   .t1-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .t1-header--character { gap: 20px; align-items: flex-start; }
