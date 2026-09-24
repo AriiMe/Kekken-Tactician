@@ -32,6 +32,10 @@
 .t1-move { display: grid; grid-template-columns: minmax(150px, .8fr) minmax(0, 2fr); gap: 20px; padding: 17px 8px; border-top: 1px solid #444; }
 .t1-move dt { font-weight: 700; font-size: .87rem; line-height: 1.6; }
 .t1-move dd { margin: 0; min-width: 0; }
+.t1-edition { display: inline-block; width: fit-content; margin: 5px 0 0 8px; padding: 2px 7px; border: 1px solid #646472; border-radius: 4px; color: #d6d6e0; font-size: .65rem; line-height: 1.5; font-weight: 600; vertical-align: middle; }
+.t1-edition--dr { color: #ffd7df; background: #77243a50; border-color: #ae5267; }
+.t1-version { margin-top: 12px; padding: 8px 0 8px 12px; border-left: 2px solid #666678; }
+.t1-version + .t1-version { border-left-color: #c6506a; }
 .t1-move p { color: #bcbcc4; font-size: .8rem; line-height: 1.65; margin: 9px 0 0; }
 .t1-input { line-height: 2.2; overflow-wrap: anywhere; --input-icon-size: 26px; }
 .t1-frame-data { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 12px 0 0; }

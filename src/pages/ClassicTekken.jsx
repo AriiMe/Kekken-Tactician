@@ -22,12 +22,40 @@ const rowType = PropTypes.shape({
   launchers: PropTypes.arrayOf(PropTypes.string),
   alternateInputs: PropTypes.arrayOf(PropTypes.string),
   frameData: PropTypes.objectOf(PropTypes.string),
+  edition: PropTypes.string,
+  availability: PropTypes.string,
+  versions: PropTypes.arrayOf(PropTypes.object),
 });
 
 const frameLabels = {
   startup: 'Startup', block: 'On block', hit: 'On hit',
   crouchingHit: 'Crouching hit', counterHit: 'Counter hit',
 };
+
+const editionLabels = { tekken5: 'Tekken 5', dr: 'DR', unverified: 'Version unverified' };
+
+function EditionBadge({ edition, availability }) {
+  const label = availability === 'dr-only' ? 'DR only' : editionLabels[edition];
+  return label ? <span className={`t1-edition${availability === 'dr-only' ? ' t1-edition--dr' : ''}`}>{label}</span> : null;
+}
+EditionBadge.propTypes = { edition: PropTypes.string, availability: PropTypes.string };
+
+function MoveFacts({ row }) {
+  const frames = row.frameData || row.referenceFrameData;
+  return <>
+    {(row.damage || row.hitLevel) && <p>{row.damage && `Damage: ${row.damage}`}{row.damage && row.hitLevel && ' · '}{row.hitLevel}</p>}
+    {row.frameScope && <p>{row.frameScope}</p>}
+    {frames && <dl className="t1-frame-data" aria-label="Frame data">
+      {Object.entries(frameLabels).filter(([key]) => frames[key]).map(([key, label]) =>
+        <div key={key}><dt>{label}</dt><dd>{frames[key].split(/\s+/).map(value => value === 'x' ? '—' : value).join(' / ')}{key === 'startup' ? 'f' : ''}</dd></div>)}
+    </dl>}
+    {row.reportedDamage && <p>Guide damage: {row.reportedDamage}</p>}
+    {row.breakInput && <p>Throw break: {renderInputImage(row.breakInput)}</p>}
+    {row.unbreakable && <p>Unbreakable</p>}
+    {row.notes && <p>{row.notes}</p>}
+  </>;
+}
+MoveFacts.propTypes = { row: PropTypes.object.isRequired };
 
 function Portrait({ character, sheet, gameTitle }) {
   const [failed, setFailed] = useState(false);
@@ -60,7 +88,7 @@ function MoveSection({ title, rows }) {
         <dl className="t1-moves">
           {rows.map((row, index) => (
             <div className="t1-move" key={`${row.name}-${index}`}>
-              <dt>{row.abbreviation ? `${row.abbreviation} — ${row.name}` : row.name}</dt>
+              <dt>{row.abbreviation ? `${row.abbreviation} — ${row.name}` : row.name}<EditionBadge edition={row.edition} availability={row.availability} /></dt>
               <dd>
                 {row.partners?.length > 0 && <p>Partner: {row.partners.join(' / ')}</p>}
                 {row.launchers?.length > 0 && <>
@@ -73,15 +101,15 @@ function MoveSection({ title, rows }) {
                 {row.input && <div className="t1-input">{renderInputImage(row.input)}</div>}
                 {row.alternateInputs?.map(input => <div className="t1-input" key={input}><span className="t1-combo-label">Or</span>{renderInputImage(input)}</div>)}
                 {row.startupFrames && <p>{row.startupFrames} frames{row.position ? ` · ${row.position}` : ''}</p>}
-                {(row.frameData || row.referenceFrameData) && <dl className="t1-frame-data" aria-label="Frame data">
-                  {Object.entries(frameLabels).filter(([key]) => (row.frameData || row.referenceFrameData)[key]).map(([key, label]) =>
-                    <div key={key}><dt>{label}</dt><dd>{(row.frameData || row.referenceFrameData)[key].split(/\s+/).map(value => value === 'x' ? '—' : value).join(' / ')}{key === 'startup' ? 'f' : ''}</dd></div>)}
-                </dl>}
-                {row.reportedDamage && <p>Guide damage: {row.reportedDamage}</p>}
+                <MoveFacts row={row} />
+                {row.versions?.map(version => <div className="t1-version" key={version.edition}>
+                  <strong className="t1-combo-label">{editionLabels[version.edition]}</strong>
+                  {version.name && version.name !== row.name && <p>{version.name}</p>}
+                  {version.input && <div className="t1-input">{renderInputImage(version.input)}</div>}
+                  {version.alternateInputs?.map(input => <div className="t1-input" key={input}><span className="t1-combo-label">Or</span>{renderInputImage(input)}</div>)}
+                  <MoveFacts row={version} />
+                </div>)}
                 {row.taggable && <p>Tag available: append {renderInputImage('~5')}{row.tagClass ? ` · Class ${row.tagClass}` : ''}.{row.tagCondition ? ` ${row.tagCondition}` : ''}{row.tagClass === 5 ? ' No guaranteed follow-up in general.' : ''}</p>}
-                {row.breakInput && <p>Throw break: {renderInputImage(row.breakInput)}</p>}
-                {row.unbreakable && <p>Unbreakable</p>}
-                {row.notes && <p>{row.notes}</p>}
               </dd>
             </div>
           ))}
@@ -136,6 +164,7 @@ export default function ClassicTekken({ gameId }) {
   const missing = Boolean(data && characterSlug && !character);
   const characterSectionTitles = { ...sectionTitles,
     ...(gameId === 'tekken-2' ? { moves: 'Key Moves' } : {}),
+    ...(gameId === 'tekken-5' ? { strings: 'Preset Strings' } : {}),
     ...(character?.sections.strings?.every(row => row.hits === 7) ? { strings: '7 Hit Combo' } : {}),
   };
   const query = search.trim().toLowerCase();
@@ -155,6 +184,7 @@ export default function ClassicTekken({ gameId }) {
             {character && <Portrait key={character.slug} character={character} sheet={data.portraits} gameTitle={gameTitle} />}
             <div><p className="t1-kicker">{gameTitle} · {data.edition} archive</p>
               <h1>{character ? character.name : `${gameTitle} Combos & Character Guides`}</h1>
+              {character?.availability && <EditionBadge availability={character.availability} />}
               <p>{character ? 'Throws, moves and combos, in familiar notation.'
                 : `${data.characters.length} fighters. Pick your character and get straight to the inputs.`}</p>
             </div>
@@ -165,13 +195,17 @@ export default function ClassicTekken({ gameId }) {
             {data.mechanics.map(item => <p key={item.title}><strong>{item.title}:</strong> {item.text}</p>)}
           </Paper>}
           {character ? <>
+            {data.versionNote && <p className="t1-source-note">{data.versionNote}</p>}
             {Object.values(character.sections).flat().some(row => row.referenceFrameData) && <p className="t1-source-note">Frame values shown below are Tag Tournament references, not verified Tekken 3 measurements.</p>}
             <nav className="t1-section-links" aria-label="Guide sections">
               {Object.entries(characterSectionTitles).filter(([key]) => character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
             </nav>
             <div className="t1-guide" key={character.slug}>
               {Object.entries(characterSectionTitles).map(([key,title]) => character.sections[key]?.length ?
-                <section id={`t1-${key}`} key={key} aria-label={title}><MoveSection title={title} rows={character.sections[key]} /></section> : null)}
+                <section id={`t1-${key}`} key={key} aria-label={title}>
+                  {key === 'combos' && data.comboNote && <p className="t1-source-note">{data.comboNote}</p>}
+                  <MoveSection title={title} rows={character.sections[key]} />
+                </section> : null)}
             </div>
             {character.sharedGuide && <Link className="t1-back" to={`${rosterPath}/${character.sharedGuide}`}>Open shared moves &amp; combos</Link>}
             {character.notes?.length > 0 && <p className="t1-source-note">{character.notes.join(' ')}</p>}
@@ -184,7 +218,7 @@ export default function ClassicTekken({ gameId }) {
             <div className="t1-roster">
               {visibleCharacters.map(item => <Link className="t1-card" key={item.slug}
                 to={`${rosterPath}/${item.slug}`} aria-label={`Open ${item.name} ${gameTitle} guide`}>
-                <Portrait character={item} sheet={data.portraits} gameTitle={gameTitle} /><h2>{item.name}</h2><span>Moves & combos</span>
+                <Portrait character={item} sheet={data.portraits} gameTitle={gameTitle} /><h2>{item.name} <EditionBadge availability={item.availability} /></h2><span>Moves & combos</span>
               </Link>)}
             </div>
             {!visibleCharacters.length && <p>No fighters match “{search}”. Try another name.</p>}
