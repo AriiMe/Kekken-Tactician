@@ -76,6 +76,7 @@ const Credits = () => {
           <Link href="https://gamefaqs.gamespot.com/boards/652997-tekken-tag-tournament-2/64087315">GameFAQs community combo contributions</Link>.
           {' '}Partner combos also draw on <Link href="https://ttt2combo.kagewebsite.com/">Kage Website’s Tekken Tag 2 Combo community database</Link>, with individual route references retained in our data.
           Special team routes reference <Link href="https://tekken.fandom.com/wiki/Great_Combo">Tekken Wiki’s Great Combo page</Link> (CC BY-SA).
+          {' '}Additional moves, combos, punishment options and techniques draw on the <Link href="https://web.archive.org/web/20201206040113/http://www.tekkenzaibatsu.com/wiki/Tekken_Tag_Tournament_2">archived Tekken Zaibatsu wiki</Link> and its linked character forum guides; source references are retained with the data.
           Tag 2 character portraits are Bandai Namco game artwork preserved by <Link href="https://tekken.fandom.com/wiki/Tekken_Tag_Tournament_2#Characters">Tekken Wiki</Link>.
         </Typography>
         <Typography variant="body1" sx={paragraphStyle}>

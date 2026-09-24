@@ -31,7 +31,7 @@ const features = {
   'tekken-6': 'Bloodline Rebellion moves, frame data, punishers and bound combo routes',
   'tekken-8': 'combo routes, wall combos, Heat moves, punishers and throw breaks',
   'tekken-7': 'combo routes, wall combos, punishment frames and throw breaks',
-  'tekken-tag-2': 'solo and team combos, punishment frames, bound moves and tag launchers',
+  'tekken-tag-2': 'moves, frame data, solo and team combos, punishers and character techniques',
   'tekken-1': 'combo routes, moves, throws and attack strings in clear button notation',
   'tekken-2': 'combo routes, key moves, throws and attack strings in clear button notation',
 };

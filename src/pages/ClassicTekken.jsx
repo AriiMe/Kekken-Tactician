@@ -4,6 +4,9 @@ import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Paper } from '@mui/material';
 import CollapsableSection from '../components/CollapsableSection';
+import TagPairView from '../components/TagPairView';
+import useTagPartner from '../hooks/useTagPartner';
+import { resolveSharedTagGuide } from '../utils/tagPairing';
 import renderInputImage from '../utils/renderInputImage';
 import { getClassicTekkenGuides, gameTitles } from '../utils/classicTekken';
 import { classicSectionTitles as sectionTitles, getClassicPunishers } from '../utils/classicGuideLayout';
@@ -116,9 +119,9 @@ function MoveSection({ title, rows, combo = false }) {
 }
 MoveSection.propTypes = { title: PropTypes.string.isRequired, rows: PropTypes.arrayOf(rowType).isRequired, combo: PropTypes.bool };
 
-function Punishment({ rows }) {
+function Punishment({ rows, id = 't1-punishers' }) {
   const hasFrames = rows.standing.length + rows.crouching.length > 0;
-  return <section id="t1-punishers" aria-label="Punishers">
+  return <section id={id} aria-label="Punishers">
     {hasFrames ? <>
       <div className="t1-punishment">
         {Object.entries(rows).map(([position, moves]) => <Paper className="t1-punishment-panel" key={position}>
@@ -140,7 +143,32 @@ function Punishment({ rows }) {
     </> : <Paper className="t1-punishment-panel"><h2>Punishers</h2><p className="t1-source-note">Startup data is not available for this character yet.</p></Paper>}
   </section>;
 }
-Punishment.propTypes = { rows: PropTypes.shape({ standing: PropTypes.array.isRequired, crouching: PropTypes.array.isRequired }).isRequired };
+Punishment.propTypes = { rows: PropTypes.shape({ standing: PropTypes.array.isRequired, crouching: PropTypes.array.isRequired }).isRequired, id: PropTypes.string };
+
+function TagFighterEssentials({ fighter, roster, idPrefix, view = 'both' }) {
+  const [copiedStyle, setCopiedStyle] = useState('');
+  const selected = fighter.mimic ? roster.find(item => item.slug === copiedStyle) : fighter;
+  const guide = resolveSharedTagGuide(selected, roster);
+  return <>
+    {fighter.mimic && <div className="tag-pair-mimic">
+      <p className="t1-source-note">{fighter.notes?.join(' ')}</p>
+      <div className="tag-pair-picker"><label htmlFor={`${idPrefix}-style`}>Current copied style</label>
+        <select id={`${idPrefix}-style`} value={copiedStyle} onChange={event => setCopiedStyle(event.target.value)}>
+          <option value="">Choose the copied fighter…</option>
+          {roster.filter(item => !item.mimic).map(item => <option key={item.slug} value={item.slug}>{item.name}</option>)}
+        </select>
+      </div>
+    </div>}
+    {guide && guide.slug !== fighter.slug && <p className="t1-source-note">Using {guide.name}’s {fighter.mimic ? 'copied style' : 'shared moves and combos'}.</p>}
+    {view !== 'punishers' && <section id={`${idPrefix}-combos`} aria-label={`${fighter.name} combos`}>
+      {guide?.sections.combos?.length ? <MoveSection title="Main Combos" rows={guide.sections.combos} combo />
+        : <Paper className="t1-punishment-panel"><h2>Main Combos</h2><p className="t1-source-note">{fighter.mimic ? 'Choose the current copied style to see its combos.' : 'No combos available for this fighter yet.'}</p></Paper>}
+    </section>}
+    {view !== 'combos' && (guide ? <Punishment id={`${idPrefix}-punishers`} rows={getClassicPunishers(guide)} />
+      : <section id={`${idPrefix}-punishers`} aria-label={`${fighter.name} punishers`}><Paper className="t1-punishment-panel"><h2>Punishers</h2><p className="t1-source-note">Choose the current copied style to see its punishers.</p></Paper></section>)}
+  </>;
+}
+TagFighterEssentials.propTypes = { fighter: PropTypes.object.isRequired, roster: PropTypes.array.isRequired, idPrefix: PropTypes.string.isRequired, view: PropTypes.oneOf(['both', 'combos', 'punishers']) };
 
 function NotationKey() {
   return (
@@ -183,6 +211,7 @@ export default function ClassicTekken({ gameId }) {
   useEffect(() => { setSearch(''); }, [characterSlug]);
 
   const character = data?.characters.find(item => item.slug === characterSlug);
+  const { partner, setPartnerSlug } = useTagPartner({ primary: character, roster: data?.characters, enabled: gameId === 'tekken-tag-1' });
   const missing = Boolean(data && characterSlug && !character);
   const characterSectionTitles = { ...sectionTitles,
     ...(gameId === 'tekken-5' ? { strings: 'Preset Strings' } : {}),
@@ -220,10 +249,18 @@ export default function ClassicTekken({ gameId }) {
             {data.versionNote && <p className="t1-source-note">{data.versionNote}</p>}
             {Object.values(character.sections).flat().some(row => row.referenceFrameData) && <p className="t1-source-note">Frame values shown below are Tag Tournament references, not verified Tekken 3 measurements.</p>}
             <nav className="t1-section-links" aria-label="Guide sections">
-              {Object.entries(characterSectionTitles).filter(([key]) => key === 'punishers' || character.sections[key]?.length).map(([key,title]) => <a key={key} href={`#t1-${key}`}>{title}</a>)}
+              {Object.entries(characterSectionTitles).filter(([key]) => key === 'punishers' || character.sections[key]?.length).map(([key,title]) => <a key={key} href={partner && ['combos', 'punishers'].includes(key) ? `#tag-fighter-${character.slug}-${key}` : `#t1-${key}`}>{title}</a>)}
             </nav>
+            {gameId === 'tekken-tag-1' && <>
+              {partner && data.comboNote && <p className="t1-source-note">{data.comboNote}</p>}
+              <TagPairView primary={character} partner={partner} roster={data.characters} onPartnerChange={setPartnerSlug}
+                renderFighter={(fighter, { idPrefix, view }) => <TagFighterEssentials fighter={fighter} roster={data.characters} idPrefix={idPrefix} view={view} />} />
+            </>}
+            {partner && <div className="tag-pair-reference"><h2>More for {character.name}</h2>
+              <Link to={`${rosterPath}/${partner.slug}?partner=${character.slug}`}>Open {partner.name}’s full guide →</Link>
+            </div>}
             <div className="t1-guide" key={character.slug}>
-              {Object.entries(characterSectionTitles).map(([key,title]) => key === 'punishers' ? <Punishment key={key} rows={punishment} /> : character.sections[key]?.length ?
+              {Object.entries(characterSectionTitles).filter(([key]) => !partner || !['combos', 'punishers'].includes(key)).map(([key,title]) => key === 'punishers' ? <Punishment key={key} rows={punishment} /> : character.sections[key]?.length ?
                 <section id={`t1-${key}`} key={key} aria-label={title}>
                   {key === 'combos' && data.comboNote && <p className="t1-source-note">{data.comboNote}</p>}
                   <MoveSection title={title} rows={character.sections[key]} combo={['combos', 'wallCombos', 'teamCombos'].includes(key)} />

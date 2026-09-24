@@ -28,7 +28,7 @@ export default function GuideSupplement({ guide, referenceOnly = false }) {
       </div>)}</div>
     </section>}
     {guide.techniques?.length > 0 && <section id="guide-techniques" className="guide-extra-section">
-      <h2>Techniques</h2>{guide.techniques.map((technique, index) => <article className="guide-extra-technique" key={index}><h3>{technique.title}</h3><p>{technique.text}</p></article>)}
+      <h2>Techniques</h2>{guide.techniques.map((technique, index) => <article className="guide-extra-technique" key={index}><h3>{technique.title}</h3>{technique.input && <div className="guide-extra-input"><GuideInput input={technique.input} /></div>}<p>{technique.text}</p></article>)}
     </section>}
     {guide.moves?.length > 0 && <section id="guide-moves" className="guide-extra-section">
       <h2>Move List</h2>

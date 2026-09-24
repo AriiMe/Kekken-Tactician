@@ -76,6 +76,39 @@ the partner filter includes both starting orders without duplicating storage.
 - Shared controls and notation explanations live on character select only.
   Character pages retain their own stance entries and per-route requirements.
 
+## September 2026 reference expansion and two-fighter view
+
+The API now merges a separate Tag 2 reference into the preserved essentials:
+9,941 move/stance/throw variants across 57 fixed movesets, with frame fields on
+9,367 rows. RBNorway's preserved Tag 2 tables establish frame values; wiki pages
+explicitly copied from Tekken 6 contribute names only on exact matching commands.
+Unknown frame values remain blank, and unfinished wiki templates are excluded.
+
+The reviewed guide supplement contributes 89 combo groups, 410 punishment rows
+(including updates to existing entries), 40 technique notes and 13 team routes.
+The merged guide contains 204 solo combo groups, 622 punishment options and 200 team routes. Source
+URLs, revisions, coverage gaps and disagreements are recorded in the backend's
+`content/tag2-reference` files and `docs/tag2-guide-expansion.md`. These are
+community-source checks, not independent in-game verification.
+
+Any second fighter can be selected with `?partner=<slug>` in Tag 2 and Tag 1.
+Desktop shows each fighter's own combos and punishers in equal columns. Mobile
+shows one fighter at a time with a sticky switch and remembers the relative
+scroll position when switching. A shared section filter brings both punishment
+lists straight to the top. Changing or removing the second fighter participates
+in browser history and preserves unrelated query options. No team synergy is
+inferred or required to select a pair.
+
+The primary fighter's techniques and searchable full move list remain below
+the two-fighter essentials. A link swaps the primary fighter while retaining
+the pair. Existing documented team routes are filtered to the selected pair.
+Tag 1 aliases use their documented shared movesets; mimic characters offer a
+copied-style selector instead of invented fixed attacks.
+
+Capital archive directions retain their hold meaning. When a compound archive
+command cannot be represented faithfully by the icon parser, its original
+notation remains visible as text.
+
 ## Artwork
 
 59 Bandai Namco roster portraits preserved on the

@@ -1,5 +1,10 @@
 .tag2-page .t7-kicker { color: #54bde5; }
 .tag2-portrait { flex: 0 0 auto; width: 100px; height: 106px; object-fit: contain; object-position: center; }
+.tag2-page .tag-pair-panel .t7-punishment { grid-template-columns: minmax(0, 1fr); }
+.tag2-page .tag-pair-panel .t7-punishers > div { grid-template-columns: 92px minmax(0, 1fr); }
+.tag2-reference-heading { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding-top: 12px; }
+.tag2-reference-heading h2 { margin: 0; font-size: 1.15rem; }
+.tag2-reference-heading a { color: #a9ddf1; font-size: .85rem; }
 .tag2-basics { margin-bottom: 26px; }
 .t7-guide .tag2-basics { margin: 0; }
 .tag2-roster { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 14px; }
