@@ -1,4 +1,10 @@
 .tag2-page .t7-kicker { color: #54bde5; }
+.tag2-combo-route { line-height: 2.7; overflow-wrap: anywhere; }
+.tag2-combo-launcher { display: inline-block; max-width: 100%; padding: 3px 8px; border-radius: 4px; background: #202124; vertical-align: middle; line-height: 2.2; }
+.tag2-combo-or { margin: 0 10px; color: #b3bdcb; font-size: .8rem; }
+.tag2-page .t7-combo { padding: 12px 14px; }
+.tag2-page .t7-combo > p:first-child { margin-top: 0; }
+.tag2-page .t7-combo > p:last-child { margin-bottom: 0; }
 .tag2-portrait { flex: 0 0 auto; width: 100px; height: 106px; object-fit: contain; object-position: center; }
 .tag2-page .tag-pair-panel .t7-punishment { grid-template-columns: minmax(0, 1fr); }
 .tag2-page .tag-pair-panel .t7-punishers > div { grid-template-columns: 92px minmax(0, 1fr); }

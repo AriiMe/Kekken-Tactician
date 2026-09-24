@@ -43,8 +43,11 @@ function FighterEssentials({ character, characters = [], idPrefix = 'tag2', view
     {view !== 'punishers' && <section className="t7-section" id={`${idPrefix}-combos`}><h2>Main Combos</h2><div className="t7-combos">
       {character.combos.map((combo, index) => <article className="t7-combo" key={index}>
         {combo.category && <p className="t7-small">{combo.category}</p>}
-        <h3>Launcher{combo.launchers.length > 1 ? 's' : ''}</h3><div className="t7-launchers">{combo.launchers.map(input => <div key={input}><GuideInput input={input} /></div>)}</div>
-        <h3>Follow-up</h3><div className="t7-input"><GuideInput input={combo.followUp} /></div>{combo.damage && <p>Damage: {combo.damage}</p>}{combo.notes && <p>{combo.notes}</p>}
+        <div className="tag2-combo-route">
+          <span className="tag2-combo-launchers" role="group" aria-label={combo.launchers.length > 1 ? 'Launchers — choose one' : 'Launcher'}>
+            {combo.launchers.map((input, launcherIndex) => <span key={input}>{launcherIndex > 0 && <span className="tag2-combo-or">or</span>}<span className="tag2-combo-launcher" title="Launcher"><GuideInput input={input} /></span></span>)}
+          </span>{' '}{renderInputImage('into')}{' '}<GuideInput input={combo.followUp} />
+        </div>{combo.damage && <p>Damage: {combo.damage}</p>}{combo.notes && <p>{combo.notes}</p>}
       </article>)}
     </div></section>}
     {view !== 'combos' && <div id={`${idPrefix}-punishers`}><div className="t7-punishment"><Punishment title="Standing Punishers" rows={character.punishers.standing} /><Punishment title="While Rising Punishers" rows={character.punishers.crouching} /></div>
@@ -122,7 +125,7 @@ export default function TekkenTag2() {
   const visible = data?.characters.filter(c => c.name.toLowerCase().includes(search.trim().toLowerCase()));
   const teamRoutes = character ? getTag2TeamRoutes(data.characters, character.slug) : [];
   const labels = { ...Object.fromEntries((data?.characters || []).flatMap(c => c.stances).map(s => [s.abbreviation,s.name])), ...tekkenTag2StanceLabels };
-  return <StanceContext.Provider value={labels}><main className="t7-page tag2-page">
+  return <StanceContext.Provider value={labels}><main className={`t7-page tag2-page${partner ? ' tag-pair-page' : ''}`}>
     <nav className="t7-breadcrumb" aria-label="Breadcrumb"><Link to="/">Games</Link><span>/</span>
       {characterSlug ? <><Link to={rosterPath}>Tekken Tag 2</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>Tekken Tag 2</span>}
     </nav>

@@ -221,7 +221,7 @@ export default function ClassicTekken({ gameId }) {
   const query = search.trim().toLowerCase();
   const visibleCharacters = data?.characters.filter(item => item.name.toLowerCase().includes(query)) || [];
   return (
-    <StanceContext.Provider value={{ ...tekkenTag2StanceLabels, ...tekken6StanceLabels }}><main className="t1-page">
+    <StanceContext.Provider value={{ ...tekkenTag2StanceLabels, ...tekken6StanceLabels }}><main className={`t1-page${partner ? ' tag-pair-page' : ''}`}>
       <nav className="t1-breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Games</Link><span>/</span>
         {characterSlug ? <><Link to={rosterPath}>{gameTitle}</Link><span>/</span><span>{character?.name || 'Character'}</span></> : <span>{gameTitle}</span>}

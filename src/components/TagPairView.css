@@ -1,3 +1,4 @@
+.t1-page.tag-pair-page, .t7-page.tag-pair-page { max-width: none; width: 100%; box-sizing: border-box; }
 .tag-pair { margin: 24px 0; scroll-margin-top: 100px; }
 .tag-pair-picker { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
 .tag-pair-picker label { font-size: .85rem; font-weight: 700; }
